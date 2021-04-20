@@ -91,9 +91,15 @@ https://github.com/JupiterOne/sdk/blob/master/docs/integrations/development.md
 
 The following entities are created:
 
-| Resources | Entity `_type` | Entity `_class` |
-| --------- | -------------- | --------------- |
-| Account   | `acme_account` | `Account`       |
+| Resources             | Entity `_type`    | Entity `_class` |
+| --------------------- | ----------------- | --------------- |
+| Kubernetes Container  | `kube_container`  | `Container`     |
+| Kubernetes Deployment | `kube_deployment` | `Configuration` |
+| Kubernetes Namespace  | `kube_namespace`  | `Group`         |
+| Kubernetes Node       | `kube_node`       | `Group`         |
+| Kubernetes Pod        | `kube_pod`        | `Group`         |
+| Kubernetes ReplicaSet | `kube_replicaset` | `Configuration` |
+| Kubernetes Service    | `kube_service`    | `Service`       |
 
 ### Relationships
 
@@ -101,9 +107,12 @@ The following relationships are created/mapped:
 
 | Source Entity `_type` | Relationship `_class` | Target Entity `_type` |
 | --------------------- | --------------------- | --------------------- |
-| `acme_account`        | **HAS**               | `acme_group`          |
-| `acme_account`        | **HAS**               | `acme_user`           |
-| `acme_group`          | **HAS**               | `acme_user`           |
+| `kube_deployment`     | **HAS**               | `kube_replicaset`     |
+| `kube_namespace`      | **HAS**               | `kube_deployment`     |
+| `kube_namespace`      | **HAS**               | `kube_service`        |
+| `kube_node`           | **HAS**               | `kube_pod`            |
+| `kube_pod`            | **HAS**               | `kube_container`      |
+| `kube_replicaset`     | **HAS**               | `kube_pod`            |
 
 <!--
 ********************************************************************************

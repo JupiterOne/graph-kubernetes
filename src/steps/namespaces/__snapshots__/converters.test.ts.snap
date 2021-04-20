@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#createNamespaceEntity should convert data 1`] = `
+Object {
+  "_class": Array [
+    "Group",
+  ],
+  "_key": "55ea52dd-382c-4b8c-8c24-bff59db4b817",
+  "_rawData": Array [
+    Object {
+      "name": "default",
+      "rawData": Object {
+        "metadata": Object {
+          "creationTimestamp": 2021-04-27T20:57:17.000Z,
+          "managedFields": Array [
+            Object {
+              "apiVersion": "v1",
+              "fieldsType": "FieldsV1",
+              "fieldsV1": Object {
+                "f:status": Object {
+                  "f:phase": Object {},
+                },
+              },
+              "manager": "kube-apiserver",
+              "operation": "Update",
+              "time": 2021-04-27T20:57:17.000Z,
+            },
+          ],
+          "name": "example-namespace",
+          "resourceVersion": "66",
+          "uid": "55ea52dd-382c-4b8c-8c24-bff59db4b817",
+        },
+        "spec": Object {
+          "finalizers": Array [
+            "kubernetes",
+          ],
+        },
+        "status": Object {
+          "phase": "Active",
+        },
+      },
+    },
+  ],
+  "_type": "kube_namespace",
+  "active": undefined,
+  "createdOn": 1619557037000,
+  "deletionGracePeriodSeconds": undefined,
+  "displayName": "example-namespace",
+  "finalizers": Array [
+    "kubernetes",
+  ],
+  "generation": undefined,
+  "name": "example-namespace",
+  "resourceVersion": "66",
+  "status.phase": "Active",
+}
+`;

@@ -1,0 +1,319 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#createNodeEntity should convert data 1`] = `
+Object {
+  "_class": Array [
+    "Group",
+  ],
+  "_key": "103b35d1-8951-455c-95cb-3da4af29bd71",
+  "_rawData": Array [
+    Object {
+      "name": "default",
+      "rawData": Object {
+        "metadata": Object {
+          "annotations": Object {
+            "kubeadm.alpha.kubernetes.io/cri-socket": "/var/run/dockershim.sock",
+            "node.alpha.kubernetes.io/ttl": "0",
+            "volumes.kubernetes.io/controller-managed-attach-detach": "true",
+          },
+          "creationTimestamp": 2021-04-13T15:20:38.000Z,
+          "labels": Object {
+            "beta.kubernetes.io/arch": "amd64",
+            "beta.kubernetes.io/os": "linux",
+            "kubernetes.io/arch": "amd64",
+            "kubernetes.io/hostname": "minikube",
+            "kubernetes.io/os": "linux",
+            "minikube.k8s.io/commit": "15cede53bdc5fe242228853e737333b09d4336b5",
+            "minikube.k8s.io/name": "minikube",
+            "minikube.k8s.io/updated_at": "2021_04_13T17_20_41_0700",
+            "minikube.k8s.io/version": "v1.19.0",
+            "node-role.kubernetes.io/control-plane": "",
+            "node-role.kubernetes.io/master": "",
+          },
+          "managedFields": Array [
+            Object {
+              "apiVersion": "v1",
+              "fieldsType": "FieldsV1",
+              "fieldsV1": Object {
+                "f:metadata": Object {
+                  "f:annotations": Object {
+                    ".": Object {},
+                    "f:volumes.kubernetes.io/controller-managed-attach-detach": Object {},
+                  },
+                  "f:labels": Object {
+                    ".": Object {},
+                    "f:beta.kubernetes.io/arch": Object {},
+                    "f:beta.kubernetes.io/os": Object {},
+                    "f:kubernetes.io/arch": Object {},
+                    "f:kubernetes.io/hostname": Object {},
+                    "f:kubernetes.io/os": Object {},
+                  },
+                },
+                "f:status": Object {
+                  "f:addresses": Object {
+                    ".": Object {},
+                    "k:{\\"type\\":\\"Hostname\\"}": Object {
+                      ".": Object {},
+                      "f:address": Object {},
+                      "f:type": Object {},
+                    },
+                    "k:{\\"type\\":\\"InternalIP\\"}": Object {
+                      ".": Object {},
+                      "f:address": Object {},
+                      "f:type": Object {},
+                    },
+                  },
+                  "f:allocatable": Object {
+                    ".": Object {},
+                    "f:cpu": Object {},
+                    "f:ephemeral-storage": Object {},
+                    "f:hugepages-1Gi": Object {},
+                    "f:hugepages-2Mi": Object {},
+                    "f:memory": Object {},
+                    "f:pods": Object {},
+                  },
+                  "f:capacity": Object {
+                    ".": Object {},
+                    "f:cpu": Object {},
+                    "f:ephemeral-storage": Object {},
+                    "f:hugepages-1Gi": Object {},
+                    "f:hugepages-2Mi": Object {},
+                    "f:memory": Object {},
+                    "f:pods": Object {},
+                  },
+                  "f:conditions": Object {
+                    ".": Object {},
+                    "k:{\\"type\\":\\"DiskPressure\\"}": Object {
+                      ".": Object {},
+                      "f:lastHeartbeatTime": Object {},
+                      "f:lastTransitionTime": Object {},
+                      "f:message": Object {},
+                      "f:reason": Object {},
+                      "f:status": Object {},
+                      "f:type": Object {},
+                    },
+                    "k:{\\"type\\":\\"MemoryPressure\\"}": Object {
+                      ".": Object {},
+                      "f:lastHeartbeatTime": Object {},
+                      "f:lastTransitionTime": Object {},
+                      "f:message": Object {},
+                      "f:reason": Object {},
+                      "f:status": Object {},
+                      "f:type": Object {},
+                    },
+                    "k:{\\"type\\":\\"PIDPressure\\"}": Object {
+                      ".": Object {},
+                      "f:lastHeartbeatTime": Object {},
+                      "f:lastTransitionTime": Object {},
+                      "f:message": Object {},
+                      "f:reason": Object {},
+                      "f:status": Object {},
+                      "f:type": Object {},
+                    },
+                    "k:{\\"type\\":\\"Ready\\"}": Object {
+                      ".": Object {},
+                      "f:lastHeartbeatTime": Object {},
+                      "f:lastTransitionTime": Object {},
+                      "f:message": Object {},
+                      "f:reason": Object {},
+                      "f:status": Object {},
+                      "f:type": Object {},
+                    },
+                  },
+                  "f:daemonEndpoints": Object {
+                    "f:kubeletEndpoint": Object {
+                      "f:Port": Object {},
+                    },
+                  },
+                  "f:images": Object {},
+                  "f:nodeInfo": Object {
+                    "f:architecture": Object {},
+                    "f:bootID": Object {},
+                    "f:containerRuntimeVersion": Object {},
+                    "f:kernelVersion": Object {},
+                    "f:kubeProxyVersion": Object {},
+                    "f:kubeletVersion": Object {},
+                    "f:machineID": Object {},
+                    "f:operatingSystem": Object {},
+                    "f:osImage": Object {},
+                    "f:systemUUID": Object {},
+                  },
+                },
+              },
+              "manager": "kubelet",
+              "operation": "Update",
+              "time": 2021-04-13T15:20:38.000Z,
+            },
+            Object {
+              "apiVersion": "v1",
+              "fieldsType": "FieldsV1",
+              "fieldsV1": Object {
+                "f:metadata": Object {
+                  "f:annotations": Object {
+                    "f:kubeadm.alpha.kubernetes.io/cri-socket": Object {},
+                  },
+                  "f:labels": Object {
+                    "f:node-role.kubernetes.io/control-plane": Object {},
+                    "f:node-role.kubernetes.io/master": Object {},
+                  },
+                },
+              },
+              "manager": "kubeadm",
+              "operation": "Update",
+              "time": 2021-04-13T15:20:41.000Z,
+            },
+            Object {
+              "apiVersion": "v1",
+              "fieldsType": "FieldsV1",
+              "fieldsV1": Object {
+                "f:metadata": Object {
+                  "f:labels": Object {
+                    "f:minikube.k8s.io/commit": Object {},
+                    "f:minikube.k8s.io/name": Object {},
+                    "f:minikube.k8s.io/updated_at": Object {},
+                    "f:minikube.k8s.io/version": Object {},
+                  },
+                },
+              },
+              "manager": "kubectl-label",
+              "operation": "Update",
+              "time": 2021-04-13T15:20:42.000Z,
+            },
+            Object {
+              "apiVersion": "v1",
+              "fieldsType": "FieldsV1",
+              "fieldsV1": Object {
+                "f:metadata": Object {
+                  "f:annotations": Object {
+                    "f:node.alpha.kubernetes.io/ttl": Object {},
+                  },
+                },
+                "f:spec": Object {
+                  "f:podCIDR": Object {},
+                  "f:podCIDRs": Object {
+                    ".": Object {},
+                    "v:\\"10.10.10.10/24\\"": Object {},
+                  },
+                },
+              },
+              "manager": "kube-controller-manager",
+              "operation": "Update",
+              "time": 2021-04-13T15:20:56.000Z,
+            },
+          ],
+          "name": "minikube",
+          "resourceVersion": "81209",
+          "uid": "103b35d1-8951-455c-95cb-3da4af29bd71",
+        },
+        "spec": Object {
+          "podCIDR": "10.10.10.10/24",
+          "podCIDRs": Array [
+            "10.10.10.10/24",
+          ],
+        },
+        "status": Object {
+          "addresses": Array [
+            Object {
+              "address": "111.111.11.1",
+              "type": "InternalIP",
+            },
+            Object {
+              "address": "minikube",
+              "type": "Hostname",
+            },
+          ],
+          "allocatable": Object {
+            "cpu": "8",
+            "ephemeral-storage": "88103912Ki",
+            "hugepages-1Gi": "0",
+            "hugepages-2Mi": "0",
+            "memory": "16289508Ki",
+            "pods": "110",
+          },
+          "capacity": Object {
+            "cpu": "8",
+            "ephemeral-storage": "88103912Ki",
+            "hugepages-1Gi": "0",
+            "hugepages-2Mi": "0",
+            "memory": "16289508Ki",
+            "pods": "110",
+          },
+          "conditions": Array [
+            Object {
+              "lastHeartbeatTime": 2021-04-15T16:44:09.000Z,
+              "lastTransitionTime": 2021-04-13T15:20:33.000Z,
+              "message": "kubelet has sufficient memory available",
+              "reason": "KubeletHasSufficientMemory",
+              "status": "False",
+              "type": "MemoryPressure",
+            },
+          ],
+          "daemonEndpoints": Object {
+            "kubeletEndpoint": Object {
+              "Port": 10250,
+            },
+          },
+          "images": Array [
+            Object {
+              "names": Array [
+                "k8s.gcr.io/etcd@sha256:4ad90a11b55313b182afc186b9876c8e891531b8db4c9bf1541953021618d0e2",
+                "k8s.gcr.io/etcd:3.4.13-0",
+              ],
+              "sizeBytes": 253392289,
+            },
+          ],
+          "nodeInfo": Object {
+            "architecture": "amd64",
+            "bootID": "a711daa9-dbe2-4923-916c-b8693ced170d",
+            "containerRuntimeVersion": "docker://20.10.5",
+            "kernelVersion": "5.8.0-49-generic",
+            "kubeProxyVersion": "v1.20.2",
+            "kubeletVersion": "v1.20.2",
+            "machineID": "73c9fceff7724090ba72b64bf6e8eff8",
+            "operatingSystem": "linux",
+            "osImage": "Ubuntu 20.04.1 LTS",
+            "systemUUID": "444a01a7-d999-4a38-a4d9-faaee5ee05f5",
+          },
+        },
+      },
+    },
+  ],
+  "_type": "kube_node",
+  "active": undefined,
+  "createdOn": 1618327238000,
+  "deletionGracePeriodSeconds": undefined,
+  "displayName": "minikube",
+  "generation": undefined,
+  "name": "minikube",
+  "podCIDR": "10.10.10.10/24",
+  "podCIDRs": Array [
+    "10.10.10.10/24",
+  ],
+  "providerID": undefined,
+  "resourceVersion": "81209",
+  "status.allocatable.cpu": "8",
+  "status.allocatable.ephemeral-storage": "88103912Ki",
+  "status.allocatable.hugepages-1Gi": "0",
+  "status.allocatable.hugepages-2Mi": "0",
+  "status.allocatable.memory": "16289508Ki",
+  "status.allocatable.pods": "110",
+  "status.capacity.cpu": "8",
+  "status.capacity.ephemeral-storage": "88103912Ki",
+  "status.capacity.hugepages-1Gi": "0",
+  "status.capacity.hugepages-2Mi": "0",
+  "status.capacity.memory": "16289508Ki",
+  "status.capacity.pods": "110",
+  "status.kubeletEndpointPort": 10250,
+  "status.nodeInfo.architecture": "amd64",
+  "status.nodeInfo.bootID": "a711daa9-dbe2-4923-916c-b8693ced170d",
+  "status.nodeInfo.containerRuntimeVersion": "docker://20.10.5",
+  "status.nodeInfo.kernelVersion": "5.8.0-49-generic",
+  "status.nodeInfo.kubeProxyVersion": "v1.20.2",
+  "status.nodeInfo.kubeletVersion": "v1.20.2",
+  "status.nodeInfo.machineID": "73c9fceff7724090ba72b64bf6e8eff8",
+  "status.nodeInfo.operatingSystem": "linux",
+  "status.nodeInfo.osImage": "Ubuntu 20.04.1 LTS",
+  "status.nodeInfo.systemUUID": "444a01a7-d999-4a38-a4d9-faaee5ee05f5",
+  "unschedulable": undefined,
+}
+`;

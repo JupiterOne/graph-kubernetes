@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#createReplicaSetEntity should convert data 1`] = `
+Object {
+  "_class": Array [
+    "Configuration",
+  ],
+  "_key": "f7113c21-7272-4f04-9198-8dc7d682fe23",
+  "_rawData": Array [
+    Object {
+      "name": "default",
+      "rawData": Object {
+        "metadata": Object {
+          "annotations": Object {
+            "deployment.kubernetes.io/desired-replicas": "1",
+            "deployment.kubernetes.io/max-replicas": "2",
+            "deployment.kubernetes.io/revision": "1",
+          },
+          "creationTimestamp": 2021-04-27T20:57:37.000Z,
+          "generation": 1,
+          "labels": Object {
+            "k8s-app": "kube-dns",
+            "pod-template-hash": "74ff55c5b",
+          },
+          "managedFields": Array [
+            Object {
+              "apiVersion": "apps/v1",
+              "fieldsType": "FieldsV1",
+              "manager": "kube-controller-manager",
+              "operation": "Update",
+              "time": 2021-05-10T13:25:17.000Z,
+            },
+          ],
+          "name": "coredns-74ff55c5b",
+          "namespace": "kube-system",
+          "ownerReferences": Array [
+            Object {
+              "apiVersion": "apps/v1",
+              "blockOwnerDeletion": true,
+              "controller": true,
+              "kind": "Deployment",
+              "name": "coredns",
+              "uid": "664fec78-0d67-4bbd-a02d-ad978500e342",
+            },
+          ],
+          "resourceVersion": "325114",
+          "uid": "f7113c21-7272-4f04-9198-8dc7d682fe23",
+        },
+        "spec": Object {
+          "replicas": 1,
+          "selector": Object {
+            "matchLabels": Object {
+              "k8s-app": "kube-dns",
+              "pod-template-hash": "74ff55c5b",
+            },
+          },
+          "template": Object {
+            "metadata": Object {
+              "creationTimestamp": undefined,
+              "labels": Object {
+                "k8s-app": "kube-dns",
+                "pod-template-hash": "74ff55c5b",
+              },
+            },
+            "spec": Object {
+              "containers": Array [
+                Object {
+                  "args": Array [
+                    "-conf",
+                    "/etc/coredns/Corefile",
+                  ],
+                  "image": "k8s.gcr.io/coredns:1.7.0",
+                  "imagePullPolicy": "IfNotPresent",
+                  "livenessProbe": Object {
+                    "failureThreshold": 5,
+                    "initialDelaySeconds": 60,
+                    "periodSeconds": 10,
+                    "successThreshold": 1,
+                    "timeoutSeconds": 5,
+                  },
+                  "name": "coredns",
+                  "ports": Array [
+                    Object {
+                      "containerPort": 53,
+                      "name": "dns",
+                      "protocol": "UDP",
+                    },
+                    Object {
+                      "containerPort": 53,
+                      "name": "dns-tcp",
+                      "protocol": "TCP",
+                    },
+                    Object {
+                      "containerPort": 9153,
+                      "name": "metrics",
+                      "protocol": "TCP",
+                    },
+                  ],
+                  "readinessProbe": Object {
+                    "failureThreshold": 3,
+                    "periodSeconds": 10,
+                    "successThreshold": 1,
+                    "timeoutSeconds": 1,
+                  },
+                  "resources": Object {
+                    "limits": Object {
+                      "memory": "170Mi",
+                    },
+                    "requests": Object {
+                      "cpu": "100m",
+                      "memory": "70Mi",
+                    },
+                  },
+                  "securityContext": Object {
+                    "allowPrivilegeEscalation": false,
+                    "capabilities": Object {
+                      "add": Array [
+                        "NET_BIND_SERVICE",
+                      ],
+                      "drop": Array [
+                        "all",
+                      ],
+                    },
+                    "readOnlyRootFilesystem": true,
+                  },
+                  "terminationMessagePath": "/dev/termination-log",
+                  "terminationMessagePolicy": "File",
+                  "volumeMounts": Array [
+                    Object {
+                      "mountPath": "/etc/coredns",
+                      "name": "config-volume",
+                      "readOnly": true,
+                    },
+                  ],
+                },
+              ],
+              "dnsPolicy": "Default",
+              "nodeSelector": Object {
+                "kubernetes.io/os": "linux",
+              },
+              "priorityClassName": "system-cluster-critical",
+              "restartPolicy": "Always",
+              "schedulerName": "default-scheduler",
+              "securityContext": Object {},
+              "serviceAccount": "coredns",
+              "serviceAccountName": "coredns",
+              "terminationGracePeriodSeconds": 30,
+              "tolerations": Array [
+                Object {
+                  "key": "CriticalAddonsOnly",
+                  "operator": "Exists",
+                },
+                Object {
+                  "effect": "NoSchedule",
+                  "key": "node-role.kubernetes.io/master",
+                },
+                Object {
+                  "effect": "NoSchedule",
+                  "key": "node-role.kubernetes.io/control-plane",
+                },
+              ],
+              "volumes": Array [
+                Object {
+                  "configMap": Object {
+                    "defaultMode": 420,
+                    "items": Array [
+                      Object {
+                        "key": "Corefile",
+                        "path": "Corefile",
+                      },
+                    ],
+                    "name": "coredns",
+                  },
+                  "name": "config-volume",
+                },
+              ],
+            },
+          },
+        },
+        "status": Object {
+          "availableReplicas": 1,
+          "fullyLabeledReplicas": 1,
+          "observedGeneration": 1,
+          "readyReplicas": 1,
+          "replicas": 1,
+        },
+      },
+    },
+  ],
+  "_type": "kube_replicaset",
+  "active": undefined,
+  "createdOn": 1619557057000,
+  "deletionGracePeriodSeconds": undefined,
+  "displayName": "coredns-74ff55c5b",
+  "generation": 1,
+  "minReadySeconds": undefined,
+  "name": "coredns-74ff55c5b",
+  "replicas": 1,
+  "resourceVersion": "325114",
+  "status.availableReplicas": 1,
+  "status.fullyLabeledReplicas": 1,
+  "status.observedGeneration": 1,
+  "status.readyReplicas": 1,
+  "status.replicas": 1,
+}
+`;
