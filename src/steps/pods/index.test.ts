@@ -18,7 +18,7 @@ describe('#fetchPods', () => {
         {
           _type: Entities.POD._type,
           matcher: {
-            _class: ['Group'],
+            _class: ['Task'],
             schema: {
               additionalProperties: false,
               properties: {

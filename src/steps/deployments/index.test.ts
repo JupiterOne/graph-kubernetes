@@ -38,6 +38,8 @@ describe('#fetchDeployments', () => {
                 replicas: { type: 'number' },
                 revisionHistoryLimit: { type: 'number' },
                 'strategy.type': { type: 'string' },
+                'strategy.maxSurge': { type: 'string' },
+                'strategy.maxUnavailable': { type: 'string' },
                 'status.availableReplicas': { type: 'number' },
                 'status.collisionCount': { type: 'number' },
                 'status.observedGeneration': { type: 'number' },

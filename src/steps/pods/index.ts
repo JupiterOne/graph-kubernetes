@@ -11,15 +11,17 @@ import {
   createPodEntity,
   getContainerKey,
 } from './converters';
+import { getNodeUidFromPod } from '../../util/jobState';
 
 export async function fetchPods(
   context: IntegrationStepContext,
 ): Promise<void> {
-  const { instance, jobState } = context;
+  const { instance, jobState, logger } = context;
   const { config } = instance;
 
   const client = new CoreClient(config);
 
+  const containerEntityKeys = new Set<string>();
   await jobState.iterateEntities(
     {
       _type: Entities.NAMESPACE._type,
@@ -33,7 +35,9 @@ export async function fetchPods(
 
           for (const container of pod.spec?.containers || []) {
             const containerEntity = createContainerEntity(container);
-            if (!(await jobState.findEntity(getContainerKey(container.name)))) {
+            const containerEntityKey = getContainerKey(container.name);
+
+            if (!containerEntityKeys.has(containerEntityKey)) {
               await jobState.addEntity(containerEntity);
               await jobState.addRelationship(
                 createDirectRelationship({
@@ -42,22 +46,29 @@ export async function fetchPods(
                   to: containerEntity,
                 }),
               );
+              containerEntityKeys.add(containerEntityKey);
+            } else {
+              // Temp log to let us know if we encounter some duplicate container names
+              logger.trace(
+                `Found duplicate container name ${containerEntityKey} for pod ${pod.metadata?.name}`,
+              );
             }
           }
 
-          const nodeUid = (await jobState.getData(
-            `node:${pod.spec?.nodeName}`,
-          )) as string;
-
-          const nodeEntity = await jobState.findEntity(nodeUid);
-          if (nodeEntity) {
-            await jobState.addRelationship(
-              createDirectRelationship({
-                _class: RelationshipClass.HAS,
-                from: nodeEntity,
-                to: podEntity,
-              }),
-            );
+          if (pod.spec?.nodeName) {
+            const nodeUid = await getNodeUidFromPod(jobState, pod);
+            if (nodeUid) {
+              const nodeEntity = await jobState.findEntity(nodeUid);
+              if (nodeEntity) {
+                await jobState.addRelationship(
+                  createDirectRelationship({
+                    _class: RelationshipClass.HAS,
+                    from: nodeEntity,
+                    to: podEntity,
+                  }),
+                );
+              }
+            }
           }
 
           for (const owner of pod.metadata?.ownerReferences || []) {

@@ -207,6 +207,8 @@ Object {
   "status.replicas": 1,
   "status.unavailableReplicas": undefined,
   "status.updatedReplicas": 1,
+  "strategy.maxSurge": undefined,
+  "strategy.maxUnavailable": undefined,
   "strategy.type": undefined,
 }
 `;

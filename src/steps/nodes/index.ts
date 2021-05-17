@@ -3,6 +3,7 @@ import { CoreClient } from '../../kubernetes/clients/core';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
 import { Entities, IntegrationSteps } from '../constants';
 import { createNodeEntity } from './converters';
+import { cacheNodeNameToUid } from '../../util/jobState';
 
 export async function fetchNodes(
   context: IntegrationStepContext,
@@ -15,7 +16,7 @@ export async function fetchNodes(
   await client.iterateNodes(async (node) => {
     const nodeEntity = createNodeEntity(node);
     await jobState.addEntity(nodeEntity);
-    await jobState.setData(`node:${node.metadata?.name}`, node.metadata?.uid);
+    await cacheNodeNameToUid(jobState, node);
   });
 }
 

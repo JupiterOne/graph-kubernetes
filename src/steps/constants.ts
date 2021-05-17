@@ -45,7 +45,7 @@ export const Entities: Record<
   },
   POD: {
     _type: 'kube_pod',
-    _class: ['Group'],
+    _class: ['Task'],
     resourceName: 'Kubernetes Pod',
   },
   CONTAINER: {

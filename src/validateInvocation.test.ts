@@ -33,9 +33,9 @@ it('auth error', async () => {
     instanceConfig: {
       accessType: 'INVALID',
       namespace: 'INVALID',
-      jupiteroneAccount: 'INVALID',
+      jupiteroneAccountId: 'INVALID',
       jupiteroneApiKey: 'INVALID',
-      integrationId: 'INVALID',
+      integrationInstanceId: 'INVALID',
       isRunningTest: false,
     },
   });

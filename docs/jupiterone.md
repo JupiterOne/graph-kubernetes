@@ -80,7 +80,7 @@ The following entities are created:
 | Kubernetes Deployment | `kube_deployment` | `Configuration` |
 | Kubernetes Namespace  | `kube_namespace`  | `Group`         |
 | Kubernetes Node       | `kube_node`       | `Group`         |
-| Kubernetes Pod        | `kube_pod`        | `Group`         |
+| Kubernetes Pod        | `kube_pod`        | `Task`          |
 | Kubernetes ReplicaSet | `kube_replicaset` | `Configuration` |
 | Kubernetes Service    | `kube_service`    | `Service`       |
 

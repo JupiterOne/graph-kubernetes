@@ -5,6 +5,18 @@ import {
 import * as k8s from '@kubernetes/client-node';
 import { Entities } from '../constants';
 
+function convertToString(value?: object) {
+  if (!value) {
+    return undefined;
+  }
+
+  if (typeof value !== 'string') {
+    return JSON.stringify(value);
+  }
+
+  return value;
+}
+
 export function createDeploymentEntity(data: k8s.V1Deployment) {
   return createIntegrationEntity({
     entityData: {
@@ -27,13 +39,12 @@ export function createDeploymentEntity(data: k8s.V1Deployment) {
         replicas: data.spec?.replicas,
         revisionHistoryLimit: data.spec?.revisionHistoryLimit,
         'strategy.type': data.spec?.strategy?.type,
-        // TODO: these seem to be strings in my example, but TS type tells they're objects
-        // "rollingUpdate": {
-        //   "maxSurge": "25%",
-        //   "maxUnavailable": "25%"
-        // },
-        // "strategy.maxSurge": data.spec?.strategy?.rollingUpdate?.maxSurge,
-        // "strategy.maxUnavailable": data.spec?.strategy?.rollingUpdate?.maxUnavailable,
+        'strategy.maxSurge': convertToString(
+          data.spec?.strategy?.rollingUpdate?.maxSurge,
+        ),
+        'strategy.maxUnavailable': convertToString(
+          data.spec?.strategy?.rollingUpdate?.maxUnavailable,
+        ),
         // TODO: something about spec.template sections maybe?
         'status.availableReplicas': data.status?.availableReplicas,
         'status.collisionCount': data.status?.collisionCount,

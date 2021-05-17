@@ -4,9 +4,7 @@ import {
   IntegrationStepExecutionContext,
 } from '@jupiterone/integration-sdk-core';
 
-export type IntegrationStepContext = IntegrationStepExecutionContext<
-  IntegrationConfig
->;
+export type IntegrationStepContext = IntegrationStepExecutionContext<IntegrationConfig>;
 
 export const instanceConfigFields: IntegrationInstanceConfigFieldMap = {
   accessType: {
@@ -15,13 +13,13 @@ export const instanceConfigFields: IntegrationInstanceConfigFieldMap = {
   namespace: {
     type: 'string',
   },
-  jupiteroneAccount: {
+  jupiteroneAccountId: {
     type: 'string',
   },
   jupiteroneApiKey: {
     type: 'string',
   },
-  integrationId: {
+  integrationInstanceId: {
     type: 'string',
   },
   isRunningTest: {
@@ -32,8 +30,8 @@ export const instanceConfigFields: IntegrationInstanceConfigFieldMap = {
 export interface IntegrationConfig extends IntegrationInstanceConfig {
   accessType: string;
   namespace: string;
-  jupiteroneAccount: string;
+  jupiteroneAccountId: string;
   jupiteroneApiKey: string;
-  integrationId: string;
+  integrationInstanceId: string;
   isRunningTest: boolean;
 }

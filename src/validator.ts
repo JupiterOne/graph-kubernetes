@@ -12,14 +12,14 @@ export async function validateInvocation(
   if (
     !config.accessType ||
     !config.namespace ||
-    !config.jupiteroneAccount ||
+    !config.jupiteroneAccountId ||
     !config.jupiteroneApiKey ||
-    !config.integrationId ||
+    !config.integrationInstanceId ||
     // isRunningTest is a boolean
     config.isRunningTest == null
   ) {
     throw new IntegrationValidationError(
-      'Config requires all of {accessType, namespace, jupiteroneAccount, jupiteroneApiKey, integrationId}',
+      'Config requires all of {accessType, namespace, jupiteroneAccountId, jupiteroneApiKey, integrationInstanceId}',
     );
   }
 

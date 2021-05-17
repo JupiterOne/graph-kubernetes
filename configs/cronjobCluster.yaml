@@ -24,19 +24,19 @@ spec:
               # This needs to contain its name
               - name: NAMESPACE
                 value: 'default'
-              - name: JUPITERONE_ACCOUNT
+              - name: JUPITERONE_ACCOUNT_ID
                 valueFrom:
                   secretKeyRef:
-                    name: jone-secret
+                    name: jupiterone-integration-secret
                     key: jaccountid
               - name: JUPITERONE_API_KEY
                 valueFrom:
-                  secretKeyRef:
-                    name: jone-secret
+                  secretKeyRef:jone-secret
+                    name: jupiterone-integration-secret
                     key: japikey
-              - name: INTEGRATION_ID
+              - name: INTEGRATION_INSTANCE_ID
                 valueFrom:
                   secretKeyRef:
-                    name: jone-secret
+                    name: jupiterone-integration-secret
                     key: integrationid
           restartPolicy: Never

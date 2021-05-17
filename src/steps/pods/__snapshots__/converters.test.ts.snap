@@ -3,7 +3,7 @@
 exports[`#createPodEntity should convert data 1`] = `
 Object {
   "_class": Array [
-    "Group",
+    "Task",
   ],
   "_key": "eca213de-5efe-4224-b88a-06abd6eda442",
   "_rawData": Array [
