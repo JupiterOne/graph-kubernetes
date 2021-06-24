@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#createServiceEntity should convert data 1`] = `
+Object {
+  "_class": Array [
+    "Service",
+  ],
+  "_key": "c296a0d8-9839-4908-bd52-971ddaaebcaf",
+  "_rawData": Array [
+    Object {
+      "name": "default",
+      "rawData": Object {
+        "metadata": Object {
+          "creationTimestamp": 2021-04-27T20:57:19.000Z,
+          "labels": Object {
+            "component": "apiserver",
+            "provider": "kubernetes",
+          },
+          "managedFields": Array [
+            Object {
+              "apiVersion": "v1",
+              "fieldsType": "FieldsV1",
+              "manager": "kube-apiserver",
+              "operation": "Update",
+              "time": 2021-04-27T20:57:19.000Z,
+            },
+          ],
+          "name": "kubernetes",
+          "namespace": "default",
+          "resourceVersion": "202",
+          "uid": "c296a0d8-9839-4908-bd52-971ddaaebcaf",
+        },
+        "spec": Object {
+          "clusterIP": "10.96.0.1",
+          "clusterIPs": Array [
+            "10.96.0.1",
+          ],
+          "ports": Array [
+            Object {
+              "name": "https",
+              "port": 443,
+              "protocol": "TCP",
+            },
+          ],
+          "sessionAffinity": "None",
+          "type": "ClusterIP",
+        },
+        "status": Object {
+          "loadBalancer": Object {},
+        },
+      },
+    },
+  ],
+  "_type": "kube_service",
+  "active": undefined,
+  "allocateLoadBalancerNodePorts": undefined,
+  "category": Array [
+    "infrastructure",
+  ],
+  "clusterIP": "10.96.0.1",
+  "clusterIPs": Array [
+    "10.96.0.1",
+  ],
+  "createdOn": 1619557039000,
+  "deletionGracePeriodSeconds": undefined,
+  "displayName": "kubernetes",
+  "externalIPs": undefined,
+  "externalName": undefined,
+  "externalTrafficPolicy": undefined,
+  "generation": undefined,
+  "healthCheckNodePort": undefined,
+  "ipFamilies": undefined,
+  "ipFamilyPolicy": undefined,
+  "loadBalancerIP": undefined,
+  "loadBalancerSourceRanges": undefined,
+  "name": "kubernetes",
+  "publishNotReadyAddresses": undefined,
+  "resourceVersion": "202",
+  "sessionAffinity": "None",
+  "type": "ClusterIP",
+}
+`;

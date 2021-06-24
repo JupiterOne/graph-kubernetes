@@ -1,0 +1,214 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#createDeploymentEntity should convert data 1`] = `
+Object {
+  "_class": Array [
+    "Configuration",
+  ],
+  "_key": "b39ade4b-d8f4-44a9-adc2-dff35d05514c",
+  "_rawData": Array [
+    Object {
+      "name": "default",
+      "rawData": Object {
+        "metadata": Object {
+          "annotations": Object {
+            "deployment.kubernetes.io/revision": "1",
+          },
+          "creationTimestamp": 2021-04-13T15:37:33.000Z,
+          "generation": 1,
+          "labels": Object {
+            "app": "kubernetes-bootcamp",
+          },
+          "managedFields": Array [
+            Object {
+              "apiVersion": "apps/v1",
+              "fieldsType": "FieldsV1",
+              "fieldsV1": Object {
+                "f:metadata": Object {
+                  "f:labels": Object {
+                    ".": Object {},
+                    "f:app": Object {},
+                  },
+                },
+                "f:spec": Object {
+                  "f:progressDeadlineSeconds": Object {},
+                  "f:replicas": Object {},
+                  "f:revisionHistoryLimit": Object {},
+                  "f:selector": Object {},
+                  "f:strategy": Object {
+                    "f:rollingUpdate": Object {
+                      ".": Object {},
+                      "f:maxSurge": Object {},
+                      "f:maxUnavailable": Object {},
+                    },
+                    "f:type": Object {},
+                  },
+                  "f:template": Object {
+                    "f:metadata": Object {
+                      "f:labels": Object {
+                        ".": Object {},
+                        "f:app": Object {},
+                      },
+                    },
+                    "f:spec": Object {
+                      "f:containers": Object {
+                        "k:{\\"name\\":\\"kubernetes-bootcamp\\"}": Object {
+                          ".": Object {},
+                          "f:image": Object {},
+                          "f:imagePullPolicy": Object {},
+                          "f:name": Object {},
+                          "f:resources": Object {},
+                          "f:terminationMessagePath": Object {},
+                          "f:terminationMessagePolicy": Object {},
+                        },
+                      },
+                      "f:dnsPolicy": Object {},
+                      "f:restartPolicy": Object {},
+                      "f:schedulerName": Object {},
+                      "f:securityContext": Object {},
+                      "f:terminationGracePeriodSeconds": Object {},
+                    },
+                  },
+                },
+              },
+              "manager": "kubectl-create",
+              "operation": "Update",
+              "time": 2021-04-13T15:37:33.000Z,
+            },
+            Object {
+              "apiVersion": "apps/v1",
+              "fieldsType": "FieldsV1",
+              "fieldsV1": Object {
+                "f:metadata": Object {
+                  "f:annotations": Object {
+                    ".": Object {},
+                    "f:deployment.kubernetes.io/revision": Object {},
+                  },
+                },
+                "f:status": Object {
+                  "f:availableReplicas": Object {},
+                  "f:conditions": Object {
+                    ".": Object {},
+                    "k:{\\"type\\":\\"Available\\"}": Object {
+                      ".": Object {},
+                      "f:lastTransitionTime": Object {},
+                      "f:lastUpdateTime": Object {},
+                      "f:message": Object {},
+                      "f:reason": Object {},
+                      "f:status": Object {},
+                      "f:type": Object {},
+                    },
+                    "k:{\\"type\\":\\"Progressing\\"}": Object {
+                      ".": Object {},
+                      "f:lastTransitionTime": Object {},
+                      "f:lastUpdateTime": Object {},
+                      "f:message": Object {},
+                      "f:reason": Object {},
+                      "f:status": Object {},
+                      "f:type": Object {},
+                    },
+                  },
+                  "f:observedGeneration": Object {},
+                  "f:readyReplicas": Object {},
+                  "f:replicas": Object {},
+                  "f:updatedReplicas": Object {},
+                },
+              },
+              "manager": "kube-controller-manager",
+              "operation": "Update",
+              "time": 2021-04-16T18:10:54.000Z,
+            },
+          ],
+          "name": "kubernetes-bootcamp",
+          "namespace": "default",
+          "resourceVersion": "92421",
+          "uid": "b39ade4b-d8f4-44a9-adc2-dff35d05514c",
+        },
+        "spec": Object {
+          "progressDeadlineSeconds": 600,
+          "replicas": 1,
+          "revisionHistoryLimit": 10,
+          "selector": Object {
+            "matchLabels": Object {
+              "app": "kubernetes-bootcamp",
+            },
+          },
+          "template": Object {
+            "metadata": Object {
+              "creationTimestamp": undefined,
+              "labels": Object {
+                "app": "kubernetes-bootcamp",
+              },
+            },
+            "spec": Object {
+              "containers": Array [
+                Object {
+                  "image": "gcr.io/google-samples/kubernetes-bootcamp:v1",
+                  "imagePullPolicy": "IfNotPresent",
+                  "name": "kubernetes-bootcamp",
+                  "resources": Object {},
+                  "terminationMessagePath": "/dev/termination-log",
+                  "terminationMessagePolicy": "File",
+                },
+              ],
+              "dnsPolicy": "ClusterFirst",
+              "restartPolicy": "Always",
+              "schedulerName": "default-scheduler",
+              "securityContext": Object {},
+              "terminationGracePeriodSeconds": 30,
+            },
+          },
+        },
+        "status": Object {
+          "availableReplicas": 1,
+          "conditions": Array [
+            Object {
+              "lastTransitionTime": 2021-04-13T15:37:33.000Z,
+              "lastUpdateTime": 2021-04-13T15:37:46.000Z,
+              "message": "ReplicaSet \\"kubernetes-bootcamp-57978f5f5d\\" has successfully progressed.",
+              "reason": "NewReplicaSetAvailable",
+              "status": "True",
+              "type": "Progressing",
+            },
+            Object {
+              "lastTransitionTime": 2021-04-16T18:10:54.000Z,
+              "lastUpdateTime": 2021-04-16T18:10:54.000Z,
+              "message": "Deployment has minimum availability.",
+              "reason": "MinimumReplicasAvailable",
+              "status": "True",
+              "type": "Available",
+            },
+          ],
+          "observedGeneration": 1,
+          "readyReplicas": 1,
+          "replicas": 1,
+          "updatedReplicas": 1,
+        },
+      },
+    },
+  ],
+  "_type": "kube_deployment",
+  "active": undefined,
+  "createdOn": 1618328253000,
+  "deletionGracePeriodSeconds": undefined,
+  "displayName": "kubernetes-bootcamp",
+  "generation": 1,
+  "minReadySeconds": undefined,
+  "name": "kubernetes-bootcamp",
+  "paused": undefined,
+  "progressDeadlineSeconds": 600,
+  "replicas": 1,
+  "resourceVersion": "92421",
+  "revisionHistoryLimit": 10,
+  "status.availableReplicas": 1,
+  "status.collisionCount": undefined,
+  "status.observedGeneration": 1,
+  "status.readyReplicas": 1,
+  "status.replicas": 1,
+  "status.unavailableReplicas": undefined,
+  "status.updatedReplicas": 1,
+  "strategy.maxSurge": undefined,
+  "strategy.maxUnavailable": undefined,
+  "strategy.type": undefined,
+}
+`;

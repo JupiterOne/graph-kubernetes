@@ -13,6 +13,7 @@
   },
   "scripts": {
     "start": "j1-integration collect",
+    "collect": "./scripts/collect.sh",
     "graph": "j1-integration visualize",
     "graph:types": "j1-integration visualize-types",
     "lint": "eslint . --cache --fix --ext .ts,.tsx",
@@ -24,12 +25,12 @@
     "prepush": "yarn lint && yarn type-check && jest --changedSince master",
     "prepack": "yarn build"
   },
-  "peerDependencies": {
-    "@jupiterone/integration-sdk-core": "^5.11.0"
-  },
   "devDependencies": {
-    "@jupiterone/integration-sdk-core": "^5.11.0",
-    "@jupiterone/integration-sdk-dev-tools": "^5.11.0",
-    "@jupiterone/integration-sdk-testing": "^5.11.0"
+    "@jupiterone/integration-sdk-testing": "^6.0.0"
+  },
+  "dependencies": {
+    "@jupiterone/integration-sdk-core": "^6.0.0",
+    "@jupiterone/integration-sdk-dev-tools": "^6.0.0",
+    "@kubernetes/client-node": "^0.14.3"
   }
 }

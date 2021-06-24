@@ -1,0 +1,612 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#fetchServices should collect data: jobState 1`] = `
+Object {
+  "collectedEntities": Array [
+    Object {
+      "_class": Array [
+        "Group",
+      ],
+      "_key": "d5976ece-dc03-46a1-921f-cb6043e5f56e",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": V1Namespace {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": undefined,
+              "clusterName": undefined,
+              "creationTimestamp": 2021-04-27T20:57:19.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": undefined,
+              "labels": undefined,
+              "managedFields": Array [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:status": Object {
+                      "f:phase": Object {},
+                    },
+                  },
+                  "manager": "kube-apiserver",
+                  "operation": "Update",
+                  "time": 2021-04-27T20:57:19.000Z,
+                },
+              ],
+              "name": "default",
+              "namespace": undefined,
+              "ownerReferences": undefined,
+              "resourceVersion": "200",
+              "selfLink": undefined,
+              "uid": "d5976ece-dc03-46a1-921f-cb6043e5f56e",
+            },
+            "spec": V1NamespaceSpec {
+              "finalizers": Array [
+                "kubernetes",
+              ],
+            },
+            "status": V1NamespaceStatus {
+              "conditions": undefined,
+              "phase": "Active",
+            },
+          },
+        },
+      ],
+      "_type": "kube_namespace",
+      "active": undefined,
+      "createdOn": 1619557039000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "default",
+      "finalizers": Array [
+        "kubernetes",
+      ],
+      "generation": undefined,
+      "name": "default",
+      "resourceVersion": "200",
+      "status.phase": "Active",
+    },
+    Object {
+      "_class": Array [
+        "Group",
+      ],
+      "_key": "55ea52dd-382c-4b8c-8c24-bff59db4b817",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": V1Namespace {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": undefined,
+              "clusterName": undefined,
+              "creationTimestamp": 2021-04-27T20:57:17.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": undefined,
+              "labels": undefined,
+              "managedFields": Array [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:status": Object {
+                      "f:phase": Object {},
+                    },
+                  },
+                  "manager": "kube-apiserver",
+                  "operation": "Update",
+                  "time": 2021-04-27T20:57:17.000Z,
+                },
+              ],
+              "name": "kube-node-lease",
+              "namespace": undefined,
+              "ownerReferences": undefined,
+              "resourceVersion": "66",
+              "selfLink": undefined,
+              "uid": "55ea52dd-382c-4b8c-8c24-bff59db4b817",
+            },
+            "spec": V1NamespaceSpec {
+              "finalizers": Array [
+                "kubernetes",
+              ],
+            },
+            "status": V1NamespaceStatus {
+              "conditions": undefined,
+              "phase": "Active",
+            },
+          },
+        },
+      ],
+      "_type": "kube_namespace",
+      "active": undefined,
+      "createdOn": 1619557037000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "kube-node-lease",
+      "finalizers": Array [
+        "kubernetes",
+      ],
+      "generation": undefined,
+      "name": "kube-node-lease",
+      "resourceVersion": "66",
+      "status.phase": "Active",
+    },
+    Object {
+      "_class": Array [
+        "Group",
+      ],
+      "_key": "35ca0e47-73b0-4e3d-9e2a-d8f3d6506d88",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": V1Namespace {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": undefined,
+              "clusterName": undefined,
+              "creationTimestamp": 2021-04-27T20:57:17.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": undefined,
+              "labels": undefined,
+              "managedFields": Array [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:status": Object {
+                      "f:phase": Object {},
+                    },
+                  },
+                  "manager": "kube-apiserver",
+                  "operation": "Update",
+                  "time": 2021-04-27T20:57:17.000Z,
+                },
+              ],
+              "name": "kube-public",
+              "namespace": undefined,
+              "ownerReferences": undefined,
+              "resourceVersion": "58",
+              "selfLink": undefined,
+              "uid": "35ca0e47-73b0-4e3d-9e2a-d8f3d6506d88",
+            },
+            "spec": V1NamespaceSpec {
+              "finalizers": Array [
+                "kubernetes",
+              ],
+            },
+            "status": V1NamespaceStatus {
+              "conditions": undefined,
+              "phase": "Active",
+            },
+          },
+        },
+      ],
+      "_type": "kube_namespace",
+      "active": undefined,
+      "createdOn": 1619557037000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "kube-public",
+      "finalizers": Array [
+        "kubernetes",
+      ],
+      "generation": undefined,
+      "name": "kube-public",
+      "resourceVersion": "58",
+      "status.phase": "Active",
+    },
+    Object {
+      "_class": Array [
+        "Group",
+      ],
+      "_key": "239ee6a3-23d6-4ca6-ae32-3b3fdda6a604",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": V1Namespace {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": undefined,
+              "clusterName": undefined,
+              "creationTimestamp": 2021-04-27T20:57:17.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": undefined,
+              "labels": undefined,
+              "managedFields": Array [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:status": Object {
+                      "f:phase": Object {},
+                    },
+                  },
+                  "manager": "kube-apiserver",
+                  "operation": "Update",
+                  "time": 2021-04-27T20:57:17.000Z,
+                },
+              ],
+              "name": "kube-system",
+              "namespace": undefined,
+              "ownerReferences": undefined,
+              "resourceVersion": "34",
+              "selfLink": undefined,
+              "uid": "239ee6a3-23d6-4ca6-ae32-3b3fdda6a604",
+            },
+            "spec": V1NamespaceSpec {
+              "finalizers": Array [
+                "kubernetes",
+              ],
+            },
+            "status": V1NamespaceStatus {
+              "conditions": undefined,
+              "phase": "Active",
+            },
+          },
+        },
+      ],
+      "_type": "kube_namespace",
+      "active": undefined,
+      "createdOn": 1619557037000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "kube-system",
+      "finalizers": Array [
+        "kubernetes",
+      ],
+      "generation": undefined,
+      "name": "kube-system",
+      "resourceVersion": "34",
+      "status.phase": "Active",
+    },
+    Object {
+      "_class": Array [
+        "Service",
+      ],
+      "_key": "c296a0d8-9839-4908-bd52-971ddaaebcaf",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": V1Service {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": undefined,
+              "clusterName": undefined,
+              "creationTimestamp": 2021-04-27T20:57:19.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": undefined,
+              "labels": Object {
+                "component": "apiserver",
+                "provider": "kubernetes",
+              },
+              "managedFields": Array [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:metadata": Object {
+                      "f:labels": Object {
+                        ".": Object {},
+                        "f:component": Object {},
+                        "f:provider": Object {},
+                      },
+                    },
+                    "f:spec": Object {
+                      "f:clusterIP": Object {},
+                      "f:ipFamilyPolicy": Object {},
+                      "f:ports": Object {
+                        ".": Object {},
+                        "k:{\\"port\\":443,\\"protocol\\":\\"TCP\\"}": Object {
+                          ".": Object {},
+                          "f:name": Object {},
+                          "f:port": Object {},
+                          "f:protocol": Object {},
+                          "f:targetPort": Object {},
+                        },
+                      },
+                      "f:sessionAffinity": Object {},
+                      "f:type": Object {},
+                    },
+                  },
+                  "manager": "kube-apiserver",
+                  "operation": "Update",
+                  "time": 2021-04-27T20:57:19.000Z,
+                },
+              ],
+              "name": "kubernetes",
+              "namespace": "default",
+              "ownerReferences": undefined,
+              "resourceVersion": "202",
+              "selfLink": undefined,
+              "uid": "c296a0d8-9839-4908-bd52-971ddaaebcaf",
+            },
+            "spec": V1ServiceSpec {
+              "allocateLoadBalancerNodePorts": undefined,
+              "clusterIP": "10.96.0.1",
+              "clusterIPs": Array [
+                "10.96.0.1",
+              ],
+              "externalIPs": undefined,
+              "externalName": undefined,
+              "externalTrafficPolicy": undefined,
+              "healthCheckNodePort": undefined,
+              "ipFamilies": undefined,
+              "ipFamilyPolicy": undefined,
+              "loadBalancerIP": undefined,
+              "loadBalancerSourceRanges": undefined,
+              "ports": Array [
+                V1ServicePort {
+                  "appProtocol": undefined,
+                  "name": "https",
+                  "nodePort": undefined,
+                  "port": 443,
+                  "protocol": "TCP",
+                  "targetPort": 8443,
+                },
+              ],
+              "publishNotReadyAddresses": undefined,
+              "selector": undefined,
+              "sessionAffinity": "None",
+              "sessionAffinityConfig": undefined,
+              "topologyKeys": undefined,
+              "type": "ClusterIP",
+            },
+            "status": V1ServiceStatus {
+              "conditions": undefined,
+              "loadBalancer": V1LoadBalancerStatus {
+                "ingress": undefined,
+              },
+            },
+          },
+        },
+      ],
+      "_type": "kube_service",
+      "active": undefined,
+      "allocateLoadBalancerNodePorts": undefined,
+      "category": Array [
+        "infrastructure",
+      ],
+      "clusterIP": "10.96.0.1",
+      "clusterIPs": Array [
+        "10.96.0.1",
+      ],
+      "createdOn": 1619557039000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "kubernetes",
+      "externalIPs": undefined,
+      "externalName": undefined,
+      "externalTrafficPolicy": undefined,
+      "generation": undefined,
+      "healthCheckNodePort": undefined,
+      "ipFamilies": undefined,
+      "ipFamilyPolicy": undefined,
+      "loadBalancerIP": undefined,
+      "loadBalancerSourceRanges": undefined,
+      "name": "kubernetes",
+      "publishNotReadyAddresses": undefined,
+      "resourceVersion": "202",
+      "sessionAffinity": "None",
+      "type": "ClusterIP",
+    },
+    Object {
+      "_class": Array [
+        "Service",
+      ],
+      "_key": "d44507f3-7f7b-411f-a49b-42dc1afbcae3",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": V1Service {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": Object {
+                "prometheus.io/port": "9153",
+                "prometheus.io/scrape": "true",
+              },
+              "clusterName": undefined,
+              "creationTimestamp": 2021-04-27T20:57:20.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": undefined,
+              "labels": Object {
+                "k8s-app": "kube-dns",
+                "kubernetes.io/cluster-service": "true",
+                "kubernetes.io/name": "KubeDNS",
+              },
+              "managedFields": Array [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:metadata": Object {
+                      "f:annotations": Object {
+                        ".": Object {},
+                        "f:prometheus.io/port": Object {},
+                        "f:prometheus.io/scrape": Object {},
+                      },
+                      "f:labels": Object {
+                        ".": Object {},
+                        "f:k8s-app": Object {},
+                        "f:kubernetes.io/cluster-service": Object {},
+                        "f:kubernetes.io/name": Object {},
+                      },
+                    },
+                    "f:spec": Object {
+                      "f:clusterIP": Object {},
+                      "f:ports": Object {
+                        ".": Object {},
+                        "k:{\\"port\\":53,\\"protocol\\":\\"TCP\\"}": Object {
+                          ".": Object {},
+                          "f:name": Object {},
+                          "f:port": Object {},
+                          "f:protocol": Object {},
+                          "f:targetPort": Object {},
+                        },
+                        "k:{\\"port\\":53,\\"protocol\\":\\"UDP\\"}": Object {
+                          ".": Object {},
+                          "f:name": Object {},
+                          "f:port": Object {},
+                          "f:protocol": Object {},
+                          "f:targetPort": Object {},
+                        },
+                        "k:{\\"port\\":9153,\\"protocol\\":\\"TCP\\"}": Object {
+                          ".": Object {},
+                          "f:name": Object {},
+                          "f:port": Object {},
+                          "f:protocol": Object {},
+                          "f:targetPort": Object {},
+                        },
+                      },
+                      "f:selector": Object {
+                        ".": Object {},
+                        "f:k8s-app": Object {},
+                      },
+                      "f:sessionAffinity": Object {},
+                      "f:type": Object {},
+                    },
+                  },
+                  "manager": "kubeadm",
+                  "operation": "Update",
+                  "time": 2021-04-27T20:57:20.000Z,
+                },
+              ],
+              "name": "kube-dns",
+              "namespace": "kube-system",
+              "ownerReferences": undefined,
+              "resourceVersion": "241",
+              "selfLink": undefined,
+              "uid": "d44507f3-7f7b-411f-a49b-42dc1afbcae3",
+            },
+            "spec": V1ServiceSpec {
+              "allocateLoadBalancerNodePorts": undefined,
+              "clusterIP": "10.96.0.10",
+              "clusterIPs": Array [
+                "10.96.0.10",
+              ],
+              "externalIPs": undefined,
+              "externalName": undefined,
+              "externalTrafficPolicy": undefined,
+              "healthCheckNodePort": undefined,
+              "ipFamilies": undefined,
+              "ipFamilyPolicy": undefined,
+              "loadBalancerIP": undefined,
+              "loadBalancerSourceRanges": undefined,
+              "ports": Array [
+                V1ServicePort {
+                  "appProtocol": undefined,
+                  "name": "dns",
+                  "nodePort": undefined,
+                  "port": 53,
+                  "protocol": "UDP",
+                  "targetPort": 53,
+                },
+                V1ServicePort {
+                  "appProtocol": undefined,
+                  "name": "dns-tcp",
+                  "nodePort": undefined,
+                  "port": 53,
+                  "protocol": "TCP",
+                  "targetPort": 53,
+                },
+                V1ServicePort {
+                  "appProtocol": undefined,
+                  "name": "metrics",
+                  "nodePort": undefined,
+                  "port": 9153,
+                  "protocol": "TCP",
+                  "targetPort": 9153,
+                },
+              ],
+              "publishNotReadyAddresses": undefined,
+              "selector": Object {
+                "k8s-app": "kube-dns",
+              },
+              "sessionAffinity": "None",
+              "sessionAffinityConfig": undefined,
+              "topologyKeys": undefined,
+              "type": "ClusterIP",
+            },
+            "status": V1ServiceStatus {
+              "conditions": undefined,
+              "loadBalancer": V1LoadBalancerStatus {
+                "ingress": undefined,
+              },
+            },
+          },
+        },
+      ],
+      "_type": "kube_service",
+      "active": undefined,
+      "allocateLoadBalancerNodePorts": undefined,
+      "category": Array [
+        "infrastructure",
+      ],
+      "clusterIP": "10.96.0.10",
+      "clusterIPs": Array [
+        "10.96.0.10",
+      ],
+      "createdOn": 1619557040000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "kube-dns",
+      "externalIPs": undefined,
+      "externalName": undefined,
+      "externalTrafficPolicy": undefined,
+      "generation": undefined,
+      "healthCheckNodePort": undefined,
+      "ipFamilies": undefined,
+      "ipFamilyPolicy": undefined,
+      "loadBalancerIP": undefined,
+      "loadBalancerSourceRanges": undefined,
+      "name": "kube-dns",
+      "publishNotReadyAddresses": undefined,
+      "resourceVersion": "241",
+      "sessionAffinity": "None",
+      "type": "ClusterIP",
+    },
+  ],
+  "collectedRelationships": Array [
+    Object {
+      "_class": "HAS",
+      "_fromEntityKey": "d5976ece-dc03-46a1-921f-cb6043e5f56e",
+      "_key": "d5976ece-dc03-46a1-921f-cb6043e5f56e|has|c296a0d8-9839-4908-bd52-971ddaaebcaf",
+      "_toEntityKey": "c296a0d8-9839-4908-bd52-971ddaaebcaf",
+      "_type": "kube_namespace_has_service",
+      "displayName": "HAS",
+    },
+    Object {
+      "_class": "HAS",
+      "_fromEntityKey": "239ee6a3-23d6-4ca6-ae32-3b3fdda6a604",
+      "_key": "239ee6a3-23d6-4ca6-ae32-3b3fdda6a604|has|d44507f3-7f7b-411f-a49b-42dc1afbcae3",
+      "_toEntityKey": "d44507f3-7f7b-411f-a49b-42dc1afbcae3",
+      "_type": "kube_namespace_has_service",
+      "displayName": "HAS",
+    },
+  ],
+  "encounteredTypes": Array [
+    "kube_namespace",
+    "kube_service",
+    "kube_namespace_has_service",
+  ],
+  "numCollectedEntities": 6,
+  "numCollectedRelationships": 2,
+}
+`;
