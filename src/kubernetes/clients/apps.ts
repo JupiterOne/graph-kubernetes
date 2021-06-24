@@ -1,4 +1,5 @@
 import * as k8s from '@kubernetes/client-node';
+import { V1DeploymentList, V1ReplicaSetList } from '@kubernetes/client-node';
 import { IntegrationConfig } from '../../config';
 import { Client } from '../client';
 
@@ -16,21 +17,47 @@ export class AppsClient extends Client {
     namespace: string,
     callback: (data: k8s.V1Deployment) => Promise<void>,
   ): Promise<void> {
-    const resp = await this.client.listNamespacedDeployment(namespace);
-
-    for (const deployment of resp.body.items || []) {
-      await callback(deployment);
-    }
+    await this.iterateApi(
+      async (nextPageToken) => {
+        return this.client.listNamespacedDeployment(
+          namespace,
+          undefined,
+          undefined,
+          nextPageToken,
+          undefined,
+          undefined,
+          this.maxPerPage,
+        );
+      },
+      async (data: V1DeploymentList) => {
+        for (const deployment of data.items || []) {
+          await callback(deployment);
+        }
+      },
+    );
   }
 
   async iterateReplicaSets(
     namespace: string,
     callback: (data: k8s.V1ReplicaSet) => Promise<void>,
   ): Promise<void> {
-    const resp = await this.client.listNamespacedReplicaSet(namespace);
-
-    for (const replicaset of resp.body.items || []) {
-      await callback(replicaset);
-    }
+    await this.iterateApi(
+      async (nextPageToken) => {
+        return this.client.listNamespacedReplicaSet(
+          namespace,
+          undefined,
+          undefined,
+          nextPageToken,
+          undefined,
+          undefined,
+          this.maxPerPage,
+        );
+      },
+      async (data: V1ReplicaSetList) => {
+        for (const replicaSet of data.items || []) {
+          await callback(replicaSet);
+        }
+      },
+    );
   }
 }

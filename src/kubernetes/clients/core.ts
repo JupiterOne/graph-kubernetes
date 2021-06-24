@@ -1,5 +1,11 @@
 import { IntegrationProviderAuthenticationError } from '@jupiterone/integration-sdk-core';
 import * as k8s from '@kubernetes/client-node';
+import {
+  V1NamespaceList,
+  V1NodeList,
+  V1PodList,
+  V1ServiceList,
+} from '@kubernetes/client-node';
 import { IntegrationConfig } from '../../config';
 import { Client } from '../client';
 
@@ -31,11 +37,23 @@ export class CoreClient extends Client {
       const resp = await this.client.readNamespace(namespace as string);
       await callback(resp.body);
     } else {
-      const resp = await this.client.listNamespace();
-
-      for (const namespace of resp.body.items || []) {
-        await callback(namespace);
-      }
+      await this.iterateApi(
+        async (nextPageToken) => {
+          return this.client.listNamespace(
+            undefined,
+            undefined,
+            nextPageToken,
+            undefined,
+            undefined,
+            this.maxPerPage,
+          );
+        },
+        async (data: V1NamespaceList) => {
+          for (const namespace of data.items || []) {
+            await callback(namespace);
+          }
+        },
+      );
     }
   }
 
@@ -43,38 +61,69 @@ export class CoreClient extends Client {
     namespace: string,
     callback: (data: k8s.V1Pod) => Promise<void>,
   ): Promise<void> {
-    const resp = await this.client.listNamespacedPod(namespace);
-
-    for (const pod of resp.body.items || []) {
-      await callback(pod);
-    }
+    await this.iterateApi(
+      async (nextPageToken) => {
+        return this.client.listNamespacedPod(
+          namespace,
+          undefined,
+          undefined,
+          nextPageToken,
+          undefined,
+          undefined,
+          this.maxPerPage,
+        );
+      },
+      async (data: V1PodList) => {
+        for (const pod of data.items) {
+          await callback(pod);
+        }
+      },
+    );
   }
 
   async iterateNodes(
     callback: (data: k8s.V1Node) => Promise<void>,
   ): Promise<void> {
-    const resp = await this.client.listNode();
-    for (const node of resp.body.items || []) {
-      await callback(node);
-    }
-  }
-
-  async iterateServices(
-    callback: (data: k8s.V1Service) => Promise<void>,
-  ): Promise<void> {
-    const resp = await this.client.listServiceForAllNamespaces();
-    for (const service of resp.body.items || []) {
-      await callback(service);
-    }
+    await this.iterateApi(
+      async (nextPageToken) => {
+        return this.client.listNode(
+          undefined,
+          undefined,
+          nextPageToken,
+          undefined,
+          undefined,
+          this.maxPerPage,
+        );
+      },
+      async (data: V1NodeList) => {
+        for (const node of data.items) {
+          await callback(node);
+        }
+      },
+    );
   }
 
   async iterateNamespacedServices(
     namespace: string,
     callback: (data: k8s.V1Service) => Promise<void>,
   ): Promise<void> {
-    const resp = await this.client.listNamespacedService(namespace);
-    for (const service of resp.body.items || []) {
-      await callback(service);
-    }
+    await this.iterateApi(
+      async (nextPageToken) => {
+        return this.client.listNamespacedService(
+          namespace,
+          undefined,
+          undefined,
+          nextPageToken,
+          undefined,
+          undefined,
+          this.maxPerPage,
+        );
+      },
+      async (data: V1ServiceList) => {
+        for (const service of data.items) {
+          await callback(service);
+        }
+      },
+    );
   }
 }

@@ -30,17 +30,17 @@ export const Entities: Record<
   },
   DEPLOYMENT: {
     _type: 'kube_deployment',
-    _class: ['Configuration'],
+    _class: ['Deployment'],
     resourceName: 'Kubernetes Deployment',
   },
   REPLICASET: {
     _type: 'kube_replicaset',
-    _class: ['Configuration'],
+    _class: ['Deployment'],
     resourceName: 'Kubernetes ReplicaSet',
   },
   NODE: {
     _type: 'kube_node',
-    _class: ['Group'],
+    _class: ['Host'],
     resourceName: 'Kubernetes Node',
   },
   POD: {
@@ -61,42 +61,42 @@ export const Entities: Record<
 };
 
 export const Relationships: Record<
-  | 'NAMESPACE_HAS_POD'
-  | 'NAMESPACE_HAS_SERVICE'
-  | 'NAMESPACE_HAS_DEPLOYMENT'
-  | 'DEPLOYMENT_HAS_REPLICASET'
-  | 'REPLICASET_HAS_POD'
+  | 'NAMESPACE_CONTAINS_POD'
+  | 'NAMESPACE_CONTAINS_SERVICE'
+  | 'NAMESPACE_CONTAINS_DEPLOYMENT'
+  | 'DEPLOYMENT_MANAGES_REPLICASET'
+  | 'REPLICASET_MANAGES_POD'
   | 'NODE_HAS_POD'
-  | 'POD_HAS_CONTAINER',
+  | 'POD_CONTAINS_CONTAINER',
   StepRelationshipMetadata
 > = {
-  NAMESPACE_HAS_POD: {
-    _type: 'kube_namespace_has_pod',
-    _class: RelationshipClass.HAS,
+  NAMESPACE_CONTAINS_POD: {
+    _type: 'kube_namespace_contains_pod',
+    _class: RelationshipClass.CONTAINS,
     sourceType: Entities.NAMESPACE._type,
     targetType: Entities.POD._type,
   },
-  NAMESPACE_HAS_SERVICE: {
-    _type: 'kube_namespace_has_service',
-    _class: RelationshipClass.HAS,
+  NAMESPACE_CONTAINS_SERVICE: {
+    _type: 'kube_namespace_contains_service',
+    _class: RelationshipClass.CONTAINS,
     sourceType: Entities.NAMESPACE._type,
     targetType: Entities.SERVICE._type,
   },
-  NAMESPACE_HAS_DEPLOYMENT: {
-    _type: 'kube_namespace_has_deployment',
-    _class: RelationshipClass.HAS,
+  NAMESPACE_CONTAINS_DEPLOYMENT: {
+    _type: 'kube_namespace_contains_deployment',
+    _class: RelationshipClass.CONTAINS,
     sourceType: Entities.NAMESPACE._type,
     targetType: Entities.DEPLOYMENT._type,
   },
-  DEPLOYMENT_HAS_REPLICASET: {
-    _type: 'kube_deployment_has_replicaset',
-    _class: RelationshipClass.HAS,
+  DEPLOYMENT_MANAGES_REPLICASET: {
+    _type: 'kube_deployment_manages_replicaset',
+    _class: RelationshipClass.MANAGES,
     sourceType: Entities.DEPLOYMENT._type,
     targetType: Entities.REPLICASET._type,
   },
-  REPLICASET_HAS_POD: {
-    _type: 'kube_replicaset_has_pod',
-    _class: RelationshipClass.HAS,
+  REPLICASET_MANAGES_POD: {
+    _type: 'kube_replicaset_manages_pod',
+    _class: RelationshipClass.MANAGES,
     sourceType: Entities.REPLICASET._type,
     targetType: Entities.POD._type,
   },
@@ -106,9 +106,9 @@ export const Relationships: Record<
     sourceType: Entities.NODE._type,
     targetType: Entities.POD._type,
   },
-  POD_HAS_CONTAINER: {
-    _type: 'kube_pod_has_container',
-    _class: RelationshipClass.HAS,
+  POD_CONTAINS_CONTAINER: {
+    _type: 'kube_pod_contains_container',
+    _class: RelationshipClass.CONTAINS,
     sourceType: Entities.POD._type,
     targetType: Entities.CONTAINER._type,
   },

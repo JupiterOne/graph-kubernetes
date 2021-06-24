@@ -77,11 +77,11 @@ The following entities are created:
 | Resources             | Entity `_type`    | Entity `_class` |
 | --------------------- | ----------------- | --------------- |
 | Kubernetes Container  | `kube_container`  | `Container`     |
-| Kubernetes Deployment | `kube_deployment` | `Configuration` |
+| Kubernetes Deployment | `kube_deployment` | `Deployment`    |
 | Kubernetes Namespace  | `kube_namespace`  | `Group`         |
-| Kubernetes Node       | `kube_node`       | `Group`         |
+| Kubernetes Node       | `kube_node`       | `Host`          |
 | Kubernetes Pod        | `kube_pod`        | `Task`          |
-| Kubernetes ReplicaSet | `kube_replicaset` | `Configuration` |
+| Kubernetes ReplicaSet | `kube_replicaset` | `Deployment`    |
 | Kubernetes Service    | `kube_service`    | `Service`       |
 
 ### Relationships
@@ -90,12 +90,12 @@ The following relationships are created/mapped:
 
 | Source Entity `_type` | Relationship `_class` | Target Entity `_type` |
 | --------------------- | --------------------- | --------------------- |
-| `kube_deployment`     | **HAS**               | `kube_replicaset`     |
-| `kube_namespace`      | **HAS**               | `kube_deployment`     |
-| `kube_namespace`      | **HAS**               | `kube_service`        |
+| `kube_deployment`     | **MANAGES**           | `kube_replicaset`     |
+| `kube_namespace`      | **CONTAINS**          | `kube_deployment`     |
+| `kube_namespace`      | **CONTAINS**          | `kube_service`        |
 | `kube_node`           | **HAS**               | `kube_pod`            |
-| `kube_pod`            | **HAS**               | `kube_container`      |
-| `kube_replicaset`     | **HAS**               | `kube_pod`            |
+| `kube_pod`            | **CONTAINS**          | `kube_container`      |
+| `kube_replicaset`     | **MANAGES**           | `kube_pod`            |
 
 <!--
 ********************************************************************************

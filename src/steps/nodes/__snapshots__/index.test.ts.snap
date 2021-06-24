@@ -5,7 +5,7 @@ Object {
   "collectedEntities": Array [
     Object {
       "_class": Array [
-        "Group",
+        "Host",
       ],
       "_key": "d9e7805e-35e6-4934-bb9a-c0f9853a9ec9",
       "_rawData": Array [
@@ -41,6 +41,62 @@ Object {
                 "node-role.kubernetes.io/master": "",
               },
               "managedFields": Array [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:metadata": Object {
+                      "f:annotations": Object {
+                        "f:kubeadm.alpha.kubernetes.io/cri-socket": Object {},
+                      },
+                      "f:labels": Object {
+                        "f:node-role.kubernetes.io/control-plane": Object {},
+                        "f:node-role.kubernetes.io/master": Object {},
+                      },
+                    },
+                  },
+                  "manager": "kubeadm",
+                  "operation": "Update",
+                  "time": 2021-04-27T20:57:20.000Z,
+                },
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:metadata": Object {
+                      "f:labels": Object {
+                        "f:minikube.k8s.io/commit": Object {},
+                        "f:minikube.k8s.io/name": Object {},
+                        "f:minikube.k8s.io/updated_at": Object {},
+                        "f:minikube.k8s.io/version": Object {},
+                      },
+                    },
+                  },
+                  "manager": "kubectl-label",
+                  "operation": "Update",
+                  "time": 2021-04-27T20:57:21.000Z,
+                },
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:metadata": Object {
+                      "f:annotations": Object {
+                        "f:node.alpha.kubernetes.io/ttl": Object {},
+                      },
+                    },
+                    "f:spec": Object {
+                      "f:podCIDR": Object {},
+                      "f:podCIDRs": Object {
+                        ".": Object {},
+                        "v:\\"10.244.0.0/24\\"": Object {},
+                      },
+                    },
+                  },
+                  "manager": "kube-controller-manager",
+                  "operation": "Update",
+                  "time": 2021-05-14T16:22:29.000Z,
+                },
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
@@ -152,69 +208,13 @@ Object {
                   },
                   "manager": "kubelet",
                   "operation": "Update",
-                  "time": 2021-04-27T20:57:17.000Z,
-                },
-                V1ManagedFieldsEntry {
-                  "apiVersion": "v1",
-                  "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        "f:kubeadm.alpha.kubernetes.io/cri-socket": Object {},
-                      },
-                      "f:labels": Object {
-                        "f:node-role.kubernetes.io/control-plane": Object {},
-                        "f:node-role.kubernetes.io/master": Object {},
-                      },
-                    },
-                  },
-                  "manager": "kubeadm",
-                  "operation": "Update",
-                  "time": 2021-04-27T20:57:20.000Z,
-                },
-                V1ManagedFieldsEntry {
-                  "apiVersion": "v1",
-                  "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        "f:minikube.k8s.io/commit": Object {},
-                        "f:minikube.k8s.io/name": Object {},
-                        "f:minikube.k8s.io/updated_at": Object {},
-                        "f:minikube.k8s.io/version": Object {},
-                      },
-                    },
-                  },
-                  "manager": "kubectl-label",
-                  "operation": "Update",
-                  "time": 2021-04-27T20:57:21.000Z,
-                },
-                V1ManagedFieldsEntry {
-                  "apiVersion": "v1",
-                  "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        "f:node.alpha.kubernetes.io/ttl": Object {},
-                      },
-                    },
-                    "f:spec": Object {
-                      "f:podCIDR": Object {},
-                      "f:podCIDRs": Object {
-                        ".": Object {},
-                        "v:\\"10.244.0.0/24\\"": Object {},
-                      },
-                    },
-                  },
-                  "manager": "kube-controller-manager",
-                  "operation": "Update",
-                  "time": 2021-04-27T20:57:37.000Z,
+                  "time": 2021-05-14T16:22:29.000Z,
                 },
               ],
               "name": "minikube",
               "namespace": undefined,
               "ownerReferences": undefined,
-              "resourceVersion": "340676",
+              "resourceVersion": "575600",
               "selfLink": undefined,
               "uid": "d9e7805e-35e6-4934-bb9a-c0f9853a9ec9",
             },
@@ -245,7 +245,7 @@ Object {
                 "ephemeral-storage": "88103912Ki",
                 "hugepages-1Gi": "0",
                 "hugepages-2Mi": "0",
-                "memory": "16289508Ki",
+                "memory": "16289500Ki",
                 "pods": "110",
               },
               "capacity": Object {
@@ -253,37 +253,37 @@ Object {
                 "ephemeral-storage": "88103912Ki",
                 "hugepages-1Gi": "0",
                 "hugepages-2Mi": "0",
-                "memory": "16289508Ki",
+                "memory": "16289500Ki",
                 "pods": "110",
               },
               "conditions": Array [
                 V1NodeCondition {
-                  "lastHeartbeatTime": 2021-05-10T19:32:27.000Z,
-                  "lastTransitionTime": 2021-04-27T20:57:12.000Z,
+                  "lastHeartbeatTime": 2021-06-24T18:34:49.000Z,
+                  "lastTransitionTime": 2021-05-14T16:22:29.000Z,
                   "message": "kubelet has sufficient memory available",
                   "reason": "KubeletHasSufficientMemory",
                   "status": "False",
                   "type": "MemoryPressure",
                 },
                 V1NodeCondition {
-                  "lastHeartbeatTime": 2021-05-10T19:32:27.000Z,
-                  "lastTransitionTime": 2021-04-27T20:57:12.000Z,
+                  "lastHeartbeatTime": 2021-06-24T18:34:49.000Z,
+                  "lastTransitionTime": 2021-05-14T16:22:29.000Z,
                   "message": "kubelet has no disk pressure",
                   "reason": "KubeletHasNoDiskPressure",
                   "status": "False",
                   "type": "DiskPressure",
                 },
                 V1NodeCondition {
-                  "lastHeartbeatTime": 2021-05-10T19:32:27.000Z,
-                  "lastTransitionTime": 2021-04-27T20:57:12.000Z,
+                  "lastHeartbeatTime": 2021-06-24T18:34:49.000Z,
+                  "lastTransitionTime": 2021-05-14T16:22:29.000Z,
                   "message": "kubelet has sufficient PID available",
                   "reason": "KubeletHasSufficientPID",
                   "status": "False",
                   "type": "PIDPressure",
                 },
                 V1NodeCondition {
-                  "lastHeartbeatTime": 2021-05-10T19:32:27.000Z,
-                  "lastTransitionTime": 2021-04-27T20:57:37.000Z,
+                  "lastHeartbeatTime": 2021-06-24T18:34:49.000Z,
+                  "lastTransitionTime": 2021-05-14T16:22:29.000Z,
                   "message": "kubelet is posting ready status",
                   "reason": "KubeletReady",
                   "status": "True",
@@ -299,86 +299,23 @@ Object {
               "images": Array [
                 V1ContainerImage {
                   "names": Array [
-                    "<none>@<none>",
-                    "<none>:<none>",
-                  ],
-                  "sizeBytes": 951617885,
-                },
-                V1ContainerImage {
-                  "names": Array [
                     "my-new-image:latest",
                   ],
-                  "sizeBytes": 951616097,
+                  "sizeBytes": 954584458,
                 },
                 V1ContainerImage {
                   "names": Array [
-                    "<none>@<none>",
-                    "<none>:<none>",
+                    "perl@sha256:0515e9e1c6aecf3a729d4dfb799687c6096c5c1ec117a780952e1555f9c66297",
+                    "perl:latest",
                   ],
-                  "sizeBytes": 951607600,
+                  "sizeBytes": 860223906,
                 },
                 V1ContainerImage {
                   "names": Array [
-                    "<none>@<none>",
-                    "<none>:<none>",
+                    "gcr.io/google_samples/gb-frontend@sha256:50b22839aaf6a18586d6751e8963cf684c27b9873ca926df22cdf88ed4452615",
+                    "gcr.io/google_samples/gb-frontend:v3",
                   ],
-                  "sizeBytes": 951607522,
-                },
-                V1ContainerImage {
-                  "names": Array [
-                    "<none>@<none>",
-                    "<none>:<none>",
-                  ],
-                  "sizeBytes": 951607476,
-                },
-                V1ContainerImage {
-                  "names": Array [
-                    "<none>@<none>",
-                    "<none>:<none>",
-                  ],
-                  "sizeBytes": 951607360,
-                },
-                V1ContainerImage {
-                  "names": Array [
-                    "<none>@<none>",
-                    "<none>:<none>",
-                  ],
-                  "sizeBytes": 951607299,
-                },
-                V1ContainerImage {
-                  "names": Array [
-                    "<none>@<none>",
-                    "<none>:<none>",
-                  ],
-                  "sizeBytes": 951606229,
-                },
-                V1ContainerImage {
-                  "names": Array [
-                    "<none>@<none>",
-                    "<none>:<none>",
-                  ],
-                  "sizeBytes": 951606057,
-                },
-                V1ContainerImage {
-                  "names": Array [
-                    "<none>@<none>",
-                    "<none>:<none>",
-                  ],
-                  "sizeBytes": 951588589,
-                },
-                V1ContainerImage {
-                  "names": Array [
-                    "<none>@<none>",
-                    "<none>:<none>",
-                  ],
-                  "sizeBytes": 951586869,
-                },
-                V1ContainerImage {
-                  "names": Array [
-                    "creativice/kube-integration@sha256:7c38ef6c3854b880336d4d21b8c43cbee4c758dd1540aa35c70f630300197fc6",
-                    "creativice/kube-integration:latest",
-                  ],
-                  "sizeBytes": 951570483,
+                  "sizeBytes": 509707703,
                 },
                 V1ContainerImage {
                   "names": Array [
@@ -393,6 +330,13 @@ Object {
                     "kubernetesui/dashboard:v2.1.0",
                   ],
                   "sizeBytes": 225733746,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "quay.io/fluentd_elasticsearch/fluentd@sha256:aec118bb3d1c4af358c1d495b14c12781c4ab5e8cfb455edb1ebd2e92750e31d",
+                    "quay.io/fluentd_elasticsearch/fluentd:v2.5.2",
+                  ],
+                  "sizeBytes": 140287084,
                 },
                 V1ContainerImage {
                   "names": Array [
@@ -459,6 +403,13 @@ Object {
                 },
                 V1ContainerImage {
                   "names": Array [
+                    "busybox@sha256:930490f97e5b921535c153e0e7110d251134cc4b72bbb8133c6a5065cc68580d",
+                    "busybox:latest",
+                  ],
+                  "sizeBytes": 1235821,
+                },
+                V1ContainerImage {
+                  "names": Array [
                     "k8s.gcr.io/pause@sha256:927d98197ec1141a368550822d18fa1c60bdae27b78b0c004f705f548c07814f",
                     "k8s.gcr.io/pause:3.2",
                   ],
@@ -467,9 +418,9 @@ Object {
               ],
               "nodeInfo": V1NodeSystemInfo {
                 "architecture": "amd64",
-                "bootID": "97e0e504-1e81-45fc-8b8a-9a15c124d940",
+                "bootID": "c6deacb2-5968-4337-926b-31d9acb6450b",
                 "containerRuntimeVersion": "docker://20.10.5",
-                "kernelVersion": "5.8.0-50-generic",
+                "kernelVersion": "5.8.0-59-generic",
                 "kubeProxyVersion": "v1.20.2",
                 "kubeletVersion": "v1.20.2",
                 "machineID": "73c9fceff7724090ba72b64bf6e8eff8",
@@ -496,24 +447,24 @@ Object {
         "10.244.0.0/24",
       ],
       "providerID": undefined,
-      "resourceVersion": "340676",
+      "resourceVersion": "575600",
       "status.allocatable.cpu": "8",
       "status.allocatable.ephemeral-storage": "88103912Ki",
       "status.allocatable.hugepages-1Gi": "0",
       "status.allocatable.hugepages-2Mi": "0",
-      "status.allocatable.memory": "16289508Ki",
+      "status.allocatable.memory": "16289500Ki",
       "status.allocatable.pods": "110",
       "status.capacity.cpu": "8",
       "status.capacity.ephemeral-storage": "88103912Ki",
       "status.capacity.hugepages-1Gi": "0",
       "status.capacity.hugepages-2Mi": "0",
-      "status.capacity.memory": "16289508Ki",
+      "status.capacity.memory": "16289500Ki",
       "status.capacity.pods": "110",
       "status.kubeletEndpointPort": 10250,
       "status.nodeInfo.architecture": "amd64",
-      "status.nodeInfo.bootID": "97e0e504-1e81-45fc-8b8a-9a15c124d940",
+      "status.nodeInfo.bootID": "c6deacb2-5968-4337-926b-31d9acb6450b",
       "status.nodeInfo.containerRuntimeVersion": "docker://20.10.5",
-      "status.nodeInfo.kernelVersion": "5.8.0-50-generic",
+      "status.nodeInfo.kernelVersion": "5.8.0-59-generic",
       "status.nodeInfo.kubeProxyVersion": "v1.20.2",
       "status.nodeInfo.kubeletVersion": "v1.20.2",
       "status.nodeInfo.machineID": "73c9fceff7724090ba72b64bf6e8eff8",

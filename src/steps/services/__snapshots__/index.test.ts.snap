@@ -408,6 +408,149 @@ Object {
       "_class": Array [
         "Service",
       ],
+      "_key": "2f506779-82b7-4558-ab7b-6a722966f987",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": V1Service {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": Object {
+                "kubectl.kubernetes.io/last-applied-configuration": "{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"app\\":\\"nginx\\"},\\"name\\":\\"nginx\\",\\"namespace\\":\\"default\\"},\\"spec\\":{\\"clusterIP\\":\\"None\\",\\"ports\\":[{\\"name\\":\\"web\\",\\"port\\":80}],\\"selector\\":{\\"app\\":\\"nginx\\"}}}
+",
+              },
+              "clusterName": undefined,
+              "creationTimestamp": 2021-06-21T09:21:04.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": undefined,
+              "labels": Object {
+                "app": "nginx",
+              },
+              "managedFields": Array [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:metadata": Object {
+                      "f:annotations": Object {
+                        ".": Object {},
+                        "f:kubectl.kubernetes.io/last-applied-configuration": Object {},
+                      },
+                      "f:labels": Object {
+                        ".": Object {},
+                        "f:app": Object {},
+                      },
+                    },
+                    "f:spec": Object {
+                      "f:clusterIP": Object {},
+                      "f:ports": Object {
+                        ".": Object {},
+                        "k:{\\"port\\":80,\\"protocol\\":\\"TCP\\"}": Object {
+                          ".": Object {},
+                          "f:name": Object {},
+                          "f:port": Object {},
+                          "f:protocol": Object {},
+                          "f:targetPort": Object {},
+                        },
+                      },
+                      "f:selector": Object {
+                        ".": Object {},
+                        "f:app": Object {},
+                      },
+                      "f:sessionAffinity": Object {},
+                      "f:type": Object {},
+                    },
+                  },
+                  "manager": "kubectl-client-side-apply",
+                  "operation": "Update",
+                  "time": 2021-06-21T09:21:04.000Z,
+                },
+              ],
+              "name": "nginx",
+              "namespace": "default",
+              "ownerReferences": undefined,
+              "resourceVersion": "508541",
+              "selfLink": undefined,
+              "uid": "2f506779-82b7-4558-ab7b-6a722966f987",
+            },
+            "spec": V1ServiceSpec {
+              "allocateLoadBalancerNodePorts": undefined,
+              "clusterIP": "None",
+              "clusterIPs": Array [
+                "None",
+              ],
+              "externalIPs": undefined,
+              "externalName": undefined,
+              "externalTrafficPolicy": undefined,
+              "healthCheckNodePort": undefined,
+              "ipFamilies": undefined,
+              "ipFamilyPolicy": undefined,
+              "loadBalancerIP": undefined,
+              "loadBalancerSourceRanges": undefined,
+              "ports": Array [
+                V1ServicePort {
+                  "appProtocol": undefined,
+                  "name": "web",
+                  "nodePort": undefined,
+                  "port": 80,
+                  "protocol": "TCP",
+                  "targetPort": 80,
+                },
+              ],
+              "publishNotReadyAddresses": undefined,
+              "selector": Object {
+                "app": "nginx",
+              },
+              "sessionAffinity": "None",
+              "sessionAffinityConfig": undefined,
+              "topologyKeys": undefined,
+              "type": "ClusterIP",
+            },
+            "status": V1ServiceStatus {
+              "conditions": undefined,
+              "loadBalancer": V1LoadBalancerStatus {
+                "ingress": undefined,
+              },
+            },
+          },
+        },
+      ],
+      "_type": "kube_service",
+      "active": undefined,
+      "allocateLoadBalancerNodePorts": undefined,
+      "category": Array [
+        "infrastructure",
+      ],
+      "clusterIP": "None",
+      "clusterIPs": Array [
+        "None",
+      ],
+      "createdOn": 1624267264000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "nginx",
+      "externalIPs": undefined,
+      "externalName": undefined,
+      "externalTrafficPolicy": undefined,
+      "generation": undefined,
+      "healthCheckNodePort": undefined,
+      "ipFamilies": undefined,
+      "ipFamilyPolicy": undefined,
+      "loadBalancerIP": undefined,
+      "loadBalancerSourceRanges": undefined,
+      "name": "nginx",
+      "publishNotReadyAddresses": undefined,
+      "resourceVersion": "508541",
+      "sessionAffinity": "None",
+      "type": "ClusterIP",
+    },
+    Object {
+      "_class": Array [
+        "Service",
+      ],
       "_key": "d44507f3-7f7b-411f-a49b-42dc1afbcae3",
       "_rawData": Array [
         Object {
@@ -585,28 +728,36 @@ Object {
   ],
   "collectedRelationships": Array [
     Object {
-      "_class": "HAS",
+      "_class": "CONTAINS",
       "_fromEntityKey": "d5976ece-dc03-46a1-921f-cb6043e5f56e",
-      "_key": "d5976ece-dc03-46a1-921f-cb6043e5f56e|has|c296a0d8-9839-4908-bd52-971ddaaebcaf",
+      "_key": "d5976ece-dc03-46a1-921f-cb6043e5f56e|contains|c296a0d8-9839-4908-bd52-971ddaaebcaf",
       "_toEntityKey": "c296a0d8-9839-4908-bd52-971ddaaebcaf",
-      "_type": "kube_namespace_has_service",
-      "displayName": "HAS",
+      "_type": "kube_namespace_contains_service",
+      "displayName": "CONTAINS",
     },
     Object {
-      "_class": "HAS",
+      "_class": "CONTAINS",
+      "_fromEntityKey": "d5976ece-dc03-46a1-921f-cb6043e5f56e",
+      "_key": "d5976ece-dc03-46a1-921f-cb6043e5f56e|contains|2f506779-82b7-4558-ab7b-6a722966f987",
+      "_toEntityKey": "2f506779-82b7-4558-ab7b-6a722966f987",
+      "_type": "kube_namespace_contains_service",
+      "displayName": "CONTAINS",
+    },
+    Object {
+      "_class": "CONTAINS",
       "_fromEntityKey": "239ee6a3-23d6-4ca6-ae32-3b3fdda6a604",
-      "_key": "239ee6a3-23d6-4ca6-ae32-3b3fdda6a604|has|d44507f3-7f7b-411f-a49b-42dc1afbcae3",
+      "_key": "239ee6a3-23d6-4ca6-ae32-3b3fdda6a604|contains|d44507f3-7f7b-411f-a49b-42dc1afbcae3",
       "_toEntityKey": "d44507f3-7f7b-411f-a49b-42dc1afbcae3",
-      "_type": "kube_namespace_has_service",
-      "displayName": "HAS",
+      "_type": "kube_namespace_contains_service",
+      "displayName": "CONTAINS",
     },
   ],
   "encounteredTypes": Array [
     "kube_namespace",
     "kube_service",
-    "kube_namespace_has_service",
+    "kube_namespace_contains_service",
   ],
-  "numCollectedEntities": 6,
-  "numCollectedRelationships": 2,
+  "numCollectedEntities": 7,
+  "numCollectedRelationships": 3,
 }
 `;

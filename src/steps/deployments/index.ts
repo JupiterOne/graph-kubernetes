@@ -28,7 +28,7 @@ export async function fetchDeployments(
           await jobState.addEntity(deploymentEntity);
           await jobState.addRelationship(
             createDirectRelationship({
-              _class: RelationshipClass.HAS,
+              _class: RelationshipClass.CONTAINS,
               from: namespaceEntity,
               to: deploymentEntity,
             }),
@@ -44,7 +44,7 @@ export const deploymentsSteps: IntegrationStep<IntegrationConfig>[] = [
     id: IntegrationSteps.DEPLOYMENTS,
     name: 'Fetch Deployments',
     entities: [Entities.DEPLOYMENT],
-    relationships: [Relationships.NAMESPACE_HAS_DEPLOYMENT],
+    relationships: [Relationships.NAMESPACE_CONTAINS_DEPLOYMENT],
     dependsOn: [IntegrationSteps.NAMESPACES],
     executionHandler: fetchDeployments,
   },

@@ -69,12 +69,12 @@ describe('#fetchServices', () => {
       ],
       relationshipSchemaMatchers: [
         {
-          _type: Relationships.NAMESPACE_HAS_SERVICE._type,
+          _type: Relationships.NAMESPACE_CONTAINS_SERVICE._type,
           matcher: {
             schema: {
               properties: {
-                _class: { const: RelationshipClass.HAS },
-                _type: { const: 'kube_namespace_has_service' },
+                _class: { const: RelationshipClass.CONTAINS },
+                _type: { const: 'kube_namespace_contains_service' },
               },
             },
           },
