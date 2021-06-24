@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#createConfigMapEntity should convert data 1`] = `
+Object {
+  "_class": Array [
+    "DataStore",
+  ],
+  "_key": "7deda7f2-2ac1-4845-836f-e0984840243b",
+  "_rawData": Array [
+    Object {
+      "name": "default",
+      "rawData": Object {
+        "metadata": Object {
+          "creationTimestamp": 2021-04-27T20:57:19.000Z,
+          "name": "kubelet-config-1.20",
+          "namespace": "kube-system",
+          "resourceVersion": "207",
+          "uid": "7deda7f2-2ac1-4845-836f-e0984840243b",
+        },
+      },
+    },
+  ],
+  "_type": "kube_config_map",
+  "classification": null,
+  "createdOn": 1619557039000,
+  "deletedOn": undefined,
+  "deletionGracePeriodSeconds": undefined,
+  "displayName": "kubelet-config-1.20",
+  "encrypted": false,
+  "generation": undefined,
+  "immutable": undefined,
+  "name": "kubelet-config-1.20",
+  "resourceVersion": "207",
+}
+`;

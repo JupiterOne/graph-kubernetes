@@ -22,15 +22,6 @@ Object {
             "k8s-app": "kube-dns",
             "pod-template-hash": "74ff55c5b",
           },
-          "managedFields": Array [
-            Object {
-              "apiVersion": "apps/v1",
-              "fieldsType": "FieldsV1",
-              "manager": "kube-controller-manager",
-              "operation": "Update",
-              "time": 2021-05-10T13:25:17.000Z,
-            },
-          ],
           "name": "coredns-74ff55c5b",
           "namespace": "kube-system",
           "ownerReferences": Array [
@@ -187,7 +178,7 @@ Object {
       },
     },
   ],
-  "_type": "kube_replicaset",
+  "_type": "kube_replica_set",
   "active": undefined,
   "createdOn": 1619557057000,
   "deletionGracePeriodSeconds": undefined,

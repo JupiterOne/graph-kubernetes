@@ -16,15 +16,6 @@ Object {
             "component": "apiserver",
             "provider": "kubernetes",
           },
-          "managedFields": Array [
-            Object {
-              "apiVersion": "v1",
-              "fieldsType": "FieldsV1",
-              "manager": "kube-apiserver",
-              "operation": "Update",
-              "time": 2021-04-27T20:57:19.000Z,
-            },
-          ],
           "name": "kubernetes",
           "namespace": "default",
           "resourceVersion": "202",

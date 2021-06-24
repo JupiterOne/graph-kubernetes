@@ -1,9 +1,11 @@
 import { IntegrationProviderAuthenticationError } from '@jupiterone/integration-sdk-core';
 import * as k8s from '@kubernetes/client-node';
 import {
+  V1ConfigMapList,
   V1NamespaceList,
   V1NodeList,
   V1PodList,
+  V1SecretList,
   V1ServiceList,
 } from '@kubernetes/client-node';
 import { IntegrationConfig } from '../../config';
@@ -127,6 +129,54 @@ export class CoreClient extends Client {
       async (data: V1ServiceList) => {
         for (const service of data.items) {
           await callback(service);
+        }
+      },
+    );
+  }
+
+  async iterateNamespacedConfigMaps(
+    namespace: string,
+    callback: (data: k8s.V1ConfigMap) => Promise<void>,
+  ): Promise<void> {
+    await this.iterateApi(
+      async (nextPageToken) => {
+        return this.client.listNamespacedConfigMap(
+          namespace,
+          undefined,
+          undefined,
+          nextPageToken,
+          undefined,
+          undefined,
+          this.maxPerPage,
+        );
+      },
+      async (data: V1ConfigMapList) => {
+        for (const configMap of data.items || []) {
+          await callback(configMap);
+        }
+      },
+    );
+  }
+
+  async iterateNamespacedSecrets(
+    namespace: string,
+    callback: (data: k8s.V1Secret) => Promise<void>,
+  ): Promise<void> {
+    await this.iterateApi(
+      async (nextPageToken) => {
+        return this.client.listNamespacedSecret(
+          namespace,
+          undefined,
+          undefined,
+          nextPageToken,
+          undefined,
+          undefined,
+          this.maxPerPage,
+        );
+      },
+      async (data: V1SecretList) => {
+        for (const secret of data.items || []) {
+          await callback(secret);
         }
       },
     );

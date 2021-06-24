@@ -21,7 +21,7 @@ describe('#fetchReplicaSets', () => {
             schema: {
               additionalProperties: false,
               properties: {
-                _type: { const: 'kube_replicaset' },
+                _type: { const: 'kube_replica_set' },
                 _rawData: {
                   type: 'array',
                   items: { type: 'object' },
@@ -52,7 +52,7 @@ describe('#fetchReplicaSets', () => {
             schema: {
               properties: {
                 _class: { const: RelationshipClass.MANAGES },
-                _type: { const: 'kube_deployment_manages_replicaset' },
+                _type: { const: 'kube_deployment_manages_replica_set' },
               },
             },
           },

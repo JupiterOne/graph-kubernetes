@@ -74,15 +74,21 @@ https://github.com/JupiterOne/sdk/blob/master/docs/integrations/development.md
 
 The following entities are created:
 
-| Resources             | Entity `_type`    | Entity `_class` |
-| --------------------- | ----------------- | --------------- |
-| Kubernetes Container  | `kube_container`  | `Container`     |
-| Kubernetes Deployment | `kube_deployment` | `Deployment`    |
-| Kubernetes Namespace  | `kube_namespace`  | `Group`         |
-| Kubernetes Node       | `kube_node`       | `Host`          |
-| Kubernetes Pod        | `kube_pod`        | `Task`          |
-| Kubernetes ReplicaSet | `kube_replicaset` | `Deployment`    |
-| Kubernetes Service    | `kube_service`    | `Service`       |
+| Resources              | Entity `_type`      | Entity `_class` |
+| ---------------------- | ------------------- | --------------- |
+| Kubernetes ConfigMap   | `kube_config_map`   | `DataStore`     |
+| Kubernetes Container   | `kube_container`    | `Container`     |
+| Kubernetes CronJob     | `kube_cron_job`     | `Task`          |
+| Kubernetes DaemonSet   | `kube_daemon_set`   | `Deployment`    |
+| Kubernetes Deployment  | `kube_deployment`   | `Deployment`    |
+| Kubernetes Job         | `kube_job`          | `Task`          |
+| Kubernetes Namespace   | `kube_namespace`    | `Group`         |
+| Kubernetes Node        | `kube_node`         | `Host`          |
+| Kubernetes Pod         | `kube_pod`          | `Task`          |
+| Kubernetes ReplicaSet  | `kube_replica_set`  | `Deployment`    |
+| Kubernetes Secret      | `kube_secret`       | `DataStore`     |
+| Kubernetes Service     | `kube_service`      | `Service`       |
+| Kubernetes StatefulSet | `kube_stateful_set` | `Deployment`    |
 
 ### Relationships
 
@@ -90,12 +96,22 @@ The following relationships are created/mapped:
 
 | Source Entity `_type` | Relationship `_class` | Target Entity `_type` |
 | --------------------- | --------------------- | --------------------- |
-| `kube_deployment`     | **MANAGES**           | `kube_replicaset`     |
+| `kube_cron_job`       | **MANAGES**           | `kube_job`            |
+| `kube_deployment`     | **MANAGES**           | `kube_replica_set`    |
+| `kube_job`            | **MANAGES**           | `kube_pod`            |
+| `kube_namespace`      | **CONTAINS**          | `kube_config_map`     |
+| `kube_namespace`      | **CONTAINS**          | `kube_cron_job`       |
+| `kube_namespace`      | **CONTAINS**          | `kube_daemon_set`     |
 | `kube_namespace`      | **CONTAINS**          | `kube_deployment`     |
+| `kube_namespace`      | **CONTAINS**          | `kube_job`            |
+| `kube_namespace`      | **CONTAINS**          | `kube_replica_set`    |
+| `kube_namespace`      | **CONTAINS**          | `kube_secret`         |
 | `kube_namespace`      | **CONTAINS**          | `kube_service`        |
+| `kube_namespace`      | **CONTAINS**          | `kube_stateful_set`   |
 | `kube_node`           | **HAS**               | `kube_pod`            |
 | `kube_pod`            | **CONTAINS**          | `kube_container`      |
-| `kube_replicaset`     | **MANAGES**           | `kube_pod`            |
+| `kube_replica_set`    | **MANAGES**           | `kube_pod`            |
+| `kube_stateful_set`   | **MANAGES**           | `kube_pod`            |
 
 <!--
 ********************************************************************************

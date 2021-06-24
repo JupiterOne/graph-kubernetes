@@ -36,12 +36,24 @@ export default async function getStepStartStates(
       servicesDisabled,
       deploymentsDisabled,
       replicasetsDisabled,
+      statefulsetsDisabled,
+      daemonsetsDisabled,
+      jobsDisabled,
+      cronJobsDisabled,
+      configMapsDisabled,
+      secretsDisabled,
       podsDisabled,
       nodesDisabled,
     ] = await Promise.all([
       getServiceState('services', 'list', client),
       getServiceState('deployments', 'list', client),
       getServiceState('replicasets', 'list', client),
+      getServiceState('statefulsets', 'list', client),
+      getServiceState('daemonsets', 'list', client),
+      getServiceState('jobs', 'list', client),
+      getServiceState('cronjobs', 'list', client),
+      getServiceState('configmaps', 'list', client),
+      getServiceState('secrets', 'list', client),
       getServiceState('pods', 'list', client),
       getServiceState('nodes', 'list', client),
     ]);
@@ -58,6 +70,24 @@ export default async function getStepStartStates(
       },
       [IntegrationSteps.REPLICASETS]: {
         disabled: replicasetsDisabled,
+      },
+      [IntegrationSteps.STATEFULSETS]: {
+        disabled: statefulsetsDisabled,
+      },
+      [IntegrationSteps.DAEMONSETS]: {
+        disabled: daemonsetsDisabled,
+      },
+      [IntegrationSteps.JOBS]: {
+        disabled: jobsDisabled,
+      },
+      [IntegrationSteps.CRONJOBS]: {
+        disabled: cronJobsDisabled,
+      },
+      [IntegrationSteps.CONFIGMAPS]: {
+        disabled: configMapsDisabled,
+      },
+      [IntegrationSteps.SECRETS]: {
+        disabled: secretsDisabled,
       },
       [IntegrationSteps.PODS]: {
         disabled: podsDisabled,

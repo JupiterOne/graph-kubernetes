@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#createConfigMapEntity should convert data 1`] = `
+Object {
+  "_class": Array [
+    "Task",
+  ],
+  "_key": "223aa203-ed63-4c0e-a113-99abfe9d48e6",
+  "_rawData": Array [
+    Object {
+      "name": "default",
+      "rawData": Object {
+        "metadata": Object {
+          "annotations": Object {
+            "kubectl.kubernetes.io/last-applied-configuration": "{\\"apiVersion\\":\\"batch/v1beta1\\",\\"kind\\":\\"CronJob\\",\\"metadata\\":{\\"annotations\\":{},\\"name\\":\\"hello\\",\\"namespace\\":\\"default\\"},\\"spec\\":{\\"jobTemplate\\":{\\"spec\\":{\\"template\\":{\\"spec\\":{\\"containers\\":[{\\"command\\":[\\"/bin/sh\\",\\"-c\\",\\"date; echo Hello from the Kubernetes cluster\\"],\\"image\\":\\"busybox\\",\\"imagePullPolicy\\":\\"IfNotPresent\\",\\"name\\":\\"hello\\"}],\\"restartPolicy\\":\\"OnFailure\\"}}}},\\"schedule\\":\\"*/1 * * * *\\"}}
+",
+          },
+          "creationTimestamp": 2021-06-23T13:09:30.000Z,
+          "name": "hello",
+          "namespace": "default",
+          "resourceVersion": "572357",
+          "uid": "223aa203-ed63-4c0e-a113-99abfe9d48e6",
+        },
+        "spec": Object {
+          "concurrencyPolicy": "Allow",
+          "failedJobsHistoryLimit": 1,
+          "jobTemplate": Object {
+            "metadata": Object {},
+            "spec": Object {
+              "template": Object {
+                "metadata": Object {},
+                "spec": Object {
+                  "containers": Array [
+                    Object {
+                      "command": Array [
+                        "/bin/sh",
+                        "-c",
+                        "date; echo Hello from the Kubernetes cluster",
+                      ],
+                      "image": "busybox",
+                      "imagePullPolicy": "IfNotPresent",
+                      "name": "hello",
+                      "resources": Object {},
+                      "terminationMessagePath": "/dev/termination-log",
+                      "terminationMessagePolicy": "File",
+                    },
+                  ],
+                  "dnsPolicy": "ClusterFirst",
+                  "restartPolicy": "OnFailure",
+                  "schedulerName": "default-scheduler",
+                  "securityContext": Object {},
+                  "terminationGracePeriodSeconds": 30,
+                },
+              },
+            },
+          },
+          "schedule": "*/1 * * * *",
+          "successfulJobsHistoryLimit": 3,
+          "suspend": false,
+        },
+        "status": Object {
+          "lastScheduleTime": 2021-06-23T17:56:00.000Z,
+        },
+      },
+    },
+  ],
+  "_type": "kube_cron_job",
+  "active": undefined,
+  "concurrencyPolicy": "Allow",
+  "createdOn": 1624453770000,
+  "deletedOn": undefined,
+  "deletionGracePeriodSeconds": undefined,
+  "displayName": "hello",
+  "failedJobsHistoryLimit": 1,
+  "generation": undefined,
+  "name": "hello",
+  "resourceVersion": "572357",
+  "schedule": "*/1 * * * *",
+  "startingDeadlineSeconds": undefined,
+  "status.lastScheduleTime": 1624470960000,
+  "successfulJobsHistoryLimit": 3,
+  "suspend": false,
+}
+`;

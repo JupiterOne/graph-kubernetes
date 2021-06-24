@@ -2,11 +2,17 @@ import { IntegrationConfig, instanceConfigFields } from './config';
 import { validateInvocation } from './validator';
 import { IntegrationInvocationConfig } from '@jupiterone/integration-sdk-core';
 import { namespaceSteps } from './steps/namespaces';
-import { podsSteps } from './steps/pods';
 import { nodeSteps } from './steps/nodes';
 import { serviceSteps } from './steps/services';
 import { deploymentsSteps } from './steps/deployments';
 import { replicaSetsSteps } from './steps/replica-sets';
+import { statefulSetsSteps } from './steps/stateful-sets';
+import { daemonSetsSteps } from './steps/daemon-sets';
+import { jobsSteps } from './steps/jobs';
+import { cronJobsSteps } from './steps/cron-jobs';
+import { configMapsSteps } from './steps/config-maps';
+import { secretsSteps } from './steps/secrets';
+import { podsSteps } from './steps/pods';
 
 import getStepStartStates from './getStepStartStates';
 
@@ -16,10 +22,16 @@ export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> = 
   getStepStartStates,
   integrationSteps: [
     ...namespaceSteps,
+    ...nodeSteps,
     ...serviceSteps,
     ...deploymentsSteps,
     ...replicaSetsSteps,
-    ...nodeSteps,
+    ...statefulSetsSteps,
+    ...daemonSetsSteps,
+    ...jobsSteps,
+    ...cronJobsSteps,
+    ...configMapsSteps,
+    ...secretsSteps,
     ...podsSteps,
   ],
 };

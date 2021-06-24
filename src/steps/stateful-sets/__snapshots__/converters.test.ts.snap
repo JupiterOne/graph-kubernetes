@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#createStatefulSetEntity should convert data 1`] = `
+Object {
+  "_class": Array [
+    "Deployment",
+  ],
+  "_key": "f34830bc-9c50-47d1-a77f-0f527cb95511",
+  "_rawData": Array [
+    Object {
+      "name": "default",
+      "rawData": Object {
+        "metadata": Object {
+          "annotations": Object {
+            "kubectl.kubernetes.io/last-applied-configuration": "{\\"apiVersion\\":\\"apps/v1\\",\\"kind\\":\\"StatefulSet\\",\\"metadata\\":{\\"annotations\\":{},\\"name\\":\\"web\\",\\"namespace\\":\\"default\\"},\\"spec\\":{\\"replicas\\":3,\\"selector\\":{\\"matchLabels\\":{\\"app\\":\\"nginx\\"}},\\"serviceName\\":\\"nginx\\",\\"template\\":{\\"metadata\\":{\\"labels\\":{\\"app\\":\\"nginx\\"}},\\"spec\\":{\\"containers\\":[{\\"image\\":\\"k8s.gcr.io/nginx-slim:0.8\\",\\"name\\":\\"nginx\\",\\"ports\\":[{\\"containerPort\\":80,\\"name\\":\\"web\\"}],\\"volumeMounts\\":[{\\"mountPath\\":\\"/usr/share/nginx/html\\",\\"name\\":\\"www\\"}]}],\\"terminationGracePeriodSeconds\\":10}},\\"volumeClaimTemplates\\":[{\\"metadata\\":{\\"name\\":\\"www\\"},\\"spec\\":{\\"accessModes\\":[\\"ReadWriteOnce\\"],\\"resources\\":{\\"requests\\":{\\"storage\\":\\"1Gi\\"}},\\"storageClassName\\":\\"my-storage-class\\"}}]}}
+",
+          },
+          "creationTimestamp": 2021-06-21T09:21:04.000Z,
+          "generation": 1,
+          "name": "web",
+          "namespace": "default",
+          "resourceVersion": "508551",
+          "uid": "f34830bc-9c50-47d1-a77f-0f527cb95511",
+        },
+        "spec": Object {
+          "podManagementPolicy": "OrderedReady",
+          "replicas": 3,
+          "revisionHistoryLimit": 10,
+          "selector": Object {
+            "matchLabels": Object {
+              "app": "nginx",
+            },
+          },
+          "serviceName": "nginx",
+          "template": Object {
+            "metadata": Object {
+              "labels": Object {
+                "app": "nginx",
+              },
+            },
+            "spec": Object {
+              "containers": Array [
+                Object {
+                  "image": "k8s.gcr.io/nginx-slim:0.8",
+                  "imagePullPolicy": "IfNotPresent",
+                  "name": "nginx",
+                  "ports": Array [
+                    Object {
+                      "containerPort": 80,
+                      "name": "web",
+                      "protocol": "TCP",
+                    },
+                  ],
+                  "resources": Object {},
+                  "terminationMessagePath": "/dev/termination-log",
+                  "terminationMessagePolicy": "File",
+                  "volumeMounts": Array [
+                    Object {
+                      "mountPath": "/usr/share/nginx/html",
+                      "name": "www",
+                    },
+                  ],
+                },
+              ],
+              "dnsPolicy": "ClusterFirst",
+              "restartPolicy": "Always",
+              "schedulerName": "default-scheduler",
+              "securityContext": Object {},
+              "terminationGracePeriodSeconds": 10,
+            },
+          },
+          "updateStrategy": Object {
+            "rollingUpdate": Object {
+              "partition": 0,
+            },
+            "type": "RollingUpdate",
+          },
+          "volumeClaimTemplates": Array [
+            Object {
+              "apiVersion": "v1",
+              "kind": "PersistentVolumeClaim",
+              "metadata": Object {
+                "name": "www",
+              },
+              "spec": Object {
+                "accessModes": Array [
+                  "ReadWriteOnce",
+                ],
+                "resources": Object {
+                  "requests": Object {
+                    "storage": "1Gi",
+                  },
+                },
+                "storageClassName": "my-storage-class",
+                "volumeMode": "Filesystem",
+              },
+              "status": Object {
+                "phase": "Pending",
+              },
+            },
+          ],
+        },
+        "status": Object {
+          "collisionCount": 0,
+          "currentReplicas": 1,
+          "currentRevision": "web-6596ffb49b",
+          "observedGeneration": 1,
+          "replicas": 1,
+          "updateRevision": "web-6596ffb49b",
+          "updatedReplicas": 1,
+        },
+      },
+    },
+  ],
+  "_type": "kube_stateful_set",
+  "active": undefined,
+  "createdOn": 1624267264000,
+  "deletedOn": undefined,
+  "deletionGracePeriodSeconds": undefined,
+  "displayName": "web",
+  "generation": 1,
+  "name": "web",
+  "podManagementPolicy": "OrderedReady",
+  "replicas": 3,
+  "resourceVersion": "508551",
+  "revisionHistoryLimit": 10,
+  "serviceName": "nginx",
+  "status.collisionCount": 0,
+  "status.currentReplicas": 1,
+  "status.currentRevision": "web-6596ffb49b",
+  "status.observedGeneration": 1,
+  "status.readyReplicas": undefined,
+  "status.replicas": 1,
+  "status.updateRevision": "web-6596ffb49b",
+  "status.updatedReplicas": 1,
+  "strategy.partition": 0,
+  "strategy.type": "RollingUpdate",
+}
+`;

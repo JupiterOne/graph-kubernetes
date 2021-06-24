@@ -1,5 +1,10 @@
 import * as k8s from '@kubernetes/client-node';
-import { V1DeploymentList, V1ReplicaSetList } from '@kubernetes/client-node';
+import {
+  V1DaemonSetList,
+  V1DeploymentList,
+  V1ReplicaSetList,
+  V1StatefulSetList,
+} from '@kubernetes/client-node';
 import { IntegrationConfig } from '../../config';
 import { Client } from '../client';
 
@@ -56,6 +61,54 @@ export class AppsClient extends Client {
       async (data: V1ReplicaSetList) => {
         for (const replicaSet of data.items || []) {
           await callback(replicaSet);
+        }
+      },
+    );
+  }
+
+  async iterateStatefulSets(
+    namespace: string,
+    callback: (data: k8s.V1StatefulSet) => Promise<void>,
+  ): Promise<void> {
+    await this.iterateApi(
+      async (nextPageToken) => {
+        return this.client.listNamespacedStatefulSet(
+          namespace,
+          undefined,
+          undefined,
+          nextPageToken,
+          undefined,
+          undefined,
+          this.maxPerPage,
+        );
+      },
+      async (data: V1StatefulSetList) => {
+        for (const statefulSet of data.items || []) {
+          await callback(statefulSet);
+        }
+      },
+    );
+  }
+
+  async iterateDaemonSets(
+    namespace: string,
+    callback: (data: k8s.V1DaemonSet) => Promise<void>,
+  ): Promise<void> {
+    await this.iterateApi(
+      async (nextPageToken) => {
+        return this.client.listNamespacedDaemonSet(
+          namespace,
+          undefined,
+          undefined,
+          nextPageToken,
+          undefined,
+          undefined,
+          this.maxPerPage,
+        );
+      },
+      async (data: V1DaemonSetList) => {
+        for (const daemonSet of data.items || []) {
+          await callback(daemonSet);
         }
       },
     );
