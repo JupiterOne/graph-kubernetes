@@ -214,7 +214,7 @@ Object {
               "name": "minikube",
               "namespace": undefined,
               "ownerReferences": undefined,
-              "resourceVersion": "575600",
+              "resourceVersion": "630612",
               "selfLink": undefined,
               "uid": "d9e7805e-35e6-4934-bb9a-c0f9853a9ec9",
             },
@@ -258,7 +258,7 @@ Object {
               },
               "conditions": Array [
                 V1NodeCondition {
-                  "lastHeartbeatTime": 2021-06-24T18:34:49.000Z,
+                  "lastHeartbeatTime": 2021-06-25T16:04:34.000Z,
                   "lastTransitionTime": 2021-05-14T16:22:29.000Z,
                   "message": "kubelet has sufficient memory available",
                   "reason": "KubeletHasSufficientMemory",
@@ -266,7 +266,7 @@ Object {
                   "type": "MemoryPressure",
                 },
                 V1NodeCondition {
-                  "lastHeartbeatTime": 2021-06-24T18:34:49.000Z,
+                  "lastHeartbeatTime": 2021-06-25T16:04:34.000Z,
                   "lastTransitionTime": 2021-05-14T16:22:29.000Z,
                   "message": "kubelet has no disk pressure",
                   "reason": "KubeletHasNoDiskPressure",
@@ -274,7 +274,7 @@ Object {
                   "type": "DiskPressure",
                 },
                 V1NodeCondition {
-                  "lastHeartbeatTime": 2021-06-24T18:34:49.000Z,
+                  "lastHeartbeatTime": 2021-06-25T16:04:34.000Z,
                   "lastTransitionTime": 2021-05-14T16:22:29.000Z,
                   "message": "kubelet has sufficient PID available",
                   "reason": "KubeletHasSufficientPID",
@@ -282,7 +282,7 @@ Object {
                   "type": "PIDPressure",
                 },
                 V1NodeCondition {
-                  "lastHeartbeatTime": 2021-06-24T18:34:49.000Z,
+                  "lastHeartbeatTime": 2021-06-25T16:04:34.000Z,
                   "lastTransitionTime": 2021-05-14T16:22:29.000Z,
                   "message": "kubelet is posting ready status",
                   "reason": "KubeletReady",
@@ -447,7 +447,7 @@ Object {
         "10.244.0.0/24",
       ],
       "providerID": undefined,
-      "resourceVersion": "575600",
+      "resourceVersion": "630612",
       "status.allocatable.cpu": "8",
       "status.allocatable.ephemeral-storage": "88103912Ki",
       "status.allocatable.hugepages-1Gi": "0",
