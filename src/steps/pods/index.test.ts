@@ -103,23 +103,23 @@ describe('#fetchPods', () => {
           },
         },
         {
-          _type: Relationships.POD_HAS_CONTAINER._type,
+          _type: Relationships.POD_CONTAINS_CONTAINER._type,
           matcher: {
             schema: {
               properties: {
-                _class: { const: RelationshipClass.HAS },
-                _type: { const: 'kube_pod_has_container' },
+                _class: { const: RelationshipClass.CONTAINS },
+                _type: { const: 'kube_pod_contains_container' },
               },
             },
           },
         },
         {
-          _type: Relationships.REPLICASET_HAS_POD._type,
+          _type: Relationships.REPLICASET_MANAGES_POD._type,
           matcher: {
             schema: {
               properties: {
-                _class: { const: RelationshipClass.HAS },
-                _type: { const: 'kube_replicaset_has_pod' },
+                _class: { const: RelationshipClass.MANAGES },
+                _type: { const: 'kube_replicaset_manages_pod' },
               },
             },
           },

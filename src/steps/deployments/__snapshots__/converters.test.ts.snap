@@ -3,7 +3,7 @@
 exports[`#createDeploymentEntity should convert data 1`] = `
 Object {
   "_class": Array [
-    "Configuration",
+    "Deployment",
   ],
   "_key": "b39ade4b-d8f4-44a9-adc2-dff35d05514c",
   "_rawData": Array [

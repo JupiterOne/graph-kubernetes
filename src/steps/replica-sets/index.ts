@@ -34,7 +34,7 @@ export async function fetchReplicaSets(
             if (ownerEntity && owner.kind === 'Deployment') {
               await jobState.addRelationship(
                 createDirectRelationship({
-                  _class: RelationshipClass.HAS,
+                  _class: RelationshipClass.MANAGES,
                   from: ownerEntity,
                   to: replicaSetEntity,
                 }),
@@ -52,7 +52,7 @@ export const replicaSetsSteps: IntegrationStep<IntegrationConfig>[] = [
     id: IntegrationSteps.REPLICASETS,
     name: 'Fetch ReplicaSets',
     entities: [Entities.REPLICASET],
-    relationships: [Relationships.DEPLOYMENT_HAS_REPLICASET],
+    relationships: [Relationships.DEPLOYMENT_MANAGES_REPLICASET],
     dependsOn: [IntegrationSteps.NAMESPACES, IntegrationSteps.DEPLOYMENTS],
     executionHandler: fetchReplicaSets,
   },

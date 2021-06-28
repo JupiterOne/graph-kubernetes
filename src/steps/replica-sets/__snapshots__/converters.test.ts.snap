@@ -3,7 +3,7 @@
 exports[`#createReplicaSetEntity should convert data 1`] = `
 Object {
   "_class": Array [
-    "Configuration",
+    "Deployment",
   ],
   "_key": "f7113c21-7272-4f04-9198-8dc7d682fe23",
   "_rawData": Array [

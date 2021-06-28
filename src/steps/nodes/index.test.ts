@@ -14,7 +14,7 @@ describe('#fetchNodes', () => {
         {
           _type: Entities.NODE._type,
           matcher: {
-            _class: ['Group'],
+            _class: ['Host'],
             schema: {
               additionalProperties: false,
               properties: {

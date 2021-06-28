@@ -17,7 +17,7 @@ describe('#fetchReplicaSets', () => {
         {
           _type: Entities.REPLICASET._type,
           matcher: {
-            _class: ['Configuration'],
+            _class: ['Deployment'],
             schema: {
               additionalProperties: false,
               properties: {
@@ -47,12 +47,12 @@ describe('#fetchReplicaSets', () => {
       ],
       relationshipSchemaMatchers: [
         {
-          _type: Relationships.DEPLOYMENT_HAS_REPLICASET._type,
+          _type: Relationships.DEPLOYMENT_MANAGES_REPLICASET._type,
           matcher: {
             schema: {
               properties: {
-                _class: { const: RelationshipClass.HAS },
-                _type: { const: 'kube_deployment_has_replicaset' },
+                _class: { const: RelationshipClass.MANAGES },
+                _type: { const: 'kube_deployment_manages_replicaset' },
               },
             },
           },

@@ -3,7 +3,7 @@
 exports[`#createNodeEntity should convert data 1`] = `
 Object {
   "_class": Array [
-    "Group",
+    "Host",
   ],
   "_key": "103b35d1-8951-455c-95cb-3da4af29bd71",
   "_rawData": Array [

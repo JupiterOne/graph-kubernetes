@@ -41,7 +41,7 @@ export async function fetchPods(
               await jobState.addEntity(containerEntity);
               await jobState.addRelationship(
                 createDirectRelationship({
-                  _class: RelationshipClass.HAS,
+                  _class: RelationshipClass.CONTAINS,
                   from: podEntity,
                   to: containerEntity,
                 }),
@@ -78,7 +78,7 @@ export async function fetchPods(
             if (ownerEntity && owner.kind === 'ReplicaSet') {
               await jobState.addRelationship(
                 createDirectRelationship({
-                  _class: RelationshipClass.HAS,
+                  _class: RelationshipClass.MANAGES,
                   from: ownerEntity,
                   to: podEntity,
                 }),
@@ -98,8 +98,8 @@ export const podsSteps: IntegrationStep<IntegrationConfig>[] = [
     entities: [Entities.POD, Entities.CONTAINER],
     relationships: [
       Relationships.NODE_HAS_POD,
-      Relationships.POD_HAS_CONTAINER,
-      Relationships.REPLICASET_HAS_POD,
+      Relationships.POD_CONTAINS_CONTAINER,
+      Relationships.REPLICASET_MANAGES_POD,
     ],
     dependsOn: [
       IntegrationSteps.NAMESPACES,

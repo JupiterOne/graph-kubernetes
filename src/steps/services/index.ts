@@ -28,7 +28,7 @@ export async function fetchServices(
 
           await jobState.addRelationship(
             createDirectRelationship({
-              _class: RelationshipClass.HAS,
+              _class: RelationshipClass.CONTAINS,
               from: namespaceEntity,
               to: serviceEntity,
             }),
@@ -44,7 +44,7 @@ export const serviceSteps: IntegrationStep<IntegrationConfig>[] = [
     id: IntegrationSteps.SERVICES,
     name: 'Fetch Services',
     entities: [Entities.SERVICE],
-    relationships: [Relationships.NAMESPACE_HAS_SERVICE],
+    relationships: [Relationships.NAMESPACE_CONTAINS_SERVICE],
     dependsOn: [IntegrationSteps.NAMESPACES],
     executionHandler: fetchServices,
   },

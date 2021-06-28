@@ -16,7 +16,7 @@ describe('#fetchDeployments', () => {
         {
           _type: Entities.DEPLOYMENT._type,
           matcher: {
-            _class: ['Configuration'],
+            _class: ['Deployment'],
             schema: {
               additionalProperties: false,
               properties: {
@@ -54,12 +54,12 @@ describe('#fetchDeployments', () => {
       ],
       relationshipSchemaMatchers: [
         {
-          _type: Relationships.NAMESPACE_HAS_DEPLOYMENT._type,
+          _type: Relationships.NAMESPACE_CONTAINS_DEPLOYMENT._type,
           matcher: {
             schema: {
               properties: {
-                _class: { const: RelationshipClass.HAS },
-                _type: { const: 'kube_namespace_has_deployment' },
+                _class: { const: RelationshipClass.CONTAINS },
+                _type: { const: 'kube_namespace_contains_deployment' },
               },
             },
           },
