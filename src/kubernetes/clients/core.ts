@@ -24,7 +24,12 @@ export class CoreClient extends Client {
     try {
       await this.client.listNamespace();
     } catch (err) {
-      throw new IntegrationProviderAuthenticationError(err.message);
+      throw new IntegrationProviderAuthenticationError({
+        cause: err,
+        endpoint: '/apis/apps/v1/namespaces',
+        status: 400,
+        statusText: err.message,
+      });
     }
   }
 

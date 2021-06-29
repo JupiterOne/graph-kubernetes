@@ -12,7 +12,7 @@
     "access": "public"
   },
   "scripts": {
-    "start": "j1-integration collect",
+    "start": "IS_RUNNING_TEST=true j1-integration collect",
     "collect": "./scripts/collect.sh",
     "graph": "j1-integration visualize",
     "graph:types": "j1-integration visualize-types",
@@ -26,11 +26,11 @@
     "prepack": "yarn build"
   },
   "devDependencies": {
-    "@jupiterone/integration-sdk-testing": "^6.0.0"
+    "@jupiterone/integration-sdk-testing": "^6.7.1"
   },
   "dependencies": {
-    "@jupiterone/integration-sdk-core": "^6.0.0",
-    "@jupiterone/integration-sdk-dev-tools": "^6.0.0",
+    "@jupiterone/integration-sdk-core": "^6.7.1",
+    "@jupiterone/integration-sdk-dev-tools": "^6.7.1",
     "@kubernetes/client-node": "^0.14.3"
   }
 }
