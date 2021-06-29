@@ -10,16 +10,16 @@ spec:
     spec:
       template:
         spec:
-          serviceAccountName: cluster-sa
+          serviceAccountName: jupiterone-integration
           containers:
           - name: integration
-            image: my-new-image
+            image: jupiterone-graph-kubernetes
             imagePullPolicy: IfNotPresent
             env:
               # could use better name, but for now:
               # ACCESS_TYPE can either be "namespace" or "cluster"
               - name: ACCESS_TYPE
-                value: 'cluster'
+                value: 'namespace'
               # If ACCESS_TYPE === "namespace"
               # This needs to contain its name
               - name: NAMESPACE
@@ -28,15 +28,17 @@ spec:
                 valueFrom:
                   secretKeyRef:
                     name: jupiterone-integration-secret
-                    key: jaccountid
+                    key: jupiteroneAccountId
               - name: JUPITERONE_API_KEY
                 valueFrom:
-                  secretKeyRef:jone-secret
+                  secretKeyRef:
                     name: jupiterone-integration-secret
-                    key: japikey
+                    key: jupiteroneApiKey
               - name: INTEGRATION_INSTANCE_ID
                 valueFrom:
                   secretKeyRef:
                     name: jupiterone-integration-secret
-                    key: integrationid
+                    key: jupiteroneIntegrationInstanceId
+              - name: IS_RUNNING_TEST
+                value: 'false'
           restartPolicy: Never

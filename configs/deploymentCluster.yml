@@ -14,10 +14,10 @@ spec:
       labels:
         app: integration
     spec:
-      serviceAccountName: cluster-sa
+      serviceAccountName: jupiterone-integration-cluster
       containers:
         - name: integration
-          image: my-new-image
+          image: jupiterone-graph-kubernetes
           imagePullPolicy: IfNotPresent
           env:
             # could use better name, but for now:
@@ -32,14 +32,16 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: jupiterone-integration-secret
-                  key: jaccountid
+                  key: jupiteroneAccountId
             - name: JUPITERONE_API_KEY
               valueFrom:
                 secretKeyRef:
                   name: jupiterone-integration-secret
-                  key: japikey
+                  key: jupiteroneApiKey
             - name: INTEGRATION_INSTANCE_ID
               valueFrom:
                 secretKeyRef:
                   name: jupiterone-integration-secret
-                  key: integrationid
+                  key: jupiteroneIntegrationInstanceId
+            - name: IS_RUNNING_TEST
+              value: 'false'

@@ -392,6 +392,9 @@ Object {
       "externalIPs": undefined,
       "externalName": undefined,
       "externalTrafficPolicy": undefined,
+      "function": Array [
+        "compute",
+      ],
       "generation": undefined,
       "healthCheckNodePort": undefined,
       "ipFamilies": undefined,
@@ -535,6 +538,9 @@ Object {
       "externalIPs": undefined,
       "externalName": undefined,
       "externalTrafficPolicy": undefined,
+      "function": Array [
+        "compute",
+      ],
       "generation": undefined,
       "healthCheckNodePort": undefined,
       "ipFamilies": undefined,
@@ -713,6 +719,9 @@ Object {
       "externalIPs": undefined,
       "externalName": undefined,
       "externalTrafficPolicy": undefined,
+      "function": Array [
+        "compute",
+      ],
       "generation": undefined,
       "healthCheckNodePort": undefined,
       "ipFamilies": undefined,

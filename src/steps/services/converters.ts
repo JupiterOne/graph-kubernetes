@@ -20,6 +20,7 @@ export function createServiceEntity(data: k8s.V1Service) {
         deletionGracePeriodSeconds: data.metadata?.deletionGracePeriodSeconds,
         resourceVersion: data.metadata?.resourceVersion,
         category: ['infrastructure'],
+        function: ['compute'],
         createdOn: parseTimePropertyValue(data.metadata?.creationTimestamp),
         // spec properties
         allocateLoadBalancerNodePorts: data.spec?.allocateLoadBalancerNodePorts,

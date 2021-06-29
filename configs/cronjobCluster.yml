@@ -5,21 +5,21 @@ metadata:
   labels:
     app: integration-cron
 spec:
-  schedule: "*/60 * * * *" # Schedule to run every 10 minutes
+  schedule: "*/60 * * * *" # Schedule to run every hour
   jobTemplate:
     spec:
       template:
         spec:
-          serviceAccountName: namespace-sa
+          serviceAccountName: jupiterone-integration-cluster
           containers:
           - name: integration
-            image: my-new-image
+            image: jupiterone-graph-kubernetes
             imagePullPolicy: IfNotPresent
             env:
               # could use better name, but for now:
               # ACCESS_TYPE can either be "namespace" or "cluster"
               - name: ACCESS_TYPE
-                value: 'namespace'
+                value: 'cluster'
               # If ACCESS_TYPE === "namespace"
               # This needs to contain its name
               - name: NAMESPACE
@@ -28,15 +28,17 @@ spec:
                 valueFrom:
                   secretKeyRef:
                     name: jupiterone-integration-secret
-                    key: jaccountid
+                    key: jupiteroneAccountId
               - name: JUPITERONE_API_KEY
                 valueFrom:
                   secretKeyRef:
                     name: jupiterone-integration-secret
-                    key: japikey
+                    key: jupiteroneApiKey
               - name: INTEGRATION_INSTANCE_ID
                 valueFrom:
                   secretKeyRef:
                     name: jupiterone-integration-secret
-                    key: integrationid
+                    key: jupiteroneIntegrationInstanceId
+              - name: IS_RUNNING_TEST
+                value: 'false'
           restartPolicy: Never

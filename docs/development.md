@@ -31,17 +31,17 @@ read-only access or cluster-wide read-only access.
 
 1. Create a new service account
 
-`kubectl create sa namespace-sa`
+`kubectl create sa jupiterone-integration`
 
 2. Assign namespace read-only access
 
-`kubectl create rolebinding namespace-sa-view --clusterrole=view --serviceaccount=default:namespace-sa --namespace=default`
+`kubectl create rolebinding jupiterone-integration-view --clusterrole=view --serviceaccount=default:jupiterone-integration --namespace=default`
 
 ### Creating service account with cluster-wide read-only access
 
 1. Create a new service account
 
-`kubectl create sa cluster-sa`
+`kubectl create sa jupiterone-integration-cluster`
 
 2. Assign cluster-wide read-only access
 
@@ -58,7 +58,8 @@ The integration requires you to store `jupiterone account id`,
 `jupiterone api key` and `integration id` as secrets that will be read by the
 pod.
 
-Update the `./configs/createSecret.yml` with base64 encoded values.
+1. Update the `./configs/createSecret.yml` with base64 encoded values.
+2. `kubectl apply -f ./configs/createSecret.yml `
 
 ### Building the image and running the integration
 
@@ -68,8 +69,9 @@ If you want to build a docker image locally that's also visible to the
 minikube/kubernetes, do the following:
 
 1. `eval $(minikube docker-env)`
-2. `docker build -t my-new-image .` (will be replaced later with a better name
-   if we're sure we want to proceed with this authentication method)
+2. `docker build -t jupiterone-graph-kubernetes .` (will be replaced later with
+   a better name if we're sure we want to proceed with this authentication
+   method)
 
 To deploy the built image as a pod:
 

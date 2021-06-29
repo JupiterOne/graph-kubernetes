@@ -1,14 +1,15 @@
-FROM node:12-alpine
+FROM node:14-alpine
 
-WORKDIR .
+ENV JUPITERONE_INTEGRATION_DIR=/opt/jupiterone/integration
 
 # node-gyp/python3 requirement
 RUN apk add g++ make python
 
-COPY package.json yarn.lock ./
+COPY package.json yarn.lock LICENSE ${JUPITERONE_INTEGRATION_DIR}/
+COPY src/ ${JUPITERONE_INTEGRATION_DIR}/src
+COPY scripts/ ${JUPITERONE_INTEGRATION_DIR}/scripts
 
+WORKDIR  ${JUPITERONE_INTEGRATION_DIR}
 RUN yarn install --production
-
-COPY . .
 
 CMD ["yarn", "collect"]
