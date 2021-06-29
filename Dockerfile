@@ -5,7 +5,7 @@ ENV JUPITERONE_INTEGRATION_DIR=/opt/jupiterone/integration
 # node-gyp/python3 requirement
 RUN apk add g++ make python
 
-COPY package.json yarn.lock ${JUPITERONE_INTEGRATION_DIR}/
+COPY package.json yarn.lock LICENSE ${JUPITERONE_INTEGRATION_DIR}/
 COPY src/ ${JUPITERONE_INTEGRATION_DIR}/src
 COPY scripts/ ${JUPITERONE_INTEGRATION_DIR}/scripts
 

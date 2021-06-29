@@ -5,7 +5,7 @@ metadata:
   labels:
     app: integration-cron
 spec:
-  schedule: "*/1 * * * *" # Schedule to run every 10 minutes
+  schedule: "*/60 * * * *" # Schedule to run every hour
   jobTemplate:
     spec:
       template:
