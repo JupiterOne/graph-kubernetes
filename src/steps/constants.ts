@@ -77,12 +77,12 @@ export const Entities: Record<
   },
   CONFIGMAP: {
     _type: 'kube_config_map',
-    _class: ['DataStore'],
+    _class: ['Configuration'],
     resourceName: 'Kubernetes ConfigMap',
   },
   SECRET: {
     _type: 'kube_secret',
-    _class: ['DataStore'],
+    _class: ['Vault'],
     resourceName: 'Kubernetes Secret',
   },
   POD: {

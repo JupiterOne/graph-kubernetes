@@ -16,7 +16,7 @@ describe('#fetchSecrets', () => {
         {
           _type: Entities.SECRET._type,
           matcher: {
-            _class: ['DataStore'],
+            _class: ['Vault'],
             schema: {
               additionalProperties: false,
               properties: {

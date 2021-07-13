@@ -3,7 +3,7 @@
 exports[`#createConfigMapEntity should convert data 1`] = `
 Object {
   "_class": Array [
-    "DataStore",
+    "Configuration",
   ],
   "_key": "7deda7f2-2ac1-4845-836f-e0984840243b",
   "_rawData": Array [

@@ -16,7 +16,7 @@ describe('#fetchConfigMaps', () => {
         {
           _type: Entities.CONFIGMAP._type,
           matcher: {
-            _class: ['DataStore'],
+            _class: ['Configuration'],
             schema: {
               additionalProperties: false,
               properties: {

@@ -273,7 +273,7 @@ Object {
     },
     Object {
       "_class": Array [
-        "DataStore",
+        "Configuration",
       ],
       "_key": "d74905b8-4cd0-4f71-9f47-82dee58ac513",
       "_rawData": Array [
@@ -344,7 +344,7 @@ Object {
     },
     Object {
       "_class": Array [
-        "DataStore",
+        "Configuration",
       ],
       "_key": "d8cddf12-2663-49f7-8a37-e2c7ae561e03",
       "_rawData": Array [
@@ -403,7 +403,7 @@ Object {
     },
     Object {
       "_class": Array [
-        "DataStore",
+        "Configuration",
       ],
       "_key": "6d5bbd29-3b9d-46fe-af47-94396090726d",
       "_rawData": Array [
@@ -462,7 +462,7 @@ Object {
     },
     Object {
       "_class": Array [
-        "DataStore",
+        "Configuration",
       ],
       "_key": "b985f65f-f2fc-449d-9a4d-3f0b9302e79d",
       "_rawData": Array [
@@ -521,7 +521,7 @@ Object {
     },
     Object {
       "_class": Array [
-        "DataStore",
+        "Configuration",
       ],
       "_key": "6d45bd3c-9427-4c7f-a5f3-170ab17d96eb",
       "_rawData": Array [
@@ -580,7 +580,7 @@ Object {
     },
     Object {
       "_class": Array [
-        "DataStore",
+        "Configuration",
       ],
       "_key": "16be3d5c-b3e4-402c-bf11-e99c08494f0c",
       "_rawData": Array [
@@ -639,7 +639,7 @@ Object {
     },
     Object {
       "_class": Array [
-        "DataStore",
+        "Configuration",
       ],
       "_key": "61ae98fa-c703-4f1d-9c00-ec6b256343b6",
       "_rawData": Array [
@@ -703,7 +703,7 @@ Object {
     },
     Object {
       "_class": Array [
-        "DataStore",
+        "Configuration",
       ],
       "_key": "7d91f45a-7782-44bd-9ca5-476e81f63924",
       "_rawData": Array [
@@ -771,7 +771,7 @@ Object {
     },
     Object {
       "_class": Array [
-        "DataStore",
+        "Configuration",
       ],
       "_key": "3d6d9a76-9d50-4519-b8ad-19710ee5fe8c",
       "_rawData": Array [
@@ -830,7 +830,7 @@ Object {
     },
     Object {
       "_class": Array [
-        "DataStore",
+        "Configuration",
       ],
       "_key": "d09bcd0c-154a-40cf-b56b-59a096e267ca",
       "_rawData": Array [
@@ -890,7 +890,7 @@ Object {
     },
     Object {
       "_class": Array [
-        "DataStore",
+        "Configuration",
       ],
       "_key": "7deda7f2-2ac1-4845-836f-e0984840243b",
       "_rawData": Array [

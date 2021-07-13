@@ -76,7 +76,7 @@ The following entities are created:
 
 | Resources              | Entity `_type`      | Entity `_class` |
 | ---------------------- | ------------------- | --------------- |
-| Kubernetes ConfigMap   | `kube_config_map`   | `DataStore`     |
+| Kubernetes ConfigMap   | `kube_config_map`   | `Configuration` |
 | Kubernetes Container   | `kube_container`    | `Container`     |
 | Kubernetes CronJob     | `kube_cron_job`     | `Task`          |
 | Kubernetes DaemonSet   | `kube_daemon_set`   | `Deployment`    |
@@ -86,7 +86,7 @@ The following entities are created:
 | Kubernetes Node        | `kube_node`         | `Host`          |
 | Kubernetes Pod         | `kube_pod`          | `Task`          |
 | Kubernetes ReplicaSet  | `kube_replica_set`  | `Deployment`    |
-| Kubernetes Secret      | `kube_secret`       | `DataStore`     |
+| Kubernetes Secret      | `kube_secret`       | `Vault`         |
 | Kubernetes Service     | `kube_service`      | `Service`       |
 | Kubernetes StatefulSet | `kube_stateful_set` | `Deployment`    |
 
