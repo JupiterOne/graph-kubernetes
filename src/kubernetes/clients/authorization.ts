@@ -3,11 +3,17 @@ import { IntegrationConfig } from '../../config';
 import { Client } from '../client';
 
 export type ResourceType =
+  | 'nodes'
   | 'services'
   | 'deployments'
   | 'replicasets'
-  | 'pods'
-  | 'nodes';
+  | 'statefulsets'
+  | 'daemonsets'
+  | 'jobs'
+  | 'cronjobs'
+  | 'configmaps'
+  | 'secrets'
+  | 'pods';
 export type VerbType = 'list' | 'create';
 
 export class AuthorizationClient extends Client {

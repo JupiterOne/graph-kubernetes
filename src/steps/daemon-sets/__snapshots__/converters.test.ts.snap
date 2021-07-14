@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#createDaemonSetEntity should convert data 1`] = `
+Object {
+  "_class": Array [
+    "Deployment",
+  ],
+  "_key": "597716cf-e9a9-4b1c-9107-a18e054b00da",
+  "_rawData": Array [
+    Object {
+      "name": "default",
+      "rawData": Object {
+        "metadata": Object {
+          "annotations": Object {
+            "deprecated.daemonset.template.generation": "1",
+          },
+          "creationTimestamp": 2021-04-27T20:57:20.000Z,
+          "generation": 1,
+          "labels": Object {
+            "k8s-app": "kube-proxy",
+          },
+          "name": "kube-proxy",
+          "namespace": "kube-system",
+          "resourceVersion": "532760",
+          "uid": "597716cf-e9a9-4b1c-9107-a18e054b00da",
+        },
+        "spec": Object {
+          "revisionHistoryLimit": 10,
+          "selector": Object {
+            "matchLabels": Object {
+              "k8s-app": "kube-proxy",
+            },
+          },
+          "template": Object {
+            "metadata": Object {
+              "labels": Object {
+                "k8s-app": "kube-proxy",
+              },
+            },
+            "spec": Object {
+              "containers": Array [
+                Object {
+                  "command": Array [
+                    "/usr/local/bin/kube-proxy",
+                    "--config=/var/lib/kube-proxy/config.conf",
+                    "--hostname-override=$(NODE_NAME)",
+                  ],
+                  "env": Array [
+                    Object {
+                      "name": "NODE_NAME",
+                      "valueFrom": Object {
+                        "fieldRef": Object {
+                          "apiVersion": "v1",
+                          "fieldPath": "spec.nodeName",
+                        },
+                      },
+                    },
+                  ],
+                  "image": "k8s.gcr.io/kube-proxy:v1.20.2",
+                  "imagePullPolicy": "IfNotPresent",
+                  "name": "kube-proxy",
+                  "resources": Object {},
+                  "securityContext": Object {
+                    "privileged": true,
+                  },
+                  "terminationMessagePath": "/dev/termination-log",
+                  "terminationMessagePolicy": "File",
+                  "volumeMounts": Array [
+                    Object {
+                      "mountPath": "/var/lib/kube-proxy",
+                      "name": "kube-proxy",
+                    },
+                    Object {
+                      "mountPath": "/run/xtables.lock",
+                      "name": "xtables-lock",
+                    },
+                    Object {
+                      "mountPath": "/lib/modules",
+                      "name": "lib-modules",
+                      "readOnly": true,
+                    },
+                  ],
+                },
+              ],
+              "dnsPolicy": "ClusterFirst",
+              "hostNetwork": true,
+              "nodeSelector": Object {
+                "kubernetes.io/os": "linux",
+              },
+              "priorityClassName": "system-node-critical",
+              "restartPolicy": "Always",
+              "schedulerName": "default-scheduler",
+              "securityContext": Object {},
+              "serviceAccount": "kube-proxy",
+              "serviceAccountName": "kube-proxy",
+              "terminationGracePeriodSeconds": 30,
+              "tolerations": Array [
+                Object {
+                  "key": "CriticalAddonsOnly",
+                  "operator": "Exists",
+                },
+                Object {
+                  "operator": "Exists",
+                },
+              ],
+              "volumes": Array [
+                Object {
+                  "configMap": Object {
+                    "defaultMode": 420,
+                    "name": "kube-proxy",
+                  },
+                  "name": "kube-proxy",
+                },
+                Object {
+                  "hostPath": Object {
+                    "path": "/run/xtables.lock",
+                    "type": "FileOrCreate",
+                  },
+                  "name": "xtables-lock",
+                },
+                Object {
+                  "hostPath": Object {
+                    "path": "/lib/modules",
+                    "type": "",
+                  },
+                  "name": "lib-modules",
+                },
+              ],
+            },
+          },
+          "updateStrategy": Object {
+            "rollingUpdate": Object {},
+            "type": "RollingUpdate",
+          },
+        },
+        "status": Object {
+          "currentNumberScheduled": 1,
+          "desiredNumberScheduled": 1,
+          "numberAvailable": 1,
+          "numberMisscheduled": 0,
+          "numberReady": 1,
+          "observedGeneration": 1,
+          "updatedNumberScheduled": 1,
+        },
+      },
+    },
+  ],
+  "_type": "kube_daemon_set",
+  "active": undefined,
+  "createdOn": 1619557040000,
+  "deletedOn": undefined,
+  "deletionGracePeriodSeconds": undefined,
+  "displayName": "kube-proxy",
+  "generation": 1,
+  "minReadySeconds": undefined,
+  "name": "kube-proxy",
+  "resourceVersion": "532760",
+  "revisionHistoryLimit": 10,
+  "status.collisionCount": undefined,
+  "status.currentNumberScheduled": 1,
+  "status.desiredNumberScheduled": 1,
+  "status.numberAvailable": 1,
+  "status.numberMisscheduled": 0,
+  "status.numberReady": 1,
+  "status.numberUnavailable": undefined,
+  "status.observedGeneration": 1,
+  "status.updatedNumberScheduled": 1,
+  "strategy.maxUnavailable": undefined,
+  "strategy.type": "RollingUpdate",
+}
+`;

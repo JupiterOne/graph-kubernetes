@@ -27,6 +27,14 @@ export async function fetchReplicaSets(
           const replicaSetEntity = createReplicaSetEntity(replicaSet);
           await jobState.addEntity(replicaSetEntity);
 
+          await jobState.addRelationship(
+            createDirectRelationship({
+              _class: RelationshipClass.CONTAINS,
+              from: namespaceEntity,
+              to: replicaSetEntity,
+            }),
+          );
+
           for (const owner of replicaSet.metadata?.ownerReferences || []) {
             const ownerEntity = await jobState.findEntity(owner.uid);
             // So far, to my knowledge, ReplicaSets's owners are Deployments
@@ -52,7 +60,10 @@ export const replicaSetsSteps: IntegrationStep<IntegrationConfig>[] = [
     id: IntegrationSteps.REPLICASETS,
     name: 'Fetch ReplicaSets',
     entities: [Entities.REPLICASET],
-    relationships: [Relationships.DEPLOYMENT_MANAGES_REPLICASET],
+    relationships: [
+      Relationships.NAMESPACE_CONTAINS_REPLICASET,
+      Relationships.DEPLOYMENT_MANAGES_REPLICASET,
+    ],
     dependsOn: [IntegrationSteps.NAMESPACES, IntegrationSteps.DEPLOYMENTS],
     executionHandler: fetchReplicaSets,
   },

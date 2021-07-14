@@ -962,7 +962,7 @@ Object {
           },
         },
       ],
-      "_type": "kube_replicaset",
+      "_type": "kube_replica_set",
       "active": undefined,
       "createdOn": 1624374385000,
       "deletionGracePeriodSeconds": undefined,
@@ -1473,7 +1473,7 @@ Object {
           },
         },
       ],
-      "_type": "kube_replicaset",
+      "_type": "kube_replica_set",
       "active": undefined,
       "createdOn": 1619557057000,
       "deletionGracePeriodSeconds": undefined,
@@ -11629,6 +11629,22 @@ Object {
   "collectedRelationships": Array [
     Object {
       "_class": "CONTAINS",
+      "_fromEntityKey": "d5976ece-dc03-46a1-921f-cb6043e5f56e",
+      "_key": "d5976ece-dc03-46a1-921f-cb6043e5f56e|contains|cedc8660-9a63-4e39-b420-1951f7fbf239",
+      "_toEntityKey": "cedc8660-9a63-4e39-b420-1951f7fbf239",
+      "_type": "kube_namespace_contains_replica_set",
+      "displayName": "CONTAINS",
+    },
+    Object {
+      "_class": "CONTAINS",
+      "_fromEntityKey": "239ee6a3-23d6-4ca6-ae32-3b3fdda6a604",
+      "_key": "239ee6a3-23d6-4ca6-ae32-3b3fdda6a604|contains|f7113c21-7272-4f04-9198-8dc7d682fe23",
+      "_toEntityKey": "f7113c21-7272-4f04-9198-8dc7d682fe23",
+      "_type": "kube_namespace_contains_replica_set",
+      "displayName": "CONTAINS",
+    },
+    Object {
+      "_class": "CONTAINS",
       "_fromEntityKey": "98e44b77-ef37-4407-a093-781253bdcb9e",
       "_key": "98e44b77-ef37-4407-a093-781253bdcb9e|contains|container:fluentd-elasticsearch",
       "_toEntityKey": "container:fluentd-elasticsearch",
@@ -11664,7 +11680,7 @@ Object {
       "_fromEntityKey": "cedc8660-9a63-4e39-b420-1951f7fbf239",
       "_key": "cedc8660-9a63-4e39-b420-1951f7fbf239|manages|c854a869-1c05-485d-891d-27c4a7bac195",
       "_toEntityKey": "c854a869-1c05-485d-891d-27c4a7bac195",
-      "_type": "kube_replicaset_manages_pod",
+      "_type": "kube_replica_set_manages_pod",
       "displayName": "MANAGES",
     },
     Object {
@@ -11680,7 +11696,7 @@ Object {
       "_fromEntityKey": "cedc8660-9a63-4e39-b420-1951f7fbf239",
       "_key": "cedc8660-9a63-4e39-b420-1951f7fbf239|manages|7907217d-8310-4b36-989c-d4dd73987fd7",
       "_toEntityKey": "7907217d-8310-4b36-989c-d4dd73987fd7",
-      "_type": "kube_replicaset_manages_pod",
+      "_type": "kube_replica_set_manages_pod",
       "displayName": "MANAGES",
     },
     Object {
@@ -11696,7 +11712,7 @@ Object {
       "_fromEntityKey": "cedc8660-9a63-4e39-b420-1951f7fbf239",
       "_key": "cedc8660-9a63-4e39-b420-1951f7fbf239|manages|896e9370-751d-4c3b-abdd-6545518a9055",
       "_toEntityKey": "896e9370-751d-4c3b-abdd-6545518a9055",
-      "_type": "kube_replicaset_manages_pod",
+      "_type": "kube_replica_set_manages_pod",
       "displayName": "MANAGES",
     },
     Object {
@@ -11776,7 +11792,7 @@ Object {
       "_fromEntityKey": "f7113c21-7272-4f04-9198-8dc7d682fe23",
       "_key": "f7113c21-7272-4f04-9198-8dc7d682fe23|manages|d9f26fae-3331-4730-81b0-2d3dadf51207",
       "_toEntityKey": "d9f26fae-3331-4730-81b0-2d3dadf51207",
-      "_type": "kube_replicaset_manages_pod",
+      "_type": "kube_replica_set_manages_pod",
       "displayName": "MANAGES",
     },
     Object {
@@ -11887,14 +11903,15 @@ Object {
   "encounteredTypes": Array [
     "kube_namespace",
     "kube_node",
-    "kube_replicaset",
+    "kube_replica_set",
+    "kube_namespace_contains_replica_set",
     "kube_pod",
     "kube_container",
     "kube_pod_contains_container",
     "kube_node_has_pod",
-    "kube_replicaset_manages_pod",
+    "kube_replica_set_manages_pod",
   ],
   "numCollectedEntities": 36,
-  "numCollectedRelationships": 32,
+  "numCollectedRelationships": 34,
 }
 `;

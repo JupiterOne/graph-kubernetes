@@ -34,8 +34,11 @@ describe('#fetchServices', () => {
                   type: 'array',
                   items: { type: 'string' },
                 },
+                function: {
+                  type: 'array',
+                  items: { type: 'string' },
+                },
                 createdOn: { type: 'number' },
-
                 allocateLoadBalancerNodePorts: { type: 'boolean' },
                 clusterIP: { type: 'string' },
                 clusterIPs: {

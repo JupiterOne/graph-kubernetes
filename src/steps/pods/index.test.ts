@@ -119,7 +119,7 @@ describe('#fetchPods', () => {
             schema: {
               properties: {
                 _class: { const: RelationshipClass.MANAGES },
-                _type: { const: 'kube_replicaset_manages_pod' },
+                _type: { const: 'kube_replica_set_manages_pod' },
               },
             },
           },

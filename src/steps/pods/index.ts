@@ -73,9 +73,14 @@ export async function fetchPods(
 
           for (const owner of pod.metadata?.ownerReferences || []) {
             const ownerEntity = await jobState.findEntity(owner.uid);
-            // So far, to my knowledge, Pod's owners are ReplicaSets
-            // This check is here if we later find out other scenarios, so we can just add more relationships
-            if (ownerEntity && owner.kind === 'ReplicaSet') {
+            // This comment will be kept up to date during development:
+            // So far, it seems that pod's owners can be ReplicaSet, StatefulSet & Job
+            // This check serves as a safeguard to only let "vetted" relationships pass through
+            // Without it, we may create some relationship that we didn't configure below
+            if (
+              ownerEntity &&
+              ['ReplicaSet', 'StatefulSet', 'Job'].includes(owner.kind)
+            ) {
               await jobState.addRelationship(
                 createDirectRelationship({
                   _class: RelationshipClass.MANAGES,
@@ -100,11 +105,14 @@ export const podsSteps: IntegrationStep<IntegrationConfig>[] = [
       Relationships.NODE_HAS_POD,
       Relationships.POD_CONTAINS_CONTAINER,
       Relationships.REPLICASET_MANAGES_POD,
+      Relationships.STATEFULSET_MANAGES_POD,
+      Relationships.JOB_MANAGES_POD,
     ],
     dependsOn: [
       IntegrationSteps.NAMESPACES,
       IntegrationSteps.NODES,
       IntegrationSteps.REPLICASETS,
+      IntegrationSteps.STATEFULSETS,
     ],
     executionHandler: fetchPods,
   },

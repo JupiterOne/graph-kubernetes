@@ -19,7 +19,6 @@ export function createNodeEntity(data: k8s.V1Node) {
         deletionGracePeriodSeconds: data.metadata?.deletionGracePeriodSeconds,
         resourceVersion: data.metadata?.resourceVersion,
         createdOn: parseTimePropertyValue(data.metadata?.creationTimestamp),
-        // spec properties - we could group them using "spec." notation
         podCIDR: data.spec?.podCIDR,
         podCIDRs: data.spec?.podCIDRs,
         providerID: data.spec?.providerID,

@@ -1,23 +1,9 @@
 import * as k8s from '@kubernetes/client-node';
 
-export function createMockNamespace(): k8s.V1Namespace {
+export function createMockNamespace(): Partial<k8s.V1Namespace> {
   return {
     metadata: {
       creationTimestamp: new Date('2021-04-27T20:57:17.000Z'),
-      managedFields: [
-        {
-          apiVersion: 'v1',
-          fieldsType: 'FieldsV1',
-          fieldsV1: {
-            'f:status': {
-              'f:phase': {},
-            },
-          },
-          manager: 'kube-apiserver',
-          operation: 'Update',
-          time: new Date('2021-04-27T20:57:17.000Z'),
-        },
-      ],
       name: 'example-namespace',
       resourceVersion: '66',
       uid: '55ea52dd-382c-4b8c-8c24-bff59db4b817',
@@ -31,7 +17,7 @@ export function createMockNamespace(): k8s.V1Namespace {
   };
 }
 
-export function createMockDeployment(): k8s.V1Deployment {
+export function createMockDeployment(): Partial<k8s.V1Deployment> {
   return {
     metadata: {
       annotations: {
@@ -42,106 +28,6 @@ export function createMockDeployment(): k8s.V1Deployment {
       labels: {
         app: 'kubernetes-bootcamp',
       },
-      managedFields: [
-        {
-          apiVersion: 'apps/v1',
-          fieldsType: 'FieldsV1',
-          fieldsV1: {
-            'f:metadata': {
-              'f:labels': {
-                '.': {},
-                'f:app': {},
-              },
-            },
-            'f:spec': {
-              'f:progressDeadlineSeconds': {},
-              'f:replicas': {},
-              'f:revisionHistoryLimit': {},
-              'f:selector': {},
-              'f:strategy': {
-                'f:rollingUpdate': {
-                  '.': {},
-                  'f:maxSurge': {},
-                  'f:maxUnavailable': {},
-                },
-                'f:type': {},
-              },
-              'f:template': {
-                'f:metadata': {
-                  'f:labels': {
-                    '.': {},
-                    'f:app': {},
-                  },
-                },
-                'f:spec': {
-                  'f:containers': {
-                    'k:{"name":"kubernetes-bootcamp"}': {
-                      '.': {},
-                      'f:image': {},
-                      'f:imagePullPolicy': {},
-                      'f:name': {},
-                      'f:resources': {},
-                      'f:terminationMessagePath': {},
-                      'f:terminationMessagePolicy': {},
-                    },
-                  },
-                  'f:dnsPolicy': {},
-                  'f:restartPolicy': {},
-                  'f:schedulerName': {},
-                  'f:securityContext': {},
-                  'f:terminationGracePeriodSeconds': {},
-                },
-              },
-            },
-          },
-          manager: 'kubectl-create',
-          operation: 'Update',
-          time: new Date('2021-04-13T15:37:33.000Z'),
-        },
-        {
-          apiVersion: 'apps/v1',
-          fieldsType: 'FieldsV1',
-          fieldsV1: {
-            'f:metadata': {
-              'f:annotations': {
-                '.': {},
-                'f:deployment.kubernetes.io/revision': {},
-              },
-            },
-            'f:status': {
-              'f:availableReplicas': {},
-              'f:conditions': {
-                '.': {},
-                'k:{"type":"Available"}': {
-                  '.': {},
-                  'f:lastTransitionTime': {},
-                  'f:lastUpdateTime': {},
-                  'f:message': {},
-                  'f:reason': {},
-                  'f:status': {},
-                  'f:type': {},
-                },
-                'k:{"type":"Progressing"}': {
-                  '.': {},
-                  'f:lastTransitionTime': {},
-                  'f:lastUpdateTime': {},
-                  'f:message': {},
-                  'f:reason': {},
-                  'f:status': {},
-                  'f:type': {},
-                },
-              },
-              'f:observedGeneration': {},
-              'f:readyReplicas': {},
-              'f:replicas': {},
-              'f:updatedReplicas': {},
-            },
-          },
-          manager: 'kube-controller-manager',
-          operation: 'Update',
-          time: new Date('2021-04-16T18:10:54.000Z'),
-        },
-      ],
       name: 'kubernetes-bootcamp',
       namespace: 'default',
       resourceVersion: '92421',
@@ -211,7 +97,7 @@ export function createMockDeployment(): k8s.V1Deployment {
   };
 }
 
-export function createMockNode(): k8s.V1Node {
+export function createMockNode(): Partial<k8s.V1Node> {
   return {
     metadata: {
       annotations: {
@@ -233,177 +119,6 @@ export function createMockNode(): k8s.V1Node {
         'node-role.kubernetes.io/control-plane': '',
         'node-role.kubernetes.io/master': '',
       },
-      managedFields: [
-        {
-          apiVersion: 'v1',
-          fieldsType: 'FieldsV1',
-          fieldsV1: {
-            'f:metadata': {
-              'f:annotations': {
-                '.': {},
-                'f:volumes.kubernetes.io/controller-managed-attach-detach': {},
-              },
-              'f:labels': {
-                '.': {},
-                'f:beta.kubernetes.io/arch': {},
-                'f:beta.kubernetes.io/os': {},
-                'f:kubernetes.io/arch': {},
-                'f:kubernetes.io/hostname': {},
-                'f:kubernetes.io/os': {},
-              },
-            },
-            'f:status': {
-              'f:addresses': {
-                '.': {},
-                'k:{"type":"Hostname"}': {
-                  '.': {},
-                  'f:address': {},
-                  'f:type': {},
-                },
-                'k:{"type":"InternalIP"}': {
-                  '.': {},
-                  'f:address': {},
-                  'f:type': {},
-                },
-              },
-              'f:allocatable': {
-                '.': {},
-                'f:cpu': {},
-                'f:ephemeral-storage': {},
-                'f:hugepages-1Gi': {},
-                'f:hugepages-2Mi': {},
-                'f:memory': {},
-                'f:pods': {},
-              },
-              'f:capacity': {
-                '.': {},
-                'f:cpu': {},
-                'f:ephemeral-storage': {},
-                'f:hugepages-1Gi': {},
-                'f:hugepages-2Mi': {},
-                'f:memory': {},
-                'f:pods': {},
-              },
-              'f:conditions': {
-                '.': {},
-                'k:{"type":"DiskPressure"}': {
-                  '.': {},
-                  'f:lastHeartbeatTime': {},
-                  'f:lastTransitionTime': {},
-                  'f:message': {},
-                  'f:reason': {},
-                  'f:status': {},
-                  'f:type': {},
-                },
-                'k:{"type":"MemoryPressure"}': {
-                  '.': {},
-                  'f:lastHeartbeatTime': {},
-                  'f:lastTransitionTime': {},
-                  'f:message': {},
-                  'f:reason': {},
-                  'f:status': {},
-                  'f:type': {},
-                },
-                'k:{"type":"PIDPressure"}': {
-                  '.': {},
-                  'f:lastHeartbeatTime': {},
-                  'f:lastTransitionTime': {},
-                  'f:message': {},
-                  'f:reason': {},
-                  'f:status': {},
-                  'f:type': {},
-                },
-                'k:{"type":"Ready"}': {
-                  '.': {},
-                  'f:lastHeartbeatTime': {},
-                  'f:lastTransitionTime': {},
-                  'f:message': {},
-                  'f:reason': {},
-                  'f:status': {},
-                  'f:type': {},
-                },
-              },
-              'f:daemonEndpoints': {
-                'f:kubeletEndpoint': {
-                  'f:Port': {},
-                },
-              },
-              'f:images': {},
-              'f:nodeInfo': {
-                'f:architecture': {},
-                'f:bootID': {},
-                'f:containerRuntimeVersion': {},
-                'f:kernelVersion': {},
-                'f:kubeProxyVersion': {},
-                'f:kubeletVersion': {},
-                'f:machineID': {},
-                'f:operatingSystem': {},
-                'f:osImage': {},
-                'f:systemUUID': {},
-              },
-            },
-          },
-          manager: 'kubelet',
-          operation: 'Update',
-          time: new Date('2021-04-13T15:20:38.000Z'),
-        },
-        {
-          apiVersion: 'v1',
-          fieldsType: 'FieldsV1',
-          fieldsV1: {
-            'f:metadata': {
-              'f:annotations': {
-                'f:kubeadm.alpha.kubernetes.io/cri-socket': {},
-              },
-              'f:labels': {
-                'f:node-role.kubernetes.io/control-plane': {},
-                'f:node-role.kubernetes.io/master': {},
-              },
-            },
-          },
-          manager: 'kubeadm',
-          operation: 'Update',
-          time: new Date('2021-04-13T15:20:41.000Z'),
-        },
-        {
-          apiVersion: 'v1',
-          fieldsType: 'FieldsV1',
-          fieldsV1: {
-            'f:metadata': {
-              'f:labels': {
-                'f:minikube.k8s.io/commit': {},
-                'f:minikube.k8s.io/name': {},
-                'f:minikube.k8s.io/updated_at': {},
-                'f:minikube.k8s.io/version': {},
-              },
-            },
-          },
-          manager: 'kubectl-label',
-          operation: 'Update',
-          time: new Date('2021-04-13T15:20:42.000Z'),
-        },
-        {
-          apiVersion: 'v1',
-          fieldsType: 'FieldsV1',
-          fieldsV1: {
-            'f:metadata': {
-              'f:annotations': {
-                'f:node.alpha.kubernetes.io/ttl': {},
-              },
-            },
-            'f:spec': {
-              'f:podCIDR': {},
-              'f:podCIDRs': {
-                '.': {},
-                'v:"10.10.10.10/24"': {},
-              },
-            },
-          },
-          manager: 'kube-controller-manager',
-          operation: 'Update',
-          time: new Date('2021-04-13T15:20:56.000Z'),
-        },
-      ],
       name: 'minikube',
       resourceVersion: '81209',
       uid: '103b35d1-8951-455c-95cb-3da4af29bd71',
@@ -479,7 +194,7 @@ export function createMockNode(): k8s.V1Node {
   };
 }
 
-export function createMockPod(): k8s.V1Pod {
+export function createMockPod(): Partial<k8s.V1Pod> {
   return {
     metadata: {
       creationTimestamp: new Date('2021-04-13T15:37:33.000Z'),
@@ -488,102 +203,6 @@ export function createMockPod(): k8s.V1Pod {
         app: 'kubernetes-bootcamp',
         'pod-template-hash': '57978f5f5d',
       },
-      managedFields: [
-        {
-          apiVersion: 'v1',
-          fieldsType: 'FieldsV1',
-          fieldsV1: {
-            'f:metadata': {
-              'f:generateName': {},
-              'f:labels': {
-                '.': {},
-                'f:app': {},
-                'f:pod-template-hash': {},
-              },
-              'f:ownerReferences': {
-                '.': {},
-                'k:{"uid":"670b166f-b57f-4666-b82d-bae797ebce8d"}': {
-                  '.': {},
-                  'f:apiVersion': {},
-                  'f:blockOwnerDeletion': {},
-                  'f:controller': {},
-                  'f:kind': {},
-                  'f:name': {},
-                  'f:uid': {},
-                },
-              },
-            },
-            'f:spec': {
-              'f:containers': {
-                'k:{"name":"kubernetes-bootcamp"}': {
-                  '.': {},
-                  'f:image': {},
-                  'f:imagePullPolicy': {},
-                  'f:name': {},
-                  'f:resources': {},
-                  'f:terminationMessagePath': {},
-                  'f:terminationMessagePolicy': {},
-                },
-              },
-              'f:dnsPolicy': {},
-              'f:enableServiceLinks': {},
-              'f:restartPolicy': {},
-              'f:schedulerName': {},
-              'f:securityContext': {},
-              'f:terminationGracePeriodSeconds': {},
-            },
-          },
-          manager: 'kube-controller-manager',
-          operation: 'Update',
-          time: new Date('2021-04-13T15:37:33.000Z'),
-        },
-        {
-          apiVersion: 'v1',
-          fieldsType: 'FieldsV1',
-          fieldsV1: {
-            'f:status': {
-              'f:conditions': {
-                'k:{"type":"ContainersReady"}': {
-                  '.': {},
-                  'f:lastProbeTime': {},
-                  'f:lastTransitionTime': {},
-                  'f:status': {},
-                  'f:type': {},
-                },
-                'k:{"type":"Initialized"}': {
-                  '.': {},
-                  'f:lastProbeTime': {},
-                  'f:lastTransitionTime': {},
-                  'f:status': {},
-                  'f:type': {},
-                },
-                'k:{"type":"Ready"}': {
-                  '.': {},
-                  'f:lastProbeTime': {},
-                  'f:lastTransitionTime': {},
-                  'f:status': {},
-                  'f:type': {},
-                },
-              },
-              'f:containerStatuses': {},
-              'f:hostIP': {},
-              'f:phase': {},
-              'f:podIP': {},
-              'f:podIPs': {
-                '.': {},
-                'k:{"ip":"10.10.10.10"}': {
-                  '.': {},
-                  'f:ip': {},
-                },
-              },
-              'f:startTime': {},
-            },
-          },
-          manager: 'kubelet',
-          operation: 'Update',
-          time: new Date('2021-04-15T14:03:05.000Z'),
-        },
-      ],
       name: 'kubernetes-bootcamp-57978f5f5d-pq2sb',
       namespace: 'default',
       ownerReferences: [
@@ -703,7 +322,7 @@ export function createMockPod(): k8s.V1Pod {
   };
 }
 
-export function createMockReplicaSet(): k8s.V1ReplicaSet {
+export function createMockReplicaSet(): Partial<k8s.V1ReplicaSet> {
   return {
     metadata: {
       annotations: {
@@ -717,15 +336,6 @@ export function createMockReplicaSet(): k8s.V1ReplicaSet {
         'k8s-app': 'kube-dns',
         'pod-template-hash': '74ff55c5b',
       },
-      managedFields: [
-        {
-          apiVersion: 'apps/v1',
-          fieldsType: 'FieldsV1',
-          manager: 'kube-controller-manager',
-          operation: 'Update',
-          time: new Date('2021-05-10T13:25:17.000Z'),
-        },
-      ],
       name: 'coredns-74ff55c5b',
       namespace: 'kube-system',
       ownerReferences: [
@@ -875,7 +485,7 @@ export function createMockReplicaSet(): k8s.V1ReplicaSet {
   };
 }
 
-export function createMockService(): k8s.V1Service {
+export function createMockService(): Partial<k8s.V1Service> {
   return {
     metadata: {
       creationTimestamp: new Date('2021-04-27T20:57:19.000Z'),
@@ -883,15 +493,6 @@ export function createMockService(): k8s.V1Service {
         component: 'apiserver',
         provider: 'kubernetes',
       },
-      managedFields: [
-        {
-          apiVersion: 'v1',
-          fieldsType: 'FieldsV1',
-          manager: 'kube-apiserver',
-          operation: 'Update',
-          time: new Date('2021-04-27T20:57:19.000Z'),
-        },
-      ],
       name: 'kubernetes',
       namespace: 'default',
       resourceVersion: '202',
@@ -912,6 +513,406 @@ export function createMockService(): k8s.V1Service {
     },
     status: {
       loadBalancer: {},
+    },
+  };
+}
+
+export function createMockConfigMap(): Partial<k8s.V1ConfigMap> {
+  return {
+    data: {
+      kubelet: 'some data',
+    },
+    metadata: {
+      creationTimestamp: new Date('2021-04-27T20:57:19.000Z'),
+      name: 'kubelet-config-1.20',
+      namespace: 'kube-system',
+      resourceVersion: '207',
+      uid: '7deda7f2-2ac1-4845-836f-e0984840243b',
+    },
+  };
+}
+
+export function createMockCronJob(): Partial<k8s.V1beta1CronJob> {
+  return {
+    metadata: {
+      annotations: {
+        'kubectl.kubernetes.io/last-applied-configuration':
+          '{"apiVersion":"batch/v1beta1","kind":"CronJob","metadata":{"annotations":{},"name":"hello","namespace":"default"},"spec":{"jobTemplate":{"spec":{"template":{"spec":{"containers":[{"command":["/bin/sh","-c","date; echo Hello from the Kubernetes cluster"],"image":"busybox","imagePullPolicy":"IfNotPresent","name":"hello"}],"restartPolicy":"OnFailure"}}}},"schedule":"*/1 * * * *"}}\n',
+      },
+      creationTimestamp: new Date('2021-06-23T13:09:30.000Z'),
+      name: 'hello',
+      namespace: 'default',
+      resourceVersion: '572357',
+      uid: '223aa203-ed63-4c0e-a113-99abfe9d48e6',
+    },
+    spec: {
+      concurrencyPolicy: 'Allow',
+      failedJobsHistoryLimit: 1,
+      jobTemplate: {
+        metadata: {},
+        spec: {
+          template: {
+            metadata: {},
+            spec: {
+              containers: [
+                {
+                  command: [
+                    '/bin/sh',
+                    '-c',
+                    'date; echo Hello from the Kubernetes cluster',
+                  ],
+                  image: 'busybox',
+                  imagePullPolicy: 'IfNotPresent',
+                  name: 'hello',
+                  resources: {},
+                  terminationMessagePath: '/dev/termination-log',
+                  terminationMessagePolicy: 'File',
+                },
+              ],
+              dnsPolicy: 'ClusterFirst',
+              restartPolicy: 'OnFailure',
+              schedulerName: 'default-scheduler',
+              securityContext: {},
+              terminationGracePeriodSeconds: 30,
+            },
+          },
+        },
+      },
+      schedule: '*/1 * * * *',
+      successfulJobsHistoryLimit: 3,
+      suspend: false,
+    },
+    status: {
+      lastScheduleTime: new Date('2021-06-23T17:56:00.000Z'),
+    },
+  };
+}
+
+export function createMockDaemonSet(): Partial<k8s.V1DaemonSet> {
+  return {
+    metadata: {
+      annotations: {
+        'deprecated.daemonset.template.generation': '1',
+      },
+      creationTimestamp: new Date('2021-04-27T20:57:20.000Z'),
+      generation: 1,
+      labels: {
+        'k8s-app': 'kube-proxy',
+      },
+      name: 'kube-proxy',
+      namespace: 'kube-system',
+      resourceVersion: '532760',
+      uid: '597716cf-e9a9-4b1c-9107-a18e054b00da',
+    },
+    spec: {
+      revisionHistoryLimit: 10,
+      selector: {
+        matchLabels: {
+          'k8s-app': 'kube-proxy',
+        },
+      },
+      template: {
+        metadata: {
+          labels: {
+            'k8s-app': 'kube-proxy',
+          },
+        },
+        spec: {
+          containers: [
+            {
+              command: [
+                '/usr/local/bin/kube-proxy',
+                '--config=/var/lib/kube-proxy/config.conf',
+                '--hostname-override=$(NODE_NAME)',
+              ],
+              env: [
+                {
+                  name: 'NODE_NAME',
+                  valueFrom: {
+                    fieldRef: {
+                      apiVersion: 'v1',
+                      fieldPath: 'spec.nodeName',
+                    },
+                  },
+                },
+              ],
+              image: 'k8s.gcr.io/kube-proxy:v1.20.2',
+              imagePullPolicy: 'IfNotPresent',
+              name: 'kube-proxy',
+              resources: {},
+              securityContext: {
+                privileged: true,
+              },
+              terminationMessagePath: '/dev/termination-log',
+              terminationMessagePolicy: 'File',
+              volumeMounts: [
+                {
+                  mountPath: '/var/lib/kube-proxy',
+                  name: 'kube-proxy',
+                },
+                {
+                  mountPath: '/run/xtables.lock',
+                  name: 'xtables-lock',
+                },
+                {
+                  mountPath: '/lib/modules',
+                  name: 'lib-modules',
+                  readOnly: true,
+                },
+              ],
+            },
+          ],
+          dnsPolicy: 'ClusterFirst',
+          hostNetwork: true,
+          nodeSelector: {
+            'kubernetes.io/os': 'linux',
+          },
+          priorityClassName: 'system-node-critical',
+          restartPolicy: 'Always',
+          schedulerName: 'default-scheduler',
+          securityContext: {},
+          serviceAccount: 'kube-proxy',
+          serviceAccountName: 'kube-proxy',
+          terminationGracePeriodSeconds: 30,
+          tolerations: [
+            {
+              key: 'CriticalAddonsOnly',
+              operator: 'Exists',
+            },
+            {
+              operator: 'Exists',
+            },
+          ],
+          volumes: [
+            {
+              configMap: {
+                defaultMode: 420,
+                name: 'kube-proxy',
+              },
+              name: 'kube-proxy',
+            },
+            {
+              hostPath: {
+                path: '/run/xtables.lock',
+                type: 'FileOrCreate',
+              },
+              name: 'xtables-lock',
+            },
+            {
+              hostPath: {
+                path: '/lib/modules',
+                type: '',
+              },
+              name: 'lib-modules',
+            },
+          ],
+        },
+      },
+      updateStrategy: {
+        rollingUpdate: {},
+        type: 'RollingUpdate',
+      },
+    },
+    status: {
+      currentNumberScheduled: 1,
+      desiredNumberScheduled: 1,
+      numberAvailable: 1,
+      numberMisscheduled: 0,
+      numberReady: 1,
+      observedGeneration: 1,
+      updatedNumberScheduled: 1,
+    },
+  };
+}
+
+export function createMockJob(): Partial<k8s.V1Job> {
+  return {
+    metadata: {
+      annotations: {
+        'kubectl.kubernetes.io/last-applied-configuration':
+          '{"apiVersion":"batch/v1","kind":"Job","metadata":{"annotations":{},"name":"pi","namespace":"default"},"spec":{"backoffLimit":4,"template":{"spec":{"containers":[{"command":["perl","-Mbignum=bpi","-wle","print bpi(2000)"],"image":"perl","name":"pi"}],"restartPolicy":"Never"}}}}\n',
+      },
+      creationTimestamp: new Date('2021-06-23T12:52:25.000Z'),
+      labels: {
+        'controller-uid': '52f2fb4f-ab4b-4699-9e05-17571079a43f',
+        'job-name': 'pi',
+      },
+      name: 'pi',
+      namespace: 'default',
+      resourceVersion: '553808',
+      uid: '52f2fb4f-ab4b-4699-9e05-17571079a43f',
+    },
+    spec: {
+      backoffLimit: 4,
+      completions: 1,
+      parallelism: 1,
+      selector: {
+        matchLabels: {
+          'controller-uid': '52f2fb4f-ab4b-4699-9e05-17571079a43f',
+        },
+      },
+      template: {
+        metadata: {
+          labels: {
+            'controller-uid': '52f2fb4f-ab4b-4699-9e05-17571079a43f',
+            'job-name': 'pi',
+          },
+        },
+        spec: {
+          containers: [
+            {
+              command: ['perl', '-Mbignum=bpi', '-wle', 'print bpi(2000)'],
+              image: 'perl',
+              imagePullPolicy: 'Always',
+              name: 'pi',
+              resources: {},
+              terminationMessagePath: '/dev/termination-log',
+              terminationMessagePolicy: 'File',
+            },
+          ],
+          dnsPolicy: 'ClusterFirst',
+          restartPolicy: 'Never',
+          schedulerName: 'default-scheduler',
+          securityContext: {},
+          terminationGracePeriodSeconds: 30,
+        },
+      },
+    },
+    status: {
+      completionTime: new Date('2021-06-23T12:52:35.000Z'),
+      conditions: [
+        {
+          lastProbeTime: new Date('2021-06-23T12:52:35.000Z'),
+          lastTransitionTime: new Date('2021-06-23T12:52:35.000Z'),
+          status: 'True',
+          type: 'Complete',
+        },
+      ],
+      startTime: new Date('2021-06-23T12:52:25.000Z'),
+      succeeded: 1,
+    },
+  };
+}
+
+export function createMockSecret(): Partial<k8s.V1Secret> {
+  return {
+    data: {
+      'some-field': 'some-value',
+    },
+    metadata: {
+      annotations: {
+        'kubernetes.io/service-account.name': 'ttl-controller',
+        'kubernetes.io/service-account.uid':
+          'ce40aed7-b0ba-43bf-ab90-a9fb53f8ba03',
+      },
+      creationTimestamp: new Date('2021-04-27T20:57:34.000Z'),
+      name: 'ttl-controller-token-r2999',
+      namespace: 'kube-system',
+      resourceVersion: '345',
+      uid: '35ac86f2-63cc-4c48-a05e-ad94ab9dcad5',
+    },
+    type: 'kubernetes.io/service-account-token',
+  };
+}
+
+export function createMockStatefulSet(): Partial<k8s.V1StatefulSet> {
+  return {
+    metadata: {
+      annotations: {
+        'kubectl.kubernetes.io/last-applied-configuration':
+          '{"apiVersion":"apps/v1","kind":"StatefulSet","metadata":{"annotations":{},"name":"web","namespace":"default"},"spec":{"replicas":3,"selector":{"matchLabels":{"app":"nginx"}},"serviceName":"nginx","template":{"metadata":{"labels":{"app":"nginx"}},"spec":{"containers":[{"image":"k8s.gcr.io/nginx-slim:0.8","name":"nginx","ports":[{"containerPort":80,"name":"web"}],"volumeMounts":[{"mountPath":"/usr/share/nginx/html","name":"www"}]}],"terminationGracePeriodSeconds":10}},"volumeClaimTemplates":[{"metadata":{"name":"www"},"spec":{"accessModes":["ReadWriteOnce"],"resources":{"requests":{"storage":"1Gi"}},"storageClassName":"my-storage-class"}}]}}\n',
+      },
+      creationTimestamp: new Date('2021-06-21T09:21:04.000Z'),
+      generation: 1,
+      name: 'web',
+      namespace: 'default',
+      resourceVersion: '508551',
+      uid: 'f34830bc-9c50-47d1-a77f-0f527cb95511',
+    },
+    spec: {
+      podManagementPolicy: 'OrderedReady',
+      replicas: 3,
+      revisionHistoryLimit: 10,
+      selector: {
+        matchLabels: {
+          app: 'nginx',
+        },
+      },
+      serviceName: 'nginx',
+      template: {
+        metadata: {
+          labels: {
+            app: 'nginx',
+          },
+        },
+        spec: {
+          containers: [
+            {
+              image: 'k8s.gcr.io/nginx-slim:0.8',
+              imagePullPolicy: 'IfNotPresent',
+              name: 'nginx',
+              ports: [
+                {
+                  containerPort: 80,
+                  name: 'web',
+                  protocol: 'TCP',
+                },
+              ],
+              resources: {},
+              terminationMessagePath: '/dev/termination-log',
+              terminationMessagePolicy: 'File',
+              volumeMounts: [
+                {
+                  mountPath: '/usr/share/nginx/html',
+                  name: 'www',
+                },
+              ],
+            },
+          ],
+          dnsPolicy: 'ClusterFirst',
+          restartPolicy: 'Always',
+          schedulerName: 'default-scheduler',
+          securityContext: {},
+          terminationGracePeriodSeconds: 10,
+        },
+      },
+      updateStrategy: {
+        rollingUpdate: {
+          partition: 0,
+        },
+        type: 'RollingUpdate',
+      },
+      volumeClaimTemplates: [
+        {
+          apiVersion: 'v1',
+          kind: 'PersistentVolumeClaim',
+          metadata: {
+            name: 'www',
+          },
+          spec: {
+            accessModes: ['ReadWriteOnce'],
+            resources: {
+              requests: {
+                storage: '1Gi',
+              },
+            },
+            storageClassName: 'my-storage-class',
+            volumeMode: 'Filesystem',
+          },
+          status: {
+            phase: 'Pending',
+          },
+        },
+      ],
+    },
+    status: {
+      collisionCount: 0,
+      currentReplicas: 1,
+      currentRevision: 'web-6596ffb49b',
+      observedGeneration: 1,
+      replicas: 1,
+      updateRevision: 'web-6596ffb49b',
+      updatedReplicas: 1,
     },
   };
 }
