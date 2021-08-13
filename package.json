@@ -1,7 +1,7 @@
 {
-  "name": "@jupiterone/integration-template",
+  "name": "@jupiterone/graph-kubernetes",
   "version": "0.0.0",
-  "description": "A JupiterOne Integration",
+  "description": "A JupiterOne Integration for Kubernetes",
   "license": "MPL-2.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -22,7 +22,7 @@
     "test": "KUBECONFIG=$(pwd)/test/.kube/config jest",
     "test:ci": "yarn lint && yarn type-check && yarn test",
     "build": "tsc -p tsconfig.dist.json --declaration",
-    "prepush": "yarn lint && yarn type-check && yarn test --changedSince master",
+    "prepush": "yarn lint && yarn type-check && yarn test --changedSince main",
     "prepack": "yarn build"
   },
   "devDependencies": {

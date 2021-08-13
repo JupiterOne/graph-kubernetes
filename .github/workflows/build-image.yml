@@ -31,7 +31,6 @@ jobs:
         with:
           images: jupiterone/graph-kubernetes
           tags: |
-            type=schedule
             type=ref,event=branch
             type=ref,event=pr
             type=semver,pattern={{version}}

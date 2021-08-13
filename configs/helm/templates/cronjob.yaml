@@ -1,0 +1,63 @@
+apiVersion: {{ template "cronjob.apiVersion" . }}
+kind: CronJob
+metadata:
+  name: {{ template "graph-kubernetes.fullname" . }}
+spec:
+  schedule: "{{ .Values.cronjob.schedule }}"
+  jobTemplate:
+    metadata:
+    {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      labels:
+        {{- include "graph-kubernetes.labels" . | nindent 12 }}
+    spec:
+      template:
+        spec:
+          restartPolicy: Never
+          serviceAccountName: {{ include "graph-kubernetes.serviceAccountName" . }}
+          {{- if .Values.securityContext }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          {{ end }}
+          containers:
+            - name: {{ .Chart.Name }}
+              image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+              imagePullPolicy: {{ .Values.image.pullPolicy }}
+              env:
+                - name: ACCESS_TYPE
+                  value: {{ ternary "cluster" "namespace" .Values.rbac.useClusterRole }} 
+                - name: NAMESPACE
+                  value: {{ .Release.Namespace }}
+                - name: JUPITERONE_ACCOUNT_ID
+                  valueFrom:
+                    secretKeyRef:
+                      name: jupiterone-integration-secret
+                      key: jupiteroneAccountId
+                - name: JUPITERONE_API_KEY
+                  valueFrom:
+                    secretKeyRef:
+                      name: jupiterone-integration-secret
+                      key: jupiteroneApiKey
+                - name: INTEGRATION_INSTANCE_ID
+                  valueFrom:
+                    secretKeyRef:
+                      name: jupiterone-integration-secret
+                      key: jupiteroneIntegrationInstanceId
+                - name: IS_RUNNING_TEST
+                  value: 'false'
+              resources:
+                {{- toYaml .Values.resources | nindent 16 }}
+          {{- with .Values.nodeSelector }}
+          nodeSelector:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.affinity }}
+          affinity:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          {{- with .Values.tolerations }}
+          tolerations:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
