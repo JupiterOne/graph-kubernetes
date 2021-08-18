@@ -4,6 +4,7 @@ metadata:
   annotations:
     rbac.authorization.kubernetes.io/autoupdate: 'true'
   labels:
+    name: jupiterone-integration
   name: jupiterone-integration-cluster-readonly
   namespace: default
 rules:

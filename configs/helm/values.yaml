@@ -1,0 +1,102 @@
+################################
+########### General ############
+################################
+image:
+  repository: jupiterone/graph-kubernetes
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+cronjob:
+  schedule: "*/30 * * * *"
+
+secrets:
+  jupiteroneAccountId:
+  jupiteroneApiKey:
+  jupiteroneIntegrationInstanceId:
+
+## namespaces to ingest (instead of ingesting the entire cluster). Needed if you want to run without Cluster-admin privileges.
+# namespaces:
+#   - yournamespace
+
+resources:
+  {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+################################
+######### Scheduling ###########
+################################
+
+### Pod Annotations
+## Ref: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
+##
+podAnnotations: {}
+
+## Node labels
+## Ref: https://kubernetes.io/docs/user-guide/node-selection/
+##
+nodeSelector: {}
+
+## Node tolerations for alertmanager scheduling to nodes with taints
+## Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/
+##
+tolerations: []
+# - key: "key"
+#   operator: "Equal|Exists"
+#   value: "value"
+#   effect: "NoSchedule|PreferNoSchedule|NoExecute(1.6 only)"
+
+### Node affinity
+## Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity
+##
+affinity: {}
+
+### Node anti affinity
+## Ref: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity
+##
+antiAffinity: {}
+
+## Use an alternate scheduler, e.g. "stork".
+## Ref: https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/
+##
+# schedulerName:
+
+################################
+### Security Related Configs ###
+################################
+rbac:
+  create: true
+  ## Use a ClusterRole (and ClusterRoleBinding)
+  ## - If set to false - we define a Role and RoleBinding in the defined namespaces ONLY
+  useClusterRole: true
+
+  ## Set to a rolename to use existing role - skipping role creating - but still doing serviceaccount and rolebinding to the rolename set here.
+  useExistingRole: false
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name:
+  # Annotations to add to the service account
+  annotations: {}
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+# Force namespace of namespaced resources
+forceNamespace: null

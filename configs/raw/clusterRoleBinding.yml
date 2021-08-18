@@ -1,6 +1,8 @@
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
+  labels:
+    name: jupiterone-integration
   name: jupiterone-integration-cluster
 subjects:
   - kind: ServiceAccount

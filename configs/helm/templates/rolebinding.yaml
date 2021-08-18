@@ -1,0 +1,24 @@
+{{- if and .Values.rbac.create (eq .Values.rbac.useClusterRole false) -}}
+{{ range $.Values.namespaces -}}
+---
+apiVersion: {{ template "rbac.apiVersion" $ }}
+kind: RoleBinding
+metadata:
+  labels:
+    {{- include "graph-kubernetes.labels" $ | nindent 4 }}
+  name: {{ template "graph-kubernetes.fullname" $ }}
+  namespace: {{ . }}
+subjects:
+  - kind: ServiceAccount
+    name: {{ template "graph-kubernetes.serviceAccountName" $ }}
+{{ include "graph-kubernetes.namespace" $ | indent 4 }}
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+{{- if (not $.Values.useExistingRole) }}
+  name: {{ template "graph-kubernetes.fullname" $ }}
+{{- else }}
+  name: {{ $.Values.useExistingRole }}
+{{- end }}
+{{- end }}
+{{ end }}
