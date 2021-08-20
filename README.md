@@ -7,6 +7,10 @@ with JupiterOne in the [integration documentation](docs/jupiterone.md).
 
 ### Prerequisites
 
+TODO: Document installing kubernetes through docker for mac or similar setup
+
+TODO: Document tilt workflow https://docs.tilt.dev/install.html
+
 1. Install [Node.js](https://nodejs.org/) using the
    [installer](https://nodejs.org/en/download/) or a version manager such as
    [nvm](https://github.com/nvm-sh/nvm) or [fnm](https://github.com/Schniz/fnm).
@@ -22,7 +26,7 @@ with JupiterOne in the [integration documentation](docs/jupiterone.md).
    names of these parameters are defined in `src/instanceConfigFields.ts`. When
    executed in a development environment, values for these parameters are read
    from Node's `process.env`, loaded from `.env`. That file has been added to
-   `.gitignore` to avoid commiting credentials.
+   `.gitignore` to avoid committing credentials.
 
 ### Running the integration
 

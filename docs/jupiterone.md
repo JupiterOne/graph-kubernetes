@@ -2,25 +2,20 @@
 
 ## Kubernetes + JupiterOne Integration Benefits
 
-TODO: Iterate the benefits of ingesting data from the provider into JupiterOne.
-Consider the following examples:
-
 - Visualize Kubernetes resources in the JupiterOne graph.
 - Monitor changes using JupiterOne alerts.
 
 ## How it Works
 
-TODO: Iterate significant activities the integration enables. Consider the
-following examples:
-
-- JupiterOne periodically fetches resources from Kubernetes to update the graph.
+- When the docker image runs it will fetches resources from Kubernetes to update
+  the graph.
 - Write JupiterOne queries to review and monitor updates to the graph.
 - Configure alerts to take action when JupiterOne graph changes.
 
 ## Requirements
 
 - A running Kubernetes cluster. This integration will be deployed as a pod and
-  interact with Kuberenetes API server.
+  interact with Kubernetes API server.
 
 ## Support
 
@@ -29,12 +24,7 @@ If you need help with this integration, please contact
 
 ## Integration Walkthrough
 
-Todo: Some section about finding the k8s integration docker image
-
 ### In JupiterOne
-
-TODO: List specific actions that must be taken in JupiterOne. Many of the
-following steps will be reusable; take care to be sure they remain accurate.
 
 1. From the configuration **Gear Icon**, select **Integrations**.
 2. Scroll to the **Kubernetes** integration tile and click it.
@@ -44,10 +34,139 @@ following steps will be reusable; take care to be sure they remain accurate.
    `tag.AccountName` when **Tag with Account Name** is checked.
 5. Enter a **Description** that will further assist your team when identifying
    the integration instance.
-6. Select a **Polling Interval** that you feel is sufficient for your monitoring
-   needs. You may leave this as `DISABLED` and manually execute the integration.
-7. Enter the **Kubernetes API Key** generated for use by JupiterOne.
-8. Click **Create Configuration** once all values are provided.
+6. Click **Create Configuration** once all values are provided.
+7. On the **Configuration Settings** page click **CREATE** next to **Integration
+   API Keys**.
+8. Follow the prompts to create the **Integration API Key**, click **REVEAL**,
+   make note of the API Key.
+9. Below you will need to decide how you install the Kubernetes integration in
+   your cluster. As part of the installation you will need:
+   - The **Integration API Key** you just created
+   - The **Integration Instance Id** (which is listed as ID in the
+     **Configuration Settings**)
+   - Your **Account Id** (listed under **Account Management** after clicking the
+     **Gear Icon**).
+
+### In Kubernetes Via Helm
+
+The easiest way to install and update the `graph-kubernetes` project is through
+the published helm chart. You can find information on how to install our
+repository [here](https://github.com/JupiterOne/helm-charts) with specific
+information about maintain the graph-kubernetes chart
+[here](https://github.com/JupiterOne/helm-charts/tree/main/charts/graph-kubernetes).
+
+#### Quickstart
+
+```console
+helm repo add jupiterone https://jupiterone.github.io/helm-charts
+helm repo update
+helm install [RELEASE_NAME] jupiterone/graph-kubernetes --set secrets.jupiteroneAccountId="some-account-id" --set secrets.jupiteroneApiKey="some-api-key" --set secrets.jupiteroneIntegrationInstanceId="some-integration-instance-id"
+```
+
+### In Kubernetes Via Standard YAML
+
+#### Authentication
+
+##### RBAC
+
+This integration expects a service account with either specific namespace
+read-only access or cluster-wide read-only access.
+
+#### Creating service account with namespace read-only access
+
+1. Create a new service account
+
+`kubectl create sa jupiterone-integration`
+
+2. Assign namespace read-only access
+
+`kubectl create rolebinding jupiterone-integration-view --clusterrole=view --serviceaccount=default:jupiterone-integration --namespace=default`
+
+#### Creating service account with cluster-wide read-only access
+
+1. Create a new service account
+
+`kubectl create sa jupiterone-integration-cluster`
+
+2. Assign cluster-wide read-only access
+
+`kubectl apply -f clusterRole.yml`
+
+`kubectl apply -f clusterRoleBinding.yml`
+
+If using a different service account name or different namespace name, make sure
+to use the correct name in both the commands/yaml listed above.
+
+#### Secrets
+
+The integration requires you to store `jupiterone account id`,
+`jupiterone api key` and `integration id` as secrets that will be read by the
+pod.
+
+1. Update the `createSecret.yml` with base64 encoded values.
+2. `kubectl apply -f createSecret.yml`
+
+#### Deploying
+
+To deploy the built image as a pod:
+
+a) To create cronjob deployment for a service account with namespace read-only
+access `kubectl apply -f cronjobNamespace.yml`
+
+b) To create deployment for a service account with entire cluster read-only
+access `kubectl apply -f cronjobCluster.yml`
+
+#### Debugging
+
+```console
+# To check if the cronjob has been created
+kubectl get cronjob
+
+# To check if the cronjob has spawned any jobs
+kubectl get job
+
+# To see the logs
+kubectl logs --selector job-name=job-name
+```
+
+#### Uninstall
+
+```console
+# Delete the deployment
+kubectl delete cronjob <name>
+
+# Delete the service account
+kubectl delete serviceaccount <serviceaccount> -n <namespace>
+
+# Delete the cluster role binding
+kubectl delete clusterrolebinding <clusterrolebinding>
+
+# Delete the cluster role binding
+kubectl delete clusterole <clusterrole>
+```
+
+#### Upgrading
+
+To upgrade a particular resource (cronjob, secrets, etc) all you need to do is
+reapply the yaml:
+
+```console
+kubectl apply -f resourceFile.yaml
+```
+
+## Advanced Usage
+
+### Telemetry and Diagnostics
+
+The Helm charts and vanilla Kubernetes yaml are instrumented with the
+[OpenTelemetry Collector](https://opentelemetry.io/docs/collector/getting-started/)
+and [FluentBit](https://docs.fluentbit.io/manual/) with FluentBit forwarding
+docker logs into the OpenTelemetry Collector. If you'd like to forward the same
+telemetry to your own internal systems (CloudWatch, Prometheus, etc)
+[configure](https://opentelemetry.io/docs/collector/configuration/) the
+collector to point to them and update the manifests.
+
+For detailed information on installing the Kubernetes install
 
 # How to Uninstall
 
