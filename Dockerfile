@@ -6,10 +6,7 @@ ENV JUPITERONE_DEV_ENABLED=$j1_dev_enabled
 ENV JUPITERONE_INTEGRATION_DIR=/opt/jupiterone/integration
 
 RUN apt-get update
-RUN apt-get -y install wget systemctl g++ make python
-
-RUN wget https://github.com/open-telemetry/opentelemetry-collector/releases/download/v0.33.0/otel-collector_0.33.0_amd64.deb
-RUN dpkg -i otel-collector_0.33.0_amd64.deb
+RUN apt-get -y install g++ make python
 
 COPY package.json yarn.lock LICENSE ${JUPITERONE_INTEGRATION_DIR}/
 COPY src/ ${JUPITERONE_INTEGRATION_DIR}/src
