@@ -1,0 +1,50 @@
+receivers:
+  hostmetrics:
+    collection_interval: 10s
+    scrapers:
+      cpu:
+      load:
+      memory:
+      disk:
+      filesystem:
+      network:
+      paging:
+      processes:
+  otlp:
+    protocols:
+      grpc:
+      http:
+  fluentforward:
+    endpoint: 0.0.0.0:8006
+
+processors:
+  batch:
+  memory_limiter:
+    limit_mib: 400
+    spike_limit_mib: 100
+    check_interval: 5s
+
+exporters:
+  logging:
+    loglevel: debug
+    sampling_initial: 5
+    sampling_thereafter: 200
+
+extensions:
+  memory_ballast:
+    size_mib: 165
+
+service:
+  pipelines:
+    logs:
+      receivers: [fluentforward]
+      processors: [memory_limiter, batch]
+      exporters: [logging]
+    metrics:
+      receivers: [hostmetrics]
+      processors: [memory_limiter, batch]
+      exporters: [logging]
+    traces:
+      receivers: [otlp]
+      processors: [memory_limiter, batch]
+      exporters: [logging]

@@ -1,5 +1,7 @@
 node_modules/
 dist/
+.tilt-cache/
+tilt_modules/
 .j1-integration/
 .env
 .eslintcache
