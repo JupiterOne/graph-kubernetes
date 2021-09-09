@@ -42,7 +42,6 @@ export default async function getStepStartStates(
       cronJobsDisabled,
       configMapsDisabled,
       secretsDisabled,
-      podsDisabled,
       nodesDisabled,
     ] = await Promise.all([
       getServiceState('services', 'list', client),
@@ -54,7 +53,6 @@ export default async function getStepStartStates(
       getServiceState('cronjobs', 'list', client),
       getServiceState('configmaps', 'list', client),
       getServiceState('secrets', 'list', client),
-      getServiceState('pods', 'list', client),
       getServiceState('nodes', 'list', client),
     ]);
 
@@ -88,9 +86,6 @@ export default async function getStepStartStates(
       },
       [IntegrationSteps.SECRETS]: {
         disabled: secretsDisabled,
-      },
-      [IntegrationSteps.PODS]: {
-        disabled: podsDisabled,
       },
       [IntegrationSteps.NODES]: {
         disabled: nodesDisabled,
