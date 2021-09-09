@@ -196,14 +196,12 @@ The following entities are created:
 | Resources              | Entity `_type`      | Entity `_class` |
 | ---------------------- | ------------------- | --------------- |
 | Kubernetes ConfigMap   | `kube_config_map`   | `Configuration` |
-| Kubernetes Container   | `kube_container`    | `Container`     |
 | Kubernetes CronJob     | `kube_cron_job`     | `Task`          |
 | Kubernetes DaemonSet   | `kube_daemon_set`   | `Deployment`    |
 | Kubernetes Deployment  | `kube_deployment`   | `Deployment`    |
 | Kubernetes Job         | `kube_job`          | `Task`          |
 | Kubernetes Namespace   | `kube_namespace`    | `Group`         |
 | Kubernetes Node        | `kube_node`         | `Host`          |
-| Kubernetes Pod         | `kube_pod`          | `Task`          |
 | Kubernetes ReplicaSet  | `kube_replica_set`  | `Deployment`    |
 | Kubernetes Secret      | `kube_secret`       | `Vault`         |
 | Kubernetes Service     | `kube_service`      | `Service`       |
@@ -217,7 +215,6 @@ The following relationships are created/mapped:
 | --------------------- | --------------------- | --------------------- |
 | `kube_cron_job`       | **MANAGES**           | `kube_job`            |
 | `kube_deployment`     | **MANAGES**           | `kube_replica_set`    |
-| `kube_job`            | **MANAGES**           | `kube_pod`            |
 | `kube_namespace`      | **CONTAINS**          | `kube_config_map`     |
 | `kube_namespace`      | **CONTAINS**          | `kube_cron_job`       |
 | `kube_namespace`      | **CONTAINS**          | `kube_daemon_set`     |
@@ -227,10 +224,6 @@ The following relationships are created/mapped:
 | `kube_namespace`      | **CONTAINS**          | `kube_secret`         |
 | `kube_namespace`      | **CONTAINS**          | `kube_service`        |
 | `kube_namespace`      | **CONTAINS**          | `kube_stateful_set`   |
-| `kube_node`           | **HAS**               | `kube_pod`            |
-| `kube_pod`            | **CONTAINS**          | `kube_container`      |
-| `kube_replica_set`    | **MANAGES**           | `kube_pod`            |
-| `kube_stateful_set`   | **MANAGES**           | `kube_pod`            |
 
 <!--
 ********************************************************************************

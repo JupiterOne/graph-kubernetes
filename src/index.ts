@@ -12,26 +12,25 @@ import { jobsSteps } from './steps/jobs';
 import { cronJobsSteps } from './steps/cron-jobs';
 import { configMapsSteps } from './steps/config-maps';
 import { secretsSteps } from './steps/secrets';
-import { podsSteps } from './steps/pods';
 
 import getStepStartStates from './getStepStartStates';
 
-export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> = {
-  instanceConfigFields,
-  validateInvocation,
-  getStepStartStates,
-  integrationSteps: [
-    ...namespaceSteps,
-    ...nodeSteps,
-    ...serviceSteps,
-    ...deploymentsSteps,
-    ...replicaSetsSteps,
-    ...statefulSetsSteps,
-    ...daemonSetsSteps,
-    ...jobsSteps,
-    ...cronJobsSteps,
-    ...configMapsSteps,
-    ...secretsSteps,
-    ...podsSteps,
-  ],
-};
+export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> =
+  {
+    instanceConfigFields,
+    validateInvocation,
+    getStepStartStates,
+    integrationSteps: [
+      ...namespaceSteps,
+      ...nodeSteps,
+      ...serviceSteps,
+      ...deploymentsSteps,
+      ...replicaSetsSteps,
+      ...statefulSetsSteps,
+      ...daemonSetsSteps,
+      ...jobsSteps,
+      ...cronJobsSteps,
+      ...configMapsSteps,
+      ...secretsSteps,
+    ],
+  };
