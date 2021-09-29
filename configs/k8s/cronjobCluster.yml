@@ -107,7 +107,7 @@ spec:
           backoffLimit: 4
           initContainers:
             - name: kubexit
-              image: karlkfi/kubexit:latest
+              image: cortexlabs/kubexit:0.40.0
               command: ['cp']
               args: ['/bin/kubexit', '/kubexit/kubexit']
               volumeMounts:
