@@ -4,7 +4,10 @@ import {
   StepRelationshipMetadata,
 } from '@jupiterone/integration-sdk-core';
 
+export const CLUSTER_ENTITY_DATA_KEY = 'entity:cluster';
+
 export enum IntegrationSteps {
+  CLUSTERS = 'fetch-clusters',
   NAMESPACES = 'fetch-namespaces',
   NODES = 'fetch-nodes',
   SERVICES = 'fetch-services',
@@ -20,6 +23,7 @@ export enum IntegrationSteps {
 }
 
 export const Entities: Record<
+  | 'CLUSTER'
   | 'NAMESPACE'
   | 'NODE'
   | 'SERVICE'
@@ -35,6 +39,11 @@ export const Entities: Record<
   | 'CONTAINER',
   StepEntityMetadata
 > = {
+  CLUSTER: {
+    _type: 'kube_cluster',
+    _class: ['Cluster'],
+    resourceName: 'Kubernetes Cluster',
+  },
   NAMESPACE: {
     _type: 'kube_namespace',
     _class: ['Group'],
