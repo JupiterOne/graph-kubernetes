@@ -195,6 +195,7 @@ The following entities are created:
 
 | Resources              | Entity `_type`      | Entity `_class` |
 | ---------------------- | ------------------- | --------------- |
+| Kubernetes Cluster     | `kube_cluster`      | `Cluster`       |
 | Kubernetes ConfigMap   | `kube_config_map`   | `Configuration` |
 | Kubernetes CronJob     | `kube_cron_job`     | `Task`          |
 | Kubernetes DaemonSet   | `kube_daemon_set`   | `Deployment`    |

@@ -1,6 +1,7 @@
 import { IntegrationConfig, instanceConfigFields } from './config';
 import { validateInvocation } from './validator';
 import { IntegrationInvocationConfig } from '@jupiterone/integration-sdk-core';
+import { clustersSteps } from './steps/clusters';
 import { namespaceSteps } from './steps/namespaces';
 import { nodeSteps } from './steps/nodes';
 import { serviceSteps } from './steps/services';
@@ -15,22 +16,22 @@ import { secretsSteps } from './steps/secrets';
 
 import getStepStartStates from './getStepStartStates';
 
-export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> =
-  {
-    instanceConfigFields,
-    validateInvocation,
-    getStepStartStates,
-    integrationSteps: [
-      ...namespaceSteps,
-      ...nodeSteps,
-      ...serviceSteps,
-      ...deploymentsSteps,
-      ...replicaSetsSteps,
-      ...statefulSetsSteps,
-      ...daemonSetsSteps,
-      ...jobsSteps,
-      ...cronJobsSteps,
-      ...configMapsSteps,
-      ...secretsSteps,
-    ],
-  };
+export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> = {
+  instanceConfigFields,
+  validateInvocation,
+  getStepStartStates,
+  integrationSteps: [
+    ...clustersSteps,
+    ...namespaceSteps,
+    ...nodeSteps,
+    ...serviceSteps,
+    ...deploymentsSteps,
+    ...replicaSetsSteps,
+    ...statefulSetsSteps,
+    ...daemonSetsSteps,
+    ...jobsSteps,
+    ...cronJobsSteps,
+    ...configMapsSteps,
+    ...secretsSteps,
+  ],
+};

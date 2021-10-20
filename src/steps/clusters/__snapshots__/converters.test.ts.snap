@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#createClusterEntity should convert data 1`] = `
+Object {
+  "_class": Array [
+    "Cluster",
+  ],
+  "_key": "kube_cluster:example-integration",
+  "_rawData": Array [
+    Object {
+      "name": "default",
+      "rawData": Object {
+        "name": "example integration",
+      },
+    },
+  ],
+  "_type": "kube_cluster",
+  "createdOn": undefined,
+  "displayName": "example integration",
+  "name": "example integration",
+}
+`;

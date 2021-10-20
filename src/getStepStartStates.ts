@@ -57,6 +57,9 @@ export default async function getStepStartStates(
     ]);
 
     return {
+      [IntegrationSteps.CLUSTERS]: {
+        disabled: false,
+      },
       [IntegrationSteps.NAMESPACES]: {
         disabled: false,
       },

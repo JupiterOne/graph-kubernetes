@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#fetchClusterDetails should collect data: jobState 1`] = `
+Object {
+  "collectedEntities": Array [
+    Object {
+      "_class": Array [
+        "Cluster",
+      ],
+      "_key": "kube_cluster:local-integration-instance",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": Object {
+            "name": "Local Integration",
+          },
+        },
+      ],
+      "_type": "kube_cluster",
+      "createdOn": undefined,
+      "displayName": "Local Integration",
+      "name": "Local Integration",
+    },
+  ],
+  "collectedRelationships": Array [],
+  "encounteredTypes": Array [
+    "kube_cluster",
+  ],
+  "numCollectedEntities": 1,
+  "numCollectedRelationships": 0,
+}
+`;
