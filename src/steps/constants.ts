@@ -11,6 +11,7 @@ export enum IntegrationSteps {
   POD_SECURITY_POLICIES = 'fetch-pod-security-policies',
   CLUSTERS = 'fetch-clusters',
   BUILD_CLUSTER_RESOURCES_RELATIONSHIPS = 'build-cluster-resources-relationships',
+  BUILD_CLUSTER_CLOUD_PROVIDERS_RELATIONSHIPS = 'build-cluster-cloud-providers-relationships',
   NAMESPACES = 'fetch-namespaces',
   NODES = 'fetch-nodes',
   SERVICES = 'fetch-services',
@@ -138,6 +139,7 @@ export const Relationships: Record<
 =======
 >>>>>>> 9d126b6... Add cluster contains resources (namespaces)
   | 'CLUSTER_CONTAINS_NAMESPACE'
+  | 'CLUSTER_IS_AKS_CLUSTER'
   | 'NAMESPACE_CONTAINS_POD'
   | 'NAMESPACE_CONTAINS_SERVICE'
   | 'NAMESPACE_CONTAINS_DEPLOYMENT'
@@ -173,6 +175,12 @@ export const Relationships: Record<
     _class: RelationshipClass.CONTAINS,
     sourceType: Entities.CLUSTER._type,
     targetType: Entities.NAMESPACE._type,
+  },
+  CLUSTER_IS_AKS_CLUSTER: {
+    _type: 'kube_cluster_is_cluster',
+    _class: RelationshipClass.IS,
+    sourceType: Entities.CLUSTER._type,
+    targetType: Entities.CLUSTER._type,
   },
   NAMESPACE_CONTAINS_POD: {
     _type: 'kube_namespace_contains_pod',

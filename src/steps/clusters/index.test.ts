@@ -1,9 +1,10 @@
-import { buildClusterResourcesRelationships, fetchClusterDetails } from '.';
+import { buildClusterCloudProviderRelationships, buildClusterResourcesRelationships, fetchClusterDetails } from '.';
 import { createDataCollectionTest } from '../../../test/recording';
 import { integrationConfig } from '../../../test/config';
 import { Entities, Relationships } from '../constants';
 import { fetchNamespaces } from '../namespaces';
 import { RelationshipClass } from '@jupiterone/data-model';
+import { fetchConfigMaps } from '../config-maps';
 
 describe('#fetchClusterDetails', () => {
   test('should collect data', async () => {
@@ -64,3 +65,33 @@ describe('#buildClusterResourcesRelationships', () => {
     });
   });
 });
+
+describe('#buildClusterCloudProviderRelationships', () => {
+  test('should collect data', async () => {
+    await createDataCollectionTest({
+      recordingName: 'buildClusterCloudProviderRelationships',
+      recordingDirectory: __dirname,
+      integrationConfig,
+      stepFunctions: [
+        fetchClusterDetails,
+        fetchConfigMaps,
+        buildClusterCloudProviderRelationships,
+      ],
+      entitySchemaMatchers: [],
+      relationshipSchemaMatchers: [
+        {
+          _type: Relationships.CLUSTER_IS_AKS_CLUSTER._type,
+          matcher: {
+            schema: {
+              properties: {
+                _class: { const: RelationshipClass.IS },
+                _type: { const: 'kube_cluster_is_cluster' },
+              },
+            },
+          },
+        },
+      ],
+    });
+  });
+});
+
