@@ -63,6 +63,9 @@ export default async function getStepStartStates(
       [IntegrationSteps.CLUSTERS]: {
         disabled: false,
       },
+      [IntegrationSteps.BUILD_CLUSTER_RESOURCES_RELATIONSHIPS]: {
+        disabled: false,
+      },
       [IntegrationSteps.NAMESPACES]: {
         disabled: false,
       },

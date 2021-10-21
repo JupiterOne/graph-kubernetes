@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`#fetchClusterDetails should collect data: jobState 1`] = `
+exports[`#buildClusterResourcesRelationships should collect data: jobState 1`] = `
 Object {
   "collectedEntities": Array [
     Object {
@@ -21,12 +21,343 @@ Object {
       "displayName": "Local Integration",
       "name": "Local Integration",
     },
+    Object {
+      "_class": Array [
+        "Group",
+      ],
+      "_key": "028a7e13-826e-4675-be99-c4dce36b3852",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": V1Namespace {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": undefined,
+              "clusterName": undefined,
+              "creationTimestamp": 2021-10-18T14:59:15.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": undefined,
+              "labels": undefined,
+              "managedFields": Array [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:status": Object {
+                      "f:phase": Object {},
+                    },
+                  },
+                  "manager": "kube-apiserver",
+                  "operation": "Update",
+                  "time": 2021-10-18T14:59:15.000Z,
+                },
+              ],
+              "name": "default",
+              "namespace": undefined,
+              "ownerReferences": undefined,
+              "resourceVersion": "198",
+              "selfLink": undefined,
+              "uid": "028a7e13-826e-4675-be99-c4dce36b3852",
+            },
+            "spec": V1NamespaceSpec {
+              "finalizers": Array [
+                "kubernetes",
+              ],
+            },
+            "status": V1NamespaceStatus {
+              "conditions": undefined,
+              "phase": "Active",
+            },
+          },
+        },
+      ],
+      "_type": "kube_namespace",
+      "active": undefined,
+      "createdOn": 1634569155000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "default",
+      "finalizers": Array [
+        "kubernetes",
+      ],
+      "generation": undefined,
+      "name": "default",
+      "resourceVersion": "198",
+      "status.phase": "Active",
+    },
+    Object {
+      "_class": Array [
+        "Group",
+      ],
+      "_key": "0e7b2874-31f2-476f-b350-f7978ddfddc7",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": V1Namespace {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": undefined,
+              "clusterName": undefined,
+              "creationTimestamp": 2021-10-18T14:59:12.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": undefined,
+              "labels": undefined,
+              "managedFields": Array [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:status": Object {
+                      "f:phase": Object {},
+                    },
+                  },
+                  "manager": "kube-apiserver",
+                  "operation": "Update",
+                  "time": 2021-10-18T14:59:12.000Z,
+                },
+              ],
+              "name": "kube-node-lease",
+              "namespace": undefined,
+              "ownerReferences": undefined,
+              "resourceVersion": "60",
+              "selfLink": undefined,
+              "uid": "0e7b2874-31f2-476f-b350-f7978ddfddc7",
+            },
+            "spec": V1NamespaceSpec {
+              "finalizers": Array [
+                "kubernetes",
+              ],
+            },
+            "status": V1NamespaceStatus {
+              "conditions": undefined,
+              "phase": "Active",
+            },
+          },
+        },
+      ],
+      "_type": "kube_namespace",
+      "active": undefined,
+      "createdOn": 1634569152000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "kube-node-lease",
+      "finalizers": Array [
+        "kubernetes",
+      ],
+      "generation": undefined,
+      "name": "kube-node-lease",
+      "resourceVersion": "60",
+      "status.phase": "Active",
+    },
+    Object {
+      "_class": Array [
+        "Group",
+      ],
+      "_key": "3e35998d-d074-4138-ae04-400deb406306",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": V1Namespace {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": undefined,
+              "clusterName": undefined,
+              "creationTimestamp": 2021-10-18T14:59:12.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": undefined,
+              "labels": undefined,
+              "managedFields": Array [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:status": Object {
+                      "f:phase": Object {},
+                    },
+                  },
+                  "manager": "kube-apiserver",
+                  "operation": "Update",
+                  "time": 2021-10-18T14:59:12.000Z,
+                },
+              ],
+              "name": "kube-public",
+              "namespace": undefined,
+              "ownerReferences": undefined,
+              "resourceVersion": "43",
+              "selfLink": undefined,
+              "uid": "3e35998d-d074-4138-ae04-400deb406306",
+            },
+            "spec": V1NamespaceSpec {
+              "finalizers": Array [
+                "kubernetes",
+              ],
+            },
+            "status": V1NamespaceStatus {
+              "conditions": undefined,
+              "phase": "Active",
+            },
+          },
+        },
+      ],
+      "_type": "kube_namespace",
+      "active": undefined,
+      "createdOn": 1634569152000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "kube-public",
+      "finalizers": Array [
+        "kubernetes",
+      ],
+      "generation": undefined,
+      "name": "kube-public",
+      "resourceVersion": "43",
+      "status.phase": "Active",
+    },
+    Object {
+      "_class": Array [
+        "Group",
+      ],
+      "_key": "7ecdb996-e21c-4c37-9ba8-62380b8d8399",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": V1Namespace {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": Object {
+                "kubectl.kubernetes.io/last-applied-configuration": "{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Namespace\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"addonmanager.kubernetes.io/mode\\":\\"Reconcile\\",\\"control-plane\\":\\"true\\",\\"kubernetes.io/cluster-service\\":\\"true\\"},\\"name\\":\\"kube-system\\"}}
+",
+              },
+              "clusterName": undefined,
+              "creationTimestamp": 2021-10-18T14:59:12.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": undefined,
+              "labels": Object {
+                "addonmanager.kubernetes.io/mode": "Reconcile",
+                "control-plane": "true",
+                "kubernetes.io/cluster-service": "true",
+              },
+              "managedFields": Array [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:status": Object {
+                      "f:phase": Object {},
+                    },
+                  },
+                  "manager": "kube-apiserver",
+                  "operation": "Update",
+                  "time": 2021-10-18T14:59:12.000Z,
+                },
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:metadata": Object {
+                      "f:annotations": Object {
+                        ".": Object {},
+                        "f:kubectl.kubernetes.io/last-applied-configuration": Object {},
+                      },
+                      "f:labels": Object {
+                        ".": Object {},
+                        "f:addonmanager.kubernetes.io/mode": Object {},
+                        "f:control-plane": Object {},
+                        "f:kubernetes.io/cluster-service": Object {},
+                      },
+                    },
+                  },
+                  "manager": "kubectl-client-side-apply",
+                  "operation": "Update",
+                  "time": 2021-10-18T14:59:47.000Z,
+                },
+              ],
+              "name": "kube-system",
+              "namespace": undefined,
+              "ownerReferences": undefined,
+              "resourceVersion": "416",
+              "selfLink": undefined,
+              "uid": "7ecdb996-e21c-4c37-9ba8-62380b8d8399",
+            },
+            "spec": V1NamespaceSpec {
+              "finalizers": Array [
+                "kubernetes",
+              ],
+            },
+            "status": V1NamespaceStatus {
+              "conditions": undefined,
+              "phase": "Active",
+            },
+          },
+        },
+      ],
+      "_type": "kube_namespace",
+      "active": undefined,
+      "createdOn": 1634569152000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "kube-system",
+      "finalizers": Array [
+        "kubernetes",
+      ],
+      "generation": undefined,
+      "name": "kube-system",
+      "resourceVersion": "416",
+      "status.phase": "Active",
+    },
   ],
-  "collectedRelationships": Array [],
+  "collectedRelationships": Array [
+    Object {
+      "_class": "CONTAINS",
+      "_fromEntityKey": "kube_cluster:local-integration-instance",
+      "_key": "kube_cluster:local-integration-instance|contains|028a7e13-826e-4675-be99-c4dce36b3852",
+      "_toEntityKey": "028a7e13-826e-4675-be99-c4dce36b3852",
+      "_type": "kube_cluster_contains_namespace",
+      "displayName": "CONTAINS",
+    },
+    Object {
+      "_class": "CONTAINS",
+      "_fromEntityKey": "kube_cluster:local-integration-instance",
+      "_key": "kube_cluster:local-integration-instance|contains|0e7b2874-31f2-476f-b350-f7978ddfddc7",
+      "_toEntityKey": "0e7b2874-31f2-476f-b350-f7978ddfddc7",
+      "_type": "kube_cluster_contains_namespace",
+      "displayName": "CONTAINS",
+    },
+    Object {
+      "_class": "CONTAINS",
+      "_fromEntityKey": "kube_cluster:local-integration-instance",
+      "_key": "kube_cluster:local-integration-instance|contains|3e35998d-d074-4138-ae04-400deb406306",
+      "_toEntityKey": "3e35998d-d074-4138-ae04-400deb406306",
+      "_type": "kube_cluster_contains_namespace",
+      "displayName": "CONTAINS",
+    },
+    Object {
+      "_class": "CONTAINS",
+      "_fromEntityKey": "kube_cluster:local-integration-instance",
+      "_key": "kube_cluster:local-integration-instance|contains|7ecdb996-e21c-4c37-9ba8-62380b8d8399",
+      "_toEntityKey": "7ecdb996-e21c-4c37-9ba8-62380b8d8399",
+      "_type": "kube_cluster_contains_namespace",
+      "displayName": "CONTAINS",
+    },
+  ],
   "encounteredTypes": Array [
     "kube_cluster",
+    "kube_namespace",
+    "kube_cluster_contains_namespace",
   ],
-  "numCollectedEntities": 1,
-  "numCollectedRelationships": 0,
+  "numCollectedEntities": 5,
+  "numCollectedRelationships": 4,
 }
 `;
