@@ -1,5 +1,5 @@
-import { createDataCollectionTest } from '../../../test/recording';
 import { buildClusterResourcesRelationships, fetchClusterDetails } from '.';
+import { createDataCollectionTest } from '../../../test/recording';
 import { integrationConfig } from '../../../test/config';
 import { Entities, Relationships } from '../constants';
 import { fetchNamespaces } from '../namespaces';
