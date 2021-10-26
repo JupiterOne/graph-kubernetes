@@ -70,7 +70,7 @@ describe('#buildClusterResourcesRelationships', () => {
   });
 });
 
-describe('#buildClusterCloudProviderRelationships', () => {
+describe('#buildClusterAksRelationships', () => {
   test('should collect data', async () => {
     await createDataCollectionTest({
       recordingName: 'buildClusterCloudProviderRelationships',
