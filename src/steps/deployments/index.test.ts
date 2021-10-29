@@ -51,6 +51,33 @@ describe('#fetchDeployments', () => {
             },
           },
         },
+        {
+          _type: Entities.CONTAINER_SPEC._type,
+          matcher: {
+            _class: ['Configuration'],
+            schema: {
+              additionalProperties: false,
+              properties: {
+                _type: { const: 'kube_container_spec' },
+                _rawData: {
+                  type: 'array',
+                  items: { type: 'object' },
+                },
+                name: { type: 'string' },
+                displayName: { type: 'string' },
+                image: { type: 'string' },
+                imagePullPolicy: { type: 'string' },
+                'securityContext.allowPrivilegeEscalation': { type: 'boolean' },
+                'securityContext.privileged': { type: 'boolean' },
+                'securityContext.procMount': { type: 'string' },
+                'securityContext.readOnlyRootFilesystem': { type: 'boolean' },
+                'securityContext.runAsGroup': { type: 'number' },
+                'securityContext.runAsNonRoot': { type: 'boolean' },
+                'securityContext.runAsUser': { type: 'number' },
+              },
+            },
+          },
+        },
       ],
       relationshipSchemaMatchers: [
         {
@@ -60,6 +87,17 @@ describe('#fetchDeployments', () => {
               properties: {
                 _class: { const: RelationshipClass.CONTAINS },
                 _type: { const: 'kube_namespace_contains_deployment' },
+              },
+            },
+          },
+        },
+        {
+          _type: Relationships.DEPLOYMENT_USES_CONTAINER_SPEC._type,
+          matcher: {
+            schema: {
+              properties: {
+                _class: { const: RelationshipClass.USES },
+                _type: { const: 'kube_deployment_uses_container_spec' },
               },
             },
           },
