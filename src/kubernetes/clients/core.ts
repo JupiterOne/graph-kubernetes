@@ -6,6 +6,7 @@ import {
   V1NodeList,
   V1PodList,
   V1SecretList,
+  V1ServiceAccountList,
   V1ServiceList,
 } from '@kubernetes/client-node';
 import { IntegrationConfig } from '../../config';
@@ -177,6 +178,30 @@ export class CoreClient extends Client {
       async (data: V1SecretList) => {
         for (const secret of data.items || []) {
           await callback(secret);
+        }
+      },
+    );
+  }
+
+  async iterateNamespacedServiceAccounts(
+    namespace: string,
+    callback: (data: k8s.V1ServiceAccount) => Promise<void>,
+  ): Promise<void> {
+    await this.iterateApi(
+      async (nextPageToken) => {
+        return this.client.listNamespacedServiceAccount(
+          namespace,
+          undefined,
+          undefined,
+          nextPageToken,
+          undefined,
+          undefined,
+          this.maxPerPage,
+        );
+      },
+      async (data: V1ServiceAccountList) => {
+        for (const item of data.items) {
+          await callback(item);
         }
       },
     );

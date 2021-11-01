@@ -9,6 +9,9 @@ export const CLUSTER_ENTITY_DATA_KEY = 'entity:cluster';
 export enum IntegrationSteps {
   NETWORK_POLICIES = 'fetch-network-policies',
   POD_SECURITY_POLICIES = 'fetch-pod-security-policies',
+  SERVICE_ACCOUNTS = 'fetch-service-accounts',
+  CLUSTER_ROLES = 'fetch-cluster-roles',
+  CLUSTER_ROLE_BINDINGS = 'fetch-cluster-role-bindings',
   CLUSTERS = 'fetch-clusters',
   BUILD_CLUSTER_RESOURCES_RELATIONSHIPS = 'build-cluster-resources-relationships',
   BUILD_CLUSTER_AKS_RELATIONSHIPS = 'build-cluster-aks-relationships',
@@ -31,6 +34,8 @@ export enum IntegrationSteps {
 export const Entities: Record<
   | 'NETWORK_POLICY'
   | 'POD_SECURITY_POLICY'
+  | 'SERVICE_ACCOUNT'
+  | 'CLUSTER_ROLE'
   | 'CLUSTER'
   | 'AZURE_KUBERNETES_CLUSTER'
   | 'GOOGLE_KUBERNETES_CLUSTER'
@@ -60,6 +65,16 @@ export const Entities: Record<
     _type: 'kube_pod_security_policy',
     _class: ['Configuration'],
     resourceName: 'Kubernetes Pod Security Policy',
+  },
+  SERVICE_ACCOUNT: {
+    _type: 'kube_service_account',
+    _class: ['Cluster'],
+    resourceName: 'Kubernetes Service Account',
+  },
+  CLUSTER_ROLE: {
+    _type: 'kube_cluster_role',
+    _class: ['Cluster'],
+    resourceName: 'Kubernetes Cluster Role',
   },
   CLUSTER: {
     _type: 'kube_cluster',
@@ -169,6 +184,7 @@ export const Relationships: Record<
   | 'NAMESPACE_CONTAINS_CONFIGMAP'
   | 'NAMESPACE_CONTAINS_SECRET'
   | 'NAMESPACE_CONTAINS_NETWORK_POLICY'
+  | 'NAMESPACE_CONTAINS_SERVICE_ACCOUNT'
   | 'DEPLOYMENT_MANAGES_REPLICASET'
   | 'DEPLOYMENT_USES_CONTAINER_SPEC'
   | 'CONTAINER_SPEC_USES_VOLUME'
@@ -269,6 +285,12 @@ export const Relationships: Record<
     _class: RelationshipClass.CONTAINS,
     sourceType: Entities.NAMESPACE._type,
     targetType: Entities.NETWORK_POLICY._type,
+  },
+  NAMESPACE_CONTAINS_SERVICE_ACCOUNT: {
+    _type: 'kube_namespace_contains_service_account',
+    _class: RelationshipClass.CONTAINS,
+    sourceType: Entities.NAMESPACE._type,
+    targetType: Entities.SERVICE_ACCOUNT._type,
   },
   DEPLOYMENT_MANAGES_REPLICASET: {
     _type: 'kube_deployment_manages_replica_set',

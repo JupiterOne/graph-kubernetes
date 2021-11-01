@@ -1,4 +1,5 @@
 import * as k8s from '@kubernetes/client-node';
+import { V1ClusterRoleBindingList } from '@kubernetes/client-node';
 import { IntegrationConfig } from '../../config';
 import { Client } from '../client';
 
