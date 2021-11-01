@@ -57,6 +57,9 @@ export default async function getStepStartStates(
     ]);
 
     return {
+      [IntegrationSteps.POD_SECURITY_POLICIES]: {
+        disabled: false,
+      },
       [IntegrationSteps.CLUSTERS]: {
         disabled: false,
       },

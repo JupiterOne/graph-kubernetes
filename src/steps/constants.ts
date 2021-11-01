@@ -7,6 +7,7 @@ import {
 export const CLUSTER_ENTITY_DATA_KEY = 'entity:cluster';
 
 export enum IntegrationSteps {
+  POD_SECURITY_POLICIES = 'fetch-pod-security-policies',
   CLUSTERS = 'fetch-clusters',
   NAMESPACES = 'fetch-namespaces',
   NODES = 'fetch-nodes',
@@ -23,6 +24,7 @@ export enum IntegrationSteps {
 }
 
 export const Entities: Record<
+  | 'POD_SECURITY_POLICY'
   | 'CLUSTER'
   | 'NAMESPACE'
   | 'NODE'
@@ -39,6 +41,11 @@ export const Entities: Record<
   | 'CONTAINER',
   StepEntityMetadata
 > = {
+  POD_SECURITY_POLICY: {
+    _type: 'kube_pod_security_policy',
+    _class: ['Configuration'],
+    resourceName: 'Kubernetes Pod Security Policy',
+  },
   CLUSTER: {
     _type: 'kube_cluster',
     _class: ['Cluster'],
@@ -112,6 +119,7 @@ export const Entities: Record<
 };
 
 export const Relationships: Record<
+  | 'CLUSTER_CONTAINS_POD_SECURITY_POLICY'
   | 'NAMESPACE_CONTAINS_POD'
   | 'NAMESPACE_CONTAINS_SERVICE'
   | 'NAMESPACE_CONTAINS_DEPLOYMENT'
@@ -131,6 +139,12 @@ export const Relationships: Record<
   | 'POD_CONTAINS_CONTAINER',
   StepRelationshipMetadata
 > = {
+  CLUSTER_CONTAINS_POD_SECURITY_POLICY: {
+    _type: 'kube_cluster_contains_pod_security_policy',
+    _class: RelationshipClass.CONTAINS,
+    sourceType: Entities.CLUSTER._type,
+    targetType: Entities.POD_SECURITY_POLICY._type,
+  },
   NAMESPACE_CONTAINS_POD: {
     _type: 'kube_namespace_contains_pod',
     _class: RelationshipClass.CONTAINS,

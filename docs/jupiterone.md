@@ -193,38 +193,40 @@ https://github.com/JupiterOne/sdk/blob/main/docs/integrations/development.md
 
 The following entities are created:
 
-| Resources              | Entity `_type`      | Entity `_class` |
-| ---------------------- | ------------------- | --------------- |
-| Kubernetes Cluster     | `kube_cluster`      | `Cluster`       |
-| Kubernetes ConfigMap   | `kube_config_map`   | `Configuration` |
-| Kubernetes CronJob     | `kube_cron_job`     | `Task`          |
-| Kubernetes DaemonSet   | `kube_daemon_set`   | `Deployment`    |
-| Kubernetes Deployment  | `kube_deployment`   | `Deployment`    |
-| Kubernetes Job         | `kube_job`          | `Task`          |
-| Kubernetes Namespace   | `kube_namespace`    | `Group`         |
-| Kubernetes Node        | `kube_node`         | `Host`          |
-| Kubernetes ReplicaSet  | `kube_replica_set`  | `Deployment`    |
-| Kubernetes Secret      | `kube_secret`       | `Vault`         |
-| Kubernetes Service     | `kube_service`      | `Service`       |
-| Kubernetes StatefulSet | `kube_stateful_set` | `Deployment`    |
+| Resources                      | Entity `_type`             | Entity `_class` |
+| ------------------------------ | -------------------------- | --------------- |
+| Kubernetes Cluster             | `kube_cluster`             | `Cluster`       |
+| Kubernetes ConfigMap           | `kube_config_map`          | `Configuration` |
+| Kubernetes CronJob             | `kube_cron_job`            | `Task`          |
+| Kubernetes DaemonSet           | `kube_daemon_set`          | `Deployment`    |
+| Kubernetes Deployment          | `kube_deployment`          | `Deployment`    |
+| Kubernetes Job                 | `kube_job`                 | `Task`          |
+| Kubernetes Namespace           | `kube_namespace`           | `Group`         |
+| Kubernetes Node                | `kube_node`                | `Host`          |
+| Kubernetes Pod Security Policy | `kube_pod_security_policy` | `Configuration` |
+| Kubernetes ReplicaSet          | `kube_replica_set`         | `Deployment`    |
+| Kubernetes Secret              | `kube_secret`              | `Vault`         |
+| Kubernetes Service             | `kube_service`             | `Service`       |
+| Kubernetes StatefulSet         | `kube_stateful_set`        | `Deployment`    |
 
 ### Relationships
 
 The following relationships are created/mapped:
 
-| Source Entity `_type` | Relationship `_class` | Target Entity `_type` |
-| --------------------- | --------------------- | --------------------- |
-| `kube_cron_job`       | **MANAGES**           | `kube_job`            |
-| `kube_deployment`     | **MANAGES**           | `kube_replica_set`    |
-| `kube_namespace`      | **CONTAINS**          | `kube_config_map`     |
-| `kube_namespace`      | **CONTAINS**          | `kube_cron_job`       |
-| `kube_namespace`      | **CONTAINS**          | `kube_daemon_set`     |
-| `kube_namespace`      | **CONTAINS**          | `kube_deployment`     |
-| `kube_namespace`      | **CONTAINS**          | `kube_job`            |
-| `kube_namespace`      | **CONTAINS**          | `kube_replica_set`    |
-| `kube_namespace`      | **CONTAINS**          | `kube_secret`         |
-| `kube_namespace`      | **CONTAINS**          | `kube_service`        |
-| `kube_namespace`      | **CONTAINS**          | `kube_stateful_set`   |
+| Source Entity `_type` | Relationship `_class` | Target Entity `_type`      |
+| --------------------- | --------------------- | -------------------------- |
+| `kube_cluster`        | **CONTAINS**          | `kube_pod_security_policy` |
+| `kube_cron_job`       | **MANAGES**           | `kube_job`                 |
+| `kube_deployment`     | **MANAGES**           | `kube_replica_set`         |
+| `kube_namespace`      | **CONTAINS**          | `kube_config_map`          |
+| `kube_namespace`      | **CONTAINS**          | `kube_cron_job`            |
+| `kube_namespace`      | **CONTAINS**          | `kube_daemon_set`          |
+| `kube_namespace`      | **CONTAINS**          | `kube_deployment`          |
+| `kube_namespace`      | **CONTAINS**          | `kube_job`                 |
+| `kube_namespace`      | **CONTAINS**          | `kube_replica_set`         |
+| `kube_namespace`      | **CONTAINS**          | `kube_secret`              |
+| `kube_namespace`      | **CONTAINS**          | `kube_service`             |
+| `kube_namespace`      | **CONTAINS**          | `kube_stateful_set`        |
 
 <!--
 ********************************************************************************
