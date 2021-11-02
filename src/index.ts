@@ -13,6 +13,7 @@ import { jobsSteps } from './steps/jobs';
 import { cronJobsSteps } from './steps/cron-jobs';
 import { configMapsSteps } from './steps/config-maps';
 import { secretsSteps } from './steps/secrets';
+import { policiesSteps } from './steps/policies';
 
 import getStepStartStates from './getStepStartStates';
 
@@ -21,6 +22,7 @@ export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> = 
   validateInvocation,
   getStepStartStates,
   integrationSteps: [
+    ...policiesSteps,
     ...clustersSteps,
     ...namespaceSteps,
     ...nodeSteps,

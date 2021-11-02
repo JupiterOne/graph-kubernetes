@@ -1,0 +1,192 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#fetchPodSecurityPolicies should collect data: jobState 1`] = `
+Object {
+  "collectedEntities": Array [
+    Object {
+      "_class": Array [
+        "Cluster",
+      ],
+      "_key": "kube_cluster:local-integration-instance",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": Object {
+            "name": "Local Integration",
+          },
+        },
+      ],
+      "_type": "kube_cluster",
+      "createdOn": undefined,
+      "displayName": "Local Integration",
+      "name": "Local Integration",
+    },
+    Object {
+      "_class": Array [
+        "Configuration",
+      ],
+      "_key": "d2ddbbb0-5714-4597-bc8b-cc521a978870",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": V1beta1PodSecurityPolicy {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": Object {
+                "kubectl.kubernetes.io/last-applied-configuration": "{\\"apiVersion\\":\\"policy/v1beta1\\",\\"kind\\":\\"PodSecurityPolicy\\",\\"metadata\\":{\\"annotations\\":{},\\"name\\":\\"example\\"},\\"spec\\":{\\"fsGroup\\":{\\"rule\\":\\"RunAsAny\\"},\\"privileged\\":false,\\"runAsUser\\":{\\"rule\\":\\"RunAsAny\\"},\\"seLinux\\":{\\"rule\\":\\"RunAsAny\\"},\\"supplementalGroups\\":{\\"ranges\\":[{\\"max\\":65535,\\"min\\":1}],\\"rule\\":\\"MustRunAs\\"},\\"volumes\\":[\\"*\\"]}}
+",
+              },
+              "clusterName": undefined,
+              "creationTimestamp": 2021-11-01T17:48:24.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": undefined,
+              "labels": undefined,
+              "managedFields": Array [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "policy/v1beta1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:metadata": Object {
+                      "f:annotations": Object {
+                        ".": Object {},
+                        "f:kubectl.kubernetes.io/last-applied-configuration": Object {},
+                      },
+                    },
+                    "f:spec": Object {
+                      "f:allowPrivilegeEscalation": Object {},
+                      "f:fsGroup": Object {
+                        "f:rule": Object {},
+                      },
+                      "f:runAsUser": Object {
+                        "f:rule": Object {},
+                      },
+                      "f:seLinux": Object {
+                        "f:rule": Object {},
+                      },
+                      "f:supplementalGroups": Object {
+                        "f:ranges": Object {},
+                        "f:rule": Object {},
+                      },
+                      "f:volumes": Object {},
+                    },
+                  },
+                  "manager": "kubectl-client-side-apply",
+                  "operation": "Update",
+                  "time": 2021-11-01T18:27:53.000Z,
+                },
+              ],
+              "name": "example",
+              "namespace": undefined,
+              "ownerReferences": undefined,
+              "resourceVersion": "1214124",
+              "selfLink": undefined,
+              "uid": "d2ddbbb0-5714-4597-bc8b-cc521a978870",
+            },
+            "spec": V1beta1PodSecurityPolicySpec {
+              "allowPrivilegeEscalation": true,
+              "allowedCSIDrivers": undefined,
+              "allowedCapabilities": undefined,
+              "allowedFlexVolumes": undefined,
+              "allowedHostPaths": undefined,
+              "allowedProcMountTypes": undefined,
+              "allowedUnsafeSysctls": undefined,
+              "defaultAddCapabilities": undefined,
+              "defaultAllowPrivilegeEscalation": undefined,
+              "forbiddenSysctls": undefined,
+              "fsGroup": V1beta1FSGroupStrategyOptions {
+                "ranges": undefined,
+                "rule": "RunAsAny",
+              },
+              "hostIPC": undefined,
+              "hostNetwork": undefined,
+              "hostPID": undefined,
+              "hostPorts": undefined,
+              "privileged": undefined,
+              "readOnlyRootFilesystem": undefined,
+              "requiredDropCapabilities": undefined,
+              "runAsGroup": undefined,
+              "runAsUser": V1beta1RunAsUserStrategyOptions {
+                "ranges": undefined,
+                "rule": "RunAsAny",
+              },
+              "runtimeClass": undefined,
+              "seLinux": V1beta1SELinuxStrategyOptions {
+                "rule": "RunAsAny",
+                "seLinuxOptions": undefined,
+              },
+              "supplementalGroups": V1beta1SupplementalGroupsStrategyOptions {
+                "ranges": Array [
+                  V1beta1IDRange {
+                    "max": 65535,
+                    "min": 1,
+                  },
+                ],
+                "rule": "MustRunAs",
+              },
+              "volumes": Array [
+                "*",
+              ],
+            },
+          },
+        },
+      ],
+      "_type": "kube_pod_security_policy",
+      "allowPrivilegeEscalation": true,
+      "allowedCapabilities": undefined,
+      "allowedProcMountTypes": undefined,
+      "allowedUnsafeSysctls": undefined,
+      "createdOn": 1635788904000,
+      "defaultAddCapabilities": undefined,
+      "defaultAllowPrivilegeEscalation": undefined,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "example",
+      "forbiddenSysctls": undefined,
+      "generation": undefined,
+      "hostIPC": false,
+      "hostNetwork": false,
+      "hostPID": false,
+      "name": "example",
+      "privileged": false,
+      "readOnlyRootFilesystem": false,
+      "requiredDropCapabilities": undefined,
+      "resourceVersion": "1214124",
+      "runAsGroup.range": undefined,
+      "runAsGroup.rule": undefined,
+      "runAsUser.range": undefined,
+      "runAsUser.rule": "RunAsAny",
+      "runtimeClass.allowedRuntimeClassNames": undefined,
+      "runtimeClass.defaultRuntimeClassName": undefined,
+      "seLinux.rule": "RunAsAny",
+      "seLinux.seLinuxOptions.level": undefined,
+      "seLinux.seLinuxOptions.role": undefined,
+      "seLinux.seLinuxOptions.type": undefined,
+      "seLinux.seLinuxOptions.user": undefined,
+      "supplementalGroups.range": Array [
+        "1, 65535",
+      ],
+      "supplementalGroups.rule": "MustRunAs",
+    },
+  ],
+  "collectedRelationships": Array [
+    Object {
+      "_class": "CONTAINS",
+      "_fromEntityKey": "kube_cluster:local-integration-instance",
+      "_key": "kube_cluster:local-integration-instance|contains|d2ddbbb0-5714-4597-bc8b-cc521a978870",
+      "_toEntityKey": "d2ddbbb0-5714-4597-bc8b-cc521a978870",
+      "_type": "kube_cluster_contains_pod_security_policy",
+      "displayName": "CONTAINS",
+    },
+  ],
+  "encounteredTypes": Array [
+    "kube_cluster",
+    "kube_pod_security_policy",
+    "kube_cluster_contains_pod_security_policy",
+  ],
+  "numCollectedEntities": 2,
+  "numCollectedRelationships": 1,
+}
+`;
