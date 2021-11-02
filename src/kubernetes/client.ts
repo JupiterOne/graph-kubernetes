@@ -8,7 +8,7 @@ export interface ClientOptions {
 export class Client {
   public kubeConfig: k8s.KubeConfig;
   public config: IntegrationConfig;
-  protected readonly maxPerPage = 50;
+  protected readonly maxPerPage = 250;
 
   constructor(config: IntegrationConfig) {
     this.config = config;

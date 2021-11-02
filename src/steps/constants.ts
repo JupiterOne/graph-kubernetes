@@ -7,6 +7,7 @@ import {
 export const CLUSTER_ENTITY_DATA_KEY = 'entity:cluster';
 
 export enum IntegrationSteps {
+  NETWORK_POLICIES = 'fetch-network-policies',
   POD_SECURITY_POLICIES = 'fetch-pod-security-policies',
   CLUSTERS = 'fetch-clusters',
   BUILD_CLUSTER_RESOURCES_RELATIONSHIPS = 'build-cluster-resources-relationships',
@@ -25,6 +26,7 @@ export enum IntegrationSteps {
 }
 
 export const Entities: Record<
+  | 'NETWORK_POLICY'
   | 'POD_SECURITY_POLICY'
   | 'CLUSTER'
   | 'NAMESPACE'
@@ -42,6 +44,11 @@ export const Entities: Record<
   | 'CONTAINER',
   StepEntityMetadata
 > = {
+  NETWORK_POLICY: {
+    _type: 'kube_network_policy',
+    _class: ['Configuration'],
+    resourceName: 'Kubernetes Network Policy',
+  },
   POD_SECURITY_POLICY: {
     _type: 'kube_pod_security_policy',
     _class: ['Configuration'],
@@ -132,6 +139,7 @@ export const Relationships: Record<
   | 'NAMESPACE_CONTAINS_JOB'
   | 'NAMESPACE_CONTAINS_CONFIGMAP'
   | 'NAMESPACE_CONTAINS_SECRET'
+  | 'NAMESPACE_CONTAINS_NETWORK_POLICY'
   | 'DEPLOYMENT_MANAGES_REPLICASET'
   | 'REPLICASET_MANAGES_POD'
   | 'STATEFULSET_MANAGES_POD'
@@ -212,6 +220,12 @@ export const Relationships: Record<
     _class: RelationshipClass.CONTAINS,
     sourceType: Entities.NAMESPACE._type,
     targetType: Entities.SECRET._type,
+  },
+  NAMESPACE_CONTAINS_NETWORK_POLICY: {
+    _type: 'kube_namespace_contains_network_policy',
+    _class: RelationshipClass.CONTAINS,
+    sourceType: Entities.NAMESPACE._type,
+    targetType: Entities.NETWORK_POLICY._type,
   },
   DEPLOYMENT_MANAGES_REPLICASET: {
     _type: 'kube_deployment_manages_replica_set',
