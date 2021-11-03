@@ -29,7 +29,7 @@ export class Client {
   }
 
   authenticate() {
-    if (this.config.isRunningTest) {
+    if (this.config.loadKubernetesConfigFromDefault) {
       this.kubeConfig.loadFromDefault();
     } else {
       this.kubeConfig.loadFromCluster();

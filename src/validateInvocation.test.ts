@@ -36,7 +36,7 @@ it('auth error', async () => {
       jupiteroneAccountId: 'INVALID',
       jupiteroneApiKey: 'INVALID',
       integrationInstanceId: 'INVALID',
-      isRunningTest: false,
+      loadKubernetesConfigFromDefault: false,
     },
   });
 

@@ -22,7 +22,11 @@ export const instanceConfigFields: IntegrationInstanceConfigFieldMap = {
   integrationInstanceId: {
     type: 'string',
   },
-  isRunningTest: {
+  /**
+   * Whether or not we should load the default Kubernetes config, which is
+   * assigned via the `KUBECONFIG` environment variable
+   */
+  loadKubernetesConfigFromDefault: {
     type: 'boolean',
   },
 };
@@ -33,5 +37,5 @@ export interface IntegrationConfig extends IntegrationInstanceConfig {
   jupiteroneAccountId: string;
   jupiteroneApiKey: string;
   integrationInstanceId: string;
-  isRunningTest: boolean;
+  loadKubernetesConfigFromDefault: boolean;
 }

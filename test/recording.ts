@@ -6,8 +6,17 @@ import {
   ToMatchGraphObjectSchemaParams,
   ToMatchRelationshipSchemaParams,
 } from '@jupiterone/integration-sdk-testing';
+import * as nodeUrl from 'url';
 
 export { Recording } from '@jupiterone/integration-sdk-testing';
+
+const DEFAULT_RECORDING_HOST = '192.168.49.2:8443';
+const DEFAULT_RECORDING_BASE_URL = `https://${DEFAULT_RECORDING_HOST}`;
+
+interface PollyRequestHeader {
+  name: string;
+  value: string;
+}
 
 function redact(entry: any) {
   const responseText = entry.response.content.text;
@@ -16,8 +25,40 @@ function redact(entry: any) {
   }
 
   const parsedResponseText = JSON.parse(responseText.replace(/\r?\n|\r/g, ''));
-
   entry.response.content.text = JSON.stringify(parsedResponseText);
+}
+
+function getNormalizedRecordingUrl(url: string) {
+  const parsedUrl = nodeUrl.parse(url);
+  return `${DEFAULT_RECORDING_BASE_URL}${parsedUrl.path}`;
+}
+
+function normalizeRequestEntryHeaders(oldRequestHeaders: PollyRequestHeader[]) {
+  const newRequestHeaders: PollyRequestHeader[] = [];
+
+  for (const oldRequestHeader of oldRequestHeaders) {
+    if (oldRequestHeader.name === 'host') {
+      newRequestHeaders.push({
+        ...oldRequestHeader,
+        value: DEFAULT_RECORDING_HOST,
+      });
+    } else {
+      newRequestHeaders.push(oldRequestHeader);
+    }
+  }
+
+  return newRequestHeaders;
+}
+
+function normalizeRequestEntry(entry: any) {
+  entry.request.url = getNormalizedRecordingUrl(entry.request.url);
+  entry.request.headers = normalizeRequestEntryHeaders(
+    entry.request.headers || [],
+  );
+}
+
+function isRecordingEnabled() {
+  return Boolean(process.env.LOAD_ENV) === true;
 }
 
 export async function withRecording(
@@ -26,14 +67,29 @@ export async function withRecording(
   cb: () => Promise<void>,
   options?: SetupRecordingInput['options'],
 ) {
+  const recordingEnabled = isRecordingEnabled();
+
   const recording = setupRecording({
     directory: directoryName,
     name: recordingName,
     mutateEntry(entry) {
       redact(entry);
+      normalizeRequestEntry(entry);
     },
     options: {
+      mode: recordingEnabled ? 'record' : 'replay',
+      recordIfMissing: recordingEnabled,
       recordFailedRequests: false,
+      // https://github.com/Netflix/pollyjs/blob/cbca602a5a446da46a4a2834f893670b8c577880/docs/configuration.md#matchrequestsby
+      matchRequestsBy: {
+        headers: false,
+        body: false,
+        method: true,
+        order: true,
+        url(url, req) {
+          return getNormalizedRecordingUrl(url);
+        },
+      },
       ...(options || {}),
     },
   });
