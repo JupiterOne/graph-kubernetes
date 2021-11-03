@@ -17,6 +17,35 @@ function convertToString(value?: object) {
   return value;
 }
 
+export function createContainerSpecEntity(
+  deploymentUid: string,
+  data: k8s.V1Container,
+) {
+  return createIntegrationEntity({
+    entityData: {
+      source: data,
+      assign: {
+        _class: Entities.CONTAINER_SPEC._class,
+        _type: Entities.CONTAINER_SPEC._type,
+        _key: `${deploymentUid}/${data.name}`,
+        name: data.name,
+        displayName: data.name,
+        image: data.image,
+        imagePullPolicy: data.imagePullPolicy,
+        'securityContext.allowPrivilegeEscalation':
+          data.securityContext?.allowPrivilegeEscalation,
+        'securityContext.privileged': data.securityContext?.privileged,
+        'securityContext.procMount': data.securityContext?.procMount,
+        'securityContext.readOnlyRootFilesystem':
+          data.securityContext?.readOnlyRootFilesystem,
+        'securityContext.runAsGroup': data.securityContext?.runAsGroup,
+        'securityContext.runAsNonRoot': data.securityContext?.runAsNonRoot,
+        'securityContext.runAsUser': data.securityContext?.runAsUser,
+      },
+    },
+  });
+}
+
 export function createDeploymentEntity(data: k8s.V1Deployment) {
   return createIntegrationEntity({
     entityData: {

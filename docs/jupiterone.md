@@ -197,6 +197,7 @@ The following entities are created:
 | ------------------------------ | -------------------------- | --------------- |
 | Kubernetes Cluster             | `kube_cluster`             | `Cluster`       |
 | Kubernetes ConfigMap           | `kube_config_map`          | `Configuration` |
+| Kubernetes Container Spec      | `kube_container_spec`      | `Configuration` |
 | Kubernetes CronJob             | `kube_cron_job`            | `Task`          |
 | Kubernetes DaemonSet           | `kube_daemon_set`          | `Deployment`    |
 | Kubernetes Deployment          | `kube_deployment`          | `Deployment`    |
@@ -220,6 +221,7 @@ The following relationships are created:
 | `kube_cluster`        | **CONTAINS**          | `kube_pod_security_policy` |
 | `kube_cron_job`       | **MANAGES**           | `kube_job`                 |
 | `kube_deployment`     | **MANAGES**           | `kube_replica_set`         |
+| `kube_deployment`     | **USES**              | `kube_container_spec`      |
 | `kube_namespace`      | **CONTAINS**          | `kube_config_map`          |
 | `kube_namespace`      | **CONTAINS**          | `kube_cron_job`            |
 | `kube_namespace`      | **CONTAINS**          | `kube_daemon_set`          |
