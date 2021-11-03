@@ -273,6 +273,73 @@ Object {
     },
     Object {
       "_class": Array [
+        "Group",
+      ],
+      "_key": "0f9d0ac2-87db-41fe-ba0b-285778f29815",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": V1Namespace {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": undefined,
+              "clusterName": undefined,
+              "creationTimestamp": 2021-10-29T16:18:28.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": undefined,
+              "labels": undefined,
+              "managedFields": Array [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:status": Object {
+                      "f:phase": Object {},
+                    },
+                  },
+                  "manager": "kubectl-create",
+                  "operation": "Update",
+                  "time": 2021-10-29T16:18:28.000Z,
+                },
+              ],
+              "name": "my-namespace",
+              "namespace": undefined,
+              "ownerReferences": undefined,
+              "resourceVersion": "1141617",
+              "selfLink": undefined,
+              "uid": "0f9d0ac2-87db-41fe-ba0b-285778f29815",
+            },
+            "spec": V1NamespaceSpec {
+              "finalizers": Array [
+                "kubernetes",
+              ],
+            },
+            "status": V1NamespaceStatus {
+              "conditions": undefined,
+              "phase": "Active",
+            },
+          },
+        },
+      ],
+      "_type": "kube_namespace",
+      "active": undefined,
+      "createdOn": 1635524308000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "my-namespace",
+      "finalizers": Array [
+        "kubernetes",
+      ],
+      "generation": undefined,
+      "name": "my-namespace",
+      "resourceVersion": "1141617",
+      "status.phase": "Active",
+    },
+    Object {
+      "_class": Array [
         "Task",
       ],
       "_key": "223aa203-ed63-4c0e-a113-99abfe9d48e6",
@@ -540,7 +607,7 @@ Object {
     "kube_cron_job",
     "kube_namespace_contains_cron_job",
   ],
-  "numCollectedEntities": 5,
+  "numCollectedEntities": 6,
   "numCollectedRelationships": 1,
 }
 `;

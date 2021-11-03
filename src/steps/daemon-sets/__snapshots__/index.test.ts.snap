@@ -273,6 +273,73 @@ Object {
     },
     Object {
       "_class": Array [
+        "Group",
+      ],
+      "_key": "0f9d0ac2-87db-41fe-ba0b-285778f29815",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": V1Namespace {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": undefined,
+              "clusterName": undefined,
+              "creationTimestamp": 2021-10-29T16:18:28.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": undefined,
+              "labels": undefined,
+              "managedFields": Array [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:status": Object {
+                      "f:phase": Object {},
+                    },
+                  },
+                  "manager": "kubectl-create",
+                  "operation": "Update",
+                  "time": 2021-10-29T16:18:28.000Z,
+                },
+              ],
+              "name": "my-namespace",
+              "namespace": undefined,
+              "ownerReferences": undefined,
+              "resourceVersion": "1141617",
+              "selfLink": undefined,
+              "uid": "0f9d0ac2-87db-41fe-ba0b-285778f29815",
+            },
+            "spec": V1NamespaceSpec {
+              "finalizers": Array [
+                "kubernetes",
+              ],
+            },
+            "status": V1NamespaceStatus {
+              "conditions": undefined,
+              "phase": "Active",
+            },
+          },
+        },
+      ],
+      "_type": "kube_namespace",
+      "active": undefined,
+      "createdOn": 1635524308000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "my-namespace",
+      "finalizers": Array [
+        "kubernetes",
+      ],
+      "generation": undefined,
+      "name": "my-namespace",
+      "resourceVersion": "1141617",
+      "status.phase": "Active",
+    },
+    Object {
+      "_class": Array [
         "Deployment",
       ],
       "_key": "0080cfc1-dcd4-44b5-bdea-37f92a9b96fd",
@@ -418,13 +485,13 @@ Object {
                   },
                   "manager": "kube-controller-manager",
                   "operation": "Update",
-                  "time": 2021-06-23T12:11:51.000Z,
+                  "time": 2021-11-01T17:02:08.000Z,
                 },
               ],
               "name": "fluentd-elasticsearch",
               "namespace": "default",
               "ownerReferences": undefined,
-              "resourceVersion": "552050",
+              "resourceVersion": "1210392",
               "selfLink": undefined,
               "uid": "0080cfc1-dcd4-44b5-bdea-37f92a9b96fd",
             },
@@ -667,7 +734,7 @@ Object {
       "generation": 1,
       "minReadySeconds": undefined,
       "name": "fluentd-elasticsearch",
-      "resourceVersion": "552050",
+      "resourceVersion": "1210392",
       "revisionHistoryLimit": 10,
       "status.collisionCount": undefined,
       "status.currentNumberScheduled": 1,
@@ -1628,7 +1695,7 @@ Object {
     "kube_daemon_set",
     "kube_namespace_contains_daemon_set",
   ],
-  "numCollectedEntities": 7,
+  "numCollectedEntities": 8,
   "numCollectedRelationships": 3,
 }
 `;
