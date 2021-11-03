@@ -140,7 +140,7 @@ spec:
                   value: 'namespace'
                 - name: NAMESPACE
                   value: 'default'
-                - name: IS_RUNNING_TEST
+                - name: LOAD_KUBERNETES_CONFIG_FROM_DEFAULT
                   value: 'false'
                 - name: JUPITERONE_ACCOUNT_ID
                   valueFrom:

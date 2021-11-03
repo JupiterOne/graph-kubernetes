@@ -2,14 +2,22 @@ import * as dotenv from 'dotenv';
 import * as path from 'path';
 import { IntegrationConfig } from '../src/config';
 
-if (process.env.LOAD_ENV) {
+if (Boolean(process.env.LOAD_ENV) === true) {
   dotenv.config({
     path: path.join(__dirname, '../.env'),
   });
 }
 
+function shouldLoadKubernetesConfigFromDefault() {
+  const loadKubernetesConfigFromDefault =
+    process.env.LOAD_KUBERNETES_CONFIG_FROM_DEFAULT;
+  return loadKubernetesConfigFromDefault
+    ? Boolean(loadKubernetesConfigFromDefault) === true
+    : true;
+}
+
 export const integrationConfig: IntegrationConfig = {
-  isRunningTest: ((process.env.IS_RUNNING_TEST as unknown) as boolean) || true,
+  loadKubernetesConfigFromDefault: shouldLoadKubernetesConfigFromDefault(),
   accessType: process.env.ACCESS_TYPE || 'test-access-type',
   namespace: process.env.NAMESPACE || 'test-access-type',
   jupiteroneAccountId:

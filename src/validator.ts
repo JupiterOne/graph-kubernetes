@@ -14,9 +14,9 @@ export async function validateInvocation(
     !config.namespace ||
     !config.jupiteroneAccountId ||
     !config.jupiteroneApiKey ||
-    !config.integrationInstanceId ||
-    // isRunningTest is a boolean
-    config.isRunningTest == null
+    !config.integrationInstanceId
+    // This has a default value.
+    // typeof config.loadKubernetesConfigFromDefault !== 'boolean'
   ) {
     throw new IntegrationValidationError(
       'Config requires all of {accessType, namespace, jupiteroneAccountId, jupiteroneApiKey, integrationInstanceId}',

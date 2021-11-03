@@ -12,7 +12,7 @@
     "access": "public"
   },
   "scripts": {
-    "start": "IS_RUNNING_TEST=true j1-integration collect",
+    "start": "LOAD_KUBERNETES_CONFIG_FROM_DEFAULT=true j1-integration collect",
     "collect": "./scripts/collect.sh",
     "graph": "j1-integration visualize",
     "graph:types": "j1-integration visualize-types",
@@ -20,17 +20,18 @@
     "format": "prettier --write '**/*.{ts,js,json,css,md,yml}'",
     "type-check": "tsc",
     "test": "KUBECONFIG=$(pwd)/test/.kube/config jest",
+    "test:env": "LOAD_ENV=1 jest",
     "test:ci": "yarn lint && yarn type-check && yarn test",
     "build": "tsc -p tsconfig.dist.json --declaration",
     "prepush": "yarn lint && yarn type-check && yarn test --changedSince main",
     "prepack": "yarn build"
   },
   "devDependencies": {
-    "@jupiterone/integration-sdk-testing": "^6.7.1"
+    "@jupiterone/integration-sdk-testing": "^7.4.0"
   },
   "dependencies": {
-    "@jupiterone/integration-sdk-core": "^6.7.1",
-    "@jupiterone/integration-sdk-dev-tools": "^6.7.1",
+    "@jupiterone/integration-sdk-core": "^7.4.0",
+    "@jupiterone/integration-sdk-dev-tools": "^7.4.0",
     "@kubernetes/client-node": "^0.14.3"
   }
 }
