@@ -202,6 +202,7 @@ The following entities are created:
 | Kubernetes Deployment          | `kube_deployment`          | `Deployment`    |
 | Kubernetes Job                 | `kube_job`                 | `Task`          |
 | Kubernetes Namespace           | `kube_namespace`           | `Group`         |
+| Kubernetes Network Policy      | `kube_network_policy`      | `Configuration` |
 | Kubernetes Node                | `kube_node`                | `Host`          |
 | Kubernetes Pod Security Policy | `kube_pod_security_policy` | `Configuration` |
 | Kubernetes ReplicaSet          | `kube_replica_set`         | `Deployment`    |
@@ -224,6 +225,7 @@ The following relationships are created:
 | `kube_namespace`      | **CONTAINS**          | `kube_daemon_set`          |
 | `kube_namespace`      | **CONTAINS**          | `kube_deployment`          |
 | `kube_namespace`      | **CONTAINS**          | `kube_job`                 |
+| `kube_namespace`      | **CONTAINS**          | `kube_network_policy`      |
 | `kube_namespace`      | **CONTAINS**          | `kube_replica_set`         |
 | `kube_namespace`      | **CONTAINS**          | `kube_secret`              |
 | `kube_namespace`      | **CONTAINS**          | `kube_service`             |

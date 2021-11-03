@@ -214,7 +214,7 @@ Object {
               "name": "minikube",
               "namespace": undefined,
               "ownerReferences": undefined,
-              "resourceVersion": "630612",
+              "resourceVersion": "1336335",
               "selfLink": undefined,
               "uid": "d9e7805e-35e6-4934-bb9a-c0f9853a9ec9",
             },
@@ -245,7 +245,7 @@ Object {
                 "ephemeral-storage": "88103912Ki",
                 "hugepages-1Gi": "0",
                 "hugepages-2Mi": "0",
-                "memory": "16289500Ki",
+                "memory": "16355036Ki",
                 "pods": "110",
               },
               "capacity": Object {
@@ -253,12 +253,12 @@ Object {
                 "ephemeral-storage": "88103912Ki",
                 "hugepages-1Gi": "0",
                 "hugepages-2Mi": "0",
-                "memory": "16289500Ki",
+                "memory": "16355036Ki",
                 "pods": "110",
               },
               "conditions": Array [
                 V1NodeCondition {
-                  "lastHeartbeatTime": 2021-06-25T16:04:34.000Z,
+                  "lastHeartbeatTime": 2021-11-03T18:19:47.000Z,
                   "lastTransitionTime": 2021-05-14T16:22:29.000Z,
                   "message": "kubelet has sufficient memory available",
                   "reason": "KubeletHasSufficientMemory",
@@ -266,7 +266,7 @@ Object {
                   "type": "MemoryPressure",
                 },
                 V1NodeCondition {
-                  "lastHeartbeatTime": 2021-06-25T16:04:34.000Z,
+                  "lastHeartbeatTime": 2021-11-03T18:19:47.000Z,
                   "lastTransitionTime": 2021-05-14T16:22:29.000Z,
                   "message": "kubelet has no disk pressure",
                   "reason": "KubeletHasNoDiskPressure",
@@ -274,7 +274,7 @@ Object {
                   "type": "DiskPressure",
                 },
                 V1NodeCondition {
-                  "lastHeartbeatTime": 2021-06-25T16:04:34.000Z,
+                  "lastHeartbeatTime": 2021-11-03T18:19:47.000Z,
                   "lastTransitionTime": 2021-05-14T16:22:29.000Z,
                   "message": "kubelet has sufficient PID available",
                   "reason": "KubeletHasSufficientPID",
@@ -282,7 +282,7 @@ Object {
                   "type": "PIDPressure",
                 },
                 V1NodeCondition {
-                  "lastHeartbeatTime": 2021-06-25T16:04:34.000Z,
+                  "lastHeartbeatTime": 2021-11-03T18:19:47.000Z,
                   "lastTransitionTime": 2021-05-14T16:22:29.000Z,
                   "message": "kubelet is posting ready status",
                   "reason": "KubeletReady",
@@ -299,16 +299,11 @@ Object {
               "images": Array [
                 V1ContainerImage {
                   "names": Array [
-                    "my-new-image:latest",
+                    "extremex/k8s@sha256:8fb7e1bbfb3a1bf4554cdb21747c5c96f1a7a883a6533b380f9718e237d0548c",
+                    "extremex/k8s:latest",
+                    "jupiterone-graph-kubernetes:latest",
                   ],
-                  "sizeBytes": 954584458,
-                },
-                V1ContainerImage {
-                  "names": Array [
-                    "perl@sha256:0515e9e1c6aecf3a729d4dfb799687c6096c5c1ec117a780952e1555f9c66297",
-                    "perl:latest",
-                  ],
-                  "sizeBytes": 860223906,
+                  "sizeBytes": 1094271704,
                 },
                 V1ContainerImage {
                   "names": Array [
@@ -316,6 +311,13 @@ Object {
                     "gcr.io/google_samples/gb-frontend:v3",
                   ],
                   "sizeBytes": 509707703,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "nigelpoulton/acg-web@sha256:cbe021cb92e66afc18e57606b0f00f1276ceb30c33a37e92a89a17854492b6e2",
+                    "nigelpoulton/acg-web:0.1",
+                  ],
+                  "sizeBytes": 381379333,
                 },
                 V1ContainerImage {
                   "names": Array [
@@ -330,6 +332,13 @@ Object {
                     "kubernetesui/dashboard:v2.1.0",
                   ],
                   "sizeBytes": 225733746,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "node@sha256:9d8fa43caa18ad34167039bc62ff655966faaf41d62ca98a201a0f74b81d8e15",
+                    "node:14-bullseye-slim",
+                  ],
+                  "sizeBytes": 192959953,
                 },
                 V1ContainerImage {
                   "names": Array [
@@ -354,8 +363,8 @@ Object {
                 },
                 V1ContainerImage {
                   "names": Array [
-                    "node@sha256:ed51af876dd7932ce5c1e3b16c2e83a3f58419d824e366de1f7b00f40c848c40",
-                    "node:14-alpine",
+                    "<none>@<none>",
+                    "<none>:<none>",
                   ],
                   "sizeBytes": 116144273,
                 },
@@ -365,13 +374,6 @@ Object {
                     "k8s.gcr.io/kube-controller-manager:v1.20.2",
                   ],
                   "sizeBytes": 115852794,
-                },
-                V1ContainerImage {
-                  "names": Array [
-                    "node@sha256:9923c9efb13cf7535f67e49b03010f0977a800068e4c8e0e2c93433a6bfa1e77",
-                    "node:12-alpine",
-                  ],
-                  "sizeBytes": 88914929,
                 },
                 V1ContainerImage {
                   "names": Array [
@@ -403,13 +405,6 @@ Object {
                 },
                 V1ContainerImage {
                   "names": Array [
-                    "busybox@sha256:930490f97e5b921535c153e0e7110d251134cc4b72bbb8133c6a5065cc68580d",
-                    "busybox:latest",
-                  ],
-                  "sizeBytes": 1235821,
-                },
-                V1ContainerImage {
-                  "names": Array [
                     "k8s.gcr.io/pause@sha256:927d98197ec1141a368550822d18fa1c60bdae27b78b0c004f705f548c07814f",
                     "k8s.gcr.io/pause:3.2",
                   ],
@@ -418,15 +413,15 @@ Object {
               ],
               "nodeInfo": V1NodeSystemInfo {
                 "architecture": "amd64",
-                "bootID": "c6deacb2-5968-4337-926b-31d9acb6450b",
+                "bootID": "ef1cc26c-997e-4005-9bcf-3b754bd6d000",
                 "containerRuntimeVersion": "docker://20.10.5",
-                "kernelVersion": "5.8.0-59-generic",
+                "kernelVersion": "5.8.0-63-generic",
                 "kubeProxyVersion": "v1.20.2",
                 "kubeletVersion": "v1.20.2",
                 "machineID": "73c9fceff7724090ba72b64bf6e8eff8",
                 "operatingSystem": "linux",
                 "osImage": "Ubuntu 20.04.1 LTS",
-                "systemUUID": "c2652d21-16b4-44d4-8639-f7115c3fb95a",
+                "systemUUID": "d93f0d2e-e6f1-4446-8f89-d90489af4aa0",
               },
               "phase": undefined,
               "volumesAttached": undefined,
@@ -447,30 +442,30 @@ Object {
         "10.244.0.0/24",
       ],
       "providerID": undefined,
-      "resourceVersion": "630612",
+      "resourceVersion": "1336335",
       "status.allocatable.cpu": "8",
       "status.allocatable.ephemeral-storage": "88103912Ki",
       "status.allocatable.hugepages-1Gi": "0",
       "status.allocatable.hugepages-2Mi": "0",
-      "status.allocatable.memory": "16289500Ki",
+      "status.allocatable.memory": "16355036Ki",
       "status.allocatable.pods": "110",
       "status.capacity.cpu": "8",
       "status.capacity.ephemeral-storage": "88103912Ki",
       "status.capacity.hugepages-1Gi": "0",
       "status.capacity.hugepages-2Mi": "0",
-      "status.capacity.memory": "16289500Ki",
+      "status.capacity.memory": "16355036Ki",
       "status.capacity.pods": "110",
       "status.kubeletEndpointPort": 10250,
       "status.nodeInfo.architecture": "amd64",
-      "status.nodeInfo.bootID": "c6deacb2-5968-4337-926b-31d9acb6450b",
+      "status.nodeInfo.bootID": "ef1cc26c-997e-4005-9bcf-3b754bd6d000",
       "status.nodeInfo.containerRuntimeVersion": "docker://20.10.5",
-      "status.nodeInfo.kernelVersion": "5.8.0-59-generic",
+      "status.nodeInfo.kernelVersion": "5.8.0-63-generic",
       "status.nodeInfo.kubeProxyVersion": "v1.20.2",
       "status.nodeInfo.kubeletVersion": "v1.20.2",
       "status.nodeInfo.machineID": "73c9fceff7724090ba72b64bf6e8eff8",
       "status.nodeInfo.operatingSystem": "linux",
       "status.nodeInfo.osImage": "Ubuntu 20.04.1 LTS",
-      "status.nodeInfo.systemUUID": "c2652d21-16b4-44d4-8639-f7115c3fb95a",
+      "status.nodeInfo.systemUUID": "d93f0d2e-e6f1-4446-8f89-d90489af4aa0",
       "unschedulable": undefined,
     },
   ],

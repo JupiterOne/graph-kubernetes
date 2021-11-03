@@ -273,6 +273,73 @@ Object {
     },
     Object {
       "_class": Array [
+        "Group",
+      ],
+      "_key": "0f9d0ac2-87db-41fe-ba0b-285778f29815",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": V1Namespace {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": undefined,
+              "clusterName": undefined,
+              "creationTimestamp": 2021-10-29T16:18:28.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": undefined,
+              "labels": undefined,
+              "managedFields": Array [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:status": Object {
+                      "f:phase": Object {},
+                    },
+                  },
+                  "manager": "kubectl-create",
+                  "operation": "Update",
+                  "time": 2021-10-29T16:18:28.000Z,
+                },
+              ],
+              "name": "my-namespace",
+              "namespace": undefined,
+              "ownerReferences": undefined,
+              "resourceVersion": "1141617",
+              "selfLink": undefined,
+              "uid": "0f9d0ac2-87db-41fe-ba0b-285778f29815",
+            },
+            "spec": V1NamespaceSpec {
+              "finalizers": Array [
+                "kubernetes",
+              ],
+            },
+            "status": V1NamespaceStatus {
+              "conditions": undefined,
+              "phase": "Active",
+            },
+          },
+        },
+      ],
+      "_type": "kube_namespace",
+      "active": undefined,
+      "createdOn": 1635524308000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "my-namespace",
+      "finalizers": Array [
+        "kubernetes",
+      ],
+      "generation": undefined,
+      "name": "my-namespace",
+      "resourceVersion": "1141617",
+      "status.phase": "Active",
+    },
+    Object {
+      "_class": Array [
         "Service",
       ],
       "_key": "c296a0d8-9839-4908-bd52-971ddaaebcaf",
@@ -734,6 +801,297 @@ Object {
       "sessionAffinity": "None",
       "type": "ClusterIP",
     },
+    Object {
+      "_class": Array [
+        "Service",
+      ],
+      "_key": "0a50ca22-95a7-4bca-bd72-ec7cc298f81b",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": V1Service {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": Object {
+                "kubectl.kubernetes.io/last-applied-configuration": "{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"app\\":\\"hello-world\\"},\\"name\\":\\"hello-svc\\",\\"namespace\\":\\"my-namespace\\"},\\"spec\\":{\\"ports\\":[{\\"nodePort\\":30001,\\"port\\":8080,\\"protocol\\":\\"TCP\\"}],\\"selector\\":{\\"app\\":\\"hello-world\\"},\\"type\\":\\"NodePort\\"}}
+",
+              },
+              "clusterName": undefined,
+              "creationTimestamp": 2021-10-29T16:18:57.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": undefined,
+              "labels": Object {
+                "app": "hello-world",
+              },
+              "managedFields": Array [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:metadata": Object {
+                      "f:annotations": Object {
+                        ".": Object {},
+                        "f:kubectl.kubernetes.io/last-applied-configuration": Object {},
+                      },
+                      "f:labels": Object {
+                        ".": Object {},
+                        "f:app": Object {},
+                      },
+                    },
+                    "f:spec": Object {
+                      "f:externalTrafficPolicy": Object {},
+                      "f:ports": Object {
+                        ".": Object {},
+                        "k:{\\"port\\":8080,\\"protocol\\":\\"TCP\\"}": Object {
+                          ".": Object {},
+                          "f:nodePort": Object {},
+                          "f:port": Object {},
+                          "f:protocol": Object {},
+                          "f:targetPort": Object {},
+                        },
+                      },
+                      "f:selector": Object {
+                        ".": Object {},
+                        "f:app": Object {},
+                      },
+                      "f:sessionAffinity": Object {},
+                      "f:type": Object {},
+                    },
+                  },
+                  "manager": "kubectl-client-side-apply",
+                  "operation": "Update",
+                  "time": 2021-10-29T16:18:57.000Z,
+                },
+              ],
+              "name": "hello-svc",
+              "namespace": "my-namespace",
+              "ownerReferences": undefined,
+              "resourceVersion": "1141644",
+              "selfLink": undefined,
+              "uid": "0a50ca22-95a7-4bca-bd72-ec7cc298f81b",
+            },
+            "spec": V1ServiceSpec {
+              "allocateLoadBalancerNodePorts": undefined,
+              "clusterIP": "10.110.199.245",
+              "clusterIPs": Array [
+                "10.110.199.245",
+              ],
+              "externalIPs": undefined,
+              "externalName": undefined,
+              "externalTrafficPolicy": "Cluster",
+              "healthCheckNodePort": undefined,
+              "ipFamilies": undefined,
+              "ipFamilyPolicy": undefined,
+              "loadBalancerIP": undefined,
+              "loadBalancerSourceRanges": undefined,
+              "ports": Array [
+                V1ServicePort {
+                  "appProtocol": undefined,
+                  "name": undefined,
+                  "nodePort": 30001,
+                  "port": 8080,
+                  "protocol": "TCP",
+                  "targetPort": 8080,
+                },
+              ],
+              "publishNotReadyAddresses": undefined,
+              "selector": Object {
+                "app": "hello-world",
+              },
+              "sessionAffinity": "None",
+              "sessionAffinityConfig": undefined,
+              "topologyKeys": undefined,
+              "type": "NodePort",
+            },
+            "status": V1ServiceStatus {
+              "conditions": undefined,
+              "loadBalancer": V1LoadBalancerStatus {
+                "ingress": undefined,
+              },
+            },
+          },
+        },
+      ],
+      "_type": "kube_service",
+      "active": undefined,
+      "allocateLoadBalancerNodePorts": undefined,
+      "category": Array [
+        "infrastructure",
+      ],
+      "clusterIP": "10.110.199.245",
+      "clusterIPs": Array [
+        "10.110.199.245",
+      ],
+      "createdOn": 1635524337000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "hello-svc",
+      "externalIPs": undefined,
+      "externalName": undefined,
+      "externalTrafficPolicy": "Cluster",
+      "function": Array [
+        "compute",
+      ],
+      "generation": undefined,
+      "healthCheckNodePort": undefined,
+      "ipFamilies": undefined,
+      "ipFamilyPolicy": undefined,
+      "loadBalancerIP": undefined,
+      "loadBalancerSourceRanges": undefined,
+      "name": "hello-svc",
+      "publishNotReadyAddresses": undefined,
+      "resourceVersion": "1141644",
+      "sessionAffinity": "None",
+      "type": "NodePort",
+    },
+    Object {
+      "_class": Array [
+        "Service",
+      ],
+      "_key": "cc4b893d-79bb-4111-a995-15b5b25da731",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": V1Service {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": Object {
+                "kubectl.kubernetes.io/last-applied-configuration": "{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"Service\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"app\\":\\"hello-world\\"},\\"name\\":\\"lb-svc\\",\\"namespace\\":\\"my-namespace\\"},\\"spec\\":{\\"ports\\":[{\\"port\\":8080}],\\"selector\\":{\\"app\\":\\"hello-world\\"},\\"type\\":\\"LoadBalancer\\"}}
+",
+              },
+              "clusterName": undefined,
+              "creationTimestamp": 2021-10-29T16:19:32.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": undefined,
+              "labels": Object {
+                "app": "hello-world",
+              },
+              "managedFields": Array [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:metadata": Object {
+                      "f:annotations": Object {
+                        ".": Object {},
+                        "f:kubectl.kubernetes.io/last-applied-configuration": Object {},
+                      },
+                      "f:labels": Object {
+                        ".": Object {},
+                        "f:app": Object {},
+                      },
+                    },
+                    "f:spec": Object {
+                      "f:externalTrafficPolicy": Object {},
+                      "f:ports": Object {
+                        ".": Object {},
+                        "k:{\\"port\\":8080,\\"protocol\\":\\"TCP\\"}": Object {
+                          ".": Object {},
+                          "f:port": Object {},
+                          "f:protocol": Object {},
+                          "f:targetPort": Object {},
+                        },
+                      },
+                      "f:selector": Object {
+                        ".": Object {},
+                        "f:app": Object {},
+                      },
+                      "f:sessionAffinity": Object {},
+                      "f:type": Object {},
+                    },
+                  },
+                  "manager": "kubectl-client-side-apply",
+                  "operation": "Update",
+                  "time": 2021-10-29T16:19:32.000Z,
+                },
+              ],
+              "name": "lb-svc",
+              "namespace": "my-namespace",
+              "ownerReferences": undefined,
+              "resourceVersion": "1141726",
+              "selfLink": undefined,
+              "uid": "cc4b893d-79bb-4111-a995-15b5b25da731",
+            },
+            "spec": V1ServiceSpec {
+              "allocateLoadBalancerNodePorts": undefined,
+              "clusterIP": "10.98.16.126",
+              "clusterIPs": Array [
+                "10.98.16.126",
+              ],
+              "externalIPs": undefined,
+              "externalName": undefined,
+              "externalTrafficPolicy": "Cluster",
+              "healthCheckNodePort": undefined,
+              "ipFamilies": undefined,
+              "ipFamilyPolicy": undefined,
+              "loadBalancerIP": undefined,
+              "loadBalancerSourceRanges": undefined,
+              "ports": Array [
+                V1ServicePort {
+                  "appProtocol": undefined,
+                  "name": undefined,
+                  "nodePort": 32101,
+                  "port": 8080,
+                  "protocol": "TCP",
+                  "targetPort": 8080,
+                },
+              ],
+              "publishNotReadyAddresses": undefined,
+              "selector": Object {
+                "app": "hello-world",
+              },
+              "sessionAffinity": "None",
+              "sessionAffinityConfig": undefined,
+              "topologyKeys": undefined,
+              "type": "LoadBalancer",
+            },
+            "status": V1ServiceStatus {
+              "conditions": undefined,
+              "loadBalancer": V1LoadBalancerStatus {
+                "ingress": undefined,
+              },
+            },
+          },
+        },
+      ],
+      "_type": "kube_service",
+      "active": undefined,
+      "allocateLoadBalancerNodePorts": undefined,
+      "category": Array [
+        "infrastructure",
+      ],
+      "clusterIP": "10.98.16.126",
+      "clusterIPs": Array [
+        "10.98.16.126",
+      ],
+      "createdOn": 1635524372000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "lb-svc",
+      "externalIPs": undefined,
+      "externalName": undefined,
+      "externalTrafficPolicy": "Cluster",
+      "function": Array [
+        "compute",
+      ],
+      "generation": undefined,
+      "healthCheckNodePort": undefined,
+      "ipFamilies": undefined,
+      "ipFamilyPolicy": undefined,
+      "loadBalancerIP": undefined,
+      "loadBalancerSourceRanges": undefined,
+      "name": "lb-svc",
+      "publishNotReadyAddresses": undefined,
+      "resourceVersion": "1141726",
+      "sessionAffinity": "None",
+      "type": "LoadBalancer",
+    },
   ],
   "collectedRelationships": Array [
     Object {
@@ -760,13 +1118,29 @@ Object {
       "_type": "kube_namespace_contains_service",
       "displayName": "CONTAINS",
     },
+    Object {
+      "_class": "CONTAINS",
+      "_fromEntityKey": "0f9d0ac2-87db-41fe-ba0b-285778f29815",
+      "_key": "0f9d0ac2-87db-41fe-ba0b-285778f29815|contains|0a50ca22-95a7-4bca-bd72-ec7cc298f81b",
+      "_toEntityKey": "0a50ca22-95a7-4bca-bd72-ec7cc298f81b",
+      "_type": "kube_namespace_contains_service",
+      "displayName": "CONTAINS",
+    },
+    Object {
+      "_class": "CONTAINS",
+      "_fromEntityKey": "0f9d0ac2-87db-41fe-ba0b-285778f29815",
+      "_key": "0f9d0ac2-87db-41fe-ba0b-285778f29815|contains|cc4b893d-79bb-4111-a995-15b5b25da731",
+      "_toEntityKey": "cc4b893d-79bb-4111-a995-15b5b25da731",
+      "_type": "kube_namespace_contains_service",
+      "displayName": "CONTAINS",
+    },
   ],
   "encounteredTypes": Array [
     "kube_namespace",
     "kube_service",
     "kube_namespace_contains_service",
   ],
-  "numCollectedEntities": 7,
-  "numCollectedRelationships": 3,
+  "numCollectedEntities": 10,
+  "numCollectedRelationships": 5,
 }
 `;
