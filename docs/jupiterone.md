@@ -215,6 +215,7 @@ The following relationships are created:
 
 | Source Entity `_type` | Relationship `_class` | Target Entity `_type`      |
 | --------------------- | --------------------- | -------------------------- |
+| `kube_cluster`        | **CONTAINS**          | `kube_namespace`           |
 | `kube_cluster`        | **CONTAINS**          | `kube_pod_security_policy` |
 | `kube_cron_job`       | **MANAGES**           | `kube_job`                 |
 | `kube_deployment`     | **MANAGES**           | `kube_replica_set`         |
