@@ -1,5 +1,6 @@
 import {
   buildClusterAksRelationships,
+  buildClusterGkeRelationships,
   buildClusterResourcesRelationships,
   fetchClusterDetails,
 } from '.';
@@ -73,7 +74,7 @@ describe('#buildClusterResourcesRelationships', () => {
 describe('#buildClusterAksRelationships', () => {
   test('should collect data', async () => {
     await createDataCollectionTest({
-      recordingName: 'buildClusterCloudProviderRelationships',
+      recordingName: 'buildClusterAksRelationships',
       recordingDirectory: __dirname,
       integrationConfig,
       stepFunctions: [
@@ -89,12 +90,40 @@ describe('#buildClusterAksRelationships', () => {
             schema: {
               properties: {
                 _class: { const: RelationshipClass.IS },
-                _type: { const: 'kube_cluster_is_cluster' },
+                _type: { const: 'kube_cluster_is_azure_kubernetes_cluster' },
               },
             },
           },
         },
       ],
+    });
+  });
+});
+
+describe('#buildClusterGkeRelationships', () => {
+  test('should collect data', async () => {
+    await createDataCollectionTest({
+      recordingName: 'buildClusterGkeRelationships',
+      recordingDirectory: __dirname,
+      integrationConfig,
+      stepFunctions: [fetchConfigMaps, buildClusterGkeRelationships],
+      entitySchemaMatchers: [],
+      relationshipSchemaMatchers: [
+        {
+          _type: Relationships.CLUSTER_IS_GKE_CLUSTER._type,
+          matcher: {
+            schema: {
+              properties: {
+                _class: { const: RelationshipClass.IS },
+                _type: { const: 'kube_cluster_is_google_container_cluster' },
+              },
+            },
+          },
+        },
+      ],
+      options: {
+        recordFailedRequests: true,
+      },
     });
   });
 });

@@ -32,6 +32,7 @@ export const Entities: Record<
   | 'POD_SECURITY_POLICY'
   | 'CLUSTER'
   | 'AZURE_KUBERNETES_CLUSTER'
+  | 'GOOGLE_KUBERNETES_CLUSTER'
   | 'NAMESPACE'
   | 'NODE'
   | 'SERVICE'
@@ -67,6 +68,11 @@ export const Entities: Record<
     _type: 'azure_kubernetes_cluster',
     _class: ['Cluster'],
     resourceName: 'Azure Kubernetes Cluster',
+  },
+  GOOGLE_KUBERNETES_CLUSTER: {
+    _type: 'google_container_cluster',
+    _class: ['Cluster'],
+    resourceName: 'Google Kubernetes Cluster',
   },
   NAMESPACE: {
     _type: 'kube_namespace',
@@ -185,10 +191,10 @@ export const Relationships: Record<
     targetType: Entities.AZURE_KUBERNETES_CLUSTER._type,
   },
   CLUSTER_IS_GKE_CLUSTER: {
-    _type: 'kube_cluster_is_cluster',
+    _type: 'kube_cluster_is_google_container_cluster',
     _class: RelationshipClass.IS,
     sourceType: Entities.CLUSTER._type,
-    targetType: Entities.CLUSTER._type,
+    targetType: Entities.GOOGLE_KUBERNETES_CLUSTER._type,
   },
   NAMESPACE_CONTAINS_POD: {
     _type: 'kube_namespace_contains_pod',

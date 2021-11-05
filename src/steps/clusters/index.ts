@@ -183,7 +183,7 @@ export async function buildClusterGkeRelationships(
         targetFilterKeys: [['_type', '_key']],
         skipTargetCreation: true,
         targetEntity: {
-          _type: Entities.CLUSTER._type,
+          _type: Entities.GOOGLE_KUBERNETES_CLUSTER._type,
           _key: `google_container_cluster:${clusterUid}`,
         },
       },

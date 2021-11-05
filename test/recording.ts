@@ -6,6 +6,7 @@ import {
   ToMatchGraphObjectSchemaParams,
   ToMatchRelationshipSchemaParams,
 } from '@jupiterone/integration-sdk-testing';
+import { PollyConfig } from '@pollyjs/core';
 import * as nodeUrl from 'url';
 
 export { Recording } from '@jupiterone/integration-sdk-testing';
@@ -120,6 +121,7 @@ export interface CreateDataCollectionTestParams<IIntegrationConfig> {
   ) => Promise<void>)[];
   entitySchemaMatchers?: EntitySchemaMatcher[];
   relationshipSchemaMatchers?: RelationshipSchemaMatcher[];
+  options?: PollyConfig;
 }
 
 export async function createDataCollectionTest<IIntegrationConfig>({
@@ -129,44 +131,51 @@ export async function createDataCollectionTest<IIntegrationConfig>({
   stepFunctions,
   entitySchemaMatchers,
   relationshipSchemaMatchers,
+  options,
 }: CreateDataCollectionTestParams<IIntegrationConfig>) {
   const context = createMockStepExecutionContext<IIntegrationConfig>({
     instanceConfig: integrationConfig,
   });
 
-  await withRecording(recordingName, recordingDirectory, async () => {
-    for (const stepFunction of stepFunctions) {
-      await stepFunction(context);
-    }
-
-    expect({
-      numCollectedEntities: context.jobState.collectedEntities.length,
-      numCollectedRelationships: context.jobState.collectedRelationships.length,
-      collectedEntities: context.jobState.collectedEntities,
-      collectedRelationships: context.jobState.collectedRelationships,
-      encounteredTypes: context.jobState.encounteredTypes,
-    }).toMatchSnapshot('jobState');
-
-    if (entitySchemaMatchers) {
-      for (const entitySchemaMatcher of entitySchemaMatchers) {
-        expect(
-          context.jobState.collectedEntities.filter(
-            (e) => e._type === entitySchemaMatcher._type,
-          ),
-        ).toMatchGraphObjectSchema(entitySchemaMatcher.matcher);
+  await withRecording(
+    recordingName,
+    recordingDirectory,
+    async () => {
+      for (const stepFunction of stepFunctions) {
+        await stepFunction(context);
       }
-    }
 
-    if (relationshipSchemaMatchers) {
-      for (const relationshipSchemaMatcher of relationshipSchemaMatchers) {
-        expect(
-          context.jobState.collectedRelationships.filter(
-            (r) => r._type === relationshipSchemaMatcher._type,
-          ),
-        ).toMatchDirectRelationshipSchema(relationshipSchemaMatcher.matcher);
+      expect({
+        numCollectedEntities: context.jobState.collectedEntities.length,
+        numCollectedRelationships:
+          context.jobState.collectedRelationships.length,
+        collectedEntities: context.jobState.collectedEntities,
+        collectedRelationships: context.jobState.collectedRelationships,
+        encounteredTypes: context.jobState.encounteredTypes,
+      }).toMatchSnapshot('jobState');
+
+      if (entitySchemaMatchers) {
+        for (const entitySchemaMatcher of entitySchemaMatchers) {
+          expect(
+            context.jobState.collectedEntities.filter(
+              (e) => e._type === entitySchemaMatcher._type,
+            ),
+          ).toMatchGraphObjectSchema(entitySchemaMatcher.matcher);
+        }
       }
-    }
-  });
+
+      if (relationshipSchemaMatchers) {
+        for (const relationshipSchemaMatcher of relationshipSchemaMatchers) {
+          expect(
+            context.jobState.collectedRelationships.filter(
+              (r) => r._type === relationshipSchemaMatcher._type,
+            ),
+          ).toMatchDirectRelationshipSchema(relationshipSchemaMatcher.matcher);
+        }
+      }
+    },
+    { ...options },
+  );
 
   return { context };
 }
