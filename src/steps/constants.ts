@@ -134,10 +134,7 @@ export const Entities: Record<
 };
 
 export const Relationships: Record<
-<<<<<<< HEAD
   | 'CLUSTER_CONTAINS_POD_SECURITY_POLICY'
-=======
->>>>>>> 9d126b6... Add cluster contains resources (namespaces)
   | 'CLUSTER_CONTAINS_NAMESPACE'
   | 'CLUSTER_IS_AKS_CLUSTER'
   | 'NAMESPACE_CONTAINS_POD'
@@ -161,15 +158,12 @@ export const Relationships: Record<
   | 'POD_CONTAINS_CONTAINER',
   StepRelationshipMetadata
 > = {
-<<<<<<< HEAD
   CLUSTER_CONTAINS_POD_SECURITY_POLICY: {
     _type: 'kube_cluster_contains_pod_security_policy',
     _class: RelationshipClass.CONTAINS,
     sourceType: Entities.CLUSTER._type,
     targetType: Entities.POD_SECURITY_POLICY._type,
   },
-=======
->>>>>>> 9d126b6... Add cluster contains resources (namespaces)
   CLUSTER_CONTAINS_NAMESPACE: {
     _type: 'kube_cluster_contains_namespace',
     _class: RelationshipClass.CONTAINS,

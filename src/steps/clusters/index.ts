@@ -149,7 +149,7 @@ export const clustersSteps: IntegrationStep<IntegrationConfig>[] = [
     name: 'Build Cluster Cloud Providers Relationships',
     entities: [],
     relationships: [Relationships.CLUSTER_IS_AKS_CLUSTER],
-    dependsOn: [IntegrationSteps.FETCH_CLUSTER, IntegrationSteps.CONFIGMAPS],
+    dependsOn: [IntegrationSteps.CLUSTERS, IntegrationSteps.CONFIGMAPS],
     executionHandler: buildClusterCloudProviderRelationships,
   },
 ];
