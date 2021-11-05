@@ -1,4 +1,8 @@
-import { buildClusterCloudProviderRelationships, buildClusterResourcesRelationships, fetchClusterDetails } from '.';
+import {
+  buildClusterAksRelationships,
+  buildClusterResourcesRelationships,
+  fetchClusterDetails,
+} from '.';
 import { createDataCollectionTest } from '../../../test/recording';
 import { integrationConfig } from '../../../test/config';
 import { Entities, Relationships } from '../constants';
@@ -75,7 +79,7 @@ describe('#buildClusterCloudProviderRelationships', () => {
       stepFunctions: [
         fetchClusterDetails,
         fetchConfigMaps,
-        buildClusterCloudProviderRelationships,
+        buildClusterAksRelationships,
       ],
       entitySchemaMatchers: [],
       relationshipSchemaMatchers: [
@@ -94,4 +98,3 @@ describe('#buildClusterCloudProviderRelationships', () => {
     });
   });
 });
-

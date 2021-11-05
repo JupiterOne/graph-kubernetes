@@ -88,7 +88,7 @@ function checkForAzureClusterAndReturnKey(data: Entity): null | string {
   return null;
 }
 
-export async function buildClusterCloudProviderRelationships(
+export async function buildClusterAksRelationships(
   context: IntegrationStepContext,
 ): Promise<void> {
   const { jobState } = context;
@@ -116,7 +116,7 @@ export async function buildClusterCloudProviderRelationships(
               targetFilterKeys: [['_type', '_key']],
               skipTargetCreation: true,
               targetEntity: {
-                _type: Entities.CLUSTER._type,
+                _type: Entities.AZURE_KUBERNETES_CLUSTER._type,
                 _key: azureKubernetesClusterKey,
               },
             },
@@ -145,11 +145,11 @@ export const clustersSteps: IntegrationStep<IntegrationConfig>[] = [
     executionHandler: buildClusterResourcesRelationships,
   },
   {
-    id: IntegrationSteps.BUILD_CLUSTER_CLOUD_PROVIDERS_RELATIONSHIPS,
-    name: 'Build Cluster Cloud Providers Relationships',
+    id: IntegrationSteps.BUILD_CLUSTER_AKS_RELATIONSHIPS,
+    name: 'Build Cluster AKS Relationships',
     entities: [],
     relationships: [Relationships.CLUSTER_IS_AKS_CLUSTER],
     dependsOn: [IntegrationSteps.CLUSTERS, IntegrationSteps.CONFIGMAPS],
-    executionHandler: buildClusterCloudProviderRelationships,
+    executionHandler: buildClusterAksRelationships,
   },
 ];
