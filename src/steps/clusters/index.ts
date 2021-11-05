@@ -174,20 +174,22 @@ export async function buildClusterGkeRelationships(
       'Google Cloud Kubernetes cluster UID found',
     );
 
-    createMappedRelationship({
-      _class: RelationshipClass.IS,
-      _type: Relationships.CLUSTER_IS_GKE_CLUSTER._type,
-      _mapping: {
-        relationshipDirection: RelationshipDirection.FORWARD,
-        sourceEntityKey: clusterEntity._key,
-        targetFilterKeys: [['_type', '_key']],
-        skipTargetCreation: true,
-        targetEntity: {
-          _type: Entities.GOOGLE_KUBERNETES_CLUSTER._type,
-          _key: `google_container_cluster:${clusterUid}`,
+    await jobState.addRelationship(
+      createMappedRelationship({
+        _class: RelationshipClass.IS,
+        _type: Relationships.CLUSTER_IS_GKE_CLUSTER._type,
+        _mapping: {
+          relationshipDirection: RelationshipDirection.FORWARD,
+          sourceEntityKey: clusterEntity._key,
+          targetFilterKeys: [['_type', '_key']],
+          skipTargetCreation: true,
+          targetEntity: {
+            _type: Entities.GOOGLE_KUBERNETES_CLUSTER._type,
+            _key: `google_container_cluster:${clusterUid}`,
+          },
         },
-      },
-    });
+      }),
+    );
   }
 }
 
