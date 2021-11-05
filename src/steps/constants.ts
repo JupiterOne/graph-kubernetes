@@ -11,6 +11,7 @@ export enum IntegrationSteps {
   POD_SECURITY_POLICIES = 'fetch-pod-security-policies',
   CLUSTERS = 'fetch-clusters',
   BUILD_CLUSTER_RESOURCES_RELATIONSHIPS = 'build-cluster-resources-relationships',
+  BUILD_CLUSTER_AKS_RELATIONSHIPS = 'build-cluster-aks-relationships',
   NAMESPACES = 'fetch-namespaces',
   NODES = 'fetch-nodes',
   SERVICES = 'fetch-services',
@@ -29,6 +30,7 @@ export const Entities: Record<
   | 'NETWORK_POLICY'
   | 'POD_SECURITY_POLICY'
   | 'CLUSTER'
+  | 'AZURE_KUBERNETES_CLUSTER'
   | 'NAMESPACE'
   | 'NODE'
   | 'SERVICE'
@@ -59,6 +61,11 @@ export const Entities: Record<
     _type: 'kube_cluster',
     _class: ['Cluster'],
     resourceName: 'Kubernetes Cluster',
+  },
+  AZURE_KUBERNETES_CLUSTER: {
+    _type: 'azure_kubernetes_cluster',
+    _class: ['Cluster'],
+    resourceName: 'Azure Kubernetes Cluster',
   },
   NAMESPACE: {
     _type: 'kube_namespace',
@@ -135,6 +142,7 @@ export const Entities: Record<
 export const Relationships: Record<
   | 'CLUSTER_CONTAINS_POD_SECURITY_POLICY'
   | 'CLUSTER_CONTAINS_NAMESPACE'
+  | 'CLUSTER_IS_AKS_CLUSTER'
   | 'NAMESPACE_CONTAINS_POD'
   | 'NAMESPACE_CONTAINS_SERVICE'
   | 'NAMESPACE_CONTAINS_DEPLOYMENT'
@@ -167,6 +175,12 @@ export const Relationships: Record<
     _class: RelationshipClass.CONTAINS,
     sourceType: Entities.CLUSTER._type,
     targetType: Entities.NAMESPACE._type,
+  },
+  CLUSTER_IS_AKS_CLUSTER: {
+    _type: 'kube_cluster_is_azure_kubernetes_cluster',
+    _class: RelationshipClass.IS,
+    sourceType: Entities.CLUSTER._type,
+    targetType: Entities.AZURE_KUBERNETES_CLUSTER._type,
   },
   NAMESPACE_CONTAINS_POD: {
     _type: 'kube_namespace_contains_pod',
