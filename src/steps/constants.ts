@@ -12,6 +12,7 @@ export enum IntegrationSteps {
   CLUSTERS = 'fetch-clusters',
   BUILD_CLUSTER_RESOURCES_RELATIONSHIPS = 'build-cluster-resources-relationships',
   BUILD_CLUSTER_AKS_RELATIONSHIPS = 'build-cluster-aks-relationships',
+  BUILD_CLUSTER_GKE_RELATIONSHIPS = 'build-cluster-gke-relationships',
   NAMESPACES = 'fetch-namespaces',
   NODES = 'fetch-nodes',
   SERVICES = 'fetch-services',
@@ -31,6 +32,7 @@ export const Entities: Record<
   | 'POD_SECURITY_POLICY'
   | 'CLUSTER'
   | 'AZURE_KUBERNETES_CLUSTER'
+  | 'GOOGLE_KUBERNETES_CLUSTER'
   | 'NAMESPACE'
   | 'NODE'
   | 'SERVICE'
@@ -66,6 +68,11 @@ export const Entities: Record<
     _type: 'azure_kubernetes_cluster',
     _class: ['Cluster'],
     resourceName: 'Azure Kubernetes Cluster',
+  },
+  GOOGLE_KUBERNETES_CLUSTER: {
+    _type: 'google_container_cluster',
+    _class: ['Cluster'],
+    resourceName: 'Google Kubernetes Cluster',
   },
   NAMESPACE: {
     _type: 'kube_namespace',
@@ -143,6 +150,7 @@ export const Relationships: Record<
   | 'CLUSTER_CONTAINS_POD_SECURITY_POLICY'
   | 'CLUSTER_CONTAINS_NAMESPACE'
   | 'CLUSTER_IS_AKS_CLUSTER'
+  | 'CLUSTER_IS_GKE_CLUSTER'
   | 'NAMESPACE_CONTAINS_POD'
   | 'NAMESPACE_CONTAINS_SERVICE'
   | 'NAMESPACE_CONTAINS_DEPLOYMENT'
@@ -181,6 +189,12 @@ export const Relationships: Record<
     _class: RelationshipClass.IS,
     sourceType: Entities.CLUSTER._type,
     targetType: Entities.AZURE_KUBERNETES_CLUSTER._type,
+  },
+  CLUSTER_IS_GKE_CLUSTER: {
+    _type: 'kube_cluster_is_google_container_cluster',
+    _class: RelationshipClass.IS,
+    sourceType: Entities.CLUSTER._type,
+    targetType: Entities.GOOGLE_KUBERNETES_CLUSTER._type,
   },
   NAMESPACE_CONTAINS_POD: {
     _type: 'kube_namespace_contains_pod',

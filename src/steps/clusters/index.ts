@@ -7,6 +7,7 @@ import {
   RelationshipDirection,
 } from '@jupiterone/integration-sdk-core';
 import { V1ConfigMap } from '@kubernetes/client-node';
+import fetch from 'node-fetch';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
 import {
   CLUSTER_ENTITY_DATA_KEY,
@@ -53,7 +54,7 @@ export async function buildClusterResourcesRelationships(
   );
 }
 
-function checkForAzureClusterAndReturnKey(data: Entity): null | string {
+function tryBuildAksInstanceKey(data: Entity): null | string {
   if (!data._rawData || data._rawData?.length < 1) {
     return null;
   }
@@ -73,7 +74,17 @@ function checkForAzureClusterAndReturnKey(data: Entity): null | string {
   ];
 
   for (const [_, value] of Object.entries(configMap.metadata.annotations)) {
-    const annotationData = JSON.parse(value);
+    let annotationData;
+    try {
+      annotationData = JSON.parse(value);
+    } catch (err) {
+      continue;
+    }
+
+    if (!annotationData || !annotationData['data']) {
+      continue;
+    }
+
     const potentialKey: string = annotationData['data']['CLUSTER_RESOURCE_ID'];
     if (!potentialKey) {
       continue;
@@ -102,9 +113,7 @@ export async function buildClusterAksRelationships(
       _type: Entities.CONFIGMAP._type,
     },
     async (configMapEntity) => {
-      const azureKubernetesClusterKey = checkForAzureClusterAndReturnKey(
-        configMapEntity,
-      );
+      const azureKubernetesClusterKey = tryBuildAksInstanceKey(configMapEntity);
       if (azureKubernetesClusterKey) {
         await jobState.addRelationship(
           createMappedRelationship({
@@ -125,6 +134,63 @@ export async function buildClusterAksRelationships(
       }
     },
   );
+}
+
+export async function buildClusterGkeRelationships(
+  context: IntegrationStepContext,
+): Promise<void> {
+  const { logger, jobState } = context;
+
+  const clusterEntity = (await jobState.getData(
+    CLUSTER_ENTITY_DATA_KEY,
+  )) as Entity;
+
+  let clusterUid;
+  try {
+    const response = await fetch(
+      'http://metadata.google.internal/computeMetadata/v1/instance/attributes/cluster-uid',
+      {
+        headers: {
+          'Metadata-Flavor': 'Google',
+        },
+      },
+    );
+
+    clusterUid = await response.text();
+  } catch (err) {
+    logger.info(
+      {
+        err,
+      },
+      'No Google Cloud Kubernetes cluster UID found',
+    );
+  }
+
+  if (clusterUid) {
+    logger.info(
+      {
+        clusterUid,
+      },
+      'Google Cloud Kubernetes cluster UID found',
+    );
+
+    await jobState.addRelationship(
+      createMappedRelationship({
+        _class: RelationshipClass.IS,
+        _type: Relationships.CLUSTER_IS_GKE_CLUSTER._type,
+        _mapping: {
+          relationshipDirection: RelationshipDirection.FORWARD,
+          sourceEntityKey: clusterEntity._key,
+          targetFilterKeys: [['_type', '_key']],
+          skipTargetCreation: true,
+          targetEntity: {
+            _type: Entities.GOOGLE_KUBERNETES_CLUSTER._type,
+            _key: `google_container_cluster:${clusterUid}`,
+          },
+        },
+      }),
+    );
+  }
 }
 
 export const clustersSteps: IntegrationStep<IntegrationConfig>[] = [
@@ -151,5 +217,13 @@ export const clustersSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [Relationships.CLUSTER_IS_AKS_CLUSTER],
     dependsOn: [IntegrationSteps.CLUSTERS, IntegrationSteps.CONFIGMAPS],
     executionHandler: buildClusterAksRelationships,
+  },
+  {
+    id: IntegrationSteps.BUILD_CLUSTER_GKE_RELATIONSHIPS,
+    name: 'Build Cluster GKE Relationships',
+    entities: [],
+    relationships: [Relationships.CLUSTER_IS_GKE_CLUSTER],
+    dependsOn: [IntegrationSteps.CLUSTERS],
+    executionHandler: buildClusterGkeRelationships,
   },
 ];
