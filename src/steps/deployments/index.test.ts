@@ -78,6 +78,29 @@ describe('#fetchDeployments', () => {
             },
           },
         },
+        {
+          _type: Entities.VOLUME._type,
+          matcher: {
+            _class: ['Disk'],
+            schema: {
+              additionalProperties: false,
+              properties: {
+                _type: { const: 'kube_volume' },
+                _rawData: {
+                  type: 'array',
+                  items: { type: 'object' },
+                },
+                name: { type: 'string' },
+                displayName: { type: 'string' },
+                'ephemeral.readOnly': { type: 'boolean' },
+                'hostPath.path': { type: 'string' },
+                'hostPath.type': { type: 'string' },
+                classification: { const: null },
+                encrypted: { type: 'boolean' },
+              },
+            },
+          },
+        },
       ],
       relationshipSchemaMatchers: [
         {
@@ -98,6 +121,21 @@ describe('#fetchDeployments', () => {
               properties: {
                 _class: { const: RelationshipClass.USES },
                 _type: { const: 'kube_deployment_uses_container_spec' },
+              },
+            },
+          },
+        },
+        {
+          _type: Relationships.CONTAINER_SPEC_USES_VOLUME._type,
+          matcher: {
+            schema: {
+              properties: {
+                _class: { const: RelationshipClass.USES },
+                _type: { const: 'kube_container_spec_uses_volume' },
+                readOnly: { type: 'boolean' },
+                mountPath: { type: 'string' },
+                mountPropagation: { type: 'string' },
+                subPath: { type: 'string' },
               },
             },
           },

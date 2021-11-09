@@ -210,6 +210,7 @@ The following entities are created:
 | Kubernetes Secret              | `kube_secret`              | `Vault`         |
 | Kubernetes Service             | `kube_service`             | `Service`       |
 | Kubernetes StatefulSet         | `kube_stateful_set`        | `Deployment`    |
+| Kubernetes Volume              | `kube_volume`              | `Disk`          |
 
 ### Relationships
 
@@ -221,6 +222,7 @@ The following relationships are created:
 | `kube_cluster`        | **CONTAINS**          | `kube_pod_security_policy` |
 | `kube_cluster`        | **IS**                | `azure_kubernetes_cluster` |
 | `kube_cluster`        | **IS**                | `google_container_cluster` |
+| `kube_container_spec` | **USES**              | `kube_volume`              |
 | `kube_cron_job`       | **MANAGES**           | `kube_job`                 |
 | `kube_deployment`     | **MANAGES**           | `kube_replica_set`         |
 | `kube_deployment`     | **USES**              | `kube_container_spec`      |

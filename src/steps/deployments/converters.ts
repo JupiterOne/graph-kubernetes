@@ -17,6 +17,34 @@ function convertToString(value?: object) {
   return value;
 }
 
+export function getVolumeKey(deploymentId: string, volumeName: string) {
+  return `${deploymentId}/${volumeName}`;
+}
+
+export function createVolumeEntity(deploymentUid: string, data: k8s.V1Volume) {
+  return createIntegrationEntity({
+    entityData: {
+      source: data,
+      assign: {
+        _class: Entities.VOLUME._class,
+        _type: Entities.VOLUME._type,
+        _key: getVolumeKey(deploymentUid, data.name),
+        name: data.name,
+        displayName: data.name,
+        'ephemeral.readOnly': data.ephemeral?.readOnly,
+        'hostPath.path': data.hostPath?.path,
+        'hostPath.type': data.hostPath?.type,
+        classification: null,
+        encrypted: false,
+      },
+    },
+  });
+}
+
+export function getContainerSpecKey(deploymentId: string, specName: string) {
+  return `${deploymentId}/${specName}`;
+}
+
 export function createContainerSpecEntity(
   deploymentUid: string,
   data: k8s.V1Container,
@@ -27,7 +55,7 @@ export function createContainerSpecEntity(
       assign: {
         _class: Entities.CONTAINER_SPEC._class,
         _type: Entities.CONTAINER_SPEC._type,
-        _key: `${deploymentUid}/${data.name}`,
+        _key: getContainerSpecKey(deploymentUid, data.name),
         name: data.name,
         displayName: data.name,
         image: data.image,

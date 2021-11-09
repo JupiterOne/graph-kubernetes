@@ -17,6 +17,7 @@ export enum IntegrationSteps {
   NODES = 'fetch-nodes',
   SERVICES = 'fetch-services',
   DEPLOYMENTS = 'fetch-deployments',
+  BUILD_CONTAINER_SPEC_VOLUME_RELATIONSHIPS = 'build-container-spec-volume-relationships',
   REPLICASETS = 'fetch-replica-sets',
   STATEFULSETS = 'fetch-stateful-sets',
   DAEMONSETS = 'fetch-daemon-sets',
@@ -38,6 +39,7 @@ export const Entities: Record<
   | 'SERVICE'
   | 'DEPLOYMENT'
   | 'CONTAINER_SPEC'
+  | 'VOLUME'
   | 'REPLICASET'
   | 'STATEFULSET'
   | 'DAEMONSET'
@@ -88,6 +90,11 @@ export const Entities: Record<
     _type: 'kube_container_spec',
     _class: ['Configuration'],
     resourceName: 'Kubernetes Container Spec',
+  },
+  VOLUME: {
+    _type: 'kube_volume',
+    _class: ['Disk'],
+    resourceName: 'Kubernetes Volume',
   },
   REPLICASET: {
     _type: 'kube_replica_set',
@@ -164,6 +171,7 @@ export const Relationships: Record<
   | 'NAMESPACE_CONTAINS_NETWORK_POLICY'
   | 'DEPLOYMENT_MANAGES_REPLICASET'
   | 'DEPLOYMENT_USES_CONTAINER_SPEC'
+  | 'CONTAINER_SPEC_USES_VOLUME'
   | 'REPLICASET_MANAGES_POD'
   | 'STATEFULSET_MANAGES_POD'
   | 'CRONJOB_MANAGES_JOB'
@@ -273,6 +281,12 @@ export const Relationships: Record<
     _class: RelationshipClass.USES,
     sourceType: Entities.DEPLOYMENT._type,
     targetType: Entities.CONTAINER_SPEC._type,
+  },
+  CONTAINER_SPEC_USES_VOLUME: {
+    _type: 'kube_container_spec_uses_volume',
+    _class: RelationshipClass.USES,
+    sourceType: Entities.CONTAINER_SPEC._type,
+    targetType: Entities.VOLUME._type,
   },
   REPLICASET_MANAGES_POD: {
     _type: 'kube_replica_set_manages_pod',
