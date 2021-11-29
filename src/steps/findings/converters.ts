@@ -8,7 +8,7 @@ function getFindingKey(version: string, testNumber: string) {
 
 function getSeverity(finding: Finding) {
   // TODO, somehow..
-  return "informational";
+  return 'informational';
 }
 
 function getNumericSeverity(finding: Finding) {
@@ -26,10 +26,11 @@ export function createFindingEntity(finding: Finding) {
         _key: getFindingKey(finding.version, finding.testNumber),
         name: `${finding.version}/${finding.testNumber}`,
         displayName: `${finding.version}/${finding.testNumber}`,
-        version: finding.version,
-        testNumber: finding.testNumber,
+        complianceStandardName: 'CIS Kubernetes',
+        complianceStandardVersion: finding.version.split('-')[1],
+        complianceStandardRequirement: finding.testNumber,
         status: finding.status,
-        category: "benchmark",
+        category: 'benchmark',
         severity: getSeverity(finding),
         numericSeverity: getNumericSeverity(finding),
         open: false,

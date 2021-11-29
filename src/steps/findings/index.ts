@@ -1,8 +1,9 @@
 import {
-  createDirectRelationship,
+  createMappedRelationship,
   Entity,
   IntegrationStep,
-  RelationshipClass
+  RelationshipClass,
+  RelationshipDirection,
 } from '@jupiterone/integration-sdk-core';
 import { readFile } from 'fs/promises';
 import * as path from 'path';
@@ -26,7 +27,7 @@ interface KubeBenchResults {
         status: string;
         scored: boolean;
       }[];
-    }[]
+    }[];
   }[];
 }
 
@@ -46,7 +47,7 @@ function getFindingData(results: KubeBenchResults): Finding[] {
           version: control.version,
           testNumber: result.test_number,
           status: result.status,
-        })
+        });
       }
     }
   }
@@ -57,27 +58,32 @@ function getFindingData(results: KubeBenchResults): Finding[] {
 export async function fetchFindings(
   context: IntegrationStepContext,
 ): Promise<void> {
-  const { jobState } = context;
+  const { logger, jobState } = context;
 
-  console.log('fetchFindings')
-  console.log('x', path.join(__dirname, '..', '..', '..', 'result.json'))
   try {
-    const result = await readFile(path.join(__dirname, '..', '..', '..', 'result.json'), 'utf-8')
+    const result = await readFile(
+      path.join(__dirname, '..', '..', '..', 'result.json'),
+      'utf-8',
+    );
     if (!result) {
-      // some logging
+      logger.info('No kube_bench result found');
       return;
     }
 
     const resultJson = JSON.parse(result);
     const findings = getFindingData(resultJson);
-    console.log('findings', JSON.stringify(findings, null, 4));
 
     for (const finding of findings) {
       await jobState.addEntity(createFindingEntity(finding));
     }
-
-  } catch(err) {
-    console.error(err)
+  } catch (err) {
+    logger.info(
+      {
+        err,
+      },
+      'Error loading kube_bench result file',
+    );
+    console.error(err);
   }
 }
 
@@ -96,10 +102,19 @@ export async function buildClusterFindingRelationships(
     },
     async (findingEntity) => {
       await jobState.addRelationship(
-        createDirectRelationship({
+        createMappedRelationship({
           _class: RelationshipClass.HAS,
-          from: clusterEntity,
-          to: findingEntity,
+          _type: Relationships.CLUSTER_HAS_FINDING._type,
+          _mapping: {
+            relationshipDirection: RelationshipDirection.FORWARD,
+            sourceEntityKey: clusterEntity._key,
+            targetFilterKeys: [['_type', '_key']],
+            skipTargetCreation: true,
+            targetEntity: {
+              ...findingEntity,
+              _rawData: undefined,
+            },
+          },
         }),
       );
     },
@@ -122,5 +137,5 @@ export const findingsSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [Relationships.CLUSTER_HAS_FINDING],
     dependsOn: [IntegrationSteps.CLUSTERS, IntegrationSteps.FINDINGS],
     executionHandler: buildClusterFindingRelationships,
-  }
+  },
 ];
