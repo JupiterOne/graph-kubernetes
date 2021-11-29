@@ -1,8 +1,7 @@
 import { fetchFindings } from '.';
 import { createDataCollectionTest } from '../../../test/recording';
 import { integrationConfig } from '../../../test/config';
-import { Entities, Relationships } from '../constants';
-import { RelationshipClass } from '@jupiterone/data-model';
+import { Entities } from '../constants';
 
 describe('#fetchFindings', () => {
   test('should collect data', async () => {
