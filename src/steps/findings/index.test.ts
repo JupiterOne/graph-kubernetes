@@ -1,7 +1,9 @@
 import { fetchFindings } from '.';
 import { createDataCollectionTest } from '../../../test/recording';
 import { integrationConfig } from '../../../test/config';
-import { Entities } from '../constants';
+import { Entities, Relationships } from '../constants';
+import { fetchClusterDetails } from '../clusters';
+import { RelationshipClass } from '@jupiterone/data-model';
 
 describe('#fetchFindings', () => {
   test('should collect data', async () => {
@@ -39,18 +41,31 @@ describe('#fetchFindings', () => {
           },
         },
       ],
+      relationshipSchemaMatchers: [],
+    });
+  });
+});
+
+describe('#buildClusterFindingRelationships', () => {
+  test('should collect data', async () => {
+    await createDataCollectionTest({
+      recordingName: 'buildClusterFindingRelationships',
+      recordingDirectory: __dirname,
+      integrationConfig,
+      stepFunctions: [fetchClusterDetails, fetchFindings],
+      entitySchemaMatchers: [],
       relationshipSchemaMatchers: [
-        // {
-        //   _type: Relationships.NAMESPACE_CONTAINS_CONFIGMAP._type,
-        //   matcher: {
-        //     schema: {
-        //       properties: {
-        //         _class: { const: RelationshipClass.CONTAINS },
-        //         _type: { const: 'kube_namespace_contains_config_map' },
-        //       },
-        //     },
-        //   },
-        // },
+        {
+          _type: Relationships.CLUSTER_HAS_FINDING._type,
+          matcher: {
+            schema: {
+              properties: {
+                _class: { const: RelationshipClass.HAS },
+                _type: { const: 'kube_cluster_has_finding' },
+              },
+            },
+          },
+        },
       ],
     });
   });
