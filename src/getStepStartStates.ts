@@ -66,7 +66,13 @@ export default async function getStepStartStates(
       [IntegrationSteps.SERVICE_ACCOUNTS]: {
         disabled: false,
       },
+      [IntegrationSteps.ROLES]: {
+        disabled: false,
+      },
       [IntegrationSteps.CLUSTER_ROLES]: {
+        disabled: false,
+      },
+      [IntegrationSteps.ROLE_BINDINGS]: {
         disabled: false,
       },
       [IntegrationSteps.CLUSTER_ROLE_BINDINGS]: {

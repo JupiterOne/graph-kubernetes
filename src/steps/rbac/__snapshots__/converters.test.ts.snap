@@ -1,0 +1,303 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#createClusterRoleBindingEntity should convert data 1`] = `
+Object {
+  "_class": Array [
+    "AccessPolicy",
+  ],
+  "_key": "073806b3-7440-4e55-bbb5-d492a44e318d",
+  "_rawData": Array [
+    Object {
+      "name": "default",
+      "rawData": Object {
+        "metadata": Object {
+          "annotations": Object {
+            "rbac.authorization.kubernetes.io/autoupdate": "true",
+          },
+          "creationTimestamp": 2021-12-03T19:01:11.000Z,
+          "labels": Object {
+            "kubernetes.io/bootstrapping": "rbac-defaults",
+          },
+          "managedFields": Array [
+            Object {
+              "apiVersion": "rbac.authorization.k8s.io/v1",
+              "fieldsType": "FieldsV1",
+              "fieldsV1": Object {
+                "f:metadata": Object {
+                  "f:annotations": Object {
+                    ".": Object {},
+                    "f:rbac.authorization.kubernetes.io/autoupdate": Object {},
+                  },
+                  "f:labels": Object {
+                    ".": Object {},
+                    "f:kubernetes.io/bootstrapping": Object {},
+                  },
+                },
+                "f:roleRef": Object {},
+                "f:subjects": Object {},
+              },
+              "manager": "kube-apiserver",
+              "operation": "Update",
+              "time": 2021-12-03T19:01:11.000Z,
+            },
+          ],
+          "name": "system:volume-scheduler",
+          "resourceVersion": "156",
+          "uid": "073806b3-7440-4e55-bbb5-d492a44e318d",
+        },
+        "roleRef": Object {
+          "apiGroup": "rbac.authorization.k8s.io",
+          "kind": "ClusterRole",
+          "name": "system:volume-scheduler",
+        },
+        "subjects": Array [
+          Object {
+            "apiGroup": "rbac.authorization.k8s.io",
+            "kind": "User",
+            "name": "system:kube-scheduler",
+          },
+        ],
+      },
+    },
+  ],
+  "_type": "kube_cluster_role_binding",
+  "createdOn": 1638558071000,
+  "deletionGracePeriodSeconds": undefined,
+  "displayName": "system:volume-scheduler",
+  "generation": undefined,
+  "name": "system:volume-scheduler",
+  "resourceVersion": "156",
+}
+`;
+
+exports[`#createClusterRoleEntity should convert data 1`] = `
+Object {
+  "_class": Array [
+    "AccessRole",
+  ],
+  "_key": "05a66ca8-1f55-4799-81b0-4bf54dbf4cde",
+  "_rawData": Array [
+    Object {
+      "name": "default",
+      "rawData": Object {
+        "metadata": Object {
+          "annotations": Object {
+            "rbac.authorization.kubernetes.io/autoupdate": "true",
+          },
+          "creationTimestamp": 2021-12-03T19:01:11.000Z,
+          "labels": Object {
+            "kubernetes.io/bootstrapping": "rbac-defaults",
+          },
+          "managedFields": Array [
+            Object {
+              "apiVersion": "rbac.authorization.k8s.io/v1",
+              "fieldsType": "FieldsV1",
+              "fieldsV1": Object {
+                "f:metadata": Object {
+                  "f:annotations": Object {
+                    ".": Object {},
+                    "f:rbac.authorization.kubernetes.io/autoupdate": Object {},
+                  },
+                  "f:labels": Object {
+                    ".": Object {},
+                    "f:kubernetes.io/bootstrapping": Object {},
+                  },
+                },
+                "f:rules": Object {},
+              },
+              "manager": "kube-apiserver",
+              "operation": "Update",
+              "time": 2021-12-03T19:01:11.000Z,
+            },
+          ],
+          "name": "system:volume-scheduler",
+          "resourceVersion": "108",
+          "uid": "05a66ca8-1f55-4799-81b0-4bf54dbf4cde",
+        },
+        "rules": Array [
+          Object {
+            "apiGroups": Array [
+              "",
+            ],
+            "resources": Array [
+              "persistentvolumes",
+            ],
+            "verbs": Array [
+              "get",
+              "list",
+              "patch",
+              "update",
+              "watch",
+            ],
+          },
+          Object {
+            "apiGroups": Array [
+              "storage.k8s.io",
+            ],
+            "resources": Array [
+              "storageclasses",
+            ],
+            "verbs": Array [
+              "get",
+              "list",
+              "watch",
+            ],
+          },
+          Object {
+            "apiGroups": Array [
+              "",
+            ],
+            "resources": Array [
+              "persistentvolumeclaims",
+            ],
+            "verbs": Array [
+              "get",
+              "list",
+              "patch",
+              "update",
+              "watch",
+            ],
+          },
+        ],
+      },
+    },
+  ],
+  "_type": "kube_cluster_role",
+  "createdOn": 1638558071000,
+  "deletionGracePeriodSeconds": undefined,
+  "displayName": "system:volume-scheduler",
+  "generation": undefined,
+  "name": "system:volume-scheduler",
+  "resourceVersion": "108",
+}
+`;
+
+exports[`#createRoleBindingEntity should convert data 1`] = `
+Object {
+  "_class": Array [
+    "AccessPolicy",
+  ],
+  "_key": "1ca98118-90ac-4160-9b5d-d4672b774ffc",
+  "_rawData": Array [
+    Object {
+      "name": "default",
+      "rawData": Object {
+        "metadata": Object {
+          "annotations": Object {
+            "rbac.authorization.kubernetes.io/autoupdate": "true",
+          },
+          "creationTimestamp": 2021-12-03T19:01:11.000Z,
+          "labels": Object {
+            "kubernetes.io/bootstrapping": "rbac-defaults",
+          },
+          "managedFields": Array [
+            Object {
+              "apiVersion": "rbac.authorization.k8s.io/v1",
+              "fieldsType": "FieldsV1",
+              "fieldsV1": Object {
+                "f:metadata": Object {
+                  "f:annotations": Object {
+                    ".": Object {},
+                    "f:rbac.authorization.kubernetes.io/autoupdate": Object {},
+                  },
+                  "f:labels": Object {
+                    ".": Object {},
+                    "f:kubernetes.io/bootstrapping": Object {},
+                  },
+                },
+                "f:roleRef": Object {},
+                "f:subjects": Object {},
+              },
+              "manager": "kube-apiserver",
+              "operation": "Update",
+              "time": 2021-12-03T19:01:11.000Z,
+            },
+          ],
+          "name": "system:controller:token-cleaner",
+          "namespace": "kube-system",
+          "resourceVersion": "202",
+          "uid": "1ca98118-90ac-4160-9b5d-d4672b774ffc",
+        },
+        "roleRef": Object {
+          "apiGroup": "rbac.authorization.k8s.io",
+          "kind": "Role",
+          "name": "system:controller:token-cleaner",
+        },
+        "subjects": Array [
+          Object {
+            "kind": "ServiceAccount",
+            "name": "token-cleaner",
+            "namespace": "kube-system",
+          },
+        ],
+      },
+    },
+  ],
+  "_type": "kube_role_binding",
+  "createdOn": 1638558071000,
+  "deletionGracePeriodSeconds": undefined,
+  "displayName": "system:controller:token-cleaner",
+  "generation": undefined,
+  "name": "system:controller:token-cleaner",
+  "resourceVersion": "202",
+}
+`;
+
+exports[`#createRoleEntity should convert data 1`] = `
+Object {
+  "_class": Array [
+    "AccessRole",
+  ],
+  "_key": "5fce2a47-3e00-4401-8721-430b00892821",
+  "_rawData": Array [
+    Object {
+      "name": "default",
+      "rawData": Object {
+        "metadata": Object {
+          "creationTimestamp": 2021-12-03T19:01:11.000Z,
+          "managedFields": Array [
+            Object {
+              "apiVersion": "rbac.authorization.k8s.io/v1",
+              "fieldsType": "FieldsV1",
+              "fieldsV1": Object {
+                "f:rules": Object {},
+              },
+              "manager": "kubeadm",
+              "operation": "Update",
+              "time": 2021-12-03T19:01:11.000Z,
+            },
+          ],
+          "name": "kubeadm:nodes-kubeadm-config",
+          "namespace": "kube-system",
+          "resourceVersion": "210",
+          "uid": "5fce2a47-3e00-4401-8721-430b00892821",
+        },
+        "rules": Array [
+          Object {
+            "apiGroups": Array [
+              "",
+            ],
+            "resourceNames": Array [
+              "kubeadm-config",
+            ],
+            "resources": Array [
+              "configmaps",
+            ],
+            "verbs": Array [
+              "get",
+            ],
+          },
+        ],
+      },
+    },
+  ],
+  "_type": "kube_role",
+  "createdOn": 1638558071000,
+  "deletionGracePeriodSeconds": undefined,
+  "displayName": "kubeadm:nodes-kubeadm-config",
+  "generation": undefined,
+  "name": "kubeadm:nodes-kubeadm-config",
+  "namespace": "kube-system",
+  "resourceVersion": "210",
+}
+`;

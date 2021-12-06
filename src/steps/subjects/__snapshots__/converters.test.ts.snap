@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#createServiceAccountEntity should convert data 1`] = `
+Object {
+  "_class": Array [
+    "User",
+  ],
+  "_key": "a9e0bedc-2bcf-4fe2-9414-5fe1d03121c6",
+  "_rawData": Array [
+    Object {
+      "name": "default",
+      "rawData": Object {
+        "metadata": Object {
+          "creationTimestamp": 2021-12-03T19:01:12.000Z,
+          "name": "ttl-controller",
+          "namespace": "kube-system",
+          "resourceVersion": "236",
+          "uid": "a9e0bedc-2bcf-4fe2-9414-5fe1d03121c6",
+        },
+      },
+    },
+  ],
+  "_type": "kube_service_account",
+  "createdOn": 1638558072000,
+  "deletionGracePeriodSeconds": undefined,
+  "displayName": "ttl-controller",
+  "generation": undefined,
+  "name": "ttl-controller",
+  "resourceVersion": "236",
+  "username": "ttl-controller",
+}
+`;

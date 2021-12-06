@@ -21,9 +21,12 @@ export async function fetchServiceAccounts(
       _type: Entities.NAMESPACE._type,
     },
     async (namespaceEntity) => {
-      await client.iterateNamespacedServiceAccounts(namespaceEntity.name as string,
+      await client.iterateNamespacedServiceAccounts(
+        namespaceEntity.name as string,
         async (serviceAccount) => {
-          const serviceAccountEntity = createServiceAccountEntity(serviceAccount);
+          const serviceAccountEntity = createServiceAccountEntity(
+            serviceAccount,
+          );
           await jobState.addEntity(serviceAccountEntity);
           await jobState.addRelationship(
             createDirectRelationship({
@@ -31,9 +34,10 @@ export async function fetchServiceAccounts(
               from: namespaceEntity,
               to: serviceAccountEntity,
             }),
-          )
-      })
-    }
+          );
+        },
+      );
+    },
   );
 }
 
@@ -41,15 +45,9 @@ export const subjectsSteps: IntegrationStep<IntegrationConfig>[] = [
   {
     id: IntegrationSteps.SERVICE_ACCOUNTS,
     name: 'Fetch Service Accounts',
-    entities: [
-      Entities.SERVICE_ACCOUNT
-    ],
-    relationships: [
-      Relationships.NAMESPACE_CONTAINS_SERVICE_ACCOUNT,
-    ],
-    dependsOn: [
-      IntegrationSteps.NAMESPACES,
-    ],
+    entities: [Entities.SERVICE_ACCOUNT],
+    relationships: [Relationships.NAMESPACE_CONTAINS_SERVICE_ACCOUNT],
+    dependsOn: [IntegrationSteps.NAMESPACES],
     executionHandler: fetchServiceAccounts,
   },
 ];
