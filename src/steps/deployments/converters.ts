@@ -1,9 +1,14 @@
 import {
+  createDirectRelationship,
   createIntegrationEntity,
+  Entity,
+  generateRelationshipKey,
   parseTimePropertyValue,
 } from '@jupiterone/integration-sdk-core';
 import * as k8s from '@kubernetes/client-node';
 import { Entities } from '../constants';
+import { RelationshipClass } from '@jupiterone/data-model';
+import { V1VolumeMount } from '@kubernetes/client-node';
 
 function convertToString(value?: object) {
   if (!value) {
@@ -111,6 +116,69 @@ export function createDeploymentEntity(data: k8s.V1Deployment) {
         'status.unavailableReplicas': data.status?.unavailableReplicas,
         'status.updatedReplicas': data.status?.updatedReplicas,
       },
+    },
+  });
+}
+
+function getUniqueContainerSpecVolumeMountKey(volumeMount: V1VolumeMount) {
+  let key = volumeMount.name;
+
+  if (volumeMount.mountPath) {
+    key += `/mount_path_${volumeMount.mountPath}`;
+  }
+
+  if (volumeMount.subPath) {
+    key += `/mount_sub_path_${volumeMount.subPath}`;
+  }
+
+  return key;
+}
+
+function generateContainerSpecToVolumeRelationshipKey({
+  _class,
+  containerSpecEntity,
+  volumeEntity,
+  volumeMount,
+}: {
+  _class: RelationshipClass;
+  containerSpecEntity: Entity;
+  volumeEntity: Entity;
+  volumeMount: V1VolumeMount;
+}) {
+  const baseRelationshipKey = generateRelationshipKey(
+    _class,
+    containerSpecEntity,
+    volumeEntity,
+  );
+
+  const volumeMountKey = getUniqueContainerSpecVolumeMountKey(volumeMount);
+  return `${baseRelationshipKey}/mount_${volumeMountKey}`;
+}
+
+export function createContainerSpecToVolumeRelationship({
+  containerSpecEntity,
+  volumeEntity,
+  volumeMount,
+}: {
+  containerSpecEntity: Entity;
+  volumeEntity: Entity;
+  volumeMount: V1VolumeMount;
+}) {
+  return createDirectRelationship({
+    _class: RelationshipClass.USES,
+    from: containerSpecEntity,
+    to: volumeEntity,
+    properties: {
+      _key: generateContainerSpecToVolumeRelationshipKey({
+        _class: RelationshipClass.USES,
+        containerSpecEntity,
+        volumeEntity,
+        volumeMount,
+      }),
+      readOnly: volumeMount.readOnly,
+      mountPath: volumeMount.mountPath,
+      mountPropagation: volumeMount.mountPropagation,
+      subPath: volumeMount.subPath,
     },
   });
 }

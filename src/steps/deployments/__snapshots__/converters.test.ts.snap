@@ -1,5 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`#createContainerSpecToVolumeRelationship should generate relationship with mountPath 1`] = `
+Object {
+  "_class": "USES",
+  "_fromEntityKey": "12345/coredns",
+  "_key": "12345/coredns|uses|12345/config-volume/mount_config-volume/mount_path_/etc/coredns",
+  "_toEntityKey": "12345/config-volume",
+  "_type": "kube_container_spec_uses_volume",
+  "displayName": "USES",
+  "mountPath": "/etc/coredns",
+  "mountPropagation": undefined,
+  "readOnly": true,
+  "subPath": undefined,
+}
+`;
+
+exports[`#createContainerSpecToVolumeRelationship should generate relationship with mountPath and subPath 1`] = `
+Object {
+  "_class": "USES",
+  "_fromEntityKey": "12345/coredns",
+  "_key": "12345/coredns|uses|12345/config-volume/mount_config-volume/mount_path_/etc/coredns/mount_sub_path_abc",
+  "_toEntityKey": "12345/config-volume",
+  "_type": "kube_container_spec_uses_volume",
+  "displayName": "USES",
+  "mountPath": "/etc/coredns",
+  "mountPropagation": undefined,
+  "readOnly": true,
+  "subPath": "abc",
+}
+`;
+
+exports[`#createContainerSpecToVolumeRelationship should generate relationship without mountPath 1`] = `
+Object {
+  "_class": "USES",
+  "_fromEntityKey": "12345/coredns",
+  "_key": "12345/coredns|uses|12345/config-volume/mount_config-volume",
+  "_toEntityKey": "12345/config-volume",
+  "_type": "kube_container_spec_uses_volume",
+  "displayName": "USES",
+  "mountPath": undefined,
+  "mountPropagation": undefined,
+  "readOnly": true,
+  "subPath": undefined,
+}
+`;
+
 exports[`#createDeploymentEntity should convert data 1`] = `
 Object {
   "_class": Array [
