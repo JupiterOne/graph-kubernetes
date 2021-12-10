@@ -2107,7 +2107,7 @@ Object {
     Object {
       "_class": "USES",
       "_fromEntityKey": "0ffd1ce8-e97e-4bc8-a2d6-075fe64488e3/socket-mount",
-      "_key": "0ffd1ce8-e97e-4bc8-a2d6-075fe64488e3/socket-mount|uses|0ffd1ce8-e97e-4bc8-a2d6-075fe64488e3/docker-sock",
+      "_key": "0ffd1ce8-e97e-4bc8-a2d6-075fe64488e3/socket-mount|uses|0ffd1ce8-e97e-4bc8-a2d6-075fe64488e3/docker-sock/mount_docker-sock/mount_path_/var/run/docker.sock",
       "_toEntityKey": "0ffd1ce8-e97e-4bc8-a2d6-075fe64488e3/docker-sock",
       "_type": "kube_container_spec_uses_volume",
       "displayName": "USES",
@@ -2119,7 +2119,7 @@ Object {
     Object {
       "_class": "USES",
       "_fromEntityKey": "0ffd1ce8-e97e-4bc8-a2d6-075fe64488e3/socket-mount",
-      "_key": "0ffd1ce8-e97e-4bc8-a2d6-075fe64488e3/socket-mount|uses|0ffd1ce8-e97e-4bc8-a2d6-075fe64488e3/docker-directory",
+      "_key": "0ffd1ce8-e97e-4bc8-a2d6-075fe64488e3/socket-mount|uses|0ffd1ce8-e97e-4bc8-a2d6-075fe64488e3/docker-directory/mount_docker-directory/mount_path_/var/lib/docker",
       "_toEntityKey": "0ffd1ce8-e97e-4bc8-a2d6-075fe64488e3/docker-directory",
       "_type": "kube_container_spec_uses_volume",
       "displayName": "USES",
@@ -2147,7 +2147,7 @@ Object {
     Object {
       "_class": "USES",
       "_fromEntityKey": "664fec78-0d67-4bbd-a02d-ad978500e342/coredns",
-      "_key": "664fec78-0d67-4bbd-a02d-ad978500e342/coredns|uses|664fec78-0d67-4bbd-a02d-ad978500e342/config-volume",
+      "_key": "664fec78-0d67-4bbd-a02d-ad978500e342/coredns|uses|664fec78-0d67-4bbd-a02d-ad978500e342/config-volume/mount_config-volume/mount_path_/etc/coredns",
       "_toEntityKey": "664fec78-0d67-4bbd-a02d-ad978500e342/config-volume",
       "_type": "kube_container_spec_uses_volume",
       "displayName": "USES",

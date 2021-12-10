@@ -1,6 +1,8 @@
 import {
   createDirectRelationship,
+  Entity,
   IntegrationStep,
+  JobState,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
 import { AppsClient } from '../../kubernetes/clients/apps';
@@ -8,10 +10,44 @@ import { IntegrationConfig, IntegrationStepContext } from '../../config';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import {
   createContainerSpecEntity,
+  createContainerSpecToVolumeRelationship,
   createDeploymentEntity,
   createVolumeEntity,
   getVolumeKey,
 } from './converters';
+import { V1VolumeMount } from '@kubernetes/client-node';
+
+type BuildContainerSpecVolumeRelationshipsParams = {
+  jobState: JobState;
+  deploymentId: string;
+  containerSpecEntity: Entity;
+  volumeMounts: V1VolumeMount[] | undefined;
+};
+
+async function buildContainerSpecVolumeRelationships({
+  jobState,
+  deploymentId,
+  containerSpecEntity,
+  volumeMounts,
+}: BuildContainerSpecVolumeRelationshipsParams) {
+  for (const volumeMount of volumeMounts || []) {
+    const volumeEntity = await jobState.findEntity(
+      getVolumeKey(deploymentId, volumeMount.name),
+    );
+
+    if (!volumeEntity) {
+      continue;
+    }
+
+    await jobState.addRelationship(
+      createContainerSpecToVolumeRelationship({
+        containerSpecEntity,
+        volumeEntity,
+        volumeMount,
+      }),
+    );
+  }
+}
 
 export async function fetchDeployments(
   context: IntegrationStepContext,
@@ -29,6 +65,7 @@ export async function fetchDeployments(
       await client.iterateNamespacedDeployments(
         namespaceEntity.name as string,
         async (deployment) => {
+          const deploymentId = deployment.metadata?.uid as string;
           const deploymentEntity = createDeploymentEntity(deployment);
 
           for (const volume of deployment.spec?.template.spec?.volumes || []) {
@@ -41,11 +78,10 @@ export async function fetchDeployments(
 
           for (const container of deployment.spec?.template.spec?.containers ||
             []) {
-            const containerSpecEntity = createContainerSpecEntity(
-              deployment.metadata?.uid as string,
-              container,
+            const containerSpecEntity = await jobState.addEntity(
+              createContainerSpecEntity(deploymentId, container),
             );
-            await jobState.addEntity(containerSpecEntity);
+
             await jobState.addRelationship(
               createDirectRelationship({
                 _class: RelationshipClass.USES,
@@ -54,31 +90,12 @@ export async function fetchDeployments(
               }),
             );
 
-            for (const volumeMount of container.volumeMounts || []) {
-              const volumeEntity = await jobState.findEntity(
-                getVolumeKey(
-                  deployment.metadata?.uid as string,
-                  volumeMount.name,
-                ),
-              );
-              if (!volumeEntity) {
-                continue;
-              }
-
-              await jobState.addRelationship(
-                createDirectRelationship({
-                  _class: RelationshipClass.USES,
-                  from: containerSpecEntity,
-                  to: volumeEntity,
-                  properties: {
-                    readOnly: volumeMount.readOnly,
-                    mountPath: volumeMount.mountPath,
-                    mountPropagation: volumeMount.mountPropagation,
-                    subPath: volumeMount.subPath,
-                  },
-                }),
-              );
-            }
+            await buildContainerSpecVolumeRelationships({
+              jobState,
+              deploymentId,
+              containerSpecEntity,
+              volumeMounts: container.volumeMounts,
+            });
           }
 
           await jobState.addEntity(deploymentEntity);

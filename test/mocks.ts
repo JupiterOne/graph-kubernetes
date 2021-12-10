@@ -1,4 +1,5 @@
 import * as k8s from '@kubernetes/client-node';
+import { V1Container, V1Volume, V1VolumeMount } from '@kubernetes/client-node';
 
 export function createMockNamespace(): Partial<k8s.V1Namespace> {
   return {
@@ -914,5 +915,111 @@ export function createMockStatefulSet(): Partial<k8s.V1StatefulSet> {
       updateRevision: 'web-6596ffb49b',
       updatedReplicas: 1,
     },
+  };
+}
+
+export function createMockContainer(
+  partial?: Partial<V1Container>,
+): V1Container {
+  return {
+    args: ['-conf', '/etc/coredns/Corefile'],
+    image: 'k8s.gcr.io/coredns:1.7.0',
+    imagePullPolicy: 'IfNotPresent',
+    livenessProbe: {
+      failureThreshold: 5,
+      httpGet: {
+        path: '/health',
+        scheme: 'HTTP',
+        port: {},
+      },
+      initialDelaySeconds: 60,
+      periodSeconds: 10,
+      successThreshold: 1,
+      timeoutSeconds: 5,
+    },
+    name: 'coredns',
+    ports: [
+      {
+        containerPort: 53,
+        name: 'dns',
+        protocol: 'UDP',
+      },
+      {
+        containerPort: 53,
+        name: 'dns-tcp',
+        protocol: 'TCP',
+      },
+      {
+        containerPort: 9153,
+        name: 'metrics',
+        protocol: 'TCP',
+      },
+    ],
+    readinessProbe: {
+      failureThreshold: 3,
+      httpGet: {
+        path: '/ready',
+        port: {},
+        scheme: 'HTTP',
+      },
+      periodSeconds: 10,
+      successThreshold: 1,
+      timeoutSeconds: 1,
+    },
+    resources: {
+      limits: {
+        memory: '170Mi',
+      },
+      requests: {
+        cpu: '100m',
+        memory: '70Mi',
+      },
+    },
+    securityContext: {
+      allowPrivilegeEscalation: false,
+      capabilities: {
+        add: ['NET_BIND_SERVICE'],
+        drop: ['all'],
+      },
+      readOnlyRootFilesystem: true,
+    },
+    terminationMessagePath: '/dev/termination-log',
+    terminationMessagePolicy: 'File',
+    volumeMounts: [
+      {
+        mountPath: '/etc/coredns',
+        name: 'config-volume',
+        readOnly: true,
+      },
+    ],
+    ...partial,
+  };
+}
+
+export function createMockVolume(partial?: Partial<V1Volume>): V1Volume {
+  return {
+    configMap: {
+      defaultMode: 420,
+      items: [
+        {
+          key: 'Corefile',
+          path: 'Corefile',
+        },
+      ],
+      name: 'coredns',
+    },
+    name: 'config-volume',
+    ...partial,
+  };
+}
+
+export function createMockVolumeMount(
+  partial?: Partial<V1VolumeMount>,
+): V1VolumeMount {
+  return {
+    mountPath: '/etc/coredns',
+    name: 'config-volume',
+    readOnly: true,
+    ...partial,
   };
 }
