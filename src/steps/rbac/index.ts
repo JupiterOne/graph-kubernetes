@@ -70,6 +70,9 @@ export async function fetchClusterRoles(
         _class: RelationshipClass.CONTAINS,
         from: clusterEntity,
         to: clusterRoleEntity,
+        properties: {
+          _type: 'kube_cluster_contains_cluster_role',
+        },
       }),
     );
   });
@@ -129,6 +132,9 @@ export async function fetchClusterRoleBindings(
         _class: RelationshipClass.CONTAINS,
         from: clusterEntity,
         to: clusterRoleBindingEntity,
+        properties: {
+          _type: 'kube_cluster_contains_cluster_role_binding',
+        },
       }),
     );
   });
