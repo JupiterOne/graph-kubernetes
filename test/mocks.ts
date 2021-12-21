@@ -195,6 +195,18 @@ export function createMockNode(): Partial<k8s.V1Node> {
   };
 }
 
+export function createMockServiceAccount(): Partial<k8s.V1ServiceAccount> {
+  return {
+    metadata: {
+      creationTimestamp: new Date('2021-12-03T19:01:12.000Z'),
+      name: 'ttl-controller',
+      namespace: 'kube-system',
+      resourceVersion: '236',
+      uid: 'a9e0bedc-2bcf-4fe2-9414-5fe1d03121c6',
+    },
+  };
+}
+
 export function createMockPod(): Partial<k8s.V1Pod> {
   return {
     metadata: {
@@ -813,6 +825,199 @@ export function createMockSecret(): Partial<k8s.V1Secret> {
       uid: '35ac86f2-63cc-4c48-a05e-ad94ab9dcad5',
     },
     type: 'kubernetes.io/service-account-token',
+  };
+}
+
+export function createMockRole(): Partial<k8s.V1Role> {
+  return {
+    metadata: {
+      creationTimestamp: new Date('2021-12-03T19:01:11.000Z'),
+      managedFields: [
+        {
+          apiVersion: 'rbac.authorization.k8s.io/v1',
+          fieldsType: 'FieldsV1',
+          fieldsV1: {
+            'f:rules': {},
+          },
+          manager: 'kubeadm',
+          operation: 'Update',
+          time: new Date('2021-12-03T19:01:11.000Z'),
+        },
+      ],
+      name: 'kubeadm:nodes-kubeadm-config',
+      namespace: 'kube-system',
+      resourceVersion: '210',
+      uid: '5fce2a47-3e00-4401-8721-430b00892821',
+    },
+    rules: [
+      {
+        apiGroups: [''],
+        resourceNames: ['kubeadm-config'],
+        resources: ['configmaps'],
+        verbs: ['get'],
+      },
+    ],
+  };
+}
+
+export function createMockClusterRole(): Partial<k8s.V1ClusterRole> {
+  return {
+    metadata: {
+      annotations: {
+        'rbac.authorization.kubernetes.io/autoupdate': 'true',
+      },
+      creationTimestamp: new Date('2021-12-03T19:01:11.000Z'),
+      labels: {
+        'kubernetes.io/bootstrapping': 'rbac-defaults',
+      },
+      managedFields: [
+        {
+          apiVersion: 'rbac.authorization.k8s.io/v1',
+          fieldsType: 'FieldsV1',
+          fieldsV1: {
+            'f:metadata': {
+              'f:annotations': {
+                '.': {},
+                'f:rbac.authorization.kubernetes.io/autoupdate': {},
+              },
+              'f:labels': {
+                '.': {},
+                'f:kubernetes.io/bootstrapping': {},
+              },
+            },
+            'f:rules': {},
+          },
+          manager: 'kube-apiserver',
+          operation: 'Update',
+          time: new Date('2021-12-03T19:01:11.000Z'),
+        },
+      ],
+      name: 'system:volume-scheduler',
+      resourceVersion: '108',
+      uid: '05a66ca8-1f55-4799-81b0-4bf54dbf4cde',
+    },
+    rules: [
+      {
+        apiGroups: [''],
+        resources: ['persistentvolumes'],
+        verbs: ['get', 'list', 'patch', 'update', 'watch'],
+      },
+      {
+        apiGroups: ['storage.k8s.io'],
+        resources: ['storageclasses'],
+        verbs: ['get', 'list', 'watch'],
+      },
+      {
+        apiGroups: [''],
+        resources: ['persistentvolumeclaims'],
+        verbs: ['get', 'list', 'patch', 'update', 'watch'],
+      },
+    ],
+  };
+}
+
+export function createMockRoleBinding(): Partial<k8s.V1RoleBinding> {
+  return {
+    metadata: {
+      annotations: {
+        'rbac.authorization.kubernetes.io/autoupdate': 'true',
+      },
+      creationTimestamp: new Date('2021-12-03T19:01:11.000Z'),
+      labels: {
+        'kubernetes.io/bootstrapping': 'rbac-defaults',
+      },
+      managedFields: [
+        {
+          apiVersion: 'rbac.authorization.k8s.io/v1',
+          fieldsType: 'FieldsV1',
+          fieldsV1: {
+            'f:metadata': {
+              'f:annotations': {
+                '.': {},
+                'f:rbac.authorization.kubernetes.io/autoupdate': {},
+              },
+              'f:labels': {
+                '.': {},
+                'f:kubernetes.io/bootstrapping': {},
+              },
+            },
+            'f:roleRef': {},
+            'f:subjects': {},
+          },
+          manager: 'kube-apiserver',
+          operation: 'Update',
+          time: new Date('2021-12-03T19:01:11.000Z'),
+        },
+      ],
+      name: 'system:controller:token-cleaner',
+      namespace: 'kube-system',
+      resourceVersion: '202',
+      uid: '1ca98118-90ac-4160-9b5d-d4672b774ffc',
+    },
+    roleRef: {
+      apiGroup: 'rbac.authorization.k8s.io',
+      kind: 'Role',
+      name: 'system:controller:token-cleaner',
+    },
+    subjects: [
+      {
+        kind: 'ServiceAccount',
+        name: 'token-cleaner',
+        namespace: 'kube-system',
+      },
+    ],
+  };
+}
+
+export function createClusterRoleBinding(): Partial<k8s.V1ClusterRoleBinding> {
+  return {
+    metadata: {
+      annotations: {
+        'rbac.authorization.kubernetes.io/autoupdate': 'true',
+      },
+      creationTimestamp: new Date('2021-12-03T19:01:11.000Z'),
+      labels: {
+        'kubernetes.io/bootstrapping': 'rbac-defaults',
+      },
+      managedFields: [
+        {
+          apiVersion: 'rbac.authorization.k8s.io/v1',
+          fieldsType: 'FieldsV1',
+          fieldsV1: {
+            'f:metadata': {
+              'f:annotations': {
+                '.': {},
+                'f:rbac.authorization.kubernetes.io/autoupdate': {},
+              },
+              'f:labels': {
+                '.': {},
+                'f:kubernetes.io/bootstrapping': {},
+              },
+            },
+            'f:roleRef': {},
+            'f:subjects': {},
+          },
+          manager: 'kube-apiserver',
+          operation: 'Update',
+          time: new Date('2021-12-03T19:01:11.000Z'),
+        },
+      ],
+      name: 'system:volume-scheduler',
+      resourceVersion: '156',
+      uid: '073806b3-7440-4e55-bbb5-d492a44e318d',
+    },
+    roleRef: {
+      apiGroup: 'rbac.authorization.k8s.io',
+      kind: 'ClusterRole',
+      name: 'system:volume-scheduler',
+    },
+    subjects: [
+      {
+        apiGroup: 'rbac.authorization.k8s.io',
+        kind: 'User',
+        name: 'system:kube-scheduler',
+      },
+    ],
   };
 }
 

@@ -14,8 +14,9 @@ import { cronJobsSteps } from './steps/cron-jobs';
 import { configMapsSteps } from './steps/config-maps';
 import { secretsSteps } from './steps/secrets';
 import { policiesSteps } from './steps/policies';
-
+import { clusterRoleBindingsSteps } from './steps/rbac';
 import getStepStartStates from './getStepStartStates';
+import { subjectsSteps } from './steps/subjects';
 
 export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> = {
   instanceConfigFields,
@@ -23,6 +24,8 @@ export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> = 
   getStepStartStates,
   integrationSteps: [
     ...policiesSteps,
+    ...subjectsSteps,
+    ...clusterRoleBindingsSteps,
     ...clustersSteps,
     ...namespaceSteps,
     ...nodeSteps,

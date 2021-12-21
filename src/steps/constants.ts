@@ -9,6 +9,11 @@ export const CLUSTER_ENTITY_DATA_KEY = 'entity:cluster';
 export enum IntegrationSteps {
   NETWORK_POLICIES = 'fetch-network-policies',
   POD_SECURITY_POLICIES = 'fetch-pod-security-policies',
+  SERVICE_ACCOUNTS = 'fetch-service-accounts',
+  ROLES = 'fetch-roles',
+  CLUSTER_ROLES = 'fetch-cluster-roles',
+  ROLE_BINDINGS = 'fetch-role-bindings',
+  CLUSTER_ROLE_BINDINGS = 'fetch-cluster-role-bindings',
   CLUSTERS = 'fetch-clusters',
   BUILD_CLUSTER_RESOURCES_RELATIONSHIPS = 'build-cluster-resources-relationships',
   BUILD_CLUSTER_AKS_RELATIONSHIPS = 'build-cluster-aks-relationships',
@@ -31,6 +36,11 @@ export enum IntegrationSteps {
 export const Entities: Record<
   | 'NETWORK_POLICY'
   | 'POD_SECURITY_POLICY'
+  | 'SERVICE_ACCOUNT'
+  | 'ROLE'
+  | 'CLUSTER_ROLE'
+  | 'ROLE_BINDING'
+  | 'CLUSTER_ROLE_BINDING'
   | 'CLUSTER'
   | 'AZURE_KUBERNETES_CLUSTER'
   | 'GOOGLE_KUBERNETES_CLUSTER'
@@ -60,6 +70,31 @@ export const Entities: Record<
     _type: 'kube_pod_security_policy',
     _class: ['Configuration'],
     resourceName: 'Kubernetes Pod Security Policy',
+  },
+  SERVICE_ACCOUNT: {
+    _type: 'kube_service_account',
+    _class: ['User'],
+    resourceName: 'Kubernetes Service Account',
+  },
+  ROLE: {
+    _type: 'kube_role',
+    _class: ['AccessRole'],
+    resourceName: 'Kubernetes Role',
+  },
+  CLUSTER_ROLE: {
+    _type: 'kube_cluster_role',
+    _class: ['AccessRole'],
+    resourceName: 'Kubernetes Cluster Role',
+  },
+  ROLE_BINDING: {
+    _type: 'kube_role_binding',
+    _class: ['AccessPolicy'],
+    resourceName: 'Kubernetes Role Binding',
+  },
+  CLUSTER_ROLE_BINDING: {
+    _type: 'kube_cluster_role_binding',
+    _class: ['AccessPolicy'],
+    resourceName: 'Kubernetes Cluster Role Binding',
   },
   CLUSTER: {
     _type: 'kube_cluster',
@@ -156,6 +191,8 @@ export const Entities: Record<
 export const Relationships: Record<
   | 'CLUSTER_CONTAINS_POD_SECURITY_POLICY'
   | 'CLUSTER_CONTAINS_NAMESPACE'
+  | 'CLUSTER_CONTAINS_CLUSTER_ROLE'
+  | 'CLUSTER_CONTAINS_CLUSTER_ROLE_BINDING'
   | 'CLUSTER_IS_AKS_CLUSTER'
   | 'CLUSTER_IS_GKE_CLUSTER'
   | 'NAMESPACE_CONTAINS_POD'
@@ -169,6 +206,9 @@ export const Relationships: Record<
   | 'NAMESPACE_CONTAINS_CONFIGMAP'
   | 'NAMESPACE_CONTAINS_SECRET'
   | 'NAMESPACE_CONTAINS_NETWORK_POLICY'
+  | 'NAMESPACE_CONTAINS_SERVICE_ACCOUNT'
+  | 'NAMESPACE_CONTAINS_ROLE'
+  | 'NAMESPACE_CONTAINS_ROLE_BINDING'
   | 'DEPLOYMENT_MANAGES_REPLICASET'
   | 'DEPLOYMENT_USES_CONTAINER_SPEC'
   | 'CONTAINER_SPEC_USES_VOLUME'
@@ -191,6 +231,18 @@ export const Relationships: Record<
     _class: RelationshipClass.CONTAINS,
     sourceType: Entities.CLUSTER._type,
     targetType: Entities.NAMESPACE._type,
+  },
+  CLUSTER_CONTAINS_CLUSTER_ROLE: {
+    _type: 'kube_cluster_contains_cluster_role',
+    _class: RelationshipClass.CONTAINS,
+    sourceType: Entities.CLUSTER._type,
+    targetType: Entities.CLUSTER_ROLE._type,
+  },
+  CLUSTER_CONTAINS_CLUSTER_ROLE_BINDING: {
+    _type: 'kube_cluster_contains_cluster_role_binding',
+    _class: RelationshipClass.CONTAINS,
+    sourceType: Entities.CLUSTER._type,
+    targetType: Entities.CLUSTER_ROLE_BINDING._type,
   },
   CLUSTER_IS_AKS_CLUSTER: {
     _type: 'kube_cluster_is_azure_kubernetes_cluster',
@@ -269,6 +321,24 @@ export const Relationships: Record<
     _class: RelationshipClass.CONTAINS,
     sourceType: Entities.NAMESPACE._type,
     targetType: Entities.NETWORK_POLICY._type,
+  },
+  NAMESPACE_CONTAINS_SERVICE_ACCOUNT: {
+    _type: 'kube_namespace_contains_service_account',
+    _class: RelationshipClass.CONTAINS,
+    sourceType: Entities.NAMESPACE._type,
+    targetType: Entities.SERVICE_ACCOUNT._type,
+  },
+  NAMESPACE_CONTAINS_ROLE: {
+    _type: 'kube_namespace_contains_role',
+    _class: RelationshipClass.CONTAINS,
+    sourceType: Entities.NAMESPACE._type,
+    targetType: Entities.ROLE._type,
+  },
+  NAMESPACE_CONTAINS_ROLE_BINDING: {
+    _type: 'kube_namespace_contains_role_binding',
+    _class: RelationshipClass.CONTAINS,
+    sourceType: Entities.NAMESPACE._type,
+    targetType: Entities.ROLE_BINDING._type,
   },
   DEPLOYMENT_MANAGES_REPLICASET: {
     _type: 'kube_deployment_manages_replica_set',
