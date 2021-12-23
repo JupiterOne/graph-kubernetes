@@ -215,6 +215,7 @@ The following entities are created:
 | Kubernetes Service              | `kube_service`              | `Service`       |
 | Kubernetes Service Account      | `kube_service_account`      | `User`          |
 | Kubernetes StatefulSet          | `kube_stateful_set`         | `Deployment`    |
+| Kubernetes User                 | `kube_user`                 | `User`          |
 | Kubernetes Volume               | `kube_volume`               | `Disk`          |
 
 ### Relationships

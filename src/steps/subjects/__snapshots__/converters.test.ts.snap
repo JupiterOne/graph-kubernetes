@@ -30,3 +30,29 @@ Object {
   "username": "ttl-controller",
 }
 `;
+
+exports[`#createUserEntity should convert data 1`] = `
+Object {
+  "_class": Array [
+    "User",
+  ],
+  "_key": "kube_user:my-name",
+  "_rawData": Array [
+    Object {
+      "name": "default",
+      "rawData": Object {
+        "certFile": "/some/path/client.crt",
+        "keyFile": "/some/path/client.key",
+        "name": "my-name",
+        "username": "my-username",
+      },
+    },
+  ],
+  "_type": "kube_user",
+  "certFile": "/some/path/client.crt",
+  "displayName": "my-name",
+  "keyFile": "/some/path/client.key",
+  "name": "my-name",
+  "username": "my-username",
+}
+`;

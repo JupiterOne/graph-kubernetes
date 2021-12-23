@@ -206,4 +206,12 @@ export class CoreClient extends Client {
       },
     );
   }
+
+  async iterateUsers(
+    callback: (data: k8s.V1beta1UserSubject) => Promise<void>,
+  ): Promise<void> {
+    for (const user of this.kubeConfig.users || []) {
+      await callback(user);
+    }
+  }
 }

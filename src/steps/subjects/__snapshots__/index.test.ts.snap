@@ -2759,3 +2759,39 @@ Object {
   "numCollectedRelationships": 39,
 }
 `;
+
+exports[`#fetchUsers should collect data: jobState 1`] = `
+Object {
+  "collectedEntities": Array [
+    Object {
+      "_class": Array [
+        "User",
+      ],
+      "_key": "kube_user:docker-desktop",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": Object {
+            "certFile": undefined,
+            "keyFile": undefined,
+            "name": "docker-desktop",
+            "username": undefined,
+          },
+        },
+      ],
+      "_type": "kube_user",
+      "certFile": undefined,
+      "displayName": "docker-desktop",
+      "keyFile": undefined,
+      "name": "docker-desktop",
+      "username": "docker-desktop",
+    },
+  ],
+  "collectedRelationships": Array [],
+  "encounteredTypes": Array [
+    "kube_user",
+  ],
+  "numCollectedEntities": 1,
+  "numCollectedRelationships": 0,
+}
+`;

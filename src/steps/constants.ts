@@ -10,6 +10,7 @@ export enum IntegrationSteps {
   NETWORK_POLICIES = 'fetch-network-policies',
   POD_SECURITY_POLICIES = 'fetch-pod-security-policies',
   SERVICE_ACCOUNTS = 'fetch-service-accounts',
+  USERS = 'fetch-users',
   ROLES = 'fetch-roles',
   CLUSTER_ROLES = 'fetch-cluster-roles',
   ROLE_BINDINGS = 'fetch-role-bindings',
@@ -37,6 +38,7 @@ export const Entities: Record<
   | 'NETWORK_POLICY'
   | 'POD_SECURITY_POLICY'
   | 'SERVICE_ACCOUNT'
+  | 'USER'
   | 'ROLE'
   | 'CLUSTER_ROLE'
   | 'ROLE_BINDING'
@@ -75,6 +77,11 @@ export const Entities: Record<
     _type: 'kube_service_account',
     _class: ['User'],
     resourceName: 'Kubernetes Service Account',
+  },
+  USER: {
+    _type: 'kube_user',
+    _class: ['User'],
+    resourceName: 'Kubernetes User',
   },
   ROLE: {
     _type: 'kube_role',

@@ -1,5 +1,6 @@
 import * as k8s from '@kubernetes/client-node';
 import { V1Container, V1Volume, V1VolumeMount } from '@kubernetes/client-node';
+import { UserSubject } from '../src/steps/subjects/converters';
 
 export function createMockNamespace(): Partial<k8s.V1Namespace> {
   return {
@@ -204,6 +205,15 @@ export function createMockServiceAccount(): Partial<k8s.V1ServiceAccount> {
       resourceVersion: '236',
       uid: 'a9e0bedc-2bcf-4fe2-9414-5fe1d03121c6',
     },
+  };
+}
+
+export function createMockUser(): Partial<UserSubject> {
+  return {
+    name: 'my-name',
+    username: 'my-username',
+    certFile: '/some/path/client.crt',
+    keyFile: '/some/path/client.key',
   };
 }
 
