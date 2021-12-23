@@ -66,6 +66,9 @@ export default async function getStepStartStates(
       [IntegrationSteps.SERVICE_ACCOUNTS]: {
         disabled: false,
       },
+      [IntegrationSteps.USERS]: {
+        disabled: false,
+      },
       [IntegrationSteps.ROLES]: {
         disabled: false,
       },

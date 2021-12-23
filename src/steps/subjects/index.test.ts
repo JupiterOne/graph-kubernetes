@@ -1,4 +1,4 @@
-import { fetchServiceAccounts } from '.';
+import { fetchServiceAccounts, fetchUsers } from '.';
 import { createDataCollectionTest } from '../../../test/recording';
 import { integrationConfig } from '../../../test/config';
 import { Entities, Relationships } from '../constants';
@@ -45,6 +45,40 @@ describe('#fetchServiceAccounts', () => {
               properties: {
                 _class: { const: RelationshipClass.CONTAINS },
                 _type: { const: 'kube_namespace_contains_service_account' },
+              },
+            },
+          },
+        },
+      ],
+    });
+  });
+});
+
+describe('#fetchUsers', () => {
+  test('should collect data', async () => {
+    await createDataCollectionTest({
+      recordingName: 'fetchUsers',
+      recordingDirectory: __dirname,
+      integrationConfig,
+      stepFunctions: [fetchUsers],
+      entitySchemaMatchers: [
+        {
+          _type: Entities.USER._type,
+          matcher: {
+            _class: ['User'],
+            schema: {
+              additionalProperties: false,
+              properties: {
+                _type: { const: 'kube_user' },
+                _rawData: {
+                  type: 'array',
+                  items: { type: 'object' },
+                },
+                name: { type: 'string' },
+                username: { type: 'string' },
+                displayName: { type: 'string' },
+                certFile: { type: 'string' },
+                keyFile: { type: 'string' },
               },
             },
           },

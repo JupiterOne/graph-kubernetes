@@ -6,7 +6,7 @@ import {
 import { CoreClient } from '../../kubernetes/clients/core';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
-import { createServiceAccountEntity } from './converters';
+import { createServiceAccountEntity, createUserEntity } from './converters';
 
 export async function fetchServiceAccounts(
   context: IntegrationStepContext,
@@ -41,6 +41,20 @@ export async function fetchServiceAccounts(
   );
 }
 
+export async function fetchUsers(
+  context: IntegrationStepContext,
+): Promise<void> {
+  const { instance, jobState } = context;
+  const { config } = instance;
+
+  const client = new CoreClient(config);
+
+  await client.iterateUsers(async (user) => {
+    const userEntity = createUserEntity(user);
+    await jobState.addEntity(userEntity);
+  });
+}
+
 export const subjectsSteps: IntegrationStep<IntegrationConfig>[] = [
   {
     id: IntegrationSteps.SERVICE_ACCOUNTS,
@@ -49,5 +63,13 @@ export const subjectsSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [Relationships.NAMESPACE_CONTAINS_SERVICE_ACCOUNT],
     dependsOn: [IntegrationSteps.NAMESPACES],
     executionHandler: fetchServiceAccounts,
+  },
+  {
+    id: IntegrationSteps.USERS,
+    name: 'Fetch Users',
+    entities: [Entities.USER],
+    relationships: [],
+    dependsOn: [],
+    executionHandler: fetchUsers,
   },
 ];
