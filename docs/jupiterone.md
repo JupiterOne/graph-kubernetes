@@ -203,6 +203,7 @@ The following entities are created:
 | Kubernetes CronJob              | `kube_cron_job`             | `Task`          |
 | Kubernetes DaemonSet            | `kube_daemon_set`           | `Deployment`    |
 | Kubernetes Deployment           | `kube_deployment`           | `Deployment`    |
+| Kubernetes Finding              | `kube_finding`              | `Finding`       |
 | Kubernetes Job                  | `kube_job`                  | `Task`          |
 | Kubernetes Namespace            | `kube_namespace`            | `Group`         |
 | Kubernetes Network Policy       | `kube_network_policy`       | `Configuration` |
@@ -228,6 +229,7 @@ The following relationships are created:
 | `kube_cluster`        | **CONTAINS**          | `kube_cluster_role_binding` |
 | `kube_cluster`        | **CONTAINS**          | `kube_namespace`            |
 | `kube_cluster`        | **CONTAINS**          | `kube_pod_security_policy`  |
+| `kube_cluster`        | **HAS**               | `kube_finding`              |
 | `kube_cluster`        | **IS**                | `azure_kubernetes_cluster`  |
 | `kube_cluster`        | **IS**                | `google_container_cluster`  |
 | `kube_container_spec` | **USES**              | `kube_volume`               |
