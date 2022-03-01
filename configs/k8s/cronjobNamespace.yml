@@ -115,7 +115,7 @@ spec:
                   name: kubexit
           containers:
             - name: graph-kubernetes
-              image: jupiterone/graph-kubernetes:0.3.1
+              image: jupiterone/graph-kubernetes:0.7.0
               imagePullPolicy: IfNotPresent
               command: ['/kubexit/kubexit', 'yarn']
               args: ['collect']
