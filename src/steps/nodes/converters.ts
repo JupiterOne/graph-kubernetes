@@ -24,11 +24,8 @@ function getAddressByType(type: string, addresses?: V1NodeAddress[]) {
   const address = addresses.find(
     (address) => address.type.toLowerCase() === type.toLowerCase(),
   );
-  if (!address) {
-    return undefined;
-  }
 
-  return address.address;
+  return address?.address;
 }
 
 export function createNodeEntity(data: k8s.V1Node) {
