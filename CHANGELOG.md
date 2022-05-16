@@ -7,3 +7,15 @@ and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+### Added
+
+- Kubernetes Node entities (`kube_node`) now have the following new properties:
+
+  | Property           | Type       |
+  | ------------------ | ---------- |
+  | `privateIpAddress` | `string[]` |
+  | `publicIpAddress`  | `string[]` |
+  | `privateDnsName`   | `string`   |
+  | `publicDnsName`    | `string`   |
+  | `hostname`         | `string`   |

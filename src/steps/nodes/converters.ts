@@ -4,6 +4,29 @@ import {
   parseTimePropertyValue,
 } from '@jupiterone/integration-sdk-core';
 import { Entities } from '../constants';
+import { V1NodeAddress } from '@kubernetes/client-node';
+
+function getAddressesByType(type: string, addresses?: V1NodeAddress[]) {
+  if (!addresses) {
+    return undefined;
+  }
+
+  return addresses
+    .filter((address) => address.type.toLowerCase() === type.toLowerCase())
+    .map((address) => address.address);
+}
+
+function getAddressByType(type: string, addresses?: V1NodeAddress[]) {
+  if (!addresses) {
+    return undefined;
+  }
+
+  const address = addresses.find(
+    (address) => address.type.toLowerCase() === type.toLowerCase(),
+  );
+
+  return address?.address;
+}
 
 export function createNodeEntity(data: k8s.V1Node) {
   return createIntegrationEntity({
@@ -23,6 +46,19 @@ export function createNodeEntity(data: k8s.V1Node) {
         podCIDRs: data.spec?.podCIDRs,
         providerID: data.spec?.providerID,
         unschedulable: data.spec?.unschedulable,
+        privateIpAddress: getAddressesByType(
+          'InternalIP',
+          data.status?.addresses,
+        ),
+        publicIpAddress: getAddressesByType(
+          'ExternalIP',
+          data.status?.addresses,
+        ),
+        // We currently think there should only ever be one value (in the status.addresses array) of the following types.
+        // This fits Host class nicely for the following (expected) properties.
+        privateDnsName: getAddressByType('InternalDNS', data.status?.addresses),
+        publicDnsName: getAddressByType('ExternalDNS', data.status?.addresses),
+        hostname: getAddressByType('Hostname', data.status?.addresses),
         'status.allocatable.cpu':
           data.status?.allocatable && data.status?.allocatable['cpu'],
         'status.allocatable.ephemeral-storage':

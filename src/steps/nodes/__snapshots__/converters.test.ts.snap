@@ -113,12 +113,19 @@ Object {
   "deletionGracePeriodSeconds": undefined,
   "displayName": "minikube",
   "generation": undefined,
+  "hostname": "minikube",
   "name": "minikube",
   "podCIDR": "10.10.10.10/24",
   "podCIDRs": Array [
     "10.10.10.10/24",
   ],
+  "privateDnsName": undefined,
+  "privateIpAddress": Array [
+    "111.111.11.1",
+  ],
   "providerID": undefined,
+  "publicDnsName": undefined,
+  "publicIpAddress": Array [],
   "resourceVersion": "81209",
   "status.allocatable.cpu": "8",
   "status.allocatable.ephemeral-storage": "88103912Ki",
@@ -143,6 +150,132 @@ Object {
   "status.nodeInfo.operatingSystem": "linux",
   "status.nodeInfo.osImage": "Ubuntu 20.04.1 LTS",
   "status.nodeInfo.systemUUID": "444a01a7-d999-4a38-a4d9-faaee5ee05f5",
+  "unschedulable": undefined,
+}
+`;
+
+exports[`#createNodeEntity should parse status.addresses correctly 1`] = `
+Object {
+  "_class": Array [
+    "Host",
+  ],
+  "_key": "103b35d1-8951-455c-95cb-3da4af29bd71",
+  "_rawData": Array [
+    Object {
+      "name": "default",
+      "rawData": Object {
+        "metadata": Object {
+          "annotations": Object {
+            "kubeadm.alpha.kubernetes.io/cri-socket": "/var/run/dockershim.sock",
+            "node.alpha.kubernetes.io/ttl": "0",
+            "volumes.kubernetes.io/controller-managed-attach-detach": "true",
+          },
+          "creationTimestamp": 2021-04-13T15:20:38.000Z,
+          "labels": Object {
+            "beta.kubernetes.io/arch": "amd64",
+            "beta.kubernetes.io/os": "linux",
+            "kubernetes.io/arch": "amd64",
+            "kubernetes.io/hostname": "minikube",
+            "kubernetes.io/os": "linux",
+            "minikube.k8s.io/commit": "15cede53bdc5fe242228853e737333b09d4336b5",
+            "minikube.k8s.io/name": "minikube",
+            "minikube.k8s.io/updated_at": "2021_04_13T17_20_41_0700",
+            "minikube.k8s.io/version": "v1.19.0",
+            "node-role.kubernetes.io/control-plane": "",
+            "node-role.kubernetes.io/master": "",
+          },
+          "name": "minikube",
+          "resourceVersion": "81209",
+          "uid": "103b35d1-8951-455c-95cb-3da4af29bd71",
+        },
+        "spec": Object {
+          "podCIDR": "10.10.10.10/24",
+          "podCIDRs": Array [
+            "10.10.10.10/24",
+          ],
+        },
+        "status": Object {
+          "addresses": Array [
+            Object {
+              "address": "1.1.1.1",
+              "type": "InternalIP",
+            },
+            Object {
+              "address": "2.2.2.2",
+              "type": "InternalIP",
+            },
+            Object {
+              "address": "5.5.5.5",
+              "type": "ExternalIP",
+            },
+            Object {
+              "address": "6.6.6.6",
+              "type": "ExternalIP",
+            },
+            Object {
+              "address": "minikube",
+              "type": "Hostname",
+            },
+            Object {
+              "address": "internalDns",
+              "type": "InternalDns",
+            },
+            Object {
+              "address": "externalDns",
+              "type": "ExternalDns",
+            },
+          ],
+        },
+      },
+    },
+  ],
+  "_type": "kube_node",
+  "active": undefined,
+  "createdOn": 1618327238000,
+  "deletionGracePeriodSeconds": undefined,
+  "displayName": "minikube",
+  "generation": undefined,
+  "hostname": "minikube",
+  "name": "minikube",
+  "podCIDR": "10.10.10.10/24",
+  "podCIDRs": Array [
+    "10.10.10.10/24",
+  ],
+  "privateDnsName": "internalDns",
+  "privateIpAddress": Array [
+    "1.1.1.1",
+    "2.2.2.2",
+  ],
+  "providerID": undefined,
+  "publicDnsName": "externalDns",
+  "publicIpAddress": Array [
+    "5.5.5.5",
+    "6.6.6.6",
+  ],
+  "resourceVersion": "81209",
+  "status.allocatable.cpu": undefined,
+  "status.allocatable.ephemeral-storage": undefined,
+  "status.allocatable.hugepages-1Gi": undefined,
+  "status.allocatable.hugepages-2Mi": undefined,
+  "status.allocatable.memory": undefined,
+  "status.allocatable.pods": undefined,
+  "status.capacity.cpu": undefined,
+  "status.capacity.ephemeral-storage": undefined,
+  "status.capacity.hugepages-1Gi": undefined,
+  "status.capacity.hugepages-2Mi": undefined,
+  "status.capacity.memory": undefined,
+  "status.capacity.pods": undefined,
+  "status.kubeletEndpointPort": undefined,
+  "status.nodeInfo.architecture": undefined,
+  "status.nodeInfo.bootID": undefined,
+  "status.nodeInfo.containerRuntimeVersion": undefined,
+  "status.nodeInfo.kernelVersion": undefined,
+  "status.nodeInfo.kubeProxyVersion": undefined,
+  "status.nodeInfo.kubeletVersion": undefined,
+  "status.nodeInfo.machineID": undefined,
+  "status.nodeInfo.operatingSystem": undefined,
+  "status.nodeInfo.osImage": undefined,
+  "status.nodeInfo.systemUUID": undefined,
   "unschedulable": undefined,
 }
 `;
