@@ -68,6 +68,9 @@ export async function fetchDeployments(
           const deploymentId = deployment.metadata?.uid as string;
           const deploymentEntity = createDeploymentEntity(deployment);
 
+          // Possibly due to a Deployment that changed after originally fetched
+          if (jobState.hasKey(deploymentEntity._key)) return;
+
           for (const volume of deployment.spec?.template.spec?.volumes || []) {
             const volumeEntity = createVolumeEntity(
               deployment.metadata?.uid as string,
