@@ -1,4 +1,4 @@
-# Integration with JupiterOne
+# Kubernetes Integration with JupiterOne
 
 ## Kubernetes + JupiterOne Integration Benefits
 
