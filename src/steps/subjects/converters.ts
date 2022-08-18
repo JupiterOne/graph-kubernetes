@@ -54,5 +54,6 @@ export function createUserEntity(data: UserSubject): Entity {
     displayName: data.name,
     certFile: data.certFile,
     keyFile: data.keyFile,
+    active: true,
   };
 }

@@ -80,6 +80,7 @@ describe('#fetchUsers', () => {
                 displayName: { type: 'string' },
                 certFile: { type: 'string' },
                 keyFile: { type: 'string' },
+                active: { type: 'boolean' },
               },
             },
           },

@@ -2819,6 +2819,7 @@ Object {
         },
       ],
       "_type": "kube_user",
+      "active": true,
       "certFile": undefined,
       "displayName": "docker-desktop",
       "keyFile": undefined,
