@@ -15,4 +15,4 @@ COPY scripts/ ${JUPITERONE_INTEGRATION_DIR}/scripts
 WORKDIR  ${JUPITERONE_INTEGRATION_DIR}
 RUN yarn install --production
 
-CMD ["yarn", "collect"]
+CMD ["yarn", "execute"]

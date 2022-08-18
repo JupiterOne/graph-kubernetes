@@ -13,7 +13,7 @@ export function createServiceAccountEntity(data: k8s.V1ServiceAccount) {
       assign: {
         _class: Entities.SERVICE_ACCOUNT._class,
         _type: Entities.SERVICE_ACCOUNT._type,
-        _key: data.metadata?.uid,
+        _key: data.metadata!.uid!,
         name: data.metadata?.name,
         username: data.metadata?.name,
         displayName: data.metadata?.name,
@@ -21,6 +21,7 @@ export function createServiceAccountEntity(data: k8s.V1ServiceAccount) {
         deletionGracePeriodSeconds: data.metadata?.deletionGracePeriodSeconds,
         resourceVersion: data.metadata?.resourceVersion,
         createdOn: parseTimePropertyValue(data.metadata?.creationTimestamp),
+        active: true,
       },
     },
   });

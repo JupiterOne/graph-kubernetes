@@ -30,7 +30,7 @@ TODO: Document tilt workflow https://docs.tilt.dev/install.html
 
 ### Running the integration
 
-1. `yarn start` to collect data
+1. `yarn start` to collect and sync data (this performs an integration run)
 2. `yarn graph` to show a visualization of the collected data
 3. `yarn j1-integration -h` for additional commands
 

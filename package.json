@@ -12,7 +12,8 @@
     "access": "public"
   },
   "scripts": {
-    "start": "LOAD_KUBERNETES_CONFIG_FROM_DEFAULT=true j1-integration collect",
+    "start": "LOAD_KUBERNETES_CONFIG_FROM_DEFAULT=true yarn execute",
+    "execute": "./scripts/run.sh",
     "collect": "./scripts/collect.sh",
     "graph": "j1-integration visualize",
     "graph:types": "j1-integration visualize-types",
