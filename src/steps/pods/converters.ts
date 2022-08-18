@@ -15,7 +15,7 @@ export function createPodEntity(data: k8s.V1Pod) {
         _class: Entities.POD._class,
         _type: Entities.POD._type,
         // metadata properties
-        _key: data.metadata?.uid,
+        _key: data.metadata!.uid!,
         name: data.metadata?.name,
         displayName: data.metadata?.name,
         generation: data.metadata?.generation,

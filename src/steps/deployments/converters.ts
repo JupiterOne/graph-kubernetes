@@ -87,7 +87,7 @@ export function createDeploymentEntity(data: k8s.V1Deployment) {
         _class: Entities.DEPLOYMENT._class,
         _type: Entities.DEPLOYMENT._type,
         // metadata properties
-        _key: data.metadata?.uid,
+        _key: data.metadata!.uid!,
         name: data.metadata?.name,
         displayName: data.metadata?.name,
         generation: data.metadata?.generation,

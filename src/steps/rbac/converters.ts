@@ -12,7 +12,7 @@ export function createRoleEntity(data: k8s.V1Role) {
       assign: {
         _class: Entities.ROLE._class,
         _type: Entities.ROLE._type,
-        _key: data.metadata?.uid,
+        _key: data.metadata!.uid!,
         name: data.metadata?.name,
         namespace: data.metadata?.namespace,
         displayName: data.metadata?.name,
@@ -32,7 +32,7 @@ export function createClusterRoleEntity(data: k8s.V1ClusterRole) {
       assign: {
         _class: Entities.CLUSTER_ROLE._class,
         _type: Entities.CLUSTER_ROLE._type,
-        _key: data.metadata?.uid,
+        _key: data.metadata!.uid!,
         name: data.metadata?.name,
         displayName: data.metadata?.name,
         generation: data.metadata?.generation,
@@ -51,7 +51,7 @@ export function createRoleBindingEntity(data: k8s.V1RoleBinding) {
       assign: {
         _class: Entities.ROLE_BINDING._class,
         _type: Entities.ROLE_BINDING._type,
-        _key: data.metadata?.uid,
+        _key: data.metadata!.uid!,
         name: data.metadata?.name,
         displayName: data.metadata?.name,
         generation: data.metadata?.generation,
@@ -70,7 +70,7 @@ export function createClusterRoleBindingEntity(data: k8s.V1ClusterRoleBinding) {
       assign: {
         _class: Entities.CLUSTER_ROLE_BINDING._class,
         _type: Entities.CLUSTER_ROLE_BINDING._type,
-        _key: data.metadata?.uid,
+        _key: data.metadata!.uid!,
         name: data.metadata?.name,
         displayName: data.metadata?.name,
         generation: data.metadata?.generation,

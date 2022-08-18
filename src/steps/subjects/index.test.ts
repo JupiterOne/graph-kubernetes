@@ -32,6 +32,7 @@ describe('#fetchServiceAccounts', () => {
                 deletionGracePeriodSeconds: { type: 'string' },
                 resourceVersion: { type: 'string' },
                 createdOn: { type: 'number' },
+                active: { type: 'boolean' },
               },
             },
           },

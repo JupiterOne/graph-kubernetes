@@ -21,6 +21,7 @@ Object {
     },
   ],
   "_type": "kube_service_account",
+  "active": true,
   "createdOn": 1638558072000,
   "deletionGracePeriodSeconds": undefined,
   "displayName": "ttl-controller",

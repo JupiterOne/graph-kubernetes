@@ -12,7 +12,7 @@ export function createStatefulSetEntity(data: k8s.V1StatefulSet) {
       assign: {
         _class: Entities.STATEFULSET._class,
         _type: Entities.STATEFULSET._type,
-        _key: data.metadata?.uid,
+        _key: data.metadata!.uid!,
         name: data.metadata?.name,
         displayName: data.metadata?.name,
         generation: data.metadata?.generation,

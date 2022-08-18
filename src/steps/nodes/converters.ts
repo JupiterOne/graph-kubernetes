@@ -35,7 +35,7 @@ export function createNodeEntity(data: k8s.V1Node) {
       assign: {
         _class: Entities.NODE._class,
         _type: Entities.NODE._type,
-        _key: data.metadata?.uid,
+        _key: data.metadata!.uid!,
         name: data.metadata?.name,
         displayName: data.metadata?.name,
         generation: data.metadata?.generation,

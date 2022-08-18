@@ -15,7 +15,7 @@ export function createSecretEntity(configMap: k8s.V1Secret) {
       assign: {
         _class: Entities.SECRET._class,
         _type: Entities.SECRET._type,
-        _key: withoutData.metadata?.uid,
+        _key: withoutData.metadata!.uid!,
         name: withoutData.metadata?.name,
         displayName: withoutData.metadata?.name,
         generation: withoutData.metadata?.generation,
