@@ -12,7 +12,7 @@ export function createCronJobEntity(data: k8s.V1beta1CronJob) {
       assign: {
         _class: Entities.CRONJOB._class,
         _type: Entities.CRONJOB._type,
-        _key: data.metadata?.uid,
+        _key: data.metadata!.uid!,
         name: data.metadata?.name,
         displayName: data.metadata?.name,
         generation: data.metadata?.generation,

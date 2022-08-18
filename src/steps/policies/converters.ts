@@ -15,7 +15,7 @@ export function createPodSecurityPolicyEntity(
         _class: Entities.POD_SECURITY_POLICY._class,
         _type: Entities.POD_SECURITY_POLICY._type,
         // metadata properties
-        _key: data.metadata?.uid,
+        _key: data.metadata!.uid!,
         name: data.metadata?.name,
         displayName: data.metadata?.name,
         generation: data.metadata?.generation,
@@ -81,7 +81,7 @@ export function createNetworkPolicyEntity(data: k8s.V1NetworkPolicy) {
         _class: Entities.NETWORK_POLICY._class,
         _type: Entities.NETWORK_POLICY._type,
         // metadata properties
-        _key: data.metadata?.uid,
+        _key: data.metadata!.uid!,
         name: data.metadata?.name,
         displayName: data.metadata?.name,
         generation: data.metadata?.generation,

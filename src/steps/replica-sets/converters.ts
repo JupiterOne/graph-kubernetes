@@ -13,7 +13,7 @@ export function createReplicaSetEntity(data: k8s.V1ReplicaSet) {
         _class: Entities.REPLICASET._class,
         _type: Entities.REPLICASET._type,
         // metadata properties
-        _key: data.metadata?.uid,
+        _key: data.metadata!.uid!,
         name: data.metadata?.name,
         displayName: data.metadata?.name,
         generation: data.metadata?.generation,

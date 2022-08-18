@@ -12,7 +12,7 @@ export function createJobEntity(data: k8s.V1Job) {
       assign: {
         _class: Entities.JOB._class,
         _type: Entities.JOB._type,
-        _key: data.metadata?.uid,
+        _key: data.metadata!.uid!,
         name: data.metadata?.name,
         displayName: data.metadata?.name,
         generation: data.metadata?.generation,

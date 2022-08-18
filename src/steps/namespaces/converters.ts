@@ -13,7 +13,7 @@ export function createNamespaceEntity(data: k8s.V1Namespace) {
         _class: Entities.NAMESPACE._class,
         _type: Entities.NAMESPACE._type,
         // metadata properties
-        _key: data.metadata?.uid,
+        _key: data.metadata!.uid!,
         name: data.metadata?.name,
         displayName: data.metadata?.name,
         generation: data.metadata?.generation,

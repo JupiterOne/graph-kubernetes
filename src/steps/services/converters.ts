@@ -13,7 +13,7 @@ export function createServiceEntity(data: k8s.V1Service) {
         _class: Entities.SERVICE._class,
         _type: Entities.SERVICE._type,
         // metadata properties
-        _key: data.metadata?.uid,
+        _key: data.metadata!.uid!,
         name: data.metadata?.name,
         displayName: data.metadata?.name,
         generation: data.metadata?.generation,

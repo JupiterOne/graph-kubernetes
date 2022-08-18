@@ -21,7 +21,7 @@ export function createConfigMapEntity(configMap: k8s.V1ConfigMap) {
       assign: {
         _class: Entities.CONFIGMAP._class,
         _type: Entities.CONFIGMAP._type,
-        _key: withoutData.metadata?.uid,
+        _key: withoutData.metadata!.uid!,
         name: withoutData.metadata?.name,
         displayName: withoutData.metadata?.name,
         generation: withoutData.metadata?.generation,

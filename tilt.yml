@@ -169,7 +169,7 @@ items:
             image: graph-kubernetes
             imagePullPolicy: IfNotPresent
             command: ['/kubexit/kubexit', 'yarn']
-            args: ['collect']
+            args: ['execute']
             env:
               - name: KUBEXIT_NAME
                 value: graph-kubernetes
