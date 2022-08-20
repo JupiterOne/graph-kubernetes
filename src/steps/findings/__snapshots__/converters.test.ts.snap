@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`#createFindingEntity should convert data 1`] = `
+Object {
+  "_class": Array [
+    "Finding",
+  ],
+  "_key": "kube_finding:cis-1.20:1.1.1",
+  "_rawData": Array [
+    Object {
+      "name": "default",
+      "rawData": Object {
+        "status": "PASS",
+        "testNumber": "1.1.1",
+        "version": "cis-1.20",
+      },
+    },
+  ],
+  "_type": "kube_finding",
+  "active": undefined,
+  "category": "benchmark",
+  "complianceStandardName": "CIS Kubernetes",
+  "complianceStandardRequirement": "1.1.1",
+  "complianceStandardVersion": "1.20",
+  "createdOn": undefined,
+  "displayName": "cis-1.20/1.1.1",
+  "name": "cis-1.20/1.1.1",
+  "numericSeverity": 1,
+  "open": false,
+  "severity": "informational",
+  "status": "PASS",
+}
+`;

@@ -57,6 +57,12 @@ export default async function getStepStartStates(
     ]);
 
     return {
+      [IntegrationSteps.FINDINGS]: {
+        disabled: false,
+      },
+      [IntegrationSteps.BUILD_CLUSTER_FINDING_RELATIONSHIPS]: {
+        disabled: false,
+      },
       [IntegrationSteps.NETWORK_POLICIES]: {
         disabled: false,
       },

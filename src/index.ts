@@ -15,8 +15,9 @@ import { configMapsSteps } from './steps/config-maps';
 import { secretsSteps } from './steps/secrets';
 import { policiesSteps } from './steps/policies';
 import { clusterRoleBindingsSteps } from './steps/rbac';
-import getStepStartStates from './getStepStartStates';
+import { findingsSteps } from './steps/findings';
 import { subjectsSteps } from './steps/subjects';
+import getStepStartStates from './getStepStartStates';
 
 export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> = {
   instanceConfigFields,
@@ -38,5 +39,6 @@ export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> = 
     ...cronJobsSteps,
     ...configMapsSteps,
     ...secretsSteps,
+    ...findingsSteps,
   ],
 };

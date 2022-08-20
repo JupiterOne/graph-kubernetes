@@ -7,6 +7,8 @@ import {
 export const CLUSTER_ENTITY_DATA_KEY = 'entity:cluster';
 
 export enum IntegrationSteps {
+  FINDINGS = 'fetch-findings',
+  BUILD_CLUSTER_FINDING_RELATIONSHIPS = 'build-cluster-finding-relationships',
   NETWORK_POLICIES = 'fetch-network-policies',
   POD_SECURITY_POLICIES = 'fetch-pod-security-policies',
   SERVICE_ACCOUNTS = 'fetch-service-accounts',
@@ -35,6 +37,7 @@ export enum IntegrationSteps {
 }
 
 export const Entities: Record<
+  | 'FINDINGS'
   | 'NETWORK_POLICY'
   | 'POD_SECURITY_POLICY'
   | 'SERVICE_ACCOUNT'
@@ -63,6 +66,11 @@ export const Entities: Record<
   | 'CONTAINER',
   StepEntityMetadata
 > = {
+  FINDINGS: {
+    _type: 'kube_finding',
+    _class: ['Finding'],
+    resourceName: 'Kubernetes Finding',
+  },
   NETWORK_POLICY: {
     _type: 'kube_network_policy',
     _class: ['Configuration'],
@@ -202,6 +210,7 @@ export const Relationships: Record<
   | 'CLUSTER_CONTAINS_CLUSTER_ROLE_BINDING'
   | 'CLUSTER_IS_AKS_CLUSTER'
   | 'CLUSTER_IS_GKE_CLUSTER'
+  | 'CLUSTER_HAS_FINDING'
   | 'NAMESPACE_CONTAINS_POD'
   | 'NAMESPACE_CONTAINS_SERVICE'
   | 'NAMESPACE_CONTAINS_DEPLOYMENT'
@@ -262,6 +271,12 @@ export const Relationships: Record<
     _class: RelationshipClass.IS,
     sourceType: Entities.CLUSTER._type,
     targetType: Entities.GOOGLE_KUBERNETES_CLUSTER._type,
+  },
+  CLUSTER_HAS_FINDING: {
+    _type: 'kube_cluster_has_finding',
+    _class: RelationshipClass.HAS,
+    sourceType: Entities.CLUSTER._type,
+    targetType: Entities.FINDINGS._type,
   },
   NAMESPACE_CONTAINS_POD: {
     _type: 'kube_namespace_contains_pod',
