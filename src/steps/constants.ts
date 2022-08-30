@@ -1,6 +1,8 @@
 import {
   RelationshipClass,
+  RelationshipDirection,
   StepEntityMetadata,
+  StepMappedRelationshipMetadata,
   StepRelationshipMetadata,
 } from '@jupiterone/integration-sdk-core';
 
@@ -200,8 +202,6 @@ export const Relationships: Record<
   | 'CLUSTER_CONTAINS_NAMESPACE'
   | 'CLUSTER_CONTAINS_CLUSTER_ROLE'
   | 'CLUSTER_CONTAINS_CLUSTER_ROLE_BINDING'
-  | 'CLUSTER_IS_AKS_CLUSTER'
-  | 'CLUSTER_IS_GKE_CLUSTER'
   | 'NAMESPACE_CONTAINS_POD'
   | 'NAMESPACE_CONTAINS_SERVICE'
   | 'NAMESPACE_CONTAINS_DEPLOYMENT'
@@ -250,18 +250,6 @@ export const Relationships: Record<
     _class: RelationshipClass.CONTAINS,
     sourceType: Entities.CLUSTER._type,
     targetType: Entities.CLUSTER_ROLE_BINDING._type,
-  },
-  CLUSTER_IS_AKS_CLUSTER: {
-    _type: 'kube_cluster_is_azure_kubernetes_cluster',
-    _class: RelationshipClass.IS,
-    sourceType: Entities.CLUSTER._type,
-    targetType: Entities.AZURE_KUBERNETES_CLUSTER._type,
-  },
-  CLUSTER_IS_GKE_CLUSTER: {
-    _type: 'kube_cluster_is_google_container_cluster',
-    _class: RelationshipClass.IS,
-    sourceType: Entities.CLUSTER._type,
-    targetType: Entities.GOOGLE_KUBERNETES_CLUSTER._type,
   },
   NAMESPACE_CONTAINS_POD: {
     _type: 'kube_namespace_contains_pod',
@@ -400,5 +388,25 @@ export const Relationships: Record<
     _class: RelationshipClass.CONTAINS,
     sourceType: Entities.POD._type,
     targetType: Entities.CONTAINER._type,
+  },
+};
+
+export const MappedRelationships: Record<
+  string,
+  StepMappedRelationshipMetadata
+> = {
+  CLUSTER_IS_AKS_CLUSTER: {
+    _type: 'kube_cluster_is_azure_kubernetes_cluster',
+    sourceType: Entities.CLUSTER._type,
+    targetType: Entities.AZURE_KUBERNETES_CLUSTER._type,
+    _class: RelationshipClass.IS,
+    direction: RelationshipDirection.FORWARD,
+  },
+  CLUSTER_IS_GKE_CLUSTER: {
+    _type: 'kube_cluster_is_google_container_cluster',
+    sourceType: Entities.CLUSTER._type,
+    targetType: Entities.GOOGLE_KUBERNETES_CLUSTER._type,
+    _class: RelationshipClass.IS,
+    direction: RelationshipDirection.FORWARD,
   },
 };

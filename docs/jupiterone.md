@@ -228,8 +228,6 @@ The following relationships are created:
 | `kube_cluster`        | **CONTAINS**          | `kube_cluster_role_binding` |
 | `kube_cluster`        | **CONTAINS**          | `kube_namespace`            |
 | `kube_cluster`        | **CONTAINS**          | `kube_pod_security_policy`  |
-| `kube_cluster`        | **IS**                | `azure_kubernetes_cluster`  |
-| `kube_cluster`        | **IS**                | `google_container_cluster`  |
 | `kube_container_spec` | **USES**              | `kube_volume`               |
 | `kube_cron_job`       | **MANAGES**           | `kube_job`                  |
 | `kube_deployment`     | **MANAGES**           | `kube_replica_set`          |
@@ -247,6 +245,15 @@ The following relationships are created:
 | `kube_namespace`      | **CONTAINS**          | `kube_service`              |
 | `kube_namespace`      | **CONTAINS**          | `kube_service_account`      |
 | `kube_namespace`      | **CONTAINS**          | `kube_stateful_set`         |
+
+### Mapped Relationships
+
+The following mapped relationships are created:
+
+| Source Entity `_type` | Relationship `_class` | Target Entity `_type`        | Direction |
+| --------------------- | --------------------- | ---------------------------- | --------- |
+| `kube_cluster`        | **IS**                | `*azure_kubernetes_cluster*` | FORWARD   |
+| `kube_cluster`        | **IS**                | `*google_container_cluster*` | FORWARD   |
 
 <!--
 ********************************************************************************
