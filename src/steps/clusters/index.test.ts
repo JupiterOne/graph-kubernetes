@@ -6,7 +6,7 @@ import {
 } from '.';
 import { createDataCollectionTest } from '../../../test/recording';
 import { integrationConfig } from '../../../test/config';
-import { Entities, Relationships } from '../constants';
+import { Entities, MappedRelationships, Relationships } from '../constants';
 import { fetchNamespaces } from '../namespaces';
 import { RelationshipClass } from '@jupiterone/data-model';
 import { fetchConfigMaps } from '../config-maps';
@@ -85,7 +85,7 @@ describe('#buildClusterAksRelationships', () => {
       entitySchemaMatchers: [],
       relationshipSchemaMatchers: [
         {
-          _type: Relationships.CLUSTER_IS_AKS_CLUSTER._type,
+          _type: MappedRelationships.CLUSTER_IS_AKS_CLUSTER._type,
           matcher: {
             schema: {
               properties: {
@@ -110,7 +110,7 @@ describe('#buildClusterGkeRelationships', () => {
       entitySchemaMatchers: [],
       relationshipSchemaMatchers: [
         {
-          _type: Relationships.CLUSTER_IS_GKE_CLUSTER._type,
+          _type: MappedRelationships.CLUSTER_IS_GKE_CLUSTER._type,
           matcher: {
             schema: {
               properties: {

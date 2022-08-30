@@ -13,6 +13,7 @@ import {
   CLUSTER_ENTITY_DATA_KEY,
   Entities,
   IntegrationSteps,
+  MappedRelationships,
   Relationships,
 } from '../constants';
 import { createClusterEntity } from './converters';
@@ -118,7 +119,7 @@ export async function buildClusterAksRelationships(
         await jobState.addRelationship(
           createMappedRelationship({
             _class: RelationshipClass.IS,
-            _type: Relationships.CLUSTER_IS_AKS_CLUSTER._type,
+            _type: MappedRelationships.CLUSTER_IS_AKS_CLUSTER._type,
             _mapping: {
               relationshipDirection: RelationshipDirection.FORWARD,
               sourceEntityKey: clusterEntity._key,
@@ -177,7 +178,7 @@ export async function buildClusterGkeRelationships(
     await jobState.addRelationship(
       createMappedRelationship({
         _class: RelationshipClass.IS,
-        _type: Relationships.CLUSTER_IS_GKE_CLUSTER._type,
+        _type: MappedRelationships.CLUSTER_IS_GKE_CLUSTER._type,
         _mapping: {
           relationshipDirection: RelationshipDirection.FORWARD,
           sourceEntityKey: clusterEntity._key,
@@ -214,7 +215,8 @@ export const clustersSteps: IntegrationStep<IntegrationConfig>[] = [
     id: IntegrationSteps.BUILD_CLUSTER_AKS_RELATIONSHIPS,
     name: 'Build Cluster AKS Relationships',
     entities: [],
-    relationships: [Relationships.CLUSTER_IS_AKS_CLUSTER],
+    relationships: [],
+    mappedRelationships: [MappedRelationships.CLUSTER_IS_AKS_CLUSTER],
     dependsOn: [IntegrationSteps.CLUSTERS, IntegrationSteps.CONFIGMAPS],
     executionHandler: buildClusterAksRelationships,
   },
@@ -222,7 +224,8 @@ export const clustersSteps: IntegrationStep<IntegrationConfig>[] = [
     id: IntegrationSteps.BUILD_CLUSTER_GKE_RELATIONSHIPS,
     name: 'Build Cluster GKE Relationships',
     entities: [],
-    relationships: [Relationships.CLUSTER_IS_GKE_CLUSTER],
+    relationships: [],
+    mappedRelationships: [MappedRelationships.CLUSTER_IS_GKE_CLUSTER],
     dependsOn: [IntegrationSteps.CLUSTERS],
     executionHandler: buildClusterGkeRelationships,
   },
