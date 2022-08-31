@@ -77,3 +77,14 @@ jobs:
           echo "//registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}" > .npmrc
           yarn
           npm publish
+
+  publish-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - id: publish-image
+        uses: jupiterone/publish-integration-image-action@v1-beta
+        with:
+          package-name: 'jupiterone/graph-salesforce'
+          docker-username: ${{ secrets.DOCKERHUB_USERNAME }}
+          docker-password: ${{ secrets.DOCKERHUB_TOKEN }}
