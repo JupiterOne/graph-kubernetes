@@ -83,8 +83,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - id: publish-image
-        uses: jupiterone/publish-integration-image-action@v1.0.2-beta
+        uses: jupiterone/publish-integration-image-action@v1.0.3-beta
         with:
-          package-name: 'graph-kubernetes-workflow-test'
+          package-name: 'jupiterone/graph-kubernetes'
           docker-username: ${{ secrets.DOCKERHUB_USERNAME }}
           docker-password: ${{ secrets.DOCKERHUB_TOKEN }}
+          push-to-registry: 'true'
