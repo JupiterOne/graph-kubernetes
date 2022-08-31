@@ -85,6 +85,6 @@ jobs:
       - id: publish-image
         uses: jupiterone/publish-integration-image-action@v1.0.2-beta
         with:
-          package-name: 'jupiterone/graph-kubernetes'
+          package-name: 'graph-kubernetes-workflow-test'
           docker-username: ${{ secrets.DOCKERHUB_USERNAME }}
           docker-password: ${{ secrets.DOCKERHUB_TOKEN }}
