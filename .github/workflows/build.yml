@@ -83,7 +83,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - id: publish-image
-        uses: jupiterone/publish-integration-image-action@v1-beta
+        uses: jupiterone/publish-integration-image-action@v1.0.1-beta
         with:
           package-name: 'jupiterone/graph-kubernetes'
           docker-username: ${{ secrets.DOCKERHUB_USERNAME }}
