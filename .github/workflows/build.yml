@@ -77,3 +77,11 @@ jobs:
           echo "//registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}" > .npmrc
           yarn
           npm publish
+    
+  publish-image:
+    uses: jupiterone/.github/.github/workflows/publish_integration_docker_image.yaml@v1.0.0
+    with:
+      package-name: 'jupiterone/graph-kubernetes'
+    secrets:
+      DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
