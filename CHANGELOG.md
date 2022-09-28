@@ -8,6 +8,12 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 1.0.1 - 2022-09-28
+
+### Changed
+
+- using jupiterone organization's publish image github workflow on merge to main
+
 ## 1.0.0 - 2022-09-01
 
 ### Added
