@@ -8,6 +8,10 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 1.0.2 - 2022-09-29
+
+- no change, publishing image
+
 ## 1.0.1 - 2022-09-28
 
 ### Changed
