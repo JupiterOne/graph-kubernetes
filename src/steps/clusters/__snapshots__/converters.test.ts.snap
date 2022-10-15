@@ -5,19 +5,23 @@ Object {
   "_class": Array [
     "Cluster",
   ],
-  "_key": "kube_cluster:undefined",
+  "_key": "kube_cluster:dummy-data",
   "_rawData": Array [
     Object {
       "name": "default",
-      "rawData": "example integration",
+      "rawData": Object {
+        "name": "dummy-data",
+        "server": "dummy-data",
+        "skipTLSVerify": false,
+      },
     },
   ],
   "_type": "kube_cluster",
   "caData": undefined,
   "createdOn": undefined,
-  "displayName": undefined,
-  "name": undefined,
-  "server": undefined,
-  "skipTlsVerify": undefined,
+  "displayName": "dummy-data",
+  "name": "dummy-data",
+  "server": "dummy-data",
+  "skipTlsVerify": false,
 }
 `;
