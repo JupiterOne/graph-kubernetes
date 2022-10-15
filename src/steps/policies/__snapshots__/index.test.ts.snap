@@ -509,19 +509,26 @@ Object {
       "_class": Array [
         "Cluster",
       ],
-      "_key": "kube_cluster:local-integration-instance",
+      "_key": "kube_cluster:docker-desktop",
       "_rawData": Array [
         Object {
           "name": "default",
           "rawData": Object {
-            "name": "Local Integration",
+            "caData": "abc",
+            "caFile": undefined,
+            "name": "docker-desktop",
+            "server": "https://192.168.49.2:8443",
+            "skipTLSVerify": false,
           },
         },
       ],
       "_type": "kube_cluster",
+      "caData": "abc",
       "createdOn": undefined,
-      "displayName": "Local Integration",
-      "name": "Local Integration",
+      "displayName": "docker-desktop",
+      "name": "docker-desktop",
+      "server": "https://192.168.49.2:8443",
+      "skipTlsVerify": false,
     },
     Object {
       "_class": Array [
@@ -676,8 +683,8 @@ Object {
   "collectedRelationships": Array [
     Object {
       "_class": "CONTAINS",
-      "_fromEntityKey": "kube_cluster:local-integration-instance",
-      "_key": "kube_cluster:local-integration-instance|contains|d2ddbbb0-5714-4597-bc8b-cc521a978870",
+      "_fromEntityKey": "kube_cluster:docker-desktop",
+      "_key": "kube_cluster:docker-desktop|contains|d2ddbbb0-5714-4597-bc8b-cc521a978870",
       "_toEntityKey": "d2ddbbb0-5714-4597-bc8b-cc521a978870",
       "_type": "kube_cluster_contains_pod_security_policy",
       "displayName": "CONTAINS",
