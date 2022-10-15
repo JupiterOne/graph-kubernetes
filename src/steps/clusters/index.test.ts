@@ -33,6 +33,8 @@ describe('#fetchClusterDetails', () => {
                 },
                 name: { type: 'string' },
                 displayName: { type: 'string' },
+                server: { type: 'string' },
+                skipTlsVerify: { type: 'boolean' },
               },
             },
           },
