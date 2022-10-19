@@ -8,6 +8,12 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 1.1.0 - 2022-10-19
+
+### Added
+
+- Added additional properties on the `kube_cluster` entity.
+
 ## 1.0.2 - 2022-09-29
 
 - no change, publishing image
