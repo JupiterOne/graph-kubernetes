@@ -5,18 +5,22 @@ Object {
   "_class": Array [
     "Cluster",
   ],
-  "_key": "kube_cluster:example-integration",
+  "_key": "kube_cluster:dummy-data",
   "_rawData": Array [
     Object {
       "name": "default",
       "rawData": Object {
-        "name": "example integration",
+        "name": "dummy-data",
+        "server": "dummy-data",
+        "skipTLSVerify": false,
       },
     },
   ],
   "_type": "kube_cluster",
   "createdOn": undefined,
-  "displayName": "example integration",
-  "name": "example integration",
+  "displayName": "dummy-data",
+  "name": "dummy-data",
+  "server": "dummy-data",
+  "skipTlsVerify": false,
 }
 `;

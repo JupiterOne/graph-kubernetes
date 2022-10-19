@@ -6,9 +6,10 @@ import {
   RelationshipClass,
   RelationshipDirection,
 } from '@jupiterone/integration-sdk-core';
-import { V1ConfigMap } from '@kubernetes/client-node';
+import { Cluster, V1ConfigMap } from '@kubernetes/client-node';
 import fetch from 'node-fetch';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
+import { CoreClient } from '../../kubernetes/clients/core';
 import {
   CLUSTER_ENTITY_DATA_KEY,
   Entities,
@@ -22,9 +23,11 @@ export async function fetchClusterDetails(
   context: IntegrationStepContext,
 ): Promise<void> {
   const { instance, jobState } = context;
-  const { name, id } = instance;
 
-  const clusterEntity = createClusterEntity(name, id);
+  const client = new CoreClient(instance.config);
+  const cluster = client.kubeConfig.getCurrentCluster();
+
+  const clusterEntity = createClusterEntity(cluster as Cluster);
 
   await jobState.addEntity(clusterEntity);
   await jobState.setData(CLUSTER_ENTITY_DATA_KEY, clusterEntity);

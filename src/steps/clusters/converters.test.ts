@@ -1,11 +1,13 @@
+import { Cluster } from '@kubernetes/client-node';
 import { createClusterEntity } from './converters';
 
 describe('#createClusterEntity', () => {
   test('should convert data', () => {
-    const mockInstanceName = 'example integration';
-    const mockInstanceId = 'example-integration';
-    expect(
-      createClusterEntity(mockInstanceName, mockInstanceId),
-    ).toMatchSnapshot();
+    const cluster: Cluster = {
+      name: 'dummy-data',
+      server: 'dummy-data',
+      skipTLSVerify: false,
+    };
+    expect(createClusterEntity(cluster)).toMatchSnapshot();
   });
 });
