@@ -1,12 +1,12 @@
 import {
   createDirectRelationship,
-  IntegrationStep,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
 import { CoreClient } from '../../kubernetes/clients/core';
-import { IntegrationConfig, IntegrationStepContext } from '../../config';
+import { IntegrationStepContext } from '../../config';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { createServiceEntity } from './converters';
+import { KubernetesIntegrationStep } from '../../types';
 
 export async function fetchServices(
   context: IntegrationStepContext,
@@ -39,7 +39,7 @@ export async function fetchServices(
   );
 }
 
-export const serviceSteps: IntegrationStep<IntegrationConfig>[] = [
+export const serviceSteps: KubernetesIntegrationStep[] = [
   {
     id: IntegrationSteps.SERVICES,
     name: 'Fetch Services',
@@ -47,5 +47,12 @@ export const serviceSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [Relationships.NAMESPACE_CONTAINS_SERVICE],
     dependsOn: [IntegrationSteps.NAMESPACES],
     executionHandler: fetchServices,
+    permissions: [
+      {
+        apiGroups: [''],
+        resources: ['services'],
+        verbs: ['list'],
+      },
+    ],
   },
 ];

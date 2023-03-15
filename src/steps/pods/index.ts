@@ -1,10 +1,9 @@
 import {
   createDirectRelationship,
-  IntegrationStep,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
 import { CoreClient } from '../../kubernetes/clients/core';
-import { IntegrationConfig, IntegrationStepContext } from '../../config';
+import { IntegrationStepContext } from '../../config';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import {
   createContainerEntity,
@@ -12,6 +11,7 @@ import {
   getContainerKey,
 } from './converters';
 import { getNodeUidFromPod } from '../../util/jobState';
+import { KubernetesIntegrationStep } from '../../types';
 
 export async function fetchPods(
   context: IntegrationStepContext,
@@ -96,7 +96,7 @@ export async function fetchPods(
   );
 }
 
-export const podsSteps: IntegrationStep<IntegrationConfig>[] = [
+export const podsSteps: KubernetesIntegrationStep[] = [
   {
     id: IntegrationSteps.PODS,
     name: 'Fetch Pods',
@@ -115,5 +115,12 @@ export const podsSteps: IntegrationStep<IntegrationConfig>[] = [
       IntegrationSteps.STATEFULSETS,
     ],
     executionHandler: fetchPods,
+    permissions: [
+      {
+        apiGroups: [''],
+        resources: ['pods'],
+        verbs: ['list'],
+      },
+    ],
   },
 ];

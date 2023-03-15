@@ -1,10 +1,10 @@
 import {
   createDirectRelationship,
-  IntegrationStep,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
-import { IntegrationConfig, IntegrationStepContext } from '../../config';
+import { IntegrationStepContext } from '../../config';
 import { CoreClient } from '../../kubernetes/clients/core';
+import { KubernetesIntegrationStep } from '../../types';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { createSecretEntity } from './converters';
 
@@ -40,7 +40,7 @@ export async function fetchSecrets(
   );
 }
 
-export const secretsSteps: IntegrationStep<IntegrationConfig>[] = [
+export const secretsSteps: KubernetesIntegrationStep[] = [
   {
     id: IntegrationSteps.SECRETS,
     name: 'Fetch Secrets',
@@ -48,5 +48,12 @@ export const secretsSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [Relationships.NAMESPACE_CONTAINS_SECRET],
     dependsOn: [IntegrationSteps.NAMESPACES],
     executionHandler: fetchSecrets,
+    permissions: [
+      {
+        apiGroups: [''],
+        resources: ['secrets'],
+        verbs: ['list'],
+      },
+    ],
   },
 ];

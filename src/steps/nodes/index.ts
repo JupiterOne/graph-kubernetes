@@ -1,9 +1,9 @@
-import { IntegrationStep } from '@jupiterone/integration-sdk-core';
 import { CoreClient } from '../../kubernetes/clients/core';
-import { IntegrationConfig, IntegrationStepContext } from '../../config';
+import { IntegrationStepContext } from '../../config';
 import { Entities, IntegrationSteps } from '../constants';
 import { createNodeEntity } from './converters';
 import { cacheNodeNameToUid } from '../../util/jobState';
+import { KubernetesIntegrationStep } from '../../types';
 
 export async function fetchNodes(
   context: IntegrationStepContext,
@@ -20,7 +20,7 @@ export async function fetchNodes(
   });
 }
 
-export const nodeSteps: IntegrationStep<IntegrationConfig>[] = [
+export const nodeSteps: KubernetesIntegrationStep[] = [
   {
     id: IntegrationSteps.NODES,
     name: 'Fetch Nodes',
@@ -28,5 +28,12 @@ export const nodeSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [],
     dependsOn: [],
     executionHandler: fetchNodes,
+    permissions: [
+      {
+        apiGroups: [''],
+        resources: ['nodes'],
+        verbs: ['list'],
+      },
+    ],
   },
 ];

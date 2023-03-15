@@ -1,8 +1,8 @@
-import { IntegrationStep } from '@jupiterone/integration-sdk-core';
 import { CoreClient } from '../../kubernetes/clients/core';
-import { IntegrationConfig, IntegrationStepContext } from '../../config';
+import { IntegrationStepContext } from '../../config';
 import { Entities, IntegrationSteps } from '../constants';
 import { createNamespaceEntity } from './converters';
+import { KubernetesIntegrationStep } from '../../types';
 
 export async function fetchNamespaces(
   context: IntegrationStepContext,
@@ -18,7 +18,7 @@ export async function fetchNamespaces(
   });
 }
 
-export const namespaceSteps: IntegrationStep<IntegrationConfig>[] = [
+export const namespaceSteps: KubernetesIntegrationStep[] = [
   {
     id: IntegrationSteps.NAMESPACES,
     name: 'Fetch Namespaces',
@@ -26,5 +26,12 @@ export const namespaceSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [],
     dependsOn: [],
     executionHandler: fetchNamespaces,
+    permissions: [
+      {
+        apiGroups: [''],
+        resources: ['namespaces'],
+        verbs: ['list'],
+      },
+    ],
   },
 ];

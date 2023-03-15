@@ -1,10 +1,10 @@
 import {
   createDirectRelationship,
-  IntegrationStep,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
-import { IntegrationConfig, IntegrationStepContext } from '../../config';
+import { IntegrationStepContext } from '../../config';
 import { BatchClient } from '../../kubernetes/clients/batch';
+import { KubernetesIntegrationStep } from '../../types';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { createJobEntity } from './converters';
 
@@ -57,7 +57,7 @@ export async function fetchJobs(
   );
 }
 
-export const jobsSteps: IntegrationStep<IntegrationConfig>[] = [
+export const jobsSteps: KubernetesIntegrationStep[] = [
   {
     id: IntegrationSteps.JOBS,
     name: 'Fetch Jobs',
@@ -68,5 +68,12 @@ export const jobsSteps: IntegrationStep<IntegrationConfig>[] = [
     ],
     dependsOn: [IntegrationSteps.NAMESPACES, IntegrationSteps.CRONJOBS],
     executionHandler: fetchJobs,
+    permissions: [
+      {
+        apiGroups: ['batch'],
+        resources: ['jobs'],
+        verbs: ['list'],
+      },
+    ],
   },
 ];

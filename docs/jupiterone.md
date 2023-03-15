@@ -261,3 +261,15 @@ END OF GENERATED DOCUMENTATION AFTER BELOW MARKER
 ********************************************************************************
 -->
 <!-- {J1_DOCUMENTATION_MARKER_END} -->
+
+If you prefer to use Kubernetes RBAC to enable specific permissions, please use
+the following table to create the required yaml.
+
+<!-- {J1_PERMISSIONS_DOCUMENTATION_MARKER_START} -->
+
+| apiGroups                                                          | resources                                                                                                                                                                                                                                                        | verbs    |
+| ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| ["","apps","batch","network","policy","rbac.authorization.k8s.io"] | ["clusterrolebindings","clusterroles","configmaps","cronjobs","daemonsets","deployments","jobs","namespaces","networkpolicies","nodes","podsecuritypolicies","replicasets","rolebindings","roles","secrets","serviceaccounts","services","statefulsets","users"] | ["list"] |
+| [""]                                                               | ["clusters"]                                                                                                                                                                                                                                                     | ["get"]  |
+
+<!-- {J1_PERMISSIONS_DOCUMENTATION_MARKER_END} -->

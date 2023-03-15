@@ -2,14 +2,14 @@ import {
   createDirectRelationship,
   createMappedRelationship,
   Entity,
-  IntegrationStep,
   RelationshipClass,
   RelationshipDirection,
 } from '@jupiterone/integration-sdk-core';
 import { Cluster, V1ConfigMap } from '@kubernetes/client-node';
 import fetch from 'node-fetch';
-import { IntegrationConfig, IntegrationStepContext } from '../../config';
+import { IntegrationStepContext } from '../../config';
 import { CoreClient } from '../../kubernetes/clients/core';
+import { KubernetesIntegrationStep } from '../../types';
 import {
   CLUSTER_ENTITY_DATA_KEY,
   Entities,
@@ -197,7 +197,7 @@ export async function buildClusterGkeRelationships(
   }
 }
 
-export const clustersSteps: IntegrationStep<IntegrationConfig>[] = [
+export const clustersSteps: KubernetesIntegrationStep[] = [
   {
     id: IntegrationSteps.CLUSTERS,
     name: 'Fetch Cluster',
@@ -205,6 +205,13 @@ export const clustersSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [],
     dependsOn: [],
     executionHandler: fetchClusterDetails,
+    permissions: [
+      {
+        apiGroups: [''],
+        resources: ['clusters'],
+        verbs: ['get'],
+      },
+    ],
   },
   {
     id: IntegrationSteps.BUILD_CLUSTER_RESOURCES_RELATIONSHIPS,

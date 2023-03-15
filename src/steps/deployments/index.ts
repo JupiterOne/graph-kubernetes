@@ -1,12 +1,11 @@
 import {
   createDirectRelationship,
   Entity,
-  IntegrationStep,
   JobState,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
 import { AppsClient } from '../../kubernetes/clients/apps';
-import { IntegrationConfig, IntegrationStepContext } from '../../config';
+import { IntegrationStepContext } from '../../config';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import {
   createContainerSpecEntity,
@@ -16,6 +15,7 @@ import {
   getVolumeKey,
 } from './converters';
 import { V1VolumeMount } from '@kubernetes/client-node';
+import { KubernetesIntegrationStep } from '../../types';
 
 type BuildContainerSpecVolumeRelationshipsParams = {
   jobState: JobState;
@@ -115,7 +115,7 @@ export async function fetchDeployments(
   );
 }
 
-export const deploymentsSteps: IntegrationStep<IntegrationConfig>[] = [
+export const deploymentsSteps: KubernetesIntegrationStep[] = [
   {
     id: IntegrationSteps.DEPLOYMENTS,
     name: 'Fetch Deployments',
@@ -127,5 +127,12 @@ export const deploymentsSteps: IntegrationStep<IntegrationConfig>[] = [
     ],
     dependsOn: [IntegrationSteps.NAMESPACES],
     executionHandler: fetchDeployments,
+    permissions: [
+      {
+        apiGroups: ['apps'],
+        resources: ['deployments'],
+        verbs: ['list'],
+      },
+    ],
   },
 ];

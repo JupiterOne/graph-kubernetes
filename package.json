@@ -25,7 +25,8 @@
     "test:ci": "yarn lint && yarn type-check && yarn test",
     "build": "tsc -p tsconfig.dist.json --declaration",
     "prepush": "yarn lint && yarn type-check && yarn test --changedSince main",
-    "prepack": "yarn build"
+    "prepack": "yarn build",
+    "document:permissions": " yarn ts-node commands/documentPermissions.ts documentPermissions"
   },
   "devDependencies": {
     "@jupiterone/integration-sdk-testing": "^8.22.6"

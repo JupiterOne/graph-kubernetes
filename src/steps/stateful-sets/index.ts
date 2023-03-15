@@ -1,10 +1,10 @@
 import {
   createDirectRelationship,
-  IntegrationStep,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
-import { IntegrationConfig, IntegrationStepContext } from '../../config';
+import { IntegrationStepContext } from '../../config';
 import { AppsClient } from '../../kubernetes/clients/apps';
+import { KubernetesIntegrationStep } from '../../types';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { createStatefulSetEntity } from './converters';
 
@@ -40,7 +40,7 @@ export async function fetchStatefulSets(
   );
 }
 
-export const statefulSetsSteps: IntegrationStep<IntegrationConfig>[] = [
+export const statefulSetsSteps: KubernetesIntegrationStep[] = [
   {
     id: IntegrationSteps.STATEFULSETS,
     name: 'Fetch StatefulSets',
@@ -52,5 +52,12 @@ export const statefulSetsSteps: IntegrationStep<IntegrationConfig>[] = [
     ],
     dependsOn: [IntegrationSteps.NAMESPACES],
     executionHandler: fetchStatefulSets,
+    permissions: [
+      {
+        apiGroups: ['apps'],
+        resources: ['statefulsets'],
+        verbs: ['list'],
+      },
+    ],
   },
 ];

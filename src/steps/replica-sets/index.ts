@@ -1,12 +1,12 @@
 import {
   createDirectRelationship,
-  IntegrationStep,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
-import { IntegrationConfig, IntegrationStepContext } from '../../config';
+import { IntegrationStepContext } from '../../config';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { AppsClient } from '../../kubernetes/clients/apps';
 import { createReplicaSetEntity } from './converters';
+import { KubernetesIntegrationStep } from '../../types';
 
 export async function fetchReplicaSets(
   context: IntegrationStepContext,
@@ -55,7 +55,7 @@ export async function fetchReplicaSets(
   );
 }
 
-export const replicaSetsSteps: IntegrationStep<IntegrationConfig>[] = [
+export const replicaSetsSteps: KubernetesIntegrationStep[] = [
   {
     id: IntegrationSteps.REPLICASETS,
     name: 'Fetch ReplicaSets',
@@ -66,5 +66,12 @@ export const replicaSetsSteps: IntegrationStep<IntegrationConfig>[] = [
     ],
     dependsOn: [IntegrationSteps.NAMESPACES, IntegrationSteps.DEPLOYMENTS],
     executionHandler: fetchReplicaSets,
+    permissions: [
+      {
+        apiGroups: ['apps'],
+        resources: ['replicasets'],
+        verbs: ['list'],
+      },
+    ],
   },
 ];

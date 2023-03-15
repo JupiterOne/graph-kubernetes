@@ -1,12 +1,12 @@
 import {
   createDirectRelationship,
-  IntegrationStep,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
 import { CoreClient } from '../../kubernetes/clients/core';
-import { IntegrationConfig, IntegrationStepContext } from '../../config';
+import { IntegrationStepContext } from '../../config';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { createServiceAccountEntity, createUserEntity } from './converters';
+import { KubernetesIntegrationStep } from '../../types';
 
 export async function fetchServiceAccounts(
   context: IntegrationStepContext,
@@ -55,7 +55,7 @@ export async function fetchUsers(
   });
 }
 
-export const subjectsSteps: IntegrationStep<IntegrationConfig>[] = [
+export const subjectsSteps: KubernetesIntegrationStep[] = [
   {
     id: IntegrationSteps.SERVICE_ACCOUNTS,
     name: 'Fetch Service Accounts',
@@ -63,6 +63,13 @@ export const subjectsSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [Relationships.NAMESPACE_CONTAINS_SERVICE_ACCOUNT],
     dependsOn: [IntegrationSteps.NAMESPACES],
     executionHandler: fetchServiceAccounts,
+    permissions: [
+      {
+        apiGroups: [''],
+        resources: ['serviceaccounts'],
+        verbs: ['list'],
+      },
+    ],
   },
   {
     id: IntegrationSteps.USERS,
@@ -71,5 +78,12 @@ export const subjectsSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [],
     dependsOn: [],
     executionHandler: fetchUsers,
+    permissions: [
+      {
+        apiGroups: [''],
+        resources: ['users'],
+        verbs: ['list'],
+      },
+    ],
   },
 ];

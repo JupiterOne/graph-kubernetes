@@ -1,10 +1,10 @@
 import {
   createDirectRelationship,
-  IntegrationStep,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
-import { IntegrationConfig, IntegrationStepContext } from '../../config';
+import { IntegrationStepContext } from '../../config';
 import { CoreClient } from '../../kubernetes/clients/core';
+import { KubernetesIntegrationStep } from '../../types';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { createConfigMapEntity } from './converters';
 
@@ -40,7 +40,7 @@ export async function fetchConfigMaps(
   );
 }
 
-export const configMapsSteps: IntegrationStep<IntegrationConfig>[] = [
+export const configMapsSteps: KubernetesIntegrationStep[] = [
   {
     id: IntegrationSteps.CONFIGMAPS,
     name: 'Fetch ConfigMaps',
@@ -48,5 +48,12 @@ export const configMapsSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [Relationships.NAMESPACE_CONTAINS_CONFIGMAP],
     dependsOn: [IntegrationSteps.NAMESPACES],
     executionHandler: fetchConfigMaps,
+    permissions: [
+      {
+        apiGroups: [''],
+        resources: ['configmaps'],
+        verbs: ['list'],
+      },
+    ],
   },
 ];

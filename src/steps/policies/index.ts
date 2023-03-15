@@ -1,10 +1,9 @@
 import {
   createDirectRelationship,
   RelationshipClass,
-  IntegrationStep,
   Entity,
 } from '@jupiterone/integration-sdk-core';
-import { IntegrationConfig, IntegrationStepContext } from '../../config';
+import { IntegrationStepContext } from '../../config';
 import {
   CLUSTER_ENTITY_DATA_KEY,
   Entities,
@@ -17,6 +16,7 @@ import {
   createPodSecurityPolicyEntity,
 } from './converters';
 import { NetworkClient } from '../../kubernetes/clients/network';
+import { KubernetesIntegrationStep } from '../../types';
 
 export async function fetchPodSecurityPolicies(
   context: IntegrationStepContext,
@@ -74,7 +74,7 @@ export async function fetchNetworkPolicies(
   );
 }
 
-export const policiesSteps: IntegrationStep<IntegrationConfig>[] = [
+export const policiesSteps: KubernetesIntegrationStep[] = [
   {
     id: IntegrationSteps.POD_SECURITY_POLICIES,
     name: 'Fetch Pod Security Policies',
@@ -82,6 +82,13 @@ export const policiesSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [Relationships.CLUSTER_CONTAINS_POD_SECURITY_POLICY],
     dependsOn: [IntegrationSteps.CLUSTERS],
     executionHandler: fetchPodSecurityPolicies,
+    permissions: [
+      {
+        apiGroups: ['policy'],
+        resources: ['podsecuritypolicies'],
+        verbs: ['list'],
+      },
+    ],
   },
   {
     id: IntegrationSteps.NETWORK_POLICIES,
@@ -90,5 +97,12 @@ export const policiesSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [Relationships.NAMESPACE_CONTAINS_NETWORK_POLICY],
     dependsOn: [IntegrationSteps.NAMESPACES],
     executionHandler: fetchNetworkPolicies,
+    permissions: [
+      {
+        apiGroups: ['network'],
+        resources: ['networkpolicies'],
+        verbs: ['list'],
+      },
+    ],
   },
 ];

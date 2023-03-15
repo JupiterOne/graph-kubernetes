@@ -1,10 +1,10 @@
 import {
   createDirectRelationship,
-  IntegrationStep,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
-import { IntegrationConfig, IntegrationStepContext } from '../../config';
+import { IntegrationStepContext } from '../../config';
 import { Batch1BetaClient } from '../../kubernetes/clients/batch1beta';
+import { KubernetesIntegrationStep } from '../../types';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { createCronJobEntity } from './converters';
 
@@ -40,7 +40,7 @@ export async function fetchCronJobs(
   );
 }
 
-export const cronJobsSteps: IntegrationStep<IntegrationConfig>[] = [
+export const cronJobsSteps: KubernetesIntegrationStep[] = [
   {
     id: IntegrationSteps.CRONJOBS,
     name: 'Fetch CronJobs',
@@ -48,5 +48,12 @@ export const cronJobsSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [Relationships.NAMESPACE_CONTAINS_CRONJOB],
     dependsOn: [IntegrationSteps.NAMESPACES],
     executionHandler: fetchCronJobs,
+    permissions: [
+      {
+        apiGroups: ['batch'],
+        resources: ['cronjobs'],
+        verbs: ['list'],
+      },
+    ],
   },
 ];

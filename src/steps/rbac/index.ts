@@ -1,10 +1,9 @@
 import {
   createDirectRelationship,
   Entity,
-  IntegrationStep,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
-import { IntegrationConfig, IntegrationStepContext } from '../../config';
+import { IntegrationStepContext } from '../../config';
 import {
   CLUSTER_ENTITY_DATA_KEY,
   Entities,
@@ -18,6 +17,7 @@ import {
   createRoleBindingEntity,
   createRoleEntity,
 } from './converters';
+import { KubernetesIntegrationStep } from '../../types';
 
 export async function fetchRoles(
   context: IntegrationStepContext,
@@ -140,7 +140,7 @@ export async function fetchClusterRoleBindings(
   });
 }
 
-export const clusterRoleBindingsSteps: IntegrationStep<IntegrationConfig>[] = [
+export const clusterRoleBindingsSteps: KubernetesIntegrationStep[] = [
   {
     id: IntegrationSteps.ROLES,
     name: 'Fetch Roles',
@@ -148,6 +148,13 @@ export const clusterRoleBindingsSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [Relationships.NAMESPACE_CONTAINS_ROLE],
     dependsOn: [IntegrationSteps.NAMESPACES],
     executionHandler: fetchRoles,
+    permissions: [
+      {
+        apiGroups: ['rbac.authorization.k8s.io'],
+        resources: ['roles'],
+        verbs: ['list'],
+      },
+    ],
   },
   {
     id: IntegrationSteps.CLUSTER_ROLES,
@@ -156,6 +163,13 @@ export const clusterRoleBindingsSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [Relationships.CLUSTER_CONTAINS_CLUSTER_ROLE],
     dependsOn: [IntegrationSteps.CLUSTERS],
     executionHandler: fetchClusterRoles,
+    permissions: [
+      {
+        apiGroups: ['rbac.authorization.k8s.io'],
+        resources: ['clusterroles'],
+        verbs: ['list'],
+      },
+    ],
   },
   {
     id: IntegrationSteps.ROLE_BINDINGS,
@@ -164,6 +178,13 @@ export const clusterRoleBindingsSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [Relationships.NAMESPACE_CONTAINS_ROLE_BINDING],
     dependsOn: [IntegrationSteps.NAMESPACES],
     executionHandler: fetchRoleBindings,
+    permissions: [
+      {
+        apiGroups: ['rbac.authorization.k8s.io'],
+        resources: ['rolebindings'],
+        verbs: ['list'],
+      },
+    ],
   },
   {
     id: IntegrationSteps.CLUSTER_ROLE_BINDINGS,
@@ -172,5 +193,12 @@ export const clusterRoleBindingsSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [Relationships.CLUSTER_CONTAINS_CLUSTER_ROLE_BINDING],
     dependsOn: [IntegrationSteps.CLUSTERS],
     executionHandler: fetchClusterRoleBindings,
+    permissions: [
+      {
+        apiGroups: ['rbac.authorization.k8s.io'],
+        resources: ['clusterrolebindings'],
+        verbs: ['list'],
+      },
+    ],
   },
 ];

@@ -1,10 +1,10 @@
 import {
   createDirectRelationship,
-  IntegrationStep,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
-import { IntegrationConfig, IntegrationStepContext } from '../../config';
+import { IntegrationStepContext } from '../../config';
 import { AppsClient } from '../../kubernetes/clients/apps';
+import { KubernetesIntegrationStep } from '../../types';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { createDaemonSetEntity } from './converters';
 
@@ -40,7 +40,7 @@ export async function fetchDaemonSets(
   );
 }
 
-export const daemonSetsSteps: IntegrationStep<IntegrationConfig>[] = [
+export const daemonSetsSteps: KubernetesIntegrationStep[] = [
   {
     id: IntegrationSteps.DAEMONSETS,
     name: 'Fetch DaemonSets',
@@ -48,5 +48,12 @@ export const daemonSetsSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [Relationships.NAMESPACE_CONTAINS_DAEMONSET],
     dependsOn: [IntegrationSteps.NAMESPACES],
     executionHandler: fetchDaemonSets,
+    permissions: [
+      {
+        apiGroups: ['apps'],
+        resources: ['daemonsets'],
+        verbs: ['list'],
+      },
+    ],
   },
 ];
