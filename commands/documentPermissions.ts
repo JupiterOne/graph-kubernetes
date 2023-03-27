@@ -102,7 +102,6 @@ function getDocumentationFile(documentationFilePath: string) {
 
 function getNewDocumentationVersion(): string | undefined {
   const LIST_RESOURCES_VERB = 'list';
-  // const GET_RESOURCES_VERB = 'get';
 
   const { integrationSteps } = invocationConfig;
 
@@ -153,7 +152,7 @@ function getTableMarkdown(permissionsList: DocumentationPermission[]): string {
         .map((apiGroup) => `"${apiGroup}"`)}]`,
       `[${Array.from(permission.resources)
         .sort((a, b) => a.localeCompare(b))
-        .map((resource) => `"${resource}"`)}]`,
+        .map((resource) => `"${resource}" `)}]`,
       `[${Array.from(permission.verbs)
         .sort((a, b) => a.localeCompare(b))
         .map((verb) => `"${verb}"`)}]`,

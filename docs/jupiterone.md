@@ -267,9 +267,27 @@ the following table to create the required yaml.
 
 <!-- {J1_PERMISSIONS_DOCUMENTATION_MARKER_START} -->
 
-| apiGroups                                                          | resources                                                                                                                                                                                                                                                        | verbs    |
-| ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
-| ["","apps","batch","network","policy","rbac.authorization.k8s.io"] | ["clusterrolebindings","clusterroles","configmaps","cronjobs","daemonsets","deployments","jobs","namespaces","networkpolicies","nodes","podsecuritypolicies","replicasets","rolebindings","roles","secrets","serviceaccounts","services","statefulsets","users"] | ["list"] |
-| [""]                                                               | ["clusters"]                                                                                                                                                                                                                                                     | ["get"]  |
+| apiGroups                                                          | resources                                                                                                                                                                                                                                                                           | verbs    |
+| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| ["","apps","batch","network","policy","rbac.authorization.k8s.io"] | ["clusterrolebindings" ,"clusterroles" ,"configmaps" ,"cronjobs" ,"daemonsets" ,"deployments" ,"jobs" ,"namespaces" ,"networkpolicies" ,"nodes" ,"podsecuritypolicies" ,"replicasets" ,"rolebindings" ,"roles" ,"secrets" ,"serviceaccounts" ,"services" ,"statefulsets" ,"users" ] | ["list"] |
+| [""]                                                               | ["clusters" ]                                                                                                                                                                                                                                                                       | ["get"]  |
 
 <!-- {J1_PERMISSIONS_DOCUMENTATION_MARKER_END} -->
+
+This is an example of how a RBAC role declaration looks like. Please take into
+account that `""` api group refers to the root API group.
+
+```
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: default
+  name: pod-reader
+rules:
+- apiGroups: [""] # "" indicates the core API group
+  resources: ["pods"]
+  verbs: ["get", "watch", "list"]
+```
+
+For more information please refer to the
+[Kubernetes RBAC documentation](https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
