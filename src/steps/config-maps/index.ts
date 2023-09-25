@@ -4,9 +4,9 @@ import {
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
-import { CoreClient } from '../../kubernetes/clients/core';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { createConfigMapEntity } from './converters';
+import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
 
 export async function fetchConfigMaps(
   context: IntegrationStepContext,
@@ -14,7 +14,7 @@ export async function fetchConfigMaps(
   const { instance, jobState } = context;
   const { config } = instance;
 
-  const client = new CoreClient(config);
+  const client = getOrCreateAPIClient(config);
 
   await jobState.iterateEntities(
     {

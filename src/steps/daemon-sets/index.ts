@@ -4,9 +4,9 @@ import {
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
-import { AppsClient } from '../../kubernetes/clients/apps';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { createDaemonSetEntity } from './converters';
+import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
 
 export async function fetchDaemonSets(
   context: IntegrationStepContext,
@@ -14,7 +14,7 @@ export async function fetchDaemonSets(
   const { instance, jobState } = context;
   const { config } = instance;
 
-  const client = new AppsClient(config);
+  const client = getOrCreateAPIClient(config);
 
   await jobState.iterateEntities(
     {

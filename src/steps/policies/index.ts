@@ -11,12 +11,11 @@ import {
   IntegrationSteps,
   Relationships,
 } from '../constants';
-import { PolicyClient } from '../../kubernetes/clients/policy';
 import {
   createNetworkPolicyEntity,
   createPodSecurityPolicyEntity,
 } from './converters';
-import { NetworkClient } from '../../kubernetes/clients/network';
+import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
 
 export async function fetchPodSecurityPolicies(
   context: IntegrationStepContext,
@@ -24,7 +23,7 @@ export async function fetchPodSecurityPolicies(
   const { instance, jobState } = context;
   const { config } = instance;
 
-  const client = new PolicyClient(config);
+  const client = getOrCreateAPIClient(config);
 
   const clusterEntity = (await jobState.getData(
     CLUSTER_ENTITY_DATA_KEY,
@@ -49,7 +48,7 @@ export async function fetchNetworkPolicies(
   const { instance, jobState } = context;
   const { config } = instance;
 
-  const client = new NetworkClient(config);
+  const client = getOrCreateAPIClient(config);
 
   await jobState.iterateEntities(
     {

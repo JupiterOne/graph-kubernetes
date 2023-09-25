@@ -3,7 +3,7 @@ import {
   IntegrationValidationError,
 } from '@jupiterone/integration-sdk-core';
 import { IntegrationConfig } from './config';
-import { CoreClient } from './kubernetes/clients/core';
+import getOrCreateAPIClient from './kubernetes/getOrCreateAPIClient';
 
 export async function validateInvocation(
   context: IntegrationExecutionContext<IntegrationConfig>,
@@ -23,6 +23,7 @@ export async function validateInvocation(
     );
   }
 
-  const coreClient = new CoreClient(config);
-  await coreClient.verifyAuthentication();
+  const client = getOrCreateAPIClient(config);
+  client.authenticate();
+  await client.verifyAuthentication();
 }

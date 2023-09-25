@@ -5,8 +5,8 @@ import {
 } from '@jupiterone/integration-sdk-core';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
-import { AppsClient } from '../../kubernetes/clients/apps';
 import { createReplicaSetEntity } from './converters';
+import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
 
 export async function fetchReplicaSets(
   context: IntegrationStepContext,
@@ -14,7 +14,7 @@ export async function fetchReplicaSets(
   const { instance, jobState } = context;
   const { config } = instance;
 
-  const client = new AppsClient(config);
+  const client = getOrCreateAPIClient(config);
 
   await jobState.iterateEntities(
     {

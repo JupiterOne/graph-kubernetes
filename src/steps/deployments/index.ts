@@ -5,7 +5,6 @@ import {
   JobState,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
-import { AppsClient } from '../../kubernetes/clients/apps';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import {
@@ -16,6 +15,7 @@ import {
   getVolumeKey,
 } from './converters';
 import { V1VolumeMount } from '@kubernetes/client-node';
+import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
 
 type BuildContainerSpecVolumeRelationshipsParams = {
   jobState: JobState;
@@ -55,7 +55,7 @@ export async function fetchDeployments(
   const { instance, jobState } = context;
   const { config } = instance;
 
-  const client = new AppsClient(config);
+  const client = getOrCreateAPIClient(config);
 
   await jobState.iterateEntities(
     {

@@ -11,13 +11,13 @@ import {
   IntegrationSteps,
   Relationships,
 } from '../constants';
-import { RbacAuthorizationClient } from '../../kubernetes/clients/rbac';
 import {
   createClusterRoleBindingEntity,
   createClusterRoleEntity,
   createRoleBindingEntity,
   createRoleEntity,
 } from './converters';
+import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
 
 export async function fetchRoles(
   context: IntegrationStepContext,
@@ -25,7 +25,7 @@ export async function fetchRoles(
   const { instance, jobState } = context;
   const { config } = instance;
 
-  const client = new RbacAuthorizationClient(config);
+  const client = getOrCreateAPIClient(config);
   await jobState.iterateEntities(
     {
       _type: Entities.NAMESPACE._type,
@@ -60,7 +60,7 @@ export async function fetchClusterRoles(
     CLUSTER_ENTITY_DATA_KEY,
   )) as Entity;
 
-  const client = new RbacAuthorizationClient(config);
+  const client = getOrCreateAPIClient(config);
   await client.iterateClusterRoles(async (clusterRole) => {
     const clusterRoleEntity = createClusterRoleEntity(clusterRole);
     await jobState.addEntity(clusterRoleEntity);
@@ -84,7 +84,7 @@ export async function fetchRoleBindings(
   const { instance, jobState } = context;
   const { config } = instance;
 
-  const client = new RbacAuthorizationClient(config);
+  const client = getOrCreateAPIClient(config);
 
   await jobState.iterateEntities(
     {
@@ -120,7 +120,7 @@ export async function fetchClusterRoleBindings(
     CLUSTER_ENTITY_DATA_KEY,
   )) as Entity;
 
-  const client = new RbacAuthorizationClient(config);
+  const client = getOrCreateAPIClient(config);
   await client.iterateClusterRoleBindings(async (clusterRoleBinding) => {
     const clusterRoleBindingEntity = createClusterRoleBindingEntity(
       clusterRoleBinding,

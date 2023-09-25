@@ -4,18 +4,15 @@ import {
   StepStartStates,
 } from '@jupiterone/integration-sdk-core';
 import { IntegrationConfig } from './config';
-import {
-  AuthorizationClient,
-  ResourceType,
-  VerbType,
-} from './kubernetes/clients/authorization';
 import { IntegrationSteps } from './steps/constants';
 import { validateInvocation } from './validator';
+import getOrCreateAPIClient from './kubernetes/getOrCreateAPIClient';
+import { Client, ResourceType, VerbType } from './kubernetes/client';
 
 async function getServiceState(
   resource: ResourceType,
   verb: VerbType,
-  client: AuthorizationClient,
+  client: Client,
 ) {
   const serviceAccess = await client.fetchSubjectServiceAccess(resource, verb);
 
@@ -29,7 +26,7 @@ export default async function getStepStartStates(
   const { instance, logger } = context;
   const { config } = instance;
 
-  const client = new AuthorizationClient(config);
+  const client = getOrCreateAPIClient(config);
 
   try {
     const [

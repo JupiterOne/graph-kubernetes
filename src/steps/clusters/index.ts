@@ -9,7 +9,6 @@ import {
 import { Cluster, V1ConfigMap } from '@kubernetes/client-node';
 import fetch from 'node-fetch';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
-import { CoreClient } from '../../kubernetes/clients/core';
 import {
   CLUSTER_ENTITY_DATA_KEY,
   Entities,
@@ -18,13 +17,14 @@ import {
   Relationships,
 } from '../constants';
 import { createClusterEntity } from './converters';
+import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
 
 export async function fetchClusterDetails(
   context: IntegrationStepContext,
 ): Promise<void> {
   const { instance, jobState } = context;
 
-  const client = new CoreClient(instance.config);
+  const client = getOrCreateAPIClient(instance.config);
   const cluster = client.kubeConfig.getCurrentCluster();
 
   const clusterEntity = createClusterEntity(cluster as Cluster);
