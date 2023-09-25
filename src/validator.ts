@@ -24,6 +24,5 @@ export async function validateInvocation(
   }
 
   const client = getOrCreateAPIClient(config);
-  client.authenticate();
   await client.verifyAuthentication();
 }

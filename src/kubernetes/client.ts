@@ -39,6 +39,8 @@ export class Client {
     this.config = config;
     this.kubeConfig = new k8s.KubeConfig();
 
+    this.authenticate();
+
     this.appsClient = this.kubeConfig.makeApiClient(k8s.AppsV1Api);
     this.authorizationClient = this.kubeConfig.makeApiClient(
       k8s.AuthorizationV1Api,
