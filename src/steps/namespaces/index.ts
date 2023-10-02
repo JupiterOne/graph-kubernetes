@@ -1,8 +1,8 @@
 import { IntegrationStep } from '@jupiterone/integration-sdk-core';
-import { CoreClient } from '../../kubernetes/clients/core';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
 import { Entities, IntegrationSteps } from '../constants';
 import { createNamespaceEntity } from './converters';
+import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
 
 export async function fetchNamespaces(
   context: IntegrationStepContext,
@@ -10,7 +10,7 @@ export async function fetchNamespaces(
   const { instance, jobState } = context;
   const { config } = instance;
 
-  const client = new CoreClient(config);
+  const client = getOrCreateAPIClient(config);
 
   await client.iterateNamespaces(async (namespace) => {
     const namespaceEntity = createNamespaceEntity(namespace);

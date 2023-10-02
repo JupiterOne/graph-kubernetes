@@ -3,10 +3,10 @@ import {
   IntegrationStep,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
-import { CoreClient } from '../../kubernetes/clients/core';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { createServiceAccountEntity, createUserEntity } from './converters';
+import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
 
 export async function fetchServiceAccounts(
   context: IntegrationStepContext,
@@ -14,7 +14,7 @@ export async function fetchServiceAccounts(
   const { instance, jobState } = context;
   const { config } = instance;
 
-  const client = new CoreClient(config);
+  const client = getOrCreateAPIClient(config);
 
   await jobState.iterateEntities(
     {
@@ -47,7 +47,7 @@ export async function fetchUsers(
   const { instance, jobState } = context;
   const { config } = instance;
 
-  const client = new CoreClient(config);
+  const client = getOrCreateAPIClient(config);
 
   await client.iterateUsers(async (user) => {
     const userEntity = createUserEntity(user);

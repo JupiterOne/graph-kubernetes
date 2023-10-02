@@ -4,9 +4,9 @@ import {
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
-import { BatchClient } from '../../kubernetes/clients/batch';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { createJobEntity } from './converters';
+import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
 
 export async function fetchJobs(
   context: IntegrationStepContext,
@@ -14,7 +14,7 @@ export async function fetchJobs(
   const { instance, jobState } = context;
   const { config } = instance;
 
-  const client = new BatchClient(config);
+  const client = getOrCreateAPIClient(config);
 
   await jobState.iterateEntities(
     {

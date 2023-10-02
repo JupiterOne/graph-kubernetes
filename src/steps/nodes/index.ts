@@ -1,9 +1,9 @@
 import { IntegrationStep } from '@jupiterone/integration-sdk-core';
-import { CoreClient } from '../../kubernetes/clients/core';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
 import { Entities, IntegrationSteps } from '../constants';
 import { createNodeEntity } from './converters';
 import { cacheNodeNameToUid } from '../../util/jobState';
+import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
 
 export async function fetchNodes(
   context: IntegrationStepContext,
@@ -11,7 +11,7 @@ export async function fetchNodes(
   const { instance, jobState } = context;
   const { config } = instance;
 
-  const client = new CoreClient(config);
+  const client = getOrCreateAPIClient(config);
 
   await client.iterateNodes(async (node) => {
     const nodeEntity = createNodeEntity(node);

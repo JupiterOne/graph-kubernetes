@@ -3,7 +3,6 @@ import {
   IntegrationStep,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
-import { CoreClient } from '../../kubernetes/clients/core';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
 import { Entities, IntegrationSteps, Relationships } from '../constants';
 import {
@@ -12,6 +11,7 @@ import {
   getContainerKey,
 } from './converters';
 import { getNodeUidFromPod } from '../../util/jobState';
+import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
 
 export async function fetchPods(
   context: IntegrationStepContext,
@@ -19,7 +19,7 @@ export async function fetchPods(
   const { instance, jobState, logger } = context;
   const { config } = instance;
 
-  const client = new CoreClient(config);
+  const client = getOrCreateAPIClient(config);
 
   const containerEntityKeys = new Set<string>();
   await jobState.iterateEntities(
