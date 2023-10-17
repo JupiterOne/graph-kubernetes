@@ -1,0 +1,12 @@
+openapi: 3.0.1
+info:
+  title: '@jupiterone/graph-kubernetes'
+  description: A JupiterOne Integration for Kubernetes
+  x-cortex-git:
+    github:
+      repository: JupiterOne/graph-kubernetes
+  x-cortex-owners:
+    - type: group
+      name: JupiterOne/integrations
+  x-cortex-service-groups: tier-4
+  x-cortex-tag: '@jupiterone/graph-kubernetes'
