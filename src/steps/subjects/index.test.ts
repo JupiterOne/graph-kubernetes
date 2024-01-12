@@ -12,32 +12,7 @@ describe('#fetchServiceAccounts', () => {
       recordingDirectory: __dirname,
       integrationConfig,
       stepFunctions: [fetchNamespaces, fetchServiceAccounts],
-      entitySchemaMatchers: [
-        {
-          _type: Entities.POD_SECURITY_POLICY._type,
-          matcher: {
-            _class: ['User'],
-            schema: {
-              additionalProperties: false,
-              properties: {
-                _type: { const: 'kube_service_account' },
-                _rawData: {
-                  type: 'array',
-                  items: { type: 'object' },
-                },
-                name: { type: 'string' },
-                username: { type: 'string' },
-                displayName: { type: 'string' },
-                generation: { type: 'number' },
-                deletionGracePeriodSeconds: { type: 'string' },
-                resourceVersion: { type: 'string' },
-                createdOn: { type: 'number' },
-                active: { type: 'boolean' },
-              },
-            },
-          },
-        },
-      ],
+      entitySchemaMatchers: [],
       relationshipSchemaMatchers: [
         {
           _type: Relationships.NAMESPACE_CONTAINS_SERVICE_ACCOUNT._type,

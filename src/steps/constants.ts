@@ -10,7 +10,6 @@ export const CLUSTER_ENTITY_DATA_KEY = 'entity:cluster';
 
 export enum IntegrationSteps {
   NETWORK_POLICIES = 'fetch-network-policies',
-  POD_SECURITY_POLICIES = 'fetch-pod-security-policies',
   SERVICE_ACCOUNTS = 'fetch-service-accounts',
   USERS = 'fetch-users',
   ROLES = 'fetch-roles',
@@ -33,12 +32,10 @@ export enum IntegrationSteps {
   CRONJOBS = 'fetch-cron-jobs',
   CONFIGMAPS = 'fetch-config-maps',
   SECRETS = 'fetch-secrets',
-  PODS = 'fetch-pods',
 }
 
 export const Entities: Record<
   | 'NETWORK_POLICY'
-  | 'POD_SECURITY_POLICY'
   | 'SERVICE_ACCOUNT'
   | 'USER'
   | 'ROLE'
@@ -60,20 +57,13 @@ export const Entities: Record<
   | 'JOB'
   | 'CRONJOB'
   | 'CONFIGMAP'
-  | 'SECRET'
-  | 'POD'
-  | 'CONTAINER',
+  | 'SECRET',
   StepEntityMetadata
 > = {
   NETWORK_POLICY: {
     _type: 'kube_network_policy',
     _class: ['Configuration'],
     resourceName: 'Kubernetes Network Policy',
-  },
-  POD_SECURITY_POLICY: {
-    _type: 'kube_pod_security_policy',
-    _class: ['Configuration'],
-    resourceName: 'Kubernetes Pod Security Policy',
   },
   SERVICE_ACCOUNT: {
     _type: 'kube_service_account',
@@ -180,16 +170,6 @@ export const Entities: Record<
     _class: ['Vault'],
     resourceName: 'Kubernetes Secret',
   },
-  POD: {
-    _type: 'kube_pod',
-    _class: ['Task'],
-    resourceName: 'Kubernetes Pod',
-  },
-  CONTAINER: {
-    _type: 'kube_container',
-    _class: ['Container'],
-    resourceName: 'Kubernetes Container',
-  },
   SERVICE: {
     _type: 'kube_service',
     _class: ['Service'],
@@ -198,11 +178,9 @@ export const Entities: Record<
 };
 
 export const Relationships: Record<
-  | 'CLUSTER_CONTAINS_POD_SECURITY_POLICY'
   | 'CLUSTER_CONTAINS_NAMESPACE'
   | 'CLUSTER_CONTAINS_CLUSTER_ROLE'
   | 'CLUSTER_CONTAINS_CLUSTER_ROLE_BINDING'
-  | 'NAMESPACE_CONTAINS_POD'
   | 'NAMESPACE_CONTAINS_SERVICE'
   | 'NAMESPACE_CONTAINS_DEPLOYMENT'
   | 'NAMESPACE_CONTAINS_REPLICASET'
@@ -219,20 +197,9 @@ export const Relationships: Record<
   | 'DEPLOYMENT_MANAGES_REPLICASET'
   | 'DEPLOYMENT_USES_CONTAINER_SPEC'
   | 'CONTAINER_SPEC_USES_VOLUME'
-  | 'REPLICASET_MANAGES_POD'
-  | 'STATEFULSET_MANAGES_POD'
-  | 'CRONJOB_MANAGES_JOB'
-  | 'JOB_MANAGES_POD'
-  | 'NODE_HAS_POD'
-  | 'POD_CONTAINS_CONTAINER',
+  | 'CRONJOB_MANAGES_JOB',
   StepRelationshipMetadata
 > = {
-  CLUSTER_CONTAINS_POD_SECURITY_POLICY: {
-    _type: 'kube_cluster_contains_pod_security_policy',
-    _class: RelationshipClass.CONTAINS,
-    sourceType: Entities.CLUSTER._type,
-    targetType: Entities.POD_SECURITY_POLICY._type,
-  },
   CLUSTER_CONTAINS_NAMESPACE: {
     _type: 'kube_cluster_contains_namespace',
     _class: RelationshipClass.CONTAINS,
@@ -250,12 +217,6 @@ export const Relationships: Record<
     _class: RelationshipClass.CONTAINS,
     sourceType: Entities.CLUSTER._type,
     targetType: Entities.CLUSTER_ROLE_BINDING._type,
-  },
-  NAMESPACE_CONTAINS_POD: {
-    _type: 'kube_namespace_contains_pod',
-    _class: RelationshipClass.CONTAINS,
-    sourceType: Entities.NAMESPACE._type,
-    targetType: Entities.POD._type,
   },
   NAMESPACE_CONTAINS_SERVICE: {
     _type: 'kube_namespace_contains_service',
@@ -353,41 +314,11 @@ export const Relationships: Record<
     sourceType: Entities.CONTAINER_SPEC._type,
     targetType: Entities.VOLUME._type,
   },
-  REPLICASET_MANAGES_POD: {
-    _type: 'kube_replica_set_manages_pod',
-    _class: RelationshipClass.MANAGES,
-    sourceType: Entities.REPLICASET._type,
-    targetType: Entities.POD._type,
-  },
-  STATEFULSET_MANAGES_POD: {
-    _type: 'kube_stateful_set_manages_pod',
-    _class: RelationshipClass.MANAGES,
-    sourceType: Entities.STATEFULSET._type,
-    targetType: Entities.POD._type,
-  },
   CRONJOB_MANAGES_JOB: {
     _type: 'kube_cron_job_manages_job',
     _class: RelationshipClass.MANAGES,
     sourceType: Entities.CRONJOB._type,
     targetType: Entities.JOB._type,
-  },
-  JOB_MANAGES_POD: {
-    _type: 'kube_job_manages_pod',
-    _class: RelationshipClass.MANAGES,
-    sourceType: Entities.JOB._type,
-    targetType: Entities.POD._type,
-  },
-  NODE_HAS_POD: {
-    _type: 'kube_node_has_pod',
-    _class: RelationshipClass.HAS,
-    sourceType: Entities.NODE._type,
-    targetType: Entities.POD._type,
-  },
-  POD_CONTAINS_CONTAINER: {
-    _type: 'kube_pod_contains_container',
-    _class: RelationshipClass.CONTAINS,
-    sourceType: Entities.POD._type,
-    targetType: Entities.CONTAINER._type,
   },
 };
 

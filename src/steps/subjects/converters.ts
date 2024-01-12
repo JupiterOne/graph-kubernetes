@@ -27,13 +27,7 @@ export function createServiceAccountEntity(data: k8s.V1ServiceAccount) {
   });
 }
 
-export type UserSubject = k8s.V1beta1UserSubject & {
-  username?: string;
-  certFile?: string;
-  keyFile?: string;
-};
-
-export function createUserEntity(data: UserSubject): Entity {
+export function createUserEntity(data: k8s.User): Entity {
   return {
     _class: Entities.USER._class,
     _rawData: [
