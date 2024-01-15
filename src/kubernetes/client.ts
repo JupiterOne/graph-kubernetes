@@ -6,6 +6,8 @@ export interface ClientOptions {
   config: IntegrationConfig;
 }
 
+export type ApiGroupType = 'core' | 'batch' | 'networking.k8s.io' | 'apps';
+
 export type ResourceType =
   | 'nodes'
   | 'services'
@@ -16,8 +18,7 @@ export type ResourceType =
   | 'jobs'
   | 'cronjobs'
   | 'configmaps'
-  | 'secrets'
-  | 'pods';
+  | 'secrets';
 
 export type VerbType = 'list' | 'create';
 
@@ -29,10 +30,8 @@ export class Client {
   private appsClient: k8s.AppsV1Api;
   private authorizationClient: k8s.AuthorizationV1Api;
   private batchClient: k8s.BatchV1Api;
-  private batchV1BetaClient: k8s.BatchV1beta1Api;
   private coreClient: k8s.CoreV1Api;
   private netwokClient: k8s.NetworkingV1Api;
-  private policyClient: k8s.PolicyV1beta1Api;
   private rbacClient: k8s.RbacAuthorizationV1Api;
 
   constructor(config: IntegrationConfig) {
@@ -46,10 +45,8 @@ export class Client {
       k8s.AuthorizationV1Api,
     );
     this.batchClient = this.kubeConfig.makeApiClient(k8s.BatchV1Api);
-    this.batchV1BetaClient = this.kubeConfig.makeApiClient(k8s.BatchV1beta1Api);
     this.coreClient = this.kubeConfig.makeApiClient(k8s.CoreV1Api);
     this.netwokClient = this.kubeConfig.makeApiClient(k8s.NetworkingV1Api);
-    this.policyClient = this.kubeConfig.makeApiClient(k8s.PolicyV1beta1Api);
     this.rbacClient = this.kubeConfig.makeApiClient(k8s.RbacAuthorizationV1Api);
   }
 
@@ -177,10 +174,10 @@ export class Client {
    * Authorization
    */
   async fetchSubjectServiceAccess(
+    group: ApiGroupType,
     resource: ResourceType,
     verb: VerbType,
   ): Promise<k8s.V1SelfSubjectAccessReview> {
-    const groupAppsServices = ['deployments', 'replicasets'];
     const resp = await this.authorizationClient.createSelfSubjectAccessReview({
       kind: 'SelfSubjectAccessReview',
       apiVersion: 'authorization.k8s.io/v1',
@@ -188,7 +185,7 @@ export class Client {
         resourceAttributes: {
           namespace: 'default',
           verb: verb,
-          group: groupAppsServices.includes(resource) ? 'apps' : undefined,
+          group: group !== 'core' ? group : '',
           resource: resource,
         },
       },
@@ -229,11 +226,11 @@ export class Client {
    */
   async iterateNamespacedCronJobs(
     namespace: string,
-    callback: (data: k8s.V1beta1CronJob) => Promise<void>,
+    callback: (data: k8s.V1CronJob) => Promise<void>,
   ): Promise<void> {
     await this.iterateApi(
       async (nextPageToken) => {
-        return this.batchV1BetaClient.listNamespacedCronJob(
+        return this.batchClient.listNamespacedCronJob(
           namespace,
           undefined,
           undefined,
@@ -243,7 +240,7 @@ export class Client {
           this.maxPerPage,
         );
       },
-      async (data: k8s.V1beta1CronJobList) => {
+      async (data: k8s.V1CronJobList) => {
         for (const cronJob of data.items || []) {
           await callback(cronJob);
         }
@@ -294,30 +291,6 @@ export class Client {
         },
       );
     }
-  }
-
-  async iterateNamespacedPods(
-    namespace: string,
-    callback: (data: k8s.V1Pod) => Promise<void>,
-  ): Promise<void> {
-    await this.iterateApi(
-      async (nextPageToken) => {
-        return this.coreClient.listNamespacedPod(
-          namespace,
-          undefined,
-          undefined,
-          nextPageToken,
-          undefined,
-          undefined,
-          this.maxPerPage,
-        );
-      },
-      async (data: k8s.V1PodList) => {
-        for (const pod of data.items) {
-          await callback(pod);
-        }
-      },
-    );
   }
 
   async iterateNodes(
@@ -439,7 +412,7 @@ export class Client {
   }
 
   async iterateUsers(
-    callback: (data: k8s.V1beta1UserSubject) => Promise<void>,
+    callback: (data: k8s.User) => Promise<void>,
   ): Promise<void> {
     for (const user of this.kubeConfig.users || []) {
       await callback(user);
@@ -467,31 +440,6 @@ export class Client {
       },
       async (data: k8s.V1NetworkPolicyList) => {
         for (const item of data.items) {
-          await callback(item);
-        }
-      },
-    );
-  }
-
-  /**
-   * Policy
-   */
-  async iteratePodSecurityPolicies(
-    callback: (data: k8s.V1beta1PodSecurityPolicy) => Promise<void>,
-  ) {
-    await this.iterateApi(
-      async (nextPageToken) => {
-        return this.policyClient.listPodSecurityPolicy(
-          undefined,
-          undefined,
-          nextPageToken,
-          undefined,
-          undefined,
-          this.maxPerPage,
-        );
-      },
-      async (data: k8s.V1beta1PodSecurityPolicyList) => {
-        for (const item of data.items || []) {
           await callback(item);
         }
       },

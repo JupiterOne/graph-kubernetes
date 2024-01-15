@@ -5,7 +5,7 @@ import {
 } from '@jupiterone/integration-sdk-core';
 import { Entities } from '../constants';
 
-export function createCronJobEntity(data: k8s.V1beta1CronJob) {
+export function createCronJobEntity(data: k8s.V1CronJob) {
   return createIntegrationEntity({
     entityData: {
       source: data,

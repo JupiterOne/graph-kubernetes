@@ -1,6 +1,5 @@
 import * as k8s from '@kubernetes/client-node';
 import { V1Container, V1Volume, V1VolumeMount } from '@kubernetes/client-node';
-import { UserSubject } from '../src/steps/subjects/converters';
 
 export function createMockNamespace(): Partial<k8s.V1Namespace> {
   return {
@@ -208,7 +207,7 @@ export function createMockServiceAccount(): Partial<k8s.V1ServiceAccount> {
   };
 }
 
-export function createMockUser(): Partial<UserSubject> {
+export function createMockUser(): k8s.User {
   return {
     name: 'my-name',
     username: 'my-username',
@@ -555,7 +554,7 @@ export function createMockConfigMap(): Partial<k8s.V1ConfigMap> {
   };
 }
 
-export function createMockCronJob(): Partial<k8s.V1beta1CronJob> {
+export function createMockCronJob(): Partial<k8s.V1CronJob> {
   return {
     metadata: {
       annotations: {
@@ -1145,7 +1144,7 @@ export function createMockContainer(
       httpGet: {
         path: '/health',
         scheme: 'HTTP',
-        port: {},
+        port: 1234,
       },
       initialDelaySeconds: 60,
       periodSeconds: 10,
@@ -1174,7 +1173,7 @@ export function createMockContainer(
       failureThreshold: 3,
       httpGet: {
         path: '/ready',
-        port: {},
+        port: 1234,
         scheme: 'HTTP',
       },
       periodSeconds: 10,

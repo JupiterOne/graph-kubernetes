@@ -1,8 +1,4 @@
-import {
-  createServiceAccountEntity,
-  createUserEntity,
-  UserSubject,
-} from './converters';
+import { createServiceAccountEntity, createUserEntity } from './converters';
 import { createMockServiceAccount, createMockUser } from '../../../test/mocks';
 
 describe('#createServiceAccountEntity', () => {
@@ -15,6 +11,6 @@ describe('#createServiceAccountEntity', () => {
 
 describe('#createUserEntity', () => {
   test('should convert data', () => {
-    expect(createUserEntity(createMockUser() as UserSubject)).toMatchSnapshot();
+    expect(createUserEntity(createMockUser())).toMatchSnapshot();
   });
 });

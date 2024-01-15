@@ -10,18 +10,6 @@ import { Entities } from '../constants';
 import { RelationshipClass } from '@jupiterone/data-model';
 import { V1VolumeMount } from '@kubernetes/client-node';
 
-function convertToString(value?: object) {
-  if (!value) {
-    return undefined;
-  }
-
-  if (typeof value !== 'string') {
-    return JSON.stringify(value);
-  }
-
-  return value;
-}
-
 export function getVolumeKey(deploymentId: string, volumeName: string) {
   return `${deploymentId}/${volumeName}`;
 }
@@ -36,7 +24,7 @@ export function createVolumeEntity(deploymentUid: string, data: k8s.V1Volume) {
         _key: getVolumeKey(deploymentUid, data.name),
         name: data.name,
         displayName: data.name,
-        'ephemeral.readOnly': data.ephemeral?.readOnly,
+        'ephemeral.readOnly': data.ephemeral?.['readOnly'],
         'hostPath.path': data.hostPath?.path,
         'hostPath.type': data.hostPath?.type,
         classification: null,
@@ -101,12 +89,9 @@ export function createDeploymentEntity(data: k8s.V1Deployment) {
         replicas: data.spec?.replicas,
         revisionHistoryLimit: data.spec?.revisionHistoryLimit,
         'strategy.type': data.spec?.strategy?.type,
-        'strategy.maxSurge': convertToString(
-          data.spec?.strategy?.rollingUpdate?.maxSurge,
-        ),
-        'strategy.maxUnavailable': convertToString(
+        'strategy.maxSurge': data.spec?.strategy?.rollingUpdate?.maxSurge,
+        'strategy.maxUnavailable':
           data.spec?.strategy?.rollingUpdate?.maxUnavailable,
-        ),
         // TODO: something about spec.template sections maybe?
         'status.availableReplicas': data.status?.availableReplicas,
         'status.collisionCount': data.status?.collisionCount,

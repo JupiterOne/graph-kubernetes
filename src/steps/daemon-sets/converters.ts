@@ -5,18 +5,6 @@ import {
 } from '@jupiterone/integration-sdk-core';
 import { Entities } from '../constants';
 
-function convertToString(value?: object) {
-  if (!value) {
-    return undefined;
-  }
-
-  if (typeof value !== 'string') {
-    return JSON.stringify(value);
-  }
-
-  return value;
-}
-
 export function createDaemonSetEntity(data: k8s.V1DaemonSet) {
   return createIntegrationEntity({
     entityData: {
@@ -36,9 +24,8 @@ export function createDaemonSetEntity(data: k8s.V1DaemonSet) {
         minReadySeconds: data.spec?.minReadySeconds,
         revisionHistoryLimit: data.spec?.revisionHistoryLimit,
         'strategy.type': data.spec?.updateStrategy?.type,
-        'strategy.maxUnavailable': convertToString(
+        'strategy.maxUnavailable':
           data.spec?.updateStrategy?.rollingUpdate?.maxUnavailable,
-        ),
         'status.collisionCount': data.status?.collisionCount,
         'status.currentNumberScheduled': data.status?.currentNumberScheduled,
         'status.desiredNumberScheduled': data.status?.desiredNumberScheduled,

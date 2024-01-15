@@ -207,7 +207,6 @@ The following entities are created:
 | Kubernetes Namespace            | `kube_namespace`            | `Group`         |
 | Kubernetes Network Policy       | `kube_network_policy`       | `Configuration` |
 | Kubernetes Node                 | `kube_node`                 | `Host`          |
-| Kubernetes Pod Security Policy  | `kube_pod_security_policy`  | `Configuration` |
 | Kubernetes ReplicaSet           | `kube_replica_set`          | `Deployment`    |
 | Kubernetes Role                 | `kube_role`                 | `AccessRole`    |
 | Kubernetes Role Binding         | `kube_role_binding`         | `AccessPolicy`  |
@@ -227,7 +226,6 @@ The following relationships are created:
 | `kube_cluster`        | **CONTAINS**          | `kube_cluster_role`         |
 | `kube_cluster`        | **CONTAINS**          | `kube_cluster_role_binding` |
 | `kube_cluster`        | **CONTAINS**          | `kube_namespace`            |
-| `kube_cluster`        | **CONTAINS**          | `kube_pod_security_policy`  |
 | `kube_container_spec` | **USES**              | `kube_volume`               |
 | `kube_cron_job`       | **MANAGES**           | `kube_job`                  |
 | `kube_deployment`     | **MANAGES**           | `kube_replica_set`          |

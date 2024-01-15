@@ -7,14 +7,24 @@ import { IntegrationConfig } from './config';
 import { IntegrationSteps } from './steps/constants';
 import { validateInvocation } from './validator';
 import getOrCreateAPIClient from './kubernetes/getOrCreateAPIClient';
-import { Client, ResourceType, VerbType } from './kubernetes/client';
+import {
+  ApiGroupType,
+  Client,
+  ResourceType,
+  VerbType,
+} from './kubernetes/client';
 
 async function getServiceState(
+  group: ApiGroupType,
   resource: ResourceType,
   verb: VerbType,
   client: Client,
 ) {
-  const serviceAccess = await client.fetchSubjectServiceAccess(resource, verb);
+  const serviceAccess = await client.fetchSubjectServiceAccess(
+    group,
+    resource,
+    verb,
+  );
 
   return !serviceAccess.status?.allowed;
 }
@@ -41,23 +51,20 @@ export default async function getStepStartStates(
       secretsDisabled,
       nodesDisabled,
     ] = await Promise.all([
-      getServiceState('services', 'list', client),
-      getServiceState('deployments', 'list', client),
-      getServiceState('replicasets', 'list', client),
-      getServiceState('statefulsets', 'list', client),
-      getServiceState('daemonsets', 'list', client),
-      getServiceState('jobs', 'list', client),
-      getServiceState('cronjobs', 'list', client),
-      getServiceState('configmaps', 'list', client),
-      getServiceState('secrets', 'list', client),
-      getServiceState('nodes', 'list', client),
+      getServiceState('core', 'services', 'list', client),
+      getServiceState('apps', 'deployments', 'list', client),
+      getServiceState('apps', 'replicasets', 'list', client),
+      getServiceState('apps', 'statefulsets', 'list', client),
+      getServiceState('apps', 'daemonsets', 'list', client),
+      getServiceState('batch', 'jobs', 'list', client),
+      getServiceState('batch', 'cronjobs', 'list', client),
+      getServiceState('core', 'configmaps', 'list', client),
+      getServiceState('core', 'secrets', 'list', client),
+      getServiceState('core', 'nodes', 'list', client),
     ]);
 
     return {
       [IntegrationSteps.NETWORK_POLICIES]: {
-        disabled: false,
-      },
-      [IntegrationSteps.POD_SECURITY_POLICIES]: {
         disabled: false,
       },
       [IntegrationSteps.SERVICE_ACCOUNTS]: {

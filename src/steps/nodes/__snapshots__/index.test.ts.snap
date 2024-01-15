@@ -7,7 +7,7 @@ Object {
       "_class": Array [
         "Host",
       ],
-      "_key": "d9e7805e-35e6-4934-bb9a-c0f9853a9ec9",
+      "_key": "7cf4b7cc-b6c8-474a-a4c6-8858a3b597f2",
       "_rawData": Array [
         Object {
           "name": "default",
@@ -16,12 +16,11 @@ Object {
             "kind": undefined,
             "metadata": V1ObjectMeta {
               "annotations": Object {
-                "kubeadm.alpha.kubernetes.io/cri-socket": "/var/run/dockershim.sock",
+                "kubeadm.alpha.kubernetes.io/cri-socket": "unix:///var/run/cri-dockerd.sock",
                 "node.alpha.kubernetes.io/ttl": "0",
                 "volumes.kubernetes.io/controller-managed-attach-detach": "true",
               },
-              "clusterName": undefined,
-              "creationTimestamp": 2021-04-27T20:57:17.000Z,
+              "creationTimestamp": 2024-01-11T15:50:15.000Z,
               "deletionGracePeriodSeconds": undefined,
               "deletionTimestamp": undefined,
               "finalizers": undefined,
@@ -31,72 +30,12 @@ Object {
                 "beta.kubernetes.io/arch": "amd64",
                 "beta.kubernetes.io/os": "linux",
                 "kubernetes.io/arch": "amd64",
-                "kubernetes.io/hostname": "minikube",
+                "kubernetes.io/hostname": "docker-desktop",
                 "kubernetes.io/os": "linux",
-                "minikube.k8s.io/commit": "15cede53bdc5fe242228853e737333b09d4336b5",
-                "minikube.k8s.io/name": "minikube",
-                "minikube.k8s.io/updated_at": "2021_04_27T22_57_20_0700",
-                "minikube.k8s.io/version": "v1.19.0",
                 "node-role.kubernetes.io/control-plane": "",
-                "node-role.kubernetes.io/master": "",
+                "node.kubernetes.io/exclude-from-external-load-balancers": "",
               },
               "managedFields": Array [
-                V1ManagedFieldsEntry {
-                  "apiVersion": "v1",
-                  "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        "f:kubeadm.alpha.kubernetes.io/cri-socket": Object {},
-                      },
-                      "f:labels": Object {
-                        "f:node-role.kubernetes.io/control-plane": Object {},
-                        "f:node-role.kubernetes.io/master": Object {},
-                      },
-                    },
-                  },
-                  "manager": "kubeadm",
-                  "operation": "Update",
-                  "time": 2021-04-27T20:57:20.000Z,
-                },
-                V1ManagedFieldsEntry {
-                  "apiVersion": "v1",
-                  "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        "f:minikube.k8s.io/commit": Object {},
-                        "f:minikube.k8s.io/name": Object {},
-                        "f:minikube.k8s.io/updated_at": Object {},
-                        "f:minikube.k8s.io/version": Object {},
-                      },
-                    },
-                  },
-                  "manager": "kubectl-label",
-                  "operation": "Update",
-                  "time": 2021-04-27T20:57:21.000Z,
-                },
-                V1ManagedFieldsEntry {
-                  "apiVersion": "v1",
-                  "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        "f:node.alpha.kubernetes.io/ttl": Object {},
-                      },
-                    },
-                    "f:spec": Object {
-                      "f:podCIDR": Object {},
-                      "f:podCIDRs": Object {
-                        ".": Object {},
-                        "v:\\"10.244.0.0/24\\"": Object {},
-                      },
-                    },
-                  },
-                  "manager": "kube-controller-manager",
-                  "operation": "Update",
-                  "time": 2021-05-14T16:22:29.000Z,
-                },
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
@@ -115,116 +54,98 @@ Object {
                         "f:kubernetes.io/os": Object {},
                       },
                     },
-                    "f:status": Object {
-                      "f:addresses": Object {
-                        ".": Object {},
-                        "k:{\\"type\\":\\"Hostname\\"}": Object {
-                          ".": Object {},
-                          "f:address": Object {},
-                          "f:type": Object {},
-                        },
-                        "k:{\\"type\\":\\"InternalIP\\"}": Object {
-                          ".": Object {},
-                          "f:address": Object {},
-                          "f:type": Object {},
-                        },
+                  },
+                  "manager": "kubelet",
+                  "operation": "Update",
+                  "subresource": undefined,
+                  "time": 2024-01-11T15:50:15.000Z,
+                },
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:metadata": Object {
+                      "f:annotations": Object {
+                        "f:kubeadm.alpha.kubernetes.io/cri-socket": Object {},
                       },
+                      "f:labels": Object {
+                        "f:node-role.kubernetes.io/control-plane": Object {},
+                        "f:node.kubernetes.io/exclude-from-external-load-balancers": Object {},
+                      },
+                    },
+                  },
+                  "manager": "kubeadm",
+                  "operation": "Update",
+                  "subresource": undefined,
+                  "time": 2024-01-11T15:50:18.000Z,
+                },
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:metadata": Object {
+                      "f:annotations": Object {
+                        "f:node.alpha.kubernetes.io/ttl": Object {},
+                      },
+                    },
+                  },
+                  "manager": "kube-controller-manager",
+                  "operation": "Update",
+                  "subresource": undefined,
+                  "time": 2024-01-11T22:50:28.000Z,
+                },
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:status": Object {
                       "f:allocatable": Object {
-                        ".": Object {},
-                        "f:cpu": Object {},
-                        "f:ephemeral-storage": Object {},
-                        "f:hugepages-1Gi": Object {},
-                        "f:hugepages-2Mi": Object {},
                         "f:memory": Object {},
-                        "f:pods": Object {},
                       },
                       "f:capacity": Object {
-                        ".": Object {},
-                        "f:cpu": Object {},
-                        "f:ephemeral-storage": Object {},
-                        "f:hugepages-1Gi": Object {},
-                        "f:hugepages-2Mi": Object {},
                         "f:memory": Object {},
-                        "f:pods": Object {},
                       },
                       "f:conditions": Object {
-                        ".": Object {},
                         "k:{\\"type\\":\\"DiskPressure\\"}": Object {
-                          ".": Object {},
                           "f:lastHeartbeatTime": Object {},
-                          "f:lastTransitionTime": Object {},
-                          "f:message": Object {},
-                          "f:reason": Object {},
-                          "f:status": Object {},
-                          "f:type": Object {},
                         },
                         "k:{\\"type\\":\\"MemoryPressure\\"}": Object {
-                          ".": Object {},
                           "f:lastHeartbeatTime": Object {},
-                          "f:lastTransitionTime": Object {},
-                          "f:message": Object {},
-                          "f:reason": Object {},
-                          "f:status": Object {},
-                          "f:type": Object {},
                         },
                         "k:{\\"type\\":\\"PIDPressure\\"}": Object {
-                          ".": Object {},
                           "f:lastHeartbeatTime": Object {},
-                          "f:lastTransitionTime": Object {},
-                          "f:message": Object {},
-                          "f:reason": Object {},
-                          "f:status": Object {},
-                          "f:type": Object {},
                         },
                         "k:{\\"type\\":\\"Ready\\"}": Object {
-                          ".": Object {},
                           "f:lastHeartbeatTime": Object {},
                           "f:lastTransitionTime": Object {},
                           "f:message": Object {},
                           "f:reason": Object {},
                           "f:status": Object {},
-                          "f:type": Object {},
                         },
                       },
-                      "f:daemonEndpoints": Object {
-                        "f:kubeletEndpoint": Object {
-                          "f:Port": Object {},
-                        },
-                      },
-                      "f:images": Object {},
                       "f:nodeInfo": Object {
-                        "f:architecture": Object {},
                         "f:bootID": Object {},
-                        "f:containerRuntimeVersion": Object {},
-                        "f:kernelVersion": Object {},
-                        "f:kubeProxyVersion": Object {},
-                        "f:kubeletVersion": Object {},
-                        "f:machineID": Object {},
-                        "f:operatingSystem": Object {},
-                        "f:osImage": Object {},
-                        "f:systemUUID": Object {},
                       },
                     },
                   },
                   "manager": "kubelet",
                   "operation": "Update",
-                  "time": 2021-05-14T16:22:29.000Z,
+                  "subresource": "status",
+                  "time": 2024-01-12T17:13:20.000Z,
                 },
               ],
-              "name": "minikube",
+              "name": "docker-desktop",
               "namespace": undefined,
               "ownerReferences": undefined,
-              "resourceVersion": "1336335",
+              "resourceVersion": "51758",
               "selfLink": undefined,
-              "uid": "d9e7805e-35e6-4934-bb9a-c0f9853a9ec9",
+              "uid": "7cf4b7cc-b6c8-474a-a4c6-8858a3b597f2",
             },
             "spec": V1NodeSpec {
               "configSource": undefined,
               "externalID": undefined,
-              "podCIDR": "10.244.0.0/24",
-              "podCIDRs": Array [
-                "10.244.0.0/24",
-              ],
+              "podCIDR": undefined,
+              "podCIDRs": undefined,
               "providerID": undefined,
               "taints": undefined,
               "unschedulable": undefined,
@@ -232,58 +153,54 @@ Object {
             "status": V1NodeStatus {
               "addresses": Array [
                 V1NodeAddress {
-                  "address": "192.168.49.2",
+                  "address": "192.168.65.3",
                   "type": "InternalIP",
                 },
                 V1NodeAddress {
-                  "address": "minikube",
+                  "address": "docker-desktop",
                   "type": "Hostname",
                 },
               ],
               "allocatable": Object {
-                "cpu": "8",
-                "ephemeral-storage": "88103912Ki",
-                "hugepages-1Gi": "0",
-                "hugepages-2Mi": "0",
-                "memory": "16355036Ki",
+                "cpu": "12",
+                "ephemeral-storage": "84747718516",
+                "memory": "16282672Ki",
                 "pods": "110",
               },
               "capacity": Object {
-                "cpu": "8",
-                "ephemeral-storage": "88103912Ki",
-                "hugepages-1Gi": "0",
-                "hugepages-2Mi": "0",
-                "memory": "16355036Ki",
+                "cpu": "12",
+                "ephemeral-storage": "91957160Ki",
+                "memory": "16385072Ki",
                 "pods": "110",
               },
               "conditions": Array [
                 V1NodeCondition {
-                  "lastHeartbeatTime": 2021-11-03T18:19:47.000Z,
-                  "lastTransitionTime": 2021-05-14T16:22:29.000Z,
+                  "lastHeartbeatTime": 2024-01-12T17:13:20.000Z,
+                  "lastTransitionTime": 2024-01-11T15:50:14.000Z,
                   "message": "kubelet has sufficient memory available",
                   "reason": "KubeletHasSufficientMemory",
                   "status": "False",
                   "type": "MemoryPressure",
                 },
                 V1NodeCondition {
-                  "lastHeartbeatTime": 2021-11-03T18:19:47.000Z,
-                  "lastTransitionTime": 2021-05-14T16:22:29.000Z,
+                  "lastHeartbeatTime": 2024-01-12T17:13:20.000Z,
+                  "lastTransitionTime": 2024-01-11T15:50:14.000Z,
                   "message": "kubelet has no disk pressure",
                   "reason": "KubeletHasNoDiskPressure",
                   "status": "False",
                   "type": "DiskPressure",
                 },
                 V1NodeCondition {
-                  "lastHeartbeatTime": 2021-11-03T18:19:47.000Z,
-                  "lastTransitionTime": 2021-05-14T16:22:29.000Z,
+                  "lastHeartbeatTime": 2024-01-12T17:13:20.000Z,
+                  "lastTransitionTime": 2024-01-11T15:50:14.000Z,
                   "message": "kubelet has sufficient PID available",
                   "reason": "KubeletHasSufficientPID",
                   "status": "False",
                   "type": "PIDPressure",
                 },
                 V1NodeCondition {
-                  "lastHeartbeatTime": 2021-11-03T18:19:47.000Z,
-                  "lastTransitionTime": 2021-05-14T16:22:29.000Z,
+                  "lastHeartbeatTime": 2024-01-12T17:13:20.000Z,
+                  "lastTransitionTime": 2024-01-11T22:50:27.000Z,
                   "message": "kubelet is posting ready status",
                   "reason": "KubeletReady",
                   "status": "True",
@@ -299,129 +216,319 @@ Object {
               "images": Array [
                 V1ContainerImage {
                   "names": Array [
-                    "extremex/k8s@sha256:8fb7e1bbfb3a1bf4554cdb21747c5c96f1a7a883a6533b380f9718e237d0548c",
-                    "extremex/k8s:latest",
-                    "jupiterone-graph-kubernetes:latest",
+                    "jupiter-integration-service-deploy-0adb2a04db43259ed990d705a9b5a299596f56bb-c1f49321-773e-4b79-9ad4-98cc2d8e04a7:latest",
                   ],
-                  "sizeBytes": 1094271704,
+                  "sizeBytes": 2789256187,
                 },
                 V1ContainerImage {
                   "names": Array [
-                    "gcr.io/google_samples/gb-frontend@sha256:50b22839aaf6a18586d6751e8963cf684c27b9873ca926df22cdf88ed4452615",
-                    "gcr.io/google_samples/gb-frontend:v3",
+                    "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.x-extras@sha256:345857deccc9f0fdab2cc9db1d21d093b9a6722132ca0a008d94ceeb0c8b0b42",
+                    "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.x-extras:11",
                   ],
-                  "sizeBytes": 509707703,
+                  "sizeBytes": 2701029005,
                 },
                 V1ContainerImage {
                   "names": Array [
-                    "nigelpoulton/acg-web@sha256:cbe021cb92e66afc18e57606b0f00f1276ceb30c33a37e92a89a17854492b6e2",
-                    "nigelpoulton/acg-web:0.1",
+                    "integration-palo-alto-deploy-a3a46424bc8ef89544d478a614f92cc21fd37d28-01f7278d-5a8b-4546-9fee-c5f7eb65749d:latest",
                   ],
-                  "sizeBytes": 381379333,
+                  "sizeBytes": 2251154371,
                 },
                 V1ContainerImage {
                   "names": Array [
-                    "k8s.gcr.io/etcd@sha256:4ad90a11b55313b182afc186b9876c8e891531b8db4c9bf1541953021618d0e2",
-                    "k8s.gcr.io/etcd:3.4.13-0",
+                    "jupiter-integration-snyk-deploy-77d585bc49ec12c94f29181a89619ff6add1d860-b08e1a47-321c-44ed-8306-91add082bc03:latest",
                   ],
-                  "sizeBytes": 253392289,
+                  "sizeBytes": 2250664571,
                 },
                 V1ContainerImage {
                   "names": Array [
-                    "kubernetesui/dashboard@sha256:7f80b5ba141bead69c4fee8661464857af300d7d7ed0274cf7beecedc00322e6",
-                    "kubernetesui/dashboard:v2.1.0",
+                    "jupiter-integration-snyk-deploy-133b9fcfede9cdca6a7123435c794ffc5592b8d1-69e056f3-e2e0-4b5a-9192-c9f0fc70f608:latest",
                   ],
-                  "sizeBytes": 225733746,
+                  "sizeBytes": 2250463563,
                 },
                 V1ContainerImage {
                   "names": Array [
-                    "node@sha256:9d8fa43caa18ad34167039bc62ff655966faaf41d62ca98a201a0f74b81d8e15",
-                    "node:14-bullseye-slim",
+                    "jupiter-integration-github-deploy-a23bb4910a7da254430f347911a36fe00d1e3643-722189d2-e2b3-4882-bccd-bd81e30b621a:latest",
                   ],
-                  "sizeBytes": 192959953,
+                  "sizeBytes": 2236150016,
                 },
                 V1ContainerImage {
                   "names": Array [
-                    "quay.io/fluentd_elasticsearch/fluentd@sha256:aec118bb3d1c4af358c1d495b14c12781c4ab5e8cfb455edb1ebd2e92750e31d",
-                    "quay.io/fluentd_elasticsearch/fluentd:v2.5.2",
+                    "jupiter-integration-github-deploy-a23bb4910a7da254430f347911a36fe00d1e3643-05608a10-f4dd-4d48-83e3-40766de18f7a:latest",
                   ],
-                  "sizeBytes": 140287084,
+                  "sizeBytes": 2236150000,
                 },
                 V1ContainerImage {
                   "names": Array [
-                    "k8s.gcr.io/kube-apiserver@sha256:465ba895d578fbc1c6e299e45689381fd01c54400beba9e8f1d7456077411411",
-                    "k8s.gcr.io/kube-apiserver:v1.20.2",
+                    "jupiter-integration-github-deploy-a98bf6ba33d0cb296318de8cb04949e230ad6481-26fa9dcd-0066-4edf-8e15-9d2124b49b43:latest",
                   ],
-                  "sizeBytes": 121669114,
+                  "sizeBytes": 2234832903,
                 },
                 V1ContainerImage {
                   "names": Array [
-                    "k8s.gcr.io/kube-proxy@sha256:326fe8a4508a5db91cf234c4867eff5ba458bc4107c2a7e15c827a74faa19be9",
-                    "k8s.gcr.io/kube-proxy:v1.20.2",
+                    "jupiter-integration-github-deploy-a98bf6ba33d0cb296318de8cb04949e230ad6481-3b35888b-a849-4390-ba35-697972bf3cf4:latest",
                   ],
-                  "sizeBytes": 118400203,
+                  "sizeBytes": 2234830279,
                 },
                 V1ContainerImage {
                   "names": Array [
-                    "<none>@<none>",
-                    "<none>:<none>",
+                    "jupiter-integration-github-deploy-a98bf6ba33d0cb296318de8cb04949e230ad6481-cbe59f3b-7d78-4eca-85c5-a382d6c32f22:latest",
                   ],
-                  "sizeBytes": 116144273,
+                  "sizeBytes": 2234830256,
                 },
                 V1ContainerImage {
                   "names": Array [
-                    "k8s.gcr.io/kube-controller-manager@sha256:842a071d4ad49b0018f7f7404ac8a4ddfc2bce2ce15b3f8131d89563fda36c9b",
-                    "k8s.gcr.io/kube-controller-manager:v1.20.2",
+                    "jupiter-integration-github-deploy-a98bf6ba33d0cb296318de8cb04949e230ad6481-68bbd468-455d-4d63-a504-efddf04016a2:latest",
                   ],
-                  "sizeBytes": 115852794,
+                  "sizeBytes": 2234830224,
                 },
                 V1ContainerImage {
                   "names": Array [
-                    "k8s.gcr.io/kube-scheduler@sha256:304b3d70497bd62498f19f82f9ef164d38948e5ae94966690abfe9d1858867e2",
-                    "k8s.gcr.io/kube-scheduler:v1.20.2",
+                    "jupiter-integration-github-deploy-a98bf6ba33d0cb296318de8cb04949e230ad6481-f26aac19-1a21-4413-86cb-b37760e8ffc0:latest",
                   ],
-                  "sizeBytes": 46384634,
+                  "sizeBytes": 2234830176,
                 },
                 V1ContainerImage {
                   "names": Array [
-                    "k8s.gcr.io/coredns@sha256:73ca82b4ce829766d4f1f10947c3a338888f876fbed0540dc849c89ff256e90c",
-                    "k8s.gcr.io/coredns:1.7.0",
+                    "jupiter-integration-github-deploy-a98bf6ba33d0cb296318de8cb04949e230ad6481-90a25787-f4ad-4740-8db3-62f7b1f500ca:latest",
                   ],
-                  "sizeBytes": 45227747,
+                  "sizeBytes": 2234830121,
                 },
                 V1ContainerImage {
                   "names": Array [
-                    "kubernetesui/metrics-scraper@sha256:555981a24f184420f3be0c79d4efb6c948a85cfce84034f85a563f4151a81cbf",
-                    "kubernetesui/metrics-scraper:v1.0.4",
+                    "jupiter-integration-github-deploy-a98bf6ba33d0cb296318de8cb04949e230ad6481-24cd75d0-0c1a-46a5-849a-5085cc46e522:latest",
                   ],
-                  "sizeBytes": 36937728,
+                  "sizeBytes": 2234829946,
                 },
                 V1ContainerImage {
                   "names": Array [
-                    "gcr.io/k8s-minikube/storage-provisioner@sha256:18eb69d1418e854ad5a19e399310e52808a8321e4c441c1dddad8977a0d7a944",
-                    "gcr.io/k8s-minikube/storage-provisioner:v5",
+                    "jupiter-integration-qualys-deploy-a68757e2cdeae23ef9197e04a2ecbdf8d6c9d933-3fd13512-6a6e-4322-bae9-7359b557decc:latest",
                   ],
-                  "sizeBytes": 31465472,
+                  "sizeBytes": 2217481293,
                 },
                 V1ContainerImage {
                   "names": Array [
-                    "k8s.gcr.io/pause@sha256:927d98197ec1141a368550822d18fa1c60bdae27b78b0c004f705f548c07814f",
-                    "k8s.gcr.io/pause:3.2",
+                    "jupiter-integration-qualys-deploy-a68757e2cdeae23ef9197e04a2ecbdf8d6c9d933-80ab279a-0bfe-4498-bdef-b98967def6c2:latest",
                   ],
-                  "sizeBytes": 682696,
+                  "sizeBytes": 2217481269,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-qualys-deploy-a68757e2cdeae23ef9197e04a2ecbdf8d6c9d933-49090a33-a843-4698-b49f-362289024509:latest",
+                  ],
+                  "sizeBytes": 2217477163,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-qualys-deploy-a68757e2cdeae23ef9197e04a2ecbdf8d6c9d933-7fd6ed94-32f0-49b1-a353-03faebd4acaf:latest",
+                  ],
+                  "sizeBytes": 2217477162,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-snyk-deploy-133b9fcfede9cdca6a7123435c794ffc5592b8d1-fb6dc22b-1657-482a-9604-13b577862fc6:latest",
+                  ],
+                  "sizeBytes": 2217241742,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-snyk-deploy-133b9fcfede9cdca6a7123435c794ffc5592b8d1-b7fdfb7b-1507-4722-b6f8-1e2aeb38a0dd:latest",
+                  ],
+                  "sizeBytes": 2217241507,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-snyk-deploy-133b9fcfede9cdca6a7123435c794ffc5592b8d1-c88a7176-ca3d-49ef-8270-b4b7b2619a86:latest",
+                  ],
+                  "sizeBytes": 2217241502,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-snyk-deploy-77d585bc49ec12c94f29181a89619ff6add1d860-fcf101c6-83e1-43e1-ae13-ad207b6f7865:latest",
+                  ],
+                  "sizeBytes": 2217241468,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-snyk-deploy-77d585bc49ec12c94f29181a89619ff6add1d860-a7374626-6cac-4f02-970f-80314778392a:latest",
+                  ],
+                  "sizeBytes": 2217241468,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "integration-oracle-cloud-deploy-337c4244e116d97a29f677ba7506760472586b2e-f7ea94d6-52d9-4254-8880-efca6f6cef3e:latest",
+                  ],
+                  "sizeBytes": 2199229909,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:86419a69a9a12a7fe05f91b98a41174f7a0d845a3216715ce66013111ff52e56",
+                  ],
+                  "sizeBytes": 2159633319,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:31dc3c4dd792ebf702609a8c20d1d55d65a7aad31912f0d6986bab464655b701",
+                    "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3:11",
+                  ],
+                  "sizeBytes": 2104876400,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "integration-palo-alto-deploy-44e2f72741184ec657b2d40dc45c03266c5b21a7-a57213ec-0e69-4a86-aacc-2252e56e5c17:latest",
+                  ],
+                  "sizeBytes": 1917066318,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "integration-palo-alto-deploy-44e2f72741184ec657b2d40dc45c03266c5b21a7-29d4e283-5443-436c-a5cb-254b3ed4a9d2:latest",
+                  ],
+                  "sizeBytes": 1917066097,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "integration-palo-alto-deploy-44e2f72741184ec657b2d40dc45c03266c5b21a7-51540f9d-7ed5-4482-8a01-47020cbdeaba:latest",
+                  ],
+                  "sizeBytes": 1917061362,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "integration-palo-alto-deploy-44e2f72741184ec657b2d40dc45c03266c5b21a7-5a0e7e60-3697-4b5f-8c08-2bfa487b07ca:latest",
+                  ],
+                  "sizeBytes": 1917061362,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "integration-palo-alto-deploy-44e2f72741184ec657b2d40dc45c03266c5b21a7-5b292cfe-792a-4a59-9350-6db0ef438359:latest",
+                  ],
+                  "sizeBytes": 1917060922,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "integration-palo-alto-deploy-44e2f72741184ec657b2d40dc45c03266c5b21a7-f8d90797-7dbf-4fb6-afd9-f036d6c1106b:latest",
+                  ],
+                  "sizeBytes": 1917060844,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "integration-palo-alto-deploy-44e2f72741184ec657b2d40dc45c03266c5b21a7-1b8ae7d0-54b7-4cf5-b168-09a6985b6866:latest",
+                  ],
+                  "sizeBytes": 1914780301,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "integration-palo-alto-deploy-44e2f72741184ec657b2d40dc45c03266c5b21a7-729d7898-85e3-4899-9ea1-fb058fc606cd:latest",
+                  ],
+                  "sizeBytes": 1914779979,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-github-deploy-53e7266d1de72b94640164d9afaf8e480c33ceb4-2e558d10-ab51-4cee-9afb-ba3f58ce1425:latest",
+                    "jupiter-integration-github-deploy-fb31695144f5e41f74591956db86838387a94abc-2b29df49-1e19-4def-bef4-98528dc49ede:latest",
+                  ],
+                  "sizeBytes": 1914131831,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-github-deploy-0885d5eda63e0087751e9a567ba0fc764dbc58ec-9c8238b8-18ad-4854-aa86-63665590ed31:latest",
+                  ],
+                  "sizeBytes": 1900901350,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-github-deploy-0885d5eda63e0087751e9a567ba0fc764dbc58ec-ec86b77e-c199-4af3-99af-d5e0d5f4bdff:latest",
+                  ],
+                  "sizeBytes": 1900901269,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-github-deploy-0885d5eda63e0087751e9a567ba0fc764dbc58ec-a352266d-3355-481f-adb5-d67781031b4d:latest",
+                  ],
+                  "sizeBytes": 1900896409,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-github-deploy-0885d5eda63e0087751e9a567ba0fc764dbc58ec-623bb530-ed1e-4c8d-ac6b-530349489194:latest",
+                  ],
+                  "sizeBytes": 1900896303,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-github-deploy-210e833e37d13d1483ff5138764332fecc75c8d1-6df2e008-e85a-4d17-bf68-665263918946:latest",
+                  ],
+                  "sizeBytes": 1900894988,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-github-deploy-420e638f32a3de8e78b86e05ad316d1750aa7a06-3697b7be-3779-4bde-b379-04fe2280ec46:latest",
+                  ],
+                  "sizeBytes": 1900894938,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-github-deploy-210e833e37d13d1483ff5138764332fecc75c8d1-2bb7b0a3-bad9-42aa-a7d7-89485be5df00:latest",
+                  ],
+                  "sizeBytes": 1900894820,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-github-deploy-210e833e37d13d1483ff5138764332fecc75c8d1-2447d1ba-6f1e-443d-a0b3-3a6b7dc2a362:latest",
+                  ],
+                  "sizeBytes": 1900894675,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-github-deploy-0885d5eda63e0087751e9a567ba0fc764dbc58ec-0620caab-da9a-4e1c-a0ff-963629a1bfcf:latest",
+                  ],
+                  "sizeBytes": 1900892538,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-github-deploy-0885d5eda63e0087751e9a567ba0fc764dbc58ec-a95a0d8f-89ba-4546-8e12-bea64e05c590:latest",
+                  ],
+                  "sizeBytes": 1900889984,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-github-deploy-0885d5eda63e0087751e9a567ba0fc764dbc58ec-47c09170-7865-4428-9f4c-0beeb0c04d30:latest",
+                  ],
+                  "sizeBytes": 1900842412,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-github-deploy-c0831fe401125a4ca53c409960a7a43a2098e34b-540ef1d3-f365-4f7a-8561-6dc7897ae774:latest",
+                  ],
+                  "sizeBytes": 1872994272,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-github-deploy-c0831fe401125a4ca53c409960a7a43a2098e34b-9df157f4-6a62-4bc9-b9b6-49281c15d0fd:latest",
+                  ],
+                  "sizeBytes": 1872994263,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-github-deploy-c8dd81376b26a8ac60657b4ca92d1169df8752cf-77bf876e-f7e8-491f-b13b-d5ccdcca68d3:latest",
+                  ],
+                  "sizeBytes": 1862215735,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "jupiter-integration-github-deploy-f96f0d7bae3326cd7589b11a926e5afe6824dab0-e4b54287-27d2-4c70-a517-29f7ac026a36:latest",
+                  ],
+                  "sizeBytes": 1862215735,
                 },
               ],
               "nodeInfo": V1NodeSystemInfo {
                 "architecture": "amd64",
-                "bootID": "ef1cc26c-997e-4005-9bcf-3b754bd6d000",
-                "containerRuntimeVersion": "docker://20.10.5",
-                "kernelVersion": "5.8.0-63-generic",
-                "kubeProxyVersion": "v1.20.2",
-                "kubeletVersion": "v1.20.2",
-                "machineID": "73c9fceff7724090ba72b64bf6e8eff8",
+                "bootID": "fb76fe62-b05b-473d-95c9-be5a422f4e28",
+                "containerRuntimeVersion": "docker://24.0.7",
+                "kernelVersion": "6.5.11-linuxkit",
+                "kubeProxyVersion": "v1.28.2",
+                "kubeletVersion": "v1.28.2",
+                "machineID": "919d331f-76c9-4c76-a5ea-97c266068288",
                 "operatingSystem": "linux",
-                "osImage": "Ubuntu 20.04.1 LTS",
-                "systemUUID": "d93f0d2e-e6f1-4446-8f89-d90489af4aa0",
+                "osImage": "Docker Desktop",
+                "systemUUID": "919d331f-76c9-4c76-a5ea-97c266068288",
               },
               "phase": undefined,
               "volumesAttached": undefined,
@@ -432,47 +539,45 @@ Object {
       ],
       "_type": "kube_node",
       "active": undefined,
-      "createdOn": 1619557037000,
+      "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
-      "displayName": "minikube",
+      "displayName": "docker-desktop",
       "generation": undefined,
-      "hostname": "minikube",
-      "name": "minikube",
-      "podCIDR": "10.244.0.0/24",
-      "podCIDRs": Array [
-        "10.244.0.0/24",
-      ],
+      "hostname": "docker-desktop",
+      "name": "docker-desktop",
+      "podCIDR": undefined,
+      "podCIDRs": undefined,
       "privateDnsName": undefined,
       "privateIpAddress": Array [
-        "192.168.49.2",
+        "192.168.65.3",
       ],
       "providerID": undefined,
       "publicDnsName": undefined,
       "publicIpAddress": Array [],
-      "resourceVersion": "1336335",
-      "status.allocatable.cpu": "8",
-      "status.allocatable.ephemeral-storage": "88103912Ki",
-      "status.allocatable.hugepages-1Gi": "0",
-      "status.allocatable.hugepages-2Mi": "0",
-      "status.allocatable.memory": "16355036Ki",
+      "resourceVersion": "51758",
+      "status.allocatable.cpu": "12",
+      "status.allocatable.ephemeral-storage": "84747718516",
+      "status.allocatable.hugepages-1Gi": undefined,
+      "status.allocatable.hugepages-2Mi": undefined,
+      "status.allocatable.memory": "16282672Ki",
       "status.allocatable.pods": "110",
-      "status.capacity.cpu": "8",
-      "status.capacity.ephemeral-storage": "88103912Ki",
-      "status.capacity.hugepages-1Gi": "0",
-      "status.capacity.hugepages-2Mi": "0",
-      "status.capacity.memory": "16355036Ki",
+      "status.capacity.cpu": "12",
+      "status.capacity.ephemeral-storage": "91957160Ki",
+      "status.capacity.hugepages-1Gi": undefined,
+      "status.capacity.hugepages-2Mi": undefined,
+      "status.capacity.memory": "16385072Ki",
       "status.capacity.pods": "110",
       "status.kubeletEndpointPort": 10250,
       "status.nodeInfo.architecture": "amd64",
-      "status.nodeInfo.bootID": "ef1cc26c-997e-4005-9bcf-3b754bd6d000",
-      "status.nodeInfo.containerRuntimeVersion": "docker://20.10.5",
-      "status.nodeInfo.kernelVersion": "5.8.0-63-generic",
-      "status.nodeInfo.kubeProxyVersion": "v1.20.2",
-      "status.nodeInfo.kubeletVersion": "v1.20.2",
-      "status.nodeInfo.machineID": "73c9fceff7724090ba72b64bf6e8eff8",
+      "status.nodeInfo.bootID": "fb76fe62-b05b-473d-95c9-be5a422f4e28",
+      "status.nodeInfo.containerRuntimeVersion": "docker://24.0.7",
+      "status.nodeInfo.kernelVersion": "6.5.11-linuxkit",
+      "status.nodeInfo.kubeProxyVersion": "v1.28.2",
+      "status.nodeInfo.kubeletVersion": "v1.28.2",
+      "status.nodeInfo.machineID": "919d331f-76c9-4c76-a5ea-97c266068288",
       "status.nodeInfo.operatingSystem": "linux",
-      "status.nodeInfo.osImage": "Ubuntu 20.04.1 LTS",
-      "status.nodeInfo.systemUUID": "d93f0d2e-e6f1-4446-8f89-d90489af4aa0",
+      "status.nodeInfo.osImage": "Docker Desktop",
+      "status.nodeInfo.systemUUID": "919d331f-76c9-4c76-a5ea-97c266068288",
       "unschedulable": undefined,
     },
   ],

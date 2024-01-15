@@ -7,7 +7,7 @@ Object {
       "_class": Array [
         "Group",
       ],
-      "_key": "d5976ece-dc03-46a1-921f-cb6043e5f56e",
+      "_key": "868d4703-b338-4051-98e4-b65b4f0a0006",
       "_rawData": Array [
         Object {
           "name": "default",
@@ -16,34 +16,39 @@ Object {
             "kind": undefined,
             "metadata": V1ObjectMeta {
               "annotations": undefined,
-              "clusterName": undefined,
-              "creationTimestamp": 2021-04-27T20:57:19.000Z,
+              "creationTimestamp": 2024-01-11T15:50:15.000Z,
               "deletionGracePeriodSeconds": undefined,
               "deletionTimestamp": undefined,
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": undefined,
+              "labels": Object {
+                "kubernetes.io/metadata.name": "default",
+              },
               "managedFields": Array [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
                   "fieldsV1": Object {
-                    "f:status": Object {
-                      "f:phase": Object {},
+                    "f:metadata": Object {
+                      "f:labels": Object {
+                        ".": Object {},
+                        "f:kubernetes.io/metadata.name": Object {},
+                      },
                     },
                   },
                   "manager": "kube-apiserver",
                   "operation": "Update",
-                  "time": 2021-04-27T20:57:19.000Z,
+                  "subresource": undefined,
+                  "time": 2024-01-11T15:50:15.000Z,
                 },
               ],
               "name": "default",
               "namespace": undefined,
               "ownerReferences": undefined,
-              "resourceVersion": "200",
+              "resourceVersion": "39",
               "selfLink": undefined,
-              "uid": "d5976ece-dc03-46a1-921f-cb6043e5f56e",
+              "uid": "868d4703-b338-4051-98e4-b65b4f0a0006",
             },
             "spec": V1NamespaceSpec {
               "finalizers": Array [
@@ -59,7 +64,7 @@ Object {
       ],
       "_type": "kube_namespace",
       "active": undefined,
-      "createdOn": 1619557039000,
+      "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "default",
       "finalizers": Array [
@@ -67,14 +72,14 @@ Object {
       ],
       "generation": undefined,
       "name": "default",
-      "resourceVersion": "200",
+      "resourceVersion": "39",
       "status.phase": "Active",
     },
     Object {
       "_class": Array [
         "Group",
       ],
-      "_key": "55ea52dd-382c-4b8c-8c24-bff59db4b817",
+      "_key": "52615a92-75c3-4c4b-8b72-51be82a4bc21",
       "_rawData": Array [
         Object {
           "name": "default",
@@ -83,34 +88,39 @@ Object {
             "kind": undefined,
             "metadata": V1ObjectMeta {
               "annotations": undefined,
-              "clusterName": undefined,
-              "creationTimestamp": 2021-04-27T20:57:17.000Z,
+              "creationTimestamp": 2024-01-11T15:50:15.000Z,
               "deletionGracePeriodSeconds": undefined,
               "deletionTimestamp": undefined,
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": undefined,
+              "labels": Object {
+                "kubernetes.io/metadata.name": "kube-node-lease",
+              },
               "managedFields": Array [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
                   "fieldsV1": Object {
-                    "f:status": Object {
-                      "f:phase": Object {},
+                    "f:metadata": Object {
+                      "f:labels": Object {
+                        ".": Object {},
+                        "f:kubernetes.io/metadata.name": Object {},
+                      },
                     },
                   },
                   "manager": "kube-apiserver",
                   "operation": "Update",
-                  "time": 2021-04-27T20:57:17.000Z,
+                  "subresource": undefined,
+                  "time": 2024-01-11T15:50:15.000Z,
                 },
               ],
               "name": "kube-node-lease",
               "namespace": undefined,
               "ownerReferences": undefined,
-              "resourceVersion": "66",
+              "resourceVersion": "35",
               "selfLink": undefined,
-              "uid": "55ea52dd-382c-4b8c-8c24-bff59db4b817",
+              "uid": "52615a92-75c3-4c4b-8b72-51be82a4bc21",
             },
             "spec": V1NamespaceSpec {
               "finalizers": Array [
@@ -126,7 +136,7 @@ Object {
       ],
       "_type": "kube_namespace",
       "active": undefined,
-      "createdOn": 1619557037000,
+      "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-node-lease",
       "finalizers": Array [
@@ -134,14 +144,14 @@ Object {
       ],
       "generation": undefined,
       "name": "kube-node-lease",
-      "resourceVersion": "66",
+      "resourceVersion": "35",
       "status.phase": "Active",
     },
     Object {
       "_class": Array [
         "Group",
       ],
-      "_key": "35ca0e47-73b0-4e3d-9e2a-d8f3d6506d88",
+      "_key": "7a2ee4f7-12fd-494b-93f0-c639b1e63a72",
       "_rawData": Array [
         Object {
           "name": "default",
@@ -150,34 +160,39 @@ Object {
             "kind": undefined,
             "metadata": V1ObjectMeta {
               "annotations": undefined,
-              "clusterName": undefined,
-              "creationTimestamp": 2021-04-27T20:57:17.000Z,
+              "creationTimestamp": 2024-01-11T15:50:15.000Z,
               "deletionGracePeriodSeconds": undefined,
               "deletionTimestamp": undefined,
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": undefined,
+              "labels": Object {
+                "kubernetes.io/metadata.name": "kube-public",
+              },
               "managedFields": Array [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
                   "fieldsV1": Object {
-                    "f:status": Object {
-                      "f:phase": Object {},
+                    "f:metadata": Object {
+                      "f:labels": Object {
+                        ".": Object {},
+                        "f:kubernetes.io/metadata.name": Object {},
+                      },
                     },
                   },
                   "manager": "kube-apiserver",
                   "operation": "Update",
-                  "time": 2021-04-27T20:57:17.000Z,
+                  "subresource": undefined,
+                  "time": 2024-01-11T15:50:15.000Z,
                 },
               ],
               "name": "kube-public",
               "namespace": undefined,
               "ownerReferences": undefined,
-              "resourceVersion": "58",
+              "resourceVersion": "20",
               "selfLink": undefined,
-              "uid": "35ca0e47-73b0-4e3d-9e2a-d8f3d6506d88",
+              "uid": "7a2ee4f7-12fd-494b-93f0-c639b1e63a72",
             },
             "spec": V1NamespaceSpec {
               "finalizers": Array [
@@ -193,7 +208,7 @@ Object {
       ],
       "_type": "kube_namespace",
       "active": undefined,
-      "createdOn": 1619557037000,
+      "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-public",
       "finalizers": Array [
@@ -201,14 +216,14 @@ Object {
       ],
       "generation": undefined,
       "name": "kube-public",
-      "resourceVersion": "58",
+      "resourceVersion": "20",
       "status.phase": "Active",
     },
     Object {
       "_class": Array [
         "Group",
       ],
-      "_key": "239ee6a3-23d6-4ca6-ae32-3b3fdda6a604",
+      "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_rawData": Array [
         Object {
           "name": "default",
@@ -217,34 +232,39 @@ Object {
             "kind": undefined,
             "metadata": V1ObjectMeta {
               "annotations": undefined,
-              "clusterName": undefined,
-              "creationTimestamp": 2021-04-27T20:57:17.000Z,
+              "creationTimestamp": 2024-01-11T15:50:15.000Z,
               "deletionGracePeriodSeconds": undefined,
               "deletionTimestamp": undefined,
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": undefined,
+              "labels": Object {
+                "kubernetes.io/metadata.name": "kube-system",
+              },
               "managedFields": Array [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
                   "fieldsV1": Object {
-                    "f:status": Object {
-                      "f:phase": Object {},
+                    "f:metadata": Object {
+                      "f:labels": Object {
+                        ".": Object {},
+                        "f:kubernetes.io/metadata.name": Object {},
+                      },
                     },
                   },
                   "manager": "kube-apiserver",
                   "operation": "Update",
-                  "time": 2021-04-27T20:57:17.000Z,
+                  "subresource": undefined,
+                  "time": 2024-01-11T15:50:15.000Z,
                 },
               ],
               "name": "kube-system",
               "namespace": undefined,
               "ownerReferences": undefined,
-              "resourceVersion": "34",
+              "resourceVersion": "12",
               "selfLink": undefined,
-              "uid": "239ee6a3-23d6-4ca6-ae32-3b3fdda6a604",
+              "uid": "ce86116b-863b-4e74-979e-3c031a9aeee1",
             },
             "spec": V1NamespaceSpec {
               "finalizers": Array [
@@ -260,7 +280,7 @@ Object {
       ],
       "_type": "kube_namespace",
       "active": undefined,
-      "createdOn": 1619557037000,
+      "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-system",
       "finalizers": Array [
@@ -268,81 +288,14 @@ Object {
       ],
       "generation": undefined,
       "name": "kube-system",
-      "resourceVersion": "34",
-      "status.phase": "Active",
-    },
-    Object {
-      "_class": Array [
-        "Group",
-      ],
-      "_key": "0f9d0ac2-87db-41fe-ba0b-285778f29815",
-      "_rawData": Array [
-        Object {
-          "name": "default",
-          "rawData": V1Namespace {
-            "apiVersion": undefined,
-            "kind": undefined,
-            "metadata": V1ObjectMeta {
-              "annotations": undefined,
-              "clusterName": undefined,
-              "creationTimestamp": 2021-10-29T16:18:28.000Z,
-              "deletionGracePeriodSeconds": undefined,
-              "deletionTimestamp": undefined,
-              "finalizers": undefined,
-              "generateName": undefined,
-              "generation": undefined,
-              "labels": undefined,
-              "managedFields": Array [
-                V1ManagedFieldsEntry {
-                  "apiVersion": "v1",
-                  "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:status": Object {
-                      "f:phase": Object {},
-                    },
-                  },
-                  "manager": "kubectl-create",
-                  "operation": "Update",
-                  "time": 2021-10-29T16:18:28.000Z,
-                },
-              ],
-              "name": "my-namespace",
-              "namespace": undefined,
-              "ownerReferences": undefined,
-              "resourceVersion": "1141617",
-              "selfLink": undefined,
-              "uid": "0f9d0ac2-87db-41fe-ba0b-285778f29815",
-            },
-            "spec": V1NamespaceSpec {
-              "finalizers": Array [
-                "kubernetes",
-              ],
-            },
-            "status": V1NamespaceStatus {
-              "conditions": undefined,
-              "phase": "Active",
-            },
-          },
-        },
-      ],
-      "_type": "kube_namespace",
-      "active": undefined,
-      "createdOn": 1635524308000,
-      "deletionGracePeriodSeconds": undefined,
-      "displayName": "my-namespace",
-      "finalizers": Array [
-        "kubernetes",
-      ],
-      "generation": undefined,
-      "name": "my-namespace",
-      "resourceVersion": "1141617",
+      "resourceVersion": "12",
       "status.phase": "Active",
     },
     Object {
       "_class": Array [
         "Configuration",
       ],
-      "_key": "9a6469a5-447a-4f0c-b012-c55988ce2f2f",
+      "_key": "2fbcad2d-1572-4a03-ae00-4f2fbfd8a2e8",
       "_rawData": Array [
         Object {
           "name": "default",
@@ -350,12 +303,8 @@ Object {
             "apiVersion": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
-              "annotations": Object {
-                "kubectl.kubernetes.io/last-applied-configuration": "{\\"apiVersion\\":\\"networking.k8s.io/v1\\",\\"kind\\":\\"NetworkPolicy\\",\\"metadata\\":{\\"annotations\\":{},\\"name\\":\\"test-network-policy\\",\\"namespace\\":\\"default\\"},\\"spec\\":{\\"egress\\":[{\\"ports\\":[{\\"port\\":5978,\\"protocol\\":\\"TCP\\"}],\\"to\\":[{\\"ipBlock\\":{\\"cidr\\":\\"10.0.0.0/24\\"}}]}],\\"ingress\\":[{\\"from\\":[{\\"ipBlock\\":{\\"cidr\\":\\"172.17.0.0/16\\",\\"except\\":[\\"172.17.1.0/24\\"]}},{\\"namespaceSelector\\":{\\"matchLabels\\":{\\"project\\":\\"myproject\\"}}},{\\"podSelector\\":{\\"matchLabels\\":{\\"role\\":\\"frontend\\"}}}],\\"ports\\":[{\\"port\\":6379,\\"protocol\\":\\"TCP\\"}]}],\\"podSelector\\":{\\"matchLabels\\":{\\"role\\":\\"db\\"}},\\"policyTypes\\":[\\"Ingress\\",\\"Egress\\"]}}
-",
-              },
-              "clusterName": undefined,
-              "creationTimestamp": 2021-11-02T15:28:06.000Z,
+              "annotations": undefined,
+              "creationTimestamp": 2024-01-11T21:55:36.000Z,
               "deletionGracePeriodSeconds": undefined,
               "deletionTimestamp": undefined,
               "finalizers": undefined,
@@ -367,89 +316,45 @@ Object {
                   "apiVersion": "networking.k8s.io/v1",
                   "fieldsType": "FieldsV1",
                   "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:kubectl.kubernetes.io/last-applied-configuration": Object {},
-                      },
-                    },
                     "f:spec": Object {
-                      "f:egress": Object {},
                       "f:ingress": Object {},
                       "f:podSelector": Object {},
                       "f:policyTypes": Object {},
                     },
                   },
-                  "manager": "kubectl-client-side-apply",
+                  "manager": "kubectl-create",
                   "operation": "Update",
-                  "time": 2021-11-02T15:28:06.000Z,
+                  "subresource": undefined,
+                  "time": 2024-01-11T21:55:36.000Z,
                 },
               ],
-              "name": "test-network-policy",
+              "name": "db-frontend-allow",
               "namespace": "default",
               "ownerReferences": undefined,
-              "resourceVersion": "1267750",
+              "resourceVersion": "27751",
               "selfLink": undefined,
-              "uid": "9a6469a5-447a-4f0c-b012-c55988ce2f2f",
+              "uid": "2fbcad2d-1572-4a03-ae00-4f2fbfd8a2e8",
             },
             "spec": V1NetworkPolicySpec {
-              "egress": Array [
-                V1NetworkPolicyEgressRule {
-                  "ports": Array [
-                    V1NetworkPolicyPort {
-                      "port": 5978,
-                      "protocol": "TCP",
-                    },
-                  ],
-                  "to": Array [
-                    V1NetworkPolicyPeer {
-                      "ipBlock": V1IPBlock {
-                        "cidr": "10.0.0.0/24",
-                        "except": undefined,
-                      },
-                      "namespaceSelector": undefined,
-                      "podSelector": undefined,
-                    },
-                  ],
-                },
-              ],
+              "egress": undefined,
               "ingress": Array [
                 V1NetworkPolicyIngressRule {
                   "from": Array [
-                    V1NetworkPolicyPeer {
-                      "ipBlock": V1IPBlock {
-                        "cidr": "172.17.0.0/16",
-                        "except": Array [
-                          "172.17.1.0/24",
-                        ],
-                      },
-                      "namespaceSelector": undefined,
-                      "podSelector": undefined,
-                    },
-                    V1NetworkPolicyPeer {
-                      "ipBlock": undefined,
-                      "namespaceSelector": V1LabelSelector {
-                        "matchExpressions": undefined,
-                        "matchLabels": Object {
-                          "project": "myproject",
-                        },
-                      },
-                      "podSelector": undefined,
-                    },
                     V1NetworkPolicyPeer {
                       "ipBlock": undefined,
                       "namespaceSelector": undefined,
                       "podSelector": V1LabelSelector {
                         "matchExpressions": undefined,
                         "matchLabels": Object {
-                          "role": "frontend",
+                          "app": "np-test-wordpress",
                         },
                       },
                     },
                   ],
                   "ports": Array [
                     V1NetworkPolicyPort {
-                      "port": 6379,
+                      "endPort": undefined,
+                      "port": 3306,
                       "protocol": "TCP",
                     },
                   ],
@@ -458,36 +363,109 @@ Object {
               "podSelector": V1LabelSelector {
                 "matchExpressions": undefined,
                 "matchLabels": Object {
-                  "role": "db",
+                  "app": "np-test-mariadb",
                 },
               },
               "policyTypes": Array [
                 "Ingress",
-                "Egress",
               ],
             },
           },
         },
       ],
       "_type": "kube_network_policy",
-      "createdOn": 1635866886000,
+      "createdOn": 1705010136000,
       "deletionGracePeriodSeconds": undefined,
-      "displayName": "test-network-policy",
+      "displayName": "db-frontend-allow",
       "generation": 1,
-      "name": "test-network-policy",
+      "name": "db-frontend-allow",
       "policyTypes": Array [
         "Ingress",
-        "Egress",
       ],
-      "resourceVersion": "1267750",
+      "resourceVersion": "27751",
+    },
+    Object {
+      "_class": Array [
+        "Configuration",
+      ],
+      "_key": "d122159c-13d4-46f4-898a-4b253dfeb297",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": V1NetworkPolicy {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": undefined,
+              "creationTimestamp": 2024-01-11T21:55:11.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": 1,
+              "labels": undefined,
+              "managedFields": Array [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "networking.k8s.io/v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": Object {
+                    "f:spec": Object {
+                      "f:policyTypes": Object {},
+                    },
+                  },
+                  "manager": "kubectl-create",
+                  "operation": "Update",
+                  "subresource": undefined,
+                  "time": 2024-01-11T21:55:11.000Z,
+                },
+              ],
+              "name": "default-deny",
+              "namespace": "default",
+              "ownerReferences": undefined,
+              "resourceVersion": "27717",
+              "selfLink": undefined,
+              "uid": "d122159c-13d4-46f4-898a-4b253dfeb297",
+            },
+            "spec": V1NetworkPolicySpec {
+              "egress": undefined,
+              "ingress": undefined,
+              "podSelector": V1LabelSelector {
+                "matchExpressions": undefined,
+                "matchLabels": undefined,
+              },
+              "policyTypes": Array [
+                "Ingress",
+              ],
+            },
+          },
+        },
+      ],
+      "_type": "kube_network_policy",
+      "createdOn": 1705010111000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "default-deny",
+      "generation": 1,
+      "name": "default-deny",
+      "policyTypes": Array [
+        "Ingress",
+      ],
+      "resourceVersion": "27717",
     },
   ],
   "collectedRelationships": Array [
     Object {
       "_class": "CONTAINS",
-      "_fromEntityKey": "d5976ece-dc03-46a1-921f-cb6043e5f56e",
-      "_key": "d5976ece-dc03-46a1-921f-cb6043e5f56e|contains|9a6469a5-447a-4f0c-b012-c55988ce2f2f",
-      "_toEntityKey": "9a6469a5-447a-4f0c-b012-c55988ce2f2f",
+      "_fromEntityKey": "868d4703-b338-4051-98e4-b65b4f0a0006",
+      "_key": "868d4703-b338-4051-98e4-b65b4f0a0006|contains|2fbcad2d-1572-4a03-ae00-4f2fbfd8a2e8",
+      "_toEntityKey": "2fbcad2d-1572-4a03-ae00-4f2fbfd8a2e8",
+      "_type": "kube_namespace_contains_network_policy",
+      "displayName": "CONTAINS",
+    },
+    Object {
+      "_class": "CONTAINS",
+      "_fromEntityKey": "868d4703-b338-4051-98e4-b65b4f0a0006",
+      "_key": "868d4703-b338-4051-98e4-b65b4f0a0006|contains|d122159c-13d4-46f4-898a-4b253dfeb297",
+      "_toEntityKey": "d122159c-13d4-46f4-898a-4b253dfeb297",
       "_type": "kube_namespace_contains_network_policy",
       "displayName": "CONTAINS",
     },
@@ -498,201 +476,6 @@ Object {
     "kube_namespace_contains_network_policy",
   ],
   "numCollectedEntities": 6,
-  "numCollectedRelationships": 1,
-}
-`;
-
-exports[`#fetchPodSecurityPolicies should collect data: jobState 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
-        "Cluster",
-      ],
-      "_key": "kube_cluster:docker-desktop",
-      "_rawData": Array [
-        Object {
-          "name": "default",
-          "rawData": Object {
-            "name": "docker-desktop",
-            "server": "https://192.168.49.2:8443",
-            "skipTLSVerify": false,
-          },
-        },
-      ],
-      "_type": "kube_cluster",
-      "createdOn": undefined,
-      "displayName": "docker-desktop",
-      "name": "docker-desktop",
-      "server": "https://192.168.49.2:8443",
-      "skipTlsVerify": false,
-    },
-    Object {
-      "_class": Array [
-        "Configuration",
-      ],
-      "_key": "d2ddbbb0-5714-4597-bc8b-cc521a978870",
-      "_rawData": Array [
-        Object {
-          "name": "default",
-          "rawData": V1beta1PodSecurityPolicy {
-            "apiVersion": undefined,
-            "kind": undefined,
-            "metadata": V1ObjectMeta {
-              "annotations": Object {
-                "kubectl.kubernetes.io/last-applied-configuration": "{\\"apiVersion\\":\\"policy/v1beta1\\",\\"kind\\":\\"PodSecurityPolicy\\",\\"metadata\\":{\\"annotations\\":{},\\"name\\":\\"example\\"},\\"spec\\":{\\"fsGroup\\":{\\"rule\\":\\"RunAsAny\\"},\\"privileged\\":false,\\"runAsUser\\":{\\"rule\\":\\"RunAsAny\\"},\\"seLinux\\":{\\"rule\\":\\"RunAsAny\\"},\\"supplementalGroups\\":{\\"ranges\\":[{\\"max\\":65535,\\"min\\":1}],\\"rule\\":\\"MustRunAs\\"},\\"volumes\\":[\\"*\\"]}}
-",
-              },
-              "clusterName": undefined,
-              "creationTimestamp": 2021-11-01T17:48:24.000Z,
-              "deletionGracePeriodSeconds": undefined,
-              "deletionTimestamp": undefined,
-              "finalizers": undefined,
-              "generateName": undefined,
-              "generation": undefined,
-              "labels": undefined,
-              "managedFields": Array [
-                V1ManagedFieldsEntry {
-                  "apiVersion": "policy/v1beta1",
-                  "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:kubectl.kubernetes.io/last-applied-configuration": Object {},
-                      },
-                    },
-                    "f:spec": Object {
-                      "f:allowPrivilegeEscalation": Object {},
-                      "f:fsGroup": Object {
-                        "f:rule": Object {},
-                      },
-                      "f:runAsUser": Object {
-                        "f:rule": Object {},
-                      },
-                      "f:seLinux": Object {
-                        "f:rule": Object {},
-                      },
-                      "f:supplementalGroups": Object {
-                        "f:ranges": Object {},
-                        "f:rule": Object {},
-                      },
-                      "f:volumes": Object {},
-                    },
-                  },
-                  "manager": "kubectl-client-side-apply",
-                  "operation": "Update",
-                  "time": 2021-11-01T18:27:53.000Z,
-                },
-              ],
-              "name": "example",
-              "namespace": undefined,
-              "ownerReferences": undefined,
-              "resourceVersion": "1214124",
-              "selfLink": undefined,
-              "uid": "d2ddbbb0-5714-4597-bc8b-cc521a978870",
-            },
-            "spec": V1beta1PodSecurityPolicySpec {
-              "allowPrivilegeEscalation": true,
-              "allowedCSIDrivers": undefined,
-              "allowedCapabilities": undefined,
-              "allowedFlexVolumes": undefined,
-              "allowedHostPaths": undefined,
-              "allowedProcMountTypes": undefined,
-              "allowedUnsafeSysctls": undefined,
-              "defaultAddCapabilities": undefined,
-              "defaultAllowPrivilegeEscalation": undefined,
-              "forbiddenSysctls": undefined,
-              "fsGroup": V1beta1FSGroupStrategyOptions {
-                "ranges": undefined,
-                "rule": "RunAsAny",
-              },
-              "hostIPC": undefined,
-              "hostNetwork": undefined,
-              "hostPID": undefined,
-              "hostPorts": undefined,
-              "privileged": undefined,
-              "readOnlyRootFilesystem": undefined,
-              "requiredDropCapabilities": undefined,
-              "runAsGroup": undefined,
-              "runAsUser": V1beta1RunAsUserStrategyOptions {
-                "ranges": undefined,
-                "rule": "RunAsAny",
-              },
-              "runtimeClass": undefined,
-              "seLinux": V1beta1SELinuxStrategyOptions {
-                "rule": "RunAsAny",
-                "seLinuxOptions": undefined,
-              },
-              "supplementalGroups": V1beta1SupplementalGroupsStrategyOptions {
-                "ranges": Array [
-                  V1beta1IDRange {
-                    "max": 65535,
-                    "min": 1,
-                  },
-                ],
-                "rule": "MustRunAs",
-              },
-              "volumes": Array [
-                "*",
-              ],
-            },
-          },
-        },
-      ],
-      "_type": "kube_pod_security_policy",
-      "allowPrivilegeEscalation": true,
-      "allowedCapabilities": undefined,
-      "allowedProcMountTypes": undefined,
-      "allowedUnsafeSysctls": undefined,
-      "createdOn": 1635788904000,
-      "defaultAddCapabilities": undefined,
-      "defaultAllowPrivilegeEscalation": undefined,
-      "deletionGracePeriodSeconds": undefined,
-      "displayName": "example",
-      "forbiddenSysctls": undefined,
-      "generation": undefined,
-      "hostIPC": false,
-      "hostNetwork": false,
-      "hostPID": false,
-      "name": "example",
-      "privileged": false,
-      "readOnlyRootFilesystem": false,
-      "requiredDropCapabilities": undefined,
-      "resourceVersion": "1214124",
-      "runAsGroup.range": undefined,
-      "runAsGroup.rule": undefined,
-      "runAsUser.range": undefined,
-      "runAsUser.rule": "RunAsAny",
-      "runtimeClass.allowedRuntimeClassNames": undefined,
-      "runtimeClass.defaultRuntimeClassName": undefined,
-      "seLinux.rule": "RunAsAny",
-      "seLinux.seLinuxOptions.level": undefined,
-      "seLinux.seLinuxOptions.role": undefined,
-      "seLinux.seLinuxOptions.type": undefined,
-      "seLinux.seLinuxOptions.user": undefined,
-      "supplementalGroups.range": Array [
-        "1, 65535",
-      ],
-      "supplementalGroups.rule": "MustRunAs",
-    },
-  ],
-  "collectedRelationships": Array [
-    Object {
-      "_class": "CONTAINS",
-      "_fromEntityKey": "kube_cluster:docker-desktop",
-      "_key": "kube_cluster:docker-desktop|contains|d2ddbbb0-5714-4597-bc8b-cc521a978870",
-      "_toEntityKey": "d2ddbbb0-5714-4597-bc8b-cc521a978870",
-      "_type": "kube_cluster_contains_pod_security_policy",
-      "displayName": "CONTAINS",
-    },
-  ],
-  "encounteredTypes": Array [
-    "kube_cluster",
-    "kube_pod_security_policy",
-    "kube_cluster_contains_pod_security_policy",
-  ],
-  "numCollectedEntities": 2,
-  "numCollectedRelationships": 1,
+  "numCollectedRelationships": 2,
 }
 `;

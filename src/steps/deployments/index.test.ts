@@ -39,7 +39,7 @@ describe('#fetchDeployments', () => {
                 revisionHistoryLimit: { type: 'number' },
                 'strategy.type': { type: 'string' },
                 'strategy.maxSurge': { type: 'string' },
-                'strategy.maxUnavailable': { type: 'string' },
+                'strategy.maxUnavailable': { type: ['string', 'number'] },
                 'status.availableReplicas': { type: 'number' },
                 'status.collisionCount': { type: 'number' },
                 'status.observedGeneration': { type: 'number' },
