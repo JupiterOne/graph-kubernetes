@@ -77,10 +77,10 @@ jobs:
           echo "//registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}" > .npmrc
           yarn
           npm publish
-    
+
   publish-image:
     if: ${{github.event_name != 'pull_request'}}
-    uses: jupiterone/.github/.github/workflows/publish_integration_docker_image.yaml@v1.0.0
+    uses: jupiterone/.github/.github/workflows/publish_integration_docker_image.yaml@v3
     with:
       package-name: 'jupiterone/graph-kubernetes'
     secrets:
