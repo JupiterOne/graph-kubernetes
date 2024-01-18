@@ -8,6 +8,13 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.0.0 - 2024-01-18
+
+### Changed
+
+- upgrade api client to handle k8s server 1.28
+- migrate client to singleton pattern
+
 ## 1.1.0 - 2022-10-19
 
 ### Added
