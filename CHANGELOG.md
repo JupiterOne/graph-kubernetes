@@ -8,6 +8,14 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.1.0 - 2024-03-20
+
+### Changed
+
+- Added kube_images entity
+- Added kube_node_has_image
+- Added kube_replicaset_uses_image
+
 ## 2.0.0 - 2024-01-18
 
 ### Changed
