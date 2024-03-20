@@ -624,14 +624,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:f9363fc4c08ec1c490be966712156da621f5021879112e2ffb40c02f3efad12b",
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3:11",
-      ],
-      "name": Array [
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:f9363fc4c08ec1c490be966712156da621f5021879112e2ffb40c02f3efad12b",
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3:11",
-      ],
+      "displayName": "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:f9363fc4c08ec1c490be966712156da621f5021879112e2ffb40c02f3efad12b",
+      "name": "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:f9363fc4c08ec1c490be966712156da621f5021879112e2ffb40c02f3efad12b",
       "names": Array [
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:f9363fc4c08ec1c490be966712156da621f5021879112e2ffb40c02f3efad12b",
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3:11",
@@ -656,12 +650,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-cb7ecdd3-c17e-4339-8f49-abe0744f41d7:latest",
-      ],
-      "name": Array [
-        "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-cb7ecdd3-c17e-4339-8f49-abe0744f41d7:latest",
-      ],
+      "displayName": "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-cb7ecdd3-c17e-4339-8f49-abe0744f41d7:latest",
+      "name": "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-cb7ecdd3-c17e-4339-8f49-abe0744f41d7:latest",
       "names": Array [
         "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-cb7ecdd3-c17e-4339-8f49-abe0744f41d7:latest",
       ],
@@ -685,12 +675,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-8ee4801e-fcef-412e-be46-6decfe745677:latest",
-      ],
-      "name": Array [
-        "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-8ee4801e-fcef-412e-be46-6decfe745677:latest",
-      ],
+      "displayName": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-8ee4801e-fcef-412e-be46-6decfe745677:latest",
+      "name": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-8ee4801e-fcef-412e-be46-6decfe745677:latest",
       "names": Array [
         "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-8ee4801e-fcef-412e-be46-6decfe745677:latest",
       ],
@@ -714,12 +700,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-f733468a-1115-458d-addc-136a099c83e0:latest",
-      ],
-      "name": Array [
-        "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-f733468a-1115-458d-addc-136a099c83e0:latest",
-      ],
+      "displayName": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-f733468a-1115-458d-addc-136a099c83e0:latest",
+      "name": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-f733468a-1115-458d-addc-136a099c83e0:latest",
       "names": Array [
         "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-f733468a-1115-458d-addc-136a099c83e0:latest",
       ],
@@ -743,12 +725,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-0295e95e-3a05-477f-90ec-b08d7b08ea84:latest",
-      ],
-      "name": Array [
-        "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-0295e95e-3a05-477f-90ec-b08d7b08ea84:latest",
-      ],
+      "displayName": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-0295e95e-3a05-477f-90ec-b08d7b08ea84:latest",
+      "name": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-0295e95e-3a05-477f-90ec-b08d7b08ea84:latest",
       "names": Array [
         "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-0295e95e-3a05-477f-90ec-b08d7b08ea84:latest",
       ],
@@ -772,12 +750,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
-      ],
-      "name": Array [
-        "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
-      ],
+      "displayName": "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
+      "name": "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
       "names": Array [
         "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
       ],
@@ -801,12 +775,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-9301f5b0-9bdc-4eab-88b3-18911c56c46d:latest",
-      ],
-      "name": Array [
-        "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-9301f5b0-9bdc-4eab-88b3-18911c56c46d:latest",
-      ],
+      "displayName": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-9301f5b0-9bdc-4eab-88b3-18911c56c46d:latest",
+      "name": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-9301f5b0-9bdc-4eab-88b3-18911c56c46d:latest",
       "names": Array [
         "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-9301f5b0-9bdc-4eab-88b3-18911c56c46d:latest",
       ],
@@ -830,12 +800,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-48587a38-13d0-418f-a08e-3db69c486fd6:latest",
-      ],
-      "name": Array [
-        "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-48587a38-13d0-418f-a08e-3db69c486fd6:latest",
-      ],
+      "displayName": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-48587a38-13d0-418f-a08e-3db69c486fd6:latest",
+      "name": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-48587a38-13d0-418f-a08e-3db69c486fd6:latest",
       "names": Array [
         "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-48587a38-13d0-418f-a08e-3db69c486fd6:latest",
       ],
@@ -859,12 +825,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-a4964632-de9c-43bd-9954-c091379ad801:latest",
-      ],
-      "name": Array [
-        "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-a4964632-de9c-43bd-9954-c091379ad801:latest",
-      ],
+      "displayName": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-a4964632-de9c-43bd-9954-c091379ad801:latest",
+      "name": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-a4964632-de9c-43bd-9954-c091379ad801:latest",
       "names": Array [
         "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-a4964632-de9c-43bd-9954-c091379ad801:latest",
       ],
@@ -888,12 +850,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "integration-cyberark-epm-deploy-f73b81b2d5f513cb4a85f1ce3397f7c3b98d6ebc-b05f1075-0b24-402c-99ea-53ecee461a8c:latest",
-      ],
-      "name": Array [
-        "integration-cyberark-epm-deploy-f73b81b2d5f513cb4a85f1ce3397f7c3b98d6ebc-b05f1075-0b24-402c-99ea-53ecee461a8c:latest",
-      ],
+      "displayName": "integration-cyberark-epm-deploy-f73b81b2d5f513cb4a85f1ce3397f7c3b98d6ebc-b05f1075-0b24-402c-99ea-53ecee461a8c:latest",
+      "name": "integration-cyberark-epm-deploy-f73b81b2d5f513cb4a85f1ce3397f7c3b98d6ebc-b05f1075-0b24-402c-99ea-53ecee461a8c:latest",
       "names": Array [
         "integration-cyberark-epm-deploy-f73b81b2d5f513cb4a85f1ce3397f7c3b98d6ebc-b05f1075-0b24-402c-99ea-53ecee461a8c:latest",
       ],
@@ -917,12 +875,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-46234c6b-12a9-4e98-9b7c-d73b9f7a43b2:latest",
-      ],
-      "name": Array [
-        "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-46234c6b-12a9-4e98-9b7c-d73b9f7a43b2:latest",
-      ],
+      "displayName": "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-46234c6b-12a9-4e98-9b7c-d73b9f7a43b2:latest",
+      "name": "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-46234c6b-12a9-4e98-9b7c-d73b9f7a43b2:latest",
       "names": Array [
         "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-46234c6b-12a9-4e98-9b7c-d73b9f7a43b2:latest",
       ],
@@ -946,12 +900,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
-      ],
-      "name": Array [
-        "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
-      ],
+      "displayName": "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
+      "name": "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
       "names": Array [
         "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
       ],
@@ -975,12 +925,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-cb206fd0-fc44-4c2c-afc6-03a09d9e73ff:latest",
-      ],
-      "name": Array [
-        "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-cb206fd0-fc44-4c2c-afc6-03a09d9e73ff:latest",
-      ],
+      "displayName": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-cb206fd0-fc44-4c2c-afc6-03a09d9e73ff:latest",
+      "name": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-cb206fd0-fc44-4c2c-afc6-03a09d9e73ff:latest",
       "names": Array [
         "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-cb206fd0-fc44-4c2c-afc6-03a09d9e73ff:latest",
       ],
@@ -1005,14 +951,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-4e33638a-a167-42b7-9c51-ddf0b8262531:latest",
-        "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-f2201f3c-d7f2-495d-9129-e47879669af9:latest",
-      ],
-      "name": Array [
-        "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-4e33638a-a167-42b7-9c51-ddf0b8262531:latest",
-        "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-f2201f3c-d7f2-495d-9129-e47879669af9:latest",
-      ],
+      "displayName": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-4e33638a-a167-42b7-9c51-ddf0b8262531:latest",
+      "name": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-4e33638a-a167-42b7-9c51-ddf0b8262531:latest",
       "names": Array [
         "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-4e33638a-a167-42b7-9c51-ddf0b8262531:latest",
         "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-f2201f3c-d7f2-495d-9129-e47879669af9:latest",
@@ -1037,12 +977,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-55bca43d-ef3c-41a7-a1b1-ab09c33b1b81:latest",
-      ],
-      "name": Array [
-        "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-55bca43d-ef3c-41a7-a1b1-ab09c33b1b81:latest",
-      ],
+      "displayName": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-55bca43d-ef3c-41a7-a1b1-ab09c33b1b81:latest",
+      "name": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-55bca43d-ef3c-41a7-a1b1-ab09c33b1b81:latest",
       "names": Array [
         "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-55bca43d-ef3c-41a7-a1b1-ab09c33b1b81:latest",
       ],
@@ -1067,14 +1003,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:0625c426e9e5f9eb4cd387d6583f007ff3cc7bf47a94b6e714e56b11406f2516",
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3:10",
-      ],
-      "name": Array [
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:0625c426e9e5f9eb4cd387d6583f007ff3cc7bf47a94b6e714e56b11406f2516",
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3:10",
-      ],
+      "displayName": "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:0625c426e9e5f9eb4cd387d6583f007ff3cc7bf47a94b6e714e56b11406f2516",
+      "name": "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:0625c426e9e5f9eb4cd387d6583f007ff3cc7bf47a94b6e714e56b11406f2516",
       "names": Array [
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:0625c426e9e5f9eb4cd387d6583f007ff3cc7bf47a94b6e714e56b11406f2516",
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3:10",
@@ -1100,14 +1030,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node18@sha256:bb87ce3aa714d1457b4cefee61bf034b6ee09e6a66a5ccab236540f60fd2b3d1",
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node18:4",
-      ],
-      "name": Array [
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node18@sha256:bb87ce3aa714d1457b4cefee61bf034b6ee09e6a66a5ccab236540f60fd2b3d1",
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node18:4",
-      ],
+      "displayName": "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node18@sha256:bb87ce3aa714d1457b4cefee61bf034b6ee09e6a66a5ccab236540f60fd2b3d1",
+      "name": "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node18@sha256:bb87ce3aa714d1457b4cefee61bf034b6ee09e6a66a5ccab236540f60fd2b3d1",
       "names": Array [
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node18@sha256:bb87ce3aa714d1457b4cefee61bf034b6ee09e6a66a5ccab236540f60fd2b3d1",
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node18:4",
@@ -1133,14 +1057,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/deployer@sha256:cc3996116a7a3418a6919a57af4a7fe00b880efec6ff000ff6280bc3729264f6",
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/deployer:4",
-      ],
-      "name": Array [
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/deployer@sha256:cc3996116a7a3418a6919a57af4a7fe00b880efec6ff000ff6280bc3729264f6",
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/deployer:4",
-      ],
+      "displayName": "081157560428.dkr.ecr.us-east-1.amazonaws.com/deployer@sha256:cc3996116a7a3418a6919a57af4a7fe00b880efec6ff000ff6280bc3729264f6",
+      "name": "081157560428.dkr.ecr.us-east-1.amazonaws.com/deployer@sha256:cc3996116a7a3418a6919a57af4a7fe00b880efec6ff000ff6280bc3729264f6",
       "names": Array [
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/deployer@sha256:cc3996116a7a3418a6919a57af4a7fe00b880efec6ff000ff6280bc3729264f6",
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/deployer:4",
@@ -1166,14 +1084,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node14@sha256:19927c7d9f18be98b9da4a5ccfda77113be8741e1878dd949974021f569e2c72",
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node14:4",
-      ],
-      "name": Array [
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node14@sha256:19927c7d9f18be98b9da4a5ccfda77113be8741e1878dd949974021f569e2c72",
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node14:4",
-      ],
+      "displayName": "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node14@sha256:19927c7d9f18be98b9da4a5ccfda77113be8741e1878dd949974021f569e2c72",
+      "name": "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node14@sha256:19927c7d9f18be98b9da4a5ccfda77113be8741e1878dd949974021f569e2c72",
       "names": Array [
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node14@sha256:19927c7d9f18be98b9da4a5ccfda77113be8741e1878dd949974021f569e2c72",
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node14:4",
@@ -1198,12 +1110,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "graph-kubernetes:2.0.0",
-      ],
-      "name": Array [
-        "graph-kubernetes:2.0.0",
-      ],
+      "displayName": "graph-kubernetes:2.0.0",
+      "name": "graph-kubernetes:2.0.0",
       "names": Array [
         "graph-kubernetes:2.0.0",
       ],
@@ -1227,12 +1135,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "graph-kubernetes:tilt-388a734e13d4a194",
-      ],
-      "name": Array [
-        "graph-kubernetes:tilt-388a734e13d4a194",
-      ],
+      "displayName": "graph-kubernetes:tilt-388a734e13d4a194",
+      "name": "graph-kubernetes:tilt-388a734e13d4a194",
       "names": Array [
         "graph-kubernetes:tilt-388a734e13d4a194",
       ],
@@ -1256,12 +1160,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "web-icons-deploy-92c218c41b1a8f518d0369858274cc96f85608fe-7e0615be-f920-4847-a715-b377143d9adb:latest",
-      ],
-      "name": Array [
-        "web-icons-deploy-92c218c41b1a8f518d0369858274cc96f85608fe-7e0615be-f920-4847-a715-b377143d9adb:latest",
-      ],
+      "displayName": "web-icons-deploy-92c218c41b1a8f518d0369858274cc96f85608fe-7e0615be-f920-4847-a715-b377143d9adb:latest",
+      "name": "web-icons-deploy-92c218c41b1a8f518d0369858274cc96f85608fe-7e0615be-f920-4847-a715-b377143d9adb:latest",
       "names": Array [
         "web-icons-deploy-92c218c41b1a8f518d0369858274cc96f85608fe-7e0615be-f920-4847-a715-b377143d9adb:latest",
       ],
@@ -1286,14 +1186,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-slim@sha256:2d2c0799c492cd19a6f092c8a61e45526b378aa75d74bad5f630b4b1c1d5d286",
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-slim:11",
-      ],
-      "name": Array [
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-slim@sha256:2d2c0799c492cd19a6f092c8a61e45526b378aa75d74bad5f630b4b1c1d5d286",
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-slim:11",
-      ],
+      "displayName": "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-slim@sha256:2d2c0799c492cd19a6f092c8a61e45526b378aa75d74bad5f630b4b1c1d5d286",
+      "name": "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-slim@sha256:2d2c0799c492cd19a6f092c8a61e45526b378aa75d74bad5f630b4b1c1d5d286",
       "names": Array [
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-slim@sha256:2d2c0799c492cd19a6f092c8a61e45526b378aa75d74bad5f630b4b1c1d5d286",
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-slim:11",
@@ -1319,14 +1213,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "docker/desktop-kubernetes@sha256:09d56959eb312aadacf637abb4cbd803efcc35a7cc8a8dfe1c7d1670ee76668a",
-        "docker/desktop-kubernetes:kubernetes-v1.29.1-cni-v1.4.0-critools-v1.29.0-cri-dockerd-v0.3.8-1-debian",
-      ],
-      "name": Array [
-        "docker/desktop-kubernetes@sha256:09d56959eb312aadacf637abb4cbd803efcc35a7cc8a8dfe1c7d1670ee76668a",
-        "docker/desktop-kubernetes:kubernetes-v1.29.1-cni-v1.4.0-critools-v1.29.0-cri-dockerd-v0.3.8-1-debian",
-      ],
+      "displayName": "docker/desktop-kubernetes@sha256:09d56959eb312aadacf637abb4cbd803efcc35a7cc8a8dfe1c7d1670ee76668a",
+      "name": "docker/desktop-kubernetes@sha256:09d56959eb312aadacf637abb4cbd803efcc35a7cc8a8dfe1c7d1670ee76668a",
       "names": Array [
         "docker/desktop-kubernetes@sha256:09d56959eb312aadacf637abb4cbd803efcc35a7cc8a8dfe1c7d1670ee76668a",
         "docker/desktop-kubernetes:kubernetes-v1.29.1-cni-v1.4.0-critools-v1.29.0-cri-dockerd-v0.3.8-1-debian",
@@ -1352,14 +1240,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "hubproxy.docker.internal:5000/docker/desktop-kubernetes@sha256:783fe465eee40f2bf5743f2f90c94223093f173808bae7ca54f9a741d9d36b40",
-        "hubproxy.docker.internal:5000/docker/desktop-kubernetes:kubernetes-v1.25.2-cni-v1.1.1-critools-v1.24.2-cri-dockerd-v0.2.5-1-debian",
-      ],
-      "name": Array [
-        "hubproxy.docker.internal:5000/docker/desktop-kubernetes@sha256:783fe465eee40f2bf5743f2f90c94223093f173808bae7ca54f9a741d9d36b40",
-        "hubproxy.docker.internal:5000/docker/desktop-kubernetes:kubernetes-v1.25.2-cni-v1.1.1-critools-v1.24.2-cri-dockerd-v0.2.5-1-debian",
-      ],
+      "displayName": "hubproxy.docker.internal:5000/docker/desktop-kubernetes@sha256:783fe465eee40f2bf5743f2f90c94223093f173808bae7ca54f9a741d9d36b40",
+      "name": "hubproxy.docker.internal:5000/docker/desktop-kubernetes@sha256:783fe465eee40f2bf5743f2f90c94223093f173808bae7ca54f9a741d9d36b40",
       "names": Array [
         "hubproxy.docker.internal:5000/docker/desktop-kubernetes@sha256:783fe465eee40f2bf5743f2f90c94223093f173808bae7ca54f9a741d9d36b40",
         "hubproxy.docker.internal:5000/docker/desktop-kubernetes:kubernetes-v1.25.2-cni-v1.1.1-critools-v1.24.2-cri-dockerd-v0.2.5-1-debian",
@@ -1384,12 +1266,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "k8s.gcr.io/etcd:3.5.4-0",
-      ],
-      "name": Array [
-        "k8s.gcr.io/etcd:3.5.4-0",
-      ],
+      "displayName": "k8s.gcr.io/etcd:3.5.4-0",
+      "name": "k8s.gcr.io/etcd:3.5.4-0",
       "names": Array [
         "k8s.gcr.io/etcd:3.5.4-0",
       ],
@@ -1417,20 +1295,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
-        "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-46234c6b-12a9-4e98-9b7c-d73b9f7a43b2:latest",
-        "integration-cyberark-epm-9e22c7edc643e71676f86820b2f1b77b63163c29-0295e95e-3a05-477f-90ec-b08d7b08ea84:latest",
-        "integration-cyberark-epm-9e22c7edc643e71676f86820b2f1b77b63163c29-0e701342-1f76-4007-bc87-9f15a9e3e827:latest",
-        "integration-cyberark-epm-9e22c7edc643e71676f86820b2f1b77b63163c29-2b9cf5c8-2b6e-4c9e-b43a-f27b4e297c00:latest",
-      ],
-      "name": Array [
-        "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
-        "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-46234c6b-12a9-4e98-9b7c-d73b9f7a43b2:latest",
-        "integration-cyberark-epm-9e22c7edc643e71676f86820b2f1b77b63163c29-0295e95e-3a05-477f-90ec-b08d7b08ea84:latest",
-        "integration-cyberark-epm-9e22c7edc643e71676f86820b2f1b77b63163c29-0e701342-1f76-4007-bc87-9f15a9e3e827:latest",
-        "integration-cyberark-epm-9e22c7edc643e71676f86820b2f1b77b63163c29-2b9cf5c8-2b6e-4c9e-b43a-f27b4e297c00:latest",
-      ],
+      "displayName": "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
+      "name": "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
       "names": Array [
         "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
         "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-46234c6b-12a9-4e98-9b7c-d73b9f7a43b2:latest",
@@ -1462,20 +1328,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
-        "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-cb7ecdd3-c17e-4339-8f49-abe0744f41d7:latest",
-        "integration-cyberark-epm-9e22c7edc643e71676f86820b2f1b77b63163c29-48587a38-13d0-418f-a08e-3db69c486fd6:latest",
-        "integration-cyberark-epm-9e22c7edc643e71676f86820b2f1b77b63163c29-4e33638a-a167-42b7-9c51-ddf0b8262531:latest",
-        "integration-cyberark-epm-9e22c7edc643e71676f86820b2f1b77b63163c29-9301f5b0-9bdc-4eab-88b3-18911c56c46d:latest",
-      ],
-      "name": Array [
-        "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
-        "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-cb7ecdd3-c17e-4339-8f49-abe0744f41d7:latest",
-        "integration-cyberark-epm-9e22c7edc643e71676f86820b2f1b77b63163c29-48587a38-13d0-418f-a08e-3db69c486fd6:latest",
-        "integration-cyberark-epm-9e22c7edc643e71676f86820b2f1b77b63163c29-4e33638a-a167-42b7-9c51-ddf0b8262531:latest",
-        "integration-cyberark-epm-9e22c7edc643e71676f86820b2f1b77b63163c29-9301f5b0-9bdc-4eab-88b3-18911c56c46d:latest",
-      ],
+      "displayName": "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
+      "name": "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
       "names": Array [
         "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
         "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-cb7ecdd3-c17e-4339-8f49-abe0744f41d7:latest",
@@ -1504,14 +1358,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/ecs-nodejs-service-with-observability-instrumentation@sha256:8882cffe638b7204641d2b9dbb7e2b72702058e679174dbf957fccb15fa37b59",
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/ecs-nodejs-service-with-observability-instrumentation:latest",
-      ],
-      "name": Array [
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/ecs-nodejs-service-with-observability-instrumentation@sha256:8882cffe638b7204641d2b9dbb7e2b72702058e679174dbf957fccb15fa37b59",
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/ecs-nodejs-service-with-observability-instrumentation:latest",
-      ],
+      "displayName": "081157560428.dkr.ecr.us-east-1.amazonaws.com/ecs-nodejs-service-with-observability-instrumentation@sha256:8882cffe638b7204641d2b9dbb7e2b72702058e679174dbf957fccb15fa37b59",
+      "name": "081157560428.dkr.ecr.us-east-1.amazonaws.com/ecs-nodejs-service-with-observability-instrumentation@sha256:8882cffe638b7204641d2b9dbb7e2b72702058e679174dbf957fccb15fa37b59",
       "names": Array [
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/ecs-nodejs-service-with-observability-instrumentation@sha256:8882cffe638b7204641d2b9dbb7e2b72702058e679174dbf957fccb15fa37b59",
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/ecs-nodejs-service-with-observability-instrumentation:latest",
@@ -1537,14 +1385,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "moby/buildkit@sha256:d6fa89830c26919acba23c5cafa09df0c3ec1fbde20bb2a15ff349e0795241f4",
-        "moby/buildkit:v0.11.6",
-      ],
-      "name": Array [
-        "moby/buildkit@sha256:d6fa89830c26919acba23c5cafa09df0c3ec1fbde20bb2a15ff349e0795241f4",
-        "moby/buildkit:v0.11.6",
-      ],
+      "displayName": "moby/buildkit@sha256:d6fa89830c26919acba23c5cafa09df0c3ec1fbde20bb2a15ff349e0795241f4",
+      "name": "moby/buildkit@sha256:d6fa89830c26919acba23c5cafa09df0c3ec1fbde20bb2a15ff349e0795241f4",
       "names": Array [
         "moby/buildkit@sha256:d6fa89830c26919acba23c5cafa09df0c3ec1fbde20bb2a15ff349e0795241f4",
         "moby/buildkit:v0.11.6",
@@ -1570,14 +1412,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/ami-builder@sha256:980f50b2e5780923d3f88dd6fc3b81cbfed55fc08032bf5fc54be809c52bfa8c",
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/ami-builder:1",
-      ],
-      "name": Array [
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/ami-builder@sha256:980f50b2e5780923d3f88dd6fc3b81cbfed55fc08032bf5fc54be809c52bfa8c",
-        "081157560428.dkr.ecr.us-east-1.amazonaws.com/ami-builder:1",
-      ],
+      "displayName": "081157560428.dkr.ecr.us-east-1.amazonaws.com/ami-builder@sha256:980f50b2e5780923d3f88dd6fc3b81cbfed55fc08032bf5fc54be809c52bfa8c",
+      "name": "081157560428.dkr.ecr.us-east-1.amazonaws.com/ami-builder@sha256:980f50b2e5780923d3f88dd6fc3b81cbfed55fc08032bf5fc54be809c52bfa8c",
       "names": Array [
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/ami-builder@sha256:980f50b2e5780923d3f88dd6fc3b81cbfed55fc08032bf5fc54be809c52bfa8c",
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/ami-builder:1",
@@ -1603,14 +1439,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "otel/opentelemetry-collector-contrib@sha256:fe4da6a72f0adab77371987c0e67a5605a9ad4b9aa5755c2ae88403f2657ec6b",
-        "otel/opentelemetry-collector-contrib:0.58.0",
-      ],
-      "name": Array [
-        "otel/opentelemetry-collector-contrib@sha256:fe4da6a72f0adab77371987c0e67a5605a9ad4b9aa5755c2ae88403f2657ec6b",
-        "otel/opentelemetry-collector-contrib:0.58.0",
-      ],
+      "displayName": "otel/opentelemetry-collector-contrib@sha256:fe4da6a72f0adab77371987c0e67a5605a9ad4b9aa5755c2ae88403f2657ec6b",
+      "name": "otel/opentelemetry-collector-contrib@sha256:fe4da6a72f0adab77371987c0e67a5605a9ad4b9aa5755c2ae88403f2657ec6b",
       "names": Array [
         "otel/opentelemetry-collector-contrib@sha256:fe4da6a72f0adab77371987c0e67a5605a9ad4b9aa5755c2ae88403f2657ec6b",
         "otel/opentelemetry-collector-contrib:0.58.0",
@@ -1635,12 +1465,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "registry.k8s.io/etcd:3.5.10-0",
-      ],
-      "name": Array [
-        "registry.k8s.io/etcd:3.5.10-0",
-      ],
+      "displayName": "registry.k8s.io/etcd:3.5.10-0",
+      "name": "registry.k8s.io/etcd:3.5.10-0",
       "names": Array [
         "registry.k8s.io/etcd:3.5.10-0",
       ],
@@ -1665,14 +1491,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "otel/opentelemetry-collector-contrib@sha256:7fd60e2d55b0fc2cc87742022ab14e7ea3200b260dd3c334f041b731be2584eb",
-        "otel/opentelemetry-collector-contrib:0.33.0",
-      ],
-      "name": Array [
-        "otel/opentelemetry-collector-contrib@sha256:7fd60e2d55b0fc2cc87742022ab14e7ea3200b260dd3c334f041b731be2584eb",
-        "otel/opentelemetry-collector-contrib:0.33.0",
-      ],
+      "displayName": "otel/opentelemetry-collector-contrib@sha256:7fd60e2d55b0fc2cc87742022ab14e7ea3200b260dd3c334f041b731be2584eb",
+      "name": "otel/opentelemetry-collector-contrib@sha256:7fd60e2d55b0fc2cc87742022ab14e7ea3200b260dd3c334f041b731be2584eb",
       "names": Array [
         "otel/opentelemetry-collector-contrib@sha256:7fd60e2d55b0fc2cc87742022ab14e7ea3200b260dd3c334f041b731be2584eb",
         "otel/opentelemetry-collector-contrib:0.33.0",
@@ -1698,14 +1518,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "fluent/fluent-bit@sha256:cc8dbcdc074dabbd9af913be0ba78bdaa7186bf7e5e91b7b62d7195e09e6245b",
-        "fluent/fluent-bit:1.8",
-      ],
-      "name": Array [
-        "fluent/fluent-bit@sha256:cc8dbcdc074dabbd9af913be0ba78bdaa7186bf7e5e91b7b62d7195e09e6245b",
-        "fluent/fluent-bit:1.8",
-      ],
+      "displayName": "fluent/fluent-bit@sha256:cc8dbcdc074dabbd9af913be0ba78bdaa7186bf7e5e91b7b62d7195e09e6245b",
+      "name": "fluent/fluent-bit@sha256:cc8dbcdc074dabbd9af913be0ba78bdaa7186bf7e5e91b7b62d7195e09e6245b",
       "names": Array [
         "fluent/fluent-bit@sha256:cc8dbcdc074dabbd9af913be0ba78bdaa7186bf7e5e91b7b62d7195e09e6245b",
         "fluent/fluent-bit:1.8",
@@ -1730,12 +1544,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "k8s.gcr.io/kube-apiserver:v1.25.2",
-      ],
-      "name": Array [
-        "k8s.gcr.io/kube-apiserver:v1.25.2",
-      ],
+      "displayName": "k8s.gcr.io/kube-apiserver:v1.25.2",
+      "name": "k8s.gcr.io/kube-apiserver:v1.25.2",
       "names": Array [
         "k8s.gcr.io/kube-apiserver:v1.25.2",
       ],
@@ -1759,12 +1569,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "registry.k8s.io/kube-apiserver:v1.29.1",
-      ],
-      "name": Array [
-        "registry.k8s.io/kube-apiserver:v1.29.1",
-      ],
+      "displayName": "registry.k8s.io/kube-apiserver:v1.29.1",
+      "name": "registry.k8s.io/kube-apiserver:v1.29.1",
       "names": Array [
         "registry.k8s.io/kube-apiserver:v1.29.1",
       ],
@@ -1788,12 +1594,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "registry.k8s.io/kube-controller-manager:v1.29.1",
-      ],
-      "name": Array [
-        "registry.k8s.io/kube-controller-manager:v1.29.1",
-      ],
+      "displayName": "registry.k8s.io/kube-controller-manager:v1.29.1",
+      "name": "registry.k8s.io/kube-controller-manager:v1.29.1",
       "names": Array [
         "registry.k8s.io/kube-controller-manager:v1.29.1",
       ],
@@ -1817,12 +1619,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "k8s.gcr.io/kube-controller-manager:v1.25.2",
-      ],
-      "name": Array [
-        "k8s.gcr.io/kube-controller-manager:v1.25.2",
-      ],
+      "displayName": "k8s.gcr.io/kube-controller-manager:v1.25.2",
+      "name": "k8s.gcr.io/kube-controller-manager:v1.25.2",
       "names": Array [
         "k8s.gcr.io/kube-controller-manager:v1.25.2",
       ],
@@ -1847,14 +1645,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "fluent/fluent-bit@sha256:bc89a87cc9cd40c320644835b83170f49819dc3ea447e38c71dde27a181e7a9b",
-        "fluent/fluent-bit:2.2",
-      ],
-      "name": Array [
-        "fluent/fluent-bit@sha256:bc89a87cc9cd40c320644835b83170f49819dc3ea447e38c71dde27a181e7a9b",
-        "fluent/fluent-bit:2.2",
-      ],
+      "displayName": "fluent/fluent-bit@sha256:bc89a87cc9cd40c320644835b83170f49819dc3ea447e38c71dde27a181e7a9b",
+      "name": "fluent/fluent-bit@sha256:bc89a87cc9cd40c320644835b83170f49819dc3ea447e38c71dde27a181e7a9b",
       "names": Array [
         "fluent/fluent-bit@sha256:bc89a87cc9cd40c320644835b83170f49819dc3ea447e38c71dde27a181e7a9b",
         "fluent/fluent-bit:2.2",
@@ -1879,12 +1671,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "registry.k8s.io/kube-proxy:v1.29.1",
-      ],
-      "name": Array [
-        "registry.k8s.io/kube-proxy:v1.29.1",
-      ],
+      "displayName": "registry.k8s.io/kube-proxy:v1.29.1",
+      "name": "registry.k8s.io/kube-proxy:v1.29.1",
       "names": Array [
         "registry.k8s.io/kube-proxy:v1.29.1",
       ],
@@ -1908,12 +1696,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "k8s.gcr.io/kube-proxy:v1.25.2",
-      ],
-      "name": Array [
-        "k8s.gcr.io/kube-proxy:v1.25.2",
-      ],
+      "displayName": "k8s.gcr.io/kube-proxy:v1.25.2",
+      "name": "k8s.gcr.io/kube-proxy:v1.25.2",
       "names": Array [
         "k8s.gcr.io/kube-proxy:v1.25.2",
       ],
@@ -1938,14 +1722,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "tonistiigi/binfmt@sha256:66e11bea77a5ea9d6f0fe79b57cd2b189b5d15b93a2bdb925be22949232e4e55",
-        "tonistiigi/binfmt:latest",
-      ],
-      "name": Array [
-        "tonistiigi/binfmt@sha256:66e11bea77a5ea9d6f0fe79b57cd2b189b5d15b93a2bdb925be22949232e4e55",
-        "tonistiigi/binfmt:latest",
-      ],
+      "displayName": "tonistiigi/binfmt@sha256:66e11bea77a5ea9d6f0fe79b57cd2b189b5d15b93a2bdb925be22949232e4e55",
+      "name": "tonistiigi/binfmt@sha256:66e11bea77a5ea9d6f0fe79b57cd2b189b5d15b93a2bdb925be22949232e4e55",
       "names": Array [
         "tonistiigi/binfmt@sha256:66e11bea77a5ea9d6f0fe79b57cd2b189b5d15b93a2bdb925be22949232e4e55",
         "tonistiigi/binfmt:latest",
@@ -1970,12 +1748,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "registry.k8s.io/coredns/coredns:v1.11.1",
-      ],
-      "name": Array [
-        "registry.k8s.io/coredns/coredns:v1.11.1",
-      ],
+      "displayName": "registry.k8s.io/coredns/coredns:v1.11.1",
+      "name": "registry.k8s.io/coredns/coredns:v1.11.1",
       "names": Array [
         "registry.k8s.io/coredns/coredns:v1.11.1",
       ],
@@ -1999,12 +1773,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "registry.k8s.io/kube-scheduler:v1.29.1",
-      ],
-      "name": Array [
-        "registry.k8s.io/kube-scheduler:v1.29.1",
-      ],
+      "displayName": "registry.k8s.io/kube-scheduler:v1.29.1",
+      "name": "registry.k8s.io/kube-scheduler:v1.29.1",
       "names": Array [
         "registry.k8s.io/kube-scheduler:v1.29.1",
       ],
@@ -2028,12 +1798,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "k8s.gcr.io/kube-scheduler:v1.25.2",
-      ],
-      "name": Array [
-        "k8s.gcr.io/kube-scheduler:v1.25.2",
-      ],
+      "displayName": "k8s.gcr.io/kube-scheduler:v1.25.2",
+      "name": "k8s.gcr.io/kube-scheduler:v1.25.2",
       "names": Array [
         "k8s.gcr.io/kube-scheduler:v1.25.2",
       ],
@@ -2057,12 +1823,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "k8s.gcr.io/coredns:v1.9.3",
-      ],
-      "name": Array [
-        "k8s.gcr.io/coredns:v1.9.3",
-      ],
+      "displayName": "k8s.gcr.io/coredns:v1.9.3",
+      "name": "k8s.gcr.io/coredns:v1.9.3",
       "names": Array [
         "k8s.gcr.io/coredns:v1.9.3",
       ],
@@ -2087,14 +1849,8 @@ Object {
       ],
       "_type": "kube_image",
       "createdOn": undefined,
-      "displayName": Array [
-        "cortexlabs/kubexit@sha256:75c1c946d1e9a75cbf736534603020efa1ca2fdf1bdbdb9a07c26ff0178f0807",
-        "cortexlabs/kubexit:0.40.0",
-      ],
-      "name": Array [
-        "cortexlabs/kubexit@sha256:75c1c946d1e9a75cbf736534603020efa1ca2fdf1bdbdb9a07c26ff0178f0807",
-        "cortexlabs/kubexit:0.40.0",
-      ],
+      "displayName": "cortexlabs/kubexit@sha256:75c1c946d1e9a75cbf736534603020efa1ca2fdf1bdbdb9a07c26ff0178f0807",
+      "name": "cortexlabs/kubexit@sha256:75c1c946d1e9a75cbf736534603020efa1ca2fdf1bdbdb9a07c26ff0178f0807",
       "names": Array [
         "cortexlabs/kubexit@sha256:75c1c946d1e9a75cbf736534603020efa1ca2fdf1bdbdb9a07c26ff0178f0807",
         "cortexlabs/kubexit:0.40.0",
