@@ -109,6 +109,9 @@ export default async function getStepStartStates(
       [IntegrationSteps.REPLICASETS]: {
         disabled: replicasetsDisabled,
       },
+      [IntegrationSteps.IMAGES]: {
+        disabled: replicasetsDisabled,
+      },
       [IntegrationSteps.STATEFULSETS]: {
         disabled: statefulsetsDisabled,
       },

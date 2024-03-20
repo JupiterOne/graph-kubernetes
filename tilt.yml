@@ -26,7 +26,7 @@ items:
             'services',
             'secrets',
           ]
-        verbs: ['list']
+        verbs: ['list','watch']
       - apiGroups: ['apps']
         resources: ['deployments', 'replicasets', 'statefulsets', 'daemonsets']
         verbs: ['list']
