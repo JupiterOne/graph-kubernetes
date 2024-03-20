@@ -1,9 +1,7 @@
 import {
   RelationshipClass,
   RelationshipDirection,
-  StepEntityMetadata,
   StepMappedRelationshipMetadata,
-  StepRelationshipMetadata,
 } from '@jupiterone/integration-sdk-core';
 
 export const CLUSTER_ENTITY_DATA_KEY = 'entity:cluster';
@@ -32,34 +30,10 @@ export enum IntegrationSteps {
   CRONJOBS = 'fetch-cron-jobs',
   CONFIGMAPS = 'fetch-config-maps',
   SECRETS = 'fetch-secrets',
+  IMAGES = 'fetch-images',
 }
 
-export const Entities: Record<
-  | 'NETWORK_POLICY'
-  | 'SERVICE_ACCOUNT'
-  | 'USER'
-  | 'ROLE'
-  | 'CLUSTER_ROLE'
-  | 'ROLE_BINDING'
-  | 'CLUSTER_ROLE_BINDING'
-  | 'CLUSTER'
-  | 'AZURE_KUBERNETES_CLUSTER'
-  | 'GOOGLE_KUBERNETES_CLUSTER'
-  | 'NAMESPACE'
-  | 'NODE'
-  | 'SERVICE'
-  | 'DEPLOYMENT'
-  | 'CONTAINER_SPEC'
-  | 'VOLUME'
-  | 'REPLICASET'
-  | 'STATEFULSET'
-  | 'DAEMONSET'
-  | 'JOB'
-  | 'CRONJOB'
-  | 'CONFIGMAP'
-  | 'SECRET',
-  StepEntityMetadata
-> = {
+export const Entities = {
   NETWORK_POLICY: {
     _type: 'kube_network_policy',
     _class: ['Configuration'],
@@ -175,31 +149,14 @@ export const Entities: Record<
     _class: ['Service'],
     resourceName: 'Kubernetes Service',
   },
+  IMAGE: {
+    _type: 'kube_image',
+    _class: ['Image'],
+    resourceName: 'Kubernetes Image',
+  },
 };
 
-export const Relationships: Record<
-  | 'CLUSTER_CONTAINS_NAMESPACE'
-  | 'CLUSTER_CONTAINS_CLUSTER_ROLE'
-  | 'CLUSTER_CONTAINS_CLUSTER_ROLE_BINDING'
-  | 'NAMESPACE_CONTAINS_SERVICE'
-  | 'NAMESPACE_CONTAINS_DEPLOYMENT'
-  | 'NAMESPACE_CONTAINS_REPLICASET'
-  | 'NAMESPACE_CONTAINS_STATEFULSET'
-  | 'NAMESPACE_CONTAINS_DAEMONSET'
-  | 'NAMESPACE_CONTAINS_CRONJOB'
-  | 'NAMESPACE_CONTAINS_JOB'
-  | 'NAMESPACE_CONTAINS_CONFIGMAP'
-  | 'NAMESPACE_CONTAINS_SECRET'
-  | 'NAMESPACE_CONTAINS_NETWORK_POLICY'
-  | 'NAMESPACE_CONTAINS_SERVICE_ACCOUNT'
-  | 'NAMESPACE_CONTAINS_ROLE'
-  | 'NAMESPACE_CONTAINS_ROLE_BINDING'
-  | 'DEPLOYMENT_MANAGES_REPLICASET'
-  | 'DEPLOYMENT_USES_CONTAINER_SPEC'
-  | 'CONTAINER_SPEC_USES_VOLUME'
-  | 'CRONJOB_MANAGES_JOB',
-  StepRelationshipMetadata
-> = {
+export const Relationships = {
   CLUSTER_CONTAINS_NAMESPACE: {
     _type: 'kube_cluster_contains_namespace',
     _class: RelationshipClass.CONTAINS,
@@ -319,6 +276,18 @@ export const Relationships: Record<
     _class: RelationshipClass.MANAGES,
     sourceType: Entities.CRONJOB._type,
     targetType: Entities.JOB._type,
+  },
+  NODE_HAS_IMAGE: {
+    _type: 'kube_node_has_image',
+    _class: RelationshipClass.HAS,
+    sourceType: Entities.NODE._type,
+    targetType: Entities.IMAGE._type,
+  },
+  REPLICA_SET_USES_IMAGE: {
+    _type: 'kube_replica_set_uses_image',
+    _class: RelationshipClass.USES,
+    sourceType: Entities.REPLICASET._type,
+    targetType: Entities.IMAGE._type,
   },
 };
 

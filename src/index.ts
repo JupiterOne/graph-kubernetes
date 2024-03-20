@@ -17,6 +17,7 @@ import { policiesSteps } from './steps/policies';
 import { clusterRoleBindingsSteps } from './steps/rbac';
 import getStepStartStates from './getStepStartStates';
 import { subjectsSteps } from './steps/subjects';
+import { imageSteps } from './steps/images';
 
 export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> = {
   instanceConfigFields,
@@ -38,5 +39,6 @@ export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> = 
     ...cronJobsSteps,
     ...configMapsSteps,
     ...secretsSteps,
+    ...imageSteps,
   ],
 };

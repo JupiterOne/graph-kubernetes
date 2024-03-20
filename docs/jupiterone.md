@@ -203,6 +203,7 @@ The following entities are created:
 | Kubernetes CronJob              | `kube_cron_job`             | `Task`          |
 | Kubernetes DaemonSet            | `kube_daemon_set`           | `Deployment`    |
 | Kubernetes Deployment           | `kube_deployment`           | `Deployment`    |
+| Kubernetes Image                | `kube_image`                | `Image`         |
 | Kubernetes Job                  | `kube_job`                  | `Task`          |
 | Kubernetes Namespace            | `kube_namespace`            | `Group`         |
 | Kubernetes Network Policy       | `kube_network_policy`       | `Configuration` |
@@ -243,6 +244,8 @@ The following relationships are created:
 | `kube_namespace`      | **CONTAINS**          | `kube_service`              |
 | `kube_namespace`      | **CONTAINS**          | `kube_service_account`      |
 | `kube_namespace`      | **CONTAINS**          | `kube_stateful_set`         |
+| `kube_node`           | **HAS**               | `kube_image`                |
+| `kube_replica_set`    | **USES**              | `kube_image`                |
 
 ### Mapped Relationships
 

@@ -49,6 +49,20 @@ export async function fetchReplicaSets(
               );
             }
           }
+          for (const container of replicaSet.spec?.template?.spec?.containers ||
+            []) {
+            if (jobState.hasKey(container.image)) {
+              await jobState.addRelationship(
+                createDirectRelationship({
+                  fromKey: replicaSetEntity._key,
+                  fromType: replicaSetEntity._type,
+                  toKey: container.image!,
+                  toType: Entities.IMAGE._type,
+                  _class: RelationshipClass.USES,
+                }),
+              );
+            }
+          }
         },
       );
     },
@@ -63,8 +77,13 @@ export const replicaSetsSteps: IntegrationStep<IntegrationConfig>[] = [
     relationships: [
       Relationships.NAMESPACE_CONTAINS_REPLICASET,
       Relationships.DEPLOYMENT_MANAGES_REPLICASET,
+      Relationships.REPLICA_SET_USES_IMAGE,
     ],
-    dependsOn: [IntegrationSteps.NAMESPACES, IntegrationSteps.DEPLOYMENTS],
+    dependsOn: [
+      IntegrationSteps.NAMESPACES,
+      IntegrationSteps.DEPLOYMENTS,
+      IntegrationSteps.IMAGES,
+    ],
     executionHandler: fetchReplicaSets,
   },
 ];
