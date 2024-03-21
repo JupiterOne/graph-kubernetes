@@ -20,13 +20,37 @@ interface PollyRequestHeader {
 }
 
 function redact(entry: any) {
-  const responseText = entry.response.content.text;
+  let responseText = entry.response.content.text;
   if (!responseText) {
     return;
   }
 
-  const parsedResponseText = JSON.parse(responseText.replace(/\r?\n|\r/g, ''));
-  entry.response.content.text = JSON.stringify(parsedResponseText);
+  responseText = responseText.replace(/\r?\n|\r/g, '');
+
+  const fieldsToRedact = [
+    'api_key',
+    'jupiteroneAccountId',
+    'jupiteroneApiKey',
+    'jupiteroneIntegrationInstanceId',
+  ];
+
+  const base64Regex =
+    '((?:[a-zA-Z0-9+/]{4})*(?:|(?:[a-zA-Z0-9+/]{3}=)|(?:[a-zA-Z0-9+/]{2}==)|(?:[a-zA-Z0-9+/]{1}===)))';
+  for (const field of fieldsToRedact) {
+    const innerFieldRegex = new RegExp(
+      `\\\\"${field}\\\\":\\\\"${base64Regex}\\\\"`,
+      'g',
+    );
+    const fieldRegex = new RegExp(`"${field}":"${base64Regex}"`, 'g');
+    responseText = responseText.replace(
+      innerFieldRegex,
+      `\\"${field}\\":\\"[REDACTED]\\"`,
+    );
+    responseText = responseText.replace(fieldRegex, `"${field}":"[REDACTED]"`);
+  }
+
+  const parsedResponseText = JSON.parse(responseText);
+  entry.response.content.text = parsedResponseText;
 }
 
 function getNormalizedRecordingUrl(url: string) {
