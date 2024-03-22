@@ -92,7 +92,7 @@ Object {
                   "manager": "kube-controller-manager",
                   "operation": "Update",
                   "subresource": undefined,
-                  "time": 2024-03-20T05:17:13.000Z,
+                  "time": 2024-03-22T11:00:51.000Z,
                 },
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
@@ -130,18 +130,21 @@ Object {
                         },
                       },
                       "f:images": Object {},
+                      "f:nodeInfo": Object {
+                        "f:containerRuntimeVersion": Object {},
+                      },
                     },
                   },
                   "manager": "kubelet",
                   "operation": "Update",
                   "subresource": "status",
-                  "time": 2024-03-20T18:46:24.000Z,
+                  "time": 2024-03-22T13:13:06.000Z,
                 },
               ],
               "name": "docker-desktop",
               "namespace": undefined,
               "ownerReferences": undefined,
-              "resourceVersion": "184854",
+              "resourceVersion": "257615",
               "selfLink": undefined,
               "uid": "8279e5b2-362f-4424-94b0-8dc553f4faca",
             },
@@ -181,32 +184,32 @@ Object {
               },
               "conditions": Array [
                 V1NodeCondition {
-                  "lastHeartbeatTime": 2024-03-20T18:46:24.000Z,
-                  "lastTransitionTime": 2024-03-20T04:58:36.000Z,
+                  "lastHeartbeatTime": 2024-03-22T13:13:06.000Z,
+                  "lastTransitionTime": 2024-03-21T22:03:17.000Z,
                   "message": "kubelet has sufficient memory available",
                   "reason": "KubeletHasSufficientMemory",
                   "status": "False",
                   "type": "MemoryPressure",
                 },
                 V1NodeCondition {
-                  "lastHeartbeatTime": 2024-03-20T18:46:24.000Z,
-                  "lastTransitionTime": 2024-03-20T04:58:36.000Z,
+                  "lastHeartbeatTime": 2024-03-22T13:13:06.000Z,
+                  "lastTransitionTime": 2024-03-21T22:03:17.000Z,
                   "message": "kubelet has no disk pressure",
                   "reason": "KubeletHasNoDiskPressure",
                   "status": "False",
                   "type": "DiskPressure",
                 },
                 V1NodeCondition {
-                  "lastHeartbeatTime": 2024-03-20T18:46:24.000Z,
-                  "lastTransitionTime": 2024-03-20T04:58:36.000Z,
+                  "lastHeartbeatTime": 2024-03-22T13:13:06.000Z,
+                  "lastTransitionTime": 2024-03-21T22:03:17.000Z,
                   "message": "kubelet has sufficient PID available",
                   "reason": "KubeletHasSufficientPID",
                   "status": "False",
                   "type": "PIDPressure",
                 },
                 V1NodeCondition {
-                  "lastHeartbeatTime": 2024-03-20T18:46:24.000Z,
-                  "lastTransitionTime": 2024-03-20T05:17:42.000Z,
+                  "lastHeartbeatTime": 2024-03-22T13:13:06.000Z,
+                  "lastTransitionTime": 2024-03-22T11:01:22.000Z,
                   "message": "kubelet is posting ready status",
                   "reason": "KubeletReady",
                   "status": "True",
@@ -342,23 +345,13 @@ Object {
                 },
                 V1ContainerImage {
                   "names": null,
-                  "sizeBytes": 1140498475,
+                  "sizeBytes": 1140506580,
                 },
                 V1ContainerImage {
                   "names": Array [
                     "graph-kubernetes:2.0.0",
                   ],
-                  "sizeBytes": 1140491747,
-                },
-                V1ContainerImage {
-                  "names": null,
-                  "sizeBytes": 1140380538,
-                },
-                V1ContainerImage {
-                  "names": Array [
-                    "graph-kubernetes:tilt-388a734e13d4a194",
-                  ],
-                  "sizeBytes": 1140380538,
+                  "sizeBytes": 1140506572,
                 },
                 V1ContainerImage {
                   "names": Array [
@@ -542,6 +535,19 @@ Object {
                   ],
                   "sizeBytes": 44186225,
                 },
+                V1ContainerImage {
+                  "names": Array [
+                    "docker/desktop-storage-provisioner:v2.0",
+                  ],
+                  "sizeBytes": 41850220,
+                },
+                V1ContainerImage {
+                  "names": Array [
+                    "docker/desktop-vpnkit-controller@sha256:7ecf567ea07095f9af6ce2004055d4d37e4ee3bc19b553cce2f6c37ee9b916bf",
+                    "docker/desktop-vpnkit-controller:dc331cb22850be0cdd97c84a9cfecaf44a1afb6e",
+                  ],
+                  "sizeBytes": 36226360,
+                },
               ],
               "nodeInfo": V1NodeSystemInfo {
                 "architecture": "amd64",
@@ -579,7 +585,7 @@ Object {
       "providerID": undefined,
       "publicDnsName": undefined,
       "publicIpAddress": Array [],
-      "resourceVersion": "184854",
+      "resourceVersion": "257615",
       "status.allocatable.cpu": "16",
       "status.allocatable.ephemeral-storage": "56403987978",
       "status.allocatable.hugepages-1Gi": undefined,
@@ -1104,7 +1110,7 @@ Object {
             "names": Array [
               "graph-kubernetes:2.0.0",
             ],
-            "sizeBytes": 1140491747,
+            "sizeBytes": 1140506572,
           },
         },
       ],
@@ -1115,32 +1121,7 @@ Object {
       "names": Array [
         "graph-kubernetes:2.0.0",
       ],
-      "sizeInBytes": 1140491747,
-    },
-    Object {
-      "_class": Array [
-        "Image",
-      ],
-      "_key": "graph-kubernetes:tilt-388a734e13d4a194",
-      "_rawData": Array [
-        Object {
-          "name": "default",
-          "rawData": V1ContainerImage {
-            "names": Array [
-              "graph-kubernetes:tilt-388a734e13d4a194",
-            ],
-            "sizeBytes": 1140380538,
-          },
-        },
-      ],
-      "_type": "kube_image",
-      "createdOn": undefined,
-      "displayName": "graph-kubernetes:tilt-388a734e13d4a194",
-      "name": "graph-kubernetes:tilt-388a734e13d4a194",
-      "names": Array [
-        "graph-kubernetes:tilt-388a734e13d4a194",
-      ],
-      "sizeInBytes": 1140380538,
+      "sizeInBytes": 1140506572,
     },
     Object {
       "_class": Array [
@@ -1857,6 +1838,58 @@ Object {
       ],
       "sizeInBytes": 44186225,
     },
+    Object {
+      "_class": Array [
+        "Image",
+      ],
+      "_key": "docker/desktop-storage-provisioner:v2.0",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": V1ContainerImage {
+            "names": Array [
+              "docker/desktop-storage-provisioner:v2.0",
+            ],
+            "sizeBytes": 41850220,
+          },
+        },
+      ],
+      "_type": "kube_image",
+      "createdOn": undefined,
+      "displayName": "docker/desktop-storage-provisioner:v2.0",
+      "name": "docker/desktop-storage-provisioner:v2.0",
+      "names": Array [
+        "docker/desktop-storage-provisioner:v2.0",
+      ],
+      "sizeInBytes": 41850220,
+    },
+    Object {
+      "_class": Array [
+        "Image",
+      ],
+      "_key": "docker/desktop-vpnkit-controller@sha256:7ecf567ea07095f9af6ce2004055d4d37e4ee3bc19b553cce2f6c37ee9b916bf",
+      "_rawData": Array [
+        Object {
+          "name": "default",
+          "rawData": V1ContainerImage {
+            "names": Array [
+              "docker/desktop-vpnkit-controller@sha256:7ecf567ea07095f9af6ce2004055d4d37e4ee3bc19b553cce2f6c37ee9b916bf",
+              "docker/desktop-vpnkit-controller:dc331cb22850be0cdd97c84a9cfecaf44a1afb6e",
+            ],
+            "sizeBytes": 36226360,
+          },
+        },
+      ],
+      "_type": "kube_image",
+      "createdOn": undefined,
+      "displayName": "docker/desktop-vpnkit-controller@sha256:7ecf567ea07095f9af6ce2004055d4d37e4ee3bc19b553cce2f6c37ee9b916bf",
+      "name": "docker/desktop-vpnkit-controller@sha256:7ecf567ea07095f9af6ce2004055d4d37e4ee3bc19b553cce2f6c37ee9b916bf",
+      "names": Array [
+        "docker/desktop-vpnkit-controller@sha256:7ecf567ea07095f9af6ce2004055d4d37e4ee3bc19b553cce2f6c37ee9b916bf",
+        "docker/desktop-vpnkit-controller:dc331cb22850be0cdd97c84a9cfecaf44a1afb6e",
+      ],
+      "sizeInBytes": 36226360,
+    },
   ],
   "collectedRelationships": Array [
     Object {
@@ -2016,14 +2049,6 @@ Object {
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|graph-kubernetes:2.0.0",
       "_toEntityKey": "graph-kubernetes:2.0.0",
-      "_type": "kube_node_has_image",
-      "displayName": "HAS",
-    },
-    Object {
-      "_class": "HAS",
-      "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
-      "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|graph-kubernetes:tilt-388a734e13d4a194",
-      "_toEntityKey": "graph-kubernetes:tilt-388a734e13d4a194",
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
@@ -2243,13 +2268,29 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
+    Object {
+      "_class": "HAS",
+      "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
+      "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|docker/desktop-storage-provisioner:v2.0",
+      "_toEntityKey": "docker/desktop-storage-provisioner:v2.0",
+      "_type": "kube_node_has_image",
+      "displayName": "HAS",
+    },
+    Object {
+      "_class": "HAS",
+      "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
+      "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|docker/desktop-vpnkit-controller@sha256:7ecf567ea07095f9af6ce2004055d4d37e4ee3bc19b553cce2f6c37ee9b916bf",
+      "_toEntityKey": "docker/desktop-vpnkit-controller@sha256:7ecf567ea07095f9af6ce2004055d4d37e4ee3bc19b553cce2f6c37ee9b916bf",
+      "_type": "kube_node_has_image",
+      "displayName": "HAS",
+    },
   ],
   "encounteredTypes": Array [
     "kube_node",
     "kube_image",
     "kube_node_has_image",
   ],
-  "numCollectedEntities": 49,
-  "numCollectedRelationships": 48,
+  "numCollectedEntities": 50,
+  "numCollectedRelationships": 49,
 }
 `;

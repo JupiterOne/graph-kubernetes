@@ -10,8 +10,6 @@ describe('#fetchContainerImages', () => {
       recordingDirectory: __dirname,
       integrationConfig,
       stepFunctions: [fetchNodes, fetchImages],
-      entitySchemaMatchers: [],
-      relationshipSchemaMatchers: [],
     });
   });
 });
