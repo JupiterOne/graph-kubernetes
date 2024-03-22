@@ -49,7 +49,6 @@ function redact(entry: any) {
     responseText = responseText.replace(fieldRegex, `"${field}":"[REDACTED]"`);
   }
 
-  // const parsedResponseText = JSON.parse(responseText);
   entry.response.content.text = responseText;
 }
 
