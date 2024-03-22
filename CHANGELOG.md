@@ -8,6 +8,12 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.1.0 - 2024-03-22
+
+### Changed
+
+- Fixed tests and recordings
+
 ## 2.1.0 - 2024-03-20
 
 ### Changed
