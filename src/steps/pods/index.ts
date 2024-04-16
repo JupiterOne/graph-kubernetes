@@ -21,7 +21,6 @@ export async function fetchPods(
 
   const client = getOrCreateAPIClient(config);
 
-  const containerEntityKeys = new Set<string>();
   await jobState.iterateEntities(
     {
       _type: Entities.NAMESPACE._type,
@@ -37,7 +36,7 @@ export async function fetchPods(
             const containerEntity = createContainerEntity(container);
             const containerEntityKey = getContainerKey(container.name);
 
-            if (!containerEntityKeys.has(containerEntityKey)) {
+            if (!jobState.hasKey(containerEntityKey)) {
               await jobState.addEntity(containerEntity);
               await jobState.addRelationship(
                 createDirectRelationship({
@@ -46,7 +45,6 @@ export async function fetchPods(
                   to: containerEntity,
                 }),
               );
-              containerEntityKeys.add(containerEntityKey);
             } else {
               // Temp log to let us know if we encounter some duplicate container names
               logger.trace(
@@ -63,8 +61,10 @@ export async function fetchPods(
                 await jobState.addRelationship(
                   createDirectRelationship({
                     _class: RelationshipClass.HAS,
-                    from: nodeEntity,
-                    to: podEntity,
+                    fromType: Entities.NODE._type,
+                    fromKey: nodeUid,
+                    toType: podEntity._type,
+                    toKey: podEntity._key,
                   }),
                 );
               }
