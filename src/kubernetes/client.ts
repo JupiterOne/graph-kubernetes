@@ -540,4 +540,28 @@ export class Client {
       },
     );
   }
+
+  async iterateNamespacedPods(
+    namespace: string,
+    callback: (data: k8s.V1Pod) => Promise<void>,
+  ): Promise<void> {
+    await this.iterateApi(
+      async (nextPageToken) => {
+        return this.coreClient.listNamespacedPod(
+          namespace,
+          undefined,
+          undefined,
+          nextPageToken,
+          undefined,
+          undefined,
+          this.maxPerPage,
+        );
+      },
+      async (data: k8s.V1PodList) => {
+        for (const pod of data.items) {
+          await callback(pod);
+        }
+      },
+    );
+  }
 }

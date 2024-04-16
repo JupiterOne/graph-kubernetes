@@ -31,6 +31,7 @@ export enum IntegrationSteps {
   CONFIGMAPS = 'fetch-config-maps',
   SECRETS = 'fetch-secrets',
   IMAGES = 'fetch-images',
+  PODS = 'fetch-pods',
 }
 
 export const Entities = {
@@ -153,6 +154,16 @@ export const Entities = {
     _type: 'kube_image',
     _class: ['Image'],
     resourceName: 'Kubernetes Image',
+  },
+  POD: {
+    _type: 'kube_pod',
+    _class: ['Task'],
+    resourceName: 'Kubernetes Pod',
+  },
+  CONTAINER: {
+    _type: 'kube_container',
+    _class: ['Container'],
+    resourceName: 'Kubernetes Container',
   },
 };
 
@@ -288,6 +299,36 @@ export const Relationships = {
     _class: RelationshipClass.USES,
     sourceType: Entities.REPLICASET._type,
     targetType: Entities.IMAGE._type,
+  },
+  REPLICASET_MANAGES_POD: {
+    _type: 'kube_replica_set_manages_pod',
+    _class: RelationshipClass.MANAGES,
+    sourceType: Entities.REPLICASET._type,
+    targetType: Entities.POD._type,
+  },
+  STATEFULSET_MANAGES_POD: {
+    _type: 'kube_stateful_set_manages_pod',
+    _class: RelationshipClass.MANAGES,
+    sourceType: Entities.STATEFULSET._type,
+    targetType: Entities.POD._type,
+  },
+  JOB_MANAGES_POD: {
+    _type: 'kube_job_manages_pod',
+    _class: RelationshipClass.MANAGES,
+    sourceType: Entities.JOB._type,
+    targetType: Entities.POD._type,
+  },
+  NODE_HAS_POD: {
+    _type: 'kube_node_has_pod',
+    _class: RelationshipClass.HAS,
+    sourceType: Entities.NODE._type,
+    targetType: Entities.POD._type,
+  },
+  POD_CONTAINS_CONTAINER: {
+    _type: 'kube_pod_contains_container',
+    _class: RelationshipClass.CONTAINS,
+    sourceType: Entities.POD._type,
+    targetType: Entities.CONTAINER._type,
   },
 };
 
