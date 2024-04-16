@@ -56,8 +56,7 @@ export async function fetchPods(
           if (pod.spec?.nodeName) {
             const nodeUid = await getNodeUidFromPod(jobState, pod);
             if (nodeUid) {
-              const nodeEntity = await jobState.findEntity(nodeUid);
-              if (nodeEntity) {
+              if (jobState.hasKey(nodeUid)) {
                 await jobState.addRelationship(
                   createDirectRelationship({
                     _class: RelationshipClass.HAS,
