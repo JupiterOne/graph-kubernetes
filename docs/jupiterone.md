@@ -199,6 +199,7 @@ The following entities are created:
 | Kubernetes Cluster Role         | `kube_cluster_role`         | `AccessRole`    |
 | Kubernetes Cluster Role Binding | `kube_cluster_role_binding` | `AccessPolicy`  |
 | Kubernetes ConfigMap            | `kube_config_map`           | `Configuration` |
+| Kubernetes Container            | `kube_container`            | `Container`     |
 | Kubernetes Container Spec       | `kube_container_spec`       | `Configuration` |
 | Kubernetes CronJob              | `kube_cron_job`             | `Task`          |
 | Kubernetes DaemonSet            | `kube_daemon_set`           | `Deployment`    |
@@ -208,6 +209,7 @@ The following entities are created:
 | Kubernetes Namespace            | `kube_namespace`            | `Group`         |
 | Kubernetes Network Policy       | `kube_network_policy`       | `Configuration` |
 | Kubernetes Node                 | `kube_node`                 | `Host`          |
+| Kubernetes Pod                  | `kube_pod`                  | `Task`          |
 | Kubernetes ReplicaSet           | `kube_replica_set`          | `Deployment`    |
 | Kubernetes Role                 | `kube_role`                 | `AccessRole`    |
 | Kubernetes Role Binding         | `kube_role_binding`         | `AccessPolicy`  |
@@ -231,6 +233,7 @@ The following relationships are created:
 | `kube_cron_job`       | **MANAGES**           | `kube_job`                  |
 | `kube_deployment`     | **MANAGES**           | `kube_replica_set`          |
 | `kube_deployment`     | **USES**              | `kube_container_spec`       |
+| `kube_job`            | **MANAGES**           | `kube_pod`                  |
 | `kube_namespace`      | **CONTAINS**          | `kube_config_map`           |
 | `kube_namespace`      | **CONTAINS**          | `kube_cron_job`             |
 | `kube_namespace`      | **CONTAINS**          | `kube_daemon_set`           |
@@ -245,7 +248,11 @@ The following relationships are created:
 | `kube_namespace`      | **CONTAINS**          | `kube_service_account`      |
 | `kube_namespace`      | **CONTAINS**          | `kube_stateful_set`         |
 | `kube_node`           | **HAS**               | `kube_image`                |
+| `kube_node`           | **HAS**               | `kube_pod`                  |
+| `kube_pod`            | **CONTAINS**          | `kube_container`            |
+| `kube_replica_set`    | **MANAGES**           | `kube_pod`                  |
 | `kube_replica_set`    | **USES**              | `kube_image`                |
+| `kube_stateful_set`   | **MANAGES**           | `kube_pod`                  |
 
 ### Mapped Relationships
 

@@ -18,6 +18,7 @@ import { clusterRoleBindingsSteps } from './steps/rbac';
 import getStepStartStates from './getStepStartStates';
 import { subjectsSteps } from './steps/subjects';
 import { imageSteps } from './steps/images';
+import { podsSteps } from './steps/pods';
 
 export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> = {
   instanceConfigFields,
@@ -40,5 +41,6 @@ export const invocationConfig: IntegrationInvocationConfig<IntegrationConfig> = 
     ...configMapsSteps,
     ...secretsSteps,
     ...imageSteps,
+    ...podsSteps,
   ],
 };

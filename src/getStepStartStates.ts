@@ -133,6 +133,12 @@ export default async function getStepStartStates(
       [IntegrationSteps.NODES]: {
         disabled: nodesDisabled,
       },
+      [IntegrationSteps.PODS]: {
+        disabled: !(
+          instance.accountId == '0c51143d-9728-4f42-8442-4b52be5e8a74' ||
+          instance.accountId == 'j1dev'
+        ), // INT-10704
+      },
     };
   } catch (err) {
     logger.warn({ err }, 'Error checking service enablement');
