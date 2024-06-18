@@ -32,6 +32,12 @@ export enum IntegrationSteps {
   SECRETS = 'fetch-secrets',
   IMAGES = 'fetch-images',
   PODS = 'fetch-pods',
+  CONTAINER_SPEC = 'fetch-container-spec',
+  CONTAINER_SPEC_HAS_JOB = 'fetch-container-spec-job-relationship',
+  CONTAINER_SPEC_HAS_CRON_JOB = 'fetch-container-spec-cron-job-relationship',
+  CONTAINER_SPEC_HAS_DAEMONSET = 'fetch-container-spec-daemonset-relationship',
+  CONTAINER_SPEC_HAS_REPLICASET = 'fetch-container-spec-replicaset-relationship',
+  CONTAINER_SPEC_HAS_STATEFULSET = 'fetch-container-spec-statefulset-relationship'
 }
 
 export const Entities = {
@@ -330,7 +336,45 @@ export const Relationships = {
     sourceType: Entities.POD._type,
     targetType: Entities.CONTAINER._type,
   },
+  CONTAINER_SPEC_HAS_JOB: {
+    _type: 'kube_container_spec_has_job',
+    _class: RelationshipClass.HAS,
+    sourceType: Entities.CONTAINER_SPEC._type,
+    targetType: Entities.JOB._type,
+  },
+  CONTAINER_SPEC_HAS_CRONJOB: {
+    _type: 'kube_container_spec_has_cron_job',
+    _class: RelationshipClass.HAS,
+    sourceType: Entities.CONTAINER_SPEC._type,
+    targetType: Entities.CRONJOB._type,
+  },
+  CONTAINER_SPEC_HAS_DAEMONSET: {
+    _type: 'kube_container_spec_has_daemon_set',
+    _class: RelationshipClass.HAS,
+    sourceType: Entities.CONTAINER_SPEC._type,
+    targetType: Entities.DAEMONSET._type,
+  },
+  CONTAINER_SPEC_HAS_REPLICASET: {
+    _type: 'kube_container_spec_has_replica_set',
+    _class: RelationshipClass.USES,
+    sourceType: Entities.CONTAINER_SPEC._type,
+    targetType: Entities.REPLICASET._type,
+  },
+  CONTAINER_SPEC_HAS_STATEFULSET: {
+    _type: 'kube_container_spec_has_stateful_set',
+    _class: RelationshipClass.HAS,
+    sourceType: Entities.CONTAINER_SPEC._type,
+    targetType: Entities.STATEFULSET._type,
+  },
 };
+
+export enum ContainerspecType {
+  CRONJOB = 'cronjob',
+  JOB = 'job',
+  DAEMONSET = 'daemonset',
+  REPLICASET = 'replicaset',
+  STATEFULSET = 'statefulset',
+}
 
 export const MappedRelationships: Record<
   string,
