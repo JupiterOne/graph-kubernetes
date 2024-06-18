@@ -10,18 +10,26 @@ import { Entities } from '../constants';
 import { RelationshipClass } from '@jupiterone/data-model';
 import { V1VolumeMount } from '@kubernetes/client-node';
 
-export function getVolumeKey(deploymentId: string, volumeName: string) {
-  return `${deploymentId}/${volumeName}`;
+export function getVolumeKey(
+  namespace: string,
+  deploymentId: string,
+  volumeName: string,
+) {
+  return `${namespace}/${deploymentId}/${volumeName}`;
 }
 
-export function createVolumeEntity(deploymentUid: string, data: k8s.V1Volume) {
+export function createVolumeEntity(
+  namespace: string,
+  deploymentUid: string,
+  data: k8s.V1Volume,
+) {
   return createIntegrationEntity({
     entityData: {
       source: data,
       assign: {
         _class: Entities.VOLUME._class,
         _type: Entities.VOLUME._type,
-        _key: getVolumeKey(deploymentUid, data.name),
+        _key: getVolumeKey(namespace, deploymentUid, data.name),
         name: data.name,
         displayName: data.name,
         'ephemeral.readOnly': data.ephemeral?.['readOnly'],
@@ -34,11 +42,16 @@ export function createVolumeEntity(deploymentUid: string, data: k8s.V1Volume) {
   });
 }
 
-export function getContainerSpecKey(deploymentId: string, specName: string) {
-  return `${deploymentId}/${specName}`;
+export function getContainerSpecKey(
+  namespace: string,
+  deploymentId: string,
+  specName: string,
+) {
+  return `${namespace}/${deploymentId}/${specName}`;
 }
 
 export function createContainerSpecEntity(
+  namespace: string,
   deploymentUid: string,
   data: k8s.V1Container,
 ) {
@@ -48,7 +61,7 @@ export function createContainerSpecEntity(
       assign: {
         _class: Entities.CONTAINER_SPEC._class,
         _type: Entities.CONTAINER_SPEC._type,
-        _key: getContainerSpecKey(deploymentUid, data.name),
+        _key: getContainerSpecKey(namespace, deploymentUid, data.name),
         name: data.name,
         displayName: data.name,
         image: data.image,
