@@ -19,30 +19,42 @@ describe('#createDeploymentEntity', () => {
 
 describe('#createContainerSpecToVolumeRelationship', () => {
   test('should generate relationship with mountPath', () => {
+    const namespaceName = 'default';
     const deploymentId = '12345';
 
     expect(
       createContainerSpecToVolumeRelationship({
         containerSpecEntity: createContainerSpecEntity(
+          namespaceName,
           deploymentId,
           createMockContainer(),
         ),
-        volumeEntity: createVolumeEntity(deploymentId, createMockVolume()),
+        volumeEntity: createVolumeEntity(
+          namespaceName,
+          deploymentId,
+          createMockVolume(),
+        ),
         volumeMount: createMockVolumeMount(),
       }),
     ).toMatchSnapshot();
   });
 
   test('should generate relationship without mountPath', () => {
+    const namespaceName = 'default';
     const deploymentId = '12345';
 
     expect(
       createContainerSpecToVolumeRelationship({
         containerSpecEntity: createContainerSpecEntity(
+          namespaceName,
           deploymentId,
           createMockContainer(),
         ),
-        volumeEntity: createVolumeEntity(deploymentId, createMockVolume()),
+        volumeEntity: createVolumeEntity(
+          namespaceName,
+          deploymentId,
+          createMockVolume(),
+        ),
         volumeMount: createMockVolumeMount({
           mountPath: undefined,
         }),
@@ -51,15 +63,21 @@ describe('#createContainerSpecToVolumeRelationship', () => {
   });
 
   test('should generate relationship with mountPath and subPath', () => {
+    const namespaceName = 'default';
     const deploymentId = '12345';
 
     expect(
       createContainerSpecToVolumeRelationship({
         containerSpecEntity: createContainerSpecEntity(
+          namespaceName,
           deploymentId,
           createMockContainer(),
         ),
-        volumeEntity: createVolumeEntity(deploymentId, createMockVolume()),
+        volumeEntity: createVolumeEntity(
+          namespaceName,
+          deploymentId,
+          createMockVolume(),
+        ),
         volumeMount: createMockVolumeMount({
           subPath: 'abc',
         }),

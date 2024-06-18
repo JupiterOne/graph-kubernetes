@@ -295,7 +295,7 @@ Object {
       "_class": Array [
         "Disk",
       ],
-      "_key": "9e7dd498-00ec-4ba1-aba7-a1df910098da/wordpress-data",
+      "_key": "default/9e7dd498-00ec-4ba1-aba7-a1df910098da/wordpress-data",
       "_rawData": Array [
         Object {
           "name": "default",
@@ -350,7 +350,7 @@ Object {
       "_class": Array [
         "Configuration",
       ],
-      "_key": "9e7dd498-00ec-4ba1-aba7-a1df910098da/wordpress",
+      "_key": "default/9e7dd498-00ec-4ba1-aba7-a1df910098da/wordpress",
       "_rawData": Array [
         Object {
           "name": "default",
@@ -1463,7 +1463,7 @@ Object {
       "_class": Array [
         "Disk",
       ],
-      "_key": "a5ab61e9-a5ff-458d-8a99-a21cbe5e94cb/config-volume",
+      "_key": "kube-system/a5ab61e9-a5ff-458d-8a99-a21cbe5e94cb/config-volume",
       "_rawData": Array [
         Object {
           "name": "default",
@@ -1526,7 +1526,7 @@ Object {
       "_class": Array [
         "Configuration",
       ],
-      "_key": "a5ab61e9-a5ff-458d-8a99-a21cbe5e94cb/coredns",
+      "_key": "kube-system/a5ab61e9-a5ff-458d-8a99-a21cbe5e94cb/coredns",
       "_rawData": Array [
         Object {
           "name": "default",
@@ -3611,16 +3611,16 @@ Object {
     Object {
       "_class": "USES",
       "_fromEntityKey": "9e7dd498-00ec-4ba1-aba7-a1df910098da",
-      "_key": "9e7dd498-00ec-4ba1-aba7-a1df910098da|uses|9e7dd498-00ec-4ba1-aba7-a1df910098da/wordpress",
-      "_toEntityKey": "9e7dd498-00ec-4ba1-aba7-a1df910098da/wordpress",
+      "_key": "9e7dd498-00ec-4ba1-aba7-a1df910098da|uses|default/9e7dd498-00ec-4ba1-aba7-a1df910098da/wordpress",
+      "_toEntityKey": "default/9e7dd498-00ec-4ba1-aba7-a1df910098da/wordpress",
       "_type": "kube_deployment_uses_container_spec",
       "displayName": "USES",
     },
     Object {
       "_class": "USES",
-      "_fromEntityKey": "9e7dd498-00ec-4ba1-aba7-a1df910098da/wordpress",
-      "_key": "9e7dd498-00ec-4ba1-aba7-a1df910098da/wordpress|uses|9e7dd498-00ec-4ba1-aba7-a1df910098da/wordpress-data/mount_wordpress-data/mount_path_/bitnami/wordpress/mount_sub_path_wordpress",
-      "_toEntityKey": "9e7dd498-00ec-4ba1-aba7-a1df910098da/wordpress-data",
+      "_fromEntityKey": "default/9e7dd498-00ec-4ba1-aba7-a1df910098da/wordpress",
+      "_key": "default/9e7dd498-00ec-4ba1-aba7-a1df910098da/wordpress|uses|default/9e7dd498-00ec-4ba1-aba7-a1df910098da/wordpress-data/mount_wordpress-data/mount_path_/bitnami/wordpress/mount_sub_path_wordpress",
+      "_toEntityKey": "default/9e7dd498-00ec-4ba1-aba7-a1df910098da/wordpress-data",
       "_type": "kube_container_spec_uses_volume",
       "displayName": "USES",
       "mountPath": "/bitnami/wordpress",
@@ -3639,16 +3639,16 @@ Object {
     Object {
       "_class": "USES",
       "_fromEntityKey": "a5ab61e9-a5ff-458d-8a99-a21cbe5e94cb",
-      "_key": "a5ab61e9-a5ff-458d-8a99-a21cbe5e94cb|uses|a5ab61e9-a5ff-458d-8a99-a21cbe5e94cb/coredns",
-      "_toEntityKey": "a5ab61e9-a5ff-458d-8a99-a21cbe5e94cb/coredns",
+      "_key": "a5ab61e9-a5ff-458d-8a99-a21cbe5e94cb|uses|kube-system/a5ab61e9-a5ff-458d-8a99-a21cbe5e94cb/coredns",
+      "_toEntityKey": "kube-system/a5ab61e9-a5ff-458d-8a99-a21cbe5e94cb/coredns",
       "_type": "kube_deployment_uses_container_spec",
       "displayName": "USES",
     },
     Object {
       "_class": "USES",
-      "_fromEntityKey": "a5ab61e9-a5ff-458d-8a99-a21cbe5e94cb/coredns",
-      "_key": "a5ab61e9-a5ff-458d-8a99-a21cbe5e94cb/coredns|uses|a5ab61e9-a5ff-458d-8a99-a21cbe5e94cb/config-volume/mount_config-volume/mount_path_/etc/coredns",
-      "_toEntityKey": "a5ab61e9-a5ff-458d-8a99-a21cbe5e94cb/config-volume",
+      "_fromEntityKey": "kube-system/a5ab61e9-a5ff-458d-8a99-a21cbe5e94cb/coredns",
+      "_key": "kube-system/a5ab61e9-a5ff-458d-8a99-a21cbe5e94cb/coredns|uses|kube-system/a5ab61e9-a5ff-458d-8a99-a21cbe5e94cb/config-volume/mount_config-volume/mount_path_/etc/coredns",
+      "_toEntityKey": "kube-system/a5ab61e9-a5ff-458d-8a99-a21cbe5e94cb/config-volume",
       "_type": "kube_container_spec_uses_volume",
       "displayName": "USES",
       "mountPath": "/etc/coredns",
