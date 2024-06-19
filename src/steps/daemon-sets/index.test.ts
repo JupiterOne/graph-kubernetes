@@ -1,4 +1,4 @@
-import { fetchDaemonSets } from '.';
+import { buildContainerSpecDaemonsetRelationship, fetchDaemonSets } from '.';
 import { fetchNamespaces } from '../namespaces';
 import { createDataCollectionTest } from '../../../test/recording';
 import { integrationConfig } from '../../../test/config';
@@ -11,7 +11,11 @@ describe('#fetchDaemonSets', () => {
       recordingName: 'fetchDaemonSets',
       recordingDirectory: __dirname,
       integrationConfig,
-      stepFunctions: [fetchNamespaces, fetchDaemonSets],
+      stepFunctions: [
+        fetchNamespaces,
+        fetchDaemonSets,
+        buildContainerSpecDaemonsetRelationship,
+      ],
       entitySchemaMatchers: [
         {
           _type: Entities.CRONJOB._type,
@@ -58,6 +62,17 @@ describe('#fetchDaemonSets', () => {
               properties: {
                 _class: { const: RelationshipClass.CONTAINS },
                 _type: { const: 'kube_namespace_contains_daemon_set' },
+              },
+            },
+          },
+        },
+        {
+          _type: Relationships.CONTAINER_SPEC_HAS_DAEMONSET._type,
+          matcher: {
+            schema: {
+              properties: {
+                _class: { const: RelationshipClass.HAS },
+                _type: { const: 'kube_container_spec_has_daemon_set' },
               },
             },
           },

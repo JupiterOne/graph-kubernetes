@@ -53,8 +53,8 @@ export function createContainerSpecEntity(
         displayName: data.name,
         image: data.image,
         imagePullPolicy: data.imagePullPolicy,
-        containertype: deploymentUid,
-        'securityContext.allowPrivilegeEscalation': data.securityContext?.allowPrivilegeEscalation,
+        'securityContext.allowPrivilegeEscalation':
+          data.securityContext?.allowPrivilegeEscalation,
         'securityContext.privileged': data.securityContext?.privileged,
         'securityContext.procMount': data.securityContext?.procMount,
         'securityContext.readOnlyRootFilesystem':

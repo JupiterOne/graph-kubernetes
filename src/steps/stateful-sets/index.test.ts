@@ -64,6 +64,17 @@ describe('#fetchStatefulSets', () => {
             },
           },
         },
+        {
+          _type: Relationships.CONTAINER_SPEC_HAS_STATEFULSET._type,
+          matcher: {
+            schema: {
+              properties: {
+                _class: { const: RelationshipClass.HAS },
+                _type: { const: 'kube_container_spec_has_stateful_set' },
+              },
+            },
+          },
+        },
       ],
     });
   });
