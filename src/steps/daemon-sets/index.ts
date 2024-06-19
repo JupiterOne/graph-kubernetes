@@ -5,9 +5,14 @@ import {
   IntegrationStep,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
-import * as k8s from '@kubernetes/client-node';
+import { V1DaemonSet } from '@kubernetes/client-node';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
-import { ContainerspecType, Entities, IntegrationSteps, Relationships } from '../constants';
+import {
+  ContainerspecType,
+  Entities,
+  IntegrationSteps,
+  Relationships,
+} from '../constants';
 import { createDaemonSetEntity } from './converters';
 import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
 import { createContainerSpecEntity } from '../deployments/converters';
@@ -39,8 +44,12 @@ export async function fetchDaemonSets(
             }),
           );
 
-          for (const container of daemonSet.spec?.template?.spec?.containers || []) {
-            const daemonSetContainerspecEntity = createContainerSpecEntity(ContainerspecType.DAEMONSET, container)
+          for (const container of daemonSet.spec?.template?.spec?.containers ||
+            []) {
+            const daemonSetContainerspecEntity = createContainerSpecEntity(
+              ContainerspecType.DAEMONSET,
+              container,
+            );
             await jobState.addEntity(daemonSetContainerspecEntity);
           }
         },
@@ -58,11 +67,13 @@ export async function buildContainerSpecDaemonsetRelationship(
       _type: Entities.DAEMONSET._type,
     },
     async (daemonSetEntity) => {
-      const rawNode = getRawData<k8s.V1DaemonSet>(daemonSetEntity);
+      const rawNode = getRawData<V1DaemonSet>(daemonSetEntity);
       const daemonSetContainer = rawNode?.spec?.template?.spec?.containers;
       if (daemonSetContainer) {
         for (const container of daemonSetContainer) {
-          const containerSpecKey = ContainerspecType.DAEMONSET + "/" + container.name as string;
+          const containerSpecKey = (ContainerspecType.DAEMONSET +
+            '/' +
+            container.name) as string;
 
           if (!containerSpecKey) {
             throw new IntegrationMissingKeyError(
@@ -100,9 +111,7 @@ export const daemonSetsSteps: IntegrationStep<IntegrationConfig>[] = [
     id: IntegrationSteps.CONTAINER_SPEC_HAS_DAEMONSET,
     name: 'Build Container Spec HAS Daemonset relationship',
     entities: [],
-    relationships: [
-      Relationships.CONTAINER_SPEC_HAS_DAEMONSET,
-    ],
+    relationships: [Relationships.CONTAINER_SPEC_HAS_DAEMONSET],
     dependsOn: [IntegrationSteps.DAEMONSETS],
     executionHandler: buildContainerSpecDaemonsetRelationship,
   },

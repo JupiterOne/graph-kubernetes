@@ -5,9 +5,14 @@ import {
   IntegrationStep,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
-import * as k8s from '@kubernetes/client-node';
+import { V1CronJob } from '@kubernetes/client-node';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
-import { ContainerspecType, Entities, IntegrationSteps, Relationships } from '../constants';
+import {
+  ContainerspecType,
+  Entities,
+  IntegrationSteps,
+  Relationships,
+} from '../constants';
 import { createCronJobEntity } from './converters';
 import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
 import { createContainerSpecEntity } from '../deployments/converters';
@@ -39,8 +44,14 @@ export async function fetchCronJobs(
             }),
           );
 
-          for (const container of cronJob.spec?.jobTemplate?.spec?.template?.spec?.containers || [] || []) {
-           const cronJobContainerspecEntity = createContainerSpecEntity(ContainerspecType.CRONJOB, container)
+          for (const container of cronJob.spec?.jobTemplate?.spec?.template
+            ?.spec?.containers ||
+            [] ||
+            []) {
+            const cronJobContainerspecEntity = createContainerSpecEntity(
+              ContainerspecType.CRONJOB,
+              container,
+            );
             await jobState.addEntity(cronJobContainerspecEntity);
           }
         },
@@ -58,11 +69,14 @@ export async function buildContainerSpecCronJobRelationship(
       _type: Entities.CRONJOB._type,
     },
     async (cronJobEntity) => {
-      const rawNode = getRawData<k8s.V1CronJob>(cronJobEntity);
-      const cronJobContainer = rawNode?.spec?.jobTemplate?.spec?.template?.spec?.containers;
+      const rawNode = getRawData<V1CronJob>(cronJobEntity);
+      const cronJobContainer =
+        rawNode?.spec?.jobTemplate?.spec?.template?.spec?.containers;
       if (cronJobContainer) {
         for (const container of cronJobContainer) {
-          const containerSpecKey = ContainerspecType.CRONJOB + "/" + container.name as string;
+          const containerSpecKey = (ContainerspecType.CRONJOB +
+            '/' +
+            container.name) as string;
 
           if (!containerSpecKey) {
             throw new IntegrationMissingKeyError(
@@ -87,7 +101,6 @@ export async function buildContainerSpecCronJobRelationship(
   );
 }
 
-
 export const cronJobsSteps: IntegrationStep<IntegrationConfig>[] = [
   {
     id: IntegrationSteps.CRONJOBS,
@@ -101,9 +114,7 @@ export const cronJobsSteps: IntegrationStep<IntegrationConfig>[] = [
     id: IntegrationSteps.CONTAINER_SPEC_HAS_CRON_JOB,
     name: 'Build Container Spec HAS CronJob relationship',
     entities: [],
-    relationships: [
-      Relationships.CONTAINER_SPEC_HAS_CRONJOB,
-    ],
+    relationships: [Relationships.CONTAINER_SPEC_HAS_CRONJOB],
     dependsOn: [IntegrationSteps.CRONJOBS],
     executionHandler: buildContainerSpecCronJobRelationship,
   },

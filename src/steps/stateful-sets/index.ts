@@ -6,9 +6,14 @@ import {
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
-import { ContainerspecType, Entities, IntegrationSteps, Relationships } from '../constants';
+import {
+  ContainerspecType,
+  Entities,
+  IntegrationSteps,
+  Relationships,
+} from '../constants';
 import { createStatefulSetEntity } from './converters';
-import * as k8s from '@kubernetes/client-node';
+import { V1StatefulSet } from '@kubernetes/client-node';
 import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
 import { createContainerSpecEntity } from '../deployments/converters';
 
@@ -39,8 +44,12 @@ export async function fetchStatefulSets(
             }),
           );
 
-          for (const container of statefulSet.spec?.template?.spec?.containers || []) {
-            const statefulSetContainerspecEntity = createContainerSpecEntity(ContainerspecType.STATEFULSET, container)
+          for (const container of statefulSet.spec?.template?.spec
+            ?.containers || []) {
+            const statefulSetContainerspecEntity = createContainerSpecEntity(
+              ContainerspecType.STATEFULSET,
+              container,
+            );
             await jobState.addEntity(statefulSetContainerspecEntity);
           }
         },
@@ -58,11 +67,13 @@ export async function buildContainerSpecStatefulSetRelationship(
       _type: Entities.STATEFULSET._type,
     },
     async (statefulSetEntity) => {
-      const rawNode = getRawData<k8s.V1StatefulSet>(statefulSetEntity);
+      const rawNode = getRawData<V1StatefulSet>(statefulSetEntity);
       const statefulContainer = rawNode?.spec?.template?.spec?.containers;
       if (statefulContainer) {
         for (const container of statefulContainer) {
-          const containerSpecKey = ContainerspecType.STATEFULSET + "/" + container.name as string;
+          const containerSpecKey = (ContainerspecType.STATEFULSET +
+            '/' +
+            container.name) as string;
 
           if (!containerSpecKey) {
             throw new IntegrationMissingKeyError(
@@ -103,9 +114,7 @@ export const statefulSetsSteps: IntegrationStep<IntegrationConfig>[] = [
     id: IntegrationSteps.CONTAINER_SPEC_HAS_STATEFULSET,
     name: 'Build Container Spec HAS Statefulset relationship',
     entities: [],
-    relationships: [
-      Relationships.CONTAINER_SPEC_HAS_STATEFULSET,
-    ],
+    relationships: [Relationships.CONTAINER_SPEC_HAS_STATEFULSET],
     dependsOn: [IntegrationSteps.STATEFULSETS],
     executionHandler: buildContainerSpecStatefulSetRelationship,
   },
