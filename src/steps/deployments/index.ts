@@ -19,6 +19,7 @@ import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
 
 type BuildContainerSpecVolumeRelationshipsParams = {
   jobState: JobState;
+  namespace: string;
   deploymentId: string;
   containerSpecEntity: Entity;
   volumeMounts: V1VolumeMount[] | undefined;
@@ -26,13 +27,14 @@ type BuildContainerSpecVolumeRelationshipsParams = {
 
 async function buildContainerSpecVolumeRelationships({
   jobState,
+  namespace,
   deploymentId,
   containerSpecEntity,
   volumeMounts,
 }: BuildContainerSpecVolumeRelationshipsParams) {
   for (const volumeMount of volumeMounts || []) {
     const volumeEntity = await jobState.findEntity(
-      getVolumeKey(deploymentId, volumeMount.name),
+      getVolumeKey(namespace, deploymentId, volumeMount.name),
     );
 
     if (!volumeEntity) {
@@ -73,17 +75,26 @@ export async function fetchDeployments(
 
           for (const volume of deployment.spec?.template.spec?.volumes || []) {
             const volumeEntity = createVolumeEntity(
-              deployment.metadata?.uid as string,
+              namespaceEntity.name as string,
+              deploymentId,
               volume,
             );
-            await jobState.addEntity(volumeEntity);
+            if (!jobState.hasKey(volumeEntity._key)) {
+              await jobState.addEntity(volumeEntity);
+            }
           }
 
           for (const container of deployment.spec?.template.spec?.containers ||
             []) {
-            const containerSpecEntity = await jobState.addEntity(
-              createContainerSpecEntity(deploymentId, container),
+            const containerSpecEntity = createContainerSpecEntity(
+              namespaceEntity.name as string,
+              deploymentId,
+              container,
             );
+            if (jobState.hasKey(containerSpecEntity._key)) {
+              continue;
+            }
+            await jobState.addEntity(containerSpecEntity);
 
             await jobState.addRelationship(
               createDirectRelationship({
@@ -95,6 +106,7 @@ export async function fetchDeployments(
 
             await buildContainerSpecVolumeRelationships({
               jobState,
+              namespace: namespaceEntity.name as string,
               deploymentId,
               containerSpecEntity,
               volumeMounts: container.volumeMounts,
