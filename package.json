@@ -38,9 +38,10 @@
   "dependencies": {
     "@jupiterone/integration-sdk-dev-tools": "^8.22.6",
     "@kubernetes/client-node": "^0.20.0",
+    "latest": "^0.2.0",
     "node-fetch": "2.6.1"
   },
   "peerDependencies": {
-    "@jupiterone/integration-sdk-core": "^8.22.6"
+    "@jupiterone/integration-sdk-core": "^12.8.3"
   }
 }

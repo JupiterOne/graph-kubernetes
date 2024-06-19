@@ -37,7 +37,7 @@ export enum IntegrationSteps {
   CONTAINER_SPEC_HAS_CRON_JOB = 'fetch-container-spec-cron-job-relationship',
   CONTAINER_SPEC_HAS_DAEMONSET = 'fetch-container-spec-daemonset-relationship',
   CONTAINER_SPEC_HAS_REPLICASET = 'fetch-container-spec-replicaset-relationship',
-  CONTAINER_SPEC_HAS_STATEFULSET = 'fetch-container-spec-statefulset-relationship'
+  CONTAINER_SPEC_HAS_STATEFULSET = 'fetch-container-spec-statefulset-relationship',
 }
 
 export const Entities = {
@@ -356,7 +356,7 @@ export const Relationships = {
   },
   CONTAINER_SPEC_HAS_REPLICASET: {
     _type: 'kube_container_spec_has_replica_set',
-    _class: RelationshipClass.USES,
+    _class: RelationshipClass.HAS,
     sourceType: Entities.CONTAINER_SPEC._type,
     targetType: Entities.REPLICASET._type,
   },

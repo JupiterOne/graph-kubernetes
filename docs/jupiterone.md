@@ -232,7 +232,7 @@ The following relationships are created:
 | `kube_container_spec` | **HAS**               | `kube_cron_job`             |
 | `kube_container_spec` | **HAS**               | `kube_daemon_set`           |
 | `kube_container_spec` | **HAS**               | `kube_job`                  |
-| `kube_container_spec` | **USES**              | `kube_replica_set`          |
+| `kube_container_spec` | **HAS**               | `kube_replica_set`          |
 | `kube_container_spec` | **HAS**               | `kube_stateful_set`         |
 | `kube_container_spec` | **USES**              | `kube_volume`               |
 | `kube_cron_job`       | **MANAGES**           | `kube_job`                  |
