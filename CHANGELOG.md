@@ -25,7 +25,6 @@ and this project adheres to
 | `kube_container_spec` | **HAS**               | `kube_daemon_set`     |
 | `kube_container_spec` | **HAS**               | `kube_job`            |
 | `kube_container_spec` | **HAS**               | `kube_replica_set`    |
-| `kube_container_spec` | **HAS**               | `kube_stateful_set`   |
 
 ## 2.1.0 - 2024-03-22
 
