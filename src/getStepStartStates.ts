@@ -142,9 +142,6 @@ export default async function getStepStartStates(
       [IntegrationSteps.CONTAINER_SPEC_HAS_REPLICASET]: {
         disabled: replicasetsDisabled,
       },
-      [IntegrationSteps.CONTAINER_SPEC_HAS_STATEFULSET]: {
-        disabled: statefulsetsDisabled,
-      },
       [IntegrationSteps.CONTAINER_SPEC_HAS_CRON_JOB]: {
         disabled: cronJobsDisabled,
       },
