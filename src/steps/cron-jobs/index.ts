@@ -8,14 +8,13 @@ import {
 import { V1CronJob } from '@kubernetes/client-node';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
 import {
-  ContainerspecType,
   Entities,
   IntegrationSteps,
   Relationships,
 } from '../constants';
 import { createCronJobEntity } from './converters';
 import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
-import { createContainerSpecEntity } from '../deployments/converters';
+import { createContainerSpecEntity, getContainerSpecKey } from '../deployments/converters';
 
 export async function fetchCronJobs(
   context: IntegrationStepContext,
@@ -48,10 +47,12 @@ export async function fetchCronJobs(
             ?.spec?.containers ||
             [] ||
             []) {
-            const cronJobContainerspecEntity = createContainerSpecEntity(
-              ContainerspecType.CRONJOB,
-              container,
-            );
+            const cronJobContainerspecEntity = createContainerSpecEntity(container);
+            // Check if the entity is already present in jobState
+            if (jobState.hasKey(cronJobContainerspecEntity._key)) {
+              continue; // Skip to the next iteration if the entity is already present
+            }
+
             await jobState.addEntity(cronJobContainerspecEntity);
           }
         },
@@ -74,9 +75,7 @@ export async function buildContainerSpecCronJobRelationship(
         rawNode?.spec?.jobTemplate?.spec?.template?.spec?.containers;
       if (cronJobContainer) {
         for (const container of cronJobContainer) {
-          const containerSpecKey = (ContainerspecType.CRONJOB +
-            '/' +
-            container.name) as string;
+          const containerSpecKey = getContainerSpecKey(container.name)
 
           if (!containerSpecKey) {
             throw new IntegrationMissingKeyError(

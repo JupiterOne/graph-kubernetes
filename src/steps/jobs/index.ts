@@ -8,14 +8,13 @@ import {
 import { V1Job } from '@kubernetes/client-node';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
 import {
-  ContainerspecType,
   Entities,
   IntegrationSteps,
   Relationships,
 } from '../constants';
 import { createJobEntity } from './converters';
 import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
-import { createContainerSpecEntity } from '../deployments/converters';
+import { createContainerSpecEntity, getContainerSpecKey } from '../deployments/converters';
 
 export async function fetchJobs(
   context: IntegrationStepContext,
@@ -60,12 +59,15 @@ export async function fetchJobs(
               );
             }
           }
-
           for (const container of job.spec?.template?.spec?.containers || []) {
-            const containerspecEntity = createContainerSpecEntity(
-              ContainerspecType.JOB,
-              container,
-            );
+            const containerspecEntity = createContainerSpecEntity(container);
+
+            // Check if the entity is already present in jobState
+            if (jobState.hasKey(containerspecEntity._key)) {
+              continue; // Skip to the next iteration if the entity is already present
+            }
+
+            // If the entity is not present, add it to jobState
             await jobState.addEntity(containerspecEntity);
           }
         },
@@ -87,9 +89,7 @@ export async function buildContainerSpecJobRelationship(
       const jobContainer = rawNode?.spec?.template.spec?.containers;
       if (jobContainer) {
         for (const container of jobContainer) {
-          const containerSpecKey = (ContainerspecType.JOB +
-            '/' +
-            container.name) as string;
+          const containerSpecKey = getContainerSpecKey(container.name)
 
           if (!containerSpecKey) {
             throw new IntegrationMissingKeyError(

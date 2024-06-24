@@ -8,14 +8,13 @@ import {
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
 import { V1ReplicaSet } from '@kubernetes/client-node';
 import {
-  ContainerspecType,
   Entities,
   IntegrationSteps,
   Relationships,
 } from '../constants';
 import { createReplicaSetEntity } from './converters';
 import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
-import { createContainerSpecEntity } from '../deployments/converters';
+import { createContainerSpecEntity, getContainerSpecKey } from '../deployments/converters';
 
 export async function fetchReplicaSets(
   context: IntegrationStepContext,
@@ -60,11 +59,11 @@ export async function fetchReplicaSets(
           }
           for (const container of replicaSet.spec?.template?.spec?.containers ||
             []) {
-            const replicaSetContainerspecEntity = createContainerSpecEntity(
-              ContainerspecType.REPLICASET,
-              container,
-            );
-            await jobState.addEntity(replicaSetContainerspecEntity);
+            const replicaSetContainerspecEntity = createContainerSpecEntity(container);
+            // Check if the entity is already present in jobState
+            if (jobState.hasKey(replicaSetContainerspecEntity._key)) {
+              continue; // Skip to the next iteration if the entity is already present
+            } await jobState.addEntity(replicaSetContainerspecEntity);
 
             if (jobState.hasKey(container.image)) {
               await jobState.addRelationship(
@@ -97,9 +96,7 @@ export async function buildContainerSpecReplicasetRelationship(
       const replicaSetContainer = rawNode?.spec?.template?.spec?.containers;
       if (replicaSetContainer) {
         for (const container of replicaSetContainer) {
-          const containerSpecKey = (ContainerspecType.REPLICASET +
-            '/' +
-            container.name) as string;
+          const containerSpecKey = getContainerSpecKey(container.name)
 
           if (!containerSpecKey) {
             throw new IntegrationMissingKeyError(

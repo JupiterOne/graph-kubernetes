@@ -8,14 +8,13 @@ import {
 import { V1DaemonSet } from '@kubernetes/client-node';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
 import {
-  ContainerspecType,
   Entities,
   IntegrationSteps,
   Relationships,
 } from '../constants';
 import { createDaemonSetEntity } from './converters';
 import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
-import { createContainerSpecEntity } from '../deployments/converters';
+import { createContainerSpecEntity, getContainerSpecKey } from '../deployments/converters';
 
 export async function fetchDaemonSets(
   context: IntegrationStepContext,
@@ -47,9 +46,12 @@ export async function fetchDaemonSets(
           for (const container of daemonSet.spec?.template?.spec?.containers ||
             []) {
             const daemonSetContainerspecEntity = createContainerSpecEntity(
-              ContainerspecType.DAEMONSET,
               container,
             );
+            // Check if the entity is already present in jobState
+            if (jobState.hasKey(daemonSetContainerspecEntity._key)) {
+              continue;
+            }
             await jobState.addEntity(daemonSetContainerspecEntity);
           }
         },
@@ -71,9 +73,7 @@ export async function buildContainerSpecDaemonsetRelationship(
       const daemonSetContainer = rawNode?.spec?.template?.spec?.containers;
       if (daemonSetContainer) {
         for (const container of daemonSetContainer) {
-          const containerSpecKey = (ContainerspecType.DAEMONSET +
-            '/' +
-            container.name) as string;
+          const containerSpecKey = getContainerSpecKey(container.name)
 
           if (!containerSpecKey) {
             throw new IntegrationMissingKeyError(
