@@ -2538,5 +2538,4 @@ exports[`#fetchDeployments should collect data: jobState 1`] = `
   ],
   "numCollectedEntities": 14,
   "numCollectedRelationships": 9,
-}
-`;
+};
