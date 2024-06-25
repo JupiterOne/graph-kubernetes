@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#createContainerSpecToVolumeRelationship should generate relationship with mountPath 1`] = `
-Object {
+{
   "_class": "USES",
   "_fromEntityKey": "12345/coredns",
-  "_key": "12345/coredns|uses|12345/config-volume/mount_config-volume/mount_path_/etc/coredns",
-  "_toEntityKey": "12345/config-volume",
+  "_key": "12345/coredns|uses|default/12345/config-volume/mount_config-volume/mount_path_/etc/coredns",
+  "_toEntityKey": "default/12345/config-volume",
   "_type": "kube_container_spec_uses_volume",
   "displayName": "USES",
   "mountPath": "/etc/coredns",
@@ -16,11 +16,11 @@ Object {
 `;
 
 exports[`#createContainerSpecToVolumeRelationship should generate relationship with mountPath and subPath 1`] = `
-Object {
+{
   "_class": "USES",
   "_fromEntityKey": "12345/coredns",
-  "_key": "12345/coredns|uses|12345/config-volume/mount_config-volume/mount_path_/etc/coredns/mount_sub_path_abc",
-  "_toEntityKey": "12345/config-volume",
+  "_key": "12345/coredns|uses|default/12345/config-volume/mount_config-volume/mount_path_/etc/coredns/mount_sub_path_abc",
+  "_toEntityKey": "default/12345/config-volume",
   "_type": "kube_container_spec_uses_volume",
   "displayName": "USES",
   "mountPath": "/etc/coredns",
@@ -31,11 +31,11 @@ Object {
 `;
 
 exports[`#createContainerSpecToVolumeRelationship should generate relationship without mountPath 1`] = `
-Object {
+{
   "_class": "USES",
   "_fromEntityKey": "12345/coredns",
-  "_key": "12345/coredns|uses|12345/config-volume/mount_config-volume",
-  "_toEntityKey": "12345/config-volume",
+  "_key": "12345/coredns|uses|default/12345/config-volume/mount_config-volume",
+  "_toEntityKey": "default/12345/config-volume",
   "_type": "kube_container_spec_uses_volume",
   "displayName": "USES",
   "mountPath": undefined,
@@ -46,22 +46,22 @@ Object {
 `;
 
 exports[`#createDeploymentEntity should convert data 1`] = `
-Object {
-  "_class": Array [
+{
+  "_class": [
     "Deployment",
   ],
   "_key": "b39ade4b-d8f4-44a9-adc2-dff35d05514c",
-  "_rawData": Array [
-    Object {
+  "_rawData": [
+    {
       "name": "default",
-      "rawData": Object {
-        "metadata": Object {
-          "annotations": Object {
+      "rawData": {
+        "metadata": {
+          "annotations": {
             "deployment.kubernetes.io/revision": "1",
           },
           "creationTimestamp": 2021-04-13T15:37:33.000Z,
           "generation": 1,
-          "labels": Object {
+          "labels": {
             "app": "kubernetes-bootcamp",
           },
           "name": "kubernetes-bootcamp",
@@ -69,29 +69,29 @@ Object {
           "resourceVersion": "92421",
           "uid": "b39ade4b-d8f4-44a9-adc2-dff35d05514c",
         },
-        "spec": Object {
+        "spec": {
           "progressDeadlineSeconds": 600,
           "replicas": 1,
           "revisionHistoryLimit": 10,
-          "selector": Object {
-            "matchLabels": Object {
+          "selector": {
+            "matchLabels": {
               "app": "kubernetes-bootcamp",
             },
           },
-          "template": Object {
-            "metadata": Object {
+          "template": {
+            "metadata": {
               "creationTimestamp": undefined,
-              "labels": Object {
+              "labels": {
                 "app": "kubernetes-bootcamp",
               },
             },
-            "spec": Object {
-              "containers": Array [
-                Object {
+            "spec": {
+              "containers": [
+                {
                   "image": "gcr.io/google-samples/kubernetes-bootcamp:v1",
                   "imagePullPolicy": "IfNotPresent",
                   "name": "kubernetes-bootcamp",
-                  "resources": Object {},
+                  "resources": {},
                   "terminationMessagePath": "/dev/termination-log",
                   "terminationMessagePolicy": "File",
                 },
@@ -99,23 +99,23 @@ Object {
               "dnsPolicy": "ClusterFirst",
               "restartPolicy": "Always",
               "schedulerName": "default-scheduler",
-              "securityContext": Object {},
+              "securityContext": {},
               "terminationGracePeriodSeconds": 30,
             },
           },
         },
-        "status": Object {
+        "status": {
           "availableReplicas": 1,
-          "conditions": Array [
-            Object {
+          "conditions": [
+            {
               "lastTransitionTime": 2021-04-13T15:37:33.000Z,
               "lastUpdateTime": 2021-04-13T15:37:46.000Z,
-              "message": "ReplicaSet \\"kubernetes-bootcamp-57978f5f5d\\" has successfully progressed.",
+              "message": "ReplicaSet "kubernetes-bootcamp-57978f5f5d" has successfully progressed.",
               "reason": "NewReplicaSetAvailable",
               "status": "True",
               "type": "Progressing",
             },
-            Object {
+            {
               "lastTransitionTime": 2021-04-16T18:10:54.000Z,
               "lastUpdateTime": 2021-04-16T18:10:54.000Z,
               "message": "Deployment has minimum availability.",

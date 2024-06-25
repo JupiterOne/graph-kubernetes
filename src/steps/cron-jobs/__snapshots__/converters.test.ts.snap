@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#createConfigMapEntity should convert data 1`] = `
-Object {
-  "_class": Array [
+{
+  "_class": [
     "Task",
   ],
   "_key": "223aa203-ed63-4c0e-a113-99abfe9d48e6",
-  "_rawData": Array [
-    Object {
+  "_rawData": [
+    {
       "name": "default",
-      "rawData": Object {
-        "metadata": Object {
-          "annotations": Object {
-            "kubectl.kubernetes.io/last-applied-configuration": "{\\"apiVersion\\":\\"batch/v1beta1\\",\\"kind\\":\\"CronJob\\",\\"metadata\\":{\\"annotations\\":{},\\"name\\":\\"hello\\",\\"namespace\\":\\"default\\"},\\"spec\\":{\\"jobTemplate\\":{\\"spec\\":{\\"template\\":{\\"spec\\":{\\"containers\\":[{\\"command\\":[\\"/bin/sh\\",\\"-c\\",\\"date; echo Hello from the Kubernetes cluster\\"],\\"image\\":\\"busybox\\",\\"imagePullPolicy\\":\\"IfNotPresent\\",\\"name\\":\\"hello\\"}],\\"restartPolicy\\":\\"OnFailure\\"}}}},\\"schedule\\":\\"*/1 * * * *\\"}}
+      "rawData": {
+        "metadata": {
+          "annotations": {
+            "kubectl.kubernetes.io/last-applied-configuration": "{"apiVersion":"batch/v1beta1","kind":"CronJob","metadata":{"annotations":{},"name":"hello","namespace":"default"},"spec":{"jobTemplate":{"spec":{"template":{"spec":{"containers":[{"command":["/bin/sh","-c","date; echo Hello from the Kubernetes cluster"],"image":"busybox","imagePullPolicy":"IfNotPresent","name":"hello"}],"restartPolicy":"OnFailure"}}}},"schedule":"*/1 * * * *"}}
 ",
           },
           "creationTimestamp": 2021-06-23T13:09:30.000Z,
@@ -21,18 +21,18 @@ Object {
           "resourceVersion": "572357",
           "uid": "223aa203-ed63-4c0e-a113-99abfe9d48e6",
         },
-        "spec": Object {
+        "spec": {
           "concurrencyPolicy": "Allow",
           "failedJobsHistoryLimit": 1,
-          "jobTemplate": Object {
-            "metadata": Object {},
-            "spec": Object {
-              "template": Object {
-                "metadata": Object {},
-                "spec": Object {
-                  "containers": Array [
-                    Object {
-                      "command": Array [
+          "jobTemplate": {
+            "metadata": {},
+            "spec": {
+              "template": {
+                "metadata": {},
+                "spec": {
+                  "containers": [
+                    {
+                      "command": [
                         "/bin/sh",
                         "-c",
                         "date; echo Hello from the Kubernetes cluster",
@@ -40,7 +40,7 @@ Object {
                       "image": "busybox",
                       "imagePullPolicy": "IfNotPresent",
                       "name": "hello",
-                      "resources": Object {},
+                      "resources": {},
                       "terminationMessagePath": "/dev/termination-log",
                       "terminationMessagePolicy": "File",
                     },
@@ -48,7 +48,7 @@ Object {
                   "dnsPolicy": "ClusterFirst",
                   "restartPolicy": "OnFailure",
                   "schedulerName": "default-scheduler",
-                  "securityContext": Object {},
+                  "securityContext": {},
                   "terminationGracePeriodSeconds": 30,
                 },
               },
@@ -58,7 +58,7 @@ Object {
           "successfulJobsHistoryLimit": 3,
           "suspend": false,
         },
-        "status": Object {
+        "status": {
           "lastScheduleTime": 2021-06-23T17:56:00.000Z,
         },
       },

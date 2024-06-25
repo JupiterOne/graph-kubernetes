@@ -1,46 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#fetchDeployments should collect data: jobState 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
+{
+  "collectedEntities": [
+    {
+      "_class": [
         "Group",
       ],
-      "_key": "9e9e231b-89d5-4ac7-8ec4-855791482c2f",
-      "_rawData": Array [
-        Object {
+      "_key": "0db73bce-0801-4b25-867a-a9fe958fa96d",
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
               "annotations": undefined,
-              "creationTimestamp": 2024-06-19T08:11:16.000Z,
+              "creationTimestamp": 2024-06-21T07:44:54.000Z,
               "deletionGracePeriodSeconds": undefined,
               "deletionTimestamp": undefined,
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "default",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
                   "manager": "kube-apiserver",
                   "operation": "Update",
                   "subresource": undefined,
-                  "time": 2024-06-19T08:11:16.000Z,
+                  "time": 2024-06-21T07:44:54.000Z,
                 },
               ],
               "name": "default",
@@ -48,10 +48,10 @@ Object {
               "ownerReferences": undefined,
               "resourceVersion": "42",
               "selfLink": undefined,
-              "uid": "9e9e231b-89d5-4ac7-8ec4-855791482c2f",
+              "uid": "0db73bce-0801-4b25-867a-a9fe958fa96d",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -64,10 +64,10 @@ Object {
       ],
       "_type": "kube_namespace",
       "active": undefined,
-      "createdOn": 1718784676000,
+      "createdOn": 1718955894000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "default",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -75,55 +75,55 @@ Object {
       "resourceVersion": "42",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
-      "_key": "9d2b05a5-c965-4a88-8b01-b9d28aed519a",
-      "_rawData": Array [
-        Object {
+      "_key": "a3b7fbce-2d26-47e5-97b6-3ccc51b40932",
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
               "annotations": undefined,
-              "creationTimestamp": 2024-06-19T08:11:16.000Z,
+              "creationTimestamp": 2024-06-21T07:44:54.000Z,
               "deletionGracePeriodSeconds": undefined,
               "deletionTimestamp": undefined,
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-node-lease",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
                   "manager": "kube-apiserver",
                   "operation": "Update",
                   "subresource": undefined,
-                  "time": 2024-06-19T08:11:16.000Z,
+                  "time": 2024-06-21T07:44:54.000Z,
                 },
               ],
               "name": "kube-node-lease",
               "namespace": undefined,
               "ownerReferences": undefined,
-              "resourceVersion": "38",
+              "resourceVersion": "39",
               "selfLink": undefined,
-              "uid": "9d2b05a5-c965-4a88-8b01-b9d28aed519a",
+              "uid": "a3b7fbce-2d26-47e5-97b6-3ccc51b40932",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -136,66 +136,66 @@ Object {
       ],
       "_type": "kube_namespace",
       "active": undefined,
-      "createdOn": 1718784676000,
+      "createdOn": 1718955894000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-node-lease",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
       "name": "kube-node-lease",
-      "resourceVersion": "38",
+      "resourceVersion": "39",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
-      "_key": "aee57e5e-0611-4ca8-89f3-64bf6fdaac8c",
-      "_rawData": Array [
-        Object {
+      "_key": "4055ce72-f3cb-457d-8003-c10a01017dd8",
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
               "annotations": undefined,
-              "creationTimestamp": 2024-06-19T08:11:16.000Z,
+              "creationTimestamp": 2024-06-21T07:44:54.000Z,
               "deletionGracePeriodSeconds": undefined,
               "deletionTimestamp": undefined,
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-public",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
                   "manager": "kube-apiserver",
                   "operation": "Update",
                   "subresource": undefined,
-                  "time": 2024-06-19T08:11:16.000Z,
+                  "time": 2024-06-21T07:44:54.000Z,
                 },
               ],
               "name": "kube-public",
               "namespace": undefined,
               "ownerReferences": undefined,
-              "resourceVersion": "26",
+              "resourceVersion": "31",
               "selfLink": undefined,
-              "uid": "aee57e5e-0611-4ca8-89f3-64bf6fdaac8c",
+              "uid": "4055ce72-f3cb-457d-8003-c10a01017dd8",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -208,55 +208,55 @@ Object {
       ],
       "_type": "kube_namespace",
       "active": undefined,
-      "createdOn": 1718784676000,
+      "createdOn": 1718955894000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-public",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
       "name": "kube-public",
-      "resourceVersion": "26",
+      "resourceVersion": "31",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
-      "_key": "ced267a3-528f-46b5-a289-cbf7068d8fc9",
-      "_rawData": Array [
-        Object {
+      "_key": "dae8939b-da22-491d-a98b-c8fdf0e2f119",
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
               "annotations": undefined,
-              "creationTimestamp": 2024-06-19T08:11:16.000Z,
+              "creationTimestamp": 2024-06-21T07:44:54.000Z,
               "deletionGracePeriodSeconds": undefined,
               "deletionTimestamp": undefined,
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-system",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
                   "manager": "kube-apiserver",
                   "operation": "Update",
                   "subresource": undefined,
-                  "time": 2024-06-19T08:11:16.000Z,
+                  "time": 2024-06-21T07:44:54.000Z,
                 },
               ],
               "name": "kube-system",
@@ -264,10 +264,10 @@ Object {
               "ownerReferences": undefined,
               "resourceVersion": "12",
               "selfLink": undefined,
-              "uid": "ced267a3-528f-46b5-a289-cbf7068d8fc9",
+              "uid": "dae8939b-da22-491d-a98b-c8fdf0e2f119",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -280,10 +280,10 @@ Object {
       ],
       "_type": "kube_namespace",
       "active": undefined,
-      "createdOn": 1718784676000,
+      "createdOn": 1718955894000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-system",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -291,13 +291,96 @@ Object {
       "resourceVersion": "12",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
+        "Group",
+      ],
+      "_key": "c34b14f9-fe12-4a1b-9b58-894760f6a770",
+      "_rawData": [
+        {
+          "name": "default",
+          "rawData": V1Namespace {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": {
+                "kubectl.kubernetes.io/last-applied-configuration": "{"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"labels":{"addonmanager.kubernetes.io/mode":"Reconcile","kubernetes.io/minikube-addons":"dashboard"},"name":"kubernetes-dashboard"}}
+",
+              },
+              "creationTimestamp": 2024-06-21T07:45:06.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": undefined,
+              "labels": {
+                "addonmanager.kubernetes.io/mode": "Reconcile",
+                "kubernetes.io/metadata.name": "kubernetes-dashboard",
+                "kubernetes.io/minikube-addons": "dashboard",
+              },
+              "managedFields": [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:kubectl.kubernetes.io/last-applied-configuration": {},
+                      },
+                      "f:labels": {
+                        ".": {},
+                        "f:addonmanager.kubernetes.io/mode": {},
+                        "f:kubernetes.io/metadata.name": {},
+                        "f:kubernetes.io/minikube-addons": {},
+                      },
+                    },
+                  },
+                  "manager": "kubectl-client-side-apply",
+                  "operation": "Update",
+                  "subresource": undefined,
+                  "time": 2024-06-21T07:45:06.000Z,
+                },
+              ],
+              "name": "kubernetes-dashboard",
+              "namespace": undefined,
+              "ownerReferences": undefined,
+              "resourceVersion": "315",
+              "selfLink": undefined,
+              "uid": "c34b14f9-fe12-4a1b-9b58-894760f6a770",
+            },
+            "spec": V1NamespaceSpec {
+              "finalizers": [
+                "kubernetes",
+              ],
+            },
+            "status": V1NamespaceStatus {
+              "conditions": undefined,
+              "phase": "Active",
+            },
+          },
+        },
+      ],
+      "_type": "kube_namespace",
+      "active": undefined,
+      "createdOn": 1718955906000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "kubernetes-dashboard",
+      "finalizers": [
+        "kubernetes",
+      ],
+      "generation": undefined,
+      "name": "kubernetes-dashboard",
+      "resourceVersion": "315",
+      "status.phase": "Active",
+    },
+    {
+      "_class": [
         "Disk",
       ],
-      "_key": "ab35dcb0-7789-4694-9143-71aaaeaf01cc/config-volume",
-      "_rawData": Array [
-        Object {
+      "_key": "kube-system/0f27ef91-7fb6-49d5-a751-6054a439e72f/config-volume",
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Volume {
             "awsElasticBlockStore": undefined,
@@ -307,7 +390,7 @@ Object {
             "cinder": undefined,
             "configMap": V1ConfigMapVolumeSource {
               "defaultMode": 420,
-              "items": Array [
+              "items": [
                 V1KeyToPath {
                   "key": "Corefile",
                   "mode": undefined,
@@ -354,16 +437,16 @@ Object {
       "hostPath.type": undefined,
       "name": "config-volume",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Configuration",
       ],
-      "_key": "ab35dcb0-7789-4694-9143-71aaaeaf01cc/coredns",
-      "_rawData": Array [
-        Object {
+      "_key": "kube-system/coredns",
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Container {
-            "args": Array [
+            "args": [
               "-conf",
               "/etc/coredns/Corefile",
             ],
@@ -392,7 +475,7 @@ Object {
               "timeoutSeconds": 5,
             },
             "name": "coredns",
-            "ports": Array [
+            "ports": [
               V1ContainerPort {
                 "containerPort": 53,
                 "hostIP": undefined,
@@ -436,10 +519,10 @@ Object {
             "resizePolicy": undefined,
             "resources": V1ResourceRequirements {
               "claims": undefined,
-              "limits": Object {
+              "limits": {
                 "memory": "170Mi",
               },
-              "requests": Object {
+              "requests": {
                 "cpu": "100m",
                 "memory": "70Mi",
               },
@@ -448,10 +531,10 @@ Object {
             "securityContext": V1SecurityContext {
               "allowPrivilegeEscalation": false,
               "capabilities": V1Capabilities {
-                "add": Array [
+                "add": [
                   "NET_BIND_SERVICE",
                 ],
-                "drop": Array [
+                "drop": [
                   "ALL",
                 ],
               },
@@ -472,7 +555,7 @@ Object {
             "terminationMessagePolicy": "File",
             "tty": undefined,
             "volumeDevices": undefined,
-            "volumeMounts": Array [
+            "volumeMounts": [
               V1VolumeMount {
                 "mountPath": "/etc/coredns",
                 "mountPropagation": undefined,
@@ -500,37 +583,37 @@ Object {
       "securityContext.runAsNonRoot": undefined,
       "securityContext.runAsUser": undefined,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Deployment",
       ],
-      "_key": "ab35dcb0-7789-4694-9143-71aaaeaf01cc",
-      "_rawData": Array [
-        Object {
+      "_key": "0f27ef91-7fb6-49d5-a751-6054a439e72f",
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Deployment {
             "apiVersion": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
-              "annotations": Object {
+              "annotations": {
                 "deployment.kubernetes.io/revision": "1",
               },
-              "creationTimestamp": 2024-06-19T08:11:19.000Z,
+              "creationTimestamp": 2024-06-21T07:44:57.000Z,
               "deletionGracePeriodSeconds": undefined,
               "deletionTimestamp": undefined,
               "finalizers": undefined,
               "generateName": undefined,
               "generation": 2,
-              "labels": Object {
+              "labels": {
                 "k8s-app": "kube-dns",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "apps/v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:spec": Object {
-                      "f:replicas": Object {},
+                  "fieldsV1": {
+                    "f:spec": {
+                      "f:replicas": {},
                     },
                   },
                   "manager": "minikube",
@@ -541,151 +624,151 @@ Object {
                 V1ManagedFieldsEntry {
                   "apiVersion": "apps/v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:k8s-app": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:k8s-app": {},
                       },
                     },
-                    "f:spec": Object {
-                      "f:progressDeadlineSeconds": Object {},
-                      "f:revisionHistoryLimit": Object {},
-                      "f:selector": Object {},
-                      "f:strategy": Object {
-                        "f:rollingUpdate": Object {
-                          ".": Object {},
-                          "f:maxSurge": Object {},
-                          "f:maxUnavailable": Object {},
+                    "f:spec": {
+                      "f:progressDeadlineSeconds": {},
+                      "f:revisionHistoryLimit": {},
+                      "f:selector": {},
+                      "f:strategy": {
+                        "f:rollingUpdate": {
+                          ".": {},
+                          "f:maxSurge": {},
+                          "f:maxUnavailable": {},
                         },
-                        "f:type": Object {},
+                        "f:type": {},
                       },
-                      "f:template": Object {
-                        "f:metadata": Object {
-                          "f:labels": Object {
-                            ".": Object {},
-                            "f:k8s-app": Object {},
+                      "f:template": {
+                        "f:metadata": {
+                          "f:labels": {
+                            ".": {},
+                            "f:k8s-app": {},
                           },
                         },
-                        "f:spec": Object {
-                          "f:affinity": Object {
-                            ".": Object {},
-                            "f:podAntiAffinity": Object {
-                              ".": Object {},
-                              "f:preferredDuringSchedulingIgnoredDuringExecution": Object {},
+                        "f:spec": {
+                          "f:affinity": {
+                            ".": {},
+                            "f:podAntiAffinity": {
+                              ".": {},
+                              "f:preferredDuringSchedulingIgnoredDuringExecution": {},
                             },
                           },
-                          "f:containers": Object {
-                            "k:{\\"name\\":\\"coredns\\"}": Object {
-                              ".": Object {},
-                              "f:args": Object {},
-                              "f:image": Object {},
-                              "f:imagePullPolicy": Object {},
-                              "f:livenessProbe": Object {
-                                ".": Object {},
-                                "f:failureThreshold": Object {},
-                                "f:httpGet": Object {
-                                  ".": Object {},
-                                  "f:path": Object {},
-                                  "f:port": Object {},
-                                  "f:scheme": Object {},
+                          "f:containers": {
+                            "k:{"name":"coredns"}": {
+                              ".": {},
+                              "f:args": {},
+                              "f:image": {},
+                              "f:imagePullPolicy": {},
+                              "f:livenessProbe": {
+                                ".": {},
+                                "f:failureThreshold": {},
+                                "f:httpGet": {
+                                  ".": {},
+                                  "f:path": {},
+                                  "f:port": {},
+                                  "f:scheme": {},
                                 },
-                                "f:initialDelaySeconds": Object {},
-                                "f:periodSeconds": Object {},
-                                "f:successThreshold": Object {},
-                                "f:timeoutSeconds": Object {},
+                                "f:initialDelaySeconds": {},
+                                "f:periodSeconds": {},
+                                "f:successThreshold": {},
+                                "f:timeoutSeconds": {},
                               },
-                              "f:name": Object {},
-                              "f:ports": Object {
-                                ".": Object {},
-                                "k:{\\"containerPort\\":53,\\"protocol\\":\\"TCP\\"}": Object {
-                                  ".": Object {},
-                                  "f:containerPort": Object {},
-                                  "f:name": Object {},
-                                  "f:protocol": Object {},
+                              "f:name": {},
+                              "f:ports": {
+                                ".": {},
+                                "k:{"containerPort":53,"protocol":"TCP"}": {
+                                  ".": {},
+                                  "f:containerPort": {},
+                                  "f:name": {},
+                                  "f:protocol": {},
                                 },
-                                "k:{\\"containerPort\\":53,\\"protocol\\":\\"UDP\\"}": Object {
-                                  ".": Object {},
-                                  "f:containerPort": Object {},
-                                  "f:name": Object {},
-                                  "f:protocol": Object {},
+                                "k:{"containerPort":53,"protocol":"UDP"}": {
+                                  ".": {},
+                                  "f:containerPort": {},
+                                  "f:name": {},
+                                  "f:protocol": {},
                                 },
-                                "k:{\\"containerPort\\":9153,\\"protocol\\":\\"TCP\\"}": Object {
-                                  ".": Object {},
-                                  "f:containerPort": Object {},
-                                  "f:name": Object {},
-                                  "f:protocol": Object {},
-                                },
-                              },
-                              "f:readinessProbe": Object {
-                                ".": Object {},
-                                "f:failureThreshold": Object {},
-                                "f:httpGet": Object {
-                                  ".": Object {},
-                                  "f:path": Object {},
-                                  "f:port": Object {},
-                                  "f:scheme": Object {},
-                                },
-                                "f:periodSeconds": Object {},
-                                "f:successThreshold": Object {},
-                                "f:timeoutSeconds": Object {},
-                              },
-                              "f:resources": Object {
-                                ".": Object {},
-                                "f:limits": Object {
-                                  ".": Object {},
-                                  "f:memory": Object {},
-                                },
-                                "f:requests": Object {
-                                  ".": Object {},
-                                  "f:cpu": Object {},
-                                  "f:memory": Object {},
+                                "k:{"containerPort":9153,"protocol":"TCP"}": {
+                                  ".": {},
+                                  "f:containerPort": {},
+                                  "f:name": {},
+                                  "f:protocol": {},
                                 },
                               },
-                              "f:securityContext": Object {
-                                ".": Object {},
-                                "f:allowPrivilegeEscalation": Object {},
-                                "f:capabilities": Object {
-                                  ".": Object {},
-                                  "f:add": Object {},
-                                  "f:drop": Object {},
+                              "f:readinessProbe": {
+                                ".": {},
+                                "f:failureThreshold": {},
+                                "f:httpGet": {
+                                  ".": {},
+                                  "f:path": {},
+                                  "f:port": {},
+                                  "f:scheme": {},
                                 },
-                                "f:readOnlyRootFilesystem": Object {},
+                                "f:periodSeconds": {},
+                                "f:successThreshold": {},
+                                "f:timeoutSeconds": {},
                               },
-                              "f:terminationMessagePath": Object {},
-                              "f:terminationMessagePolicy": Object {},
-                              "f:volumeMounts": Object {
-                                ".": Object {},
-                                "k:{\\"mountPath\\":\\"/etc/coredns\\"}": Object {
-                                  ".": Object {},
-                                  "f:mountPath": Object {},
-                                  "f:name": Object {},
-                                  "f:readOnly": Object {},
+                              "f:resources": {
+                                ".": {},
+                                "f:limits": {
+                                  ".": {},
+                                  "f:memory": {},
+                                },
+                                "f:requests": {
+                                  ".": {},
+                                  "f:cpu": {},
+                                  "f:memory": {},
+                                },
+                              },
+                              "f:securityContext": {
+                                ".": {},
+                                "f:allowPrivilegeEscalation": {},
+                                "f:capabilities": {
+                                  ".": {},
+                                  "f:add": {},
+                                  "f:drop": {},
+                                },
+                                "f:readOnlyRootFilesystem": {},
+                              },
+                              "f:terminationMessagePath": {},
+                              "f:terminationMessagePolicy": {},
+                              "f:volumeMounts": {
+                                ".": {},
+                                "k:{"mountPath":"/etc/coredns"}": {
+                                  ".": {},
+                                  "f:mountPath": {},
+                                  "f:name": {},
+                                  "f:readOnly": {},
                                 },
                               },
                             },
                           },
-                          "f:dnsPolicy": Object {},
-                          "f:nodeSelector": Object {},
-                          "f:priorityClassName": Object {},
-                          "f:restartPolicy": Object {},
-                          "f:schedulerName": Object {},
-                          "f:securityContext": Object {},
-                          "f:serviceAccount": Object {},
-                          "f:serviceAccountName": Object {},
-                          "f:terminationGracePeriodSeconds": Object {},
-                          "f:tolerations": Object {},
-                          "f:volumes": Object {
-                            ".": Object {},
-                            "k:{\\"name\\":\\"config-volume\\"}": Object {
-                              ".": Object {},
-                              "f:configMap": Object {
-                                ".": Object {},
-                                "f:defaultMode": Object {},
-                                "f:items": Object {},
-                                "f:name": Object {},
+                          "f:dnsPolicy": {},
+                          "f:nodeSelector": {},
+                          "f:priorityClassName": {},
+                          "f:restartPolicy": {},
+                          "f:schedulerName": {},
+                          "f:securityContext": {},
+                          "f:serviceAccount": {},
+                          "f:serviceAccountName": {},
+                          "f:terminationGracePeriodSeconds": {},
+                          "f:tolerations": {},
+                          "f:volumes": {
+                            ".": {},
+                            "k:{"name":"config-volume"}": {
+                              ".": {},
+                              "f:configMap": {
+                                ".": {},
+                                "f:defaultMode": {},
+                                "f:items": {},
+                                "f:name": {},
                               },
-                              "f:name": Object {},
+                              "f:name": {},
                             },
                           },
                         },
@@ -695,59 +778,59 @@ Object {
                   "manager": "kubeadm",
                   "operation": "Update",
                   "subresource": undefined,
-                  "time": 2024-06-19T08:11:19.000Z,
+                  "time": 2024-06-21T07:44:57.000Z,
                 },
                 V1ManagedFieldsEntry {
                   "apiVersion": "apps/v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:deployment.kubernetes.io/revision": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:deployment.kubernetes.io/revision": {},
                       },
                     },
-                    "f:status": Object {
-                      "f:availableReplicas": Object {},
-                      "f:conditions": Object {
-                        ".": Object {},
-                        "k:{\\"type\\":\\"Available\\"}": Object {
-                          ".": Object {},
-                          "f:lastTransitionTime": Object {},
-                          "f:lastUpdateTime": Object {},
-                          "f:message": Object {},
-                          "f:reason": Object {},
-                          "f:status": Object {},
-                          "f:type": Object {},
+                    "f:status": {
+                      "f:availableReplicas": {},
+                      "f:conditions": {
+                        ".": {},
+                        "k:{"type":"Available"}": {
+                          ".": {},
+                          "f:lastTransitionTime": {},
+                          "f:lastUpdateTime": {},
+                          "f:message": {},
+                          "f:reason": {},
+                          "f:status": {},
+                          "f:type": {},
                         },
-                        "k:{\\"type\\":\\"Progressing\\"}": Object {
-                          ".": Object {},
-                          "f:lastTransitionTime": Object {},
-                          "f:lastUpdateTime": Object {},
-                          "f:message": Object {},
-                          "f:reason": Object {},
-                          "f:status": Object {},
-                          "f:type": Object {},
+                        "k:{"type":"Progressing"}": {
+                          ".": {},
+                          "f:lastTransitionTime": {},
+                          "f:lastUpdateTime": {},
+                          "f:message": {},
+                          "f:reason": {},
+                          "f:status": {},
+                          "f:type": {},
                         },
                       },
-                      "f:observedGeneration": Object {},
-                      "f:readyReplicas": Object {},
-                      "f:replicas": Object {},
-                      "f:updatedReplicas": Object {},
+                      "f:observedGeneration": {},
+                      "f:readyReplicas": {},
+                      "f:replicas": {},
+                      "f:updatedReplicas": {},
                     },
                   },
                   "manager": "kube-controller-manager",
                   "operation": "Update",
                   "subresource": "status",
-                  "time": 2024-06-19T08:11:34.000Z,
+                  "time": 2024-06-21T07:45:12.000Z,
                 },
               ],
               "name": "coredns",
               "namespace": "kube-system",
               "ownerReferences": undefined,
-              "resourceVersion": "412",
+              "resourceVersion": "459",
               "selfLink": undefined,
-              "uid": "ab35dcb0-7789-4694-9143-71aaaeaf01cc",
+              "uid": "0f27ef91-7fb6-49d5-a751-6054a439e72f",
             },
             "spec": V1DeploymentSpec {
               "minReadySeconds": undefined,
@@ -757,7 +840,7 @@ Object {
               "revisionHistoryLimit": 10,
               "selector": V1LabelSelector {
                 "matchExpressions": undefined,
-                "matchLabels": Object {
+                "matchLabels": {
                   "k8s-app": "kube-dns",
                 },
               },
@@ -777,7 +860,7 @@ Object {
                   "finalizers": undefined,
                   "generateName": undefined,
                   "generation": undefined,
-                  "labels": Object {
+                  "labels": {
                     "k8s-app": "kube-dns",
                   },
                   "managedFields": undefined,
@@ -794,15 +877,15 @@ Object {
                     "nodeAffinity": undefined,
                     "podAffinity": undefined,
                     "podAntiAffinity": V1PodAntiAffinity {
-                      "preferredDuringSchedulingIgnoredDuringExecution": Array [
+                      "preferredDuringSchedulingIgnoredDuringExecution": [
                         V1WeightedPodAffinityTerm {
                           "podAffinityTerm": V1PodAffinityTerm {
                             "labelSelector": V1LabelSelector {
-                              "matchExpressions": Array [
+                              "matchExpressions": [
                                 V1LabelSelectorRequirement {
                                   "key": "k8s-app",
                                   "operator": "In",
-                                  "values": Array [
+                                  "values": [
                                     "kube-dns",
                                   ],
                                 },
@@ -820,9 +903,9 @@ Object {
                     },
                   },
                   "automountServiceAccountToken": undefined,
-                  "containers": Array [
+                  "containers": [
                     V1Container {
-                      "args": Array [
+                      "args": [
                         "-conf",
                         "/etc/coredns/Corefile",
                       ],
@@ -851,7 +934,7 @@ Object {
                         "timeoutSeconds": 5,
                       },
                       "name": "coredns",
-                      "ports": Array [
+                      "ports": [
                         V1ContainerPort {
                           "containerPort": 53,
                           "hostIP": undefined,
@@ -895,10 +978,10 @@ Object {
                       "resizePolicy": undefined,
                       "resources": V1ResourceRequirements {
                         "claims": undefined,
-                        "limits": Object {
+                        "limits": {
                           "memory": "170Mi",
                         },
-                        "requests": Object {
+                        "requests": {
                           "cpu": "100m",
                           "memory": "70Mi",
                         },
@@ -907,10 +990,10 @@ Object {
                       "securityContext": V1SecurityContext {
                         "allowPrivilegeEscalation": false,
                         "capabilities": V1Capabilities {
-                          "add": Array [
+                          "add": [
                             "NET_BIND_SERVICE",
                           ],
-                          "drop": Array [
+                          "drop": [
                             "ALL",
                           ],
                         },
@@ -931,7 +1014,7 @@ Object {
                       "terminationMessagePolicy": "File",
                       "tty": undefined,
                       "volumeDevices": undefined,
-                      "volumeMounts": Array [
+                      "volumeMounts": [
                         V1VolumeMount {
                           "mountPath": "/etc/coredns",
                           "mountPropagation": undefined,
@@ -957,7 +1040,7 @@ Object {
                   "imagePullSecrets": undefined,
                   "initContainers": undefined,
                   "nodeName": undefined,
-                  "nodeSelector": Object {
+                  "nodeSelector": {
                     "kubernetes.io/os": "linux",
                   },
                   "os": undefined,
@@ -989,7 +1072,7 @@ Object {
                   "shareProcessNamespace": undefined,
                   "subdomain": undefined,
                   "terminationGracePeriodSeconds": 30,
-                  "tolerations": Array [
+                  "tolerations": [
                     V1Toleration {
                       "effect": undefined,
                       "key": "CriticalAddonsOnly",
@@ -1006,7 +1089,7 @@ Object {
                     },
                   ],
                   "topologySpreadConstraints": undefined,
-                  "volumes": Array [
+                  "volumes": [
                     V1Volume {
                       "awsElasticBlockStore": undefined,
                       "azureDisk": undefined,
@@ -1015,7 +1098,7 @@ Object {
                       "cinder": undefined,
                       "configMap": V1ConfigMapVolumeSource {
                         "defaultMode": 420,
-                        "items": Array [
+                        "items": [
                           V1KeyToPath {
                             "key": "Corefile",
                             "mode": undefined,
@@ -1057,19 +1140,19 @@ Object {
             "status": V1DeploymentStatus {
               "availableReplicas": 1,
               "collisionCount": undefined,
-              "conditions": Array [
+              "conditions": [
                 V1DeploymentCondition {
-                  "lastTransitionTime": 2024-06-19T08:11:32.000Z,
-                  "lastUpdateTime": 2024-06-19T08:11:32.000Z,
+                  "lastTransitionTime": 2024-06-21T07:45:10.000Z,
+                  "lastUpdateTime": 2024-06-21T07:45:10.000Z,
                   "message": "Deployment has minimum availability.",
                   "reason": "MinimumReplicasAvailable",
                   "status": "True",
                   "type": "Available",
                 },
                 V1DeploymentCondition {
-                  "lastTransitionTime": 2024-06-19T08:11:32.000Z,
-                  "lastUpdateTime": 2024-06-19T08:11:34.000Z,
-                  "message": "ReplicaSet \\"coredns-7db6d8ff4d\\" has successfully progressed.",
+                  "lastTransitionTime": 2024-06-21T07:45:10.000Z,
+                  "lastUpdateTime": 2024-06-21T07:45:12.000Z,
+                  "message": "ReplicaSet "coredns-7db6d8ff4d" has successfully progressed.",
                   "reason": "NewReplicaSetAvailable",
                   "status": "True",
                   "type": "Progressing",
@@ -1086,7 +1169,7 @@ Object {
       ],
       "_type": "kube_deployment",
       "active": undefined,
-      "createdOn": 1718784679000,
+      "createdOn": 1718955897000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "coredns",
       "generation": 2,
@@ -1095,7 +1178,7 @@ Object {
       "paused": undefined,
       "progressDeadlineSeconds": 600,
       "replicas": 1,
-      "resourceVersion": "412",
+      "resourceVersion": "459",
       "revisionHistoryLimit": 10,
       "status.availableReplicas": 1,
       "status.collisionCount": undefined,
@@ -1108,21 +1191,1270 @@ Object {
       "strategy.maxUnavailable": 1,
       "strategy.type": "RollingUpdate",
     },
+    {
+      "_class": [
+        "Disk",
+      ],
+      "_key": "kubernetes-dashboard/afde8e0a-08ab-4efa-ae82-f8055b804ec1/tmp-volume",
+      "_rawData": [
+        {
+          "name": "default",
+          "rawData": V1Volume {
+            "awsElasticBlockStore": undefined,
+            "azureDisk": undefined,
+            "azureFile": undefined,
+            "cephfs": undefined,
+            "cinder": undefined,
+            "configMap": undefined,
+            "csi": undefined,
+            "downwardAPI": undefined,
+            "emptyDir": V1EmptyDirVolumeSource {
+              "medium": undefined,
+              "sizeLimit": undefined,
+            },
+            "ephemeral": undefined,
+            "fc": undefined,
+            "flexVolume": undefined,
+            "flocker": undefined,
+            "gcePersistentDisk": undefined,
+            "gitRepo": undefined,
+            "glusterfs": undefined,
+            "hostPath": undefined,
+            "iscsi": undefined,
+            "name": "tmp-volume",
+            "nfs": undefined,
+            "persistentVolumeClaim": undefined,
+            "photonPersistentDisk": undefined,
+            "portworxVolume": undefined,
+            "projected": undefined,
+            "quobyte": undefined,
+            "rbd": undefined,
+            "scaleIO": undefined,
+            "secret": undefined,
+            "storageos": undefined,
+            "vsphereVolume": undefined,
+          },
+        },
+      ],
+      "_type": "kube_volume",
+      "classification": null,
+      "createdOn": undefined,
+      "displayName": "tmp-volume",
+      "encrypted": false,
+      "ephemeral.readOnly": undefined,
+      "hostPath.path": undefined,
+      "hostPath.type": undefined,
+      "name": "tmp-volume",
+    },
+    {
+      "_class": [
+        "Configuration",
+      ],
+      "_key": "kubernetes-dashboard/dashboard-metrics-scraper",
+      "_rawData": [
+        {
+          "name": "default",
+          "rawData": V1Container {
+            "args": undefined,
+            "command": undefined,
+            "env": undefined,
+            "envFrom": undefined,
+            "image": "docker.io/kubernetesui/metrics-scraper:v1.0.8@sha256:76049887f07a0476dc93efc2d3569b9529bf982b22d29f356092ce206e98765c",
+            "imagePullPolicy": "IfNotPresent",
+            "lifecycle": undefined,
+            "livenessProbe": V1Probe {
+              "exec": undefined,
+              "failureThreshold": 3,
+              "grpc": undefined,
+              "httpGet": V1HTTPGetAction {
+                "host": undefined,
+                "httpHeaders": undefined,
+                "path": "/",
+                "port": 8000,
+                "scheme": "HTTP",
+              },
+              "initialDelaySeconds": 30,
+              "periodSeconds": 10,
+              "successThreshold": 1,
+              "tcpSocket": undefined,
+              "terminationGracePeriodSeconds": undefined,
+              "timeoutSeconds": 30,
+            },
+            "name": "dashboard-metrics-scraper",
+            "ports": [
+              V1ContainerPort {
+                "containerPort": 8000,
+                "hostIP": undefined,
+                "hostPort": undefined,
+                "name": undefined,
+                "protocol": "TCP",
+              },
+            ],
+            "readinessProbe": undefined,
+            "resizePolicy": undefined,
+            "resources": V1ResourceRequirements {
+              "claims": undefined,
+              "limits": undefined,
+              "requests": undefined,
+            },
+            "restartPolicy": undefined,
+            "securityContext": V1SecurityContext {
+              "allowPrivilegeEscalation": false,
+              "capabilities": undefined,
+              "privileged": undefined,
+              "procMount": undefined,
+              "readOnlyRootFilesystem": true,
+              "runAsGroup": 2001,
+              "runAsNonRoot": undefined,
+              "runAsUser": 1001,
+              "seLinuxOptions": undefined,
+              "seccompProfile": undefined,
+              "windowsOptions": undefined,
+            },
+            "startupProbe": undefined,
+            "stdin": undefined,
+            "stdinOnce": undefined,
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "tty": undefined,
+            "volumeDevices": undefined,
+            "volumeMounts": [
+              V1VolumeMount {
+                "mountPath": "/tmp",
+                "mountPropagation": undefined,
+                "name": "tmp-volume",
+                "readOnly": undefined,
+                "subPath": undefined,
+                "subPathExpr": undefined,
+              },
+            ],
+            "workingDir": undefined,
+          },
+        },
+      ],
+      "_type": "kube_container_spec",
+      "createdOn": undefined,
+      "displayName": "dashboard-metrics-scraper",
+      "image": "docker.io/kubernetesui/metrics-scraper:v1.0.8@sha256:76049887f07a0476dc93efc2d3569b9529bf982b22d29f356092ce206e98765c",
+      "imagePullPolicy": "IfNotPresent",
+      "name": "dashboard-metrics-scraper",
+      "securityContext.allowPrivilegeEscalation": false,
+      "securityContext.privileged": undefined,
+      "securityContext.procMount": undefined,
+      "securityContext.readOnlyRootFilesystem": true,
+      "securityContext.runAsGroup": 2001,
+      "securityContext.runAsNonRoot": undefined,
+      "securityContext.runAsUser": 1001,
+    },
+    {
+      "_class": [
+        "Deployment",
+      ],
+      "_key": "afde8e0a-08ab-4efa-ae82-f8055b804ec1",
+      "_rawData": [
+        {
+          "name": "default",
+          "rawData": V1Deployment {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": {
+                "deployment.kubernetes.io/revision": "1",
+                "kubectl.kubernetes.io/last-applied-configuration": "{"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"addonmanager.kubernetes.io/mode":"Reconcile","k8s-app":"dashboard-metrics-scraper","kubernetes.io/minikube-addons":"dashboard"},"name":"dashboard-metrics-scraper","namespace":"kubernetes-dashboard"},"spec":{"replicas":1,"revisionHistoryLimit":10,"selector":{"matchLabels":{"k8s-app":"dashboard-metrics-scraper"}},"template":{"metadata":{"annotations":{"seccomp.security.alpha.kubernetes.io/pod":"runtime/default"},"labels":{"k8s-app":"dashboard-metrics-scraper"}},"spec":{"containers":[{"image":"docker.io/kubernetesui/metrics-scraper:v1.0.8@sha256:76049887f07a0476dc93efc2d3569b9529bf982b22d29f356092ce206e98765c","livenessProbe":{"httpGet":{"path":"/","port":8000,"scheme":"HTTP"},"initialDelaySeconds":30,"timeoutSeconds":30},"name":"dashboard-metrics-scraper","ports":[{"containerPort":8000,"protocol":"TCP"}],"securityContext":{"allowPrivilegeEscalation":false,"readOnlyRootFilesystem":true,"runAsGroup":2001,"runAsUser":1001},"volumeMounts":[{"mountPath":"/tmp","name":"tmp-volume"}]}],"nodeSelector":{"kubernetes.io/os":"linux"},"serviceAccountName":"kubernetes-dashboard","tolerations":[{"effect":"NoSchedule","key":"node-role.kubernetes.io/master"}],"volumes":[{"emptyDir":{},"name":"tmp-volume"}]}}}}
+",
+              },
+              "creationTimestamp": 2024-06-21T07:45:06.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": 1,
+              "labels": {
+                "addonmanager.kubernetes.io/mode": "Reconcile",
+                "k8s-app": "dashboard-metrics-scraper",
+                "kubernetes.io/minikube-addons": "dashboard",
+              },
+              "managedFields": [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "apps/v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:kubectl.kubernetes.io/last-applied-configuration": {},
+                      },
+                      "f:labels": {
+                        ".": {},
+                        "f:addonmanager.kubernetes.io/mode": {},
+                        "f:k8s-app": {},
+                        "f:kubernetes.io/minikube-addons": {},
+                      },
+                    },
+                    "f:spec": {
+                      "f:progressDeadlineSeconds": {},
+                      "f:replicas": {},
+                      "f:revisionHistoryLimit": {},
+                      "f:selector": {},
+                      "f:strategy": {
+                        "f:rollingUpdate": {
+                          ".": {},
+                          "f:maxSurge": {},
+                          "f:maxUnavailable": {},
+                        },
+                        "f:type": {},
+                      },
+                      "f:template": {
+                        "f:metadata": {
+                          "f:annotations": {
+                            ".": {},
+                            "f:seccomp.security.alpha.kubernetes.io/pod": {},
+                          },
+                          "f:labels": {
+                            ".": {},
+                            "f:k8s-app": {},
+                          },
+                        },
+                        "f:spec": {
+                          "f:containers": {
+                            "k:{"name":"dashboard-metrics-scraper"}": {
+                              ".": {},
+                              "f:image": {},
+                              "f:imagePullPolicy": {},
+                              "f:livenessProbe": {
+                                ".": {},
+                                "f:failureThreshold": {},
+                                "f:httpGet": {
+                                  ".": {},
+                                  "f:path": {},
+                                  "f:port": {},
+                                  "f:scheme": {},
+                                },
+                                "f:initialDelaySeconds": {},
+                                "f:periodSeconds": {},
+                                "f:successThreshold": {},
+                                "f:timeoutSeconds": {},
+                              },
+                              "f:name": {},
+                              "f:ports": {
+                                ".": {},
+                                "k:{"containerPort":8000,"protocol":"TCP"}": {
+                                  ".": {},
+                                  "f:containerPort": {},
+                                  "f:protocol": {},
+                                },
+                              },
+                              "f:resources": {},
+                              "f:securityContext": {
+                                ".": {},
+                                "f:allowPrivilegeEscalation": {},
+                                "f:readOnlyRootFilesystem": {},
+                                "f:runAsGroup": {},
+                                "f:runAsUser": {},
+                              },
+                              "f:terminationMessagePath": {},
+                              "f:terminationMessagePolicy": {},
+                              "f:volumeMounts": {
+                                ".": {},
+                                "k:{"mountPath":"/tmp"}": {
+                                  ".": {},
+                                  "f:mountPath": {},
+                                  "f:name": {},
+                                },
+                              },
+                            },
+                          },
+                          "f:dnsPolicy": {},
+                          "f:nodeSelector": {},
+                          "f:restartPolicy": {},
+                          "f:schedulerName": {},
+                          "f:securityContext": {},
+                          "f:serviceAccount": {},
+                          "f:serviceAccountName": {},
+                          "f:terminationGracePeriodSeconds": {},
+                          "f:tolerations": {},
+                          "f:volumes": {
+                            ".": {},
+                            "k:{"name":"tmp-volume"}": {
+                              ".": {},
+                              "f:emptyDir": {},
+                              "f:name": {},
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                  "manager": "kubectl-client-side-apply",
+                  "operation": "Update",
+                  "subresource": undefined,
+                  "time": 2024-06-21T07:45:06.000Z,
+                },
+                V1ManagedFieldsEntry {
+                  "apiVersion": "apps/v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:annotations": {
+                        "f:deployment.kubernetes.io/revision": {},
+                      },
+                    },
+                    "f:status": {
+                      "f:availableReplicas": {},
+                      "f:conditions": {
+                        ".": {},
+                        "k:{"type":"Available"}": {
+                          ".": {},
+                          "f:lastTransitionTime": {},
+                          "f:lastUpdateTime": {},
+                          "f:message": {},
+                          "f:reason": {},
+                          "f:status": {},
+                          "f:type": {},
+                        },
+                        "k:{"type":"Progressing"}": {
+                          ".": {},
+                          "f:lastTransitionTime": {},
+                          "f:lastUpdateTime": {},
+                          "f:message": {},
+                          "f:reason": {},
+                          "f:status": {},
+                          "f:type": {},
+                        },
+                      },
+                      "f:observedGeneration": {},
+                      "f:readyReplicas": {},
+                      "f:replicas": {},
+                      "f:updatedReplicas": {},
+                    },
+                  },
+                  "manager": "kube-controller-manager",
+                  "operation": "Update",
+                  "subresource": "status",
+                  "time": 2024-06-21T07:45:54.000Z,
+                },
+              ],
+              "name": "dashboard-metrics-scraper",
+              "namespace": "kubernetes-dashboard",
+              "ownerReferences": undefined,
+              "resourceVersion": "511",
+              "selfLink": undefined,
+              "uid": "afde8e0a-08ab-4efa-ae82-f8055b804ec1",
+            },
+            "spec": V1DeploymentSpec {
+              "minReadySeconds": undefined,
+              "paused": undefined,
+              "progressDeadlineSeconds": 600,
+              "replicas": 1,
+              "revisionHistoryLimit": 10,
+              "selector": V1LabelSelector {
+                "matchExpressions": undefined,
+                "matchLabels": {
+                  "k8s-app": "dashboard-metrics-scraper",
+                },
+              },
+              "strategy": V1DeploymentStrategy {
+                "rollingUpdate": V1RollingUpdateDeployment {
+                  "maxSurge": "25%",
+                  "maxUnavailable": "25%",
+                },
+                "type": "RollingUpdate",
+              },
+              "template": V1PodTemplateSpec {
+                "metadata": V1ObjectMeta {
+                  "annotations": {
+                    "seccomp.security.alpha.kubernetes.io/pod": "runtime/default",
+                  },
+                  "creationTimestamp": null,
+                  "deletionGracePeriodSeconds": undefined,
+                  "deletionTimestamp": undefined,
+                  "finalizers": undefined,
+                  "generateName": undefined,
+                  "generation": undefined,
+                  "labels": {
+                    "k8s-app": "dashboard-metrics-scraper",
+                  },
+                  "managedFields": undefined,
+                  "name": undefined,
+                  "namespace": undefined,
+                  "ownerReferences": undefined,
+                  "resourceVersion": undefined,
+                  "selfLink": undefined,
+                  "uid": undefined,
+                },
+                "spec": V1PodSpec {
+                  "activeDeadlineSeconds": undefined,
+                  "affinity": undefined,
+                  "automountServiceAccountToken": undefined,
+                  "containers": [
+                    V1Container {
+                      "args": undefined,
+                      "command": undefined,
+                      "env": undefined,
+                      "envFrom": undefined,
+                      "image": "docker.io/kubernetesui/metrics-scraper:v1.0.8@sha256:76049887f07a0476dc93efc2d3569b9529bf982b22d29f356092ce206e98765c",
+                      "imagePullPolicy": "IfNotPresent",
+                      "lifecycle": undefined,
+                      "livenessProbe": V1Probe {
+                        "exec": undefined,
+                        "failureThreshold": 3,
+                        "grpc": undefined,
+                        "httpGet": V1HTTPGetAction {
+                          "host": undefined,
+                          "httpHeaders": undefined,
+                          "path": "/",
+                          "port": 8000,
+                          "scheme": "HTTP",
+                        },
+                        "initialDelaySeconds": 30,
+                        "periodSeconds": 10,
+                        "successThreshold": 1,
+                        "tcpSocket": undefined,
+                        "terminationGracePeriodSeconds": undefined,
+                        "timeoutSeconds": 30,
+                      },
+                      "name": "dashboard-metrics-scraper",
+                      "ports": [
+                        V1ContainerPort {
+                          "containerPort": 8000,
+                          "hostIP": undefined,
+                          "hostPort": undefined,
+                          "name": undefined,
+                          "protocol": "TCP",
+                        },
+                      ],
+                      "readinessProbe": undefined,
+                      "resizePolicy": undefined,
+                      "resources": V1ResourceRequirements {
+                        "claims": undefined,
+                        "limits": undefined,
+                        "requests": undefined,
+                      },
+                      "restartPolicy": undefined,
+                      "securityContext": V1SecurityContext {
+                        "allowPrivilegeEscalation": false,
+                        "capabilities": undefined,
+                        "privileged": undefined,
+                        "procMount": undefined,
+                        "readOnlyRootFilesystem": true,
+                        "runAsGroup": 2001,
+                        "runAsNonRoot": undefined,
+                        "runAsUser": 1001,
+                        "seLinuxOptions": undefined,
+                        "seccompProfile": undefined,
+                        "windowsOptions": undefined,
+                      },
+                      "startupProbe": undefined,
+                      "stdin": undefined,
+                      "stdinOnce": undefined,
+                      "terminationMessagePath": "/dev/termination-log",
+                      "terminationMessagePolicy": "File",
+                      "tty": undefined,
+                      "volumeDevices": undefined,
+                      "volumeMounts": [
+                        V1VolumeMount {
+                          "mountPath": "/tmp",
+                          "mountPropagation": undefined,
+                          "name": "tmp-volume",
+                          "readOnly": undefined,
+                          "subPath": undefined,
+                          "subPathExpr": undefined,
+                        },
+                      ],
+                      "workingDir": undefined,
+                    },
+                  ],
+                  "dnsConfig": undefined,
+                  "dnsPolicy": "ClusterFirst",
+                  "enableServiceLinks": undefined,
+                  "ephemeralContainers": undefined,
+                  "hostAliases": undefined,
+                  "hostIPC": undefined,
+                  "hostNetwork": undefined,
+                  "hostPID": undefined,
+                  "hostUsers": undefined,
+                  "hostname": undefined,
+                  "imagePullSecrets": undefined,
+                  "initContainers": undefined,
+                  "nodeName": undefined,
+                  "nodeSelector": {
+                    "kubernetes.io/os": "linux",
+                  },
+                  "os": undefined,
+                  "overhead": undefined,
+                  "preemptionPolicy": undefined,
+                  "priority": undefined,
+                  "priorityClassName": undefined,
+                  "readinessGates": undefined,
+                  "resourceClaims": undefined,
+                  "restartPolicy": "Always",
+                  "runtimeClassName": undefined,
+                  "schedulerName": "default-scheduler",
+                  "schedulingGates": undefined,
+                  "securityContext": V1PodSecurityContext {
+                    "fsGroup": undefined,
+                    "fsGroupChangePolicy": undefined,
+                    "runAsGroup": undefined,
+                    "runAsNonRoot": undefined,
+                    "runAsUser": undefined,
+                    "seLinuxOptions": undefined,
+                    "seccompProfile": undefined,
+                    "supplementalGroups": undefined,
+                    "sysctls": undefined,
+                    "windowsOptions": undefined,
+                  },
+                  "serviceAccount": "kubernetes-dashboard",
+                  "serviceAccountName": "kubernetes-dashboard",
+                  "setHostnameAsFQDN": undefined,
+                  "shareProcessNamespace": undefined,
+                  "subdomain": undefined,
+                  "terminationGracePeriodSeconds": 30,
+                  "tolerations": [
+                    V1Toleration {
+                      "effect": "NoSchedule",
+                      "key": "node-role.kubernetes.io/master",
+                      "operator": undefined,
+                      "tolerationSeconds": undefined,
+                      "value": undefined,
+                    },
+                  ],
+                  "topologySpreadConstraints": undefined,
+                  "volumes": [
+                    V1Volume {
+                      "awsElasticBlockStore": undefined,
+                      "azureDisk": undefined,
+                      "azureFile": undefined,
+                      "cephfs": undefined,
+                      "cinder": undefined,
+                      "configMap": undefined,
+                      "csi": undefined,
+                      "downwardAPI": undefined,
+                      "emptyDir": V1EmptyDirVolumeSource {
+                        "medium": undefined,
+                        "sizeLimit": undefined,
+                      },
+                      "ephemeral": undefined,
+                      "fc": undefined,
+                      "flexVolume": undefined,
+                      "flocker": undefined,
+                      "gcePersistentDisk": undefined,
+                      "gitRepo": undefined,
+                      "glusterfs": undefined,
+                      "hostPath": undefined,
+                      "iscsi": undefined,
+                      "name": "tmp-volume",
+                      "nfs": undefined,
+                      "persistentVolumeClaim": undefined,
+                      "photonPersistentDisk": undefined,
+                      "portworxVolume": undefined,
+                      "projected": undefined,
+                      "quobyte": undefined,
+                      "rbd": undefined,
+                      "scaleIO": undefined,
+                      "secret": undefined,
+                      "storageos": undefined,
+                      "vsphereVolume": undefined,
+                    },
+                  ],
+                },
+              },
+            },
+            "status": V1DeploymentStatus {
+              "availableReplicas": 1,
+              "collisionCount": undefined,
+              "conditions": [
+                V1DeploymentCondition {
+                  "lastTransitionTime": 2024-06-21T07:45:54.000Z,
+                  "lastUpdateTime": 2024-06-21T07:45:54.000Z,
+                  "message": "Deployment has minimum availability.",
+                  "reason": "MinimumReplicasAvailable",
+                  "status": "True",
+                  "type": "Available",
+                },
+                V1DeploymentCondition {
+                  "lastTransitionTime": 2024-06-21T07:45:10.000Z,
+                  "lastUpdateTime": 2024-06-21T07:45:54.000Z,
+                  "message": "ReplicaSet "dashboard-metrics-scraper-b5fc48f67" has successfully progressed.",
+                  "reason": "NewReplicaSetAvailable",
+                  "status": "True",
+                  "type": "Progressing",
+                },
+              ],
+              "observedGeneration": 1,
+              "readyReplicas": 1,
+              "replicas": 1,
+              "unavailableReplicas": undefined,
+              "updatedReplicas": 1,
+            },
+          },
+        },
+      ],
+      "_type": "kube_deployment",
+      "active": undefined,
+      "createdOn": 1718955906000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "dashboard-metrics-scraper",
+      "generation": 1,
+      "minReadySeconds": undefined,
+      "name": "dashboard-metrics-scraper",
+      "paused": undefined,
+      "progressDeadlineSeconds": 600,
+      "replicas": 1,
+      "resourceVersion": "511",
+      "revisionHistoryLimit": 10,
+      "status.availableReplicas": 1,
+      "status.collisionCount": undefined,
+      "status.observedGeneration": 1,
+      "status.readyReplicas": 1,
+      "status.replicas": 1,
+      "status.unavailableReplicas": undefined,
+      "status.updatedReplicas": 1,
+      "strategy.maxSurge": "25%",
+      "strategy.maxUnavailable": "25%",
+      "strategy.type": "RollingUpdate",
+    },
+    {
+      "_class": [
+        "Disk",
+      ],
+      "_key": "kubernetes-dashboard/516b959e-f1c3-4370-96e8-f5791d9b1239/tmp-volume",
+      "_rawData": [
+        {
+          "name": "default",
+          "rawData": V1Volume {
+            "awsElasticBlockStore": undefined,
+            "azureDisk": undefined,
+            "azureFile": undefined,
+            "cephfs": undefined,
+            "cinder": undefined,
+            "configMap": undefined,
+            "csi": undefined,
+            "downwardAPI": undefined,
+            "emptyDir": V1EmptyDirVolumeSource {
+              "medium": undefined,
+              "sizeLimit": undefined,
+            },
+            "ephemeral": undefined,
+            "fc": undefined,
+            "flexVolume": undefined,
+            "flocker": undefined,
+            "gcePersistentDisk": undefined,
+            "gitRepo": undefined,
+            "glusterfs": undefined,
+            "hostPath": undefined,
+            "iscsi": undefined,
+            "name": "tmp-volume",
+            "nfs": undefined,
+            "persistentVolumeClaim": undefined,
+            "photonPersistentDisk": undefined,
+            "portworxVolume": undefined,
+            "projected": undefined,
+            "quobyte": undefined,
+            "rbd": undefined,
+            "scaleIO": undefined,
+            "secret": undefined,
+            "storageos": undefined,
+            "vsphereVolume": undefined,
+          },
+        },
+      ],
+      "_type": "kube_volume",
+      "classification": null,
+      "createdOn": undefined,
+      "displayName": "tmp-volume",
+      "encrypted": false,
+      "ephemeral.readOnly": undefined,
+      "hostPath.path": undefined,
+      "hostPath.type": undefined,
+      "name": "tmp-volume",
+    },
+    {
+      "_class": [
+        "Configuration",
+      ],
+      "_key": "kubernetes-dashboard/kubernetes-dashboard",
+      "_rawData": [
+        {
+          "name": "default",
+          "rawData": V1Container {
+            "args": [
+              "--namespace=kubernetes-dashboard",
+              "--enable-skip-login",
+              "--disable-settings-authorizer",
+            ],
+            "command": undefined,
+            "env": undefined,
+            "envFrom": undefined,
+            "image": "docker.io/kubernetesui/dashboard:v2.7.0@sha256:2e500d29e9d5f4a086b908eb8dfe7ecac57d2ab09d65b24f588b1d449841ef93",
+            "imagePullPolicy": "IfNotPresent",
+            "lifecycle": undefined,
+            "livenessProbe": V1Probe {
+              "exec": undefined,
+              "failureThreshold": 3,
+              "grpc": undefined,
+              "httpGet": V1HTTPGetAction {
+                "host": undefined,
+                "httpHeaders": undefined,
+                "path": "/",
+                "port": 9090,
+                "scheme": "HTTP",
+              },
+              "initialDelaySeconds": 30,
+              "periodSeconds": 10,
+              "successThreshold": 1,
+              "tcpSocket": undefined,
+              "terminationGracePeriodSeconds": undefined,
+              "timeoutSeconds": 30,
+            },
+            "name": "kubernetes-dashboard",
+            "ports": [
+              V1ContainerPort {
+                "containerPort": 9090,
+                "hostIP": undefined,
+                "hostPort": undefined,
+                "name": undefined,
+                "protocol": "TCP",
+              },
+            ],
+            "readinessProbe": undefined,
+            "resizePolicy": undefined,
+            "resources": V1ResourceRequirements {
+              "claims": undefined,
+              "limits": undefined,
+              "requests": undefined,
+            },
+            "restartPolicy": undefined,
+            "securityContext": V1SecurityContext {
+              "allowPrivilegeEscalation": false,
+              "capabilities": undefined,
+              "privileged": undefined,
+              "procMount": undefined,
+              "readOnlyRootFilesystem": true,
+              "runAsGroup": 2001,
+              "runAsNonRoot": undefined,
+              "runAsUser": 1001,
+              "seLinuxOptions": undefined,
+              "seccompProfile": undefined,
+              "windowsOptions": undefined,
+            },
+            "startupProbe": undefined,
+            "stdin": undefined,
+            "stdinOnce": undefined,
+            "terminationMessagePath": "/dev/termination-log",
+            "terminationMessagePolicy": "File",
+            "tty": undefined,
+            "volumeDevices": undefined,
+            "volumeMounts": [
+              V1VolumeMount {
+                "mountPath": "/tmp",
+                "mountPropagation": undefined,
+                "name": "tmp-volume",
+                "readOnly": undefined,
+                "subPath": undefined,
+                "subPathExpr": undefined,
+              },
+            ],
+            "workingDir": undefined,
+          },
+        },
+      ],
+      "_type": "kube_container_spec",
+      "createdOn": undefined,
+      "displayName": "kubernetes-dashboard",
+      "image": "docker.io/kubernetesui/dashboard:v2.7.0@sha256:2e500d29e9d5f4a086b908eb8dfe7ecac57d2ab09d65b24f588b1d449841ef93",
+      "imagePullPolicy": "IfNotPresent",
+      "name": "kubernetes-dashboard",
+      "securityContext.allowPrivilegeEscalation": false,
+      "securityContext.privileged": undefined,
+      "securityContext.procMount": undefined,
+      "securityContext.readOnlyRootFilesystem": true,
+      "securityContext.runAsGroup": 2001,
+      "securityContext.runAsNonRoot": undefined,
+      "securityContext.runAsUser": 1001,
+    },
+    {
+      "_class": [
+        "Deployment",
+      ],
+      "_key": "516b959e-f1c3-4370-96e8-f5791d9b1239",
+      "_rawData": [
+        {
+          "name": "default",
+          "rawData": V1Deployment {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": {
+                "deployment.kubernetes.io/revision": "1",
+                "kubectl.kubernetes.io/last-applied-configuration": "{"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"addonmanager.kubernetes.io/mode":"Reconcile","k8s-app":"kubernetes-dashboard","kubernetes.io/minikube-addons":"dashboard"},"name":"kubernetes-dashboard","namespace":"kubernetes-dashboard"},"spec":{"replicas":1,"revisionHistoryLimit":10,"selector":{"matchLabels":{"k8s-app":"kubernetes-dashboard"}},"template":{"metadata":{"labels":{"gcp-auth-skip-secret":"true","k8s-app":"kubernetes-dashboard"}},"spec":{"containers":[{"args":["--namespace=kubernetes-dashboard","--enable-skip-login","--disable-settings-authorizer"],"image":"docker.io/kubernetesui/dashboard:v2.7.0@sha256:2e500d29e9d5f4a086b908eb8dfe7ecac57d2ab09d65b24f588b1d449841ef93","livenessProbe":{"httpGet":{"path":"/","port":9090},"initialDelaySeconds":30,"timeoutSeconds":30},"name":"kubernetes-dashboard","ports":[{"containerPort":9090,"protocol":"TCP"}],"securityContext":{"allowPrivilegeEscalation":false,"readOnlyRootFilesystem":true,"runAsGroup":2001,"runAsUser":1001},"volumeMounts":[{"mountPath":"/tmp","name":"tmp-volume"}]}],"nodeSelector":{"kubernetes.io/os":"linux"},"serviceAccountName":"kubernetes-dashboard","tolerations":[{"effect":"NoSchedule","key":"node-role.kubernetes.io/master"}],"volumes":[{"emptyDir":{},"name":"tmp-volume"}]}}}}
+",
+              },
+              "creationTimestamp": 2024-06-21T07:45:06.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": 1,
+              "labels": {
+                "addonmanager.kubernetes.io/mode": "Reconcile",
+                "k8s-app": "kubernetes-dashboard",
+                "kubernetes.io/minikube-addons": "dashboard",
+              },
+              "managedFields": [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "apps/v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:kubectl.kubernetes.io/last-applied-configuration": {},
+                      },
+                      "f:labels": {
+                        ".": {},
+                        "f:addonmanager.kubernetes.io/mode": {},
+                        "f:k8s-app": {},
+                        "f:kubernetes.io/minikube-addons": {},
+                      },
+                    },
+                    "f:spec": {
+                      "f:progressDeadlineSeconds": {},
+                      "f:replicas": {},
+                      "f:revisionHistoryLimit": {},
+                      "f:selector": {},
+                      "f:strategy": {
+                        "f:rollingUpdate": {
+                          ".": {},
+                          "f:maxSurge": {},
+                          "f:maxUnavailable": {},
+                        },
+                        "f:type": {},
+                      },
+                      "f:template": {
+                        "f:metadata": {
+                          "f:labels": {
+                            ".": {},
+                            "f:gcp-auth-skip-secret": {},
+                            "f:k8s-app": {},
+                          },
+                        },
+                        "f:spec": {
+                          "f:containers": {
+                            "k:{"name":"kubernetes-dashboard"}": {
+                              ".": {},
+                              "f:args": {},
+                              "f:image": {},
+                              "f:imagePullPolicy": {},
+                              "f:livenessProbe": {
+                                ".": {},
+                                "f:failureThreshold": {},
+                                "f:httpGet": {
+                                  ".": {},
+                                  "f:path": {},
+                                  "f:port": {},
+                                  "f:scheme": {},
+                                },
+                                "f:initialDelaySeconds": {},
+                                "f:periodSeconds": {},
+                                "f:successThreshold": {},
+                                "f:timeoutSeconds": {},
+                              },
+                              "f:name": {},
+                              "f:ports": {
+                                ".": {},
+                                "k:{"containerPort":9090,"protocol":"TCP"}": {
+                                  ".": {},
+                                  "f:containerPort": {},
+                                  "f:protocol": {},
+                                },
+                              },
+                              "f:resources": {},
+                              "f:securityContext": {
+                                ".": {},
+                                "f:allowPrivilegeEscalation": {},
+                                "f:readOnlyRootFilesystem": {},
+                                "f:runAsGroup": {},
+                                "f:runAsUser": {},
+                              },
+                              "f:terminationMessagePath": {},
+                              "f:terminationMessagePolicy": {},
+                              "f:volumeMounts": {
+                                ".": {},
+                                "k:{"mountPath":"/tmp"}": {
+                                  ".": {},
+                                  "f:mountPath": {},
+                                  "f:name": {},
+                                },
+                              },
+                            },
+                          },
+                          "f:dnsPolicy": {},
+                          "f:nodeSelector": {},
+                          "f:restartPolicy": {},
+                          "f:schedulerName": {},
+                          "f:securityContext": {},
+                          "f:serviceAccount": {},
+                          "f:serviceAccountName": {},
+                          "f:terminationGracePeriodSeconds": {},
+                          "f:tolerations": {},
+                          "f:volumes": {
+                            ".": {},
+                            "k:{"name":"tmp-volume"}": {
+                              ".": {},
+                              "f:emptyDir": {},
+                              "f:name": {},
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                  "manager": "kubectl-client-side-apply",
+                  "operation": "Update",
+                  "subresource": undefined,
+                  "time": 2024-06-21T07:45:06.000Z,
+                },
+                V1ManagedFieldsEntry {
+                  "apiVersion": "apps/v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:annotations": {
+                        "f:deployment.kubernetes.io/revision": {},
+                      },
+                    },
+                    "f:status": {
+                      "f:availableReplicas": {},
+                      "f:conditions": {
+                        ".": {},
+                        "k:{"type":"Available"}": {
+                          ".": {},
+                          "f:lastTransitionTime": {},
+                          "f:lastUpdateTime": {},
+                          "f:message": {},
+                          "f:reason": {},
+                          "f:status": {},
+                          "f:type": {},
+                        },
+                        "k:{"type":"Progressing"}": {
+                          ".": {},
+                          "f:lastTransitionTime": {},
+                          "f:lastUpdateTime": {},
+                          "f:message": {},
+                          "f:reason": {},
+                          "f:status": {},
+                          "f:type": {},
+                        },
+                      },
+                      "f:observedGeneration": {},
+                      "f:readyReplicas": {},
+                      "f:replicas": {},
+                      "f:updatedReplicas": {},
+                    },
+                  },
+                  "manager": "kube-controller-manager",
+                  "operation": "Update",
+                  "subresource": "status",
+                  "time": 2024-06-24T04:32:35.000Z,
+                },
+              ],
+              "name": "kubernetes-dashboard",
+              "namespace": "kubernetes-dashboard",
+              "ownerReferences": undefined,
+              "resourceVersion": "17892",
+              "selfLink": undefined,
+              "uid": "516b959e-f1c3-4370-96e8-f5791d9b1239",
+            },
+            "spec": V1DeploymentSpec {
+              "minReadySeconds": undefined,
+              "paused": undefined,
+              "progressDeadlineSeconds": 600,
+              "replicas": 1,
+              "revisionHistoryLimit": 10,
+              "selector": V1LabelSelector {
+                "matchExpressions": undefined,
+                "matchLabels": {
+                  "k8s-app": "kubernetes-dashboard",
+                },
+              },
+              "strategy": V1DeploymentStrategy {
+                "rollingUpdate": V1RollingUpdateDeployment {
+                  "maxSurge": "25%",
+                  "maxUnavailable": "25%",
+                },
+                "type": "RollingUpdate",
+              },
+              "template": V1PodTemplateSpec {
+                "metadata": V1ObjectMeta {
+                  "annotations": undefined,
+                  "creationTimestamp": null,
+                  "deletionGracePeriodSeconds": undefined,
+                  "deletionTimestamp": undefined,
+                  "finalizers": undefined,
+                  "generateName": undefined,
+                  "generation": undefined,
+                  "labels": {
+                    "gcp-auth-skip-secret": "true",
+                    "k8s-app": "kubernetes-dashboard",
+                  },
+                  "managedFields": undefined,
+                  "name": undefined,
+                  "namespace": undefined,
+                  "ownerReferences": undefined,
+                  "resourceVersion": undefined,
+                  "selfLink": undefined,
+                  "uid": undefined,
+                },
+                "spec": V1PodSpec {
+                  "activeDeadlineSeconds": undefined,
+                  "affinity": undefined,
+                  "automountServiceAccountToken": undefined,
+                  "containers": [
+                    V1Container {
+                      "args": [
+                        "--namespace=kubernetes-dashboard",
+                        "--enable-skip-login",
+                        "--disable-settings-authorizer",
+                      ],
+                      "command": undefined,
+                      "env": undefined,
+                      "envFrom": undefined,
+                      "image": "docker.io/kubernetesui/dashboard:v2.7.0@sha256:2e500d29e9d5f4a086b908eb8dfe7ecac57d2ab09d65b24f588b1d449841ef93",
+                      "imagePullPolicy": "IfNotPresent",
+                      "lifecycle": undefined,
+                      "livenessProbe": V1Probe {
+                        "exec": undefined,
+                        "failureThreshold": 3,
+                        "grpc": undefined,
+                        "httpGet": V1HTTPGetAction {
+                          "host": undefined,
+                          "httpHeaders": undefined,
+                          "path": "/",
+                          "port": 9090,
+                          "scheme": "HTTP",
+                        },
+                        "initialDelaySeconds": 30,
+                        "periodSeconds": 10,
+                        "successThreshold": 1,
+                        "tcpSocket": undefined,
+                        "terminationGracePeriodSeconds": undefined,
+                        "timeoutSeconds": 30,
+                      },
+                      "name": "kubernetes-dashboard",
+                      "ports": [
+                        V1ContainerPort {
+                          "containerPort": 9090,
+                          "hostIP": undefined,
+                          "hostPort": undefined,
+                          "name": undefined,
+                          "protocol": "TCP",
+                        },
+                      ],
+                      "readinessProbe": undefined,
+                      "resizePolicy": undefined,
+                      "resources": V1ResourceRequirements {
+                        "claims": undefined,
+                        "limits": undefined,
+                        "requests": undefined,
+                      },
+                      "restartPolicy": undefined,
+                      "securityContext": V1SecurityContext {
+                        "allowPrivilegeEscalation": false,
+                        "capabilities": undefined,
+                        "privileged": undefined,
+                        "procMount": undefined,
+                        "readOnlyRootFilesystem": true,
+                        "runAsGroup": 2001,
+                        "runAsNonRoot": undefined,
+                        "runAsUser": 1001,
+                        "seLinuxOptions": undefined,
+                        "seccompProfile": undefined,
+                        "windowsOptions": undefined,
+                      },
+                      "startupProbe": undefined,
+                      "stdin": undefined,
+                      "stdinOnce": undefined,
+                      "terminationMessagePath": "/dev/termination-log",
+                      "terminationMessagePolicy": "File",
+                      "tty": undefined,
+                      "volumeDevices": undefined,
+                      "volumeMounts": [
+                        V1VolumeMount {
+                          "mountPath": "/tmp",
+                          "mountPropagation": undefined,
+                          "name": "tmp-volume",
+                          "readOnly": undefined,
+                          "subPath": undefined,
+                          "subPathExpr": undefined,
+                        },
+                      ],
+                      "workingDir": undefined,
+                    },
+                  ],
+                  "dnsConfig": undefined,
+                  "dnsPolicy": "ClusterFirst",
+                  "enableServiceLinks": undefined,
+                  "ephemeralContainers": undefined,
+                  "hostAliases": undefined,
+                  "hostIPC": undefined,
+                  "hostNetwork": undefined,
+                  "hostPID": undefined,
+                  "hostUsers": undefined,
+                  "hostname": undefined,
+                  "imagePullSecrets": undefined,
+                  "initContainers": undefined,
+                  "nodeName": undefined,
+                  "nodeSelector": {
+                    "kubernetes.io/os": "linux",
+                  },
+                  "os": undefined,
+                  "overhead": undefined,
+                  "preemptionPolicy": undefined,
+                  "priority": undefined,
+                  "priorityClassName": undefined,
+                  "readinessGates": undefined,
+                  "resourceClaims": undefined,
+                  "restartPolicy": "Always",
+                  "runtimeClassName": undefined,
+                  "schedulerName": "default-scheduler",
+                  "schedulingGates": undefined,
+                  "securityContext": V1PodSecurityContext {
+                    "fsGroup": undefined,
+                    "fsGroupChangePolicy": undefined,
+                    "runAsGroup": undefined,
+                    "runAsNonRoot": undefined,
+                    "runAsUser": undefined,
+                    "seLinuxOptions": undefined,
+                    "seccompProfile": undefined,
+                    "supplementalGroups": undefined,
+                    "sysctls": undefined,
+                    "windowsOptions": undefined,
+                  },
+                  "serviceAccount": "kubernetes-dashboard",
+                  "serviceAccountName": "kubernetes-dashboard",
+                  "setHostnameAsFQDN": undefined,
+                  "shareProcessNamespace": undefined,
+                  "subdomain": undefined,
+                  "terminationGracePeriodSeconds": 30,
+                  "tolerations": [
+                    V1Toleration {
+                      "effect": "NoSchedule",
+                      "key": "node-role.kubernetes.io/master",
+                      "operator": undefined,
+                      "tolerationSeconds": undefined,
+                      "value": undefined,
+                    },
+                  ],
+                  "topologySpreadConstraints": undefined,
+                  "volumes": [
+                    V1Volume {
+                      "awsElasticBlockStore": undefined,
+                      "azureDisk": undefined,
+                      "azureFile": undefined,
+                      "cephfs": undefined,
+                      "cinder": undefined,
+                      "configMap": undefined,
+                      "csi": undefined,
+                      "downwardAPI": undefined,
+                      "emptyDir": V1EmptyDirVolumeSource {
+                        "medium": undefined,
+                        "sizeLimit": undefined,
+                      },
+                      "ephemeral": undefined,
+                      "fc": undefined,
+                      "flexVolume": undefined,
+                      "flocker": undefined,
+                      "gcePersistentDisk": undefined,
+                      "gitRepo": undefined,
+                      "glusterfs": undefined,
+                      "hostPath": undefined,
+                      "iscsi": undefined,
+                      "name": "tmp-volume",
+                      "nfs": undefined,
+                      "persistentVolumeClaim": undefined,
+                      "photonPersistentDisk": undefined,
+                      "portworxVolume": undefined,
+                      "projected": undefined,
+                      "quobyte": undefined,
+                      "rbd": undefined,
+                      "scaleIO": undefined,
+                      "secret": undefined,
+                      "storageos": undefined,
+                      "vsphereVolume": undefined,
+                    },
+                  ],
+                },
+              },
+            },
+            "status": V1DeploymentStatus {
+              "availableReplicas": 1,
+              "collisionCount": undefined,
+              "conditions": [
+                V1DeploymentCondition {
+                  "lastTransitionTime": 2024-06-21T07:45:10.000Z,
+                  "lastUpdateTime": 2024-06-21T07:45:30.000Z,
+                  "message": "ReplicaSet "kubernetes-dashboard-779776cb65" has successfully progressed.",
+                  "reason": "NewReplicaSetAvailable",
+                  "status": "True",
+                  "type": "Progressing",
+                },
+                V1DeploymentCondition {
+                  "lastTransitionTime": 2024-06-24T04:32:35.000Z,
+                  "lastUpdateTime": 2024-06-24T04:32:35.000Z,
+                  "message": "Deployment has minimum availability.",
+                  "reason": "MinimumReplicasAvailable",
+                  "status": "True",
+                  "type": "Available",
+                },
+              ],
+              "observedGeneration": 1,
+              "readyReplicas": 1,
+              "replicas": 1,
+              "unavailableReplicas": undefined,
+              "updatedReplicas": 1,
+            },
+          },
+        },
+      ],
+      "_type": "kube_deployment",
+      "active": undefined,
+      "createdOn": 1718955906000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "kubernetes-dashboard",
+      "generation": 1,
+      "minReadySeconds": undefined,
+      "name": "kubernetes-dashboard",
+      "paused": undefined,
+      "progressDeadlineSeconds": 600,
+      "replicas": 1,
+      "resourceVersion": "17892",
+      "revisionHistoryLimit": 10,
+      "status.availableReplicas": 1,
+      "status.collisionCount": undefined,
+      "status.observedGeneration": 1,
+      "status.readyReplicas": 1,
+      "status.replicas": 1,
+      "status.unavailableReplicas": undefined,
+      "status.updatedReplicas": 1,
+      "strategy.maxSurge": "25%",
+      "strategy.maxUnavailable": "25%",
+      "strategy.type": "RollingUpdate",
+    },
   ],
-  "collectedRelationships": Array [
-    Object {
+  "collectedRelationships": [
+    {
       "_class": "USES",
-      "_fromEntityKey": "ab35dcb0-7789-4694-9143-71aaaeaf01cc",
-      "_key": "ab35dcb0-7789-4694-9143-71aaaeaf01cc|uses|ab35dcb0-7789-4694-9143-71aaaeaf01cc/coredns",
-      "_toEntityKey": "ab35dcb0-7789-4694-9143-71aaaeaf01cc/coredns",
+      "_fromEntityKey": "0f27ef91-7fb6-49d5-a751-6054a439e72f",
+      "_key": "0f27ef91-7fb6-49d5-a751-6054a439e72f|uses|kube-system/coredns",
+      "_toEntityKey": "kube-system/coredns",
       "_type": "kube_deployment_uses_container_spec",
       "displayName": "USES",
     },
-    Object {
+    {
       "_class": "USES",
-      "_fromEntityKey": "ab35dcb0-7789-4694-9143-71aaaeaf01cc/coredns",
-      "_key": "ab35dcb0-7789-4694-9143-71aaaeaf01cc/coredns|uses|ab35dcb0-7789-4694-9143-71aaaeaf01cc/config-volume/mount_config-volume/mount_path_/etc/coredns",
-      "_toEntityKey": "ab35dcb0-7789-4694-9143-71aaaeaf01cc/config-volume",
+      "_fromEntityKey": "kube-system/coredns",
+      "_key": "kube-system/coredns|uses|kube-system/0f27ef91-7fb6-49d5-a751-6054a439e72f/config-volume/mount_config-volume/mount_path_/etc/coredns",
+      "_toEntityKey": "kube-system/0f27ef91-7fb6-49d5-a751-6054a439e72f/config-volume",
       "_type": "kube_container_spec_uses_volume",
       "displayName": "USES",
       "mountPath": "/etc/coredns",
@@ -1130,16 +2462,72 @@ Object {
       "readOnly": true,
       "subPath": undefined,
     },
-    Object {
+    {
       "_class": "CONTAINS",
-      "_fromEntityKey": "ced267a3-528f-46b5-a289-cbf7068d8fc9",
-      "_key": "ced267a3-528f-46b5-a289-cbf7068d8fc9|contains|ab35dcb0-7789-4694-9143-71aaaeaf01cc",
-      "_toEntityKey": "ab35dcb0-7789-4694-9143-71aaaeaf01cc",
+      "_fromEntityKey": "dae8939b-da22-491d-a98b-c8fdf0e2f119",
+      "_key": "dae8939b-da22-491d-a98b-c8fdf0e2f119|contains|0f27ef91-7fb6-49d5-a751-6054a439e72f",
+      "_toEntityKey": "0f27ef91-7fb6-49d5-a751-6054a439e72f",
+      "_type": "kube_namespace_contains_deployment",
+      "displayName": "CONTAINS",
+    },
+    {
+      "_class": "USES",
+      "_fromEntityKey": "afde8e0a-08ab-4efa-ae82-f8055b804ec1",
+      "_key": "afde8e0a-08ab-4efa-ae82-f8055b804ec1|uses|kubernetes-dashboard/dashboard-metrics-scraper",
+      "_toEntityKey": "kubernetes-dashboard/dashboard-metrics-scraper",
+      "_type": "kube_deployment_uses_container_spec",
+      "displayName": "USES",
+    },
+    {
+      "_class": "USES",
+      "_fromEntityKey": "kubernetes-dashboard/dashboard-metrics-scraper",
+      "_key": "kubernetes-dashboard/dashboard-metrics-scraper|uses|kubernetes-dashboard/afde8e0a-08ab-4efa-ae82-f8055b804ec1/tmp-volume/mount_tmp-volume/mount_path_/tmp",
+      "_toEntityKey": "kubernetes-dashboard/afde8e0a-08ab-4efa-ae82-f8055b804ec1/tmp-volume",
+      "_type": "kube_container_spec_uses_volume",
+      "displayName": "USES",
+      "mountPath": "/tmp",
+      "mountPropagation": undefined,
+      "readOnly": undefined,
+      "subPath": undefined,
+    },
+    {
+      "_class": "CONTAINS",
+      "_fromEntityKey": "c34b14f9-fe12-4a1b-9b58-894760f6a770",
+      "_key": "c34b14f9-fe12-4a1b-9b58-894760f6a770|contains|afde8e0a-08ab-4efa-ae82-f8055b804ec1",
+      "_toEntityKey": "afde8e0a-08ab-4efa-ae82-f8055b804ec1",
+      "_type": "kube_namespace_contains_deployment",
+      "displayName": "CONTAINS",
+    },
+    {
+      "_class": "USES",
+      "_fromEntityKey": "516b959e-f1c3-4370-96e8-f5791d9b1239",
+      "_key": "516b959e-f1c3-4370-96e8-f5791d9b1239|uses|kubernetes-dashboard/kubernetes-dashboard",
+      "_toEntityKey": "kubernetes-dashboard/kubernetes-dashboard",
+      "_type": "kube_deployment_uses_container_spec",
+      "displayName": "USES",
+    },
+    {
+      "_class": "USES",
+      "_fromEntityKey": "kubernetes-dashboard/kubernetes-dashboard",
+      "_key": "kubernetes-dashboard/kubernetes-dashboard|uses|kubernetes-dashboard/516b959e-f1c3-4370-96e8-f5791d9b1239/tmp-volume/mount_tmp-volume/mount_path_/tmp",
+      "_toEntityKey": "kubernetes-dashboard/516b959e-f1c3-4370-96e8-f5791d9b1239/tmp-volume",
+      "_type": "kube_container_spec_uses_volume",
+      "displayName": "USES",
+      "mountPath": "/tmp",
+      "mountPropagation": undefined,
+      "readOnly": undefined,
+      "subPath": undefined,
+    },
+    {
+      "_class": "CONTAINS",
+      "_fromEntityKey": "c34b14f9-fe12-4a1b-9b58-894760f6a770",
+      "_key": "c34b14f9-fe12-4a1b-9b58-894760f6a770|contains|516b959e-f1c3-4370-96e8-f5791d9b1239",
+      "_toEntityKey": "516b959e-f1c3-4370-96e8-f5791d9b1239",
       "_type": "kube_namespace_contains_deployment",
       "displayName": "CONTAINS",
     },
   ],
-  "encounteredTypes": Array [
+  "encounteredTypes": [
     "kube_namespace",
     "kube_volume",
     "kube_container_spec",
@@ -1148,7 +2536,7 @@ Object {
     "kube_deployment",
     "kube_namespace_contains_deployment",
   ],
-  "numCollectedEntities": 7,
-  "numCollectedRelationships": 3,
+  "numCollectedEntities": 14,
+  "numCollectedRelationships": 9,
 }
 `;

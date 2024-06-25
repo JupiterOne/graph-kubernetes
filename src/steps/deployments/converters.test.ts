@@ -20,6 +20,8 @@ describe('#createDeploymentEntity', () => {
 describe('#createContainerSpecToVolumeRelationship', () => {
   test('should generate relationship with mountPath', () => {
     const deploymentId = '12345';
+    const namespaceName = 'default';
+
 
     expect(
       createContainerSpecToVolumeRelationship({
@@ -27,7 +29,7 @@ describe('#createContainerSpecToVolumeRelationship', () => {
           deploymentId,
           createMockContainer(),
         ),
-        volumeEntity: createVolumeEntity(deploymentId, createMockVolume()),
+        volumeEntity: createVolumeEntity(namespaceName, deploymentId, createMockVolume()),
         volumeMount: createMockVolumeMount(),
       }),
     ).toMatchSnapshot();
@@ -35,6 +37,7 @@ describe('#createContainerSpecToVolumeRelationship', () => {
 
   test('should generate relationship without mountPath', () => {
     const deploymentId = '12345';
+    const namespaceName = 'default';
 
     expect(
       createContainerSpecToVolumeRelationship({
@@ -42,7 +45,7 @@ describe('#createContainerSpecToVolumeRelationship', () => {
           deploymentId,
           createMockContainer(),
         ),
-        volumeEntity: createVolumeEntity(deploymentId, createMockVolume()),
+        volumeEntity: createVolumeEntity(namespaceName, deploymentId, createMockVolume()),
         volumeMount: createMockVolumeMount({
           mountPath: undefined,
         }),
@@ -52,6 +55,7 @@ describe('#createContainerSpecToVolumeRelationship', () => {
 
   test('should generate relationship with mountPath and subPath', () => {
     const deploymentId = '12345';
+    const namespaceName = 'default';
 
     expect(
       createContainerSpecToVolumeRelationship({
@@ -59,7 +63,7 @@ describe('#createContainerSpecToVolumeRelationship', () => {
           deploymentId,
           createMockContainer(),
         ),
-        volumeEntity: createVolumeEntity(deploymentId, createMockVolume()),
+        volumeEntity: createVolumeEntity(namespaceName, deploymentId, createMockVolume()),
         volumeMount: createMockVolumeMount({
           subPath: 'abc',
         }),
