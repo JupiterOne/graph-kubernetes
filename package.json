@@ -15,6 +15,9 @@
   "publishConfig": {
     "access": "public"
   },
+  "engines": {
+    "node": ">=18.0.0 <19.x"
+  },
   "scripts": {
     "start": "LOAD_KUBERNETES_CONFIG_FROM_DEFAULT=true yarn execute",
     "execute": "./scripts/run.sh",

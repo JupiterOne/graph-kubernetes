@@ -20,7 +20,7 @@ jobs:
         name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: 14.x
+          node-version: 18.x
 
       - name: Check out code repository source code
         uses: actions/checkout@v2
@@ -43,13 +43,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: [14]
+        node: [18]
 
     steps:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: 14.x
+          node-version: 18.x
 
       - name: Check out repo
         uses: actions/checkout@v2
