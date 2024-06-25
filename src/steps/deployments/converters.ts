@@ -34,12 +34,11 @@ export function createVolumeEntity(deploymentUid: string, data: k8s.V1Volume) {
   });
 }
 
-export function getContainerSpecKey(deploymentId: string, specName: string) {
-  return `${deploymentId}/${specName}`;
+export function getContainerSpecKey(specName: string) {
+  return `container_spec/${specName}`;
 }
 
 export function createContainerSpecEntity(
-  deploymentUid: string,
   data: k8s.V1Container,
 ) {
   return createIntegrationEntity({
@@ -48,7 +47,7 @@ export function createContainerSpecEntity(
       assign: {
         _class: Entities.CONTAINER_SPEC._class,
         _type: Entities.CONTAINER_SPEC._type,
-        _key: getContainerSpecKey(deploymentUid, data.name),
+        _key: getContainerSpecKey(data.name),
         name: data.name,
         displayName: data.name,
         image: data.image,

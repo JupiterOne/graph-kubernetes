@@ -1,12 +1,20 @@
 import {
   createDirectRelationship,
+  getRawData,
+  IntegrationMissingKeyError,
   IntegrationStep,
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
-import { Entities, IntegrationSteps, Relationships } from '../constants';
+import { V1ReplicaSet } from '@kubernetes/client-node';
+import {
+  Entities,
+  IntegrationSteps,
+  Relationships,
+} from '../constants';
 import { createReplicaSetEntity } from './converters';
 import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
+import { createContainerSpecEntity, getContainerSpecKey } from '../deployments/converters';
 
 export async function fetchReplicaSets(
   context: IntegrationStepContext,
@@ -51,6 +59,12 @@ export async function fetchReplicaSets(
           }
           for (const container of replicaSet.spec?.template?.spec?.containers ||
             []) {
+            const replicaSetContainerspecEntity = createContainerSpecEntity(container);
+            // Check if the entity is already present in jobState
+            if (jobState.hasKey(replicaSetContainerspecEntity._key)) {
+              continue; // Skip to the next iteration if the entity is already present
+            } await jobState.addEntity(replicaSetContainerspecEntity);
+
             if (jobState.hasKey(container.image)) {
               await jobState.addRelationship(
                 createDirectRelationship({
@@ -69,11 +83,49 @@ export async function fetchReplicaSets(
   );
 }
 
+export async function buildContainerSpecReplicasetRelationship(
+  context: IntegrationStepContext,
+): Promise<void> {
+  const { jobState } = context;
+  await jobState.iterateEntities(
+    {
+      _type: Entities.REPLICASET._type,
+    },
+    async (replicaSetEntity) => {
+      const rawNode = getRawData<V1ReplicaSet>(replicaSetEntity);
+      const replicaSetContainer = rawNode?.spec?.template?.spec?.containers;
+      if (replicaSetContainer) {
+        for (const container of replicaSetContainer) {
+          const containerSpecKey = getContainerSpecKey(container.name)
+
+          if (!containerSpecKey) {
+            throw new IntegrationMissingKeyError(
+              `Cannot build Relationship.
+              Error: Missing Key.
+              containerSpecKey : ${containerSpecKey}`,
+            );
+          }
+
+          await jobState.addRelationship(
+            createDirectRelationship({
+              _class: RelationshipClass.HAS,
+              fromKey: containerSpecKey,
+              fromType: Entities.CONTAINER_SPEC._type,
+              toKey: replicaSetEntity._key,
+              toType: Entities.REPLICASET._type,
+            }),
+          );
+        }
+      }
+    },
+  );
+}
+
 export const replicaSetsSteps: IntegrationStep<IntegrationConfig>[] = [
   {
     id: IntegrationSteps.REPLICASETS,
     name: 'Fetch ReplicaSets',
-    entities: [Entities.REPLICASET],
+    entities: [Entities.REPLICASET, Entities.CONTAINER_SPEC],
     relationships: [
       Relationships.NAMESPACE_CONTAINS_REPLICASET,
       Relationships.DEPLOYMENT_MANAGES_REPLICASET,
@@ -85,5 +137,13 @@ export const replicaSetsSteps: IntegrationStep<IntegrationConfig>[] = [
       IntegrationSteps.IMAGES,
     ],
     executionHandler: fetchReplicaSets,
+  },
+  {
+    id: IntegrationSteps.CONTAINER_SPEC_HAS_REPLICASET,
+    name: 'Build Container Spec HAS Replicaset relationship',
+    entities: [],
+    relationships: [Relationships.CONTAINER_SPEC_HAS_REPLICASET],
+    dependsOn: [IntegrationSteps.REPLICASETS],
+    executionHandler: buildContainerSpecReplicasetRelationship,
   },
 ];

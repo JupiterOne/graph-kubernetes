@@ -1,4 +1,4 @@
-import { fetchReplicaSets } from '.';
+import { buildContainerSpecReplicasetRelationship, fetchReplicaSets } from '.';
 import { fetchNamespaces } from '../namespaces';
 import { fetchDeployments } from '../deployments';
 import { createDataCollectionTest } from '../../../test/recording';
@@ -12,7 +12,12 @@ describe('#fetchReplicaSets', () => {
       recordingName: 'fetchReplicaSets',
       recordingDirectory: __dirname,
       integrationConfig,
-      stepFunctions: [fetchNamespaces, fetchDeployments, fetchReplicaSets],
+      stepFunctions: [
+        fetchNamespaces,
+        fetchDeployments,
+        fetchReplicaSets,
+        buildContainerSpecReplicasetRelationship,
+      ],
       entitySchemaMatchers: [
         {
           _type: Entities.REPLICASET._type,
@@ -53,6 +58,17 @@ describe('#fetchReplicaSets', () => {
               properties: {
                 _class: { const: RelationshipClass.MANAGES },
                 _type: { const: 'kube_deployment_manages_replica_set' },
+              },
+            },
+          },
+        },
+        {
+          _type: Relationships.CONTAINER_SPEC_HAS_REPLICASET._type,
+          matcher: {
+            schema: {
+              properties: {
+                _class: { const: RelationshipClass.HAS },
+                _type: { const: 'kube_container_spec_has_replica_set' },
               },
             },
           },

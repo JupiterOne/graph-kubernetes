@@ -8,6 +8,24 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.1.0 - 2024-06-18
+
+### Changed
+
+- Updated kube_container_spec entity
+- Updated JupiterOne SDk from v8.22.6 to v12.8.3
+
+### Added
+
+- Added new relationships.
+
+| Source Entity `_type` | Relationship `_class` | Target Entity `_type` |
+| --------------------- | --------------------- | --------------------- |
+| `kube_container_spec` | **HAS**               | `kube_cron_job`       |
+| `kube_container_spec` | **HAS**               | `kube_daemon_set`     |
+| `kube_container_spec` | **HAS**               | `kube_job`            |
+| `kube_container_spec` | **HAS**               | `kube_replica_set`    |
+
 ## 2.1.0 - 2024-03-22
 
 ### Changed

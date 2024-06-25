@@ -82,7 +82,7 @@ export async function fetchDeployments(
           for (const container of deployment.spec?.template.spec?.containers ||
             []) {
             const containerSpecEntity = await jobState.addEntity(
-              createContainerSpecEntity(deploymentId, container),
+              createContainerSpecEntity(container),
             );
 
             await jobState.addRelationship(

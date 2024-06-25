@@ -1,4 +1,4 @@
-FROM node:14-bullseye-slim
+FROM node:18-bullseye-slim
 
 ARG j1_dev_enabled=false
 

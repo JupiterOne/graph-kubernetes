@@ -1,4 +1,4 @@
-import { fetchJobs } from '.';
+import { buildContainerSpecJobRelationship, fetchJobs } from '.';
 import { fetchCronJobs } from '../cron-jobs';
 import { fetchNamespaces } from '../namespaces';
 import { createDataCollectionTest } from '../../../test/recording';
@@ -6,13 +6,18 @@ import { integrationConfig } from '../../../test/config';
 import { Entities, Relationships } from '../constants';
 import { RelationshipClass } from '@jupiterone/data-model';
 
-describe('#fetchJobs', () => {
+describe('#fetchJobs1', () => {
   test('should collect data', async () => {
     await createDataCollectionTest({
       recordingName: 'fetchJobs',
       recordingDirectory: __dirname,
       integrationConfig,
-      stepFunctions: [fetchNamespaces, fetchCronJobs, fetchJobs],
+      stepFunctions: [
+        fetchNamespaces,
+        fetchCronJobs,
+        fetchJobs,
+        buildContainerSpecJobRelationship,
+      ],
       entitySchemaMatchers: [
         {
           _type: Entities.JOB._type,
@@ -73,7 +78,18 @@ describe('#fetchJobs', () => {
             },
           },
         },
+        {
+          _type: Relationships.CONTAINER_SPEC_HAS_JOB._type,
+          matcher: {
+            schema: {
+              properties: {
+                _class: { const: RelationshipClass.HAS },
+                _type: { const: 'kube_container_spec_has_job' },
+              },
+            },
+          },
+        },
       ],
     });
-  });
+  }, 500000);
 });
