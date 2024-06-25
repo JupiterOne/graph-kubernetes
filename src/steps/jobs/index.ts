@@ -60,7 +60,7 @@ export async function fetchJobs(
             }
           }
           for (const container of job.spec?.template?.spec?.containers || []) {
-            const containerspecEntity = createContainerSpecEntity(container);
+            const containerspecEntity = createContainerSpecEntity(namespaceEntity.name as string, container);
 
             // Check if the entity is already present in jobState
             if (jobState.hasKey(containerspecEntity._key)) {
@@ -80,39 +80,52 @@ export async function buildContainerSpecJobRelationship(
   context: IntegrationStepContext,
 ): Promise<void> {
   const { jobState } = context;
+
   await jobState.iterateEntities(
     {
-      _type: Entities.JOB._type,
+      _type: Entities.NAMESPACE._type,
     },
-    async (jobEntity) => {
-      const rawNode = getRawData<V1Job>(jobEntity);
-      const jobContainer = rawNode?.spec?.template.spec?.containers;
-      if (jobContainer) {
-        for (const container of jobContainer) {
-          const containerSpecKey = getContainerSpecKey(container.name)
+    async (namespaceEntity) => {
+      await jobState.iterateEntities(
+        {
+          _type: Entities.JOB._type,
+        },
+        async (jobEntity) => {
+          const rawNode = getRawData<V1Job>(jobEntity);
+          const jobContainers = rawNode?.spec?.template?.spec?.containers;
 
-          if (!containerSpecKey) {
-            throw new IntegrationMissingKeyError(
-              `Cannot build Relationship.
-              Error: Missing Key.
-              containerSpecKey : ${containerSpecKey}`,
-            );
+          if (jobContainers) {
+            for (const container of jobContainers) {
+              const containerSpecKey = getContainerSpecKey(
+                namespaceEntity.name as string,
+                container.name,
+              );
+
+              if (!containerSpecKey) {
+                throw new IntegrationMissingKeyError(
+                  `Cannot build Relationship.
+                  Error: Missing Key.
+                  containerSpecKey: ${containerSpecKey}`,
+                );
+              }
+
+              await jobState.addRelationship(
+                createDirectRelationship({
+                  _class: RelationshipClass.HAS,
+                  fromKey: containerSpecKey,
+                  fromType: Entities.CONTAINER_SPEC._type,
+                  toKey: jobEntity._key,
+                  toType: Entities.JOB._type,
+                }),
+              );
+            }
           }
-
-          await jobState.addRelationship(
-            createDirectRelationship({
-              _class: RelationshipClass.HAS,
-              fromKey: containerSpecKey,
-              fromType: Entities.CONTAINER_SPEC._type,
-              toKey: jobEntity._key,
-              toType: Entities.JOB._type,
-            }),
-          );
-        }
-      }
+        },
+      );
     },
   );
 }
+
 
 export const jobsSteps: IntegrationStep<IntegrationConfig>[] = [
   {

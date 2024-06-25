@@ -47,7 +47,7 @@ export async function fetchCronJobs(
             ?.spec?.containers ||
             [] ||
             []) {
-            const cronJobContainerspecEntity = createContainerSpecEntity(container);
+            const cronJobContainerspecEntity = createContainerSpecEntity(namespaceEntity.name as string, container);
             // Check if the entity is already present in jobState
             if (jobState.hasKey(cronJobContainerspecEntity._key)) {
               continue; // Skip to the next iteration if the entity is already present
@@ -65,37 +65,45 @@ export async function buildContainerSpecCronJobRelationship(
   context: IntegrationStepContext,
 ): Promise<void> {
   const { jobState } = context;
+
   await jobState.iterateEntities(
     {
-      _type: Entities.CRONJOB._type,
+      _type: Entities.NAMESPACE._type,
     },
-    async (cronJobEntity) => {
-      const rawNode = getRawData<V1CronJob>(cronJobEntity);
-      const cronJobContainer =
-        rawNode?.spec?.jobTemplate?.spec?.template?.spec?.containers;
-      if (cronJobContainer) {
-        for (const container of cronJobContainer) {
-          const containerSpecKey = getContainerSpecKey(container.name)
+    async (namespaceEntity) => {
+      // Iterate over cron job entities within the current namespace
+      await jobState.iterateEntities(
+        {
+          _type: Entities.CRONJOB._type,
+        },
+        async (cronJobEntity) => {
+          const rawNode = getRawData<V1CronJob>(cronJobEntity);
+          const cronJobContainers = rawNode?.spec?.jobTemplate?.spec?.template?.spec?.containers;
+          if (cronJobContainers) {
+            for (const container of cronJobContainers) {
+              const containerSpecKey = getContainerSpecKey(namespaceEntity.name as string, container.name);
 
-          if (!containerSpecKey) {
-            throw new IntegrationMissingKeyError(
-              `Cannot build Relationship.
-              Error: Missing Key.
-              containerSpecKey : ${containerSpecKey}`,
-            );
+              if (!containerSpecKey) {
+                throw new IntegrationMissingKeyError(
+                  `Cannot build Relationship.
+                  Error: Missing Key.
+                  containerSpecKey: ${containerSpecKey}`,
+                );
+              }
+
+              await jobState.addRelationship(
+                createDirectRelationship({
+                  _class: RelationshipClass.HAS,
+                  fromKey: containerSpecKey,
+                  fromType: Entities.CONTAINER_SPEC._type,
+                  toKey: cronJobEntity._key,
+                  toType: Entities.CRONJOB._type,
+                }),
+              );
+            }
           }
-
-          await jobState.addRelationship(
-            createDirectRelationship({
-              _class: RelationshipClass.HAS,
-              fromKey: containerSpecKey,
-              fromType: Entities.CONTAINER_SPEC._type,
-              toKey: cronJobEntity._key,
-              toType: Entities.CRONJOB._type,
-            }),
-          );
-        }
-      }
+        },
+      );
     },
   );
 }

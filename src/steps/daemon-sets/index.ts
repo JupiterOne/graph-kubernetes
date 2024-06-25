@@ -45,7 +45,7 @@ export async function fetchDaemonSets(
 
           for (const container of daemonSet.spec?.template?.spec?.containers ||
             []) {
-            const daemonSetContainerspecEntity = createContainerSpecEntity(
+            const daemonSetContainerspecEntity = createContainerSpecEntity(namespaceEntity.name as string,
               container,
             );
             // Check if the entity is already present in jobState
@@ -64,36 +64,48 @@ export async function buildContainerSpecDaemonsetRelationship(
   context: IntegrationStepContext,
 ): Promise<void> {
   const { jobState } = context;
+
   await jobState.iterateEntities(
     {
-      _type: Entities.DAEMONSET._type,
+      _type: Entities.NAMESPACE._type,
     },
-    async (daemonSetEntity) => {
-      const rawNode = getRawData<V1DaemonSet>(daemonSetEntity);
-      const daemonSetContainer = rawNode?.spec?.template?.spec?.containers;
-      if (daemonSetContainer) {
-        for (const container of daemonSetContainer) {
-          const containerSpecKey = getContainerSpecKey(container.name)
+    async (namespaceEntity) => {
+      await jobState.iterateEntities(
+        {
+          _type: Entities.DAEMONSET._type,
+        },
+        async (daemonSetEntity) => {
+          const rawNode = getRawData<V1DaemonSet>(daemonSetEntity);
+          const daemonSetContainers = rawNode?.spec?.template?.spec?.containers;
 
-          if (!containerSpecKey) {
-            throw new IntegrationMissingKeyError(
-              `Cannot build Relationship.
-              Error: Missing Key.
-              containerSpecKey : ${containerSpecKey}`,
-            );
+          if (daemonSetContainers) {
+            for (const container of daemonSetContainers) {
+              const containerSpecKey = getContainerSpecKey(
+                namespaceEntity.name as string,
+                container.name,
+              );
+
+              if (!containerSpecKey) {
+                throw new IntegrationMissingKeyError(
+                  `Cannot build Relationship.
+                  Error: Missing Key.
+                  containerSpecKey: ${containerSpecKey}`,
+                );
+              }
+
+              await jobState.addRelationship(
+                createDirectRelationship({
+                  _class: RelationshipClass.HAS,
+                  fromKey: containerSpecKey,
+                  fromType: Entities.CONTAINER_SPEC._type,
+                  toKey: daemonSetEntity._key,
+                  toType: Entities.DAEMONSET._type,
+                }),
+              );
+            }
           }
-
-          await jobState.addRelationship(
-            createDirectRelationship({
-              _class: RelationshipClass.HAS,
-              fromKey: containerSpecKey,
-              fromType: Entities.CONTAINER_SPEC._type,
-              toKey: daemonSetEntity._key,
-              toType: Entities.DAEMONSET._type,
-            }),
-          );
-        }
-      }
+        },
+      );
     },
   );
 }

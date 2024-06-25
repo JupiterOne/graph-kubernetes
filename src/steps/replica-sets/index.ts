@@ -59,7 +59,7 @@ export async function fetchReplicaSets(
           }
           for (const container of replicaSet.spec?.template?.spec?.containers ||
             []) {
-            const replicaSetContainerspecEntity = createContainerSpecEntity(container);
+            const replicaSetContainerspecEntity = createContainerSpecEntity(namespaceEntity.name as string, container);
             // Check if the entity is already present in jobState
             if (jobState.hasKey(replicaSetContainerspecEntity._key)) {
               continue; // Skip to the next iteration if the entity is already present
@@ -87,39 +87,52 @@ export async function buildContainerSpecReplicasetRelationship(
   context: IntegrationStepContext,
 ): Promise<void> {
   const { jobState } = context;
+
   await jobState.iterateEntities(
     {
-      _type: Entities.REPLICASET._type,
+      _type: Entities.NAMESPACE._type,
     },
-    async (replicaSetEntity) => {
-      const rawNode = getRawData<V1ReplicaSet>(replicaSetEntity);
-      const replicaSetContainer = rawNode?.spec?.template?.spec?.containers;
-      if (replicaSetContainer) {
-        for (const container of replicaSetContainer) {
-          const containerSpecKey = getContainerSpecKey(container.name)
+    async (namespaceEntity) => {
+      await jobState.iterateEntities(
+        {
+          _type: Entities.REPLICASET._type,
+        },
+        async (replicaSetEntity) => {
+          const rawNode = getRawData<V1ReplicaSet>(replicaSetEntity);
+          const replicaSetContainers = rawNode?.spec?.template?.spec?.containers;
 
-          if (!containerSpecKey) {
-            throw new IntegrationMissingKeyError(
-              `Cannot build Relationship.
-              Error: Missing Key.
-              containerSpecKey : ${containerSpecKey}`,
-            );
+          if (replicaSetContainers) {
+            for (const container of replicaSetContainers) {
+              const containerSpecKey = getContainerSpecKey(
+                namespaceEntity.name as string,
+                container.name,
+              );
+
+              if (!containerSpecKey) {
+                throw new IntegrationMissingKeyError(
+                  `Cannot build Relationship.
+                  Error: Missing Key.
+                  containerSpecKey: ${containerSpecKey}`,
+                );
+              }
+
+              await jobState.addRelationship(
+                createDirectRelationship({
+                  _class: RelationshipClass.HAS,
+                  fromKey: containerSpecKey,
+                  fromType: Entities.CONTAINER_SPEC._type,
+                  toKey: replicaSetEntity._key,
+                  toType: Entities.REPLICASET._type,
+                }),
+              );
+            }
           }
-
-          await jobState.addRelationship(
-            createDirectRelationship({
-              _class: RelationshipClass.HAS,
-              fromKey: containerSpecKey,
-              fromType: Entities.CONTAINER_SPEC._type,
-              toKey: replicaSetEntity._key,
-              toType: Entities.REPLICASET._type,
-            }),
-          );
-        }
-      }
+        },
+      );
     },
   );
 }
+
 
 export const replicaSetsSteps: IntegrationStep<IntegrationConfig>[] = [
   {
