@@ -1,23 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#createNodeEntity should convert data 1`] = `
-Object {
-  "_class": Array [
+{
+  "_class": [
     "Host",
   ],
   "_key": "103b35d1-8951-455c-95cb-3da4af29bd71",
-  "_rawData": Array [
-    Object {
+  "_rawData": [
+    {
       "name": "default",
-      "rawData": Object {
-        "metadata": Object {
-          "annotations": Object {
+      "rawData": {
+        "metadata": {
+          "annotations": {
             "kubeadm.alpha.kubernetes.io/cri-socket": "/var/run/dockershim.sock",
             "node.alpha.kubernetes.io/ttl": "0",
             "volumes.kubernetes.io/controller-managed-attach-detach": "true",
           },
           "creationTimestamp": 2021-04-13T15:20:38.000Z,
-          "labels": Object {
+          "labels": {
             "beta.kubernetes.io/arch": "amd64",
             "beta.kubernetes.io/os": "linux",
             "kubernetes.io/arch": "amd64",
@@ -34,24 +34,24 @@ Object {
           "resourceVersion": "81209",
           "uid": "103b35d1-8951-455c-95cb-3da4af29bd71",
         },
-        "spec": Object {
+        "spec": {
           "podCIDR": "10.10.10.10/24",
-          "podCIDRs": Array [
+          "podCIDRs": [
             "10.10.10.10/24",
           ],
         },
-        "status": Object {
-          "addresses": Array [
-            Object {
+        "status": {
+          "addresses": [
+            {
               "address": "111.111.11.1",
               "type": "InternalIP",
             },
-            Object {
+            {
               "address": "minikube",
               "type": "Hostname",
             },
           ],
-          "allocatable": Object {
+          "allocatable": {
             "cpu": "8",
             "ephemeral-storage": "88103912Ki",
             "hugepages-1Gi": "0",
@@ -59,7 +59,7 @@ Object {
             "memory": "16289508Ki",
             "pods": "110",
           },
-          "capacity": Object {
+          "capacity": {
             "cpu": "8",
             "ephemeral-storage": "88103912Ki",
             "hugepages-1Gi": "0",
@@ -67,8 +67,8 @@ Object {
             "memory": "16289508Ki",
             "pods": "110",
           },
-          "conditions": Array [
-            Object {
+          "conditions": [
+            {
               "lastHeartbeatTime": 2021-04-15T16:44:09.000Z,
               "lastTransitionTime": 2021-04-13T15:20:33.000Z,
               "message": "kubelet has sufficient memory available",
@@ -77,21 +77,21 @@ Object {
               "type": "MemoryPressure",
             },
           ],
-          "daemonEndpoints": Object {
-            "kubeletEndpoint": Object {
+          "daemonEndpoints": {
+            "kubeletEndpoint": {
               "Port": 10250,
             },
           },
-          "images": Array [
-            Object {
-              "names": Array [
+          "images": [
+            {
+              "names": [
                 "k8s.gcr.io/etcd@sha256:4ad90a11b55313b182afc186b9876c8e891531b8db4c9bf1541953021618d0e2",
                 "k8s.gcr.io/etcd:3.4.13-0",
               ],
               "sizeBytes": 253392289,
             },
           ],
-          "nodeInfo": Object {
+          "nodeInfo": {
             "architecture": "amd64",
             "bootID": "a711daa9-dbe2-4923-916c-b8693ced170d",
             "containerRuntimeVersion": "docker://20.10.5",
@@ -116,16 +116,16 @@ Object {
   "hostname": "minikube",
   "name": "minikube",
   "podCIDR": "10.10.10.10/24",
-  "podCIDRs": Array [
+  "podCIDRs": [
     "10.10.10.10/24",
   ],
   "privateDnsName": undefined,
-  "privateIpAddress": Array [
+  "privateIpAddress": [
     "111.111.11.1",
   ],
   "providerID": undefined,
   "publicDnsName": undefined,
-  "publicIpAddress": Array [],
+  "publicIpAddress": [],
   "resourceVersion": "81209",
   "status.allocatable.cpu": "8",
   "status.allocatable.ephemeral-storage": "88103912Ki",
@@ -155,23 +155,23 @@ Object {
 `;
 
 exports[`#createNodeEntity should parse status.addresses correctly 1`] = `
-Object {
-  "_class": Array [
+{
+  "_class": [
     "Host",
   ],
   "_key": "103b35d1-8951-455c-95cb-3da4af29bd71",
-  "_rawData": Array [
-    Object {
+  "_rawData": [
+    {
       "name": "default",
-      "rawData": Object {
-        "metadata": Object {
-          "annotations": Object {
+      "rawData": {
+        "metadata": {
+          "annotations": {
             "kubeadm.alpha.kubernetes.io/cri-socket": "/var/run/dockershim.sock",
             "node.alpha.kubernetes.io/ttl": "0",
             "volumes.kubernetes.io/controller-managed-attach-detach": "true",
           },
           "creationTimestamp": 2021-04-13T15:20:38.000Z,
-          "labels": Object {
+          "labels": {
             "beta.kubernetes.io/arch": "amd64",
             "beta.kubernetes.io/os": "linux",
             "kubernetes.io/arch": "amd64",
@@ -188,39 +188,39 @@ Object {
           "resourceVersion": "81209",
           "uid": "103b35d1-8951-455c-95cb-3da4af29bd71",
         },
-        "spec": Object {
+        "spec": {
           "podCIDR": "10.10.10.10/24",
-          "podCIDRs": Array [
+          "podCIDRs": [
             "10.10.10.10/24",
           ],
         },
-        "status": Object {
-          "addresses": Array [
-            Object {
+        "status": {
+          "addresses": [
+            {
               "address": "1.1.1.1",
               "type": "InternalIP",
             },
-            Object {
+            {
               "address": "2.2.2.2",
               "type": "InternalIP",
             },
-            Object {
+            {
               "address": "5.5.5.5",
               "type": "ExternalIP",
             },
-            Object {
+            {
               "address": "6.6.6.6",
               "type": "ExternalIP",
             },
-            Object {
+            {
               "address": "minikube",
               "type": "Hostname",
             },
-            Object {
+            {
               "address": "internalDns",
               "type": "InternalDns",
             },
-            Object {
+            {
               "address": "externalDns",
               "type": "ExternalDns",
             },
@@ -238,17 +238,17 @@ Object {
   "hostname": "minikube",
   "name": "minikube",
   "podCIDR": "10.10.10.10/24",
-  "podCIDRs": Array [
+  "podCIDRs": [
     "10.10.10.10/24",
   ],
   "privateDnsName": "internalDns",
-  "privateIpAddress": Array [
+  "privateIpAddress": [
     "1.1.1.1",
     "2.2.2.2",
   ],
   "providerID": undefined,
   "publicDnsName": "externalDns",
-  "publicIpAddress": Array [
+  "publicIpAddress": [
     "5.5.5.5",
     "6.6.6.6",
   ],

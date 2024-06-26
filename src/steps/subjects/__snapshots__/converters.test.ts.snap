@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#createServiceAccountEntity should convert data 1`] = `
-Object {
-  "_class": Array [
+{
+  "_class": [
     "User",
   ],
   "_key": "a9e0bedc-2bcf-4fe2-9414-5fe1d03121c6",
-  "_rawData": Array [
-    Object {
+  "_rawData": [
+    {
       "name": "default",
-      "rawData": Object {
-        "metadata": Object {
+      "rawData": {
+        "metadata": {
           "creationTimestamp": 2021-12-03T19:01:12.000Z,
           "name": "ttl-controller",
           "namespace": "kube-system",
@@ -33,15 +33,15 @@ Object {
 `;
 
 exports[`#createUserEntity should convert data 1`] = `
-Object {
-  "_class": Array [
+{
+  "_class": [
     "User",
   ],
   "_key": "kube_user:my-name",
-  "_rawData": Array [
-    Object {
+  "_rawData": [
+    {
       "name": "default",
-      "rawData": Object {
+      "rawData": {
         "certFile": "/some/path/client.crt",
         "keyFile": "/some/path/client.key",
         "name": "my-name",

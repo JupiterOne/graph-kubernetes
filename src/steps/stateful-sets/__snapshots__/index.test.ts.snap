@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#fetchStatefulSets should collect data: jobState 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
+{
+  "collectedEntities": [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "9e9e231b-89d5-4ac7-8ec4-855791482c2f",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
@@ -22,18 +22,18 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "default",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
@@ -51,7 +51,7 @@ Object {
               "uid": "9e9e231b-89d5-4ac7-8ec4-855791482c2f",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -67,7 +67,7 @@ Object {
       "createdOn": 1718784676000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "default",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -75,13 +75,13 @@ Object {
       "resourceVersion": "42",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "9d2b05a5-c965-4a88-8b01-b9d28aed519a",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
@@ -94,18 +94,18 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-node-lease",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
@@ -123,7 +123,7 @@ Object {
               "uid": "9d2b05a5-c965-4a88-8b01-b9d28aed519a",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -139,7 +139,7 @@ Object {
       "createdOn": 1718784676000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-node-lease",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -147,13 +147,13 @@ Object {
       "resourceVersion": "38",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "aee57e5e-0611-4ca8-89f3-64bf6fdaac8c",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
@@ -166,18 +166,18 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-public",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
@@ -195,7 +195,7 @@ Object {
               "uid": "aee57e5e-0611-4ca8-89f3-64bf6fdaac8c",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -211,7 +211,7 @@ Object {
       "createdOn": 1718784676000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-public",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -219,13 +219,13 @@ Object {
       "resourceVersion": "26",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "ced267a3-528f-46b5-a289-cbf7068d8fc9",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
@@ -238,18 +238,18 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-system",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
@@ -267,7 +267,7 @@ Object {
               "uid": "ced267a3-528f-46b5-a289-cbf7068d8fc9",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -283,7 +283,7 @@ Object {
       "createdOn": 1718784676000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-system",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -292,8 +292,8 @@ Object {
       "status.phase": "Active",
     },
   ],
-  "collectedRelationships": Array [],
-  "encounteredTypes": Array [
+  "collectedRelationships": [],
+  "encounteredTypes": [
     "kube_namespace",
   ],
   "numCollectedEntities": 4,

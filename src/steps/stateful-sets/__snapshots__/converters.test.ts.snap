@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#createStatefulSetEntity should convert data 1`] = `
-Object {
-  "_class": Array [
+{
+  "_class": [
     "Deployment",
   ],
   "_key": "f34830bc-9c50-47d1-a77f-0f527cb95511",
-  "_rawData": Array [
-    Object {
+  "_rawData": [
+    {
       "name": "default",
-      "rawData": Object {
-        "metadata": Object {
-          "annotations": Object {
-            "kubectl.kubernetes.io/last-applied-configuration": "{\\"apiVersion\\":\\"apps/v1\\",\\"kind\\":\\"StatefulSet\\",\\"metadata\\":{\\"annotations\\":{},\\"name\\":\\"web\\",\\"namespace\\":\\"default\\"},\\"spec\\":{\\"replicas\\":3,\\"selector\\":{\\"matchLabels\\":{\\"app\\":\\"nginx\\"}},\\"serviceName\\":\\"nginx\\",\\"template\\":{\\"metadata\\":{\\"labels\\":{\\"app\\":\\"nginx\\"}},\\"spec\\":{\\"containers\\":[{\\"image\\":\\"k8s.gcr.io/nginx-slim:0.8\\",\\"name\\":\\"nginx\\",\\"ports\\":[{\\"containerPort\\":80,\\"name\\":\\"web\\"}],\\"volumeMounts\\":[{\\"mountPath\\":\\"/usr/share/nginx/html\\",\\"name\\":\\"www\\"}]}],\\"terminationGracePeriodSeconds\\":10}},\\"volumeClaimTemplates\\":[{\\"metadata\\":{\\"name\\":\\"www\\"},\\"spec\\":{\\"accessModes\\":[\\"ReadWriteOnce\\"],\\"resources\\":{\\"requests\\":{\\"storage\\":\\"1Gi\\"}},\\"storageClassName\\":\\"my-storage-class\\"}}]}}
+      "rawData": {
+        "metadata": {
+          "annotations": {
+            "kubectl.kubernetes.io/last-applied-configuration": "{"apiVersion":"apps/v1","kind":"StatefulSet","metadata":{"annotations":{},"name":"web","namespace":"default"},"spec":{"replicas":3,"selector":{"matchLabels":{"app":"nginx"}},"serviceName":"nginx","template":{"metadata":{"labels":{"app":"nginx"}},"spec":{"containers":[{"image":"k8s.gcr.io/nginx-slim:0.8","name":"nginx","ports":[{"containerPort":80,"name":"web"}],"volumeMounts":[{"mountPath":"/usr/share/nginx/html","name":"www"}]}],"terminationGracePeriodSeconds":10}},"volumeClaimTemplates":[{"metadata":{"name":"www"},"spec":{"accessModes":["ReadWriteOnce"],"resources":{"requests":{"storage":"1Gi"}},"storageClassName":"my-storage-class"}}]}}
 ",
           },
           "creationTimestamp": 2021-06-21T09:21:04.000Z,
@@ -22,40 +22,40 @@ Object {
           "resourceVersion": "508551",
           "uid": "f34830bc-9c50-47d1-a77f-0f527cb95511",
         },
-        "spec": Object {
+        "spec": {
           "podManagementPolicy": "OrderedReady",
           "replicas": 3,
           "revisionHistoryLimit": 10,
-          "selector": Object {
-            "matchLabels": Object {
+          "selector": {
+            "matchLabels": {
               "app": "nginx",
             },
           },
           "serviceName": "nginx",
-          "template": Object {
-            "metadata": Object {
-              "labels": Object {
+          "template": {
+            "metadata": {
+              "labels": {
                 "app": "nginx",
               },
             },
-            "spec": Object {
-              "containers": Array [
-                Object {
+            "spec": {
+              "containers": [
+                {
                   "image": "k8s.gcr.io/nginx-slim:0.8",
                   "imagePullPolicy": "IfNotPresent",
                   "name": "nginx",
-                  "ports": Array [
-                    Object {
+                  "ports": [
+                    {
                       "containerPort": 80,
                       "name": "web",
                       "protocol": "TCP",
                     },
                   ],
-                  "resources": Object {},
+                  "resources": {},
                   "terminationMessagePath": "/dev/termination-log",
                   "terminationMessagePolicy": "File",
-                  "volumeMounts": Array [
-                    Object {
+                  "volumeMounts": [
+                    {
                       "mountPath": "/usr/share/nginx/html",
                       "name": "www",
                     },
@@ -65,42 +65,42 @@ Object {
               "dnsPolicy": "ClusterFirst",
               "restartPolicy": "Always",
               "schedulerName": "default-scheduler",
-              "securityContext": Object {},
+              "securityContext": {},
               "terminationGracePeriodSeconds": 10,
             },
           },
-          "updateStrategy": Object {
-            "rollingUpdate": Object {
+          "updateStrategy": {
+            "rollingUpdate": {
               "partition": 0,
             },
             "type": "RollingUpdate",
           },
-          "volumeClaimTemplates": Array [
-            Object {
+          "volumeClaimTemplates": [
+            {
               "apiVersion": "v1",
               "kind": "PersistentVolumeClaim",
-              "metadata": Object {
+              "metadata": {
                 "name": "www",
               },
-              "spec": Object {
-                "accessModes": Array [
+              "spec": {
+                "accessModes": [
                   "ReadWriteOnce",
                 ],
-                "resources": Object {
-                  "requests": Object {
+                "resources": {
+                  "requests": {
                     "storage": "1Gi",
                   },
                 },
                 "storageClassName": "my-storage-class",
                 "volumeMode": "Filesystem",
               },
-              "status": Object {
+              "status": {
                 "phase": "Pending",
               },
             },
           ],
         },
-        "status": Object {
+        "status": {
           "collisionCount": 0,
           "currentReplicas": 1,
           "currentRevision": "web-6596ffb49b",

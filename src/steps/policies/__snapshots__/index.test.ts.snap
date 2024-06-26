@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#fetchNetworkPolicies should collect data: jobState 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
+{
+  "collectedEntities": [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "868d4703-b338-4051-98e4-b65b4f0a0006",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
@@ -22,18 +22,18 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "default",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
@@ -51,7 +51,7 @@ Object {
               "uid": "868d4703-b338-4051-98e4-b65b4f0a0006",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -67,7 +67,7 @@ Object {
       "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "default",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -75,13 +75,13 @@ Object {
       "resourceVersion": "39",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "52615a92-75c3-4c4b-8b72-51be82a4bc21",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
@@ -94,18 +94,18 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-node-lease",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
@@ -123,7 +123,7 @@ Object {
               "uid": "52615a92-75c3-4c4b-8b72-51be82a4bc21",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -139,7 +139,7 @@ Object {
       "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-node-lease",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -147,13 +147,13 @@ Object {
       "resourceVersion": "35",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "7a2ee4f7-12fd-494b-93f0-c639b1e63a72",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
@@ -166,18 +166,18 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-public",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
@@ -195,7 +195,7 @@ Object {
               "uid": "7a2ee4f7-12fd-494b-93f0-c639b1e63a72",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -211,7 +211,7 @@ Object {
       "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-public",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -219,13 +219,13 @@ Object {
       "resourceVersion": "20",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
@@ -238,18 +238,18 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-system",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
@@ -267,7 +267,7 @@ Object {
               "uid": "ce86116b-863b-4e74-979e-3c031a9aeee1",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -283,7 +283,7 @@ Object {
       "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-system",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -291,13 +291,13 @@ Object {
       "resourceVersion": "12",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Configuration",
       ],
       "_key": "2fbcad2d-1572-4a03-ae00-4f2fbfd8a2e8",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1NetworkPolicy {
             "apiVersion": undefined,
@@ -311,15 +311,15 @@ Object {
               "generateName": undefined,
               "generation": 1,
               "labels": undefined,
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "networking.k8s.io/v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:spec": Object {
-                      "f:ingress": Object {},
-                      "f:podSelector": Object {},
-                      "f:policyTypes": Object {},
+                  "fieldsV1": {
+                    "f:spec": {
+                      "f:ingress": {},
+                      "f:podSelector": {},
+                      "f:policyTypes": {},
                     },
                   },
                   "manager": "kubectl-create",
@@ -337,21 +337,21 @@ Object {
             },
             "spec": V1NetworkPolicySpec {
               "egress": undefined,
-              "ingress": Array [
+              "ingress": [
                 V1NetworkPolicyIngressRule {
-                  "from": Array [
+                  "from": [
                     V1NetworkPolicyPeer {
                       "ipBlock": undefined,
                       "namespaceSelector": undefined,
                       "podSelector": V1LabelSelector {
                         "matchExpressions": undefined,
-                        "matchLabels": Object {
+                        "matchLabels": {
                           "app": "np-test-wordpress",
                         },
                       },
                     },
                   ],
-                  "ports": Array [
+                  "ports": [
                     V1NetworkPolicyPort {
                       "endPort": undefined,
                       "port": 3306,
@@ -362,11 +362,11 @@ Object {
               ],
               "podSelector": V1LabelSelector {
                 "matchExpressions": undefined,
-                "matchLabels": Object {
+                "matchLabels": {
                   "app": "np-test-mariadb",
                 },
               },
-              "policyTypes": Array [
+              "policyTypes": [
                 "Ingress",
               ],
             },
@@ -379,18 +379,18 @@ Object {
       "displayName": "db-frontend-allow",
       "generation": 1,
       "name": "db-frontend-allow",
-      "policyTypes": Array [
+      "policyTypes": [
         "Ingress",
       ],
       "resourceVersion": "27751",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Configuration",
       ],
       "_key": "d122159c-13d4-46f4-898a-4b253dfeb297",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1NetworkPolicy {
             "apiVersion": undefined,
@@ -404,13 +404,13 @@ Object {
               "generateName": undefined,
               "generation": 1,
               "labels": undefined,
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "networking.k8s.io/v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:spec": Object {
-                      "f:policyTypes": Object {},
+                  "fieldsV1": {
+                    "f:spec": {
+                      "f:policyTypes": {},
                     },
                   },
                   "manager": "kubectl-create",
@@ -433,7 +433,7 @@ Object {
                 "matchExpressions": undefined,
                 "matchLabels": undefined,
               },
-              "policyTypes": Array [
+              "policyTypes": [
                 "Ingress",
               ],
             },
@@ -446,14 +446,14 @@ Object {
       "displayName": "default-deny",
       "generation": 1,
       "name": "default-deny",
-      "policyTypes": Array [
+      "policyTypes": [
         "Ingress",
       ],
       "resourceVersion": "27717",
     },
   ],
-  "collectedRelationships": Array [
-    Object {
+  "collectedRelationships": [
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "868d4703-b338-4051-98e4-b65b4f0a0006",
       "_key": "868d4703-b338-4051-98e4-b65b4f0a0006|contains|2fbcad2d-1572-4a03-ae00-4f2fbfd8a2e8",
@@ -461,7 +461,7 @@ Object {
       "_type": "kube_namespace_contains_network_policy",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "868d4703-b338-4051-98e4-b65b4f0a0006",
       "_key": "868d4703-b338-4051-98e4-b65b4f0a0006|contains|d122159c-13d4-46f4-898a-4b253dfeb297",
@@ -470,7 +470,7 @@ Object {
       "displayName": "CONTAINS",
     },
   ],
-  "encounteredTypes": Array [
+  "encounteredTypes": [
     "kube_namespace",
     "kube_network_policy",
     "kube_namespace_contains_network_policy",

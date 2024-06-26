@@ -1,27 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#createNamespaceEntity should convert data 1`] = `
-Object {
-  "_class": Array [
+{
+  "_class": [
     "Group",
   ],
   "_key": "55ea52dd-382c-4b8c-8c24-bff59db4b817",
-  "_rawData": Array [
-    Object {
+  "_rawData": [
+    {
       "name": "default",
-      "rawData": Object {
-        "metadata": Object {
+      "rawData": {
+        "metadata": {
           "creationTimestamp": 2021-04-27T20:57:17.000Z,
           "name": "example-namespace",
           "resourceVersion": "66",
           "uid": "55ea52dd-382c-4b8c-8c24-bff59db4b817",
         },
-        "spec": Object {
-          "finalizers": Array [
+        "spec": {
+          "finalizers": [
             "kubernetes",
           ],
         },
-        "status": Object {
+        "status": {
           "phase": "Active",
         },
       },
@@ -32,7 +32,7 @@ Object {
   "createdOn": 1619557037000,
   "deletionGracePeriodSeconds": undefined,
   "displayName": "example-namespace",
-  "finalizers": Array [
+  "finalizers": [
     "kubernetes",
   ],
   "generation": undefined,

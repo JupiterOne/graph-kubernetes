@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#fetchConfigMaps should collect data: jobState 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
+{
+  "collectedEntities": [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "868d4703-b338-4051-98e4-b65b4f0a0006",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
@@ -22,18 +22,18 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "default",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
@@ -51,7 +51,7 @@ Object {
               "uid": "868d4703-b338-4051-98e4-b65b4f0a0006",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -67,7 +67,7 @@ Object {
       "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "default",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -75,13 +75,13 @@ Object {
       "resourceVersion": "39",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "52615a92-75c3-4c4b-8b72-51be82a4bc21",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
@@ -94,18 +94,18 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-node-lease",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
@@ -123,7 +123,7 @@ Object {
               "uid": "52615a92-75c3-4c4b-8b72-51be82a4bc21",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -139,7 +139,7 @@ Object {
       "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-node-lease",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -147,13 +147,13 @@ Object {
       "resourceVersion": "35",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "7a2ee4f7-12fd-494b-93f0-c639b1e63a72",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
@@ -166,18 +166,18 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-public",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
@@ -195,7 +195,7 @@ Object {
               "uid": "7a2ee4f7-12fd-494b-93f0-c639b1e63a72",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -211,7 +211,7 @@ Object {
       "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-public",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -219,13 +219,13 @@ Object {
       "resourceVersion": "20",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
@@ -238,18 +238,18 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-system",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
@@ -267,7 +267,7 @@ Object {
               "uid": "ce86116b-863b-4e74-979e-3c031a9aeee1",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -283,7 +283,7 @@ Object {
       "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-system",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -291,21 +291,21 @@ Object {
       "resourceVersion": "12",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Configuration",
       ],
       "_key": "de845c1c-0c4e-4429-a508-96bdee06e932",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "apiVersion": undefined,
             "immutable": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
-              "annotations": Object {
-                "kubectl.kubernetes.io/last-applied-configuration": "{\\"apiVersion\\":\\"v1\\",\\"data\\":{\\"fluent-bit\\":\\"[SERVICE]\\\\n    Parsers_File ./parsers.conf\\\\n    Grace 15\\\\n[INPUT]\\\\n    Name tail\\\\n    Path /var/log/containers/graph-kubernetes*.log\\\\n    Exclude_Path /var/log/containers/*otel-collector*.log\\\\n    Parser cri\\\\n    Tag kube.*\\\\n    Mem_Buf_Limit 5MB\\\\n[OUTPUT]\\\\n    Name  forward\\\\n    Host  0.0.0.0\\\\n    Port  8006\\\\n    Match *\\\\n\\",\\"parsers\\":\\"[PARSER]\\\\n    Name        jupiter_one\\\\n    Format      json\\\\n    Time_Key    time\\\\n    Time_Format %Y-%m-%dT%H:%M:%S.%LZ\\\\n    Time_Keep   On\\\\n\\"},\\"kind\\":\\"ConfigMap\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"app\\":\\"fluent-bit\\",\\"app.kubernetes.io/managed-by\\":\\"tilt\\",\\"component\\":\\"fluent-bit-agent-conf\\"},\\"name\\":\\"fluent-bit-agent-conf\\",\\"namespace\\":\\"default\\"}}
+              "annotations": {
+                "kubectl.kubernetes.io/last-applied-configuration": "{"apiVersion":"v1","data":{"fluent-bit":"[SERVICE]\\n    Parsers_File ./parsers.conf\\n    Grace 15\\n[INPUT]\\n    Name tail\\n    Path /var/log/containers/graph-kubernetes*.log\\n    Exclude_Path /var/log/containers/*otel-collector*.log\\n    Parser cri\\n    Tag kube.*\\n    Mem_Buf_Limit 5MB\\n[OUTPUT]\\n    Name  forward\\n    Host  0.0.0.0\\n    Port  8006\\n    Match *\\n","parsers":"[PARSER]\\n    Name        jupiter_one\\n    Format      json\\n    Time_Key    time\\n    Time_Format %Y-%m-%dT%H:%M:%S.%LZ\\n    Time_Keep   On\\n"},"kind":"ConfigMap","metadata":{"annotations":{},"labels":{"app":"fluent-bit","app.kubernetes.io/managed-by":"tilt","component":"fluent-bit-agent-conf"},"name":"fluent-bit-agent-conf","namespace":"default"}}
 ",
               },
               "creationTimestamp": 2024-01-12T16:59:26.000Z,
@@ -314,31 +314,31 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "app": "fluent-bit",
                 "app.kubernetes.io/managed-by": "tilt",
                 "component": "fluent-bit-agent-conf",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:data": Object {
-                      ".": Object {},
-                      "f:fluent-bit": Object {},
-                      "f:parsers": Object {},
+                  "fieldsV1": {
+                    "f:data": {
+                      ".": {},
+                      "f:fluent-bit": {},
+                      "f:parsers": {},
                     },
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:kubectl.kubernetes.io/last-applied-configuration": Object {},
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:kubectl.kubernetes.io/last-applied-configuration": {},
                       },
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:app": Object {},
-                        "f:app.kubernetes.io/managed-by": Object {},
-                        "f:component": Object {},
+                      "f:labels": {
+                        ".": {},
+                        "f:app": {},
+                        "f:app.kubernetes.io/managed-by": {},
+                        "f:component": {},
                       },
                     },
                   },
@@ -370,20 +370,20 @@ Object {
       "name": "fluent-bit-agent-conf",
       "resourceVersion": "50622",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Configuration",
       ],
       "_key": "46aee787-1c3f-4781-b68b-e3507bf32d5b",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "apiVersion": undefined,
             "immutable": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
-              "annotations": Object {
+              "annotations": {
                 "kubernetes.io/description": "Contains a CA bundle that can be used to verify the kube-apiserver when using internal endpoints such as the internal service IP or kubernetes.default.svc. No other usage is guaranteed across distributions of Kubernetes clusters.",
               },
               "creationTimestamp": 2024-01-11T15:50:21.000Z,
@@ -393,19 +393,19 @@ Object {
               "generateName": undefined,
               "generation": undefined,
               "labels": undefined,
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:data": Object {
-                      ".": Object {},
-                      "f:ca.crt": Object {},
+                  "fieldsV1": {
+                    "f:data": {
+                      ".": {},
+                      "f:ca.crt": {},
                     },
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/description": Object {},
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:kubernetes.io/description": {},
                       },
                     },
                   },
@@ -437,20 +437,20 @@ Object {
       "name": "kube-root-ca.crt",
       "resourceVersion": "318",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Configuration",
       ],
       "_key": "4bb36d4a-db0b-483b-9d4a-980f8ea5441f",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "apiVersion": undefined,
             "immutable": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
-              "annotations": Object {
+              "annotations": {
                 "meta.helm.sh/release-name": "np-test",
                 "meta.helm.sh/release-namespace": "default",
               },
@@ -460,7 +460,7 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "app.kubernetes.io/component": "primary",
                 "app.kubernetes.io/instance": "np-test",
                 "app.kubernetes.io/managed-by": "Helm",
@@ -468,29 +468,29 @@ Object {
                 "app.kubernetes.io/version": "11.2.2",
                 "helm.sh/chart": "mariadb-15.0.1",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:data": Object {
-                      ".": Object {},
-                      "f:my.cnf": Object {},
+                  "fieldsV1": {
+                    "f:data": {
+                      ".": {},
+                      "f:my.cnf": {},
                     },
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:meta.helm.sh/release-name": Object {},
-                        "f:meta.helm.sh/release-namespace": Object {},
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:meta.helm.sh/release-name": {},
+                        "f:meta.helm.sh/release-namespace": {},
                       },
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:app.kubernetes.io/component": Object {},
-                        "f:app.kubernetes.io/instance": Object {},
-                        "f:app.kubernetes.io/managed-by": Object {},
-                        "f:app.kubernetes.io/name": Object {},
-                        "f:app.kubernetes.io/version": Object {},
-                        "f:helm.sh/chart": Object {},
+                      "f:labels": {
+                        ".": {},
+                        "f:app.kubernetes.io/component": {},
+                        "f:app.kubernetes.io/instance": {},
+                        "f:app.kubernetes.io/managed-by": {},
+                        "f:app.kubernetes.io/name": {},
+                        "f:app.kubernetes.io/version": {},
+                        "f:helm.sh/chart": {},
                       },
                     },
                   },
@@ -522,21 +522,21 @@ Object {
       "name": "np-test-mariadb",
       "resourceVersion": "27434",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Configuration",
       ],
       "_key": "0b9b5f0e-e381-41f8-9fc3-12bcfb406c26",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "apiVersion": undefined,
             "immutable": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
-              "annotations": Object {
-                "kubectl.kubernetes.io/last-applied-configuration": "{\\"apiVersion\\":\\"v1\\",\\"data\\":{\\"otel-agent-config\\":\\"receivers:\\\\n  hostmetrics:\\\\n    collection_interval: 10s\\\\n    scrapers:\\\\n      cpu:\\\\n      load:\\\\n      memory:\\\\n      disk:\\\\n      filesystem:\\\\n      network:\\\\n      paging:\\\\n      processes:\\\\n  otlp:\\\\n    protocols:\\\\n      grpc:\\\\n      http:\\\\n  fluentforward:\\\\n    endpoint: 0.0.0.0:8006\\\\n\\\\nprocessors:\\\\n  batch:\\\\n  memory_limiter:\\\\n    limit_mib: 400\\\\n    spike_limit_mib: 100\\\\n    check_interval: 5s\\\\n\\\\nexporters:\\\\n  logging:\\\\n    loglevel: debug\\\\n    sampling_initial: 5\\\\n    sampling_thereafter: 200\\\\n\\\\nextensions:\\\\n  memory_ballast:\\\\n    size_mib: 165\\\\n\\\\nservice:\\\\n  pipelines:\\\\n    logs:\\\\n      receivers: [fluentforward]\\\\n      processors: [memory_limiter, batch]\\\\n      exporters: [logging]\\\\n    metrics:\\\\n      receivers: [hostmetrics]\\\\n      processors: [memory_limiter, batch]\\\\n      exporters: [logging]\\\\n    traces:\\\\n      receivers: [otlp]\\\\n      processors: [memory_limiter, batch]\\\\n      exporters: [logging]\\\\n\\"},\\"kind\\":\\"ConfigMap\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"app\\":\\"opentelemetry\\",\\"app.kubernetes.io/managed-by\\":\\"tilt\\",\\"component\\":\\"otel-agent-conf\\"},\\"name\\":\\"otel-agent-conf\\",\\"namespace\\":\\"default\\"}}
+              "annotations": {
+                "kubectl.kubernetes.io/last-applied-configuration": "{"apiVersion":"v1","data":{"otel-agent-config":"receivers:\\n  hostmetrics:\\n    collection_interval: 10s\\n    scrapers:\\n      cpu:\\n      load:\\n      memory:\\n      disk:\\n      filesystem:\\n      network:\\n      paging:\\n      processes:\\n  otlp:\\n    protocols:\\n      grpc:\\n      http:\\n  fluentforward:\\n    endpoint: 0.0.0.0:8006\\n\\nprocessors:\\n  batch:\\n  memory_limiter:\\n    limit_mib: 400\\n    spike_limit_mib: 100\\n    check_interval: 5s\\n\\nexporters:\\n  logging:\\n    loglevel: debug\\n    sampling_initial: 5\\n    sampling_thereafter: 200\\n\\nextensions:\\n  memory_ballast:\\n    size_mib: 165\\n\\nservice:\\n  pipelines:\\n    logs:\\n      receivers: [fluentforward]\\n      processors: [memory_limiter, batch]\\n      exporters: [logging]\\n    metrics:\\n      receivers: [hostmetrics]\\n      processors: [memory_limiter, batch]\\n      exporters: [logging]\\n    traces:\\n      receivers: [otlp]\\n      processors: [memory_limiter, batch]\\n      exporters: [logging]\\n"},"kind":"ConfigMap","metadata":{"annotations":{},"labels":{"app":"opentelemetry","app.kubernetes.io/managed-by":"tilt","component":"otel-agent-conf"},"name":"otel-agent-conf","namespace":"default"}}
 ",
               },
               "creationTimestamp": 2024-01-12T16:59:26.000Z,
@@ -545,30 +545,30 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "app": "opentelemetry",
                 "app.kubernetes.io/managed-by": "tilt",
                 "component": "otel-agent-conf",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:data": Object {
-                      ".": Object {},
-                      "f:otel-agent-config": Object {},
+                  "fieldsV1": {
+                    "f:data": {
+                      ".": {},
+                      "f:otel-agent-config": {},
                     },
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:kubectl.kubernetes.io/last-applied-configuration": Object {},
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:kubectl.kubernetes.io/last-applied-configuration": {},
                       },
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:app": Object {},
-                        "f:app.kubernetes.io/managed-by": Object {},
-                        "f:component": Object {},
+                      "f:labels": {
+                        ".": {},
+                        "f:app": {},
+                        "f:app.kubernetes.io/managed-by": {},
+                        "f:component": {},
                       },
                     },
                   },
@@ -600,20 +600,20 @@ Object {
       "name": "otel-agent-conf",
       "resourceVersion": "50623",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Configuration",
       ],
       "_key": "424d4037-ebef-4df7-8301-3dd24a1fd46f",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "apiVersion": undefined,
             "immutable": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
-              "annotations": Object {
+              "annotations": {
                 "kubernetes.io/description": "Contains a CA bundle that can be used to verify the kube-apiserver when using internal endpoints such as the internal service IP or kubernetes.default.svc. No other usage is guaranteed across distributions of Kubernetes clusters.",
               },
               "creationTimestamp": 2024-01-11T15:50:21.000Z,
@@ -623,19 +623,19 @@ Object {
               "generateName": undefined,
               "generation": undefined,
               "labels": undefined,
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:data": Object {
-                      ".": Object {},
-                      "f:ca.crt": Object {},
+                  "fieldsV1": {
+                    "f:data": {
+                      ".": {},
+                      "f:ca.crt": {},
                     },
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/description": Object {},
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:kubernetes.io/description": {},
                       },
                     },
                   },
@@ -667,15 +667,15 @@ Object {
       "name": "kube-root-ca.crt",
       "resourceVersion": "319",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Configuration",
       ],
       "_key": "2deeab29-7562-46a1-b5b4-3eb4948c38ae",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "apiVersion": undefined,
             "immutable": undefined,
             "kind": undefined,
@@ -688,14 +688,14 @@ Object {
               "generateName": undefined,
               "generation": undefined,
               "labels": undefined,
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:data": Object {
-                      ".": Object {},
-                      "f:kubeconfig": Object {},
+                  "fieldsV1": {
+                    "f:data": {
+                      ".": {},
+                      "f:kubeconfig": {},
                     },
                   },
                   "manager": "kubeadm",
@@ -726,20 +726,20 @@ Object {
       "name": "cluster-info",
       "resourceVersion": "45094",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Configuration",
       ],
       "_key": "07949719-df30-4bd2-a83a-ea3c30fa7589",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "apiVersion": undefined,
             "immutable": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
-              "annotations": Object {
+              "annotations": {
                 "kubernetes.io/description": "Contains a CA bundle that can be used to verify the kube-apiserver when using internal endpoints such as the internal service IP or kubernetes.default.svc. No other usage is guaranteed across distributions of Kubernetes clusters.",
               },
               "creationTimestamp": 2024-01-11T15:50:21.000Z,
@@ -749,19 +749,19 @@ Object {
               "generateName": undefined,
               "generation": undefined,
               "labels": undefined,
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:data": Object {
-                      ".": Object {},
-                      "f:ca.crt": Object {},
+                  "fieldsV1": {
+                    "f:data": {
+                      ".": {},
+                      "f:ca.crt": {},
                     },
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/description": Object {},
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:kubernetes.io/description": {},
                       },
                     },
                   },
@@ -793,15 +793,15 @@ Object {
       "name": "kube-root-ca.crt",
       "resourceVersion": "320",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Configuration",
       ],
       "_key": "20f05a1f-139e-41fe-9700-45b105758721",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "apiVersion": undefined,
             "immutable": undefined,
             "kind": undefined,
@@ -814,14 +814,14 @@ Object {
               "generateName": undefined,
               "generation": undefined,
               "labels": undefined,
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:data": Object {
-                      ".": Object {},
-                      "f:Corefile": Object {},
+                  "fieldsV1": {
+                    "f:data": {
+                      ".": {},
+                      "f:Corefile": {},
                     },
                   },
                   "manager": "kubeadm",
@@ -852,15 +852,15 @@ Object {
       "name": "coredns",
       "resourceVersion": "269",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Configuration",
       ],
       "_key": "7f859c7e-958f-4fb8-969d-82a18dbfd70f",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "apiVersion": undefined,
             "immutable": undefined,
             "kind": undefined,
@@ -873,19 +873,19 @@ Object {
               "generateName": undefined,
               "generation": undefined,
               "labels": undefined,
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:data": Object {
-                      ".": Object {},
-                      "f:client-ca-file": Object {},
-                      "f:requestheader-allowed-names": Object {},
-                      "f:requestheader-client-ca-file": Object {},
-                      "f:requestheader-extra-headers-prefix": Object {},
-                      "f:requestheader-group-headers": Object {},
-                      "f:requestheader-username-headers": Object {},
+                  "fieldsV1": {
+                    "f:data": {
+                      ".": {},
+                      "f:client-ca-file": {},
+                      "f:requestheader-allowed-names": {},
+                      "f:requestheader-client-ca-file": {},
+                      "f:requestheader-extra-headers-prefix": {},
+                      "f:requestheader-group-headers": {},
+                      "f:requestheader-username-headers": {},
                     },
                   },
                   "manager": "kube-apiserver",
@@ -916,15 +916,15 @@ Object {
       "name": "extension-apiserver-authentication",
       "resourceVersion": "34",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Configuration",
       ],
       "_key": "6ecf58fb-4375-4367-8587-110498cde922",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "apiVersion": undefined,
             "immutable": undefined,
             "kind": undefined,
@@ -937,14 +937,14 @@ Object {
               "generateName": undefined,
               "generation": undefined,
               "labels": undefined,
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:data": Object {
-                      ".": Object {},
-                      "f:since": Object {},
+                  "fieldsV1": {
+                    "f:data": {
+                      ".": {},
+                      "f:since": {},
                     },
                   },
                   "manager": "kube-apiserver",
@@ -975,15 +975,15 @@ Object {
       "name": "kube-apiserver-legacy-service-account-token-tracking",
       "resourceVersion": "36",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Configuration",
       ],
       "_key": "b652c80e-802a-4702-9ebc-3065bd648ea7",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "apiVersion": undefined,
             "immutable": undefined,
             "kind": undefined,
@@ -995,23 +995,23 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "app": "kube-proxy",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:data": Object {
-                      ".": Object {},
-                      "f:config.conf": Object {},
-                      "f:kubeconfig.conf": Object {},
+                  "fieldsV1": {
+                    "f:data": {
+                      ".": {},
+                      "f:config.conf": {},
+                      "f:kubeconfig.conf": {},
                     },
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:app": Object {},
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:app": {},
                       },
                     },
                   },
@@ -1043,20 +1043,20 @@ Object {
       "name": "kube-proxy",
       "resourceVersion": "276",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Configuration",
       ],
       "_key": "45add1b9-8710-45d3-a5ac-15d2c4204921",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "apiVersion": undefined,
             "immutable": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
-              "annotations": Object {
+              "annotations": {
                 "kubernetes.io/description": "Contains a CA bundle that can be used to verify the kube-apiserver when using internal endpoints such as the internal service IP or kubernetes.default.svc. No other usage is guaranteed across distributions of Kubernetes clusters.",
               },
               "creationTimestamp": 2024-01-11T15:50:21.000Z,
@@ -1066,19 +1066,19 @@ Object {
               "generateName": undefined,
               "generation": undefined,
               "labels": undefined,
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:data": Object {
-                      ".": Object {},
-                      "f:ca.crt": Object {},
+                  "fieldsV1": {
+                    "f:data": {
+                      ".": {},
+                      "f:ca.crt": {},
                     },
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/description": Object {},
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:kubernetes.io/description": {},
                       },
                     },
                   },
@@ -1110,15 +1110,15 @@ Object {
       "name": "kube-root-ca.crt",
       "resourceVersion": "321",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Configuration",
       ],
       "_key": "c6c9a273-fb58-47d1-ac47-bf05157d54d2",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "apiVersion": undefined,
             "immutable": undefined,
             "kind": undefined,
@@ -1131,14 +1131,14 @@ Object {
               "generateName": undefined,
               "generation": undefined,
               "labels": undefined,
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:data": Object {
-                      ".": Object {},
-                      "f:ClusterConfiguration": Object {},
+                  "fieldsV1": {
+                    "f:data": {
+                      ".": {},
+                      "f:ClusterConfiguration": {},
                     },
                   },
                   "manager": "kubeadm",
@@ -1169,20 +1169,20 @@ Object {
       "name": "kubeadm-config",
       "resourceVersion": "244",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Configuration",
       ],
       "_key": "2d9f4530-f25d-436f-857d-a6840f20ce79",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "apiVersion": undefined,
             "immutable": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
-              "annotations": Object {
+              "annotations": {
                 "kubeadm.kubernetes.io/component-config.hash": "sha256:1f1aa4fe2737f0d3c66bade6909c7bffe795a7b7cb6580ce302d4ce5869dacab",
               },
               "creationTimestamp": 2024-01-11T15:50:17.000Z,
@@ -1192,19 +1192,19 @@ Object {
               "generateName": undefined,
               "generation": undefined,
               "labels": undefined,
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:data": Object {
-                      ".": Object {},
-                      "f:kubelet": Object {},
+                  "fieldsV1": {
+                    "f:data": {
+                      ".": {},
+                      "f:kubelet": {},
                     },
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:kubeadm.kubernetes.io/component-config.hash": Object {},
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:kubeadm.kubernetes.io/component-config.hash": {},
                       },
                     },
                   },
@@ -1237,8 +1237,8 @@ Object {
       "resourceVersion": "247",
     },
   ],
-  "collectedRelationships": Array [
-    Object {
+  "collectedRelationships": [
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "868d4703-b338-4051-98e4-b65b4f0a0006",
       "_key": "868d4703-b338-4051-98e4-b65b4f0a0006|contains|de845c1c-0c4e-4429-a508-96bdee06e932",
@@ -1246,7 +1246,7 @@ Object {
       "_type": "kube_namespace_contains_config_map",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "868d4703-b338-4051-98e4-b65b4f0a0006",
       "_key": "868d4703-b338-4051-98e4-b65b4f0a0006|contains|46aee787-1c3f-4781-b68b-e3507bf32d5b",
@@ -1254,7 +1254,7 @@ Object {
       "_type": "kube_namespace_contains_config_map",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "868d4703-b338-4051-98e4-b65b4f0a0006",
       "_key": "868d4703-b338-4051-98e4-b65b4f0a0006|contains|4bb36d4a-db0b-483b-9d4a-980f8ea5441f",
@@ -1262,7 +1262,7 @@ Object {
       "_type": "kube_namespace_contains_config_map",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "868d4703-b338-4051-98e4-b65b4f0a0006",
       "_key": "868d4703-b338-4051-98e4-b65b4f0a0006|contains|0b9b5f0e-e381-41f8-9fc3-12bcfb406c26",
@@ -1270,7 +1270,7 @@ Object {
       "_type": "kube_namespace_contains_config_map",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "52615a92-75c3-4c4b-8b72-51be82a4bc21",
       "_key": "52615a92-75c3-4c4b-8b72-51be82a4bc21|contains|424d4037-ebef-4df7-8301-3dd24a1fd46f",
@@ -1278,7 +1278,7 @@ Object {
       "_type": "kube_namespace_contains_config_map",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "7a2ee4f7-12fd-494b-93f0-c639b1e63a72",
       "_key": "7a2ee4f7-12fd-494b-93f0-c639b1e63a72|contains|2deeab29-7562-46a1-b5b4-3eb4948c38ae",
@@ -1286,7 +1286,7 @@ Object {
       "_type": "kube_namespace_contains_config_map",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "7a2ee4f7-12fd-494b-93f0-c639b1e63a72",
       "_key": "7a2ee4f7-12fd-494b-93f0-c639b1e63a72|contains|07949719-df30-4bd2-a83a-ea3c30fa7589",
@@ -1294,7 +1294,7 @@ Object {
       "_type": "kube_namespace_contains_config_map",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|20f05a1f-139e-41fe-9700-45b105758721",
@@ -1302,7 +1302,7 @@ Object {
       "_type": "kube_namespace_contains_config_map",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|7f859c7e-958f-4fb8-969d-82a18dbfd70f",
@@ -1310,7 +1310,7 @@ Object {
       "_type": "kube_namespace_contains_config_map",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|6ecf58fb-4375-4367-8587-110498cde922",
@@ -1318,7 +1318,7 @@ Object {
       "_type": "kube_namespace_contains_config_map",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|b652c80e-802a-4702-9ebc-3065bd648ea7",
@@ -1326,7 +1326,7 @@ Object {
       "_type": "kube_namespace_contains_config_map",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|45add1b9-8710-45d3-a5ac-15d2c4204921",
@@ -1334,7 +1334,7 @@ Object {
       "_type": "kube_namespace_contains_config_map",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|c6c9a273-fb58-47d1-ac47-bf05157d54d2",
@@ -1342,7 +1342,7 @@ Object {
       "_type": "kube_namespace_contains_config_map",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|2d9f4530-f25d-436f-857d-a6840f20ce79",
@@ -1351,7 +1351,7 @@ Object {
       "displayName": "CONTAINS",
     },
   ],
-  "encounteredTypes": Array [
+  "encounteredTypes": [
     "kube_namespace",
     "kube_config_map",
     "kube_namespace_contains_config_map",

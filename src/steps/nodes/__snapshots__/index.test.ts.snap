@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#fetchNodes should collect data: jobState 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
+{
+  "collectedEntities": [
+    {
+      "_class": [
         "Host",
       ],
       "_key": "7cf4b7cc-b6c8-474a-a4c6-8858a3b597f2",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Node {
             "apiVersion": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
-              "annotations": Object {
+              "annotations": {
                 "kubeadm.alpha.kubernetes.io/cri-socket": "unix:///var/run/cri-dockerd.sock",
                 "node.alpha.kubernetes.io/ttl": "0",
                 "volumes.kubernetes.io/controller-managed-attach-detach": "true",
@@ -26,7 +26,7 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "beta.kubernetes.io/arch": "amd64",
                 "beta.kubernetes.io/os": "linux",
                 "kubernetes.io/arch": "amd64",
@@ -35,23 +35,23 @@ Object {
                 "node-role.kubernetes.io/control-plane": "",
                 "node.kubernetes.io/exclude-from-external-load-balancers": "",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:volumes.kubernetes.io/controller-managed-attach-detach": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:volumes.kubernetes.io/controller-managed-attach-detach": {},
                       },
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:beta.kubernetes.io/arch": Object {},
-                        "f:beta.kubernetes.io/os": Object {},
-                        "f:kubernetes.io/arch": Object {},
-                        "f:kubernetes.io/hostname": Object {},
-                        "f:kubernetes.io/os": Object {},
+                      "f:labels": {
+                        ".": {},
+                        "f:beta.kubernetes.io/arch": {},
+                        "f:beta.kubernetes.io/os": {},
+                        "f:kubernetes.io/arch": {},
+                        "f:kubernetes.io/hostname": {},
+                        "f:kubernetes.io/os": {},
                       },
                     },
                   },
@@ -63,14 +63,14 @@ Object {
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        "f:kubeadm.alpha.kubernetes.io/cri-socket": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:annotations": {
+                        "f:kubeadm.alpha.kubernetes.io/cri-socket": {},
                       },
-                      "f:labels": Object {
-                        "f:node-role.kubernetes.io/control-plane": Object {},
-                        "f:node.kubernetes.io/exclude-from-external-load-balancers": Object {},
+                      "f:labels": {
+                        "f:node-role.kubernetes.io/control-plane": {},
+                        "f:node.kubernetes.io/exclude-from-external-load-balancers": {},
                       },
                     },
                   },
@@ -82,10 +82,10 @@ Object {
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        "f:node.alpha.kubernetes.io/ttl": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:annotations": {
+                        "f:node.alpha.kubernetes.io/ttl": {},
                       },
                     },
                   },
@@ -97,34 +97,34 @@ Object {
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:status": Object {
-                      "f:allocatable": Object {
-                        "f:memory": Object {},
+                  "fieldsV1": {
+                    "f:status": {
+                      "f:allocatable": {
+                        "f:memory": {},
                       },
-                      "f:capacity": Object {
-                        "f:memory": Object {},
+                      "f:capacity": {
+                        "f:memory": {},
                       },
-                      "f:conditions": Object {
-                        "k:{\\"type\\":\\"DiskPressure\\"}": Object {
-                          "f:lastHeartbeatTime": Object {},
+                      "f:conditions": {
+                        "k:{"type":"DiskPressure"}": {
+                          "f:lastHeartbeatTime": {},
                         },
-                        "k:{\\"type\\":\\"MemoryPressure\\"}": Object {
-                          "f:lastHeartbeatTime": Object {},
+                        "k:{"type":"MemoryPressure"}": {
+                          "f:lastHeartbeatTime": {},
                         },
-                        "k:{\\"type\\":\\"PIDPressure\\"}": Object {
-                          "f:lastHeartbeatTime": Object {},
+                        "k:{"type":"PIDPressure"}": {
+                          "f:lastHeartbeatTime": {},
                         },
-                        "k:{\\"type\\":\\"Ready\\"}": Object {
-                          "f:lastHeartbeatTime": Object {},
-                          "f:lastTransitionTime": Object {},
-                          "f:message": Object {},
-                          "f:reason": Object {},
-                          "f:status": Object {},
+                        "k:{"type":"Ready"}": {
+                          "f:lastHeartbeatTime": {},
+                          "f:lastTransitionTime": {},
+                          "f:message": {},
+                          "f:reason": {},
+                          "f:status": {},
                         },
                       },
-                      "f:nodeInfo": Object {
-                        "f:bootID": Object {},
+                      "f:nodeInfo": {
+                        "f:bootID": {},
                       },
                     },
                   },
@@ -151,7 +151,7 @@ Object {
               "unschedulable": undefined,
             },
             "status": V1NodeStatus {
-              "addresses": Array [
+              "addresses": [
                 V1NodeAddress {
                   "address": "192.168.65.3",
                   "type": "InternalIP",
@@ -161,19 +161,19 @@ Object {
                   "type": "Hostname",
                 },
               ],
-              "allocatable": Object {
+              "allocatable": {
                 "cpu": "12",
                 "ephemeral-storage": "84747718516",
                 "memory": "16282672Ki",
                 "pods": "110",
               },
-              "capacity": Object {
+              "capacity": {
                 "cpu": "12",
                 "ephemeral-storage": "91957160Ki",
                 "memory": "16385072Ki",
                 "pods": "110",
               },
-              "conditions": Array [
+              "conditions": [
                 V1NodeCondition {
                   "lastHeartbeatTime": 2024-01-12T17:13:20.000Z,
                   "lastTransitionTime": 2024-01-11T15:50:14.000Z,
@@ -213,306 +213,306 @@ Object {
                   "Port": 10250,
                 },
               },
-              "images": Array [
+              "images": [
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-service-deploy-0adb2a04db43259ed990d705a9b5a299596f56bb-c1f49321-773e-4b79-9ad4-98cc2d8e04a7:latest",
                   ],
                   "sizeBytes": 2789256187,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.x-extras@sha256:345857deccc9f0fdab2cc9db1d21d093b9a6722132ca0a008d94ceeb0c8b0b42",
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.x-extras:11",
                   ],
                   "sizeBytes": 2701029005,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-palo-alto-deploy-a3a46424bc8ef89544d478a614f92cc21fd37d28-01f7278d-5a8b-4546-9fee-c5f7eb65749d:latest",
                   ],
                   "sizeBytes": 2251154371,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-snyk-deploy-77d585bc49ec12c94f29181a89619ff6add1d860-b08e1a47-321c-44ed-8306-91add082bc03:latest",
                   ],
                   "sizeBytes": 2250664571,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-snyk-deploy-133b9fcfede9cdca6a7123435c794ffc5592b8d1-69e056f3-e2e0-4b5a-9192-c9f0fc70f608:latest",
                   ],
                   "sizeBytes": 2250463563,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-a23bb4910a7da254430f347911a36fe00d1e3643-722189d2-e2b3-4882-bccd-bd81e30b621a:latest",
                   ],
                   "sizeBytes": 2236150016,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-a23bb4910a7da254430f347911a36fe00d1e3643-05608a10-f4dd-4d48-83e3-40766de18f7a:latest",
                   ],
                   "sizeBytes": 2236150000,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-a98bf6ba33d0cb296318de8cb04949e230ad6481-26fa9dcd-0066-4edf-8e15-9d2124b49b43:latest",
                   ],
                   "sizeBytes": 2234832903,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-a98bf6ba33d0cb296318de8cb04949e230ad6481-3b35888b-a849-4390-ba35-697972bf3cf4:latest",
                   ],
                   "sizeBytes": 2234830279,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-a98bf6ba33d0cb296318de8cb04949e230ad6481-cbe59f3b-7d78-4eca-85c5-a382d6c32f22:latest",
                   ],
                   "sizeBytes": 2234830256,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-a98bf6ba33d0cb296318de8cb04949e230ad6481-68bbd468-455d-4d63-a504-efddf04016a2:latest",
                   ],
                   "sizeBytes": 2234830224,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-a98bf6ba33d0cb296318de8cb04949e230ad6481-f26aac19-1a21-4413-86cb-b37760e8ffc0:latest",
                   ],
                   "sizeBytes": 2234830176,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-a98bf6ba33d0cb296318de8cb04949e230ad6481-90a25787-f4ad-4740-8db3-62f7b1f500ca:latest",
                   ],
                   "sizeBytes": 2234830121,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-a98bf6ba33d0cb296318de8cb04949e230ad6481-24cd75d0-0c1a-46a5-849a-5085cc46e522:latest",
                   ],
                   "sizeBytes": 2234829946,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-qualys-deploy-a68757e2cdeae23ef9197e04a2ecbdf8d6c9d933-3fd13512-6a6e-4322-bae9-7359b557decc:latest",
                   ],
                   "sizeBytes": 2217481293,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-qualys-deploy-a68757e2cdeae23ef9197e04a2ecbdf8d6c9d933-80ab279a-0bfe-4498-bdef-b98967def6c2:latest",
                   ],
                   "sizeBytes": 2217481269,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-qualys-deploy-a68757e2cdeae23ef9197e04a2ecbdf8d6c9d933-49090a33-a843-4698-b49f-362289024509:latest",
                   ],
                   "sizeBytes": 2217477163,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-qualys-deploy-a68757e2cdeae23ef9197e04a2ecbdf8d6c9d933-7fd6ed94-32f0-49b1-a353-03faebd4acaf:latest",
                   ],
                   "sizeBytes": 2217477162,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-snyk-deploy-133b9fcfede9cdca6a7123435c794ffc5592b8d1-fb6dc22b-1657-482a-9604-13b577862fc6:latest",
                   ],
                   "sizeBytes": 2217241742,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-snyk-deploy-133b9fcfede9cdca6a7123435c794ffc5592b8d1-b7fdfb7b-1507-4722-b6f8-1e2aeb38a0dd:latest",
                   ],
                   "sizeBytes": 2217241507,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-snyk-deploy-133b9fcfede9cdca6a7123435c794ffc5592b8d1-c88a7176-ca3d-49ef-8270-b4b7b2619a86:latest",
                   ],
                   "sizeBytes": 2217241502,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-snyk-deploy-77d585bc49ec12c94f29181a89619ff6add1d860-fcf101c6-83e1-43e1-ae13-ad207b6f7865:latest",
                   ],
                   "sizeBytes": 2217241468,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-snyk-deploy-77d585bc49ec12c94f29181a89619ff6add1d860-a7374626-6cac-4f02-970f-80314778392a:latest",
                   ],
                   "sizeBytes": 2217241468,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-oracle-cloud-deploy-337c4244e116d97a29f677ba7506760472586b2e-f7ea94d6-52d9-4254-8880-efca6f6cef3e:latest",
                   ],
                   "sizeBytes": 2199229909,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:86419a69a9a12a7fe05f91b98a41174f7a0d845a3216715ce66013111ff52e56",
                   ],
                   "sizeBytes": 2159633319,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:31dc3c4dd792ebf702609a8c20d1d55d65a7aad31912f0d6986bab464655b701",
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3:11",
                   ],
                   "sizeBytes": 2104876400,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-palo-alto-deploy-44e2f72741184ec657b2d40dc45c03266c5b21a7-a57213ec-0e69-4a86-aacc-2252e56e5c17:latest",
                   ],
                   "sizeBytes": 1917066318,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-palo-alto-deploy-44e2f72741184ec657b2d40dc45c03266c5b21a7-29d4e283-5443-436c-a5cb-254b3ed4a9d2:latest",
                   ],
                   "sizeBytes": 1917066097,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-palo-alto-deploy-44e2f72741184ec657b2d40dc45c03266c5b21a7-51540f9d-7ed5-4482-8a01-47020cbdeaba:latest",
                   ],
                   "sizeBytes": 1917061362,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-palo-alto-deploy-44e2f72741184ec657b2d40dc45c03266c5b21a7-5a0e7e60-3697-4b5f-8c08-2bfa487b07ca:latest",
                   ],
                   "sizeBytes": 1917061362,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-palo-alto-deploy-44e2f72741184ec657b2d40dc45c03266c5b21a7-5b292cfe-792a-4a59-9350-6db0ef438359:latest",
                   ],
                   "sizeBytes": 1917060922,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-palo-alto-deploy-44e2f72741184ec657b2d40dc45c03266c5b21a7-f8d90797-7dbf-4fb6-afd9-f036d6c1106b:latest",
                   ],
                   "sizeBytes": 1917060844,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-palo-alto-deploy-44e2f72741184ec657b2d40dc45c03266c5b21a7-1b8ae7d0-54b7-4cf5-b168-09a6985b6866:latest",
                   ],
                   "sizeBytes": 1914780301,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-palo-alto-deploy-44e2f72741184ec657b2d40dc45c03266c5b21a7-729d7898-85e3-4899-9ea1-fb058fc606cd:latest",
                   ],
                   "sizeBytes": 1914779979,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-53e7266d1de72b94640164d9afaf8e480c33ceb4-2e558d10-ab51-4cee-9afb-ba3f58ce1425:latest",
                     "jupiter-integration-github-deploy-fb31695144f5e41f74591956db86838387a94abc-2b29df49-1e19-4def-bef4-98528dc49ede:latest",
                   ],
                   "sizeBytes": 1914131831,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-0885d5eda63e0087751e9a567ba0fc764dbc58ec-9c8238b8-18ad-4854-aa86-63665590ed31:latest",
                   ],
                   "sizeBytes": 1900901350,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-0885d5eda63e0087751e9a567ba0fc764dbc58ec-ec86b77e-c199-4af3-99af-d5e0d5f4bdff:latest",
                   ],
                   "sizeBytes": 1900901269,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-0885d5eda63e0087751e9a567ba0fc764dbc58ec-a352266d-3355-481f-adb5-d67781031b4d:latest",
                   ],
                   "sizeBytes": 1900896409,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-0885d5eda63e0087751e9a567ba0fc764dbc58ec-623bb530-ed1e-4c8d-ac6b-530349489194:latest",
                   ],
                   "sizeBytes": 1900896303,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-210e833e37d13d1483ff5138764332fecc75c8d1-6df2e008-e85a-4d17-bf68-665263918946:latest",
                   ],
                   "sizeBytes": 1900894988,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-420e638f32a3de8e78b86e05ad316d1750aa7a06-3697b7be-3779-4bde-b379-04fe2280ec46:latest",
                   ],
                   "sizeBytes": 1900894938,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-210e833e37d13d1483ff5138764332fecc75c8d1-2bb7b0a3-bad9-42aa-a7d7-89485be5df00:latest",
                   ],
                   "sizeBytes": 1900894820,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-210e833e37d13d1483ff5138764332fecc75c8d1-2447d1ba-6f1e-443d-a0b3-3a6b7dc2a362:latest",
                   ],
                   "sizeBytes": 1900894675,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-0885d5eda63e0087751e9a567ba0fc764dbc58ec-0620caab-da9a-4e1c-a0ff-963629a1bfcf:latest",
                   ],
                   "sizeBytes": 1900892538,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-0885d5eda63e0087751e9a567ba0fc764dbc58ec-a95a0d8f-89ba-4546-8e12-bea64e05c590:latest",
                   ],
                   "sizeBytes": 1900889984,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-0885d5eda63e0087751e9a567ba0fc764dbc58ec-47c09170-7865-4428-9f4c-0beeb0c04d30:latest",
                   ],
                   "sizeBytes": 1900842412,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-c0831fe401125a4ca53c409960a7a43a2098e34b-540ef1d3-f365-4f7a-8561-6dc7897ae774:latest",
                   ],
                   "sizeBytes": 1872994272,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-c0831fe401125a4ca53c409960a7a43a2098e34b-9df157f4-6a62-4bc9-b9b6-49281c15d0fd:latest",
                   ],
                   "sizeBytes": 1872994263,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-c8dd81376b26a8ac60657b4ca92d1169df8752cf-77bf876e-f7e8-491f-b13b-d5ccdcca68d3:latest",
                   ],
                   "sizeBytes": 1862215735,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "jupiter-integration-github-deploy-f96f0d7bae3326cd7589b11a926e5afe6824dab0-e4b54287-27d2-4c70-a517-29f7ac026a36:latest",
                   ],
                   "sizeBytes": 1862215735,
@@ -548,12 +548,12 @@ Object {
       "podCIDR": undefined,
       "podCIDRs": undefined,
       "privateDnsName": undefined,
-      "privateIpAddress": Array [
+      "privateIpAddress": [
         "192.168.65.3",
       ],
       "providerID": undefined,
       "publicDnsName": undefined,
-      "publicIpAddress": Array [],
+      "publicIpAddress": [],
       "resourceVersion": "51758",
       "status.allocatable.cpu": "12",
       "status.allocatable.ephemeral-storage": "84747718516",
@@ -581,8 +581,8 @@ Object {
       "unschedulable": undefined,
     },
   ],
-  "collectedRelationships": Array [],
-  "encounteredTypes": Array [
+  "collectedRelationships": [],
+  "encounteredTypes": [
     "kube_node",
   ],
   "numCollectedEntities": 1,
