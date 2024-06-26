@@ -21,10 +21,10 @@ export async function fetchImages(
     async (nodeEntity) => {
       const rawNode = getRawData<k8s.V1Node>(nodeEntity);
       if (rawNode?.status?.images) {
-        for (const image of rawNode?.status?.images) {
+        for (const image of rawNode!.status!.images) {
           try {
             const imageEntity = createContainerImageEntity(image);
-            if (!(await jobState.hasKey(imageEntity._key))) {
+            if (!jobState.hasKey(imageEntity._key)) {
               await jobState.addEntity(imageEntity);
               await jobState.addRelationship(
                 createDirectRelationship({
