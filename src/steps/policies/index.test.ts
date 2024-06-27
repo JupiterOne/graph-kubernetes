@@ -2,8 +2,8 @@ import { fetchNetworkPolicies } from '.';
 import { createDataCollectionTest } from '../../../test/recording';
 import { integrationConfig } from '../../../test/config';
 import { Entities, Relationships } from '../constants';
-import { RelationshipClass } from '@jupiterone/data-model';
 import { fetchNamespaces } from '../namespaces';
+import { RelationshipClass } from '@jupiterone/integration-sdk-core';
 
 describe('#fetchNetworkPolicies', () => {
   test('should collect data', async () => {

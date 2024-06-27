@@ -8,8 +8,8 @@ import { createDataCollectionTest } from '../../../test/recording';
 import { integrationConfig } from '../../../test/config';
 import { Entities, MappedRelationships, Relationships } from '../constants';
 import { fetchNamespaces } from '../namespaces';
-import { RelationshipClass } from '@jupiterone/data-model';
 import { fetchConfigMaps } from '../config-maps';
+import { RelationshipClass } from '@jupiterone/integration-sdk-core';
 
 describe('#fetchClusterDetails', () => {
   test('should collect data', async () => {

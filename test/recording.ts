@@ -1,4 +1,7 @@
-import { IntegrationStepExecutionContext } from '@jupiterone/integration-sdk-core';
+import {
+  IntegrationInstanceConfig,
+  IntegrationStepExecutionContext,
+} from '@jupiterone/integration-sdk-core';
 import {
   setupRecording,
   SetupRecordingInput,
@@ -8,7 +11,7 @@ import {
 } from '@jupiterone/integration-sdk-testing';
 import { PollyConfig } from '@pollyjs/core';
 import * as nodeUrl from 'url';
-
+import { invocationConfig } from '../src';
 export { Recording } from '@jupiterone/integration-sdk-testing';
 
 const DEFAULT_RECORDING_HOST = '192.168.49.2:8443';
@@ -135,19 +138,23 @@ export interface RelationshipSchemaMatcher {
   matcher: ToMatchRelationshipSchemaParams;
 }
 
-export interface CreateDataCollectionTestParams<IIntegrationConfig> {
+export interface CreateDataCollectionTestParams<
+  IntegrationConfig extends IntegrationInstanceConfig,
+> {
   recordingName: string;
   recordingDirectory: string;
-  integrationConfig: IIntegrationConfig;
+  integrationConfig: IntegrationConfig;
   stepFunctions: ((
-    context: IntegrationStepExecutionContext<IIntegrationConfig>,
+    context: IntegrationStepExecutionContext<IntegrationConfig>,
   ) => Promise<void>)[];
   entitySchemaMatchers?: EntitySchemaMatcher[];
   relationshipSchemaMatchers?: RelationshipSchemaMatcher[];
   options?: PollyConfig;
 }
 
-export async function createDataCollectionTest<IIntegrationConfig>({
+export async function createDataCollectionTest<
+  IntegrationConfig extends IntegrationInstanceConfig,
+>({
   recordingName,
   recordingDirectory,
   integrationConfig,
@@ -155,9 +162,10 @@ export async function createDataCollectionTest<IIntegrationConfig>({
   entitySchemaMatchers,
   relationshipSchemaMatchers,
   options,
-}: CreateDataCollectionTestParams<IIntegrationConfig>) {
-  const context = createMockStepExecutionContext<IIntegrationConfig>({
+}: CreateDataCollectionTestParams<IntegrationConfig>) {
+  const context = createMockStepExecutionContext<IntegrationConfig>({
     instanceConfig: integrationConfig,
+    normalizeGraphObjectKey: invocationConfig.normalizeGraphObjectKey,
   });
 
   await withRecording(

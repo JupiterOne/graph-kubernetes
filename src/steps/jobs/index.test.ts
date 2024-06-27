@@ -4,7 +4,7 @@ import { fetchNamespaces } from '../namespaces';
 import { createDataCollectionTest } from '../../../test/recording';
 import { integrationConfig } from '../../../test/config';
 import { Entities, Relationships } from '../constants';
-import { RelationshipClass } from '@jupiterone/data-model';
+import { RelationshipClass } from '@jupiterone/integration-sdk-core';
 
 describe('#fetchJobs1', () => {
   test('should collect data', async () => {
