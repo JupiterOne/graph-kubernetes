@@ -7,14 +7,13 @@ import {
 } from '@jupiterone/integration-sdk-core';
 import { V1DaemonSet } from '@kubernetes/client-node';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
-import {
-  Entities,
-  IntegrationSteps,
-  Relationships,
-} from '../constants';
+import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { createDaemonSetEntity } from './converters';
 import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
-import { createContainerSpecEntity, getContainerSpecKey } from '../deployments/converters';
+import {
+  createContainerSpecEntity,
+  getContainerSpecKey,
+} from '../deployments/converters';
 
 export async function fetchDaemonSets(
   context: IntegrationStepContext,
@@ -45,7 +44,8 @@ export async function fetchDaemonSets(
 
           for (const container of daemonSet.spec?.template?.spec?.containers ||
             []) {
-            const daemonSetContainerspecEntity = createContainerSpecEntity(namespaceEntity.name as string,
+            const daemonSetContainerspecEntity = createContainerSpecEntity(
+              namespaceEntity.name as string,
               container,
             );
             // Check if the entity is already present in jobState
@@ -95,11 +95,11 @@ export async function buildContainerSpecDaemonsetRelationship(
 
               await jobState.addRelationship(
                 createDirectRelationship({
-                  _class: RelationshipClass.HAS,
-                  fromKey: containerSpecKey,
-                  fromType: Entities.CONTAINER_SPEC._type,
-                  toKey: daemonSetEntity._key,
-                  toType: Entities.DAEMONSET._type,
+                  _class: RelationshipClass.USES,
+                  toKey: containerSpecKey,
+                  toType: Entities.CONTAINER_SPEC._type,
+                  fromKey: daemonSetEntity._key,
+                  fromType: Entities.DAEMONSET._type,
                 }),
               );
             }
@@ -123,7 +123,7 @@ export const daemonSetsSteps: IntegrationStep<IntegrationConfig>[] = [
     id: IntegrationSteps.CONTAINER_SPEC_HAS_DAEMONSET,
     name: 'Build Container Spec HAS Daemonset relationship',
     entities: [],
-    relationships: [Relationships.CONTAINER_SPEC_HAS_DAEMONSET],
+    relationships: [Relationships.DAEMONSET_USES_CONTAINER_SPEC],
     dependsOn: [IntegrationSteps.DAEMONSETS],
     executionHandler: buildContainerSpecDaemonsetRelationship,
   },

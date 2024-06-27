@@ -7,14 +7,13 @@ import {
 } from '@jupiterone/integration-sdk-core';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
 import { V1ReplicaSet } from '@kubernetes/client-node';
-import {
-  Entities,
-  IntegrationSteps,
-  Relationships,
-} from '../constants';
+import { Entities, IntegrationSteps, Relationships } from '../constants';
 import { createReplicaSetEntity } from './converters';
 import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
-import { createContainerSpecEntity, getContainerSpecKey } from '../deployments/converters';
+import {
+  createContainerSpecEntity,
+  getContainerSpecKey,
+} from '../deployments/converters';
 
 export async function fetchReplicaSets(
   context: IntegrationStepContext,
@@ -59,11 +58,15 @@ export async function fetchReplicaSets(
           }
           for (const container of replicaSet.spec?.template?.spec?.containers ||
             []) {
-            const replicaSetContainerspecEntity = createContainerSpecEntity(namespaceEntity.name as string, container);
+            const replicaSetContainerspecEntity = createContainerSpecEntity(
+              namespaceEntity.name as string,
+              container,
+            );
             // Check if the entity is already present in jobState
             if (jobState.hasKey(replicaSetContainerspecEntity._key)) {
               continue; // Skip to the next iteration if the entity is already present
-            } await jobState.addEntity(replicaSetContainerspecEntity);
+            }
+            await jobState.addEntity(replicaSetContainerspecEntity);
 
             if (jobState.hasKey(container.image)) {
               await jobState.addRelationship(
@@ -99,7 +102,8 @@ export async function buildContainerSpecReplicasetRelationship(
         },
         async (replicaSetEntity) => {
           const rawNode = getRawData<V1ReplicaSet>(replicaSetEntity);
-          const replicaSetContainers = rawNode?.spec?.template?.spec?.containers;
+          const replicaSetContainers =
+            rawNode?.spec?.template?.spec?.containers;
 
           if (replicaSetContainers) {
             for (const container of replicaSetContainers) {
@@ -118,11 +122,11 @@ export async function buildContainerSpecReplicasetRelationship(
 
               await jobState.addRelationship(
                 createDirectRelationship({
-                  _class: RelationshipClass.HAS,
-                  fromKey: containerSpecKey,
-                  fromType: Entities.CONTAINER_SPEC._type,
-                  toKey: replicaSetEntity._key,
-                  toType: Entities.REPLICASET._type,
+                  _class: RelationshipClass.USES,
+                  toKey: containerSpecKey,
+                  toType: Entities.CONTAINER_SPEC._type,
+                  fromKey: replicaSetEntity._key,
+                  fromType: Entities.REPLICASET._type,
                 }),
               );
             }
@@ -132,7 +136,6 @@ export async function buildContainerSpecReplicasetRelationship(
     },
   );
 }
-
 
 export const replicaSetsSteps: IntegrationStep<IntegrationConfig>[] = [
   {
@@ -155,7 +158,7 @@ export const replicaSetsSteps: IntegrationStep<IntegrationConfig>[] = [
     id: IntegrationSteps.CONTAINER_SPEC_HAS_REPLICASET,
     name: 'Build Container Spec HAS Replicaset relationship',
     entities: [],
-    relationships: [Relationships.CONTAINER_SPEC_HAS_REPLICASET],
+    relationships: [Relationships.REPLICASET_USES_CONTAINER_SPEC],
     dependsOn: [IntegrationSteps.REPLICASETS],
     executionHandler: buildContainerSpecReplicasetRelationship,
   },

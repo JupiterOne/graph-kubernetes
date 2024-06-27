@@ -62,12 +62,12 @@ describe('#fetchCronJobs', () => {
           },
         },
         {
-          _type: Relationships.CONTAINER_SPEC_HAS_CRONJOB._type,
+          _type: Relationships.CRONJOB_USES_CONTAINER_SPEC._type,
           matcher: {
             schema: {
               properties: {
                 _class: { const: RelationshipClass.HAS },
-                _type: { const: 'kube_container_spec_has_cron_job' },
+                _type: { const: 'kube_cron_job_uses_container_spec' },
               },
             },
           },

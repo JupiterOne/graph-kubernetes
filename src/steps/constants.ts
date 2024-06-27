@@ -336,35 +336,35 @@ export const Relationships = {
     sourceType: Entities.POD._type,
     targetType: Entities.CONTAINER._type,
   },
-  CONTAINER_SPEC_HAS_JOB: {
-    _type: 'kube_container_spec_has_job',
-    _class: RelationshipClass.HAS,
-    sourceType: Entities.CONTAINER_SPEC._type,
-    targetType: Entities.JOB._type,
+  JOB_USES_CONTAINER_SPEC: {
+    _type: 'kube_job_uses_container_spec',
+    _class: RelationshipClass.USES,
+    sourceType: Entities.JOB._type,
+    targetType: Entities.CONTAINER_SPEC._type,
   },
-  CONTAINER_SPEC_HAS_CRONJOB: {
-    _type: 'kube_container_spec_has_cron_job',
-    _class: RelationshipClass.HAS,
-    sourceType: Entities.CONTAINER_SPEC._type,
-    targetType: Entities.CRONJOB._type,
+  CRONJOB_USES_CONTAINER_SPEC: {
+    _type: 'kube_cron_job_uses_container_spec',
+    _class: RelationshipClass.USES,
+    sourceType: Entities.CRONJOB._type,
+    targetType: Entities.CONTAINER_SPEC._type,
   },
-  CONTAINER_SPEC_HAS_DAEMONSET: {
-    _type: 'kube_container_spec_has_daemon_set',
-    _class: RelationshipClass.HAS,
-    sourceType: Entities.CONTAINER_SPEC._type,
-    targetType: Entities.DAEMONSET._type,
+  DAEMONSET_USES_CONTAINER_SPEC: {
+    _type: 'kube_daemon_set_uses_container_spec',
+    _class: RelationshipClass.USES,
+    sourceType: Entities.DAEMONSET._type,
+    targetType: Entities.CONTAINER_SPEC._type,
   },
-  CONTAINER_SPEC_HAS_REPLICASET: {
-    _type: 'kube_container_spec_has_replica_set',
-    _class: RelationshipClass.HAS,
-    sourceType: Entities.CONTAINER_SPEC._type,
-    targetType: Entities.REPLICASET._type,
+  REPLICASET_USES_CONTAINER_SPEC: {
+    _type: 'kube_replica_set_uses_container_spec',
+    _class: RelationshipClass.USES,
+    sourceType: Entities.REPLICASET._type,
+    targetType: Entities.CONTAINER_SPEC._type,
   },
-  CONTAINER_SPEC_HAS_STATEFULSET: {
-    _type: 'kube_container_spec_has_stateful_set',
-    _class: RelationshipClass.HAS,
-    sourceType: Entities.CONTAINER_SPEC._type,
-    targetType: Entities.STATEFULSET._type,
+  STATEFULSET_USES_CONTAINER_SPEC: {
+    _type: 'kube_stateful_set_uses_container_spec',
+    _class: RelationshipClass.USES,
+    sourceType: Entities.STATEFULSET._type,
+    targetType: Entities.CONTAINER_SPEC._type,
   },
 };
 

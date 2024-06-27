@@ -79,12 +79,12 @@ describe('#fetchJobs1', () => {
           },
         },
         {
-          _type: Relationships.CONTAINER_SPEC_HAS_JOB._type,
+          _type: Relationships.JOB_USES_CONTAINER_SPEC._type,
           matcher: {
             schema: {
               properties: {
                 _class: { const: RelationshipClass.HAS },
-                _type: { const: 'kube_container_spec_has_job' },
+                _type: { const: 'kube_job_uses_container_spec' },
               },
             },
           },
