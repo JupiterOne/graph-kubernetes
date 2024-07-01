@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#fetchServiceAccounts should collect data: jobState 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
+{
+  "collectedEntities": [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "868d4703-b338-4051-98e4-b65b4f0a0006",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
@@ -22,18 +22,18 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "default",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
@@ -51,7 +51,7 @@ Object {
               "uid": "868d4703-b338-4051-98e4-b65b4f0a0006",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -67,7 +67,7 @@ Object {
       "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "default",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -75,13 +75,13 @@ Object {
       "resourceVersion": "39",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "52615a92-75c3-4c4b-8b72-51be82a4bc21",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
@@ -94,18 +94,18 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-node-lease",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
@@ -123,7 +123,7 @@ Object {
               "uid": "52615a92-75c3-4c4b-8b72-51be82a4bc21",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -139,7 +139,7 @@ Object {
       "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-node-lease",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -147,13 +147,13 @@ Object {
       "resourceVersion": "35",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "7a2ee4f7-12fd-494b-93f0-c639b1e63a72",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
@@ -166,18 +166,18 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-public",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
@@ -195,7 +195,7 @@ Object {
               "uid": "7a2ee4f7-12fd-494b-93f0-c639b1e63a72",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -211,7 +211,7 @@ Object {
       "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-public",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -219,13 +219,13 @@ Object {
       "resourceVersion": "20",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
@@ -238,18 +238,18 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-system",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
@@ -267,7 +267,7 @@ Object {
               "uid": "ce86116b-863b-4e74-979e-3c031a9aeee1",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -283,7 +283,7 @@ Object {
       "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-system",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -291,13 +291,13 @@ Object {
       "resourceVersion": "12",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "6c7b63ce-1172-4fec-bedf-440a7e55539b",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -335,13 +335,13 @@ Object {
       "resourceVersion": "325",
       "username": "default",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "09317f12-ec71-48f5-a7f7-b63252cb60e9",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -349,8 +349,8 @@ Object {
             "imagePullSecrets": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
-              "annotations": Object {
-                "kubectl.kubernetes.io/last-applied-configuration": "{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"ServiceAccount\\",\\"metadata\\":{\\"annotations\\":{},\\"labels\\":{\\"app.kubernetes.io/managed-by\\":\\"tilt\\"},\\"name\\":\\"graph-kubernetes\\",\\"namespace\\":\\"default\\"}}
+              "annotations": {
+                "kubectl.kubernetes.io/last-applied-configuration": "{"apiVersion":"v1","kind":"ServiceAccount","metadata":{"annotations":{},"labels":{"app.kubernetes.io/managed-by":"tilt"},"name":"graph-kubernetes","namespace":"default"}}
 ",
               },
               "creationTimestamp": 2024-01-12T16:59:26.000Z,
@@ -359,22 +359,22 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "app.kubernetes.io/managed-by": "tilt",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:kubectl.kubernetes.io/last-applied-configuration": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:kubectl.kubernetes.io/last-applied-configuration": {},
                       },
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:app.kubernetes.io/managed-by": Object {},
+                      "f:labels": {
+                        ".": {},
+                        "f:app.kubernetes.io/managed-by": {},
                       },
                     },
                   },
@@ -405,13 +405,13 @@ Object {
       "resourceVersion": "50619",
       "username": "graph-kubernetes",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "ef9d8cef-0d8e-45f0-9f24-58ce98eed700",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -419,7 +419,7 @@ Object {
             "imagePullSecrets": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
-              "annotations": Object {
+              "annotations": {
                 "meta.helm.sh/release-name": "np-test",
                 "meta.helm.sh/release-namespace": "default",
               },
@@ -429,32 +429,32 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "app.kubernetes.io/instance": "np-test",
                 "app.kubernetes.io/managed-by": "Helm",
                 "app.kubernetes.io/name": "mariadb",
                 "app.kubernetes.io/version": "11.2.2",
                 "helm.sh/chart": "mariadb-15.0.1",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:automountServiceAccountToken": Object {},
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:meta.helm.sh/release-name": Object {},
-                        "f:meta.helm.sh/release-namespace": Object {},
+                  "fieldsV1": {
+                    "f:automountServiceAccountToken": {},
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:meta.helm.sh/release-name": {},
+                        "f:meta.helm.sh/release-namespace": {},
                       },
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:app.kubernetes.io/instance": Object {},
-                        "f:app.kubernetes.io/managed-by": Object {},
-                        "f:app.kubernetes.io/name": Object {},
-                        "f:app.kubernetes.io/version": Object {},
-                        "f:helm.sh/chart": Object {},
+                      "f:labels": {
+                        ".": {},
+                        "f:app.kubernetes.io/instance": {},
+                        "f:app.kubernetes.io/managed-by": {},
+                        "f:app.kubernetes.io/name": {},
+                        "f:app.kubernetes.io/version": {},
+                        "f:helm.sh/chart": {},
                       },
                     },
                   },
@@ -485,13 +485,13 @@ Object {
       "resourceVersion": "27431",
       "username": "np-test-mariadb",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "3f347698-aaa6-4381-aea0-d3e9e508c537",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -529,13 +529,13 @@ Object {
       "resourceVersion": "326",
       "username": "default",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "791471b2-ce4a-4a7b-b5d8-0b70d66606ba",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -573,13 +573,13 @@ Object {
       "resourceVersion": "327",
       "username": "default",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "b27655c8-9005-4738-8b92-a006cf7b56a6",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -617,13 +617,13 @@ Object {
       "resourceVersion": "290",
       "username": "attachdetach-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "b2bd8412-9ce8-4363-a180-58b7414ecef9",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -661,13 +661,13 @@ Object {
       "resourceVersion": "297",
       "username": "bootstrap-signer",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "d577d418-7082-4ea9-ad93-e48f75b702b1",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -705,13 +705,13 @@ Object {
       "resourceVersion": "240",
       "username": "certificate-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "a33b34ec-00bd-4dcd-8cd5-12d572cccff4",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -749,13 +749,13 @@ Object {
       "resourceVersion": "278",
       "username": "clusterrole-aggregation-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "5e30ef66-afc4-4de1-b404-1531327a4360",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -793,13 +793,13 @@ Object {
       "resourceVersion": "272",
       "username": "coredns",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "aded4dd4-d3f5-4e27-808d-ca5d0e6f807f",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -837,13 +837,13 @@ Object {
       "resourceVersion": "292",
       "username": "cronjob-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "1ded4d9a-be46-41fb-b81f-949319e57214",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -881,13 +881,13 @@ Object {
       "resourceVersion": "237",
       "username": "daemon-set-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "f0f8dec6-1ef2-48db-8c66-444fc1cef338",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -925,13 +925,13 @@ Object {
       "resourceVersion": "329",
       "username": "default",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "e6e55124-07d7-4542-bd60-2124d39c4446",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -969,13 +969,13 @@ Object {
       "resourceVersion": "242",
       "username": "deployment-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "20194b7e-b1a2-46cd-909d-0ef9a826f7a1",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1013,13 +1013,13 @@ Object {
       "resourceVersion": "239",
       "username": "disruption-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "01e4ebc1-0b67-46a3-8261-135f7461ecf2",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1057,13 +1057,13 @@ Object {
       "resourceVersion": "235",
       "username": "endpoint-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "ecdba824-78b4-4694-a9f1-afc7e2d92ee6",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1101,13 +1101,13 @@ Object {
       "resourceVersion": "241",
       "username": "endpointslice-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "4eb94cde-87dd-423a-adee-882a53ce3484",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1145,13 +1145,13 @@ Object {
       "resourceVersion": "252",
       "username": "endpointslicemirroring-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "c6c8ab23-ce75-4891-a505-4a7183060e89",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1189,13 +1189,13 @@ Object {
       "resourceVersion": "256",
       "username": "ephemeral-volume-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "0cb4e075-f095-46c9-940b-2cc98ae6175f",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1233,13 +1233,13 @@ Object {
       "resourceVersion": "299",
       "username": "expand-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "53d829bd-c475-4f78-933c-73210a6b5b66",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1277,13 +1277,13 @@ Object {
       "resourceVersion": "296",
       "username": "generic-garbage-collector",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "bcb8b395-4cdb-4065-9673-d217cab0535e",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1321,13 +1321,13 @@ Object {
       "resourceVersion": "238",
       "username": "horizontal-pod-autoscaler",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "72656e87-1e26-4701-a9df-e98c33098d59",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1365,13 +1365,13 @@ Object {
       "resourceVersion": "291",
       "username": "job-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "1012920b-dbd7-4f2d-abd1-396a4634641c",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1409,13 +1409,13 @@ Object {
       "resourceVersion": "279",
       "username": "kube-proxy",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "1adf8178-baa7-421e-adac-64afa6526011",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1453,13 +1453,13 @@ Object {
       "resourceVersion": "295",
       "username": "namespace-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "6f7d3380-662c-49e7-a15e-704945f05842",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1497,13 +1497,13 @@ Object {
       "resourceVersion": "251",
       "username": "node-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "6f687684-d145-402f-94ee-55a2dfc39737",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1541,13 +1541,13 @@ Object {
       "resourceVersion": "286",
       "username": "persistent-volume-binder",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "c3766b02-e6df-437b-9e97-d7a66c70a4fe",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1585,13 +1585,13 @@ Object {
       "resourceVersion": "236",
       "username": "pod-garbage-collector",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "bcacdb78-edb0-476c-903e-ac9190110d67",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1629,13 +1629,13 @@ Object {
       "resourceVersion": "300",
       "username": "pv-protection-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "ef455def-f853-41e4-9094-ab50fbfe3dec",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1673,13 +1673,13 @@ Object {
       "resourceVersion": "293",
       "username": "pvc-protection-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "42b9324d-9f83-4359-8b67-80befbdacc24",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1717,13 +1717,13 @@ Object {
       "resourceVersion": "285",
       "username": "replicaset-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "eacee075-35fd-4693-9648-af3d0d78df14",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1761,13 +1761,13 @@ Object {
       "resourceVersion": "257",
       "username": "replication-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "d6f598d4-d36b-4b09-ac51-c4e8f8eabb8e",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1805,13 +1805,13 @@ Object {
       "resourceVersion": "284",
       "username": "resourcequota-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "42b0a1c3-ae81-4c22-b8bf-4a21f8cd0fcf",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1849,13 +1849,13 @@ Object {
       "resourceVersion": "294",
       "username": "root-ca-cert-publisher",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "f51cd24e-b63e-492b-bf72-d15e64c7ba44",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1893,13 +1893,13 @@ Object {
       "resourceVersion": "253",
       "username": "service-account-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "f75e36fc-9f1b-4d7f-9f0c-3aadaf013b93",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1937,13 +1937,13 @@ Object {
       "resourceVersion": "255",
       "username": "service-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "9f63942b-75df-4476-a08b-3192d1a01dec",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1981,13 +1981,13 @@ Object {
       "resourceVersion": "263",
       "username": "statefulset-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "67241c13-4026-48f0-a306-d6c128410ac6",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -1995,8 +1995,8 @@ Object {
             "imagePullSecrets": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
-              "annotations": Object {
-                "kubectl.kubernetes.io/last-applied-configuration": "{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"ServiceAccount\\",\\"metadata\\":{\\"annotations\\":{},\\"name\\":\\"storage-provisioner\\",\\"namespace\\":\\"kube-system\\"}}
+              "annotations": {
+                "kubectl.kubernetes.io/last-applied-configuration": "{"apiVersion":"v1","kind":"ServiceAccount","metadata":{"annotations":{},"name":"storage-provisioner","namespace":"kube-system"}}
 ",
               },
               "creationTimestamp": 2024-01-11T15:50:24.000Z,
@@ -2006,15 +2006,15 @@ Object {
               "generateName": undefined,
               "generation": undefined,
               "labels": undefined,
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:kubectl.kubernetes.io/last-applied-configuration": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:kubectl.kubernetes.io/last-applied-configuration": {},
                       },
                     },
                   },
@@ -2045,13 +2045,13 @@ Object {
       "resourceVersion": "389",
       "username": "storage-provisioner",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "c25b90c4-7b9d-487d-a95b-c3fce04e680b",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -2089,13 +2089,13 @@ Object {
       "resourceVersion": "250",
       "username": "token-cleaner",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "92ddcc09-2637-48df-855a-00da812124bc",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -2133,13 +2133,13 @@ Object {
       "resourceVersion": "282",
       "username": "ttl-after-finished-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "cb9df2ef-b2e1-4cbe-bea3-304cea18f1b0",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -2177,13 +2177,13 @@ Object {
       "resourceVersion": "243",
       "username": "ttl-controller",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "User",
       ],
       "_key": "d33611b2-0629-4d52-8429-284b0ccdbea4",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ServiceAccount {
             "apiVersion": undefined,
@@ -2191,8 +2191,8 @@ Object {
             "imagePullSecrets": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
-              "annotations": Object {
-                "kubectl.kubernetes.io/last-applied-configuration": "{\\"apiVersion\\":\\"v1\\",\\"kind\\":\\"ServiceAccount\\",\\"metadata\\":{\\"annotations\\":{},\\"name\\":\\"vpnkit-controller\\",\\"namespace\\":\\"kube-system\\"}}
+              "annotations": {
+                "kubectl.kubernetes.io/last-applied-configuration": "{"apiVersion":"v1","kind":"ServiceAccount","metadata":{"annotations":{},"name":"vpnkit-controller","namespace":"kube-system"}}
 ",
               },
               "creationTimestamp": 2024-01-11T15:50:25.000Z,
@@ -2202,15 +2202,15 @@ Object {
               "generateName": undefined,
               "generation": undefined,
               "labels": undefined,
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:kubectl.kubernetes.io/last-applied-configuration": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:kubectl.kubernetes.io/last-applied-configuration": {},
                       },
                     },
                   },
@@ -2242,8 +2242,8 @@ Object {
       "username": "vpnkit-controller",
     },
   ],
-  "collectedRelationships": Array [
-    Object {
+  "collectedRelationships": [
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "868d4703-b338-4051-98e4-b65b4f0a0006",
       "_key": "868d4703-b338-4051-98e4-b65b4f0a0006|contains|6c7b63ce-1172-4fec-bedf-440a7e55539b",
@@ -2251,7 +2251,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "868d4703-b338-4051-98e4-b65b4f0a0006",
       "_key": "868d4703-b338-4051-98e4-b65b4f0a0006|contains|09317f12-ec71-48f5-a7f7-b63252cb60e9",
@@ -2259,7 +2259,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "868d4703-b338-4051-98e4-b65b4f0a0006",
       "_key": "868d4703-b338-4051-98e4-b65b4f0a0006|contains|ef9d8cef-0d8e-45f0-9f24-58ce98eed700",
@@ -2267,7 +2267,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "52615a92-75c3-4c4b-8b72-51be82a4bc21",
       "_key": "52615a92-75c3-4c4b-8b72-51be82a4bc21|contains|3f347698-aaa6-4381-aea0-d3e9e508c537",
@@ -2275,7 +2275,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "7a2ee4f7-12fd-494b-93f0-c639b1e63a72",
       "_key": "7a2ee4f7-12fd-494b-93f0-c639b1e63a72|contains|791471b2-ce4a-4a7b-b5d8-0b70d66606ba",
@@ -2283,7 +2283,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|b27655c8-9005-4738-8b92-a006cf7b56a6",
@@ -2291,7 +2291,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|b2bd8412-9ce8-4363-a180-58b7414ecef9",
@@ -2299,7 +2299,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|d577d418-7082-4ea9-ad93-e48f75b702b1",
@@ -2307,7 +2307,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|a33b34ec-00bd-4dcd-8cd5-12d572cccff4",
@@ -2315,7 +2315,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|5e30ef66-afc4-4de1-b404-1531327a4360",
@@ -2323,7 +2323,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|aded4dd4-d3f5-4e27-808d-ca5d0e6f807f",
@@ -2331,7 +2331,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|1ded4d9a-be46-41fb-b81f-949319e57214",
@@ -2339,7 +2339,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|f0f8dec6-1ef2-48db-8c66-444fc1cef338",
@@ -2347,7 +2347,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|e6e55124-07d7-4542-bd60-2124d39c4446",
@@ -2355,7 +2355,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|20194b7e-b1a2-46cd-909d-0ef9a826f7a1",
@@ -2363,7 +2363,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|01e4ebc1-0b67-46a3-8261-135f7461ecf2",
@@ -2371,7 +2371,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|ecdba824-78b4-4694-a9f1-afc7e2d92ee6",
@@ -2379,7 +2379,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|4eb94cde-87dd-423a-adee-882a53ce3484",
@@ -2387,7 +2387,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|c6c8ab23-ce75-4891-a505-4a7183060e89",
@@ -2395,7 +2395,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|0cb4e075-f095-46c9-940b-2cc98ae6175f",
@@ -2403,7 +2403,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|53d829bd-c475-4f78-933c-73210a6b5b66",
@@ -2411,7 +2411,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|bcb8b395-4cdb-4065-9673-d217cab0535e",
@@ -2419,7 +2419,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|72656e87-1e26-4701-a9df-e98c33098d59",
@@ -2427,7 +2427,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|1012920b-dbd7-4f2d-abd1-396a4634641c",
@@ -2435,7 +2435,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|1adf8178-baa7-421e-adac-64afa6526011",
@@ -2443,7 +2443,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|6f7d3380-662c-49e7-a15e-704945f05842",
@@ -2451,7 +2451,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|6f687684-d145-402f-94ee-55a2dfc39737",
@@ -2459,7 +2459,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|c3766b02-e6df-437b-9e97-d7a66c70a4fe",
@@ -2467,7 +2467,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|bcacdb78-edb0-476c-903e-ac9190110d67",
@@ -2475,7 +2475,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|ef455def-f853-41e4-9094-ab50fbfe3dec",
@@ -2483,7 +2483,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|42b9324d-9f83-4359-8b67-80befbdacc24",
@@ -2491,7 +2491,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|eacee075-35fd-4693-9648-af3d0d78df14",
@@ -2499,7 +2499,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|d6f598d4-d36b-4b09-ac51-c4e8f8eabb8e",
@@ -2507,7 +2507,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|42b0a1c3-ae81-4c22-b8bf-4a21f8cd0fcf",
@@ -2515,7 +2515,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|f51cd24e-b63e-492b-bf72-d15e64c7ba44",
@@ -2523,7 +2523,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|f75e36fc-9f1b-4d7f-9f0c-3aadaf013b93",
@@ -2531,7 +2531,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|9f63942b-75df-4476-a08b-3192d1a01dec",
@@ -2539,7 +2539,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|67241c13-4026-48f0-a306-d6c128410ac6",
@@ -2547,7 +2547,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|c25b90c4-7b9d-487d-a95b-c3fce04e680b",
@@ -2555,7 +2555,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|92ddcc09-2637-48df-855a-00da812124bc",
@@ -2563,7 +2563,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|cb9df2ef-b2e1-4cbe-bea3-304cea18f1b0",
@@ -2571,7 +2571,7 @@ Object {
       "_type": "kube_namespace_contains_service_account",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|d33611b2-0629-4d52-8429-284b0ccdbea4",
@@ -2580,7 +2580,7 @@ Object {
       "displayName": "CONTAINS",
     },
   ],
-  "encounteredTypes": Array [
+  "encounteredTypes": [
     "kube_namespace",
     "kube_service_account",
     "kube_namespace_contains_service_account",
@@ -2591,17 +2591,17 @@ Object {
 `;
 
 exports[`#fetchUsers should collect data: jobState 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
+{
+  "collectedEntities": [
+    {
+      "_class": [
         "User",
       ],
       "_key": "kube_user:docker-desktop",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
-          "rawData": Object {
+          "rawData": {
             "certFile": undefined,
             "keyFile": undefined,
             "name": "docker-desktop",
@@ -2618,8 +2618,8 @@ Object {
       "username": "docker-desktop",
     },
   ],
-  "collectedRelationships": Array [],
-  "encounteredTypes": Array [
+  "collectedRelationships": [],
+  "encounteredTypes": [
     "kube_user",
   ],
   "numCollectedEntities": 1,

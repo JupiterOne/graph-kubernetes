@@ -133,6 +133,18 @@ export default async function getStepStartStates(
       [IntegrationSteps.NODES]: {
         disabled: nodesDisabled,
       },
+      [IntegrationSteps.CONTAINER_SPEC_HAS_JOB]: {
+        disabled: jobsDisabled,
+      },
+      [IntegrationSteps.CONTAINER_SPEC_HAS_DAEMONSET]: {
+        disabled: daemonsetsDisabled,
+      },
+      [IntegrationSteps.CONTAINER_SPEC_HAS_REPLICASET]: {
+        disabled: replicasetsDisabled,
+      },
+      [IntegrationSteps.CONTAINER_SPEC_HAS_CRON_JOB]: {
+        disabled: cronJobsDisabled,
+      },
       [IntegrationSteps.PODS]: {
         disabled: !(
           instance.accountId == '0c51143d-9728-4f42-8442-4b52be5e8a74' ||

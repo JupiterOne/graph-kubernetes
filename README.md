@@ -3,7 +3,7 @@
 Learn about the data ingested, benefits of this integration, and how to use it
 with JupiterOne in the [integration documentation](docs/jupiterone.md).
 
-## Development
+## Development 
 
 ### Prerequisites
 

@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#fetchContainerImages should collect data: jobState 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
+{
+  "collectedEntities": [
+    {
+      "_class": [
         "Host",
       ],
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Node {
             "apiVersion": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
-              "annotations": Object {
+              "annotations": {
                 "kubeadm.alpha.kubernetes.io/cri-socket": "unix:///var/run/cri-dockerd.sock",
                 "node.alpha.kubernetes.io/ttl": "0",
                 "volumes.kubernetes.io/controller-managed-attach-detach": "true",
@@ -26,7 +26,7 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "beta.kubernetes.io/arch": "amd64",
                 "beta.kubernetes.io/os": "linux",
                 "kubernetes.io/arch": "amd64",
@@ -35,23 +35,23 @@ Object {
                 "node-role.kubernetes.io/control-plane": "",
                 "node.kubernetes.io/exclude-from-external-load-balancers": "",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:volumes.kubernetes.io/controller-managed-attach-detach": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:volumes.kubernetes.io/controller-managed-attach-detach": {},
                       },
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:beta.kubernetes.io/arch": Object {},
-                        "f:beta.kubernetes.io/os": Object {},
-                        "f:kubernetes.io/arch": Object {},
-                        "f:kubernetes.io/hostname": Object {},
-                        "f:kubernetes.io/os": Object {},
+                      "f:labels": {
+                        ".": {},
+                        "f:beta.kubernetes.io/arch": {},
+                        "f:beta.kubernetes.io/os": {},
+                        "f:kubernetes.io/arch": {},
+                        "f:kubernetes.io/hostname": {},
+                        "f:kubernetes.io/os": {},
                       },
                     },
                   },
@@ -63,14 +63,14 @@ Object {
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        "f:kubeadm.alpha.kubernetes.io/cri-socket": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:annotations": {
+                        "f:kubeadm.alpha.kubernetes.io/cri-socket": {},
                       },
-                      "f:labels": Object {
-                        "f:node-role.kubernetes.io/control-plane": Object {},
-                        "f:node.kubernetes.io/exclude-from-external-load-balancers": Object {},
+                      "f:labels": {
+                        "f:node-role.kubernetes.io/control-plane": {},
+                        "f:node.kubernetes.io/exclude-from-external-load-balancers": {},
                       },
                     },
                   },
@@ -82,10 +82,10 @@ Object {
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        "f:node.alpha.kubernetes.io/ttl": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:annotations": {
+                        "f:node.alpha.kubernetes.io/ttl": {},
                       },
                     },
                   },
@@ -97,41 +97,41 @@ Object {
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:status": Object {
-                      "f:conditions": Object {
-                        "k:{\\"type\\":\\"DiskPressure\\"}": Object {
-                          "f:lastHeartbeatTime": Object {},
-                          "f:lastTransitionTime": Object {},
-                          "f:message": Object {},
-                          "f:reason": Object {},
-                          "f:status": Object {},
+                  "fieldsV1": {
+                    "f:status": {
+                      "f:conditions": {
+                        "k:{"type":"DiskPressure"}": {
+                          "f:lastHeartbeatTime": {},
+                          "f:lastTransitionTime": {},
+                          "f:message": {},
+                          "f:reason": {},
+                          "f:status": {},
                         },
-                        "k:{\\"type\\":\\"MemoryPressure\\"}": Object {
-                          "f:lastHeartbeatTime": Object {},
-                          "f:lastTransitionTime": Object {},
-                          "f:message": Object {},
-                          "f:reason": Object {},
-                          "f:status": Object {},
+                        "k:{"type":"MemoryPressure"}": {
+                          "f:lastHeartbeatTime": {},
+                          "f:lastTransitionTime": {},
+                          "f:message": {},
+                          "f:reason": {},
+                          "f:status": {},
                         },
-                        "k:{\\"type\\":\\"PIDPressure\\"}": Object {
-                          "f:lastHeartbeatTime": Object {},
-                          "f:lastTransitionTime": Object {},
-                          "f:message": Object {},
-                          "f:reason": Object {},
-                          "f:status": Object {},
+                        "k:{"type":"PIDPressure"}": {
+                          "f:lastHeartbeatTime": {},
+                          "f:lastTransitionTime": {},
+                          "f:message": {},
+                          "f:reason": {},
+                          "f:status": {},
                         },
-                        "k:{\\"type\\":\\"Ready\\"}": Object {
-                          "f:lastHeartbeatTime": Object {},
-                          "f:lastTransitionTime": Object {},
-                          "f:message": Object {},
-                          "f:reason": Object {},
-                          "f:status": Object {},
+                        "k:{"type":"Ready"}": {
+                          "f:lastHeartbeatTime": {},
+                          "f:lastTransitionTime": {},
+                          "f:message": {},
+                          "f:reason": {},
+                          "f:status": {},
                         },
                       },
-                      "f:images": Object {},
-                      "f:nodeInfo": Object {
-                        "f:containerRuntimeVersion": Object {},
+                      "f:images": {},
+                      "f:nodeInfo": {
+                        "f:containerRuntimeVersion": {},
                       },
                     },
                   },
@@ -158,7 +158,7 @@ Object {
               "unschedulable": undefined,
             },
             "status": V1NodeStatus {
-              "addresses": Array [
+              "addresses": [
                 V1NodeAddress {
                   "address": "192.168.65.3",
                   "type": "InternalIP",
@@ -168,21 +168,21 @@ Object {
                   "type": "Hostname",
                 },
               ],
-              "allocatable": Object {
+              "allocatable": {
                 "cpu": "16",
                 "ephemeral-storage": "56403987978",
                 "hugepages-2Mi": "0",
                 "memory": "7926272Ki",
                 "pods": "110",
               },
-              "capacity": Object {
+              "capacity": {
                 "cpu": "16",
                 "ephemeral-storage": "61202244Ki",
                 "hugepages-2Mi": "0",
                 "memory": "8028672Ki",
                 "pods": "110",
               },
-              "conditions": Array [
+              "conditions": [
                 V1NodeCondition {
                   "lastHeartbeatTime": 2024-03-22T13:13:06.000Z,
                   "lastTransitionTime": 2024-03-21T22:03:17.000Z,
@@ -222,122 +222,122 @@ Object {
                   "Port": 10250,
                 },
               },
-              "images": Array [
+              "images": [
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:f9363fc4c08ec1c490be966712156da621f5021879112e2ffb40c02f3efad12b",
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3:11",
                   ],
                   "sizeBytes": 2124829814,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-cb7ecdd3-c17e-4339-8f49-abe0744f41d7:latest",
                   ],
                   "sizeBytes": 1966934254,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-8ee4801e-fcef-412e-be46-6decfe745677:latest",
                   ],
                   "sizeBytes": 1946260972,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-f733468a-1115-458d-addc-136a099c83e0:latest",
                   ],
                   "sizeBytes": 1946260972,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-0295e95e-3a05-477f-90ec-b08d7b08ea84:latest",
                   ],
                   "sizeBytes": 1946260972,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
                   ],
                   "sizeBytes": 1945665924,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-9301f5b0-9bdc-4eab-88b3-18911c56c46d:latest",
                   ],
                   "sizeBytes": 1945665924,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-48587a38-13d0-418f-a08e-3db69c486fd6:latest",
                   ],
                   "sizeBytes": 1945665924,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-a4964632-de9c-43bd-9954-c091379ad801:latest",
                   ],
                   "sizeBytes": 1945637422,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-cyberark-epm-deploy-f73b81b2d5f513cb4a85f1ce3397f7c3b98d6ebc-b05f1075-0b24-402c-99ea-53ecee461a8c:latest",
                   ],
                   "sizeBytes": 1919254922,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-46234c6b-12a9-4e98-9b7c-d73b9f7a43b2:latest",
                   ],
                   "sizeBytes": 1915928466,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
                   ],
                   "sizeBytes": 1915912509,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-cb206fd0-fc44-4c2c-afc6-03a09d9e73ff:latest",
                   ],
                   "sizeBytes": 1915296296,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-4e33638a-a167-42b7-9c51-ddf0b8262531:latest",
                     "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-f2201f3c-d7f2-495d-9129-e47879669af9:latest",
                   ],
                   "sizeBytes": 1915296296,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-55bca43d-ef3c-41a7-a1b1-ab09c33b1b81:latest",
                   ],
                   "sizeBytes": 1902809701,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:0625c426e9e5f9eb4cd387d6583f007ff3cc7bf47a94b6e714e56b11406f2516",
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3:10",
                   ],
                   "sizeBytes": 1827899146,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node18@sha256:bb87ce3aa714d1457b4cefee61bf034b6ee09e6a66a5ccab236540f60fd2b3d1",
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node18:4",
                   ],
                   "sizeBytes": 1752385070,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/deployer@sha256:cc3996116a7a3418a6919a57af4a7fe00b880efec6ff000ff6280bc3729264f6",
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/deployer:4",
                   ],
                   "sizeBytes": 1497532443,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node14@sha256:19927c7d9f18be98b9da4a5ccfda77113be8741e1878dd949974021f569e2c72",
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node14:4",
                   ],
@@ -348,46 +348,46 @@ Object {
                   "sizeBytes": 1140506580,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "graph-kubernetes:2.0.0",
                   ],
                   "sizeBytes": 1140506572,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "web-icons-deploy-92c218c41b1a8f518d0369858274cc96f85608fe-7e0615be-f920-4847-a715-b377143d9adb:latest",
                   ],
                   "sizeBytes": 496365872,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-slim@sha256:2d2c0799c492cd19a6f092c8a61e45526b378aa75d74bad5f630b4b1c1d5d286",
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-slim:11",
                   ],
                   "sizeBytes": 490013096,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "docker/desktop-kubernetes@sha256:09d56959eb312aadacf637abb4cbd803efcc35a7cc8a8dfe1c7d1670ee76668a",
                     "docker/desktop-kubernetes:kubernetes-v1.29.1-cni-v1.4.0-critools-v1.29.0-cri-dockerd-v0.3.8-1-debian",
                   ],
                   "sizeBytes": 437829638,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "hubproxy.docker.internal:5000/docker/desktop-kubernetes@sha256:783fe465eee40f2bf5743f2f90c94223093f173808bae7ca54f9a741d9d36b40",
                     "hubproxy.docker.internal:5000/docker/desktop-kubernetes:kubernetes-v1.25.2-cni-v1.1.1-critools-v1.24.2-cri-dockerd-v0.2.5-1-debian",
                   ],
                   "sizeBytes": 363318669,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "k8s.gcr.io/etcd:3.5.4-0",
                   ],
                   "sizeBytes": 299520781,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
                     "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-46234c6b-12a9-4e98-9b7c-d73b9f7a43b2:latest",
                     "integration-cyberark-epm-9e22c7edc643e71676f86820b2f1b77b63163c29-0295e95e-3a05-477f-90ec-b08d7b08ea84:latest",
@@ -397,7 +397,7 @@ Object {
                   "sizeBytes": 281593869,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
                     "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-cb7ecdd3-c17e-4339-8f49-abe0744f41d7:latest",
                     "integration-cyberark-epm-9e22c7edc643e71676f86820b2f1b77b63163c29-48587a38-13d0-418f-a08e-3db69c486fd6:latest",
@@ -407,142 +407,142 @@ Object {
                   "sizeBytes": 277118299,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/ecs-nodejs-service-with-observability-instrumentation@sha256:8882cffe638b7204641d2b9dbb7e2b72702058e679174dbf957fccb15fa37b59",
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/ecs-nodejs-service-with-observability-instrumentation:latest",
                   ],
                   "sizeBytes": 253043681,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "moby/buildkit@sha256:d6fa89830c26919acba23c5cafa09df0c3ec1fbde20bb2a15ff349e0795241f4",
                     "moby/buildkit:v0.11.6",
                   ],
                   "sizeBytes": 168497755,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/ami-builder@sha256:980f50b2e5780923d3f88dd6fc3b81cbfed55fc08032bf5fc54be809c52bfa8c",
                     "081157560428.dkr.ecr.us-east-1.amazonaws.com/ami-builder:1",
                   ],
                   "sizeBytes": 158159553,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "otel/opentelemetry-collector-contrib@sha256:fe4da6a72f0adab77371987c0e67a5605a9ad4b9aa5755c2ae88403f2657ec6b",
                     "otel/opentelemetry-collector-contrib:0.58.0",
                   ],
                   "sizeBytes": 156899361,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "registry.k8s.io/etcd:3.5.10-0",
                   ],
                   "sizeBytes": 147502300,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "otel/opentelemetry-collector-contrib@sha256:7fd60e2d55b0fc2cc87742022ab14e7ea3200b260dd3c334f041b731be2584eb",
                     "otel/opentelemetry-collector-contrib:0.33.0",
                   ],
                   "sizeBytes": 132908975,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "fluent/fluent-bit@sha256:cc8dbcdc074dabbd9af913be0ba78bdaa7186bf7e5e91b7b62d7195e09e6245b",
                     "fluent/fluent-bit:1.8",
                   ],
                   "sizeBytes": 129155371,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "k8s.gcr.io/kube-apiserver:v1.25.2",
                   ],
                   "sizeBytes": 127726803,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "registry.k8s.io/kube-apiserver:v1.29.1",
                   ],
                   "sizeBytes": 127316790,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "registry.k8s.io/kube-controller-manager:v1.29.1",
                   ],
                   "sizeBytes": 121947285,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "k8s.gcr.io/kube-controller-manager:v1.25.2",
                   ],
                   "sizeBytes": 117097964,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "fluent/fluent-bit@sha256:bc89a87cc9cd40c320644835b83170f49819dc3ea447e38c71dde27a181e7a9b",
                     "fluent/fluent-bit:2.2",
                   ],
                   "sizeBytes": 86691759,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "registry.k8s.io/kube-proxy:v1.29.1",
                   ],
                   "sizeBytes": 82254688,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "k8s.gcr.io/kube-proxy:v1.25.2",
                   ],
                   "sizeBytes": 61691938,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "tonistiigi/binfmt@sha256:66e11bea77a5ea9d6f0fe79b57cd2b189b5d15b93a2bdb925be22949232e4e55",
                     "tonistiigi/binfmt:latest",
                   ],
                   "sizeBytes": 60182964,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "registry.k8s.io/coredns/coredns:v1.11.1",
                   ],
                   "sizeBytes": 59820619,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "registry.k8s.io/kube-scheduler:v1.29.1",
                   ],
                   "sizeBytes": 59536833,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "k8s.gcr.io/kube-scheduler:v1.25.2",
                   ],
                   "sizeBytes": 50583045,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "k8s.gcr.io/coredns:v1.9.3",
                   ],
                   "sizeBytes": 48803555,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "cortexlabs/kubexit@sha256:75c1c946d1e9a75cbf736534603020efa1ca2fdf1bdbdb9a07c26ff0178f0807",
                     "cortexlabs/kubexit:0.40.0",
                   ],
                   "sizeBytes": 44186225,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "docker/desktop-storage-provisioner:v2.0",
                   ],
                   "sizeBytes": 41850220,
                 },
                 V1ContainerImage {
-                  "names": Array [
+                  "names": [
                     "docker/desktop-vpnkit-controller@sha256:7ecf567ea07095f9af6ce2004055d4d37e4ee3bc19b553cce2f6c37ee9b916bf",
                     "docker/desktop-vpnkit-controller:dc331cb22850be0cdd97c84a9cfecaf44a1afb6e",
                   ],
@@ -579,12 +579,12 @@ Object {
       "podCIDR": undefined,
       "podCIDRs": undefined,
       "privateDnsName": undefined,
-      "privateIpAddress": Array [
+      "privateIpAddress": [
         "192.168.65.3",
       ],
       "providerID": undefined,
       "publicDnsName": undefined,
-      "publicIpAddress": Array [],
+      "publicIpAddress": [],
       "resourceVersion": "257615",
       "status.allocatable.cpu": "16",
       "status.allocatable.ephemeral-storage": "56403987978",
@@ -611,16 +611,16 @@ Object {
       "status.nodeInfo.systemUUID": "1b146667-ccde-4188-8a87-c39a18a4532c",
       "unschedulable": undefined,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:f9363fc4c08ec1c490be966712156da621f5021879112e2ffb40c02f3efad12b",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:f9363fc4c08ec1c490be966712156da621f5021879112e2ffb40c02f3efad12b",
               "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3:11",
             ],
@@ -632,22 +632,22 @@ Object {
       "createdOn": undefined,
       "displayName": "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:f9363fc4c08ec1c490be966712156da621f5021879112e2ffb40c02f3efad12b",
       "name": "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:f9363fc4c08ec1c490be966712156da621f5021879112e2ffb40c02f3efad12b",
-      "names": Array [
+      "names": [
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:f9363fc4c08ec1c490be966712156da621f5021879112e2ffb40c02f3efad12b",
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3:11",
       ],
       "sizeInBytes": 2124829814,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-cb7ecdd3-c17e-4339-8f49-abe0744f41d7:latest",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-cb7ecdd3-c17e-4339-8f49-abe0744f41d7:latest",
             ],
             "sizeBytes": 1966934254,
@@ -658,21 +658,21 @@ Object {
       "createdOn": undefined,
       "displayName": "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-cb7ecdd3-c17e-4339-8f49-abe0744f41d7:latest",
       "name": "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-cb7ecdd3-c17e-4339-8f49-abe0744f41d7:latest",
-      "names": Array [
+      "names": [
         "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-cb7ecdd3-c17e-4339-8f49-abe0744f41d7:latest",
       ],
       "sizeInBytes": 1966934254,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-8ee4801e-fcef-412e-be46-6decfe745677:latest",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-8ee4801e-fcef-412e-be46-6decfe745677:latest",
             ],
             "sizeBytes": 1946260972,
@@ -683,21 +683,21 @@ Object {
       "createdOn": undefined,
       "displayName": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-8ee4801e-fcef-412e-be46-6decfe745677:latest",
       "name": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-8ee4801e-fcef-412e-be46-6decfe745677:latest",
-      "names": Array [
+      "names": [
         "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-8ee4801e-fcef-412e-be46-6decfe745677:latest",
       ],
       "sizeInBytes": 1946260972,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-f733468a-1115-458d-addc-136a099c83e0:latest",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-f733468a-1115-458d-addc-136a099c83e0:latest",
             ],
             "sizeBytes": 1946260972,
@@ -708,21 +708,21 @@ Object {
       "createdOn": undefined,
       "displayName": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-f733468a-1115-458d-addc-136a099c83e0:latest",
       "name": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-f733468a-1115-458d-addc-136a099c83e0:latest",
-      "names": Array [
+      "names": [
         "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-f733468a-1115-458d-addc-136a099c83e0:latest",
       ],
       "sizeInBytes": 1946260972,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-0295e95e-3a05-477f-90ec-b08d7b08ea84:latest",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-0295e95e-3a05-477f-90ec-b08d7b08ea84:latest",
             ],
             "sizeBytes": 1946260972,
@@ -733,21 +733,21 @@ Object {
       "createdOn": undefined,
       "displayName": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-0295e95e-3a05-477f-90ec-b08d7b08ea84:latest",
       "name": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-0295e95e-3a05-477f-90ec-b08d7b08ea84:latest",
-      "names": Array [
+      "names": [
         "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-0295e95e-3a05-477f-90ec-b08d7b08ea84:latest",
       ],
       "sizeInBytes": 1946260972,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
             ],
             "sizeBytes": 1945665924,
@@ -758,21 +758,21 @@ Object {
       "createdOn": undefined,
       "displayName": "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
       "name": "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
-      "names": Array [
+      "names": [
         "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
       ],
       "sizeInBytes": 1945665924,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-9301f5b0-9bdc-4eab-88b3-18911c56c46d:latest",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-9301f5b0-9bdc-4eab-88b3-18911c56c46d:latest",
             ],
             "sizeBytes": 1945665924,
@@ -783,21 +783,21 @@ Object {
       "createdOn": undefined,
       "displayName": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-9301f5b0-9bdc-4eab-88b3-18911c56c46d:latest",
       "name": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-9301f5b0-9bdc-4eab-88b3-18911c56c46d:latest",
-      "names": Array [
+      "names": [
         "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-9301f5b0-9bdc-4eab-88b3-18911c56c46d:latest",
       ],
       "sizeInBytes": 1945665924,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-48587a38-13d0-418f-a08e-3db69c486fd6:latest",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-48587a38-13d0-418f-a08e-3db69c486fd6:latest",
             ],
             "sizeBytes": 1945665924,
@@ -808,21 +808,21 @@ Object {
       "createdOn": undefined,
       "displayName": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-48587a38-13d0-418f-a08e-3db69c486fd6:latest",
       "name": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-48587a38-13d0-418f-a08e-3db69c486fd6:latest",
-      "names": Array [
+      "names": [
         "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-48587a38-13d0-418f-a08e-3db69c486fd6:latest",
       ],
       "sizeInBytes": 1945665924,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-a4964632-de9c-43bd-9954-c091379ad801:latest",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-a4964632-de9c-43bd-9954-c091379ad801:latest",
             ],
             "sizeBytes": 1945637422,
@@ -833,21 +833,21 @@ Object {
       "createdOn": undefined,
       "displayName": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-a4964632-de9c-43bd-9954-c091379ad801:latest",
       "name": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-a4964632-de9c-43bd-9954-c091379ad801:latest",
-      "names": Array [
+      "names": [
         "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-a4964632-de9c-43bd-9954-c091379ad801:latest",
       ],
       "sizeInBytes": 1945637422,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "integration-cyberark-epm-deploy-f73b81b2d5f513cb4a85f1ce3397f7c3b98d6ebc-b05f1075-0b24-402c-99ea-53ecee461a8c:latest",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "integration-cyberark-epm-deploy-f73b81b2d5f513cb4a85f1ce3397f7c3b98d6ebc-b05f1075-0b24-402c-99ea-53ecee461a8c:latest",
             ],
             "sizeBytes": 1919254922,
@@ -858,21 +858,21 @@ Object {
       "createdOn": undefined,
       "displayName": "integration-cyberark-epm-deploy-f73b81b2d5f513cb4a85f1ce3397f7c3b98d6ebc-b05f1075-0b24-402c-99ea-53ecee461a8c:latest",
       "name": "integration-cyberark-epm-deploy-f73b81b2d5f513cb4a85f1ce3397f7c3b98d6ebc-b05f1075-0b24-402c-99ea-53ecee461a8c:latest",
-      "names": Array [
+      "names": [
         "integration-cyberark-epm-deploy-f73b81b2d5f513cb4a85f1ce3397f7c3b98d6ebc-b05f1075-0b24-402c-99ea-53ecee461a8c:latest",
       ],
       "sizeInBytes": 1919254922,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-46234c6b-12a9-4e98-9b7c-d73b9f7a43b2:latest",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-46234c6b-12a9-4e98-9b7c-d73b9f7a43b2:latest",
             ],
             "sizeBytes": 1915928466,
@@ -883,21 +883,21 @@ Object {
       "createdOn": undefined,
       "displayName": "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-46234c6b-12a9-4e98-9b7c-d73b9f7a43b2:latest",
       "name": "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-46234c6b-12a9-4e98-9b7c-d73b9f7a43b2:latest",
-      "names": Array [
+      "names": [
         "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-46234c6b-12a9-4e98-9b7c-d73b9f7a43b2:latest",
       ],
       "sizeInBytes": 1915928466,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
             ],
             "sizeBytes": 1915912509,
@@ -908,21 +908,21 @@ Object {
       "createdOn": undefined,
       "displayName": "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
       "name": "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
-      "names": Array [
+      "names": [
         "integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
       ],
       "sizeInBytes": 1915912509,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-cb206fd0-fc44-4c2c-afc6-03a09d9e73ff:latest",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-cb206fd0-fc44-4c2c-afc6-03a09d9e73ff:latest",
             ],
             "sizeBytes": 1915296296,
@@ -933,21 +933,21 @@ Object {
       "createdOn": undefined,
       "displayName": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-cb206fd0-fc44-4c2c-afc6-03a09d9e73ff:latest",
       "name": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-cb206fd0-fc44-4c2c-afc6-03a09d9e73ff:latest",
-      "names": Array [
+      "names": [
         "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-cb206fd0-fc44-4c2c-afc6-03a09d9e73ff:latest",
       ],
       "sizeInBytes": 1915296296,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-4e33638a-a167-42b7-9c51-ddf0b8262531:latest",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-4e33638a-a167-42b7-9c51-ddf0b8262531:latest",
               "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-f2201f3c-d7f2-495d-9129-e47879669af9:latest",
             ],
@@ -959,22 +959,22 @@ Object {
       "createdOn": undefined,
       "displayName": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-4e33638a-a167-42b7-9c51-ddf0b8262531:latest",
       "name": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-4e33638a-a167-42b7-9c51-ddf0b8262531:latest",
-      "names": Array [
+      "names": [
         "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-4e33638a-a167-42b7-9c51-ddf0b8262531:latest",
         "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-f2201f3c-d7f2-495d-9129-e47879669af9:latest",
       ],
       "sizeInBytes": 1915296296,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-55bca43d-ef3c-41a7-a1b1-ab09c33b1b81:latest",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-55bca43d-ef3c-41a7-a1b1-ab09c33b1b81:latest",
             ],
             "sizeBytes": 1902809701,
@@ -985,21 +985,21 @@ Object {
       "createdOn": undefined,
       "displayName": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-55bca43d-ef3c-41a7-a1b1-ab09c33b1b81:latest",
       "name": "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-55bca43d-ef3c-41a7-a1b1-ab09c33b1b81:latest",
-      "names": Array [
+      "names": [
         "integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-55bca43d-ef3c-41a7-a1b1-ab09c33b1b81:latest",
       ],
       "sizeInBytes": 1902809701,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:0625c426e9e5f9eb4cd387d6583f007ff3cc7bf47a94b6e714e56b11406f2516",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:0625c426e9e5f9eb4cd387d6583f007ff3cc7bf47a94b6e714e56b11406f2516",
               "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3:10",
             ],
@@ -1011,22 +1011,22 @@ Object {
       "createdOn": undefined,
       "displayName": "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:0625c426e9e5f9eb4cd387d6583f007ff3cc7bf47a94b6e714e56b11406f2516",
       "name": "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:0625c426e9e5f9eb4cd387d6583f007ff3cc7bf47a94b6e714e56b11406f2516",
-      "names": Array [
+      "names": [
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:0625c426e9e5f9eb4cd387d6583f007ff3cc7bf47a94b6e714e56b11406f2516",
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3:10",
       ],
       "sizeInBytes": 1827899146,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node18@sha256:bb87ce3aa714d1457b4cefee61bf034b6ee09e6a66a5ccab236540f60fd2b3d1",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node18@sha256:bb87ce3aa714d1457b4cefee61bf034b6ee09e6a66a5ccab236540f60fd2b3d1",
               "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node18:4",
             ],
@@ -1038,22 +1038,22 @@ Object {
       "createdOn": undefined,
       "displayName": "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node18@sha256:bb87ce3aa714d1457b4cefee61bf034b6ee09e6a66a5ccab236540f60fd2b3d1",
       "name": "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node18@sha256:bb87ce3aa714d1457b4cefee61bf034b6ee09e6a66a5ccab236540f60fd2b3d1",
-      "names": Array [
+      "names": [
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node18@sha256:bb87ce3aa714d1457b4cefee61bf034b6ee09e6a66a5ccab236540f60fd2b3d1",
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node18:4",
       ],
       "sizeInBytes": 1752385070,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "081157560428.dkr.ecr.us-east-1.amazonaws.com/deployer@sha256:cc3996116a7a3418a6919a57af4a7fe00b880efec6ff000ff6280bc3729264f6",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "081157560428.dkr.ecr.us-east-1.amazonaws.com/deployer@sha256:cc3996116a7a3418a6919a57af4a7fe00b880efec6ff000ff6280bc3729264f6",
               "081157560428.dkr.ecr.us-east-1.amazonaws.com/deployer:4",
             ],
@@ -1065,22 +1065,22 @@ Object {
       "createdOn": undefined,
       "displayName": "081157560428.dkr.ecr.us-east-1.amazonaws.com/deployer@sha256:cc3996116a7a3418a6919a57af4a7fe00b880efec6ff000ff6280bc3729264f6",
       "name": "081157560428.dkr.ecr.us-east-1.amazonaws.com/deployer@sha256:cc3996116a7a3418a6919a57af4a7fe00b880efec6ff000ff6280bc3729264f6",
-      "names": Array [
+      "names": [
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/deployer@sha256:cc3996116a7a3418a6919a57af4a7fe00b880efec6ff000ff6280bc3729264f6",
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/deployer:4",
       ],
       "sizeInBytes": 1497532443,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node14@sha256:19927c7d9f18be98b9da4a5ccfda77113be8741e1878dd949974021f569e2c72",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node14@sha256:19927c7d9f18be98b9da4a5ccfda77113be8741e1878dd949974021f569e2c72",
               "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node14:4",
             ],
@@ -1092,22 +1092,22 @@ Object {
       "createdOn": undefined,
       "displayName": "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node14@sha256:19927c7d9f18be98b9da4a5ccfda77113be8741e1878dd949974021f569e2c72",
       "name": "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node14@sha256:19927c7d9f18be98b9da4a5ccfda77113be8741e1878dd949974021f569e2c72",
-      "names": Array [
+      "names": [
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node14@sha256:19927c7d9f18be98b9da4a5ccfda77113be8741e1878dd949974021f569e2c72",
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node14:4",
       ],
       "sizeInBytes": 1460362838,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "graph-kubernetes:2.0.0",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "graph-kubernetes:2.0.0",
             ],
             "sizeBytes": 1140506572,
@@ -1118,21 +1118,21 @@ Object {
       "createdOn": undefined,
       "displayName": "graph-kubernetes:2.0.0",
       "name": "graph-kubernetes:2.0.0",
-      "names": Array [
+      "names": [
         "graph-kubernetes:2.0.0",
       ],
       "sizeInBytes": 1140506572,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "web-icons-deploy-92c218c41b1a8f518d0369858274cc96f85608fe-7e0615be-f920-4847-a715-b377143d9adb:latest",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "web-icons-deploy-92c218c41b1a8f518d0369858274cc96f85608fe-7e0615be-f920-4847-a715-b377143d9adb:latest",
             ],
             "sizeBytes": 496365872,
@@ -1143,21 +1143,21 @@ Object {
       "createdOn": undefined,
       "displayName": "web-icons-deploy-92c218c41b1a8f518d0369858274cc96f85608fe-7e0615be-f920-4847-a715-b377143d9adb:latest",
       "name": "web-icons-deploy-92c218c41b1a8f518d0369858274cc96f85608fe-7e0615be-f920-4847-a715-b377143d9adb:latest",
-      "names": Array [
+      "names": [
         "web-icons-deploy-92c218c41b1a8f518d0369858274cc96f85608fe-7e0615be-f920-4847-a715-b377143d9adb:latest",
       ],
       "sizeInBytes": 496365872,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-slim@sha256:2d2c0799c492cd19a6f092c8a61e45526b378aa75d74bad5f630b4b1c1d5d286",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-slim@sha256:2d2c0799c492cd19a6f092c8a61e45526b378aa75d74bad5f630b4b1c1d5d286",
               "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-slim:11",
             ],
@@ -1169,22 +1169,22 @@ Object {
       "createdOn": undefined,
       "displayName": "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-slim@sha256:2d2c0799c492cd19a6f092c8a61e45526b378aa75d74bad5f630b4b1c1d5d286",
       "name": "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-slim@sha256:2d2c0799c492cd19a6f092c8a61e45526b378aa75d74bad5f630b4b1c1d5d286",
-      "names": Array [
+      "names": [
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-slim@sha256:2d2c0799c492cd19a6f092c8a61e45526b378aa75d74bad5f630b4b1c1d5d286",
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-slim:11",
       ],
       "sizeInBytes": 490013096,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "docker/desktop-kubernetes@sha256:09d56959eb312aadacf637abb4cbd803efcc35a7cc8a8dfe1c7d1670ee76668a",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "docker/desktop-kubernetes@sha256:09d56959eb312aadacf637abb4cbd803efcc35a7cc8a8dfe1c7d1670ee76668a",
               "docker/desktop-kubernetes:kubernetes-v1.29.1-cni-v1.4.0-critools-v1.29.0-cri-dockerd-v0.3.8-1-debian",
             ],
@@ -1196,22 +1196,22 @@ Object {
       "createdOn": undefined,
       "displayName": "docker/desktop-kubernetes@sha256:09d56959eb312aadacf637abb4cbd803efcc35a7cc8a8dfe1c7d1670ee76668a",
       "name": "docker/desktop-kubernetes@sha256:09d56959eb312aadacf637abb4cbd803efcc35a7cc8a8dfe1c7d1670ee76668a",
-      "names": Array [
+      "names": [
         "docker/desktop-kubernetes@sha256:09d56959eb312aadacf637abb4cbd803efcc35a7cc8a8dfe1c7d1670ee76668a",
         "docker/desktop-kubernetes:kubernetes-v1.29.1-cni-v1.4.0-critools-v1.29.0-cri-dockerd-v0.3.8-1-debian",
       ],
       "sizeInBytes": 437829638,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "hubproxy.docker.internal:5000/docker/desktop-kubernetes@sha256:783fe465eee40f2bf5743f2f90c94223093f173808bae7ca54f9a741d9d36b40",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "hubproxy.docker.internal:5000/docker/desktop-kubernetes@sha256:783fe465eee40f2bf5743f2f90c94223093f173808bae7ca54f9a741d9d36b40",
               "hubproxy.docker.internal:5000/docker/desktop-kubernetes:kubernetes-v1.25.2-cni-v1.1.1-critools-v1.24.2-cri-dockerd-v0.2.5-1-debian",
             ],
@@ -1223,22 +1223,22 @@ Object {
       "createdOn": undefined,
       "displayName": "hubproxy.docker.internal:5000/docker/desktop-kubernetes@sha256:783fe465eee40f2bf5743f2f90c94223093f173808bae7ca54f9a741d9d36b40",
       "name": "hubproxy.docker.internal:5000/docker/desktop-kubernetes@sha256:783fe465eee40f2bf5743f2f90c94223093f173808bae7ca54f9a741d9d36b40",
-      "names": Array [
+      "names": [
         "hubproxy.docker.internal:5000/docker/desktop-kubernetes@sha256:783fe465eee40f2bf5743f2f90c94223093f173808bae7ca54f9a741d9d36b40",
         "hubproxy.docker.internal:5000/docker/desktop-kubernetes:kubernetes-v1.25.2-cni-v1.1.1-critools-v1.24.2-cri-dockerd-v0.2.5-1-debian",
       ],
       "sizeInBytes": 363318669,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "k8s.gcr.io/etcd:3.5.4-0",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "k8s.gcr.io/etcd:3.5.4-0",
             ],
             "sizeBytes": 299520781,
@@ -1249,21 +1249,21 @@ Object {
       "createdOn": undefined,
       "displayName": "k8s.gcr.io/etcd:3.5.4-0",
       "name": "k8s.gcr.io/etcd:3.5.4-0",
-      "names": Array [
+      "names": [
         "k8s.gcr.io/etcd:3.5.4-0",
       ],
       "sizeInBytes": 299520781,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
               "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-46234c6b-12a9-4e98-9b7c-d73b9f7a43b2:latest",
               "integration-cyberark-epm-9e22c7edc643e71676f86820b2f1b77b63163c29-0295e95e-3a05-477f-90ec-b08d7b08ea84:latest",
@@ -1278,7 +1278,7 @@ Object {
       "createdOn": undefined,
       "displayName": "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
       "name": "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
-      "names": Array [
+      "names": [
         "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
         "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-46234c6b-12a9-4e98-9b7c-d73b9f7a43b2:latest",
         "integration-cyberark-epm-9e22c7edc643e71676f86820b2f1b77b63163c29-0295e95e-3a05-477f-90ec-b08d7b08ea84:latest",
@@ -1287,16 +1287,16 @@ Object {
       ],
       "sizeInBytes": 281593869,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
               "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-cb7ecdd3-c17e-4339-8f49-abe0744f41d7:latest",
               "integration-cyberark-epm-9e22c7edc643e71676f86820b2f1b77b63163c29-48587a38-13d0-418f-a08e-3db69c486fd6:latest",
@@ -1311,7 +1311,7 @@ Object {
       "createdOn": undefined,
       "displayName": "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
       "name": "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
-      "names": Array [
+      "names": [
         "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
         "integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-cb7ecdd3-c17e-4339-8f49-abe0744f41d7:latest",
         "integration-cyberark-epm-9e22c7edc643e71676f86820b2f1b77b63163c29-48587a38-13d0-418f-a08e-3db69c486fd6:latest",
@@ -1320,16 +1320,16 @@ Object {
       ],
       "sizeInBytes": 277118299,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "081157560428.dkr.ecr.us-east-1.amazonaws.com/ecs-nodejs-service-with-observability-instrumentation@sha256:8882cffe638b7204641d2b9dbb7e2b72702058e679174dbf957fccb15fa37b59",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "081157560428.dkr.ecr.us-east-1.amazonaws.com/ecs-nodejs-service-with-observability-instrumentation@sha256:8882cffe638b7204641d2b9dbb7e2b72702058e679174dbf957fccb15fa37b59",
               "081157560428.dkr.ecr.us-east-1.amazonaws.com/ecs-nodejs-service-with-observability-instrumentation:latest",
             ],
@@ -1341,22 +1341,22 @@ Object {
       "createdOn": undefined,
       "displayName": "081157560428.dkr.ecr.us-east-1.amazonaws.com/ecs-nodejs-service-with-observability-instrumentation@sha256:8882cffe638b7204641d2b9dbb7e2b72702058e679174dbf957fccb15fa37b59",
       "name": "081157560428.dkr.ecr.us-east-1.amazonaws.com/ecs-nodejs-service-with-observability-instrumentation@sha256:8882cffe638b7204641d2b9dbb7e2b72702058e679174dbf957fccb15fa37b59",
-      "names": Array [
+      "names": [
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/ecs-nodejs-service-with-observability-instrumentation@sha256:8882cffe638b7204641d2b9dbb7e2b72702058e679174dbf957fccb15fa37b59",
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/ecs-nodejs-service-with-observability-instrumentation:latest",
       ],
       "sizeInBytes": 253043681,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "moby/buildkit@sha256:d6fa89830c26919acba23c5cafa09df0c3ec1fbde20bb2a15ff349e0795241f4",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "moby/buildkit@sha256:d6fa89830c26919acba23c5cafa09df0c3ec1fbde20bb2a15ff349e0795241f4",
               "moby/buildkit:v0.11.6",
             ],
@@ -1368,22 +1368,22 @@ Object {
       "createdOn": undefined,
       "displayName": "moby/buildkit@sha256:d6fa89830c26919acba23c5cafa09df0c3ec1fbde20bb2a15ff349e0795241f4",
       "name": "moby/buildkit@sha256:d6fa89830c26919acba23c5cafa09df0c3ec1fbde20bb2a15ff349e0795241f4",
-      "names": Array [
+      "names": [
         "moby/buildkit@sha256:d6fa89830c26919acba23c5cafa09df0c3ec1fbde20bb2a15ff349e0795241f4",
         "moby/buildkit:v0.11.6",
       ],
       "sizeInBytes": 168497755,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "081157560428.dkr.ecr.us-east-1.amazonaws.com/ami-builder@sha256:980f50b2e5780923d3f88dd6fc3b81cbfed55fc08032bf5fc54be809c52bfa8c",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "081157560428.dkr.ecr.us-east-1.amazonaws.com/ami-builder@sha256:980f50b2e5780923d3f88dd6fc3b81cbfed55fc08032bf5fc54be809c52bfa8c",
               "081157560428.dkr.ecr.us-east-1.amazonaws.com/ami-builder:1",
             ],
@@ -1395,22 +1395,22 @@ Object {
       "createdOn": undefined,
       "displayName": "081157560428.dkr.ecr.us-east-1.amazonaws.com/ami-builder@sha256:980f50b2e5780923d3f88dd6fc3b81cbfed55fc08032bf5fc54be809c52bfa8c",
       "name": "081157560428.dkr.ecr.us-east-1.amazonaws.com/ami-builder@sha256:980f50b2e5780923d3f88dd6fc3b81cbfed55fc08032bf5fc54be809c52bfa8c",
-      "names": Array [
+      "names": [
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/ami-builder@sha256:980f50b2e5780923d3f88dd6fc3b81cbfed55fc08032bf5fc54be809c52bfa8c",
         "081157560428.dkr.ecr.us-east-1.amazonaws.com/ami-builder:1",
       ],
       "sizeInBytes": 158159553,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "otel/opentelemetry-collector-contrib@sha256:fe4da6a72f0adab77371987c0e67a5605a9ad4b9aa5755c2ae88403f2657ec6b",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "otel/opentelemetry-collector-contrib@sha256:fe4da6a72f0adab77371987c0e67a5605a9ad4b9aa5755c2ae88403f2657ec6b",
               "otel/opentelemetry-collector-contrib:0.58.0",
             ],
@@ -1422,22 +1422,22 @@ Object {
       "createdOn": undefined,
       "displayName": "otel/opentelemetry-collector-contrib@sha256:fe4da6a72f0adab77371987c0e67a5605a9ad4b9aa5755c2ae88403f2657ec6b",
       "name": "otel/opentelemetry-collector-contrib@sha256:fe4da6a72f0adab77371987c0e67a5605a9ad4b9aa5755c2ae88403f2657ec6b",
-      "names": Array [
+      "names": [
         "otel/opentelemetry-collector-contrib@sha256:fe4da6a72f0adab77371987c0e67a5605a9ad4b9aa5755c2ae88403f2657ec6b",
         "otel/opentelemetry-collector-contrib:0.58.0",
       ],
       "sizeInBytes": 156899361,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "registry.k8s.io/etcd:3.5.10-0",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "registry.k8s.io/etcd:3.5.10-0",
             ],
             "sizeBytes": 147502300,
@@ -1448,21 +1448,21 @@ Object {
       "createdOn": undefined,
       "displayName": "registry.k8s.io/etcd:3.5.10-0",
       "name": "registry.k8s.io/etcd:3.5.10-0",
-      "names": Array [
+      "names": [
         "registry.k8s.io/etcd:3.5.10-0",
       ],
       "sizeInBytes": 147502300,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "otel/opentelemetry-collector-contrib@sha256:7fd60e2d55b0fc2cc87742022ab14e7ea3200b260dd3c334f041b731be2584eb",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "otel/opentelemetry-collector-contrib@sha256:7fd60e2d55b0fc2cc87742022ab14e7ea3200b260dd3c334f041b731be2584eb",
               "otel/opentelemetry-collector-contrib:0.33.0",
             ],
@@ -1474,22 +1474,22 @@ Object {
       "createdOn": undefined,
       "displayName": "otel/opentelemetry-collector-contrib@sha256:7fd60e2d55b0fc2cc87742022ab14e7ea3200b260dd3c334f041b731be2584eb",
       "name": "otel/opentelemetry-collector-contrib@sha256:7fd60e2d55b0fc2cc87742022ab14e7ea3200b260dd3c334f041b731be2584eb",
-      "names": Array [
+      "names": [
         "otel/opentelemetry-collector-contrib@sha256:7fd60e2d55b0fc2cc87742022ab14e7ea3200b260dd3c334f041b731be2584eb",
         "otel/opentelemetry-collector-contrib:0.33.0",
       ],
       "sizeInBytes": 132908975,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "fluent/fluent-bit@sha256:cc8dbcdc074dabbd9af913be0ba78bdaa7186bf7e5e91b7b62d7195e09e6245b",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "fluent/fluent-bit@sha256:cc8dbcdc074dabbd9af913be0ba78bdaa7186bf7e5e91b7b62d7195e09e6245b",
               "fluent/fluent-bit:1.8",
             ],
@@ -1501,22 +1501,22 @@ Object {
       "createdOn": undefined,
       "displayName": "fluent/fluent-bit@sha256:cc8dbcdc074dabbd9af913be0ba78bdaa7186bf7e5e91b7b62d7195e09e6245b",
       "name": "fluent/fluent-bit@sha256:cc8dbcdc074dabbd9af913be0ba78bdaa7186bf7e5e91b7b62d7195e09e6245b",
-      "names": Array [
+      "names": [
         "fluent/fluent-bit@sha256:cc8dbcdc074dabbd9af913be0ba78bdaa7186bf7e5e91b7b62d7195e09e6245b",
         "fluent/fluent-bit:1.8",
       ],
       "sizeInBytes": 129155371,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "k8s.gcr.io/kube-apiserver:v1.25.2",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "k8s.gcr.io/kube-apiserver:v1.25.2",
             ],
             "sizeBytes": 127726803,
@@ -1527,21 +1527,21 @@ Object {
       "createdOn": undefined,
       "displayName": "k8s.gcr.io/kube-apiserver:v1.25.2",
       "name": "k8s.gcr.io/kube-apiserver:v1.25.2",
-      "names": Array [
+      "names": [
         "k8s.gcr.io/kube-apiserver:v1.25.2",
       ],
       "sizeInBytes": 127726803,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "registry.k8s.io/kube-apiserver:v1.29.1",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "registry.k8s.io/kube-apiserver:v1.29.1",
             ],
             "sizeBytes": 127316790,
@@ -1552,21 +1552,21 @@ Object {
       "createdOn": undefined,
       "displayName": "registry.k8s.io/kube-apiserver:v1.29.1",
       "name": "registry.k8s.io/kube-apiserver:v1.29.1",
-      "names": Array [
+      "names": [
         "registry.k8s.io/kube-apiserver:v1.29.1",
       ],
       "sizeInBytes": 127316790,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "registry.k8s.io/kube-controller-manager:v1.29.1",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "registry.k8s.io/kube-controller-manager:v1.29.1",
             ],
             "sizeBytes": 121947285,
@@ -1577,21 +1577,21 @@ Object {
       "createdOn": undefined,
       "displayName": "registry.k8s.io/kube-controller-manager:v1.29.1",
       "name": "registry.k8s.io/kube-controller-manager:v1.29.1",
-      "names": Array [
+      "names": [
         "registry.k8s.io/kube-controller-manager:v1.29.1",
       ],
       "sizeInBytes": 121947285,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "k8s.gcr.io/kube-controller-manager:v1.25.2",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "k8s.gcr.io/kube-controller-manager:v1.25.2",
             ],
             "sizeBytes": 117097964,
@@ -1602,21 +1602,21 @@ Object {
       "createdOn": undefined,
       "displayName": "k8s.gcr.io/kube-controller-manager:v1.25.2",
       "name": "k8s.gcr.io/kube-controller-manager:v1.25.2",
-      "names": Array [
+      "names": [
         "k8s.gcr.io/kube-controller-manager:v1.25.2",
       ],
       "sizeInBytes": 117097964,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "fluent/fluent-bit@sha256:bc89a87cc9cd40c320644835b83170f49819dc3ea447e38c71dde27a181e7a9b",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "fluent/fluent-bit@sha256:bc89a87cc9cd40c320644835b83170f49819dc3ea447e38c71dde27a181e7a9b",
               "fluent/fluent-bit:2.2",
             ],
@@ -1628,22 +1628,22 @@ Object {
       "createdOn": undefined,
       "displayName": "fluent/fluent-bit@sha256:bc89a87cc9cd40c320644835b83170f49819dc3ea447e38c71dde27a181e7a9b",
       "name": "fluent/fluent-bit@sha256:bc89a87cc9cd40c320644835b83170f49819dc3ea447e38c71dde27a181e7a9b",
-      "names": Array [
+      "names": [
         "fluent/fluent-bit@sha256:bc89a87cc9cd40c320644835b83170f49819dc3ea447e38c71dde27a181e7a9b",
         "fluent/fluent-bit:2.2",
       ],
       "sizeInBytes": 86691759,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "registry.k8s.io/kube-proxy:v1.29.1",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "registry.k8s.io/kube-proxy:v1.29.1",
             ],
             "sizeBytes": 82254688,
@@ -1654,21 +1654,21 @@ Object {
       "createdOn": undefined,
       "displayName": "registry.k8s.io/kube-proxy:v1.29.1",
       "name": "registry.k8s.io/kube-proxy:v1.29.1",
-      "names": Array [
+      "names": [
         "registry.k8s.io/kube-proxy:v1.29.1",
       ],
       "sizeInBytes": 82254688,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "k8s.gcr.io/kube-proxy:v1.25.2",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "k8s.gcr.io/kube-proxy:v1.25.2",
             ],
             "sizeBytes": 61691938,
@@ -1679,21 +1679,21 @@ Object {
       "createdOn": undefined,
       "displayName": "k8s.gcr.io/kube-proxy:v1.25.2",
       "name": "k8s.gcr.io/kube-proxy:v1.25.2",
-      "names": Array [
+      "names": [
         "k8s.gcr.io/kube-proxy:v1.25.2",
       ],
       "sizeInBytes": 61691938,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "tonistiigi/binfmt@sha256:66e11bea77a5ea9d6f0fe79b57cd2b189b5d15b93a2bdb925be22949232e4e55",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "tonistiigi/binfmt@sha256:66e11bea77a5ea9d6f0fe79b57cd2b189b5d15b93a2bdb925be22949232e4e55",
               "tonistiigi/binfmt:latest",
             ],
@@ -1705,22 +1705,22 @@ Object {
       "createdOn": undefined,
       "displayName": "tonistiigi/binfmt@sha256:66e11bea77a5ea9d6f0fe79b57cd2b189b5d15b93a2bdb925be22949232e4e55",
       "name": "tonistiigi/binfmt@sha256:66e11bea77a5ea9d6f0fe79b57cd2b189b5d15b93a2bdb925be22949232e4e55",
-      "names": Array [
+      "names": [
         "tonistiigi/binfmt@sha256:66e11bea77a5ea9d6f0fe79b57cd2b189b5d15b93a2bdb925be22949232e4e55",
         "tonistiigi/binfmt:latest",
       ],
       "sizeInBytes": 60182964,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "registry.k8s.io/coredns/coredns:v1.11.1",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "registry.k8s.io/coredns/coredns:v1.11.1",
             ],
             "sizeBytes": 59820619,
@@ -1731,21 +1731,21 @@ Object {
       "createdOn": undefined,
       "displayName": "registry.k8s.io/coredns/coredns:v1.11.1",
       "name": "registry.k8s.io/coredns/coredns:v1.11.1",
-      "names": Array [
+      "names": [
         "registry.k8s.io/coredns/coredns:v1.11.1",
       ],
       "sizeInBytes": 59820619,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "registry.k8s.io/kube-scheduler:v1.29.1",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "registry.k8s.io/kube-scheduler:v1.29.1",
             ],
             "sizeBytes": 59536833,
@@ -1756,21 +1756,21 @@ Object {
       "createdOn": undefined,
       "displayName": "registry.k8s.io/kube-scheduler:v1.29.1",
       "name": "registry.k8s.io/kube-scheduler:v1.29.1",
-      "names": Array [
+      "names": [
         "registry.k8s.io/kube-scheduler:v1.29.1",
       ],
       "sizeInBytes": 59536833,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "k8s.gcr.io/kube-scheduler:v1.25.2",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "k8s.gcr.io/kube-scheduler:v1.25.2",
             ],
             "sizeBytes": 50583045,
@@ -1781,21 +1781,21 @@ Object {
       "createdOn": undefined,
       "displayName": "k8s.gcr.io/kube-scheduler:v1.25.2",
       "name": "k8s.gcr.io/kube-scheduler:v1.25.2",
-      "names": Array [
+      "names": [
         "k8s.gcr.io/kube-scheduler:v1.25.2",
       ],
       "sizeInBytes": 50583045,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "k8s.gcr.io/coredns:v1.9.3",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "k8s.gcr.io/coredns:v1.9.3",
             ],
             "sizeBytes": 48803555,
@@ -1806,21 +1806,21 @@ Object {
       "createdOn": undefined,
       "displayName": "k8s.gcr.io/coredns:v1.9.3",
       "name": "k8s.gcr.io/coredns:v1.9.3",
-      "names": Array [
+      "names": [
         "k8s.gcr.io/coredns:v1.9.3",
       ],
       "sizeInBytes": 48803555,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "cortexlabs/kubexit@sha256:75c1c946d1e9a75cbf736534603020efa1ca2fdf1bdbdb9a07c26ff0178f0807",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "cortexlabs/kubexit@sha256:75c1c946d1e9a75cbf736534603020efa1ca2fdf1bdbdb9a07c26ff0178f0807",
               "cortexlabs/kubexit:0.40.0",
             ],
@@ -1832,22 +1832,22 @@ Object {
       "createdOn": undefined,
       "displayName": "cortexlabs/kubexit@sha256:75c1c946d1e9a75cbf736534603020efa1ca2fdf1bdbdb9a07c26ff0178f0807",
       "name": "cortexlabs/kubexit@sha256:75c1c946d1e9a75cbf736534603020efa1ca2fdf1bdbdb9a07c26ff0178f0807",
-      "names": Array [
+      "names": [
         "cortexlabs/kubexit@sha256:75c1c946d1e9a75cbf736534603020efa1ca2fdf1bdbdb9a07c26ff0178f0807",
         "cortexlabs/kubexit:0.40.0",
       ],
       "sizeInBytes": 44186225,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "docker/desktop-storage-provisioner:v2.0",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "docker/desktop-storage-provisioner:v2.0",
             ],
             "sizeBytes": 41850220,
@@ -1858,21 +1858,21 @@ Object {
       "createdOn": undefined,
       "displayName": "docker/desktop-storage-provisioner:v2.0",
       "name": "docker/desktop-storage-provisioner:v2.0",
-      "names": Array [
+      "names": [
         "docker/desktop-storage-provisioner:v2.0",
       ],
       "sizeInBytes": 41850220,
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Image",
       ],
       "_key": "docker/desktop-vpnkit-controller@sha256:7ecf567ea07095f9af6ce2004055d4d37e4ee3bc19b553cce2f6c37ee9b916bf",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1ContainerImage {
-            "names": Array [
+            "names": [
               "docker/desktop-vpnkit-controller@sha256:7ecf567ea07095f9af6ce2004055d4d37e4ee3bc19b553cce2f6c37ee9b916bf",
               "docker/desktop-vpnkit-controller:dc331cb22850be0cdd97c84a9cfecaf44a1afb6e",
             ],
@@ -1884,15 +1884,15 @@ Object {
       "createdOn": undefined,
       "displayName": "docker/desktop-vpnkit-controller@sha256:7ecf567ea07095f9af6ce2004055d4d37e4ee3bc19b553cce2f6c37ee9b916bf",
       "name": "docker/desktop-vpnkit-controller@sha256:7ecf567ea07095f9af6ce2004055d4d37e4ee3bc19b553cce2f6c37ee9b916bf",
-      "names": Array [
+      "names": [
         "docker/desktop-vpnkit-controller@sha256:7ecf567ea07095f9af6ce2004055d4d37e4ee3bc19b553cce2f6c37ee9b916bf",
         "docker/desktop-vpnkit-controller:dc331cb22850be0cdd97c84a9cfecaf44a1afb6e",
       ],
       "sizeInBytes": 36226360,
     },
   ],
-  "collectedRelationships": Array [
-    Object {
+  "collectedRelationships": [
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:f9363fc4c08ec1c490be966712156da621f5021879112e2ffb40c02f3efad12b",
@@ -1900,7 +1900,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-cb7ecdd3-c17e-4339-8f49-abe0744f41d7:latest",
@@ -1908,7 +1908,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-8ee4801e-fcef-412e-be46-6decfe745677:latest",
@@ -1916,7 +1916,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-f733468a-1115-458d-addc-136a099c83e0:latest",
@@ -1924,7 +1924,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-0295e95e-3a05-477f-90ec-b08d7b08ea84:latest",
@@ -1932,7 +1932,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
@@ -1940,7 +1940,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-9301f5b0-9bdc-4eab-88b3-18911c56c46d:latest",
@@ -1948,7 +1948,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-48587a38-13d0-418f-a08e-3db69c486fd6:latest",
@@ -1956,7 +1956,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-a4964632-de9c-43bd-9954-c091379ad801:latest",
@@ -1964,7 +1964,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|integration-cyberark-epm-deploy-f73b81b2d5f513cb4a85f1ce3397f7c3b98d6ebc-b05f1075-0b24-402c-99ea-53ecee461a8c:latest",
@@ -1972,7 +1972,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-46234c6b-12a9-4e98-9b7c-d73b9f7a43b2:latest",
@@ -1980,7 +1980,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|integration-cyberark-epm-deploy-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
@@ -1988,7 +1988,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-cb206fd0-fc44-4c2c-afc6-03a09d9e73ff:latest",
@@ -1996,7 +1996,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-4e33638a-a167-42b7-9c51-ddf0b8262531:latest",
@@ -2004,7 +2004,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|integration-cyberark-epm-deploy-9e22c7edc643e71676f86820b2f1b77b63163c29-55bca43d-ef3c-41a7-a1b1-ab09c33b1b81:latest",
@@ -2012,7 +2012,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-terraform-v1.3@sha256:0625c426e9e5f9eb4cd387d6583f007ff3cc7bf47a94b6e714e56b11406f2516",
@@ -2020,7 +2020,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node18@sha256:bb87ce3aa714d1457b4cefee61bf034b6ee09e6a66a5ccab236540f60fd2b3d1",
@@ -2028,7 +2028,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|081157560428.dkr.ecr.us-east-1.amazonaws.com/deployer@sha256:cc3996116a7a3418a6919a57af4a7fe00b880efec6ff000ff6280bc3729264f6",
@@ -2036,7 +2036,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|081157560428.dkr.ecr.us-east-1.amazonaws.com/builder-node14@sha256:19927c7d9f18be98b9da4a5ccfda77113be8741e1878dd949974021f569e2c72",
@@ -2044,7 +2044,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|graph-kubernetes:2.0.0",
@@ -2052,7 +2052,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|web-icons-deploy-92c218c41b1a8f518d0369858274cc96f85608fe-7e0615be-f920-4847-a715-b377143d9adb:latest",
@@ -2060,7 +2060,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|081157560428.dkr.ecr.us-east-1.amazonaws.com/base-deploy-slim@sha256:2d2c0799c492cd19a6f092c8a61e45526b378aa75d74bad5f630b4b1c1d5d286",
@@ -2068,7 +2068,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|docker/desktop-kubernetes@sha256:09d56959eb312aadacf637abb4cbd803efcc35a7cc8a8dfe1c7d1670ee76668a",
@@ -2076,7 +2076,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|hubproxy.docker.internal:5000/docker/desktop-kubernetes@sha256:783fe465eee40f2bf5743f2f90c94223093f173808bae7ca54f9a741d9d36b40",
@@ -2084,7 +2084,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|k8s.gcr.io/etcd:3.5.4-0",
@@ -2092,7 +2092,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-2a421e17-2dba-4712-b808-19d2ae1de19e:latest",
@@ -2100,7 +2100,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|integration-cyberark-epm-25922b175f0ea8fba4e00a5c8946de6eedede919-3db8d6d2-6c57-4d4b-8c8a-414013998b1e:latest",
@@ -2108,7 +2108,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|081157560428.dkr.ecr.us-east-1.amazonaws.com/ecs-nodejs-service-with-observability-instrumentation@sha256:8882cffe638b7204641d2b9dbb7e2b72702058e679174dbf957fccb15fa37b59",
@@ -2116,7 +2116,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|moby/buildkit@sha256:d6fa89830c26919acba23c5cafa09df0c3ec1fbde20bb2a15ff349e0795241f4",
@@ -2124,7 +2124,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|081157560428.dkr.ecr.us-east-1.amazonaws.com/ami-builder@sha256:980f50b2e5780923d3f88dd6fc3b81cbfed55fc08032bf5fc54be809c52bfa8c",
@@ -2132,7 +2132,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|otel/opentelemetry-collector-contrib@sha256:fe4da6a72f0adab77371987c0e67a5605a9ad4b9aa5755c2ae88403f2657ec6b",
@@ -2140,7 +2140,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|registry.k8s.io/etcd:3.5.10-0",
@@ -2148,7 +2148,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|otel/opentelemetry-collector-contrib@sha256:7fd60e2d55b0fc2cc87742022ab14e7ea3200b260dd3c334f041b731be2584eb",
@@ -2156,7 +2156,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|fluent/fluent-bit@sha256:cc8dbcdc074dabbd9af913be0ba78bdaa7186bf7e5e91b7b62d7195e09e6245b",
@@ -2164,7 +2164,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|k8s.gcr.io/kube-apiserver:v1.25.2",
@@ -2172,7 +2172,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|registry.k8s.io/kube-apiserver:v1.29.1",
@@ -2180,7 +2180,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|registry.k8s.io/kube-controller-manager:v1.29.1",
@@ -2188,7 +2188,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|k8s.gcr.io/kube-controller-manager:v1.25.2",
@@ -2196,7 +2196,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|fluent/fluent-bit@sha256:bc89a87cc9cd40c320644835b83170f49819dc3ea447e38c71dde27a181e7a9b",
@@ -2204,7 +2204,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|registry.k8s.io/kube-proxy:v1.29.1",
@@ -2212,7 +2212,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|k8s.gcr.io/kube-proxy:v1.25.2",
@@ -2220,7 +2220,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|tonistiigi/binfmt@sha256:66e11bea77a5ea9d6f0fe79b57cd2b189b5d15b93a2bdb925be22949232e4e55",
@@ -2228,7 +2228,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|registry.k8s.io/coredns/coredns:v1.11.1",
@@ -2236,7 +2236,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|registry.k8s.io/kube-scheduler:v1.29.1",
@@ -2244,7 +2244,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|k8s.gcr.io/kube-scheduler:v1.25.2",
@@ -2252,7 +2252,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|k8s.gcr.io/coredns:v1.9.3",
@@ -2260,7 +2260,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|cortexlabs/kubexit@sha256:75c1c946d1e9a75cbf736534603020efa1ca2fdf1bdbdb9a07c26ff0178f0807",
@@ -2268,7 +2268,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|docker/desktop-storage-provisioner:v2.0",
@@ -2276,7 +2276,7 @@ Object {
       "_type": "kube_node_has_image",
       "displayName": "HAS",
     },
-    Object {
+    {
       "_class": "HAS",
       "_fromEntityKey": "8279e5b2-362f-4424-94b0-8dc553f4faca",
       "_key": "8279e5b2-362f-4424-94b0-8dc553f4faca|has|docker/desktop-vpnkit-controller@sha256:7ecf567ea07095f9af6ce2004055d4d37e4ee3bc19b553cce2f6c37ee9b916bf",
@@ -2285,7 +2285,7 @@ Object {
       "displayName": "HAS",
     },
   ],
-  "encounteredTypes": Array [
+  "encounteredTypes": [
     "kube_node",
     "kube_image",
     "kube_node_has_image",

@@ -4,7 +4,11 @@ import {
   RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
 import { IntegrationConfig, IntegrationStepContext } from '../../config';
-import { Entities, IntegrationSteps, Relationships } from '../constants';
+import {
+  Entities,
+  IntegrationSteps,
+  Relationships,
+} from '../constants';
 import { createStatefulSetEntity } from './converters';
 import getOrCreateAPIClient from '../../kubernetes/getOrCreateAPIClient';
 
@@ -44,7 +48,7 @@ export const statefulSetsSteps: IntegrationStep<IntegrationConfig>[] = [
   {
     id: IntegrationSteps.STATEFULSETS,
     name: 'Fetch StatefulSets',
-    entities: [Entities.STATEFULSET],
+    entities: [Entities.STATEFULSET, Entities.CONTAINER_SPEC],
     relationships: [
       Relationships.NAMESPACE_CONTAINS_STATEFULSET,
       // If we later figure out that statefulset can be created using deployment
@@ -52,5 +56,5 @@ export const statefulSetsSteps: IntegrationStep<IntegrationConfig>[] = [
     ],
     dependsOn: [IntegrationSteps.NAMESPACES],
     executionHandler: fetchStatefulSets,
-  },
+  }
 ];

@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#createClusterEntity should convert data 1`] = `
-Object {
-  "_class": Array [
+{
+  "_class": [
     "Cluster",
   ],
   "_key": "kube_cluster:dummy-data",
-  "_rawData": Array [
-    Object {
+  "_rawData": [
+    {
       "name": "default",
-      "rawData": Object {
+      "rawData": {
         "name": "dummy-data",
         "server": "dummy-data",
         "skipTLSVerify": false,

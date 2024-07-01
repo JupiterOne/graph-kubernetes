@@ -1,57 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#fetchCronJobs should collect data: jobState 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
+{
+  "collectedEntities": [
+    {
+      "_class": [
         "Group",
       ],
-      "_key": "868d4703-b338-4051-98e4-b65b4f0a0006",
-      "_rawData": Array [
-        Object {
+      "_key": "0db73bce-0801-4b25-867a-a9fe958fa96d",
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
               "annotations": undefined,
-              "creationTimestamp": 2024-01-11T15:50:15.000Z,
+              "creationTimestamp": 2024-06-21T07:44:54.000Z,
               "deletionGracePeriodSeconds": undefined,
               "deletionTimestamp": undefined,
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "default",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
                   "manager": "kube-apiserver",
                   "operation": "Update",
                   "subresource": undefined,
-                  "time": 2024-01-11T15:50:15.000Z,
+                  "time": 2024-06-21T07:44:54.000Z,
                 },
               ],
               "name": "default",
               "namespace": undefined,
               "ownerReferences": undefined,
-              "resourceVersion": "39",
+              "resourceVersion": "42",
               "selfLink": undefined,
-              "uid": "868d4703-b338-4051-98e4-b65b4f0a0006",
+              "uid": "0db73bce-0801-4b25-867a-a9fe958fa96d",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -64,66 +64,66 @@ Object {
       ],
       "_type": "kube_namespace",
       "active": undefined,
-      "createdOn": 1704988215000,
+      "createdOn": 1718955894000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "default",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
       "name": "default",
-      "resourceVersion": "39",
+      "resourceVersion": "42",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
-      "_key": "52615a92-75c3-4c4b-8b72-51be82a4bc21",
-      "_rawData": Array [
-        Object {
+      "_key": "a3b7fbce-2d26-47e5-97b6-3ccc51b40932",
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
               "annotations": undefined,
-              "creationTimestamp": 2024-01-11T15:50:15.000Z,
+              "creationTimestamp": 2024-06-21T07:44:54.000Z,
               "deletionGracePeriodSeconds": undefined,
               "deletionTimestamp": undefined,
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-node-lease",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
                   "manager": "kube-apiserver",
                   "operation": "Update",
                   "subresource": undefined,
-                  "time": 2024-01-11T15:50:15.000Z,
+                  "time": 2024-06-21T07:44:54.000Z,
                 },
               ],
               "name": "kube-node-lease",
               "namespace": undefined,
               "ownerReferences": undefined,
-              "resourceVersion": "35",
+              "resourceVersion": "39",
               "selfLink": undefined,
-              "uid": "52615a92-75c3-4c4b-8b72-51be82a4bc21",
+              "uid": "a3b7fbce-2d26-47e5-97b6-3ccc51b40932",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -136,66 +136,66 @@ Object {
       ],
       "_type": "kube_namespace",
       "active": undefined,
-      "createdOn": 1704988215000,
+      "createdOn": 1718955894000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-node-lease",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
       "name": "kube-node-lease",
-      "resourceVersion": "35",
+      "resourceVersion": "39",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
-      "_key": "7a2ee4f7-12fd-494b-93f0-c639b1e63a72",
-      "_rawData": Array [
-        Object {
+      "_key": "4055ce72-f3cb-457d-8003-c10a01017dd8",
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
               "annotations": undefined,
-              "creationTimestamp": 2024-01-11T15:50:15.000Z,
+              "creationTimestamp": 2024-06-21T07:44:54.000Z,
               "deletionGracePeriodSeconds": undefined,
               "deletionTimestamp": undefined,
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-public",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
                   "manager": "kube-apiserver",
                   "operation": "Update",
                   "subresource": undefined,
-                  "time": 2024-01-11T15:50:15.000Z,
+                  "time": 2024-06-21T07:44:54.000Z,
                 },
               ],
               "name": "kube-public",
               "namespace": undefined,
               "ownerReferences": undefined,
-              "resourceVersion": "20",
+              "resourceVersion": "31",
               "selfLink": undefined,
-              "uid": "7a2ee4f7-12fd-494b-93f0-c639b1e63a72",
+              "uid": "4055ce72-f3cb-457d-8003-c10a01017dd8",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -208,55 +208,55 @@ Object {
       ],
       "_type": "kube_namespace",
       "active": undefined,
-      "createdOn": 1704988215000,
+      "createdOn": 1718955894000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-public",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
       "name": "kube-public",
-      "resourceVersion": "20",
+      "resourceVersion": "31",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
-      "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1",
-      "_rawData": Array [
-        Object {
+      "_key": "dae8939b-da22-491d-a98b-c8fdf0e2f119",
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
               "annotations": undefined,
-              "creationTimestamp": 2024-01-11T15:50:15.000Z,
+              "creationTimestamp": 2024-06-21T07:44:54.000Z,
               "deletionGracePeriodSeconds": undefined,
               "deletionTimestamp": undefined,
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-system",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
                   "manager": "kube-apiserver",
                   "operation": "Update",
                   "subresource": undefined,
-                  "time": 2024-01-11T15:50:15.000Z,
+                  "time": 2024-06-21T07:44:54.000Z,
                 },
               ],
               "name": "kube-system",
@@ -264,10 +264,10 @@ Object {
               "ownerReferences": undefined,
               "resourceVersion": "12",
               "selfLink": undefined,
-              "uid": "ce86116b-863b-4e74-979e-3c031a9aeee1",
+              "uid": "dae8939b-da22-491d-a98b-c8fdf0e2f119",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -280,10 +280,10 @@ Object {
       ],
       "_type": "kube_namespace",
       "active": undefined,
-      "createdOn": 1704988215000,
+      "createdOn": 1718955894000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-system",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -291,12 +291,95 @@ Object {
       "resourceVersion": "12",
       "status.phase": "Active",
     },
+    {
+      "_class": [
+        "Group",
+      ],
+      "_key": "c34b14f9-fe12-4a1b-9b58-894760f6a770",
+      "_rawData": [
+        {
+          "name": "default",
+          "rawData": V1Namespace {
+            "apiVersion": undefined,
+            "kind": undefined,
+            "metadata": V1ObjectMeta {
+              "annotations": {
+                "kubectl.kubernetes.io/last-applied-configuration": "{"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"labels":{"addonmanager.kubernetes.io/mode":"Reconcile","kubernetes.io/minikube-addons":"dashboard"},"name":"kubernetes-dashboard"}}
+",
+              },
+              "creationTimestamp": 2024-06-21T07:45:06.000Z,
+              "deletionGracePeriodSeconds": undefined,
+              "deletionTimestamp": undefined,
+              "finalizers": undefined,
+              "generateName": undefined,
+              "generation": undefined,
+              "labels": {
+                "addonmanager.kubernetes.io/mode": "Reconcile",
+                "kubernetes.io/metadata.name": "kubernetes-dashboard",
+                "kubernetes.io/minikube-addons": "dashboard",
+              },
+              "managedFields": [
+                V1ManagedFieldsEntry {
+                  "apiVersion": "v1",
+                  "fieldsType": "FieldsV1",
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:kubectl.kubernetes.io/last-applied-configuration": {},
+                      },
+                      "f:labels": {
+                        ".": {},
+                        "f:addonmanager.kubernetes.io/mode": {},
+                        "f:kubernetes.io/metadata.name": {},
+                        "f:kubernetes.io/minikube-addons": {},
+                      },
+                    },
+                  },
+                  "manager": "kubectl-client-side-apply",
+                  "operation": "Update",
+                  "subresource": undefined,
+                  "time": 2024-06-21T07:45:06.000Z,
+                },
+              ],
+              "name": "kubernetes-dashboard",
+              "namespace": undefined,
+              "ownerReferences": undefined,
+              "resourceVersion": "315",
+              "selfLink": undefined,
+              "uid": "c34b14f9-fe12-4a1b-9b58-894760f6a770",
+            },
+            "spec": V1NamespaceSpec {
+              "finalizers": [
+                "kubernetes",
+              ],
+            },
+            "status": V1NamespaceStatus {
+              "conditions": undefined,
+              "phase": "Active",
+            },
+          },
+        },
+      ],
+      "_type": "kube_namespace",
+      "active": undefined,
+      "createdOn": 1718955906000,
+      "deletionGracePeriodSeconds": undefined,
+      "displayName": "kubernetes-dashboard",
+      "finalizers": [
+        "kubernetes",
+      ],
+      "generation": undefined,
+      "name": "kubernetes-dashboard",
+      "resourceVersion": "315",
+      "status.phase": "Active",
+    },
   ],
-  "collectedRelationships": Array [],
-  "encounteredTypes": Array [
+  "collectedRelationships": [],
+  "encounteredTypes": [
     "kube_namespace",
   ],
-  "numCollectedEntities": 4,
+  "numCollectedEntities": 5,
   "numCollectedRelationships": 0,
 }
 `;

@@ -32,6 +32,12 @@ export enum IntegrationSteps {
   SECRETS = 'fetch-secrets',
   IMAGES = 'fetch-images',
   PODS = 'fetch-pods',
+  CONTAINER_SPEC = 'fetch-container-spec',
+  CONTAINER_SPEC_HAS_JOB = 'fetch-container-spec-job-relationship',
+  CONTAINER_SPEC_HAS_CRON_JOB = 'fetch-container-spec-cron-job-relationship',
+  CONTAINER_SPEC_HAS_DAEMONSET = 'fetch-container-spec-daemonset-relationship',
+  CONTAINER_SPEC_HAS_REPLICASET = 'fetch-container-spec-replicaset-relationship',
+  CONTAINER_SPEC_HAS_STATEFULSET = 'fetch-container-spec-statefulset-relationship',
 }
 
 export const Entities = {
@@ -330,7 +336,45 @@ export const Relationships = {
     sourceType: Entities.POD._type,
     targetType: Entities.CONTAINER._type,
   },
+  JOB_USES_CONTAINER_SPEC: {
+    _type: 'kube_job_uses_container_spec',
+    _class: RelationshipClass.USES,
+    sourceType: Entities.JOB._type,
+    targetType: Entities.CONTAINER_SPEC._type,
+  },
+  CRONJOB_USES_CONTAINER_SPEC: {
+    _type: 'kube_cron_job_uses_container_spec',
+    _class: RelationshipClass.USES,
+    sourceType: Entities.CRONJOB._type,
+    targetType: Entities.CONTAINER_SPEC._type,
+  },
+  DAEMONSET_USES_CONTAINER_SPEC: {
+    _type: 'kube_daemon_set_uses_container_spec',
+    _class: RelationshipClass.USES,
+    sourceType: Entities.DAEMONSET._type,
+    targetType: Entities.CONTAINER_SPEC._type,
+  },
+  REPLICASET_USES_CONTAINER_SPEC: {
+    _type: 'kube_replica_set_uses_container_spec',
+    _class: RelationshipClass.USES,
+    sourceType: Entities.REPLICASET._type,
+    targetType: Entities.CONTAINER_SPEC._type,
+  },
+  STATEFULSET_USES_CONTAINER_SPEC: {
+    _type: 'kube_stateful_set_uses_container_spec',
+    _class: RelationshipClass.USES,
+    sourceType: Entities.STATEFULSET._type,
+    targetType: Entities.CONTAINER_SPEC._type,
+  },
 };
+
+export enum ContainerspecType {
+  CRONJOB = 'cronjob',
+  JOB = 'job',
+  DAEMONSET = 'daemonset',
+  REPLICASET = 'replicaset',
+  STATEFULSET = 'statefulset',
+}
 
 export const MappedRelationships: Record<
   string,

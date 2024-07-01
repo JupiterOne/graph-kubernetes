@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#createServiceEntity should convert data 1`] = `
-Object {
-  "_class": Array [
+{
+  "_class": [
     "Service",
   ],
   "_key": "c296a0d8-9839-4908-bd52-971ddaaebcaf",
-  "_rawData": Array [
-    Object {
+  "_rawData": [
+    {
       "name": "default",
-      "rawData": Object {
-        "metadata": Object {
+      "rawData": {
+        "metadata": {
           "creationTimestamp": 2021-04-27T20:57:19.000Z,
-          "labels": Object {
+          "labels": {
             "component": "apiserver",
             "provider": "kubernetes",
           },
@@ -21,13 +21,13 @@ Object {
           "resourceVersion": "202",
           "uid": "c296a0d8-9839-4908-bd52-971ddaaebcaf",
         },
-        "spec": Object {
+        "spec": {
           "clusterIP": "10.96.0.1",
-          "clusterIPs": Array [
+          "clusterIPs": [
             "10.96.0.1",
           ],
-          "ports": Array [
-            Object {
+          "ports": [
+            {
               "name": "https",
               "port": 443,
               "protocol": "TCP",
@@ -36,8 +36,8 @@ Object {
           "sessionAffinity": "None",
           "type": "ClusterIP",
         },
-        "status": Object {
-          "loadBalancer": Object {},
+        "status": {
+          "loadBalancer": {},
         },
       },
     },
@@ -45,11 +45,11 @@ Object {
   "_type": "kube_service",
   "active": undefined,
   "allocateLoadBalancerNodePorts": undefined,
-  "category": Array [
+  "category": [
     "infrastructure",
   ],
   "clusterIP": "10.96.0.1",
-  "clusterIPs": Array [
+  "clusterIPs": [
     "10.96.0.1",
   ],
   "createdOn": 1619557039000,
@@ -58,7 +58,7 @@ Object {
   "externalIPs": undefined,
   "externalName": undefined,
   "externalTrafficPolicy": undefined,
-  "function": Array [
+  "function": [
     "compute",
   ],
   "generation": undefined,

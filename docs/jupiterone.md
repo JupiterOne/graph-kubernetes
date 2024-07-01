@@ -230,9 +230,12 @@ The following relationships are created:
 | `kube_cluster`        | **CONTAINS**          | `kube_cluster_role_binding` |
 | `kube_cluster`        | **CONTAINS**          | `kube_namespace`            |
 | `kube_container_spec` | **USES**              | `kube_volume`               |
+| `kube_cron_job`       | **USES**              | `kube_container_spec`       |
 | `kube_cron_job`       | **MANAGES**           | `kube_job`                  |
-| `kube_deployment`     | **MANAGES**           | `kube_replica_set`          |
+| `kube_daemon_set`     | **USES**              | `kube_container_spec`       |
 | `kube_deployment`     | **USES**              | `kube_container_spec`       |
+| `kube_deployment`     | **MANAGES**           | `kube_replica_set`          |
+| `kube_job`            | **USES**              | `kube_container_spec`       |
 | `kube_job`            | **MANAGES**           | `kube_pod`                  |
 | `kube_namespace`      | **CONTAINS**          | `kube_config_map`           |
 | `kube_namespace`      | **CONTAINS**          | `kube_cron_job`             |
@@ -250,8 +253,9 @@ The following relationships are created:
 | `kube_node`           | **HAS**               | `kube_image`                |
 | `kube_node`           | **HAS**               | `kube_pod`                  |
 | `kube_pod`            | **CONTAINS**          | `kube_container`            |
-| `kube_replica_set`    | **MANAGES**           | `kube_pod`                  |
+| `kube_replica_set`    | **USES**              | `kube_container_spec`       |
 | `kube_replica_set`    | **USES**              | `kube_image`                |
+| `kube_replica_set`    | **MANAGES**           | `kube_pod`                  |
 | `kube_stateful_set`   | **MANAGES**           | `kube_pod`                  |
 
 ### Mapped Relationships

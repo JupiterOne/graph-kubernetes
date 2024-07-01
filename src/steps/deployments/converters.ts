@@ -4,10 +4,10 @@ import {
   Entity,
   generateRelationshipKey,
   parseTimePropertyValue,
+  RelationshipClass,
 } from '@jupiterone/integration-sdk-core';
 import * as k8s from '@kubernetes/client-node';
 import { Entities } from '../constants';
-import { RelationshipClass } from '@jupiterone/data-model';
 import { V1VolumeMount } from '@kubernetes/client-node';
 
 export function getVolumeKey(
@@ -42,17 +42,12 @@ export function createVolumeEntity(
   });
 }
 
-export function getContainerSpecKey(
-  namespace: string,
-  deploymentId: string,
-  specName: string,
-) {
-  return `${namespace}/${deploymentId}/${specName}`;
+export function getContainerSpecKey(namespace: string, specName: string) {
+  return `${namespace}/${specName}`;
 }
 
 export function createContainerSpecEntity(
   namespace: string,
-  deploymentUid: string,
   data: k8s.V1Container,
 ) {
   return createIntegrationEntity({
@@ -61,7 +56,7 @@ export function createContainerSpecEntity(
       assign: {
         _class: Entities.CONTAINER_SPEC._class,
         _type: Entities.CONTAINER_SPEC._type,
-        _key: getContainerSpecKey(namespace, deploymentUid, data.name),
+        _key: getContainerSpecKey(namespace, data.name),
         name: data.name,
         displayName: data.name,
         image: data.image,

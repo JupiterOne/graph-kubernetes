@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#createJobEntity should convert data 1`] = `
-Object {
-  "_class": Array [
+{
+  "_class": [
     "Task",
   ],
   "_key": "52f2fb4f-ab4b-4699-9e05-17571079a43f",
-  "_rawData": Array [
-    Object {
+  "_rawData": [
+    {
       "name": "default",
-      "rawData": Object {
-        "metadata": Object {
-          "annotations": Object {
-            "kubectl.kubernetes.io/last-applied-configuration": "{\\"apiVersion\\":\\"batch/v1\\",\\"kind\\":\\"Job\\",\\"metadata\\":{\\"annotations\\":{},\\"name\\":\\"pi\\",\\"namespace\\":\\"default\\"},\\"spec\\":{\\"backoffLimit\\":4,\\"template\\":{\\"spec\\":{\\"containers\\":[{\\"command\\":[\\"perl\\",\\"-Mbignum=bpi\\",\\"-wle\\",\\"print bpi(2000)\\"],\\"image\\":\\"perl\\",\\"name\\":\\"pi\\"}],\\"restartPolicy\\":\\"Never\\"}}}}
+      "rawData": {
+        "metadata": {
+          "annotations": {
+            "kubectl.kubernetes.io/last-applied-configuration": "{"apiVersion":"batch/v1","kind":"Job","metadata":{"annotations":{},"name":"pi","namespace":"default"},"spec":{"backoffLimit":4,"template":{"spec":{"containers":[{"command":["perl","-Mbignum=bpi","-wle","print bpi(2000)"],"image":"perl","name":"pi"}],"restartPolicy":"Never"}}}}
 ",
           },
           "creationTimestamp": 2021-06-23T12:52:25.000Z,
-          "labels": Object {
+          "labels": {
             "controller-uid": "52f2fb4f-ab4b-4699-9e05-17571079a43f",
             "job-name": "pi",
           },
@@ -25,26 +25,26 @@ Object {
           "resourceVersion": "553808",
           "uid": "52f2fb4f-ab4b-4699-9e05-17571079a43f",
         },
-        "spec": Object {
+        "spec": {
           "backoffLimit": 4,
           "completions": 1,
           "parallelism": 1,
-          "selector": Object {
-            "matchLabels": Object {
+          "selector": {
+            "matchLabels": {
               "controller-uid": "52f2fb4f-ab4b-4699-9e05-17571079a43f",
             },
           },
-          "template": Object {
-            "metadata": Object {
-              "labels": Object {
+          "template": {
+            "metadata": {
+              "labels": {
                 "controller-uid": "52f2fb4f-ab4b-4699-9e05-17571079a43f",
                 "job-name": "pi",
               },
             },
-            "spec": Object {
-              "containers": Array [
-                Object {
-                  "command": Array [
+            "spec": {
+              "containers": [
+                {
+                  "command": [
                     "perl",
                     "-Mbignum=bpi",
                     "-wle",
@@ -53,7 +53,7 @@ Object {
                   "image": "perl",
                   "imagePullPolicy": "Always",
                   "name": "pi",
-                  "resources": Object {},
+                  "resources": {},
                   "terminationMessagePath": "/dev/termination-log",
                   "terminationMessagePolicy": "File",
                 },
@@ -61,15 +61,15 @@ Object {
               "dnsPolicy": "ClusterFirst",
               "restartPolicy": "Never",
               "schedulerName": "default-scheduler",
-              "securityContext": Object {},
+              "securityContext": {},
               "terminationGracePeriodSeconds": 30,
             },
           },
         },
-        "status": Object {
+        "status": {
           "completionTime": 2021-06-23T12:52:35.000Z,
-          "conditions": Array [
-            Object {
+          "conditions": [
+            {
               "lastProbeTime": 2021-06-23T12:52:35.000Z,
               "lastTransitionTime": 2021-06-23T12:52:35.000Z,
               "status": "True",

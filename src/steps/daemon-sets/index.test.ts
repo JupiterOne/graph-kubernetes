@@ -1,9 +1,9 @@
-import { fetchDaemonSets } from '.';
+import { buildContainerSpecDaemonsetRelationship, fetchDaemonSets } from '.';
 import { fetchNamespaces } from '../namespaces';
 import { createDataCollectionTest } from '../../../test/recording';
 import { integrationConfig } from '../../../test/config';
 import { Entities, Relationships } from '../constants';
-import { RelationshipClass } from '@jupiterone/data-model';
+import { RelationshipClass } from '@jupiterone/integration-sdk-core';
 
 describe('#fetchDaemonSets', () => {
   test('should collect data', async () => {
@@ -11,7 +11,11 @@ describe('#fetchDaemonSets', () => {
       recordingName: 'fetchDaemonSets',
       recordingDirectory: __dirname,
       integrationConfig,
-      stepFunctions: [fetchNamespaces, fetchDaemonSets],
+      stepFunctions: [
+        fetchNamespaces,
+        fetchDaemonSets,
+        buildContainerSpecDaemonsetRelationship,
+      ],
       entitySchemaMatchers: [
         {
           _type: Entities.CRONJOB._type,
@@ -58,6 +62,17 @@ describe('#fetchDaemonSets', () => {
               properties: {
                 _class: { const: RelationshipClass.CONTAINS },
                 _type: { const: 'kube_namespace_contains_daemon_set' },
+              },
+            },
+          },
+        },
+        {
+          _type: Relationships.DAEMONSET_USES_CONTAINER_SPEC._type,
+          matcher: {
+            schema: {
+              properties: {
+                _class: { const: RelationshipClass.USES },
+                _type: { const: 'kube_daemon_set_uses_container_spec' },
               },
             },
           },

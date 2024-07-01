@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#createConfigMapEntity should convert data 1`] = `
-Object {
-  "_class": Array [
+{
+  "_class": [
     "Configuration",
   ],
   "_key": "7deda7f2-2ac1-4845-836f-e0984840243b",
-  "_rawData": Array [
-    Object {
+  "_rawData": [
+    {
       "name": "default",
-      "rawData": Object {
-        "metadata": Object {
+      "rawData": {
+        "metadata": {
           "creationTimestamp": 2021-04-27T20:57:19.000Z,
           "name": "kubelet-config-1.20",
           "namespace": "kube-system",

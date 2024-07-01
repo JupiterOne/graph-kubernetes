@@ -1,57 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#fetchStatefulSets should collect data: jobState 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
+{
+  "collectedEntities": [
+    {
+      "_class": [
         "Group",
       ],
-      "_key": "868d4703-b338-4051-98e4-b65b4f0a0006",
-      "_rawData": Array [
-        Object {
+      "_key": "9e9e231b-89d5-4ac7-8ec4-855791482c2f",
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
               "annotations": undefined,
-              "creationTimestamp": 2024-01-11T15:50:15.000Z,
+              "creationTimestamp": 2024-06-19T08:11:16.000Z,
               "deletionGracePeriodSeconds": undefined,
               "deletionTimestamp": undefined,
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "default",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
                   "manager": "kube-apiserver",
                   "operation": "Update",
                   "subresource": undefined,
-                  "time": 2024-01-11T15:50:15.000Z,
+                  "time": 2024-06-19T08:11:16.000Z,
                 },
               ],
               "name": "default",
               "namespace": undefined,
               "ownerReferences": undefined,
-              "resourceVersion": "39",
+              "resourceVersion": "42",
               "selfLink": undefined,
-              "uid": "868d4703-b338-4051-98e4-b65b4f0a0006",
+              "uid": "9e9e231b-89d5-4ac7-8ec4-855791482c2f",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -64,66 +64,66 @@ Object {
       ],
       "_type": "kube_namespace",
       "active": undefined,
-      "createdOn": 1704988215000,
+      "createdOn": 1718784676000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "default",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
       "name": "default",
-      "resourceVersion": "39",
+      "resourceVersion": "42",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
-      "_key": "52615a92-75c3-4c4b-8b72-51be82a4bc21",
-      "_rawData": Array [
-        Object {
+      "_key": "9d2b05a5-c965-4a88-8b01-b9d28aed519a",
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
               "annotations": undefined,
-              "creationTimestamp": 2024-01-11T15:50:15.000Z,
+              "creationTimestamp": 2024-06-19T08:11:16.000Z,
               "deletionGracePeriodSeconds": undefined,
               "deletionTimestamp": undefined,
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-node-lease",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
                   "manager": "kube-apiserver",
                   "operation": "Update",
                   "subresource": undefined,
-                  "time": 2024-01-11T15:50:15.000Z,
+                  "time": 2024-06-19T08:11:16.000Z,
                 },
               ],
               "name": "kube-node-lease",
               "namespace": undefined,
               "ownerReferences": undefined,
-              "resourceVersion": "35",
+              "resourceVersion": "38",
               "selfLink": undefined,
-              "uid": "52615a92-75c3-4c4b-8b72-51be82a4bc21",
+              "uid": "9d2b05a5-c965-4a88-8b01-b9d28aed519a",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -136,66 +136,66 @@ Object {
       ],
       "_type": "kube_namespace",
       "active": undefined,
-      "createdOn": 1704988215000,
+      "createdOn": 1718784676000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-node-lease",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
       "name": "kube-node-lease",
-      "resourceVersion": "35",
+      "resourceVersion": "38",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
-      "_key": "7a2ee4f7-12fd-494b-93f0-c639b1e63a72",
-      "_rawData": Array [
-        Object {
+      "_key": "aee57e5e-0611-4ca8-89f3-64bf6fdaac8c",
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
               "annotations": undefined,
-              "creationTimestamp": 2024-01-11T15:50:15.000Z,
+              "creationTimestamp": 2024-06-19T08:11:16.000Z,
               "deletionGracePeriodSeconds": undefined,
               "deletionTimestamp": undefined,
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-public",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
                   "manager": "kube-apiserver",
                   "operation": "Update",
                   "subresource": undefined,
-                  "time": 2024-01-11T15:50:15.000Z,
+                  "time": 2024-06-19T08:11:16.000Z,
                 },
               ],
               "name": "kube-public",
               "namespace": undefined,
               "ownerReferences": undefined,
-              "resourceVersion": "20",
+              "resourceVersion": "26",
               "selfLink": undefined,
-              "uid": "7a2ee4f7-12fd-494b-93f0-c639b1e63a72",
+              "uid": "aee57e5e-0611-4ca8-89f3-64bf6fdaac8c",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -208,55 +208,55 @@ Object {
       ],
       "_type": "kube_namespace",
       "active": undefined,
-      "createdOn": 1704988215000,
+      "createdOn": 1718784676000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-public",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
       "name": "kube-public",
-      "resourceVersion": "20",
+      "resourceVersion": "26",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
-      "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1",
-      "_rawData": Array [
-        Object {
+      "_key": "ced267a3-528f-46b5-a289-cbf7068d8fc9",
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
               "annotations": undefined,
-              "creationTimestamp": 2024-01-11T15:50:15.000Z,
+              "creationTimestamp": 2024-06-19T08:11:16.000Z,
               "deletionGracePeriodSeconds": undefined,
               "deletionTimestamp": undefined,
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-system",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
                   "manager": "kube-apiserver",
                   "operation": "Update",
                   "subresource": undefined,
-                  "time": 2024-01-11T15:50:15.000Z,
+                  "time": 2024-06-19T08:11:16.000Z,
                 },
               ],
               "name": "kube-system",
@@ -264,10 +264,10 @@ Object {
               "ownerReferences": undefined,
               "resourceVersion": "12",
               "selfLink": undefined,
-              "uid": "ce86116b-863b-4e74-979e-3c031a9aeee1",
+              "uid": "ced267a3-528f-46b5-a289-cbf7068d8fc9",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -280,10 +280,10 @@ Object {
       ],
       "_type": "kube_namespace",
       "active": undefined,
-      "createdOn": 1704988215000,
+      "createdOn": 1718784676000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-system",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -291,702 +291,12 @@ Object {
       "resourceVersion": "12",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
-        "Deployment",
-      ],
-      "_key": "1593a942-2d94-4b52-a87f-f2908ac27135",
-      "_rawData": Array [
-        Object {
-          "name": "default",
-          "rawData": V1StatefulSet {
-            "apiVersion": undefined,
-            "kind": undefined,
-            "metadata": V1ObjectMeta {
-              "annotations": Object {
-                "meta.helm.sh/release-name": "np-test",
-                "meta.helm.sh/release-namespace": "default",
-              },
-              "creationTimestamp": 2024-01-11T21:52:37.000Z,
-              "deletionGracePeriodSeconds": undefined,
-              "deletionTimestamp": undefined,
-              "finalizers": undefined,
-              "generateName": undefined,
-              "generation": 1,
-              "labels": Object {
-                "app.kubernetes.io/component": "primary",
-                "app.kubernetes.io/instance": "np-test",
-                "app.kubernetes.io/managed-by": "Helm",
-                "app.kubernetes.io/name": "mariadb",
-                "app.kubernetes.io/version": "11.2.2",
-                "helm.sh/chart": "mariadb-15.0.1",
-              },
-              "managedFields": Array [
-                V1ManagedFieldsEntry {
-                  "apiVersion": "apps/v1",
-                  "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:meta.helm.sh/release-name": Object {},
-                        "f:meta.helm.sh/release-namespace": Object {},
-                      },
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:app.kubernetes.io/component": Object {},
-                        "f:app.kubernetes.io/instance": Object {},
-                        "f:app.kubernetes.io/managed-by": Object {},
-                        "f:app.kubernetes.io/name": Object {},
-                        "f:app.kubernetes.io/version": Object {},
-                        "f:helm.sh/chart": Object {},
-                      },
-                    },
-                    "f:spec": Object {
-                      "f:persistentVolumeClaimRetentionPolicy": Object {
-                        ".": Object {},
-                        "f:whenDeleted": Object {},
-                        "f:whenScaled": Object {},
-                      },
-                      "f:podManagementPolicy": Object {},
-                      "f:replicas": Object {},
-                      "f:revisionHistoryLimit": Object {},
-                      "f:selector": Object {},
-                      "f:serviceName": Object {},
-                      "f:template": Object {
-                        "f:metadata": Object {
-                          "f:annotations": Object {
-                            ".": Object {},
-                            "f:checksum/configuration": Object {},
-                          },
-                          "f:labels": Object {
-                            ".": Object {},
-                            "f:app.kubernetes.io/component": Object {},
-                            "f:app.kubernetes.io/instance": Object {},
-                            "f:app.kubernetes.io/managed-by": Object {},
-                            "f:app.kubernetes.io/name": Object {},
-                            "f:app.kubernetes.io/version": Object {},
-                            "f:helm.sh/chart": Object {},
-                          },
-                        },
-                        "f:spec": Object {
-                          "f:affinity": Object {
-                            ".": Object {},
-                            "f:podAntiAffinity": Object {
-                              ".": Object {},
-                              "f:preferredDuringSchedulingIgnoredDuringExecution": Object {},
-                            },
-                          },
-                          "f:containers": Object {
-                            "k:{\\"name\\":\\"mariadb\\"}": Object {
-                              ".": Object {},
-                              "f:env": Object {
-                                ".": Object {},
-                                "k:{\\"name\\":\\"BITNAMI_DEBUG\\"}": Object {
-                                  ".": Object {},
-                                  "f:name": Object {},
-                                  "f:value": Object {},
-                                },
-                                "k:{\\"name\\":\\"MARIADB_DATABASE\\"}": Object {
-                                  ".": Object {},
-                                  "f:name": Object {},
-                                  "f:value": Object {},
-                                },
-                                "k:{\\"name\\":\\"MARIADB_PASSWORD\\"}": Object {
-                                  ".": Object {},
-                                  "f:name": Object {},
-                                  "f:valueFrom": Object {
-                                    ".": Object {},
-                                    "f:secretKeyRef": Object {},
-                                  },
-                                },
-                                "k:{\\"name\\":\\"MARIADB_ROOT_PASSWORD\\"}": Object {
-                                  ".": Object {},
-                                  "f:name": Object {},
-                                  "f:valueFrom": Object {
-                                    ".": Object {},
-                                    "f:secretKeyRef": Object {},
-                                  },
-                                },
-                                "k:{\\"name\\":\\"MARIADB_USER\\"}": Object {
-                                  ".": Object {},
-                                  "f:name": Object {},
-                                  "f:value": Object {},
-                                },
-                              },
-                              "f:image": Object {},
-                              "f:imagePullPolicy": Object {},
-                              "f:livenessProbe": Object {
-                                ".": Object {},
-                                "f:exec": Object {
-                                  ".": Object {},
-                                  "f:command": Object {},
-                                },
-                                "f:failureThreshold": Object {},
-                                "f:initialDelaySeconds": Object {},
-                                "f:periodSeconds": Object {},
-                                "f:successThreshold": Object {},
-                                "f:timeoutSeconds": Object {},
-                              },
-                              "f:name": Object {},
-                              "f:ports": Object {
-                                ".": Object {},
-                                "k:{\\"containerPort\\":3306,\\"protocol\\":\\"TCP\\"}": Object {
-                                  ".": Object {},
-                                  "f:containerPort": Object {},
-                                  "f:name": Object {},
-                                  "f:protocol": Object {},
-                                },
-                              },
-                              "f:readinessProbe": Object {
-                                ".": Object {},
-                                "f:exec": Object {
-                                  ".": Object {},
-                                  "f:command": Object {},
-                                },
-                                "f:failureThreshold": Object {},
-                                "f:initialDelaySeconds": Object {},
-                                "f:periodSeconds": Object {},
-                                "f:successThreshold": Object {},
-                                "f:timeoutSeconds": Object {},
-                              },
-                              "f:resources": Object {},
-                              "f:securityContext": Object {
-                                ".": Object {},
-                                "f:allowPrivilegeEscalation": Object {},
-                                "f:capabilities": Object {
-                                  ".": Object {},
-                                  "f:drop": Object {},
-                                },
-                                "f:privileged": Object {},
-                                "f:runAsNonRoot": Object {},
-                                "f:runAsUser": Object {},
-                                "f:seccompProfile": Object {
-                                  ".": Object {},
-                                  "f:type": Object {},
-                                },
-                              },
-                              "f:terminationMessagePath": Object {},
-                              "f:terminationMessagePolicy": Object {},
-                              "f:volumeMounts": Object {
-                                ".": Object {},
-                                "k:{\\"mountPath\\":\\"/bitnami/mariadb\\"}": Object {
-                                  ".": Object {},
-                                  "f:mountPath": Object {},
-                                  "f:name": Object {},
-                                },
-                                "k:{\\"mountPath\\":\\"/opt/bitnami/mariadb/conf/my.cnf\\"}": Object {
-                                  ".": Object {},
-                                  "f:mountPath": Object {},
-                                  "f:name": Object {},
-                                  "f:subPath": Object {},
-                                },
-                              },
-                            },
-                          },
-                          "f:dnsPolicy": Object {},
-                          "f:restartPolicy": Object {},
-                          "f:schedulerName": Object {},
-                          "f:securityContext": Object {
-                            ".": Object {},
-                            "f:fsGroup": Object {},
-                          },
-                          "f:serviceAccount": Object {},
-                          "f:serviceAccountName": Object {},
-                          "f:terminationGracePeriodSeconds": Object {},
-                          "f:volumes": Object {
-                            ".": Object {},
-                            "k:{\\"name\\":\\"config\\"}": Object {
-                              ".": Object {},
-                              "f:configMap": Object {
-                                ".": Object {},
-                                "f:defaultMode": Object {},
-                                "f:name": Object {},
-                              },
-                              "f:name": Object {},
-                            },
-                          },
-                        },
-                      },
-                      "f:updateStrategy": Object {
-                        "f:type": Object {},
-                      },
-                      "f:volumeClaimTemplates": Object {},
-                    },
-                  },
-                  "manager": "helm",
-                  "operation": "Update",
-                  "subresource": undefined,
-                  "time": 2024-01-11T21:52:37.000Z,
-                },
-                V1ManagedFieldsEntry {
-                  "apiVersion": "apps/v1",
-                  "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:status": Object {
-                      "f:availableReplicas": Object {},
-                      "f:collisionCount": Object {},
-                      "f:currentReplicas": Object {},
-                      "f:currentRevision": Object {},
-                      "f:observedGeneration": Object {},
-                      "f:readyReplicas": Object {},
-                      "f:replicas": Object {},
-                      "f:updateRevision": Object {},
-                      "f:updatedReplicas": Object {},
-                    },
-                  },
-                  "manager": "kube-controller-manager",
-                  "operation": "Update",
-                  "subresource": "status",
-                  "time": 2024-01-12T14:10:26.000Z,
-                },
-              ],
-              "name": "np-test-mariadb",
-              "namespace": "default",
-              "ownerReferences": undefined,
-              "resourceVersion": "36597",
-              "selfLink": undefined,
-              "uid": "1593a942-2d94-4b52-a87f-f2908ac27135",
-            },
-            "spec": V1StatefulSetSpec {
-              "minReadySeconds": undefined,
-              "ordinals": undefined,
-              "persistentVolumeClaimRetentionPolicy": V1StatefulSetPersistentVolumeClaimRetentionPolicy {
-                "whenDeleted": "Retain",
-                "whenScaled": "Retain",
-              },
-              "podManagementPolicy": "OrderedReady",
-              "replicas": 1,
-              "revisionHistoryLimit": 10,
-              "selector": V1LabelSelector {
-                "matchExpressions": undefined,
-                "matchLabels": Object {
-                  "app.kubernetes.io/component": "primary",
-                  "app.kubernetes.io/instance": "np-test",
-                  "app.kubernetes.io/name": "mariadb",
-                },
-              },
-              "serviceName": "np-test-mariadb",
-              "template": V1PodTemplateSpec {
-                "metadata": V1ObjectMeta {
-                  "annotations": Object {
-                    "checksum/configuration": "bf5d119817faaa366302d4ea6702b95d2c85410e2cb5be55ecc531b89c817479",
-                  },
-                  "creationTimestamp": null,
-                  "deletionGracePeriodSeconds": undefined,
-                  "deletionTimestamp": undefined,
-                  "finalizers": undefined,
-                  "generateName": undefined,
-                  "generation": undefined,
-                  "labels": Object {
-                    "app.kubernetes.io/component": "primary",
-                    "app.kubernetes.io/instance": "np-test",
-                    "app.kubernetes.io/managed-by": "Helm",
-                    "app.kubernetes.io/name": "mariadb",
-                    "app.kubernetes.io/version": "11.2.2",
-                    "helm.sh/chart": "mariadb-15.0.1",
-                  },
-                  "managedFields": undefined,
-                  "name": undefined,
-                  "namespace": undefined,
-                  "ownerReferences": undefined,
-                  "resourceVersion": undefined,
-                  "selfLink": undefined,
-                  "uid": undefined,
-                },
-                "spec": V1PodSpec {
-                  "activeDeadlineSeconds": undefined,
-                  "affinity": V1Affinity {
-                    "nodeAffinity": undefined,
-                    "podAffinity": undefined,
-                    "podAntiAffinity": V1PodAntiAffinity {
-                      "preferredDuringSchedulingIgnoredDuringExecution": Array [
-                        V1WeightedPodAffinityTerm {
-                          "podAffinityTerm": V1PodAffinityTerm {
-                            "labelSelector": V1LabelSelector {
-                              "matchExpressions": undefined,
-                              "matchLabels": Object {
-                                "app.kubernetes.io/component": "primary",
-                                "app.kubernetes.io/instance": "np-test",
-                                "app.kubernetes.io/name": "mariadb",
-                              },
-                            },
-                            "namespaceSelector": undefined,
-                            "namespaces": undefined,
-                            "topologyKey": "kubernetes.io/hostname",
-                          },
-                          "weight": 1,
-                        },
-                      ],
-                      "requiredDuringSchedulingIgnoredDuringExecution": undefined,
-                    },
-                  },
-                  "automountServiceAccountToken": undefined,
-                  "containers": Array [
-                    V1Container {
-                      "args": undefined,
-                      "command": undefined,
-                      "env": Array [
-                        V1EnvVar {
-                          "name": "BITNAMI_DEBUG",
-                          "value": "false",
-                          "valueFrom": undefined,
-                        },
-                        V1EnvVar {
-                          "name": "MARIADB_ROOT_PASSWORD",
-                          "value": undefined,
-                          "valueFrom": V1EnvVarSource {
-                            "configMapKeyRef": undefined,
-                            "fieldRef": undefined,
-                            "resourceFieldRef": undefined,
-                            "secretKeyRef": V1SecretKeySelector {
-                              "key": "mariadb-root-password",
-                              "name": "np-test-mariadb",
-                              "optional": undefined,
-                            },
-                          },
-                        },
-                        V1EnvVar {
-                          "name": "MARIADB_USER",
-                          "value": "bn_wordpress",
-                          "valueFrom": undefined,
-                        },
-                        V1EnvVar {
-                          "name": "MARIADB_PASSWORD",
-                          "value": undefined,
-                          "valueFrom": V1EnvVarSource {
-                            "configMapKeyRef": undefined,
-                            "fieldRef": undefined,
-                            "resourceFieldRef": undefined,
-                            "secretKeyRef": V1SecretKeySelector {
-                              "key": "mariadb-password",
-                              "name": "np-test-mariadb",
-                              "optional": undefined,
-                            },
-                          },
-                        },
-                        V1EnvVar {
-                          "name": "MARIADB_DATABASE",
-                          "value": "bitnami_wordpress",
-                          "valueFrom": undefined,
-                        },
-                      ],
-                      "envFrom": undefined,
-                      "image": "docker.io/bitnami/mariadb:11.2.2-debian-11-r1",
-                      "imagePullPolicy": "IfNotPresent",
-                      "lifecycle": undefined,
-                      "livenessProbe": V1Probe {
-                        "exec": V1ExecAction {
-                          "command": Array [
-                            "/bin/bash",
-                            "-ec",
-                            "password_aux=\\"\${MARIADB_ROOT_PASSWORD:-}\\"
-if [[ -f \\"\${MARIADB_ROOT_PASSWORD_FILE:-}\\" ]]; then
-    password_aux=$(cat \\"$MARIADB_ROOT_PASSWORD_FILE\\")
-fi
-mysqladmin status -uroot -p\\"\${password_aux}\\"
-",
-                          ],
-                        },
-                        "failureThreshold": 3,
-                        "grpc": undefined,
-                        "httpGet": undefined,
-                        "initialDelaySeconds": 120,
-                        "periodSeconds": 10,
-                        "successThreshold": 1,
-                        "tcpSocket": undefined,
-                        "terminationGracePeriodSeconds": undefined,
-                        "timeoutSeconds": 1,
-                      },
-                      "name": "mariadb",
-                      "ports": Array [
-                        V1ContainerPort {
-                          "containerPort": 3306,
-                          "hostIP": undefined,
-                          "hostPort": undefined,
-                          "name": "mysql",
-                          "protocol": "TCP",
-                        },
-                      ],
-                      "readinessProbe": V1Probe {
-                        "exec": V1ExecAction {
-                          "command": Array [
-                            "/bin/bash",
-                            "-ec",
-                            "password_aux=\\"\${MARIADB_ROOT_PASSWORD:-}\\"
-if [[ -f \\"\${MARIADB_ROOT_PASSWORD_FILE:-}\\" ]]; then
-    password_aux=$(cat \\"$MARIADB_ROOT_PASSWORD_FILE\\")
-fi
-mysqladmin status -uroot -p\\"\${password_aux}\\"
-",
-                          ],
-                        },
-                        "failureThreshold": 3,
-                        "grpc": undefined,
-                        "httpGet": undefined,
-                        "initialDelaySeconds": 30,
-                        "periodSeconds": 10,
-                        "successThreshold": 1,
-                        "tcpSocket": undefined,
-                        "terminationGracePeriodSeconds": undefined,
-                        "timeoutSeconds": 1,
-                      },
-                      "resizePolicy": undefined,
-                      "resources": V1ResourceRequirements {
-                        "claims": undefined,
-                        "limits": undefined,
-                        "requests": undefined,
-                      },
-                      "restartPolicy": undefined,
-                      "securityContext": V1SecurityContext {
-                        "allowPrivilegeEscalation": false,
-                        "capabilities": V1Capabilities {
-                          "add": undefined,
-                          "drop": Array [
-                            "ALL",
-                          ],
-                        },
-                        "privileged": false,
-                        "procMount": undefined,
-                        "readOnlyRootFilesystem": undefined,
-                        "runAsGroup": undefined,
-                        "runAsNonRoot": true,
-                        "runAsUser": 1001,
-                        "seLinuxOptions": undefined,
-                        "seccompProfile": V1SeccompProfile {
-                          "localhostProfile": undefined,
-                          "type": "RuntimeDefault",
-                        },
-                        "windowsOptions": undefined,
-                      },
-                      "startupProbe": undefined,
-                      "stdin": undefined,
-                      "stdinOnce": undefined,
-                      "terminationMessagePath": "/dev/termination-log",
-                      "terminationMessagePolicy": "File",
-                      "tty": undefined,
-                      "volumeDevices": undefined,
-                      "volumeMounts": Array [
-                        V1VolumeMount {
-                          "mountPath": "/bitnami/mariadb",
-                          "mountPropagation": undefined,
-                          "name": "data",
-                          "readOnly": undefined,
-                          "subPath": undefined,
-                          "subPathExpr": undefined,
-                        },
-                        V1VolumeMount {
-                          "mountPath": "/opt/bitnami/mariadb/conf/my.cnf",
-                          "mountPropagation": undefined,
-                          "name": "config",
-                          "readOnly": undefined,
-                          "subPath": "my.cnf",
-                          "subPathExpr": undefined,
-                        },
-                      ],
-                      "workingDir": undefined,
-                    },
-                  ],
-                  "dnsConfig": undefined,
-                  "dnsPolicy": "ClusterFirst",
-                  "enableServiceLinks": undefined,
-                  "ephemeralContainers": undefined,
-                  "hostAliases": undefined,
-                  "hostIPC": undefined,
-                  "hostNetwork": undefined,
-                  "hostPID": undefined,
-                  "hostUsers": undefined,
-                  "hostname": undefined,
-                  "imagePullSecrets": undefined,
-                  "initContainers": undefined,
-                  "nodeName": undefined,
-                  "nodeSelector": undefined,
-                  "os": undefined,
-                  "overhead": undefined,
-                  "preemptionPolicy": undefined,
-                  "priority": undefined,
-                  "priorityClassName": undefined,
-                  "readinessGates": undefined,
-                  "resourceClaims": undefined,
-                  "restartPolicy": "Always",
-                  "runtimeClassName": undefined,
-                  "schedulerName": "default-scheduler",
-                  "schedulingGates": undefined,
-                  "securityContext": V1PodSecurityContext {
-                    "fsGroup": 1001,
-                    "fsGroupChangePolicy": undefined,
-                    "runAsGroup": undefined,
-                    "runAsNonRoot": undefined,
-                    "runAsUser": undefined,
-                    "seLinuxOptions": undefined,
-                    "seccompProfile": undefined,
-                    "supplementalGroups": undefined,
-                    "sysctls": undefined,
-                    "windowsOptions": undefined,
-                  },
-                  "serviceAccount": "np-test-mariadb",
-                  "serviceAccountName": "np-test-mariadb",
-                  "setHostnameAsFQDN": undefined,
-                  "shareProcessNamespace": undefined,
-                  "subdomain": undefined,
-                  "terminationGracePeriodSeconds": 30,
-                  "tolerations": undefined,
-                  "topologySpreadConstraints": undefined,
-                  "volumes": Array [
-                    V1Volume {
-                      "awsElasticBlockStore": undefined,
-                      "azureDisk": undefined,
-                      "azureFile": undefined,
-                      "cephfs": undefined,
-                      "cinder": undefined,
-                      "configMap": V1ConfigMapVolumeSource {
-                        "defaultMode": 420,
-                        "items": undefined,
-                        "name": "np-test-mariadb",
-                        "optional": undefined,
-                      },
-                      "csi": undefined,
-                      "downwardAPI": undefined,
-                      "emptyDir": undefined,
-                      "ephemeral": undefined,
-                      "fc": undefined,
-                      "flexVolume": undefined,
-                      "flocker": undefined,
-                      "gcePersistentDisk": undefined,
-                      "gitRepo": undefined,
-                      "glusterfs": undefined,
-                      "hostPath": undefined,
-                      "iscsi": undefined,
-                      "name": "config",
-                      "nfs": undefined,
-                      "persistentVolumeClaim": undefined,
-                      "photonPersistentDisk": undefined,
-                      "portworxVolume": undefined,
-                      "projected": undefined,
-                      "quobyte": undefined,
-                      "rbd": undefined,
-                      "scaleIO": undefined,
-                      "secret": undefined,
-                      "storageos": undefined,
-                      "vsphereVolume": undefined,
-                    },
-                  ],
-                },
-              },
-              "updateStrategy": V1StatefulSetUpdateStrategy {
-                "rollingUpdate": undefined,
-                "type": "RollingUpdate",
-              },
-              "volumeClaimTemplates": Array [
-                V1PersistentVolumeClaim {
-                  "apiVersion": "v1",
-                  "kind": "PersistentVolumeClaim",
-                  "metadata": V1ObjectMeta {
-                    "annotations": undefined,
-                    "creationTimestamp": null,
-                    "deletionGracePeriodSeconds": undefined,
-                    "deletionTimestamp": undefined,
-                    "finalizers": undefined,
-                    "generateName": undefined,
-                    "generation": undefined,
-                    "labels": Object {
-                      "app.kubernetes.io/component": "primary",
-                      "app.kubernetes.io/instance": "np-test",
-                      "app.kubernetes.io/name": "mariadb",
-                    },
-                    "managedFields": undefined,
-                    "name": "data",
-                    "namespace": undefined,
-                    "ownerReferences": undefined,
-                    "resourceVersion": undefined,
-                    "selfLink": undefined,
-                    "uid": undefined,
-                  },
-                  "spec": V1PersistentVolumeClaimSpec {
-                    "accessModes": Array [
-                      "ReadWriteOnce",
-                    ],
-                    "dataSource": undefined,
-                    "dataSourceRef": undefined,
-                    "resources": V1ResourceRequirements {
-                      "claims": undefined,
-                      "limits": undefined,
-                      "requests": Object {
-                        "storage": "8Gi",
-                      },
-                    },
-                    "selector": undefined,
-                    "storageClassName": undefined,
-                    "volumeMode": "Filesystem",
-                    "volumeName": undefined,
-                  },
-                  "status": V1PersistentVolumeClaimStatus {
-                    "accessModes": undefined,
-                    "allocatedResourceStatuses": undefined,
-                    "allocatedResources": undefined,
-                    "capacity": undefined,
-                    "conditions": undefined,
-                    "phase": "Pending",
-                  },
-                },
-              ],
-            },
-            "status": V1StatefulSetStatus {
-              "availableReplicas": 1,
-              "collisionCount": 0,
-              "conditions": undefined,
-              "currentReplicas": 1,
-              "currentRevision": "np-test-mariadb-7f8fd96d9f",
-              "observedGeneration": 1,
-              "readyReplicas": 1,
-              "replicas": 1,
-              "updateRevision": "np-test-mariadb-7f8fd96d9f",
-              "updatedReplicas": 1,
-            },
-          },
-        },
-      ],
-      "_type": "kube_stateful_set",
-      "active": undefined,
-      "createdOn": 1705009957000,
-      "deletedOn": undefined,
-      "deletionGracePeriodSeconds": undefined,
-      "displayName": "np-test-mariadb",
-      "generation": 1,
-      "name": "np-test-mariadb",
-      "podManagementPolicy": "OrderedReady",
-      "replicas": 1,
-      "resourceVersion": "36597",
-      "revisionHistoryLimit": 10,
-      "serviceName": "np-test-mariadb",
-      "status.collisionCount": 0,
-      "status.currentReplicas": 1,
-      "status.currentRevision": "np-test-mariadb-7f8fd96d9f",
-      "status.observedGeneration": 1,
-      "status.readyReplicas": 1,
-      "status.replicas": 1,
-      "status.updateRevision": "np-test-mariadb-7f8fd96d9f",
-      "status.updatedReplicas": 1,
-      "strategy.partition": undefined,
-      "strategy.type": "RollingUpdate",
-    },
   ],
-  "collectedRelationships": Array [
-    Object {
-      "_class": "CONTAINS",
-      "_fromEntityKey": "868d4703-b338-4051-98e4-b65b4f0a0006",
-      "_key": "868d4703-b338-4051-98e4-b65b4f0a0006|contains|1593a942-2d94-4b52-a87f-f2908ac27135",
-      "_toEntityKey": "1593a942-2d94-4b52-a87f-f2908ac27135",
-      "_type": "kube_namespace_contains_stateful_set",
-      "displayName": "CONTAINS",
-    },
-  ],
-  "encounteredTypes": Array [
+  "collectedRelationships": [],
+  "encounteredTypes": [
     "kube_namespace",
-    "kube_stateful_set",
-    "kube_namespace_contains_stateful_set",
   ],
-  "numCollectedEntities": 5,
-  "numCollectedRelationships": 1,
+  "numCollectedEntities": 4,
+  "numCollectedRelationships": 0,
 }
 `;

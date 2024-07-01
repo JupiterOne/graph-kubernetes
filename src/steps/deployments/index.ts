@@ -88,7 +88,6 @@ export async function fetchDeployments(
             []) {
             const containerSpecEntity = createContainerSpecEntity(
               namespaceEntity.name as string,
-              deploymentId,
               container,
             );
             if (jobState.hasKey(containerSpecEntity._key)) {

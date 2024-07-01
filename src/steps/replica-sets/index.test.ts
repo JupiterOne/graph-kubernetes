@@ -1,10 +1,10 @@
-import { fetchReplicaSets } from '.';
+import { buildContainerSpecReplicasetRelationship, fetchReplicaSets } from '.';
 import { fetchNamespaces } from '../namespaces';
 import { fetchDeployments } from '../deployments';
 import { createDataCollectionTest } from '../../../test/recording';
 import { integrationConfig } from '../../../test/config';
 import { Entities, Relationships } from '../constants';
-import { RelationshipClass } from '@jupiterone/data-model';
+import { RelationshipClass } from '@jupiterone/integration-sdk-core';
 
 describe('#fetchReplicaSets', () => {
   test('should collect data', async () => {
@@ -12,7 +12,12 @@ describe('#fetchReplicaSets', () => {
       recordingName: 'fetchReplicaSets',
       recordingDirectory: __dirname,
       integrationConfig,
-      stepFunctions: [fetchNamespaces, fetchDeployments, fetchReplicaSets],
+      stepFunctions: [
+        fetchNamespaces,
+        fetchDeployments,
+        fetchReplicaSets,
+        buildContainerSpecReplicasetRelationship,
+      ],
       entitySchemaMatchers: [
         {
           _type: Entities.REPLICASET._type,
@@ -53,6 +58,17 @@ describe('#fetchReplicaSets', () => {
               properties: {
                 _class: { const: RelationshipClass.MANAGES },
                 _type: { const: 'kube_deployment_manages_replica_set' },
+              },
+            },
+          },
+        },
+        {
+          _type: Relationships.REPLICASET_USES_CONTAINER_SPEC._type,
+          matcher: {
+            schema: {
+              properties: {
+                _class: { const: RelationshipClass.USES },
+                _type: { const: 'kube_replica_set_uses_container_spec' },
               },
             },
           },

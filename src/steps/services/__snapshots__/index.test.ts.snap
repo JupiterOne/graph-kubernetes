@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`#fetchServices should collect data: jobState 1`] = `
-Object {
-  "collectedEntities": Array [
-    Object {
-      "_class": Array [
+{
+  "collectedEntities": [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "868d4703-b338-4051-98e4-b65b4f0a0006",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
@@ -22,18 +22,18 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "default",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
@@ -51,7 +51,7 @@ Object {
               "uid": "868d4703-b338-4051-98e4-b65b4f0a0006",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -67,7 +67,7 @@ Object {
       "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "default",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -75,13 +75,13 @@ Object {
       "resourceVersion": "39",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "52615a92-75c3-4c4b-8b72-51be82a4bc21",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
@@ -94,18 +94,18 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-node-lease",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
@@ -123,7 +123,7 @@ Object {
               "uid": "52615a92-75c3-4c4b-8b72-51be82a4bc21",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -139,7 +139,7 @@ Object {
       "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-node-lease",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -147,13 +147,13 @@ Object {
       "resourceVersion": "35",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "7a2ee4f7-12fd-494b-93f0-c639b1e63a72",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
@@ -166,18 +166,18 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-public",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
@@ -195,7 +195,7 @@ Object {
               "uid": "7a2ee4f7-12fd-494b-93f0-c639b1e63a72",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -211,7 +211,7 @@ Object {
       "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-public",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -219,13 +219,13 @@ Object {
       "resourceVersion": "20",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Group",
       ],
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Namespace {
             "apiVersion": undefined,
@@ -238,18 +238,18 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "kubernetes.io/metadata.name": "kube-system",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:kubernetes.io/metadata.name": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:kubernetes.io/metadata.name": {},
                       },
                     },
                   },
@@ -267,7 +267,7 @@ Object {
               "uid": "ce86116b-863b-4e74-979e-3c031a9aeee1",
             },
             "spec": V1NamespaceSpec {
-              "finalizers": Array [
+              "finalizers": [
                 "kubernetes",
               ],
             },
@@ -283,7 +283,7 @@ Object {
       "createdOn": 1704988215000,
       "deletionGracePeriodSeconds": undefined,
       "displayName": "kube-system",
-      "finalizers": Array [
+      "finalizers": [
         "kubernetes",
       ],
       "generation": undefined,
@@ -291,13 +291,13 @@ Object {
       "resourceVersion": "12",
       "status.phase": "Active",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Service",
       ],
       "_key": "7d630585-9aaa-4b35-9f38-07d7c6e5ac48",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Service {
             "apiVersion": undefined,
@@ -310,38 +310,38 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "component": "apiserver",
                 "provider": "kubernetes",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:component": Object {},
-                        "f:provider": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:labels": {
+                        ".": {},
+                        "f:component": {},
+                        "f:provider": {},
                       },
                     },
-                    "f:spec": Object {
-                      "f:clusterIP": Object {},
-                      "f:internalTrafficPolicy": Object {},
-                      "f:ipFamilyPolicy": Object {},
-                      "f:ports": Object {
-                        ".": Object {},
-                        "k:{\\"port\\":443,\\"protocol\\":\\"TCP\\"}": Object {
-                          ".": Object {},
-                          "f:name": Object {},
-                          "f:port": Object {},
-                          "f:protocol": Object {},
-                          "f:targetPort": Object {},
+                    "f:spec": {
+                      "f:clusterIP": {},
+                      "f:internalTrafficPolicy": {},
+                      "f:ipFamilyPolicy": {},
+                      "f:ports": {
+                        ".": {},
+                        "k:{"port":443,"protocol":"TCP"}": {
+                          ".": {},
+                          "f:name": {},
+                          "f:port": {},
+                          "f:protocol": {},
+                          "f:targetPort": {},
                         },
                       },
-                      "f:sessionAffinity": Object {},
-                      "f:type": Object {},
+                      "f:sessionAffinity": {},
+                      "f:type": {},
                     },
                   },
                   "manager": "kube-apiserver",
@@ -360,7 +360,7 @@ Object {
             "spec": V1ServiceSpec {
               "allocateLoadBalancerNodePorts": undefined,
               "clusterIP": "10.96.0.1",
-              "clusterIPs": Array [
+              "clusterIPs": [
                 "10.96.0.1",
               ],
               "externalIPs": undefined,
@@ -368,14 +368,14 @@ Object {
               "externalTrafficPolicy": undefined,
               "healthCheckNodePort": undefined,
               "internalTrafficPolicy": "Cluster",
-              "ipFamilies": Array [
+              "ipFamilies": [
                 "IPv4",
               ],
               "ipFamilyPolicy": "SingleStack",
               "loadBalancerClass": undefined,
               "loadBalancerIP": undefined,
               "loadBalancerSourceRanges": undefined,
-              "ports": Array [
+              "ports": [
                 V1ServicePort {
                   "appProtocol": undefined,
                   "name": "https",
@@ -403,11 +403,11 @@ Object {
       "_type": "kube_service",
       "active": undefined,
       "allocateLoadBalancerNodePorts": undefined,
-      "category": Array [
+      "category": [
         "infrastructure",
       ],
       "clusterIP": "10.96.0.1",
-      "clusterIPs": Array [
+      "clusterIPs": [
         "10.96.0.1",
       ],
       "createdOn": 1704988216000,
@@ -416,12 +416,12 @@ Object {
       "externalIPs": undefined,
       "externalName": undefined,
       "externalTrafficPolicy": undefined,
-      "function": Array [
+      "function": [
         "compute",
       ],
       "generation": undefined,
       "healthCheckNodePort": undefined,
-      "ipFamilies": Array [
+      "ipFamilies": [
         "IPv4",
       ],
       "ipFamilyPolicy": "SingleStack",
@@ -433,19 +433,19 @@ Object {
       "sessionAffinity": "None",
       "type": "ClusterIP",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Service",
       ],
       "_key": "de61583d-6a16-4364-a774-75225d946680",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Service {
             "apiVersion": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
-              "annotations": Object {
+              "annotations": {
                 "meta.helm.sh/release-name": "np-test",
                 "meta.helm.sh/release-namespace": "default",
               },
@@ -455,7 +455,7 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "app.kubernetes.io/component": "primary",
                 "app.kubernetes.io/instance": "np-test",
                 "app.kubernetes.io/managed-by": "Helm",
@@ -463,42 +463,42 @@ Object {
                 "app.kubernetes.io/version": "11.2.2",
                 "helm.sh/chart": "mariadb-15.0.1",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:meta.helm.sh/release-name": Object {},
-                        "f:meta.helm.sh/release-namespace": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:meta.helm.sh/release-name": {},
+                        "f:meta.helm.sh/release-namespace": {},
                       },
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:app.kubernetes.io/component": Object {},
-                        "f:app.kubernetes.io/instance": Object {},
-                        "f:app.kubernetes.io/managed-by": Object {},
-                        "f:app.kubernetes.io/name": Object {},
-                        "f:app.kubernetes.io/version": Object {},
-                        "f:helm.sh/chart": Object {},
+                      "f:labels": {
+                        ".": {},
+                        "f:app.kubernetes.io/component": {},
+                        "f:app.kubernetes.io/instance": {},
+                        "f:app.kubernetes.io/managed-by": {},
+                        "f:app.kubernetes.io/name": {},
+                        "f:app.kubernetes.io/version": {},
+                        "f:helm.sh/chart": {},
                       },
                     },
-                    "f:spec": Object {
-                      "f:internalTrafficPolicy": Object {},
-                      "f:ports": Object {
-                        ".": Object {},
-                        "k:{\\"port\\":3306,\\"protocol\\":\\"TCP\\"}": Object {
-                          ".": Object {},
-                          "f:name": Object {},
-                          "f:port": Object {},
-                          "f:protocol": Object {},
-                          "f:targetPort": Object {},
+                    "f:spec": {
+                      "f:internalTrafficPolicy": {},
+                      "f:ports": {
+                        ".": {},
+                        "k:{"port":3306,"protocol":"TCP"}": {
+                          ".": {},
+                          "f:name": {},
+                          "f:port": {},
+                          "f:protocol": {},
+                          "f:targetPort": {},
                         },
                       },
-                      "f:selector": Object {},
-                      "f:sessionAffinity": Object {},
-                      "f:type": Object {},
+                      "f:selector": {},
+                      "f:sessionAffinity": {},
+                      "f:type": {},
                     },
                   },
                   "manager": "helm",
@@ -517,7 +517,7 @@ Object {
             "spec": V1ServiceSpec {
               "allocateLoadBalancerNodePorts": undefined,
               "clusterIP": "10.103.238.222",
-              "clusterIPs": Array [
+              "clusterIPs": [
                 "10.103.238.222",
               ],
               "externalIPs": undefined,
@@ -525,14 +525,14 @@ Object {
               "externalTrafficPolicy": undefined,
               "healthCheckNodePort": undefined,
               "internalTrafficPolicy": "Cluster",
-              "ipFamilies": Array [
+              "ipFamilies": [
                 "IPv4",
               ],
               "ipFamilyPolicy": "SingleStack",
               "loadBalancerClass": undefined,
               "loadBalancerIP": undefined,
               "loadBalancerSourceRanges": undefined,
-              "ports": Array [
+              "ports": [
                 V1ServicePort {
                   "appProtocol": undefined,
                   "name": "mysql",
@@ -543,7 +543,7 @@ Object {
                 },
               ],
               "publishNotReadyAddresses": undefined,
-              "selector": Object {
+              "selector": {
                 "app.kubernetes.io/component": "primary",
                 "app.kubernetes.io/instance": "np-test",
                 "app.kubernetes.io/name": "mariadb",
@@ -564,11 +564,11 @@ Object {
       "_type": "kube_service",
       "active": undefined,
       "allocateLoadBalancerNodePorts": undefined,
-      "category": Array [
+      "category": [
         "infrastructure",
       ],
       "clusterIP": "10.103.238.222",
-      "clusterIPs": Array [
+      "clusterIPs": [
         "10.103.238.222",
       ],
       "createdOn": 1705009957000,
@@ -577,12 +577,12 @@ Object {
       "externalIPs": undefined,
       "externalName": undefined,
       "externalTrafficPolicy": undefined,
-      "function": Array [
+      "function": [
         "compute",
       ],
       "generation": undefined,
       "healthCheckNodePort": undefined,
-      "ipFamilies": Array [
+      "ipFamilies": [
         "IPv4",
       ],
       "ipFamilyPolicy": "SingleStack",
@@ -594,19 +594,19 @@ Object {
       "sessionAffinity": "None",
       "type": "ClusterIP",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Service",
       ],
       "_key": "733f1dbb-ad52-4ff2-bb2d-217f7e1ea93f",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Service {
             "apiVersion": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
-              "annotations": Object {
+              "annotations": {
                 "meta.helm.sh/release-name": "np-test",
                 "meta.helm.sh/release-namespace": "default",
               },
@@ -616,57 +616,57 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "app.kubernetes.io/instance": "np-test",
                 "app.kubernetes.io/managed-by": "Helm",
                 "app.kubernetes.io/name": "wordpress",
                 "app.kubernetes.io/version": "6.4.2",
                 "helm.sh/chart": "wordpress-19.0.5",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:meta.helm.sh/release-name": Object {},
-                        "f:meta.helm.sh/release-namespace": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:meta.helm.sh/release-name": {},
+                        "f:meta.helm.sh/release-namespace": {},
                       },
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:app.kubernetes.io/instance": Object {},
-                        "f:app.kubernetes.io/managed-by": Object {},
-                        "f:app.kubernetes.io/name": Object {},
-                        "f:app.kubernetes.io/version": Object {},
-                        "f:helm.sh/chart": Object {},
+                      "f:labels": {
+                        ".": {},
+                        "f:app.kubernetes.io/instance": {},
+                        "f:app.kubernetes.io/managed-by": {},
+                        "f:app.kubernetes.io/name": {},
+                        "f:app.kubernetes.io/version": {},
+                        "f:helm.sh/chart": {},
                       },
                     },
-                    "f:spec": Object {
-                      "f:allocateLoadBalancerNodePorts": Object {},
-                      "f:externalTrafficPolicy": Object {},
-                      "f:internalTrafficPolicy": Object {},
-                      "f:ports": Object {
-                        ".": Object {},
-                        "k:{\\"port\\":443,\\"protocol\\":\\"TCP\\"}": Object {
-                          ".": Object {},
-                          "f:name": Object {},
-                          "f:port": Object {},
-                          "f:protocol": Object {},
-                          "f:targetPort": Object {},
+                    "f:spec": {
+                      "f:allocateLoadBalancerNodePorts": {},
+                      "f:externalTrafficPolicy": {},
+                      "f:internalTrafficPolicy": {},
+                      "f:ports": {
+                        ".": {},
+                        "k:{"port":443,"protocol":"TCP"}": {
+                          ".": {},
+                          "f:name": {},
+                          "f:port": {},
+                          "f:protocol": {},
+                          "f:targetPort": {},
                         },
-                        "k:{\\"port\\":80,\\"protocol\\":\\"TCP\\"}": Object {
-                          ".": Object {},
-                          "f:name": Object {},
-                          "f:port": Object {},
-                          "f:protocol": Object {},
-                          "f:targetPort": Object {},
+                        "k:{"port":80,"protocol":"TCP"}": {
+                          ".": {},
+                          "f:name": {},
+                          "f:port": {},
+                          "f:protocol": {},
+                          "f:targetPort": {},
                         },
                       },
-                      "f:selector": Object {},
-                      "f:sessionAffinity": Object {},
-                      "f:type": Object {},
+                      "f:selector": {},
+                      "f:sessionAffinity": {},
+                      "f:type": {},
                     },
                   },
                   "manager": "helm",
@@ -677,10 +677,10 @@ Object {
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:status": Object {
-                      "f:loadBalancer": Object {
-                        "f:ingress": Object {},
+                  "fieldsV1": {
+                    "f:status": {
+                      "f:loadBalancer": {
+                        "f:ingress": {},
                       },
                     },
                   },
@@ -700,7 +700,7 @@ Object {
             "spec": V1ServiceSpec {
               "allocateLoadBalancerNodePorts": true,
               "clusterIP": "10.108.56.15",
-              "clusterIPs": Array [
+              "clusterIPs": [
                 "10.108.56.15",
               ],
               "externalIPs": undefined,
@@ -708,14 +708,14 @@ Object {
               "externalTrafficPolicy": "Cluster",
               "healthCheckNodePort": undefined,
               "internalTrafficPolicy": "Cluster",
-              "ipFamilies": Array [
+              "ipFamilies": [
                 "IPv4",
               ],
               "ipFamilyPolicy": "SingleStack",
               "loadBalancerClass": undefined,
               "loadBalancerIP": undefined,
               "loadBalancerSourceRanges": undefined,
-              "ports": Array [
+              "ports": [
                 V1ServicePort {
                   "appProtocol": undefined,
                   "name": "http",
@@ -734,7 +734,7 @@ Object {
                 },
               ],
               "publishNotReadyAddresses": undefined,
-              "selector": Object {
+              "selector": {
                 "app.kubernetes.io/instance": "np-test",
                 "app.kubernetes.io/name": "wordpress",
               },
@@ -745,7 +745,7 @@ Object {
             "status": V1ServiceStatus {
               "conditions": undefined,
               "loadBalancer": V1LoadBalancerStatus {
-                "ingress": Array [
+                "ingress": [
                   V1LoadBalancerIngress {
                     "hostname": "localhost",
                     "ip": undefined,
@@ -760,11 +760,11 @@ Object {
       "_type": "kube_service",
       "active": undefined,
       "allocateLoadBalancerNodePorts": true,
-      "category": Array [
+      "category": [
         "infrastructure",
       ],
       "clusterIP": "10.108.56.15",
-      "clusterIPs": Array [
+      "clusterIPs": [
         "10.108.56.15",
       ],
       "createdOn": 1705009957000,
@@ -773,12 +773,12 @@ Object {
       "externalIPs": undefined,
       "externalName": undefined,
       "externalTrafficPolicy": "Cluster",
-      "function": Array [
+      "function": [
         "compute",
       ],
       "generation": undefined,
       "healthCheckNodePort": undefined,
-      "ipFamilies": Array [
+      "ipFamilies": [
         "IPv4",
       ],
       "ipFamilyPolicy": "SingleStack",
@@ -790,19 +790,19 @@ Object {
       "sessionAffinity": "None",
       "type": "LoadBalancer",
     },
-    Object {
-      "_class": Array [
+    {
+      "_class": [
         "Service",
       ],
       "_key": "f6f4c86d-d361-41b0-931d-58df2f0324cc",
-      "_rawData": Array [
-        Object {
+      "_rawData": [
+        {
           "name": "default",
           "rawData": V1Service {
             "apiVersion": undefined,
             "kind": undefined,
             "metadata": V1ObjectMeta {
-              "annotations": Object {
+              "annotations": {
                 "prometheus.io/port": "9153",
                 "prometheus.io/scrape": "true",
               },
@@ -812,59 +812,59 @@ Object {
               "finalizers": undefined,
               "generateName": undefined,
               "generation": undefined,
-              "labels": Object {
+              "labels": {
                 "k8s-app": "kube-dns",
                 "kubernetes.io/cluster-service": "true",
                 "kubernetes.io/name": "CoreDNS",
               },
-              "managedFields": Array [
+              "managedFields": [
                 V1ManagedFieldsEntry {
                   "apiVersion": "v1",
                   "fieldsType": "FieldsV1",
-                  "fieldsV1": Object {
-                    "f:metadata": Object {
-                      "f:annotations": Object {
-                        ".": Object {},
-                        "f:prometheus.io/port": Object {},
-                        "f:prometheus.io/scrape": Object {},
+                  "fieldsV1": {
+                    "f:metadata": {
+                      "f:annotations": {
+                        ".": {},
+                        "f:prometheus.io/port": {},
+                        "f:prometheus.io/scrape": {},
                       },
-                      "f:labels": Object {
-                        ".": Object {},
-                        "f:k8s-app": Object {},
-                        "f:kubernetes.io/cluster-service": Object {},
-                        "f:kubernetes.io/name": Object {},
+                      "f:labels": {
+                        ".": {},
+                        "f:k8s-app": {},
+                        "f:kubernetes.io/cluster-service": {},
+                        "f:kubernetes.io/name": {},
                       },
                     },
-                    "f:spec": Object {
-                      "f:clusterIP": Object {},
-                      "f:internalTrafficPolicy": Object {},
-                      "f:ports": Object {
-                        ".": Object {},
-                        "k:{\\"port\\":53,\\"protocol\\":\\"TCP\\"}": Object {
-                          ".": Object {},
-                          "f:name": Object {},
-                          "f:port": Object {},
-                          "f:protocol": Object {},
-                          "f:targetPort": Object {},
+                    "f:spec": {
+                      "f:clusterIP": {},
+                      "f:internalTrafficPolicy": {},
+                      "f:ports": {
+                        ".": {},
+                        "k:{"port":53,"protocol":"TCP"}": {
+                          ".": {},
+                          "f:name": {},
+                          "f:port": {},
+                          "f:protocol": {},
+                          "f:targetPort": {},
                         },
-                        "k:{\\"port\\":53,\\"protocol\\":\\"UDP\\"}": Object {
-                          ".": Object {},
-                          "f:name": Object {},
-                          "f:port": Object {},
-                          "f:protocol": Object {},
-                          "f:targetPort": Object {},
+                        "k:{"port":53,"protocol":"UDP"}": {
+                          ".": {},
+                          "f:name": {},
+                          "f:port": {},
+                          "f:protocol": {},
+                          "f:targetPort": {},
                         },
-                        "k:{\\"port\\":9153,\\"protocol\\":\\"TCP\\"}": Object {
-                          ".": Object {},
-                          "f:name": Object {},
-                          "f:port": Object {},
-                          "f:protocol": Object {},
-                          "f:targetPort": Object {},
+                        "k:{"port":9153,"protocol":"TCP"}": {
+                          ".": {},
+                          "f:name": {},
+                          "f:port": {},
+                          "f:protocol": {},
+                          "f:targetPort": {},
                         },
                       },
-                      "f:selector": Object {},
-                      "f:sessionAffinity": Object {},
-                      "f:type": Object {},
+                      "f:selector": {},
+                      "f:sessionAffinity": {},
+                      "f:type": {},
                     },
                   },
                   "manager": "kubeadm",
@@ -883,7 +883,7 @@ Object {
             "spec": V1ServiceSpec {
               "allocateLoadBalancerNodePorts": undefined,
               "clusterIP": "10.96.0.10",
-              "clusterIPs": Array [
+              "clusterIPs": [
                 "10.96.0.10",
               ],
               "externalIPs": undefined,
@@ -891,14 +891,14 @@ Object {
               "externalTrafficPolicy": undefined,
               "healthCheckNodePort": undefined,
               "internalTrafficPolicy": "Cluster",
-              "ipFamilies": Array [
+              "ipFamilies": [
                 "IPv4",
               ],
               "ipFamilyPolicy": "SingleStack",
               "loadBalancerClass": undefined,
               "loadBalancerIP": undefined,
               "loadBalancerSourceRanges": undefined,
-              "ports": Array [
+              "ports": [
                 V1ServicePort {
                   "appProtocol": undefined,
                   "name": "dns",
@@ -925,7 +925,7 @@ Object {
                 },
               ],
               "publishNotReadyAddresses": undefined,
-              "selector": Object {
+              "selector": {
                 "k8s-app": "kube-dns",
               },
               "sessionAffinity": "None",
@@ -944,11 +944,11 @@ Object {
       "_type": "kube_service",
       "active": undefined,
       "allocateLoadBalancerNodePorts": undefined,
-      "category": Array [
+      "category": [
         "infrastructure",
       ],
       "clusterIP": "10.96.0.10",
-      "clusterIPs": Array [
+      "clusterIPs": [
         "10.96.0.10",
       ],
       "createdOn": 1704988218000,
@@ -957,12 +957,12 @@ Object {
       "externalIPs": undefined,
       "externalName": undefined,
       "externalTrafficPolicy": undefined,
-      "function": Array [
+      "function": [
         "compute",
       ],
       "generation": undefined,
       "healthCheckNodePort": undefined,
-      "ipFamilies": Array [
+      "ipFamilies": [
         "IPv4",
       ],
       "ipFamilyPolicy": "SingleStack",
@@ -975,8 +975,8 @@ Object {
       "type": "ClusterIP",
     },
   ],
-  "collectedRelationships": Array [
-    Object {
+  "collectedRelationships": [
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "868d4703-b338-4051-98e4-b65b4f0a0006",
       "_key": "868d4703-b338-4051-98e4-b65b4f0a0006|contains|7d630585-9aaa-4b35-9f38-07d7c6e5ac48",
@@ -984,7 +984,7 @@ Object {
       "_type": "kube_namespace_contains_service",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "868d4703-b338-4051-98e4-b65b4f0a0006",
       "_key": "868d4703-b338-4051-98e4-b65b4f0a0006|contains|de61583d-6a16-4364-a774-75225d946680",
@@ -992,7 +992,7 @@ Object {
       "_type": "kube_namespace_contains_service",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "868d4703-b338-4051-98e4-b65b4f0a0006",
       "_key": "868d4703-b338-4051-98e4-b65b4f0a0006|contains|733f1dbb-ad52-4ff2-bb2d-217f7e1ea93f",
@@ -1000,7 +1000,7 @@ Object {
       "_type": "kube_namespace_contains_service",
       "displayName": "CONTAINS",
     },
-    Object {
+    {
       "_class": "CONTAINS",
       "_fromEntityKey": "ce86116b-863b-4e74-979e-3c031a9aeee1",
       "_key": "ce86116b-863b-4e74-979e-3c031a9aeee1|contains|f6f4c86d-d361-41b0-931d-58df2f0324cc",
@@ -1009,7 +1009,7 @@ Object {
       "displayName": "CONTAINS",
     },
   ],
-  "encounteredTypes": Array [
+  "encounteredTypes": [
     "kube_namespace",
     "kube_service",
     "kube_namespace_contains_service",
