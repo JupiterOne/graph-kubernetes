@@ -156,7 +156,7 @@ export const replicaSetsSteps: IntegrationStep<IntegrationConfig>[] = [
   },
   {
     id: IntegrationSteps.CONTAINER_SPEC_HAS_REPLICASET,
-    name: 'Build Container Spec HAS Replicaset relationship',
+    name: 'Build Replicaset USES Container Spec relationship',
     entities: [],
     relationships: [Relationships.REPLICASET_USES_CONTAINER_SPEC],
     dependsOn: [IntegrationSteps.REPLICASETS],
