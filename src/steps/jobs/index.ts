@@ -142,7 +142,7 @@ export const jobsSteps: IntegrationStep<IntegrationConfig>[] = [
   },
   {
     id: IntegrationSteps.CONTAINER_SPEC_HAS_JOB,
-    name: 'Build Container Spec HAS Job relationship',
+    name: 'Build Job USES Container Spec relationship',
     entities: [],
     relationships: [Relationships.JOB_USES_CONTAINER_SPEC],
     dependsOn: [IntegrationSteps.JOBS],

@@ -121,7 +121,7 @@ export const daemonSetsSteps: IntegrationStep<IntegrationConfig>[] = [
   },
   {
     id: IntegrationSteps.CONTAINER_SPEC_HAS_DAEMONSET,
-    name: 'Build Container Spec HAS Daemonset relationship',
+    name: 'Build Daemmonset USES Container Spec relationship',
     entities: [],
     relationships: [Relationships.DAEMONSET_USES_CONTAINER_SPEC],
     dependsOn: [IntegrationSteps.DAEMONSETS],

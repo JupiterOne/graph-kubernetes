@@ -125,7 +125,7 @@ export const cronJobsSteps: IntegrationStep<IntegrationConfig>[] = [
   },
   {
     id: IntegrationSteps.CONTAINER_SPEC_HAS_CRON_JOB,
-    name: 'Build Container Spec HAS CronJob relationship',
+    name: 'Build CronJob USES Container Spec relationship',
     entities: [],
     relationships: [Relationships.CRONJOB_USES_CONTAINER_SPEC],
     dependsOn: [IntegrationSteps.CRONJOBS],
