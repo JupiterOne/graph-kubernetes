@@ -8,7 +8,7 @@ and this project adheres to
 
 ## [Unreleased]
 
-## 2.1.0 - 2024-06-18
+## 2.3.0 - 2024-07-02
 
 ### Changed
 
@@ -21,10 +21,10 @@ and this project adheres to
 
 | Source Entity `_type` | Relationship `_class` | Target Entity `_type` |
 | --------------------- | --------------------- | --------------------- |
-| `kube_container_spec` | **HAS**               | `kube_cron_job`       |
-| `kube_container_spec` | **HAS**               | `kube_daemon_set`     |
-| `kube_container_spec` | **HAS**               | `kube_job`            |
-| `kube_container_spec` | **HAS**               | `kube_replica_set`    |
+| `kube_cron_job`       | **USES**              | `kube_container_spec` |
+| `kube_daemon_set`     | **USES**              | `kube_container_spec` |
+| `kube_job`            | **USES**              | `kube_container_spec` |
+| `kube_replica_set`    | **USES**              | `kube_container_spec` |
 
 ## 2.1.0 - 2024-03-22
 
