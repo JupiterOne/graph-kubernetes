@@ -13,6 +13,6 @@ COPY src/ ${JUPITERONE_INTEGRATION_DIR}/src
 COPY scripts/ ${JUPITERONE_INTEGRATION_DIR}/scripts
 
 WORKDIR  ${JUPITERONE_INTEGRATION_DIR}
-RUN yarn install --production
+RUN yarn install --production --network-timeout 300000
 
 CMD ["yarn", "execute"]

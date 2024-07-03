@@ -1168,14 +1168,14 @@
     ajv "^8.0.0"
     ajv-formats "^2.0.0"
 
-"@jupiterone/integration-sdk-cli@^12.8.3":
-  version "12.8.3"
-  resolved "https://registry.yarnpkg.com/@jupiterone/integration-sdk-cli/-/integration-sdk-cli-12.8.3.tgz#d9fdccd4571cf862c206a491ff9f155dc4e8c2b2"
-  integrity sha512-WM/epnNztQkMCHSV4AktihC3kRE99xQUWyy2bkp1KqIa1Jct9W3ckF37Y34Uev1CFjVqC8Sr+x4P3pf9axVP8g==
+"@jupiterone/integration-sdk-cli@^13.1.1":
+  version "13.1.1"
+  resolved "https://registry.yarnpkg.com/@jupiterone/integration-sdk-cli/-/integration-sdk-cli-13.1.1.tgz#937eeb539d805fc3ee2c8ebd7bd9024a672d75c8"
+  integrity sha512-iq/VBXMONO9jWjKLw3IduYBqCqtqEKbVE9B1aQZF0Ma8mLxi7+sFPju9tMaIHlGqXXXE26nl4MoNDdIPpupWdg==
   dependencies:
     "@jupiterone/data-model" "^0.61.3"
-    "@jupiterone/integration-sdk-core" "^12.8.3"
-    "@jupiterone/integration-sdk-runtime" "^12.8.3"
+    "@jupiterone/integration-sdk-core" "^13.1.1"
+    "@jupiterone/integration-sdk-runtime" "^13.1.1"
     chalk "^4"
     commander "^9.4.0"
     ejs "^3.1.9"
@@ -1192,23 +1192,23 @@
     upath "^1.2.0"
     url-exists "^1.0.3"
 
-"@jupiterone/integration-sdk-core@^12.8.3":
-  version "12.8.3"
-  resolved "https://registry.yarnpkg.com/@jupiterone/integration-sdk-core/-/integration-sdk-core-12.8.3.tgz#f1984303d946ebd8218024ed3a53574a23fee430"
-  integrity sha512-TUlNdc/TpEAJ5lC7Ep4HtgvLtbNeR9Ia/L03akCotPQtAp+6MtPWeoO3Tc4fMlA0jw4U3lMEIPMDhyRjDnjEmw==
+"@jupiterone/integration-sdk-core@^13.1.1":
+  version "13.1.1"
+  resolved "https://registry.yarnpkg.com/@jupiterone/integration-sdk-core/-/integration-sdk-core-13.1.1.tgz#66f9f7c1f2799e601c1695fa942c8bd4c93d4a1d"
+  integrity sha512-+MzlatPsoqBu0OmbJ+DEc4X7tma3TRlvromxPejpNoE19ofgFYp/nZOQYj3PK5zLZTn1vDczmP+2tUeVZG5U1Q==
   dependencies:
     "@jupiterone/data-model" "^0.61.3"
-    "@jupiterone/integration-sdk-entity-validator" "^12.8.3"
+    "@jupiterone/integration-sdk-entity-validator" "^13.1.1"
     "@sinclair/typebox" "^0.32.30"
     lodash "^4.17.21"
 
-"@jupiterone/integration-sdk-dev-tools@12.8.3":
-  version "12.8.3"
-  resolved "https://registry.yarnpkg.com/@jupiterone/integration-sdk-dev-tools/-/integration-sdk-dev-tools-12.8.3.tgz#9c4b97bc7c41555fde793ae20000a3a053d40247"
-  integrity sha512-N1JD3dhZ4gzAidBMR50DC9HluFoQLYpM0L3O/Z+iCv85FFFlcFBDZA1g1SK6CcES+ooAD4xubK/l9Y+enzNhRQ==
+"@jupiterone/integration-sdk-dev-tools@^13.1.1":
+  version "13.1.1"
+  resolved "https://registry.yarnpkg.com/@jupiterone/integration-sdk-dev-tools/-/integration-sdk-dev-tools-13.1.1.tgz#efb9ad4d023859868d48e60636fff4142caa27b3"
+  integrity sha512-7HrRO2vQiFQEYtLtDMpsQ9GLm7ksQBicf/7QzncntV3cxWHDhpfYPWgYzeR9GFC0s0EKVEj+lUCO9NnHhZ30GQ==
   dependencies:
-    "@jupiterone/integration-sdk-cli" "^12.8.3"
-    "@jupiterone/integration-sdk-testing" "^12.8.3"
+    "@jupiterone/integration-sdk-cli" "^13.1.1"
+    "@jupiterone/integration-sdk-testing" "^13.1.1"
     "@types/jest" "^29.5.3"
     "@types/node" "^18"
     "@typescript-eslint/eslint-plugin" "^6.2.1"
@@ -1223,23 +1223,23 @@
     prettier "^3.0.0"
     ts-jest "^29.1.1"
     ts-node "^9.1.1"
-    typescript "^5.1.6"
+    typescript "^5.5.2"
 
-"@jupiterone/integration-sdk-entity-validator@^12.8.3":
-  version "12.8.3"
-  resolved "https://registry.yarnpkg.com/@jupiterone/integration-sdk-entity-validator/-/integration-sdk-entity-validator-12.8.3.tgz#58d96b2f7c9704c730ccb9b37445be190b7912b7"
-  integrity sha512-wVH5Xvys6g0/qeapYcqcqYarpBu/VCuqqwPB/s/Kx3L3UvMBQP35qzm8aaRpLU4jluEuhCFCnuh2ZvVVPW1zrA==
+"@jupiterone/integration-sdk-entity-validator@^13.1.1":
+  version "13.1.1"
+  resolved "https://registry.yarnpkg.com/@jupiterone/integration-sdk-entity-validator/-/integration-sdk-entity-validator-13.1.1.tgz#53b3b21d462d139ac66a38db9f7436f53877a478"
+  integrity sha512-3OYrqJ625DP4dV4QrktwWTFvKHM2cfDsR9NL7AhXOU3tLgxCWsxC/LjJhB7r4sFNedTY2NnYDvX/2Mi4VQTlmQ==
   dependencies:
     ajv "^8.12.0"
     ajv-formats "^3.0.1"
     prettier "^3.2.5"
 
-"@jupiterone/integration-sdk-runtime@^12.8.3":
-  version "12.8.3"
-  resolved "https://registry.yarnpkg.com/@jupiterone/integration-sdk-runtime/-/integration-sdk-runtime-12.8.3.tgz#bf941191d561140510f5659b15e6d533a5481b24"
-  integrity sha512-xSnS0rIUNLHM6D6gphDAw0RmQhe3lowzXdhzpe/ygqV1MFmpe+Of+PT4DUNWdDTvwTHXogdMLnZDp7V3QeZTsQ==
+"@jupiterone/integration-sdk-runtime@^13.1.1":
+  version "13.1.1"
+  resolved "https://registry.yarnpkg.com/@jupiterone/integration-sdk-runtime/-/integration-sdk-runtime-13.1.1.tgz#bedbe43f935e8fc066222055de1a4e5b51e113a2"
+  integrity sha512-edPxmIiE2BPtTIXmkuc+eLQ5D33DzafmgeM1wTFXk1f0+EELz5c/oc/QXkux6IBTZI74FDaR7LBAOzuCIUIezA==
   dependencies:
-    "@jupiterone/integration-sdk-core" "^12.8.3"
+    "@jupiterone/integration-sdk-core" "^13.1.1"
     "@lifeomic/alpha" "^5.2.0"
     "@lifeomic/attempt" "^3.0.3"
     async-sema "^3.1.0"
@@ -1255,13 +1255,13 @@
     p-queue "^6.3.0"
     rimraf "^3.0.2"
 
-"@jupiterone/integration-sdk-testing@12.8.3", "@jupiterone/integration-sdk-testing@^12.8.3":
-  version "12.8.3"
-  resolved "https://registry.yarnpkg.com/@jupiterone/integration-sdk-testing/-/integration-sdk-testing-12.8.3.tgz#71810228c6cea15fa1d38077fcfb80fe100f8246"
-  integrity sha512-WzucLEqEGwoPk2uT/qwEGHMI9P1uzSwAlBq2naqsLTkrn6ft37G9ZOKQXtsJ6zqFDdthCC8uLFBdLPZj3/oTqQ==
+"@jupiterone/integration-sdk-testing@^13.1.1":
+  version "13.1.1"
+  resolved "https://registry.yarnpkg.com/@jupiterone/integration-sdk-testing/-/integration-sdk-testing-13.1.1.tgz#f94b4eb9a7899861b96d735523003c164eb22692"
+  integrity sha512-1W/BRYRIBIkrT6djDufNDoZiJXNdQGdcmf6jsNNpyLNEnFCz0p8REeDU2DxYp5FS/ndKZKF50YG6f6z4OHM9BQ==
   dependencies:
-    "@jupiterone/integration-sdk-core" "^12.8.3"
-    "@jupiterone/integration-sdk-runtime" "^12.8.3"
+    "@jupiterone/integration-sdk-core" "^13.1.1"
+    "@jupiterone/integration-sdk-runtime" "^13.1.1"
     "@pollyjs/adapter-node-http" "^6.0.5"
     "@pollyjs/core" "^6.0.5"
     "@pollyjs/persister-fs" "^6.0.5"
@@ -6644,7 +6644,7 @@ type-is@~1.6.18:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
-typescript@^5.1.6:
+typescript@^5.5.2:
   version "5.5.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.5.3.tgz#e1b0a3c394190838a0b168e771b0ad56a0af0faa"
   integrity sha512-/hreyEujaB0w76zKo6717l3L0o/qEUtRgdvUBvlkhoWeOVMjMuHNHk0BRBzikzuGDqNmPQbg5ifMEqsHLiIUcQ==
