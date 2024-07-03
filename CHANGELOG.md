@@ -8,6 +8,12 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.3.1 - 2024-07-03
+
+### Changed
+
+- Updated JupiterOne SDK to v13.1.1
+
 ## 2.3.0 - 2024-07-02
 
 ### Changed
