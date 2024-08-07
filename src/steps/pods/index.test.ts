@@ -33,7 +33,6 @@ describe('#fetchPods', () => {
                 deletionGracePeriodSeconds: { type: 'string' },
                 resourceVersion: { type: 'string' },
                 createdOn: { type: 'number' },
-
                 activeDeadlineSeconds: { type: 'number' },
                 automountServiceAccountToken: { type: 'boolean' },
                 dnsPolicy: { type: 'string' },
@@ -63,6 +62,10 @@ describe('#fetchPods', () => {
                 'status.qosClass': { type: 'string' },
                 'status.reason': { type: 'string' },
                 'status.startTime': { type: 'number' },
+                podAnnotations: {
+                  type: 'array',
+                  items: { type: 'string' },
+                },
               },
             },
           },
