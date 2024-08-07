@@ -8,6 +8,12 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.3.2 - 2024-08-07
+
+### Changed
+
+- Added POD Annotation Data in the same pod entity
+
 ## 2.3.1 - 2024-07-03
 
 ### Changed

@@ -8,6 +8,17 @@ import { Entities } from '../constants';
 export function createPodEntity(data: k8s.V1Pod) {
   // TODO: We could remove data.spec.containers array from this (from rawData)
   // TODO: We may want to take the spec.volumes, delete it from here and create new entities/relationships
+
+  // Convert annotations to string array if present
+  const annotations = data.metadata?.annotations;
+  let annotationArray: string[] | undefined;
+
+  if (annotations) {
+    annotationArray = Object.entries(annotations).map(
+      ([key, value]) => `${key}: ${value}`,
+    );
+  }
+
   return createIntegrationEntity({
     entityData: {
       source: data,
@@ -44,6 +55,7 @@ export function createPodEntity(data: k8s.V1Pod) {
         shareProcessNamespace: data.spec?.shareProcessNamespace,
         subdomain: data.spec?.subdomain,
         terminationGracePeriodSeconds: data.spec?.terminationGracePeriodSeconds,
+        podAnnotations: annotationArray,
         'status.hostIP': data.status?.hostIP,
         'status.message': data.status?.message,
         'status.nominatedNodeName': data.status?.nominatedNodeName,
