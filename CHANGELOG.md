@@ -8,9 +8,13 @@ and this project adheres to
 
 ## [Unreleased]
 
-## 2.3.2 - 2024-08-22
+## 2.3.3 - 2024-08-22
 
 - Enable PODS step.
+
+## 2.3.2 - 2024-08-13
+
+- Prevent nodes with missing metadata from being created
 
 ## 2.3.1 - 2024-07-03
 
