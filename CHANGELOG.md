@@ -8,6 +8,10 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.3.2 - 2024-08-22
+
+- Enable PODS step.
+
 ## 2.3.1 - 2024-07-03
 
 ### Changed
