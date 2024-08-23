@@ -149,9 +149,11 @@ export default async function getStepStartStates(
         disabled: !(
           // INT-11589
           (
-            instance.accountId == 'ff5cf2a1-4fb2-4f56-929e-6e79d195da8d' ||
-            instance.accountId == '0c51143d-9728-4f42-8442-4b52be5e8a74' ||
-            instance.accountId == 'j1dev'
+            instance.config.jupiteroneAccountId ==
+              'ff5cf2a1-4fb2-4f56-929e-6e79d195da8d' ||
+            instance.config.jupiteroneAccountId ==
+              '0c51143d-9728-4f42-8442-4b52be5e8a74' ||
+            instance.config.jupiteroneAccountId == 'j1dev'
           )
         ), // INT-10704
       },
