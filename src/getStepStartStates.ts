@@ -147,8 +147,12 @@ export default async function getStepStartStates(
       },
       [IntegrationSteps.PODS]: {
         disabled: !(
-          instance.accountId == '0c51143d-9728-4f42-8442-4b52be5e8a74' ||
-          instance.accountId == 'j1dev'
+          // INT-11589
+          (
+            instance.accountId == 'ff5cf2a1-4fb2-4f56-929e-6e79d195da8d' ||
+            instance.accountId == '0c51143d-9728-4f42-8442-4b52be5e8a74' ||
+            instance.accountId == 'j1dev'
+          )
         ), // INT-10704
       },
     };
