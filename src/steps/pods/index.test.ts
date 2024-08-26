@@ -63,6 +63,10 @@ describe('#fetchPods', () => {
                 'status.qosClass': { type: 'string' },
                 'status.reason': { type: 'string' },
                 'status.startTime': { type: 'number' },
+                podAnnotations: {
+                  type: 'array',
+                  items: { type: 'string' },
+                },
               },
             },
           },
