@@ -8,6 +8,12 @@ and this project adheres to
 
 ## [Unreleased]
 
+## 2.3.4 - 2024-08-26
+
+### Changed
+
+- Added POD Annotation Data property in the same pod entity
+
 ## 2.3.3 - 2024-08-22
 
 - Enable PODS step.
