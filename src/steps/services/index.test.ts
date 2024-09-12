@@ -65,6 +65,26 @@ describe('#fetchServices', () => {
                 publishNotReadyAddresses: { type: 'boolean' },
                 sessionAffinity: { type: 'string' },
                 type: { type: 'string' },
+                clusterIpVersion: {
+                  type: 'array',
+                  items: { type: 'string' },
+                },
+                apiVersion: {
+                  type: 'array',
+                  items: { type: 'string' },
+                },
+                portName: {
+                  type: 'array',
+                  items: { type: 'string' },
+                },
+                portNumber: {
+                  type: 'array',
+                  items: { type: 'number' },
+                },
+                protocol: {
+                  type: 'array',
+                  items: { type: 'string' },
+                },
               },
             },
           },
