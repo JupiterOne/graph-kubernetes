@@ -1,6 +1,6 @@
 {
   "name": "@jupiterone/graph-kubernetes",
-  "version": "2.3.4",
+  "version": "2.4.0",
   "description": "A JupiterOne Integration for Kubernetes",
   "repository": {
     "type": "git",
