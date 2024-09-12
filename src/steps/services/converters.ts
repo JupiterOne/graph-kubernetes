@@ -37,6 +37,15 @@ export function createServiceEntity(data: k8s.V1Service) {
         publishNotReadyAddresses: data.spec?.publishNotReadyAddresses,
         sessionAffinity: data.spec?.sessionAffinity,
         type: data.spec?.type,
+        clusterIpVersion: data.spec?.ipFamilies,
+        apiVersion: data.metadata?.managedFields?.map(
+          (managedField) => managedField.apiVersion ?? 'undefined',
+        ),
+        //apiVersion: data.metadata?.managedFields[0].apiVersion,
+        portName: data.spec?.ports?.map((port) => port.name ?? 'undefined'),
+        portNumber: data.spec?.ports?.map((port) => port.port),
+        protocol: data.spec?.ports?.map((port) => port.protocol ?? 'undefined'),
+
         // TODO: data.status part is made up of arrays, require some mappings/thinking
       },
     },
