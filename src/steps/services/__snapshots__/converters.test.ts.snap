@@ -45,6 +45,7 @@ exports[`#createServiceEntity should convert data 1`] = `
   "_type": "kube_service",
   "active": undefined,
   "allocateLoadBalancerNodePorts": undefined,
+  "apiVersion": undefined,
   "category": [
     "infrastructure",
   ],
@@ -52,6 +53,7 @@ exports[`#createServiceEntity should convert data 1`] = `
   "clusterIPs": [
     "10.96.0.1",
   ],
+  "clusterIpVersion": undefined,
   "createdOn": 1619557039000,
   "deletionGracePeriodSeconds": undefined,
   "displayName": "kubernetes",
@@ -68,6 +70,15 @@ exports[`#createServiceEntity should convert data 1`] = `
   "loadBalancerIP": undefined,
   "loadBalancerSourceRanges": undefined,
   "name": "kubernetes",
+  "portName": [
+    "https",
+  ],
+  "portNumber": [
+    443,
+  ],
+  "protocol": [
+    "TCP",
+  ],
   "publishNotReadyAddresses": undefined,
   "resourceVersion": "202",
   "sessionAffinity": "None",

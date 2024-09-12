@@ -403,12 +403,18 @@ exports[`#fetchServices should collect data: jobState 1`] = `
       "_type": "kube_service",
       "active": undefined,
       "allocateLoadBalancerNodePorts": undefined,
+      "apiVersion": [
+        "v1",
+      ],
       "category": [
         "infrastructure",
       ],
       "clusterIP": "10.96.0.1",
       "clusterIPs": [
         "10.96.0.1",
+      ],
+      "clusterIpVersion": [
+        "IPv4",
       ],
       "createdOn": 1704988216000,
       "deletionGracePeriodSeconds": undefined,
@@ -428,6 +434,15 @@ exports[`#fetchServices should collect data: jobState 1`] = `
       "loadBalancerIP": undefined,
       "loadBalancerSourceRanges": undefined,
       "name": "kubernetes",
+      "portName": [
+        "https",
+      ],
+      "portNumber": [
+        443,
+      ],
+      "protocol": [
+        "TCP",
+      ],
       "publishNotReadyAddresses": undefined,
       "resourceVersion": "231",
       "sessionAffinity": "None",
@@ -564,12 +579,18 @@ exports[`#fetchServices should collect data: jobState 1`] = `
       "_type": "kube_service",
       "active": undefined,
       "allocateLoadBalancerNodePorts": undefined,
+      "apiVersion": [
+        "v1",
+      ],
       "category": [
         "infrastructure",
       ],
       "clusterIP": "10.103.238.222",
       "clusterIPs": [
         "10.103.238.222",
+      ],
+      "clusterIpVersion": [
+        "IPv4",
       ],
       "createdOn": 1705009957000,
       "deletionGracePeriodSeconds": undefined,
@@ -589,6 +610,15 @@ exports[`#fetchServices should collect data: jobState 1`] = `
       "loadBalancerIP": undefined,
       "loadBalancerSourceRanges": undefined,
       "name": "np-test-mariadb",
+      "portName": [
+        "mysql",
+      ],
+      "portNumber": [
+        3306,
+      ],
+      "protocol": [
+        "TCP",
+      ],
       "publishNotReadyAddresses": undefined,
       "resourceVersion": "27438",
       "sessionAffinity": "None",
@@ -760,12 +790,19 @@ exports[`#fetchServices should collect data: jobState 1`] = `
       "_type": "kube_service",
       "active": undefined,
       "allocateLoadBalancerNodePorts": true,
+      "apiVersion": [
+        "v1",
+        "v1",
+      ],
       "category": [
         "infrastructure",
       ],
       "clusterIP": "10.108.56.15",
       "clusterIPs": [
         "10.108.56.15",
+      ],
+      "clusterIpVersion": [
+        "IPv4",
       ],
       "createdOn": 1705009957000,
       "deletionGracePeriodSeconds": undefined,
@@ -785,6 +822,18 @@ exports[`#fetchServices should collect data: jobState 1`] = `
       "loadBalancerIP": undefined,
       "loadBalancerSourceRanges": undefined,
       "name": "np-test-wordpress",
+      "portName": [
+        "http",
+        "https",
+      ],
+      "portNumber": [
+        80,
+        443,
+      ],
+      "protocol": [
+        "TCP",
+        "TCP",
+      ],
       "publishNotReadyAddresses": undefined,
       "resourceVersion": "27471",
       "sessionAffinity": "None",
@@ -944,12 +993,18 @@ exports[`#fetchServices should collect data: jobState 1`] = `
       "_type": "kube_service",
       "active": undefined,
       "allocateLoadBalancerNodePorts": undefined,
+      "apiVersion": [
+        "v1",
+      ],
       "category": [
         "infrastructure",
       ],
       "clusterIP": "10.96.0.10",
       "clusterIPs": [
         "10.96.0.10",
+      ],
+      "clusterIpVersion": [
+        "IPv4",
       ],
       "createdOn": 1704988218000,
       "deletionGracePeriodSeconds": undefined,
@@ -969,6 +1024,21 @@ exports[`#fetchServices should collect data: jobState 1`] = `
       "loadBalancerIP": undefined,
       "loadBalancerSourceRanges": undefined,
       "name": "kube-dns",
+      "portName": [
+        "dns",
+        "dns-tcp",
+        "metrics",
+      ],
+      "portNumber": [
+        53,
+        53,
+        9153,
+      ],
+      "protocol": [
+        "UDP",
+        "TCP",
+        "TCP",
+      ],
       "publishNotReadyAddresses": undefined,
       "resourceVersion": "275",
       "sessionAffinity": "None",
